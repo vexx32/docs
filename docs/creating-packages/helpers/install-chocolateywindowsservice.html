@@ -1,0 +1,904 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>docs - Install-ChocolateyWindowsService</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+                            <span>docs</span>
+                </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                            
+
+        <li class="active"><a href="/docs">Documentation</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+        <div><p><a href="https://github.com/chocolatey/docs/tree/master/input/docs/creating-packages/helpers/install-chocolateywindowsservice.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#install-chocolateywindowsservice">Install-ChocolateyWindowsService</a></p>
+<p><a href="#syntax">Syntax</a></p>
+<p><a href="#description">Description</a></p>
+<p><a href="#notes">Notes</a></p>
+<p><a href="#aliases">Aliases</a></p>
+<p><a href="#examples">Examples</a></p>
+<p><a href="#inputs">Inputs</a></p>
+<p><a href="#outputs">Outputs</a></p>
+<p><a href="#parameters">Parameters</a></p>
+<p><a href="#description-string">-Description [&lt;string&gt;]</a></p>
+<p><a href="#displayname-string">-DisplayName [&lt;string&gt;]</a></p>
+<p><a href="#donotreinstallservice">-DoNotReinstallService</a></p>
+<p><a href="#donotstartservice">-DoNotStartService</a></p>
+<p><a href="#name-string">-Name &lt;string&gt;</a></p>
+<p><a href="#password-string">-Password [&lt;string&gt;]</a></p>
+<p><a href="#serviceexecutablepath-string">-ServiceExecutablePath &lt;string&gt;</a></p>
+<p><a href="#startuptype-chocolateywindowsservicestartuptype">-StartupType [&lt;ChocolateyWindowsServiceStartupType&gt;]</a></p>
+<p><a href="#username-string">-Username [&lt;string&gt;]</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    
+
+                    <ul class="sidebar-menu">
+                        
+
+                <li><a href="/docs/home">Docs Home</a></li>
+                <li><a href="/docs/why">Why Chocolatey?</a></li>
+                <li><a href="/docs/security">Security</a></li>
+                <li class="treeview">
+                    <a href="/docs/features">Features</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li class="treeview">
+                    <a href="/docs/features/free">Free</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/features/free/how-to-host-feed">Host packages internally</a></li>
+                <li><a href="/docs/features/free/infrastructure-automation">Integrates with everything</a></li>
+                <li><a href="/docs/features/free/shim">Package Shims</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/features/paid">Paid</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/features/paid/agent-service">Self Service/Background Mode (C4B)</a></li>
+                <li><a href="/docs/features/paid/chocolatey-central-management">Chocolatey Central Management (C4B)</a></li>
+                <li><a href="/docs/features/paid/automatically-recompile-packages">Package Internalizer (C4B)</a></li>
+                <li><a href="/docs/features/paid/create-packages-from-installers">Package Builder (C4B)</a></li>
+                <li><a href="/docs/features/paid/package-audit">Package Audit (C4B)</a></li>
+                <li><a href="/docs/features/paid/branding">Branding Chocolatey Applications (C4B)</a></li>
+                <li><a href="/docs/features/paid/virus-check">Runtime Malware Protection (Pro+)</a></li>
+                <li><a href="/docs/features/paid/private-cdn">Download CDN Cache (Pro+)</a></li>
+                <li><a href="/docs/features/paid/package-reducer">Package Reducer (Pro+)</a></li>
+                <li><a href="/docs/features/paid/install-directory-override">Ubiquitous Install Directory Option (Pro+)</a></li>
+                <li><a href="/docs/features/paid/package-throttle">Package Throttle (Pro+)</a></li>
+                <li><a href="/docs/features/paid/synchronize">Package Synchronizer (Pro+ Auto / C4B Sync Command)</a></li>
+
+                    </ul>
+                </li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/general">General</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li class="treeview">
+                    <a href="/docs/general/release-notes">Release Notes</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/general/release-notes/open-source">Open Source</a></li>
+                <li><a href="/docs/general/release-notes/licensed">Licensed</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/docs/general/troubleshooting">Troubleshooting</a></li>
+                <li><a href="/docs/general/faqs">FAQs</a></li>
+                <li><a href="/docs/general/moderation">Chocolatey.org Moderation</a></li>
+                <li><a href="/docs/general/community-packages-disclaimer">Chocolatey.org Packages Disclaimer</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/usage">Usage</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/usage/installation">How to install</a></li>
+                <li><a href="/docs/usage/installation-licensed">How to install licensed edition</a></li>
+                <li><a href="/docs/usage/chocolatey-configuration">Configuration/chocolatey.config</a></li>
+                <li><a href="/docs/usage/uninstallation">How to uninstall</a></li>
+                <li><a href="/docs/usage/getting-started">Getting Started</a></li>
+                <li class="treeview">
+                    <a href="/docs/usage/commands">Commands</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/usage/commands/reference">Complete Reference</a></li>
+                <li><a href="/docs/usage/commands/list">List/Search</a></li>
+                <li><a href="/docs/usage/commands/info">Info</a></li>
+                <li><a href="/docs/usage/commands/install">Install</a></li>
+                <li><a href="/docs/usage/commands/pin">Pin</a></li>
+                <li><a href="/docs/usage/commands/outdated">Outdated</a></li>
+                <li><a href="/docs/usage/commands/upgrade">Upgrade</a></li>
+                <li><a href="/docs/usage/commands/uninstall">Uninstall</a></li>
+                <li><a href="/docs/usage/commands/config">Config</a></li>
+                <li><a href="/docs/usage/commands/sources">Source/Sources</a></li>
+                <li><a href="/docs/usage/commands/feature">Feature</a></li>
+                <li><a href="/docs/usage/commands/download">Download</a></li>
+
+                    </ul>
+                </li>
+
+                    </ul>
+                </li>
+                <li class="treeview active">
+                    <a href="/docs/creating-packages">Creating Packages</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/creating-packages/create-packages">Create Packages</a></li>
+                <li><a href="/docs/creating-packages/create-packages-quick-start">Quick Start</a></li>
+                <li class="treeview">
+                    <a href="/docs/creating-packages/commands">Commands</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/creating-packages/commands/new">New</a></li>
+                <li><a href="/docs/creating-packages/commands/pack">Pack</a></li>
+                <li><a href="/docs/creating-packages/commands/api-key">ApiKey</a></li>
+                <li><a href="/docs/creating-packages/commands/push">Push</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview active">
+                    <a href="/docs/creating-packages/helpers">PowerShell Reference</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/creating-packages/helpers/reference">Function and Variable Reference</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateypackage">Install-ChocolateyPackage</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateyzippackage">Install-ChocolateyZipPackage</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateypowershellcommand">Install-ChocolateyPowerShellCommand</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateyvsixpackage">Install-ChocolateyVsixPackage</a></li>
+                <li><a href="/docs/creating-packages/helpers/get-chocolateywebfile">Get-ChocolateyWebFile</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateyinstallpackage">Install-ChocolateyInstallPackage</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/docs/creating-packages/automatic-packages">Automatic Packaging</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/how-tos">How To's</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/how-tos/proxy-settings-for-chocolatey">Use Chocolatey w/Proxy Server</a></li>
+                <li><a href="/docs/how-tos/change-cache">Change Download Cache Location aka Don't use TEMP for downloads</a></li>
+                <li><a href="/docs/how-tos/install-upgrade-package-without-scripts">Install/Upgrade a Package w/out running install scripts</a></li>
+                <li><a href="/docs/how-tos/package-triage-process">Request Package Fixes/Updates</a></li>
+                <li><a href="/docs/how-tos/recompile-packages">Manually Recompile Packages, Embedding/Internalizing Remote Resources</a></li>
+                <li><a href="/docs/how-tos/package-maintainer-handover">Take Over Package Maintenance Exclusively</a></li>
+                <li><a href="/docs/how-tos/parse-packageparameters-argument">Parse Package Parameters</a></li>
+                <li><a href="/docs/how-tos/mount-an-iso-in-chocolatey-package">Mount Iso</a></li>
+                <li><a href="/docs/how-tos/create-custom-package-templates">Create Custom Package Templates</a></li>
+                <li><a href="/docs/how-tos/create-extensions">Extend Chocolatey With PowerSHell Modules (extensions)</a></li>
+                <li><a href="/docs/how-tos/deprecate-a-chocolatey-package">Deprecate a Package</a></li>
+                <li><a href="/docs/how-tos/set-up-chocolatey-server">Set up the Chocolatey.Server</a></li>
+                <li><a href="/docs/how-tos/setup-offline-installation">Set up Chocolatey for Internal/organizational use</a></li>
+                <li><a href="/docs/how-tos/setup-internal-package-repository">Automate Package Internalizer (MSP/C4B)</a></li>
+                <li><a href="/docs/how-tos/chocolatey-for-business-quick-start-guide">C4B Quick Start Guide</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/chocolatey-gui">Chocolatey GUI</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/chocolatey-gui/overview">Chocolatey GUI Overview</a></li>
+                <li><a href="/docs/chocolatey-gui/known-issues">Chocolatey GUI Known Issues</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/quick-deployment">Quick Deployment Environment (QDE)</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/quick-deployment/overview">Overview</a></li>
+                <li><a href="/docs/quick-deployment/setup">Setup</a></li>
+                <li><a href="/docs/quick-deployment/desktop-readme">Desktop Readme</a></li>
+                <li><a href="/docs/quick-deployment/ssl-setup">SSL Setup</a></li>
+                <li><a href="/docs/quick-deployment/firewall-changes">Firewall Changes</a></li>
+                <li><a href="/docs/quick-deployment/client-setup">Client Setup</a></li>
+                <li><a href="/docs/quick-deployment/internet-setup">Internet Setup</a></li>
+                <li class="treeview">
+                    <a href="/docs/quick-deployment/v1">V1</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/quick-deployment/v1/setup">Setup</a></li>
+                <li><a href="/docs/quick-deployment/v1/desktop-readme">Desktop Readme</a></li>
+                <li><a href="/docs/quick-deployment/v1/ssl-setup">SSL Setup</a></li>
+                <li><a href="/docs/quick-deployment/v1/firewall-changes">Firewall Changes</a></li>
+                <li><a href="/docs/quick-deployment/v1/client-setup">Client Setup</a></li>
+
+                    </ul>
+                </li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/central-management">Chocolatey Central Management (CCM)</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/central-management/overview">Central Management Overview</a></li>
+                <li><a href="/docs/central-management/setup">Central Managment Setup</a></li>
+                <li><a href="/docs/central-management/setup-client">Central Management Client Setup</a></li>
+                <li><a href="/docs/central-management/setup-upgrade">Central Management Upgrade</a></li>
+                <li><a href="/docs/central-management/deployments">Central Management Deployments</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/use-cases">Use Cases</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/use-cases/development-environment-setup">Development Environment</a></li>
+                <li><a href="/docs/use-cases/hosting-chocolatey-packages-on-myget">Host on MyGet</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/learning-resources">Learning Resources</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/learning-resources/resources">Resources</a></li>
+                <li><a href="/docs/learning-resources/videos">Videos</a></li>
+                <li><a href="/docs/learning-resources/presentations">Presentations</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/additional-information">Additional Information</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/additional-information/legal">Legal</a></li>
+                <li><a href="/docs/additional-information/history">History</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/docs/chocolatey-install-ps1">Chocolatey Install Ps1</a></li>
+                <li><a href="/docs/chocolatey-story">Chocolatey Story</a></li>
+                <li><a href="/docs/chocolatey-vs-ninite">Chocolatey Vs Ninite</a></li>
+                <li><a href="/docs/default-chocolatey-install-reasoning">Default Chocolatey Install Reasoning</a></li>
+                <li><a href="/docs/logo-use-policy">Logo Use Policy</a></li>
+                <li><a href="/docs/migrate-old-chocolatey-directory-to-programdata">Migrate Old Chocolatey Directory To Programdata</a></li>
+                <li><a href="/docs/packaging-next">Packaging Next</a></li>
+                <li><a href="/docs/roadmap">Roadmap</a></li>
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+		<section class="content-header">
+			<h1>Install-ChocolateyWindowsService</h1>
+		</section>
+	<section class="content">
+		<h1 id="install-chocolateywindowsservice">Install-ChocolateyWindowsService</h1>
+<p><strong>NOTE</strong>: This function requires a Chocolatey for Business License to use.</p>
+<p>Installs a Windows Service using Install Util, plus some extra awesome-sauce.</p>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="language-powershell">Install-ChocolateyWindowsService `
+  -Name &lt;string&gt; `
+  -ServiceExecutablePath &lt;string&gt; `
+  [-Username &lt;string&gt;] `
+  [-Password &lt;string&gt;] `
+  [-DisplayName &lt;string&gt;] `
+  [-Description &lt;string&gt;] `
+  [-StartupType &lt;ChocolateyWindowsServiceStartupType&gt; {Unknown | Manual | Automatic | Disabled}] `
+  [-DoNotStartService] `
+  [-DoNotReinstallService] `
+  [&lt;CommonParameters&gt;]
+</code></pre>
+<h2 id="description">Description</h2>
+<p>This installs a Windows Service onto a machine. When provided a user name, this
+will ensure that user exists, is in the Administrators group, and has all of the
+correct privileges to run as a service. For more details on the privileges, see
+the Username parameter below.</p>
+<p>If a user is not a built in user and no password is provided, Chocolatey will
+manage the password, which will be different for every machine and user and very
+complex. For more details on the password, see the Password parameter below.</p>
+<p>One of the additional advanced features of this function is being able to
+upgrade a service without shutting it down first - Chocolatey will move the
+current running service and put in all of the new binaries. It will require a
+restart of the service to move to the new code, but you can upgrade a service in
+place without shutting it down first (one time). To use this, you must supply
+the DoNotReinstallService switch. See the parameter below for more details.</p>
+<h2 id="notes">Notes</h2>
+<p>Requires Chocolatey for Business.</p>
+<h2 id="aliases">Aliases</h2>
+<p>None</p>
+<h2 id="examples">Examples</h2>
+<p><strong>EXAMPLE 1</strong></p>
+<pre><code class="language-powershell">Install-ChocolateyWindowsService -Name 'bob' -ServiceExecutablePath 'c:\somewhere\to\service.exe'
+</code></pre>
+<p><strong>EXAMPLE 2</strong></p>
+<pre><code class="language-powershell">$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$serviceExe = Join-Path $toolsDir 'service\dan-agent.exe'
+
+$packageArgs = @{
+  Name                  = 'dan'
+  DisplayName           = 'Dan Agent'
+  ServiceExecutablePath = $serviceExe
+  Username              = 'DanTheBuilder'
+}
+
+Install-ChocolateyWindowsService @packageArgs
+</code></pre>
+<p><strong>EXAMPLE 3</strong>
+This is the installation code for the Chocolatey Agent service itself.</p>
+<pre><code class="language-powershell">$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$serviceExe = Join-Path $toolsDir 'service\chocolatey-agent.exe'
+
+$packageArgs = @{
+  Name                  = 'chocolatey-agent'
+  DisplayName           = 'Chocolatey Agent'
+  Description           = 'Chocolatey Agent is a backgound service for Chocolatey.'
+  StartupType           = 'Automatic'
+  ServiceExecutablePath = $serviceExe
+  Username              = 'ChocolateyLocalAdmin'
+}
+
+$pp = Get-PackageParameters
+if ($pp['Username']) { $packageArgs['Username'] = $pp['Username'] }
+if ($pp['Password']) { $packageArgs['Password'] = $pp['Password'] }
+if ($pp['EnterPassword']) { $packageArgs['Password'] = Read-Host "Enter password for $($packageArgs['Username']):" -AsSecureString}
+if ($pp['UseDefaultChocolateyConfigUser']) { $packageArgs.Remove('Username') }
+
+# We don't want to shut down the service when we are running in background mode
+if ($env:ChocolateyBackgroundService -eq 'true') {
+  Write-Warning "Detected running in background mode to upgrade the chocolatey-agent. Upgrade will attempt without restarting the service. \n Changes to service itself (like user/password) will be ignored."
+  $packageArgs['DoNotReinstallService'] = $true
+}
+
+# Explicit request not to restart or reinstall the service.
+if ($pp['NoRestartService'] -or $pp['DoNotReinstallService']) {
+  Write-Warning "Upgrade will attempt without restarting the service. \n Changes to service itself (like user/password) will be ignored."
+  $packageArgs['DoNotReinstallService'] = $true
+}
+
+Install-ChocolateyWindowsService @packageArgs
+</code></pre>
+<h2 id="inputs">Inputs</h2>
+<p>None</p>
+<h2 id="outputs">Outputs</h2>
+<p>None</p>
+<h2 id="parameters">Parameters</h2>
+<h3 id="description-string">-Description [&lt;string&gt;]</h3>
+<p>The description of the service.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>Named</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td></td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>true (ByPropertyName)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="displayname-string">-DisplayName [&lt;string&gt;]</h3>
+<p>The display name of the service.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>Named</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td></td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>true (ByPropertyName)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="donotreinstallservice">-DoNotReinstallService</h3>
+<p>Do not uninstall/restart service. This is for advanced scenarios when you need
+to deploy a newer version of a service and control when the restart happens over
+to the newly deployed code.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>Named</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td></td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>true (ByPropertyName)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="donotstartservice">-DoNotStartService</h3>
+<p>Do not start service after install. This keeps the service from starting up when
+installing/upgrading.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>Named</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td></td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>true (ByPropertyName)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="name-string">-Name &lt;string&gt;</h3>
+<p>The name of the service to install.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>true</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td></td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>true (ByPropertyName)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="password-string">-Password [&lt;string&gt;]</h3>
+<p>The password for the service - defaults to empty. If the user is not a built-in
+account like LocalSystem and the user name is provided without a password being
+provided, the password will automatically be a Chocolatey Managed Password.</p>
+<p>When Chocolatey manages the password for an account, it creates a very complex
+password:</p>
+<ul>
+<li>32 characters long</li>
+<li>Uppercase, lowercase, numbers, and symbols to meet very stringent complexity
+requirements</li>
+<li>Different for every machine</li>
+<li>Completely unguessable</li>
+</ul>
+<p>No one at Chocolatey Software could even tell you what the password is for a
+particular machine without local access.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>Named</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td></td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>true (ByPropertyName)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="serviceexecutablepath-string">-ServiceExecutablePath &lt;string&gt;</h3>
+<p>The full path (absolute path) to the service executable file.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>true</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td></td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>true (ByPropertyName)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="startuptype-chocolateywindowsservicestartuptype">-StartupType [&lt;ChocolateyWindowsServiceStartupType&gt;]</h3>
+<p>The startup type of the service. Defaults to Automatic.</p>
+<table class="table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td></td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>Named</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td></td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>true (ByPropertyName)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="username-string">-Username [&lt;string&gt;]</h3>
+<p>The username for the service - defaults to LocalSystem (SYSTEM). If the user
+does not exist, the user will be created. When a user is specified for a
+service, the following things will also occur as part of this function:</p>
+<ul>
+<li>User added to Administrators group</li>
+<li>User given privilege/right to run as a service (SeServiceLogonRight)</li>
+<li>User given privilege/right to log on as a batch (SeBatchLogonRight)</li>
+<li>User given privilege/right to log on interactively (SeInteractiveLogonRight)</li>
+<li>User given privilege/right to log on network (SeNetworkLogonRight)</li>
+</ul>
+<table class="table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases</td>
+<td>user</td>
+</tr>
+<tr>
+<td>Required?</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Position?</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td></td>
+</tr>
+<tr>
+<td>Accept Pipeline Input?</td>
+<td>true (ByPropertyName)</td>
+</tr>
+</tbody>
+</table>
+<p>[[Function Reference|HelpersReference]]</p>
+<p><em><strong>NOTE:</strong></em> This documentation has been automatically generated from licensed code.</p>
+
+	</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                <p class="text-muted">
+    Copyright © Chocolatey Software, Inc.
+    <br>
+    Website generated by <a href="http://wyam.io" target="_blank">Wyam</a>
+</p>
+
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        <a class="github-button" href="https://github.com/chocolatey/choco" target="_blank">
+    <i class="fa fa-github"></i>
+    GitHub
+</a>
+<script>
+    ((window.gitter = {}).chat = {}).options = {
+        room: 'chocolatey/choco'
+    };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
+
+<script type="text/javascript" src="/assets/js/anchor.min.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    anchors.options.placement = 'left';
+    anchors.add();
+
+    var snippets = document.querySelectorAll("pre > code");
+    [].forEach.call(snippets, function(snippet) {
+        snippet.insertAdjacentHTML("beforebegin", "<button class='btn-copy' data-clipboard-snippet><img class='clippy' width=13 src='/assets/images/clippy.svg' alt='Copy to clipboard'></button>");
+    });
+    var clipboardSnippets = new Clipboard('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+    clipboardSnippets.on('success', function(e) {
+        e.clearSelection();
+        showTooltip(e.trigger, "Copied!");
+    });
+    clipboardSnippets.on('error', function(e) {
+        showTooltip(e.trigger, fallbackMessage(e.action));
+    });
+    var btns = document.querySelectorAll('.btn-copy');
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener('mouseleave', function(e) {
+            e.currentTarget.setAttribute('class', 'btn-copy');
+            e.currentTarget.removeAttribute('aria-label');
+        });
+    }
+    function showTooltip(elem, msg) {
+        elem.setAttribute('class', 'btn-copy tooltipped tooltipped-s');
+        elem.setAttribute('aria-label', msg);
+    }
+    function fallbackMessage(action) {
+        var actionMsg = '';
+        var actionKey = (action === 'cut' ? 'X' : 'C');
+        if (/iPhone|iPad/i.test(navigator.userAgent)) {
+            actionMsg = 'No support :(';
+        } else if (/Mac/i.test(navigator.userAgent)) {
+            actionMsg = 'Press ⌘-' + actionKey + ' to ' + action;
+        } else {
+            actionMsg = 'Press Ctrl-' + actionKey + ' to ' + action;
+        }
+        return actionMsg;
+    }
+</script>
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

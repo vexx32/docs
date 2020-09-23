@@ -1,0 +1,709 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>docs - C4B Quick Start Guide</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+                            <span>docs</span>
+                </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                            
+
+        <li class="active"><a href="/docs">Documentation</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+        <div><p><a href="https://github.com/chocolatey/docs/tree/master/input/docs/how-tos/chocolatey-for-business-quick-start-guide.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#chocolatey-for-business-quick-start-implementation-guide">Chocolatey for Business Quick Start Implementation Guide</a></p>
+<p><a href="#components">Components</a></p>
+<p><a href="#requirements">Requirements</a></p>
+<p><a href="#administrator-workstation">Administrator Workstation</a></p>
+<p><a href="#repository-server-nexus">Repository Server (Nexus):</a></p>
+<p><a href="#deploymentconfiguration-management-solution">Deployment/Configuration Management Solution</a></p>
+<p><a href="#central-management-server">Central Management Server</a></p>
+<p><a href="#clientsnodes">Clients/Nodes:</a></p>
+<p><a href="#installation">Installation</a></p>
+<p><a href="#preparation-on-administrator-workstation">Preparation on Administrator Workstation</a></p>
+<p><a href="#repository-server-setup">Repository Server Setup</a></p>
+<p><a href="#back-on-administrative-workstation">Back on Administrative Workstation</a></p>
+<p><a href="#client-nodes">Client Nodes</a></p>
+<p><a href="#central-management-server-1">Central Management Server</a></p>
+<p><a href="#conclusion">Conclusion</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    
+
+                    <ul class="sidebar-menu">
+                        
+
+                <li><a href="/docs/home">Docs Home</a></li>
+                <li><a href="/docs/why">Why Chocolatey?</a></li>
+                <li><a href="/docs/security">Security</a></li>
+                <li class="treeview">
+                    <a href="/docs/features">Features</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li class="treeview">
+                    <a href="/docs/features/free">Free</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/features/free/how-to-host-feed">Host packages internally</a></li>
+                <li><a href="/docs/features/free/infrastructure-automation">Integrates with everything</a></li>
+                <li><a href="/docs/features/free/shim">Package Shims</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/features/paid">Paid</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/features/paid/agent-service">Self Service/Background Mode (C4B)</a></li>
+                <li><a href="/docs/features/paid/chocolatey-central-management">Chocolatey Central Management (C4B)</a></li>
+                <li><a href="/docs/features/paid/automatically-recompile-packages">Package Internalizer (C4B)</a></li>
+                <li><a href="/docs/features/paid/create-packages-from-installers">Package Builder (C4B)</a></li>
+                <li><a href="/docs/features/paid/package-audit">Package Audit (C4B)</a></li>
+                <li><a href="/docs/features/paid/branding">Branding Chocolatey Applications (C4B)</a></li>
+                <li><a href="/docs/features/paid/virus-check">Runtime Malware Protection (Pro+)</a></li>
+                <li><a href="/docs/features/paid/private-cdn">Download CDN Cache (Pro+)</a></li>
+                <li><a href="/docs/features/paid/package-reducer">Package Reducer (Pro+)</a></li>
+                <li><a href="/docs/features/paid/install-directory-override">Ubiquitous Install Directory Option (Pro+)</a></li>
+                <li><a href="/docs/features/paid/package-throttle">Package Throttle (Pro+)</a></li>
+                <li><a href="/docs/features/paid/synchronize">Package Synchronizer (Pro+ Auto / C4B Sync Command)</a></li>
+
+                    </ul>
+                </li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/general">General</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li class="treeview">
+                    <a href="/docs/general/release-notes">Release Notes</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/general/release-notes/open-source">Open Source</a></li>
+                <li><a href="/docs/general/release-notes/licensed">Licensed</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/docs/general/troubleshooting">Troubleshooting</a></li>
+                <li><a href="/docs/general/faqs">FAQs</a></li>
+                <li><a href="/docs/general/moderation">Chocolatey.org Moderation</a></li>
+                <li><a href="/docs/general/community-packages-disclaimer">Chocolatey.org Packages Disclaimer</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/usage">Usage</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/usage/installation">How to install</a></li>
+                <li><a href="/docs/usage/installation-licensed">How to install licensed edition</a></li>
+                <li><a href="/docs/usage/chocolatey-configuration">Configuration/chocolatey.config</a></li>
+                <li><a href="/docs/usage/uninstallation">How to uninstall</a></li>
+                <li><a href="/docs/usage/getting-started">Getting Started</a></li>
+                <li class="treeview">
+                    <a href="/docs/usage/commands">Commands</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/usage/commands/reference">Complete Reference</a></li>
+                <li><a href="/docs/usage/commands/list">List/Search</a></li>
+                <li><a href="/docs/usage/commands/info">Info</a></li>
+                <li><a href="/docs/usage/commands/install">Install</a></li>
+                <li><a href="/docs/usage/commands/pin">Pin</a></li>
+                <li><a href="/docs/usage/commands/outdated">Outdated</a></li>
+                <li><a href="/docs/usage/commands/upgrade">Upgrade</a></li>
+                <li><a href="/docs/usage/commands/uninstall">Uninstall</a></li>
+                <li><a href="/docs/usage/commands/config">Config</a></li>
+                <li><a href="/docs/usage/commands/sources">Source/Sources</a></li>
+                <li><a href="/docs/usage/commands/feature">Feature</a></li>
+                <li><a href="/docs/usage/commands/download">Download</a></li>
+
+                    </ul>
+                </li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/creating-packages">Creating Packages</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/creating-packages/create-packages">Create Packages</a></li>
+                <li><a href="/docs/creating-packages/create-packages-quick-start">Quick Start</a></li>
+                <li class="treeview">
+                    <a href="/docs/creating-packages/commands">Commands</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/creating-packages/commands/new">New</a></li>
+                <li><a href="/docs/creating-packages/commands/pack">Pack</a></li>
+                <li><a href="/docs/creating-packages/commands/api-key">ApiKey</a></li>
+                <li><a href="/docs/creating-packages/commands/push">Push</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/creating-packages/helpers">PowerShell Reference</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/creating-packages/helpers/reference">Function and Variable Reference</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateypackage">Install-ChocolateyPackage</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateyzippackage">Install-ChocolateyZipPackage</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateypowershellcommand">Install-ChocolateyPowerShellCommand</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateyvsixpackage">Install-ChocolateyVsixPackage</a></li>
+                <li><a href="/docs/creating-packages/helpers/get-chocolateywebfile">Get-ChocolateyWebFile</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateyinstallpackage">Install-ChocolateyInstallPackage</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/docs/creating-packages/automatic-packages">Automatic Packaging</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview active">
+                    <a href="/docs/how-tos">How To's</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/how-tos/proxy-settings-for-chocolatey">Use Chocolatey w/Proxy Server</a></li>
+                <li><a href="/docs/how-tos/change-cache">Change Download Cache Location aka Don't use TEMP for downloads</a></li>
+                <li><a href="/docs/how-tos/install-upgrade-package-without-scripts">Install/Upgrade a Package w/out running install scripts</a></li>
+                <li><a href="/docs/how-tos/package-triage-process">Request Package Fixes/Updates</a></li>
+                <li><a href="/docs/how-tos/recompile-packages">Manually Recompile Packages, Embedding/Internalizing Remote Resources</a></li>
+                <li><a href="/docs/how-tos/package-maintainer-handover">Take Over Package Maintenance Exclusively</a></li>
+                <li><a href="/docs/how-tos/parse-packageparameters-argument">Parse Package Parameters</a></li>
+                <li><a href="/docs/how-tos/mount-an-iso-in-chocolatey-package">Mount Iso</a></li>
+                <li><a href="/docs/how-tos/create-custom-package-templates">Create Custom Package Templates</a></li>
+                <li><a href="/docs/how-tos/create-extensions">Extend Chocolatey With PowerSHell Modules (extensions)</a></li>
+                <li><a href="/docs/how-tos/deprecate-a-chocolatey-package">Deprecate a Package</a></li>
+                <li><a href="/docs/how-tos/set-up-chocolatey-server">Set up the Chocolatey.Server</a></li>
+                <li><a href="/docs/how-tos/setup-offline-installation">Set up Chocolatey for Internal/organizational use</a></li>
+                <li><a href="/docs/how-tos/setup-internal-package-repository">Automate Package Internalizer (MSP/C4B)</a></li>
+                <li class="selected"><a href="/docs/how-tos/chocolatey-for-business-quick-start-guide">C4B Quick Start Guide</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/chocolatey-gui">Chocolatey GUI</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/chocolatey-gui/overview">Chocolatey GUI Overview</a></li>
+                <li><a href="/docs/chocolatey-gui/known-issues">Chocolatey GUI Known Issues</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/quick-deployment">Quick Deployment Environment (QDE)</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/quick-deployment/overview">Overview</a></li>
+                <li><a href="/docs/quick-deployment/setup">Setup</a></li>
+                <li><a href="/docs/quick-deployment/desktop-readme">Desktop Readme</a></li>
+                <li><a href="/docs/quick-deployment/ssl-setup">SSL Setup</a></li>
+                <li><a href="/docs/quick-deployment/firewall-changes">Firewall Changes</a></li>
+                <li><a href="/docs/quick-deployment/client-setup">Client Setup</a></li>
+                <li><a href="/docs/quick-deployment/internet-setup">Internet Setup</a></li>
+                <li class="treeview">
+                    <a href="/docs/quick-deployment/v1">V1</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/quick-deployment/v1/setup">Setup</a></li>
+                <li><a href="/docs/quick-deployment/v1/desktop-readme">Desktop Readme</a></li>
+                <li><a href="/docs/quick-deployment/v1/ssl-setup">SSL Setup</a></li>
+                <li><a href="/docs/quick-deployment/v1/firewall-changes">Firewall Changes</a></li>
+                <li><a href="/docs/quick-deployment/v1/client-setup">Client Setup</a></li>
+
+                    </ul>
+                </li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/central-management">Chocolatey Central Management (CCM)</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/central-management/overview">Central Management Overview</a></li>
+                <li><a href="/docs/central-management/setup">Central Managment Setup</a></li>
+                <li><a href="/docs/central-management/setup-client">Central Management Client Setup</a></li>
+                <li><a href="/docs/central-management/setup-upgrade">Central Management Upgrade</a></li>
+                <li><a href="/docs/central-management/deployments">Central Management Deployments</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/use-cases">Use Cases</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/use-cases/development-environment-setup">Development Environment</a></li>
+                <li><a href="/docs/use-cases/hosting-chocolatey-packages-on-myget">Host on MyGet</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/learning-resources">Learning Resources</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/learning-resources/resources">Resources</a></li>
+                <li><a href="/docs/learning-resources/videos">Videos</a></li>
+                <li><a href="/docs/learning-resources/presentations">Presentations</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/additional-information">Additional Information</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/additional-information/legal">Legal</a></li>
+                <li><a href="/docs/additional-information/history">History</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/docs/chocolatey-install-ps1">Chocolatey Install Ps1</a></li>
+                <li><a href="/docs/chocolatey-story">Chocolatey Story</a></li>
+                <li><a href="/docs/chocolatey-vs-ninite">Chocolatey Vs Ninite</a></li>
+                <li><a href="/docs/default-chocolatey-install-reasoning">Default Chocolatey Install Reasoning</a></li>
+                <li><a href="/docs/logo-use-policy">Logo Use Policy</a></li>
+                <li><a href="/docs/migrate-old-chocolatey-directory-to-programdata">Migrate Old Chocolatey Directory To Programdata</a></li>
+                <li><a href="/docs/packaging-next">Packaging Next</a></li>
+                <li><a href="/docs/roadmap">Roadmap</a></li>
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+		<section class="content-header">
+			<h1>C4B Quick Start Guide</h1>
+		</section>
+	<section class="content">
+		<h1 id="chocolatey-for-business-quick-start-implementation-guide">Chocolatey for Business Quick Start Implementation Guide</h1>
+<p>Thank you for choosing Chocolatey as your partner in Windows software automation management. We are excited to help you dive in and successfully implement a deployment of all the necessary components.</p>
+<blockquote class="blockquote">
+<p>:memo: <strong>NOTE</strong></p>
+<p>This quick-start guide is intended for customers who have recently purchased Chocolatey for Business (C4B), or are evaluating C4B as part of a proof-of-concept.
+It illustrates only <strong>one</strong> method of setting up your Chocolatey environment, and is by <strong>NO</strong> means exhaustive.
+Our goal is to get you up-and-running quickly, and testing out the feature set.
+For a more complete reference of possible scenarios and solutions, please refer to the [[Organizational Deployment Documentation|HowToSetupOfflineInstallation]].</p>
+</blockquote>
+<p>If you have any questions or would like to discuss more involved implementations, please feel free to reach out to your Chocolatey representative.</p>
+<p>Let's get started!</p>
+<!-- TOC depthFrom:2 -->
+<ul>
+<li><a href="#components">Components</a></li>
+<li><a href="#requirements">Requirements</a>
+<ul>
+<li><a href="#administrator-workstation">Administrator Workstation</a></li>
+<li><a href="#repository-server-nexus">Repository Server (Nexus):</a></li>
+<li><a href="#deploymentconfiguration-management-solution">Deployment/Configuration Management Solution</a></li>
+<li><a href="#central-management-server">Central Management Server</a></li>
+<li><a href="#clientsnodes">Clients/Nodes:</a></li>
+</ul>
+</li>
+<li><a href="#installation">Installation</a>
+<ul>
+<li><a href="#preparation-on-administrator-workstation">Preparation on Administrator Workstation</a></li>
+<li><a href="#repository-server-setup">Repository Server Setup</a></li>
+<li><a href="#back-on-administrative-workstation">Back on Administrative Workstation</a></li>
+<li><a href="#client-nodes">Client Nodes</a></li>
+<li><a href="#central-management-server-1">Central Management Server</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="components">Components</h2>
+<p><img src="/assets/images/C4B-implementation-diagram.jpg" class="img-fluid" alt="Implementation Diagram"><!--remove {.border style="max-width:820px;"} remove--></p>
+<p>As illustrated in the diagram above, there are five main components to a default Chocolatey install, namely:</p>
+<ol>
+<li><strong>Administrator Workstation</strong>: This is the workstation of the implementer. Internet access, as well as running from an administrator-level user, are required.</li>
+<li><strong>Repository Server</strong>: This is the application that will serve out the Nuget package (.nupkg) files internally. This guide will assume you'd like to use Sonatype <a href="https://www.sonatype.com/nexus-repository-oss">Nexus</a>, although Jfrog <a href="https://jfrog.com/artifactory/">Artifactory</a> is an equally-suitable option. Further repository details are available at [[repository options|HowToHostFeed]].</li>
+<li><strong>Deployment/Configuration Management Solution</strong>: We are going to stick to PowerShell commands and scripts in this guide. However, it is <em>strongly</em> recommended to use a full-featured configuration management solution to manage your package deployments. Some examples are Puppet, Chef, Ansible, and SaltStack. Read more about them on the [[Infrastucture Automation page|FeaturesInfrastructureAutomation]].</li>
+<li><strong>Central Management Server</strong>: This is a standalone server that hosts the Chocolatey Central Management web interface, as well as the back-end database on which it relies. Currently, this interface provides reporting on packages installed on endpoints. In future, a feature will be added to enable deployments of packages and updates from this web console, as well. Installation of this component is not detailed in the scope of this guide, but the current documentation can be found on the the <a href="https://chocolatey.org/docs/central-management-setup">Chocolatey Central Management Setup page</a>. Your Chocolatey for Business license (including trial) does entitle you to this feature.</li>
+<li><strong>Clients/Nodes</strong>: These are the workstation or server endpoints you wish to manage packages on, with Chocolatey. Every node requires a license.</li>
+</ol>
+<h2 id="requirements">Requirements</h2>
+<p>Below are the recommended guidelines of what's required for this specific deployment. More of each resource is preferred, if available.</p>
+<h3 id="administrator-workstation">Administrator Workstation</h3>
+<ul>
+<li>Windows 7+ / Windows Server 2003+ (ideally, Windows 10)</li>
+<li>2 cores (more preferred)</li>
+<li>4-8 GB RAM</li>
+<li>100 GB of free disk space (for package creation)</li>
+<li>Internet access</li>
+<li>Administrator user rights</li>
+<li>All commands should be run from Administrator PowerShell window</li>
+</ul>
+<h3 id="repository-server-nexus">Repository Server (Nexus):</h3>
+<ul>
+<li>Windows Server 2012+ (ideally, Windows Server 2016)</li>
+<li>4+ CPU cores (more preferred)</li>
+<li>16 GB+ RAM (4GB of RAM reserved specifically for JRE)</li>
+<li>1 TB of free space for local artifact storage (details <a href="https://help.sonatype.com/repomanager3/system-requirements">here</a>)</li>
+<li>Internet access</li>
+<li>Administrator user rights</li>
+<li>All commands should be run from Administrator PowerShell window</li>
+</ul>
+<h3 id="deploymentconfiguration-management-solution">Deployment/Configuration Management Solution</h3>
+<p>Again, this is out of the scope of this document, but <em>highly</em> recommended when scaling out deployments. Read more about configuration management solutions on the [[Infrastructure Automation page|FeaturesInfrastructureAutomation]].</p>
+<h3 id="central-management-server">Central Management Server</h3>
+<p>As with configuration managers, this is out-of-scope for this document. Generally, though, enough resources to host an ASP.NET IIS deployment and a SQL Server back end are recommended. Requirements for this server are detailed [[here|FeaturesChocolateyCentralManagement#requirements]].</p>
+<h3 id="clientsnodes">Clients/Nodes:</h3>
+<ul>
+<li>Start with 1 or 2 endpoints (scale up after initial config and testing)</li>
+<li>Windows 7+ / Windows Server 2003+ (ideally, Windows 10 / Windows Server 2016)</li>
+<li>PowerShell v2+ (not PowerShell Core)</li>
+<li>.NET Framework 4.6.1+ (minimum required version for Chocolatey Central Management access)</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<h3 id="preparation-on-administrator-workstation">Preparation on Administrator Workstation</h3>
+<ol>
+<li><p>From an Administrator PowerShell Window, run the following command to install Chocolatey:</p>
+<pre><code class="language-powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+</code></pre>
+</li>
+<li><p>Download the <code>chocolatey.license.xml.txt</code> file that was attached your trial e-mail. Also, download the <code>chocolatey-c4b-quickstart.nupkg</code> file from the link in that same email. Save both the files to the administrator workstation, and make note of the <strong>full file path</strong> for the next step.</p>
+</li>
+<li><p>From an Administrator PowerShell Window, browse to the folder where you copied the above two files. Run the following command to install the <code>chocolatey-c4b-quickstart</code> package, making sure to pass the <strong>full file path</strong> to your license file:</p>
+<pre><code class="language-powershell">choco install chocolatey-c4b-quickstart --source . -y --params "'/LicenseFile:&lt;FULL_PATH_TO_LICENSE_FILE&gt;'"
+</code></pre>
+ <!--remove {.list-style-type-disc} remove-->
+<blockquote class="blockquote">
+<p>:memo: <strong>NOTE</strong>: We have built this package to SIMPLIFY the initial setup greatly; it will perform the following:</p>
+<ul>
+<li>Download appropriate ".nupkg" files needed to setup Chocolatey.</li>
+<li>Install the license file in the correct directory</li>
+<li>Download a script for Offline install of Chocolatey on endpoints</li>
+</ul>
+</blockquote>
+</li>
+<li><p>From an Administrator PowerShell Window, run the following command to install the <code>chocolatey.extension</code> package:</p>
+<pre><code class="language-powershell">choco install chocolatey.extension -y --source="'C:\choco-setup\packages'"
+</code></pre>
+</li>
+</ol>
+<h3 id="repository-server-setup">Repository Server Setup</h3>
+<p>As recommended, we will assume you have access to the internet from this server. You will need at least a temporary firewall allowance for this, in order to follow the below steps.</p>
+<ol>
+<li><p>Copy the entire <code>C:\choco-setup</code> directory from the Administrator workstation to the same location on your repository server.</p>
+</li>
+<li><p>From an Administrator PowerShell Window, run the following command to install Chocolatey:</p>
+<pre><code class="language-powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+</code></pre>
+</li>
+<li><p>From an Administrator PowerShell Window, run the following command to copy the license into the correct directory:</p>
+<pre><code class="language-powershell">$null = New-Item $env:ChocolateyInstall\license -ItemType Directory -Force
+Get-ChildItem -Path "C:\choco-setup" -Recurse | Where-Object { $_.Name -match "'chocolatey.license'" } | Copy-Item "'$($_.Fullname)'" "'$env:ChocolateyInstall\chocolatey.license.xml'" -Force
+</code></pre>
+</li>
+<li><p>From an Administrator PowerShell Window, run the following command to install the <code>chocolatey.extension</code> package:</p>
+<pre><code class="language-powershell">choco install chocolatey.extension -y --source="'C:\choco-setup\packages'"
+</code></pre>
+</li>
+<li><p>From an Administrator PowerShell Window, run the following command to install the <code>nexus-repository</code> package:</p>
+<pre><code class="language-powershell">choco install nexus-repository -y --no-progress
+</code></pre>
+<blockquote class="blockquote">
+<p>:warning: <strong>WARNING</strong></p>
+<p>If you have already installed your Nexus repository, then the above step is not required.
+This guide assumes you are starting form scratch. It may be easier, if you are following this verbatim and don't have anything in your repositoryyet, to simply run <code>choco uninstall nexus-repository -y</code> and then <code>choco install nexus-repository -y</code>.
+As the next step requires a freshly-installed Nexus repository, with admin passwords not reset, this would be the most compatible approach.</p>
+</blockquote>
+</li>
+<li><p>Versions of Nexus newer than 3.21 have disabled the ability to run automated scripting by default. However, we'll need this to be enabled in order to automate our repository cleanup and creation.
+From an Administrator PowerShell Window, run the following command to install the enable Nexus scripting, and to restart the Nexus service for the changes to take effect:</p>
+<pre><code class="language-powershell">Add-Content C:\ProgramData\sonatype-work\nexus3\etc\nexus.properties "nexus.scripts.allowCreation=true"
+Restart-Service -Name nexus
+</code></pre>
+</li>
+<li><p>Download the <code>chocolatey-nexus-setup</code> package from the link provided in your trial email, and save it to the <code>\choco-setup\packages</code> directory on the Nexus server. From an Administrator PowerShell console, run:</p>
+<pre><code class="language-powershell">choco install chocolatey-nexus-setup --source="'C:\choco-setup\packages'"
+</code></pre>
+<!--remove {.list-style-type-disc} remove-->
+<blockquote class="blockquote">
+<p>This package will do the following:</p>
+<ul>
+<li>Remove unwanted demo repositories</li>
+<li>Add a "choco-hosted" Nuget repository</li>
+<li>Add a "choco-install" raw repository</li>
+<li>Add an "Install.ps1" script to the "choco-install" raw repository</li>
+<li>Enable the Nuget API key realm</li>
+<li>Output the API key for the Nexus server (copy this key for a later step)</li>
+</ul>
+</blockquote>
+</li>
+<li><p>You will require Google Chrome in order to login to the Nexus web UI (site can appear unresponsive in IE). From an Administrator PowerShell console, run:</p>
+<pre><code class="language-powershell">choco install googlechrome -y
+</code></pre>
+</li>
+<li><p>The administrative password for the Nexus web UI can be found in the following file:</p>
+<pre><code class="language-cmd">C:\ProgramData\sonatype-work\nexus3\admin.password
+</code></pre>
+</li>
+</ol>
+<p>Copy this password out of the above file, and use it for the next step.</p>
+<ol>
+<li>Login to the Nexus web UI (with Google Chrome) at http://localhost:8081 using the username "admin" and the password from above. Follow the prompts to reset the "admin" credential, and check the box to enable anonymous access. You can choose to not enable anonymous access, but passing credentials to acces the repository is out of the scope of this document.</li>
+</ol>
+<h3 id="back-on-administrative-workstation">Back on Administrative Workstation</h3>
+<ol>
+<li><p>Download the script from [[Exercise 4 here|HowToSetupOfflineInstallation#exercise-4-create-a-package-for-the-license]], and save it in your <code>choco-setup\files</code> folder as <code>Add-LicensePackage.ps1</code>.
+Run this script in a PowerShell Administrator console, to create the license package.</p>
+</li>
+<li><p>Ensure the chocolatey nupkg itself is in the C:\choco-setup\packages directory. The following code accomplishes this:</p>
+<pre><code class="language-powershell">Copy-Item "'$env:ChocolateyInstall\lib\chocolatey\chocolatey.nupkg'" C:\choco-setup\packages
+</code></pre>
+</li>
+<li><p>Upload all ".nupkg" files from <code>C:\choco-setup\packages</code> to Nexus repository using the fully-qualified domain name (FQDN) and apikey of the Nexus server:</p>
+<pre><code class="language-powershell">Get-ChildItem "'C:\choco-setup\packages\*.nupkg'" |
+Foreach-Object {
+    choco push $_.FullName --source="'http://&lt;_FQDN_OF_REPOSITORY_&gt;:8081/repository/choco-hosted/'" -k="'&lt;_API_KEY_&gt;'" --force
+}
+</code></pre>
+</li>
+</ol>
+<h3 id="client-nodes">Client Nodes</h3>
+<ol>
+<li><p>Install Chocolatey using the offline <code>Install.ps1</code> script from offline repository:</p>
+<pre><code class="language-powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('http://&lt;_FQDN_OF_REPOSITORY_&gt;:8081/repository/choco-install/Install.ps1'))
+</code></pre>
+</li>
+<li><p>Add the Nexus repository as a Chocolatey source:</p>
+<pre><code class="language-powershell">choco source add --name="'choco-hosted'" --source="'http://&lt;_FQDN_OF_REPOSITORY_&gt;:8081/repository/choco-hosted/'"
+</code></pre>
+</li>
+<li><p>Remove Chocolatey Community Repository as a souce:</p>
+<pre><code class="language-powershell">choco source remove --name="'chocolatey'"
+</code></pre>
+</li>
+<li><p>Install the <code>chocolatey-license</code> package:</p>
+<pre><code class="language-powershell">choco install chocolatey-license -y
+</code></pre>
+</li>
+<li><p>Install the <code>chocolatey.extension</code> package:</p>
+<pre><code class="language-powershell">choco install chocolatey.extension -y
+</code></pre>
+</li>
+</ol>
+<h3 id="central-management-server-1">Central Management Server</h3>
+<p>Again, the setup of the Chocolatey Central Management server is beyond the scope of this document (please read over and follow the detailed instructions on the <a href="https://chocolatey.org/docs/central-management-setup">Chocolatey Central Management Setup page</a>.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>Congratulations! If you followed all the steps detailed above, you should now have a fully-functioning Chocolatey implementation deployed in your environment.</p>
+<p>It is worth mentioning that some customers may have a more bespoke environment, with the presence of proxies and additional configuration management applications. Chocolatey is engineered to be quite flexible, specifically to account for these scenarios. Please refer to the many options for installation referenced on the [[Installation page|Installation#more-install-options]]. Again, If you have any questions or would like to discuss more involved implementations, please feel free to reach out to your Chocolatey representative.</p>
+
+	</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                <p class="text-muted">
+    Copyright © Chocolatey Software, Inc.
+    <br>
+    Website generated by <a href="http://wyam.io" target="_blank">Wyam</a>
+</p>
+
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        <a class="github-button" href="https://github.com/chocolatey/choco" target="_blank">
+    <i class="fa fa-github"></i>
+    GitHub
+</a>
+<script>
+    ((window.gitter = {}).chat = {}).options = {
+        room: 'chocolatey/choco'
+    };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
+
+<script type="text/javascript" src="/assets/js/anchor.min.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    anchors.options.placement = 'left';
+    anchors.add();
+
+    var snippets = document.querySelectorAll("pre > code");
+    [].forEach.call(snippets, function(snippet) {
+        snippet.insertAdjacentHTML("beforebegin", "<button class='btn-copy' data-clipboard-snippet><img class='clippy' width=13 src='/assets/images/clippy.svg' alt='Copy to clipboard'></button>");
+    });
+    var clipboardSnippets = new Clipboard('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+    clipboardSnippets.on('success', function(e) {
+        e.clearSelection();
+        showTooltip(e.trigger, "Copied!");
+    });
+    clipboardSnippets.on('error', function(e) {
+        showTooltip(e.trigger, fallbackMessage(e.action));
+    });
+    var btns = document.querySelectorAll('.btn-copy');
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener('mouseleave', function(e) {
+            e.currentTarget.setAttribute('class', 'btn-copy');
+            e.currentTarget.removeAttribute('aria-label');
+        });
+    }
+    function showTooltip(elem, msg) {
+        elem.setAttribute('class', 'btn-copy tooltipped tooltipped-s');
+        elem.setAttribute('aria-label', msg);
+    }
+    function fallbackMessage(action) {
+        var actionMsg = '';
+        var actionKey = (action === 'cut' ? 'X' : 'C');
+        if (/iPhone|iPad/i.test(navigator.userAgent)) {
+            actionMsg = 'No support :(';
+        } else if (/Mac/i.test(navigator.userAgent)) {
+            actionMsg = 'Press ⌘-' + actionKey + ' to ' + action;
+        } else {
+            actionMsg = 'Press Ctrl-' + actionKey + ' to ' + action;
+        }
+        return actionMsg;
+    }
+</script>
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

@@ -1,0 +1,550 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>docs - Ubiquitous Install Directory Option (Pro+)</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+                            <span>docs</span>
+                </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                            
+
+        <li class="active"><a href="/docs">Documentation</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+        <div><p><a href="https://github.com/chocolatey/docs/tree/master/input/docs/features/paid/install-directory-override.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#ubiquitous-install-directory-option-licensed-editions-only">Ubiquitous Install Directory Option (Licensed Editions Only)</a></p>
+<p><a href="#usage">Usage</a></p>
+<p><a href="#see-it-in-action">See It In Action</a></p>
+<p><a href="#options-and-switches">Options and Switches</a></p>
+<p><a href="#faq">FAQ</a></p>
+<p><a href="#how-do-i-take-advantage-of-this-feature">How do I take advantage of this feature?</a></p>
+<p><a href="#im-a-licensed-customer-now-what">I'm a licensed customer, now what?</a></p>
+<p><a href="#how-does-it-work">How does it work?</a></p>
+<p><a href="#do-you-have-plans-to-make-this-work-for-zip-files">Do you have plans to make this work for zip files?</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    
+
+                    <ul class="sidebar-menu">
+                        
+
+                <li><a href="/docs/home">Docs Home</a></li>
+                <li><a href="/docs/why">Why Chocolatey?</a></li>
+                <li><a href="/docs/security">Security</a></li>
+                <li class="treeview active">
+                    <a href="/docs/features">Features</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li class="treeview">
+                    <a href="/docs/features/free">Free</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/features/free/how-to-host-feed">Host packages internally</a></li>
+                <li><a href="/docs/features/free/infrastructure-automation">Integrates with everything</a></li>
+                <li><a href="/docs/features/free/shim">Package Shims</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview active">
+                    <a href="/docs/features/paid">Paid</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/features/paid/agent-service">Self Service/Background Mode (C4B)</a></li>
+                <li><a href="/docs/features/paid/chocolatey-central-management">Chocolatey Central Management (C4B)</a></li>
+                <li><a href="/docs/features/paid/automatically-recompile-packages">Package Internalizer (C4B)</a></li>
+                <li><a href="/docs/features/paid/create-packages-from-installers">Package Builder (C4B)</a></li>
+                <li><a href="/docs/features/paid/package-audit">Package Audit (C4B)</a></li>
+                <li><a href="/docs/features/paid/branding">Branding Chocolatey Applications (C4B)</a></li>
+                <li><a href="/docs/features/paid/virus-check">Runtime Malware Protection (Pro+)</a></li>
+                <li><a href="/docs/features/paid/private-cdn">Download CDN Cache (Pro+)</a></li>
+                <li><a href="/docs/features/paid/package-reducer">Package Reducer (Pro+)</a></li>
+                <li class="selected"><a href="/docs/features/paid/install-directory-override">Ubiquitous Install Directory Option (Pro+)</a></li>
+                <li><a href="/docs/features/paid/package-throttle">Package Throttle (Pro+)</a></li>
+                <li><a href="/docs/features/paid/synchronize">Package Synchronizer (Pro+ Auto / C4B Sync Command)</a></li>
+
+                    </ul>
+                </li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/general">General</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li class="treeview">
+                    <a href="/docs/general/release-notes">Release Notes</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/general/release-notes/open-source">Open Source</a></li>
+                <li><a href="/docs/general/release-notes/licensed">Licensed</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/docs/general/troubleshooting">Troubleshooting</a></li>
+                <li><a href="/docs/general/faqs">FAQs</a></li>
+                <li><a href="/docs/general/moderation">Chocolatey.org Moderation</a></li>
+                <li><a href="/docs/general/community-packages-disclaimer">Chocolatey.org Packages Disclaimer</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/usage">Usage</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/usage/installation">How to install</a></li>
+                <li><a href="/docs/usage/installation-licensed">How to install licensed edition</a></li>
+                <li><a href="/docs/usage/chocolatey-configuration">Configuration/chocolatey.config</a></li>
+                <li><a href="/docs/usage/uninstallation">How to uninstall</a></li>
+                <li><a href="/docs/usage/getting-started">Getting Started</a></li>
+                <li class="treeview">
+                    <a href="/docs/usage/commands">Commands</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/usage/commands/reference">Complete Reference</a></li>
+                <li><a href="/docs/usage/commands/list">List/Search</a></li>
+                <li><a href="/docs/usage/commands/info">Info</a></li>
+                <li><a href="/docs/usage/commands/install">Install</a></li>
+                <li><a href="/docs/usage/commands/pin">Pin</a></li>
+                <li><a href="/docs/usage/commands/outdated">Outdated</a></li>
+                <li><a href="/docs/usage/commands/upgrade">Upgrade</a></li>
+                <li><a href="/docs/usage/commands/uninstall">Uninstall</a></li>
+                <li><a href="/docs/usage/commands/config">Config</a></li>
+                <li><a href="/docs/usage/commands/sources">Source/Sources</a></li>
+                <li><a href="/docs/usage/commands/feature">Feature</a></li>
+                <li><a href="/docs/usage/commands/download">Download</a></li>
+
+                    </ul>
+                </li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/creating-packages">Creating Packages</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/creating-packages/create-packages">Create Packages</a></li>
+                <li><a href="/docs/creating-packages/create-packages-quick-start">Quick Start</a></li>
+                <li class="treeview">
+                    <a href="/docs/creating-packages/commands">Commands</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/creating-packages/commands/new">New</a></li>
+                <li><a href="/docs/creating-packages/commands/pack">Pack</a></li>
+                <li><a href="/docs/creating-packages/commands/api-key">ApiKey</a></li>
+                <li><a href="/docs/creating-packages/commands/push">Push</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/creating-packages/helpers">PowerShell Reference</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/creating-packages/helpers/reference">Function and Variable Reference</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateypackage">Install-ChocolateyPackage</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateyzippackage">Install-ChocolateyZipPackage</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateypowershellcommand">Install-ChocolateyPowerShellCommand</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateyvsixpackage">Install-ChocolateyVsixPackage</a></li>
+                <li><a href="/docs/creating-packages/helpers/get-chocolateywebfile">Get-ChocolateyWebFile</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateyinstallpackage">Install-ChocolateyInstallPackage</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/docs/creating-packages/automatic-packages">Automatic Packaging</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/how-tos">How To's</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/how-tos/proxy-settings-for-chocolatey">Use Chocolatey w/Proxy Server</a></li>
+                <li><a href="/docs/how-tos/change-cache">Change Download Cache Location aka Don't use TEMP for downloads</a></li>
+                <li><a href="/docs/how-tos/install-upgrade-package-without-scripts">Install/Upgrade a Package w/out running install scripts</a></li>
+                <li><a href="/docs/how-tos/package-triage-process">Request Package Fixes/Updates</a></li>
+                <li><a href="/docs/how-tos/recompile-packages">Manually Recompile Packages, Embedding/Internalizing Remote Resources</a></li>
+                <li><a href="/docs/how-tos/package-maintainer-handover">Take Over Package Maintenance Exclusively</a></li>
+                <li><a href="/docs/how-tos/parse-packageparameters-argument">Parse Package Parameters</a></li>
+                <li><a href="/docs/how-tos/mount-an-iso-in-chocolatey-package">Mount Iso</a></li>
+                <li><a href="/docs/how-tos/create-custom-package-templates">Create Custom Package Templates</a></li>
+                <li><a href="/docs/how-tos/create-extensions">Extend Chocolatey With PowerSHell Modules (extensions)</a></li>
+                <li><a href="/docs/how-tos/deprecate-a-chocolatey-package">Deprecate a Package</a></li>
+                <li><a href="/docs/how-tos/set-up-chocolatey-server">Set up the Chocolatey.Server</a></li>
+                <li><a href="/docs/how-tos/setup-offline-installation">Set up Chocolatey for Internal/organizational use</a></li>
+                <li><a href="/docs/how-tos/setup-internal-package-repository">Automate Package Internalizer (MSP/C4B)</a></li>
+                <li><a href="/docs/how-tos/chocolatey-for-business-quick-start-guide">C4B Quick Start Guide</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/chocolatey-gui">Chocolatey GUI</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/chocolatey-gui/overview">Chocolatey GUI Overview</a></li>
+                <li><a href="/docs/chocolatey-gui/known-issues">Chocolatey GUI Known Issues</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/quick-deployment">Quick Deployment Environment (QDE)</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/quick-deployment/overview">Overview</a></li>
+                <li><a href="/docs/quick-deployment/setup">Setup</a></li>
+                <li><a href="/docs/quick-deployment/desktop-readme">Desktop Readme</a></li>
+                <li><a href="/docs/quick-deployment/ssl-setup">SSL Setup</a></li>
+                <li><a href="/docs/quick-deployment/firewall-changes">Firewall Changes</a></li>
+                <li><a href="/docs/quick-deployment/client-setup">Client Setup</a></li>
+                <li><a href="/docs/quick-deployment/internet-setup">Internet Setup</a></li>
+                <li class="treeview">
+                    <a href="/docs/quick-deployment/v1">V1</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/quick-deployment/v1/setup">Setup</a></li>
+                <li><a href="/docs/quick-deployment/v1/desktop-readme">Desktop Readme</a></li>
+                <li><a href="/docs/quick-deployment/v1/ssl-setup">SSL Setup</a></li>
+                <li><a href="/docs/quick-deployment/v1/firewall-changes">Firewall Changes</a></li>
+                <li><a href="/docs/quick-deployment/v1/client-setup">Client Setup</a></li>
+
+                    </ul>
+                </li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/central-management">Chocolatey Central Management (CCM)</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/central-management/overview">Central Management Overview</a></li>
+                <li><a href="/docs/central-management/setup">Central Managment Setup</a></li>
+                <li><a href="/docs/central-management/setup-client">Central Management Client Setup</a></li>
+                <li><a href="/docs/central-management/setup-upgrade">Central Management Upgrade</a></li>
+                <li><a href="/docs/central-management/deployments">Central Management Deployments</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/use-cases">Use Cases</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/use-cases/development-environment-setup">Development Environment</a></li>
+                <li><a href="/docs/use-cases/hosting-chocolatey-packages-on-myget">Host on MyGet</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/learning-resources">Learning Resources</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/learning-resources/resources">Resources</a></li>
+                <li><a href="/docs/learning-resources/videos">Videos</a></li>
+                <li><a href="/docs/learning-resources/presentations">Presentations</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/additional-information">Additional Information</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/additional-information/legal">Legal</a></li>
+                <li><a href="/docs/additional-information/history">History</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/docs/chocolatey-install-ps1">Chocolatey Install Ps1</a></li>
+                <li><a href="/docs/chocolatey-story">Chocolatey Story</a></li>
+                <li><a href="/docs/chocolatey-vs-ninite">Chocolatey Vs Ninite</a></li>
+                <li><a href="/docs/default-chocolatey-install-reasoning">Default Chocolatey Install Reasoning</a></li>
+                <li><a href="/docs/logo-use-policy">Logo Use Policy</a></li>
+                <li><a href="/docs/migrate-old-chocolatey-directory-to-programdata">Migrate Old Chocolatey Directory To Programdata</a></li>
+                <li><a href="/docs/packaging-next">Packaging Next</a></li>
+                <li><a href="/docs/roadmap">Roadmap</a></li>
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+		<section class="content-header">
+			<h1>Ubiquitous Install Directory Option (Pro+)</h1>
+		</section>
+	<section class="content">
+		<h1 id="ubiquitous-install-directory-option-licensed-editions-only">Ubiquitous Install Directory Option (Licensed Editions Only)</h1>
+<p>The ubiquitous install directory switch for <a href="https://chocolatey.org/pricing">customers</a>! The only switch you will ever need for overriding the install directory for native installers! When working with packages that use native installers (software that actually installs on a machine), Chocolatey is able to override the default installation directory from a simple switch you pass to choco.</p>
+<p>It can be a pain determining the native installer type (MSI, NSIS, InnoSetup, etc) for a piece of software and then determining what the what the install directory argument should look like. While you <a href="GettingStarted#overriding-default-install-directory">can change the installation directory without this switch even in Chocolatey open source</a>, you will see that the ubiquitous switch makes it very easy and a low amount of work on your part.</p>
+<p>With the ubiquitous switch, you are not only saving time, but also possible errors in passing the wrong arguments to an installer!</p>
+<!-- TOC -->
+<ul>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#see-it-in-action">See It In Action</a></li>
+<li><a href="#options-and-switches">Options and Switches</a></li>
+<li><a href="#faq">FAQ</a>
+<ul>
+<li><a href="#how-do-i-take-advantage-of-this-feature">How do I take advantage of this feature?</a></li>
+<li><a href="#im-a-licensed-customer-now-what">I'm a licensed customer, now what?</a></li>
+<li><a href="#how-does-it-work">How does it work?</a></li>
+<li><a href="#do-you-have-plans-to-make-this-work-for-zip-files">Do you have plans to make this work for zip files?</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="usage">Usage</h2>
+<p>Just pass <code>--install-directory=value</code> along and Chocolatey will determine what the actual call to the native installer needs to be and manage that for you!</p>
+<p><img src="/assets/images/chocopro_features_installdirectory.png" class="img-fluid" alt="choco install 1password --install-directory c:\1password"></p>
+<p><img src="/assets/images/features/features_override_install_directory.png" class="img-fluid" alt="Install override - if you are on https://chocolatey.org/docs/features-install-directory-override, see commented html below for detailed description of image"></p>
+<!--
+Text in the image above:
+
+Override Install Directory - One Switch, All Installers
+
+- There are over 20 different installer formats for Windows, all with different install directory switches.
+- Chocolatey for Business (and Pro) can override the installation directory for compatible installer types automatically.
+- Save countless hours determining installers, their switches and the correct way to pass those switches.
+
+The image shows installing 1password with Chocolatey for Business. The command passed is `choco install 1password -s . -y --dir c:\1password`, then shows that Chocolatey automatically determines the installer requires `/DIR="c:\1password"` and installs it to the proper location.
+-->
+<h2 id="see-it-in-action">See It In Action</h2>
+<p><img src="/assets/images/gifs/chocopro_features_installdirectory.gif" class="img-fluid" alt="Directory override in action"></p>
+<blockquote class="blockquote">
+<p>:memo: <strong>NOTE</strong>: To see all feature videos for Chocolatey for Business, please visit <a href="https://chocolatey.org/resources/features#c4b">https://chocolatey.org/resources/features#c4b</a>.</p>
+</blockquote>
+<h2 id="options-and-switches">Options and Switches</h2>
+<p>The following options are added to install and upgrade commands.</p>
+<pre><code class="language-sh">   --dir, --directory, --installdir, --installdirectory, --install-dir,
+   --install-directory=VALUE
+   Install Directory Override - Override the default installation
+    directory. Chocolatey will automatically determine the type of
+    installer and pass the appropriate arguments to override the install
+    directory. The package must use Chocolatey install helpers and be
+    installing an installer for software. Available in 0.9.10+. Licensed
+    versions only.
+</code></pre>
+<h2 id="faq">FAQ</h2>
+<h3 id="how-do-i-take-advantage-of-this-feature">How do I take advantage of this feature?</h3>
+<p>You must have a <a href="https://chocolatey.org/pricing">licensed edition of Chocolatey</a> (Pro and/or Business). Pro is a personal, named license that costs about the price of a lunch outing per month and comes with several other features. Business editions are great for organizations that need more business friendly features from their software management tool.</p>
+<h3 id="im-a-licensed-customer-now-what">I'm a licensed customer, now what?</h3>
+<p>You just create a package or find a package you want to install that uses a native installer (ends up in Programs and Features).</p>
+<h3 id="how-does-it-work">How does it work?</h3>
+<p>Chocolatey is able to inspect the installer file to learn what it is and can do this for almost 15 different types of installers (there are over 20)! Once it understands what type of file it is, it knows how to install/upgrade/uninstall that piece of software.</p>
+<p>The recommended calls for installing native installers are to use <code>Install-ChocolateyPackage</code> (or <code>Install-ChocolateyInstallPackage</code>). This allows Chocolatey to override that directory automagically.</p>
+<h3 id="do-you-have-plans-to-make-this-work-for-zip-files">Do you have plans to make this work for zip files?</h3>
+<p>We do have plans to extend this to archive packages as well.</p>
+
+	</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                <p class="text-muted">
+    Copyright © Chocolatey Software, Inc.
+    <br>
+    Website generated by <a href="http://wyam.io" target="_blank">Wyam</a>
+</p>
+
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        <a class="github-button" href="https://github.com/chocolatey/choco" target="_blank">
+    <i class="fa fa-github"></i>
+    GitHub
+</a>
+<script>
+    ((window.gitter = {}).chat = {}).options = {
+        room: 'chocolatey/choco'
+    };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
+
+<script type="text/javascript" src="/assets/js/anchor.min.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    anchors.options.placement = 'left';
+    anchors.add();
+
+    var snippets = document.querySelectorAll("pre > code");
+    [].forEach.call(snippets, function(snippet) {
+        snippet.insertAdjacentHTML("beforebegin", "<button class='btn-copy' data-clipboard-snippet><img class='clippy' width=13 src='/assets/images/clippy.svg' alt='Copy to clipboard'></button>");
+    });
+    var clipboardSnippets = new Clipboard('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+    clipboardSnippets.on('success', function(e) {
+        e.clearSelection();
+        showTooltip(e.trigger, "Copied!");
+    });
+    clipboardSnippets.on('error', function(e) {
+        showTooltip(e.trigger, fallbackMessage(e.action));
+    });
+    var btns = document.querySelectorAll('.btn-copy');
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener('mouseleave', function(e) {
+            e.currentTarget.setAttribute('class', 'btn-copy');
+            e.currentTarget.removeAttribute('aria-label');
+        });
+    }
+    function showTooltip(elem, msg) {
+        elem.setAttribute('class', 'btn-copy tooltipped tooltipped-s');
+        elem.setAttribute('aria-label', msg);
+    }
+    function fallbackMessage(action) {
+        var actionMsg = '';
+        var actionKey = (action === 'cut' ? 'X' : 'C');
+        if (/iPhone|iPad/i.test(navigator.userAgent)) {
+            actionMsg = 'No support :(';
+        } else if (/Mac/i.test(navigator.userAgent)) {
+            actionMsg = 'Press ⌘-' + actionKey + ' to ' + action;
+        } else {
+            actionMsg = 'Press Ctrl-' + actionKey + ' to ' + action;
+        }
+        return actionMsg;
+    }
+</script>
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

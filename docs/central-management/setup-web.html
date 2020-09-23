@@ -1,0 +1,905 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>docs - Central Management Website Setup</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+                            <span>docs</span>
+                </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                            
+
+        <li class="active"><a href="/docs">Documentation</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+        <div><p><a href="https://github.com/chocolatey/docs/tree/master/input/docs/central-management/setup-web.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#central-management-website-setup">Central Management Website Setup</a></p>
+<p><a href="#step-1-complete-prerequisites">Step 1: Complete Prerequisites</a></p>
+<p><a href="#script-for-some-prerequisites">Script for some prerequisites</a></p>
+<p><a href="#step-2-install-central-management-web-package">Step 2: Install Central Management Web Package</a></p>
+<p><a href="#package-parameters">Package Parameters</a></p>
+<p><a href="#iis-settings">IIS Settings</a></p>
+<p><a href="#non-default-app-pool-user-considerations">Non-Default App Pool User Considerations</a></p>
+<p><a href="#scenarios">Scenarios</a></p>
+<p><a href="#step-3-verify-installation">Step 3: Verify Installation</a></p>
+<p><a href="#step-4-set-up-website">Step 4: Set Up Website</a></p>
+<p><a href="#step-4.1-login-and-change-default-credentials">Step 4.1: Login And Change Default Credentials</a></p>
+<p><a href="#step-4.2-smtp-configuration">Step 4.2: SMTP Configuration</a></p>
+<p><a href="#step-4.3-application-settings-file">Step 4.3: Application Settings File</a></p>
+<p><a href="#faq">FAQ</a></p>
+<p><a href="#can-i-install-the-chocolatey-central-management-web-site-under-a-virtual-directory-in-iis">Can I install the Chocolatey Central Management Web Site under a Virtual Directory in IIS?</a></p>
+<p><a href="#what-is-the-ccm-compatibility-matrix">What is the CCM compatibility matrix?</a></p>
+<p><a href="#i-entered-incorrect-database-details-on-install-do-i-need-to-reinstall-to-fix-that">I entered incorrect database details on install, do I need to reinstall to fix that?</a></p>
+<p><a href="#where-is-the-management-website-installed">Where is the management website installed?</a></p>
+<p><a href="#common-errors-and-resolutions">Common Errors and Resolutions</a></p>
+<p><a href="#the-specified-path-file-name-or-both-are-too-long">The specified path, file name, or both are too long</a></p>
+<p><a href="#http-error-when-trying-to-access-chocolatey-central-management-website">HTTP Error when trying to access Chocolatey Central Management Website</a></p>
+<p><a href="#the-term-install-chocolateyappsettingsjsonfile-is-not-recognized-as-the-name-of-a-cmdlet-function-script-file-or-operable-program">The term 'Install-ChocolateyAppSettingsJsonFile' is not recognized as the name of a cmdlet, function, script file, or operable program.</a></p>
+<p><a href="#cannot-process-command-because-of-one-or-more-missing-mandatory-parameters-filepath">Cannot process command because of one or more missing mandatory parameters: FilePath</a></p>
+<p><a href="#all-attempts-to-send-email-from-ccm-result-in-an-error">All attempts to send email from CCM result in an error</a></p>
+<p><a href="#emails-sent-from-ccm-to-users-has-links-that-contains-localhost-rather-than-actual-ccm-server-name">Emails sent from CCM to users has links that contains localhost, rather than actual CCM Server name</a></p>
+<p><a href="#the-updated-license-file-is-not-being-picked-up-in-the-website">The updated license file is not being picked up in the website</a></p>
+<p><a href="#a-computer-or-group-is-not-showing-as-available-for-deployments-but-i-have-plenty-of-available-licenses">A computer or group is not showing as available for deployments but I have plenty of available licenses</a></p>
+<p><a href="#failed-to-generate-a-user-instance-of-sql-server-due-to-failure-in-retrieving-the-users-local-application-data-path">Failed to generate a user instance of SQL Server due to failure in retrieving the user's local application data path.</a></p>
+<p><a href="#the-website-app-pool-shuts-down-almost-as-soon-as-it-is-started">The website app pool shuts down almost as soon as it is started</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    
+
+                    <ul class="sidebar-menu">
+                        
+
+                <li><a href="/docs/home">Docs Home</a></li>
+                <li><a href="/docs/why">Why Chocolatey?</a></li>
+                <li><a href="/docs/security">Security</a></li>
+                <li class="treeview">
+                    <a href="/docs/features">Features</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li class="treeview">
+                    <a href="/docs/features/free">Free</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/features/free/how-to-host-feed">Host packages internally</a></li>
+                <li><a href="/docs/features/free/infrastructure-automation">Integrates with everything</a></li>
+                <li><a href="/docs/features/free/shim">Package Shims</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/features/paid">Paid</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/features/paid/agent-service">Self Service/Background Mode (C4B)</a></li>
+                <li><a href="/docs/features/paid/chocolatey-central-management">Chocolatey Central Management (C4B)</a></li>
+                <li><a href="/docs/features/paid/automatically-recompile-packages">Package Internalizer (C4B)</a></li>
+                <li><a href="/docs/features/paid/create-packages-from-installers">Package Builder (C4B)</a></li>
+                <li><a href="/docs/features/paid/package-audit">Package Audit (C4B)</a></li>
+                <li><a href="/docs/features/paid/branding">Branding Chocolatey Applications (C4B)</a></li>
+                <li><a href="/docs/features/paid/virus-check">Runtime Malware Protection (Pro+)</a></li>
+                <li><a href="/docs/features/paid/private-cdn">Download CDN Cache (Pro+)</a></li>
+                <li><a href="/docs/features/paid/package-reducer">Package Reducer (Pro+)</a></li>
+                <li><a href="/docs/features/paid/install-directory-override">Ubiquitous Install Directory Option (Pro+)</a></li>
+                <li><a href="/docs/features/paid/package-throttle">Package Throttle (Pro+)</a></li>
+                <li><a href="/docs/features/paid/synchronize">Package Synchronizer (Pro+ Auto / C4B Sync Command)</a></li>
+
+                    </ul>
+                </li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/general">General</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li class="treeview">
+                    <a href="/docs/general/release-notes">Release Notes</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/general/release-notes/open-source">Open Source</a></li>
+                <li><a href="/docs/general/release-notes/licensed">Licensed</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/docs/general/troubleshooting">Troubleshooting</a></li>
+                <li><a href="/docs/general/faqs">FAQs</a></li>
+                <li><a href="/docs/general/moderation">Chocolatey.org Moderation</a></li>
+                <li><a href="/docs/general/community-packages-disclaimer">Chocolatey.org Packages Disclaimer</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/usage">Usage</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/usage/installation">How to install</a></li>
+                <li><a href="/docs/usage/installation-licensed">How to install licensed edition</a></li>
+                <li><a href="/docs/usage/chocolatey-configuration">Configuration/chocolatey.config</a></li>
+                <li><a href="/docs/usage/uninstallation">How to uninstall</a></li>
+                <li><a href="/docs/usage/getting-started">Getting Started</a></li>
+                <li class="treeview">
+                    <a href="/docs/usage/commands">Commands</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/usage/commands/reference">Complete Reference</a></li>
+                <li><a href="/docs/usage/commands/list">List/Search</a></li>
+                <li><a href="/docs/usage/commands/info">Info</a></li>
+                <li><a href="/docs/usage/commands/install">Install</a></li>
+                <li><a href="/docs/usage/commands/pin">Pin</a></li>
+                <li><a href="/docs/usage/commands/outdated">Outdated</a></li>
+                <li><a href="/docs/usage/commands/upgrade">Upgrade</a></li>
+                <li><a href="/docs/usage/commands/uninstall">Uninstall</a></li>
+                <li><a href="/docs/usage/commands/config">Config</a></li>
+                <li><a href="/docs/usage/commands/sources">Source/Sources</a></li>
+                <li><a href="/docs/usage/commands/feature">Feature</a></li>
+                <li><a href="/docs/usage/commands/download">Download</a></li>
+
+                    </ul>
+                </li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/creating-packages">Creating Packages</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/creating-packages/create-packages">Create Packages</a></li>
+                <li><a href="/docs/creating-packages/create-packages-quick-start">Quick Start</a></li>
+                <li class="treeview">
+                    <a href="/docs/creating-packages/commands">Commands</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/creating-packages/commands/new">New</a></li>
+                <li><a href="/docs/creating-packages/commands/pack">Pack</a></li>
+                <li><a href="/docs/creating-packages/commands/api-key">ApiKey</a></li>
+                <li><a href="/docs/creating-packages/commands/push">Push</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/creating-packages/helpers">PowerShell Reference</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/creating-packages/helpers/reference">Function and Variable Reference</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateypackage">Install-ChocolateyPackage</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateyzippackage">Install-ChocolateyZipPackage</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateypowershellcommand">Install-ChocolateyPowerShellCommand</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateyvsixpackage">Install-ChocolateyVsixPackage</a></li>
+                <li><a href="/docs/creating-packages/helpers/get-chocolateywebfile">Get-ChocolateyWebFile</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateyinstallpackage">Install-ChocolateyInstallPackage</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/docs/creating-packages/automatic-packages">Automatic Packaging</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/how-tos">How To's</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/how-tos/proxy-settings-for-chocolatey">Use Chocolatey w/Proxy Server</a></li>
+                <li><a href="/docs/how-tos/change-cache">Change Download Cache Location aka Don't use TEMP for downloads</a></li>
+                <li><a href="/docs/how-tos/install-upgrade-package-without-scripts">Install/Upgrade a Package w/out running install scripts</a></li>
+                <li><a href="/docs/how-tos/package-triage-process">Request Package Fixes/Updates</a></li>
+                <li><a href="/docs/how-tos/recompile-packages">Manually Recompile Packages, Embedding/Internalizing Remote Resources</a></li>
+                <li><a href="/docs/how-tos/package-maintainer-handover">Take Over Package Maintenance Exclusively</a></li>
+                <li><a href="/docs/how-tos/parse-packageparameters-argument">Parse Package Parameters</a></li>
+                <li><a href="/docs/how-tos/mount-an-iso-in-chocolatey-package">Mount Iso</a></li>
+                <li><a href="/docs/how-tos/create-custom-package-templates">Create Custom Package Templates</a></li>
+                <li><a href="/docs/how-tos/create-extensions">Extend Chocolatey With PowerSHell Modules (extensions)</a></li>
+                <li><a href="/docs/how-tos/deprecate-a-chocolatey-package">Deprecate a Package</a></li>
+                <li><a href="/docs/how-tos/set-up-chocolatey-server">Set up the Chocolatey.Server</a></li>
+                <li><a href="/docs/how-tos/setup-offline-installation">Set up Chocolatey for Internal/organizational use</a></li>
+                <li><a href="/docs/how-tos/setup-internal-package-repository">Automate Package Internalizer (MSP/C4B)</a></li>
+                <li><a href="/docs/how-tos/chocolatey-for-business-quick-start-guide">C4B Quick Start Guide</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/chocolatey-gui">Chocolatey GUI</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/chocolatey-gui/overview">Chocolatey GUI Overview</a></li>
+                <li><a href="/docs/chocolatey-gui/known-issues">Chocolatey GUI Known Issues</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/quick-deployment">Quick Deployment Environment (QDE)</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/quick-deployment/overview">Overview</a></li>
+                <li><a href="/docs/quick-deployment/setup">Setup</a></li>
+                <li><a href="/docs/quick-deployment/desktop-readme">Desktop Readme</a></li>
+                <li><a href="/docs/quick-deployment/ssl-setup">SSL Setup</a></li>
+                <li><a href="/docs/quick-deployment/firewall-changes">Firewall Changes</a></li>
+                <li><a href="/docs/quick-deployment/client-setup">Client Setup</a></li>
+                <li><a href="/docs/quick-deployment/internet-setup">Internet Setup</a></li>
+                <li class="treeview">
+                    <a href="/docs/quick-deployment/v1">V1</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/quick-deployment/v1/setup">Setup</a></li>
+                <li><a href="/docs/quick-deployment/v1/desktop-readme">Desktop Readme</a></li>
+                <li><a href="/docs/quick-deployment/v1/ssl-setup">SSL Setup</a></li>
+                <li><a href="/docs/quick-deployment/v1/firewall-changes">Firewall Changes</a></li>
+                <li><a href="/docs/quick-deployment/v1/client-setup">Client Setup</a></li>
+
+                    </ul>
+                </li>
+
+                    </ul>
+                </li>
+                <li class="treeview active">
+                    <a href="/docs/central-management">Chocolatey Central Management (CCM)</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/central-management/overview">Central Management Overview</a></li>
+                <li><a href="/docs/central-management/setup">Central Managment Setup</a></li>
+                <li><a href="/docs/central-management/setup-client">Central Management Client Setup</a></li>
+                <li><a href="/docs/central-management/setup-upgrade">Central Management Upgrade</a></li>
+                <li><a href="/docs/central-management/deployments">Central Management Deployments</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/use-cases">Use Cases</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/use-cases/development-environment-setup">Development Environment</a></li>
+                <li><a href="/docs/use-cases/hosting-chocolatey-packages-on-myget">Host on MyGet</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/learning-resources">Learning Resources</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/learning-resources/resources">Resources</a></li>
+                <li><a href="/docs/learning-resources/videos">Videos</a></li>
+                <li><a href="/docs/learning-resources/presentations">Presentations</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/additional-information">Additional Information</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/additional-information/legal">Legal</a></li>
+                <li><a href="/docs/additional-information/history">History</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/docs/chocolatey-install-ps1">Chocolatey Install Ps1</a></li>
+                <li><a href="/docs/chocolatey-story">Chocolatey Story</a></li>
+                <li><a href="/docs/chocolatey-vs-ninite">Chocolatey Vs Ninite</a></li>
+                <li><a href="/docs/default-chocolatey-install-reasoning">Default Chocolatey Install Reasoning</a></li>
+                <li><a href="/docs/logo-use-policy">Logo Use Policy</a></li>
+                <li><a href="/docs/migrate-old-chocolatey-directory-to-programdata">Migrate Old Chocolatey Directory To Programdata</a></li>
+                <li><a href="/docs/packaging-next">Packaging Next</a></li>
+                <li><a href="/docs/roadmap">Roadmap</a></li>
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+		<section class="content-header">
+			<h1>Central Management Website Setup</h1>
+		</section>
+	<section class="content">
+		<h1 id="central-management-website-setup">Central Management Website Setup</h1>
+<p>This is the Central Management website that gives an API and a web layer to centrally manage information about your environment and manage endpoints with deployment tasks.</p>
+<blockquote class="blockquote">
+<p>:warning: <strong>WARNING</strong></p>
+<p>Unless otherwise noted, please follow these steps in <em><strong>exact</strong></em> order. These steps build on each other and need to be completed in order.</p>
+</blockquote>
+<hr>
+<!-- TOC depthFrom:2 depthTo:5 -->
+<ul>
+<li><a href="#step-1-complete-prerequisites">Step 1: Complete Prerequisites</a>
+<ul>
+<li><a href="#script-for-some-prerequisites">Script for some prerequisites</a></li>
+</ul>
+</li>
+<li><a href="#step-2-install-central-management-web-package">Step 2: Install Central Management Web Package</a>
+<ul>
+<li><a href="#package-parameters">Package Parameters</a></li>
+<li><a href="#iis-settings">IIS Settings</a></li>
+<li><a href="#non-default-app-pool-user-considerations">Non-Default App Pool User Considerations</a></li>
+<li><a href="#scenarios">Scenarios</a>
+<ul>
+<li><a href="#sql-server-windows-authentication">SQL Server Windows Authentication</a>
+<ul>
+<li><a href="#use-active-directory-domain-account">Use Active Directory Domain Account</a></li>
+<li><a href="#use-local-windows-account-to-local-sql-server">Use Local Windows Account to Local SQL Server</a></li>
+<li><a href="#use-windows-account-to-attach-sql-server">Use Windows Account to Attach SQL Server</a></li>
+<li><a href="#use-local-windows-account-to-remote-sql-server">Use Local Windows Account to Remote SQL Server</a></li>
+</ul>
+</li>
+<li><a href="#sql-server-account-authentication">SQL Server Account Authentication</a>
+<ul>
+<li><a href="#use-sql-server-authentication-locally">Use SQL Server Authentication Locally</a></li>
+<li><a href="#use-sql-server-account-to-remote-sql-server">Use SQL Server Account to Remote SQL Server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#step-3-verify-installation">Step 3: Verify Installation</a></li>
+<li><a href="#step-4-set-up-website">Step 4: Set Up Website</a>
+<ul>
+<li><a href="#step-41-login-and-change-default-credentials">Step 4.1: Login And Change Default Credentials</a></li>
+<li><a href="#step-42-smtp-configuration">Step 4.2: SMTP Configuration</a>
+<ul>
+<li><a href="#appsettingsjson-configuration">appsettings.json configuration</a></li>
+</ul>
+</li>
+<li><a href="#step-43-application-settings-file">Step 4.3: Application Settings File</a></li>
+</ul>
+</li>
+<li><a href="#faq">FAQ</a>
+<ul>
+<li><a href="#can-i-install-the-chocolatey-central-management-web-site-under-a-virtual-directory-in-iis">Can I install the Chocolatey Central Management Web Site under a Virtual Directory in IIS?</a></li>
+<li><a href="#what-is-the-ccm-compatibility-matrix">What is the CCM compatibility matrix?</a></li>
+<li><a href="#i-entered-incorrect-database-details-on-install-do-i-need-to-reinstall-to-fix-that">I entered incorrect database details on install, do I need to reinstall to fix that?</a></li>
+<li><a href="#where-is-the-management-website-installed">Where is the management website installed?</a></li>
+</ul>
+</li>
+<li><a href="#common-errors-and-resolutions">Common Errors and Resolutions</a>
+<ul>
+<li><a href="#the-specified-path-file-name-or-both-are-too-long">The specified path, file name, or both are too long</a></li>
+<li><a href="#http-error-when-trying-to-access-chocolatey-central-management-website">HTTP Error when trying to access Chocolatey Central Management Website</a></li>
+<li><a href="#the-term-install-chocolateyappsettingsjsonfile-is-not-recognized-as-the-name-of-a-cmdlet-function-script-file-or-operable-program">The term 'Install-ChocolateyAppSettingsJsonFile' is not recognized as the name of a cmdlet, function, script file, or operable program.</a></li>
+<li><a href="#cannot-process-command-because-of-one-or-more-missing-mandatory-parameters-filepath">Cannot process command because of one or more missing mandatory parameters: FilePath</a></li>
+<li><a href="#all-attempts-to-send-email-from-ccm-result-in-an-error">All attempts to send email from CCM result in an error</a></li>
+<li><a href="#emails-sent-from-ccm-to-users-has-links-that-contains-localhost-rather-than-actual-ccm-server-name">Emails sent from CCM to users has links that contains localhost, rather than actual CCM Server name</a></li>
+<li><a href="#the-updated-license-file-is-not-being-picked-up-in-the-website">The updated license file is not being picked up in the website</a></li>
+<li><a href="#a-computer-or-group-is-not-showing-as-available-for-deployments-but-i-have-plenty-of-available-licenses">A computer or group is not showing as available for deployments but I have plenty of available licenses</a></li>
+<li><a href="#failed-to-generate-a-user-instance-of-sql-server-due-to-failure-in-retrieving-the-users-local-application-data-path">Failed to generate a user instance of SQL Server due to failure in retrieving the user's local application data path.</a></li>
+<li><a href="#the-website-app-pool-shuts-down-almost-as-soon-as-it-is-started">The website app pool shuts down almost as soon as it is started</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<hr>
+<h2 id="step-1-complete-prerequisites">Step 1: Complete Prerequisites</h2>
+<ul>
+<li>
+<blockquote class="blockquote">
+<p>:warning: The [[database|CentralManagementSetupDatabase]] must be setup and available, along with [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+</blockquote>
+</li>
+<li>Windows Server 2012+</li>
+<li>PowerShell 3+</li>
+<li>.NET Framework 4.6.1+</li>
+<li>IIS Set up and available</li>
+<li>aspnetcore-runtimepackagestore version 2.2.7</li>
+<li>dotnetcore-windowshosting version 2.2.7</li>
+</ul>
+<p>The CCM Website is built on ASP.Net Core, and as such we need to ensure that it is installed on the server for proper function. Note, that the codebase is currently locked to version <code>2.2.7</code> of these packages, and it is critical that you install these right, otherwise you will encounter errors.</p>
+<h3 id="script-for-some-prerequisites">Script for some prerequisites</h3>
+<pre><code class="language-powershell">choco install dotnet4.6.1 -y
+choco install IIS-WebServer -s windowsfeatures -y
+choco install IIS-ApplicationInit -s windowsfeatures -y
+choco install aspnetcore-runtimepackagestore --version 2.2.7 -y
+choco install dotnetcore-windowshosting --version 2.2.7 -y
+
+choco pin add --name="'aspnetcore-runtimepackagestore'" --version="'2.2.7'" --reason="'Required for CCM website'"
+choco pin add --name="'dotnetcore-windowshosting'" --version="'2.2.7'" --reason="'Required for CCM website'"
+# "reason" only available in commercial editions
+</code></pre>
+<hr>
+<h2 id="step-2-install-central-management-web-package">Step 2: Install Central Management Web Package</h2>
+<blockquote class="blockquote">
+<p>:memo: <strong>NOTE</strong>: At this time we don't recommend opening internet access to CCM web. However, if you choose to, you will want to set up SSL/TLS certificates to ensure communication is encrypted over the internet.</p>
+</blockquote>
+<h3 id="package-parameters">Package Parameters</h3>
+<p>Note items with "<code>:</code>" mean a value should be provided, items without are simply switches.</p>
+<ul>
+<li><code>/Username:</code> - Username that the IIS Web Application Pool will run under. Defaults to <code>IIS APPPOOL\ChocolateyCentralManagement</code>. If this is specified, you must also specify either <code>/Password</code> or <code>/EnterPassword</code>. <strong>NOTE</strong>: This may require manual steps after install as well. See <a href="#non-default-app-pool-user-considerations">Non-Default App Pool User Considerations</a>.</li>
+<li><code>/Password:</code> - Password for the user. Defaults to a Windows autogenerated secure password for the IIS AppPool.</li>
+<li><code>/EnterPassword</code> -  Receive the password at runtime as a secure string. Requires input at runtime whe installing/upgrading the package.</li>
+<li><code>/ConnectionString:</code> - The SQL Server database connection string to be used to connect to the Chocolatey Central Management database. Defaults to default or explicit values for <code>/SqlServiceInstance</code> and <code>/Database</code>, along with Integrated Security (<code>Server=&lt;LOCAL COMPUTER FQDN NAME&gt;; Database=ChocolateyManagement; Trusted_Connection=True;</code>). The account should have <code>db_datareader</code>/<code>db_datawriter</code> access to the database (<a href="https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles">data reader / data writer</a>).</li>
+<li><code>/SqlServerInstance:</code> - Instance name of the SQL Server database to connect to. Alternative to passing full connection string with <code>/ConnectionString</code>. Uses <code>/Database</code> (below) to build a connection string. Defaults to <code>&lt;LOCAL COMPUTER FQDN NAME&gt;</code>.</li>
+<li><code>/Database:</code> - Name of the SQL Server database to use. Alternative to passing full connection string with <code>/ConnectionString</code>. Uses <code>/SqlServerInstance</code> (above) to build a connection string. Defaults to <code>ChocolateyManagement</code>.</li>
+</ul>
+<h3 id="iis-settings">IIS Settings</h3>
+<p>This package creates the CCM Website and Application Pool with the following defaults:</p>
+<ul>
+<li>IIS Web Application Pool:               <strong>ChocolateyCentralManagement</strong>
+<ul>
+<li>enable32BitAppOnWin64:                <strong>True</strong></li>
+<li>managedPipelineMode:                  <strong>Integrated</strong></li>
+<li>managedRuntimeVersion:                &lt;blank&gt;</li>
+<li>startMode:                            <strong>AlwaysRunning</strong></li>
+<li>processModel.idleTimeout:             <strong>0</strong></li>
+<li>recycling.periodicRestart.schedule:   <strong>Disabled</strong></li>
+<li>recycling.periodicRestart.time:       <strong>0</strong></li>
+</ul>
+</li>
+<li>Website Name:                             <strong>ChocolateyCentralManagement</strong>
+<ul>
+<li>PortBinding:                          <strong>80</strong></li>
+<li>applicationDefaults.preloadEnabled:   <strong>True</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="non-default-app-pool-user-considerations">Non-Default App Pool User Considerations</h3>
+<p>If you've used a specific username for the app pool, specified by <code>/Username:</code> or added manually later to IIS settings, it's important to note that the installation procedure as of CCM v0.3.0 do not currently set the following and they will need to be done manually.</p>
+<p>This includes (but may not be everything):</p>
+<ul>
+<li>User needs granted "Logon as batch"  in local security policy.</li>
+<li>User needs to be given explicit Read/Execute rights (ACLs) to <code>c:\tools\chocolatey-management-web</code>.</li>
+<li>User needs to be given explicit Modify rights (ACLs) to <code>c:\tools\chocolatey-management-web\App_Data</code>.</li>
+</ul>
+<h3 id="scenarios">Scenarios</h3>
+<h4 id="sql-server-windows-authentication">SQL Server Windows Authentication</h4>
+<h5 id="use-active-directory-domain-account">Use Active Directory Domain Account</h5>
+<p>Scenario 1: Active Directory - you have set up the [[database|CentralManagementSetupDatabase]] to use Windows Authentication (or Mixed Mode Authentication).</p>
+<pre><code class="language-powershell">choco install chocolatey-management-web -y --package-parameters="'/ConnectionString:Server=&lt;RemoteSqlHost&gt;;Database=ChocolateyManagement;Trusted_Connection=True; /Username:&lt;DomainAccount&gt;'" --package-parameters-sensitive="'/Password:&lt;domain account password&gt;'"
+</code></pre>
+<blockquote class="blockquote">
+<p>:memo: <strong>NOTE</strong>: Note the connection string doesn't include credentials. That's because Windows Authentication for SQL Server uses the context of what is running it and why the service itself needs the right user/password. In this case, whatever is running the IIS Application Pool is the user you need to ensure has access to the database.</p>
+</blockquote>
+<h5 id="use-local-windows-account-to-local-sql-server">Use Local Windows Account to Local SQL Server</h5>
+<p>Scenario 2: Monolithic - you have set up the [[database|CentralManagementSetupDatabase]] to use Windows Authentication (or Mixed Mode Authentication). You wish to use a local Windows account to connect to the local database.</p>
+<ul>
+<li>Specify User:</li>
+</ul>
+<pre><code class="language-powershell">choco install chocolatey-management-web -y --package-parameters="'/ConnectionString:Server=&lt;Localhost\SQLEXPRESS&gt;;Database=ChocolateyManagement;Trusted_Connection=True; /Username:&lt;LocalWindowsAccount&gt;'" --package-parameters-sensitive="'/Password:&lt;Local account password&gt;'"
+</code></pre>
+<blockquote class="blockquote">
+<p>:warning: <strong>WARNING</strong></p>
+<p>Please ensure the user <code>&lt;LocalWindowsAccount&gt;</code> has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+</blockquote>
+<ul>
+<li>Default User (<code>IIS APPPOOL\ChocolateyCentralManagement</code>)</li>
+</ul>
+<pre><code class="language-powershell">choco install chocolatey-management-web -y --package-parameters="'/ConnectionString:Server=&lt;Localhost\SQLEXPRESS&gt;;Database=ChocolateyManagement;Trusted_Connection=True;'"
+</code></pre>
+<blockquote class="blockquote">
+<p>:warning: <strong>WARNING</strong></p>
+<p>Please ensure the user <code>IIS APPPOOL\ChocolateyCentralManagement</code> has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>:memo: <strong>NOTE</strong>: Note the connection string doesn't include credentials. That's because Windows Authentication for SQL Server uses the context of what is running it and why the service itself needs the right user/password. Whatever is running the IIS Application Pool is the user you need to ensure is in the database.</p>
+</blockquote>
+<h5 id="use-windows-account-to-attach-sql-server">Use Windows Account to Attach SQL Server</h5>
+<p>You are using AttachDBFile or User Instance in your Connection String. This is effectively asking to attach a database file to the User's Data directory.</p>
+<pre><code class="language-powershell">choco install chocolatey-management-web -y --package-parameters="'/ConnectionString:Data Source=.\SQLEXPRESS;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|SomeDbFile.mdf;User Instance=true;'"
+</code></pre>
+<blockquote class="blockquote">
+<p>:warning: <strong>WARNING</strong></p>
+<p>STOP right here. This is an unsupported scenario.</p>
+<p>While it may work, it's a really bad idea. Please look at one of the other options.
+It can also result in "Failed to generate a user instance of SQL Server due to failure in retrieving the user's local application data path."</p>
+</blockquote>
+<h5 id="use-local-windows-account-to-remote-sql-server">Use Local Windows Account to Remote SQL Server</h5>
+<p>Scenario 3: you have set up the [[database|CentralManagementSetupDatabase]] to use Windows Authentication (or Mixed Mode Authentication). You wish to use a local Windows account to connect to a remote database (on another computer).</p>
+<blockquote class="blockquote">
+<p>:warning: <strong>WARNING</strong></p>
+<p>STOP right here.
+This is an invalid scenario and will not work. Please look at one of the other options. If you don't have LDAP, you will want to look at <a href="#sql-server-account-authentication">SQL Server Account Authentication</a> below.</p>
+</blockquote>
+<p>It's worth noting here that <code>ChocolateyLocalAdmin</code> on two boxes is NOT the same account, so there is no way for Windows to recognize the account from a different box.</p>
+<h4 id="sql-server-account-authentication">SQL Server Account Authentication</h4>
+<h5 id="use-sql-server-authentication-locally">Use SQL Server Authentication Locally</h5>
+<p>Scenario 4: Monolithic - you are installing the management service on the same machine as a SQL Server Express instance. You likely have a smaller environment where you have up to 1,000 machines. You have set up the [[database|CentralManagementSetupDatabase]] to use Mixed Mode Authentication.</p>
+<pre><code class="language-powershell">choco install chocolatey-management-web -y --package-parameters-sensitive="'/ConnectionString:Server=Localhost;Database=ChocolateyManagement;User ID=ChocoUser;Password=Ch0c0R0cks;'"
+</code></pre>
+<blockquote class="blockquote">
+<p>:warning: <strong>WARNING</strong></p>
+<p>Please ensure the login has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+</blockquote>
+<ul>
+<li>SQL Server Express:</li>
+</ul>
+<pre><code class="language-powershell">choco install chocolatey-management-web -y --package-parameters-sensitive="'/ConnectionString:Server=Localhost\SQLEXPRESS;Database=ChocolateyManagement;User ID=ChocoUser;Password=Ch0c0R0cks;'"
+</code></pre>
+<blockquote class="blockquote">
+<p>:warning: <strong>WARNING</strong></p>
+<p>Please ensure the login has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+</blockquote>
+<h5 id="use-sql-server-account-to-remote-sql-server">Use SQL Server Account to Remote SQL Server</h5>
+<p>Scenario 5: Split - you are installing the management service(s) on a server, and targeting an existing SQL Server instance in your organization. You have set up the [[database|CentralManagementSetupDatabase]] to use Mixed Mode Authentication.</p>
+<pre><code class="language-powershell">choco install chocolatey-management-web -y --package-parameters-sensitive="'/ConnectionString:Server=&lt;RemoteSqlHost&gt;;Database=ChocolateyManagement;User ID=ChocoUser;Password=Ch0c0R0cks;'"
+</code></pre>
+<blockquote class="blockquote">
+<p>:warning: <strong>WARNING</strong></p>
+<p>Please ensure the login has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+</blockquote>
+<hr>
+<h2 id="step-3-verify-installation">Step 3: Verify Installation</h2>
+<p>The <code>chocolatey-management-web</code> package is responsible for creating and deploying the CCM Website within IIS.  A successful installation of this package can be verified by:</p>
+<ul>
+<li>Opening an internet browser on the machine to the following address <code>http://localhost</code> which should result in the login page for CCM being displayed.</li>
+<li>It should be possible to login to the site using the default credentials mentioned in Step 4 (below).</li>
+<li>The installation folder for <code>chocolatey-management-web</code> is at <code>c:\tools\chocolatey-management-web</code> (this is configurable by <code>$env:ChocolateyToolsLocation</code>).</li>
+<li>Open the website log file located at <code>c:\tools\chocolatey-management-web\App_Data\Logs\ccm-website.log</code> and verify that there are no recently reported errors. If you are on a version of CCM prior to 0.2.0, the log will be located at <code>c:\tools\chocolatey-management-web\App_Data\Logs\Logs.txt</code>.</li>
+</ul>
+<hr>
+<h2 id="step-4-set-up-website">Step 4: Set Up Website</h2>
+<h3 id="step-4.1-login-and-change-default-credentials">Step 4.1: Login And Change Default Credentials</h3>
+<p>When you access the CCM Website you will be prompted to provide a username and password to access the site.  By default, the username is <code>ccmadmin</code> and the password is <code>123qwe</code>.  After you input this, you will be prompted to change the password.</p>
+<p><img src="/assets/images/features/ccm/change_password.png" class="img-fluid" alt="First time login - change password"></p>
+<h3 id="step-4.2-smtp-configuration">Step 4.2: SMTP Configuration</h3>
+<p>The CCM Site needs to be able to send email for certain actions.  For example, when a new user is registering with the system, or when sending out forgotten password emails.  Valid SMTP Configuration has to be provided in order for these emails to be sent out.  Follow these steps to configure SMTP for CCM.</p>
+<ol>
+<li>Open the CCM Site in the browser</li>
+<li>Login with the <code>ccmadmin</code> user</li>
+<li>In the left hand menu click on <code>Administration</code> and then <code>Settings</code></li>
+<li>Click on the <code>Email (SMTP)</code> tab in the <code>Settings</code> screen</li>
+<li>Add the SMTP settings for your environment</li>
+<li>Click the <code>Save All</code> button to save changes</li>
+<li>Change the email address to go to your email address</li>
+<li>Click the <code>Send Test Email</code> button and ensure that an email is received correctly</li>
+</ol>
+<p>You should received a notification similar to this:</p>
+<p><img src="/assets/images/features/ccm/test_email_sent_correctly.png" class="img-fluid" alt="Test email sent successfully"></p>
+<h4 id="appsettings.json-configuration">appsettings.json configuration</h4>
+<p><strong>NOTE</strong>: In version 0.2.0+ of CCM, this configuration will likely be automatically applied during installation and will use defaults, but be encrypted. If the value is incorrect, you can simply set it as shown here as encryption is not necessary for this value.</p>
+<p>There is a requirement within the CCM site to send emails to end users of the application.  For example, when registering a new user, or resetting a password.  To ensure that these emails contain a properly clickable link a modification needs to be made to the <code>appsettings.json</code> file which is located in the <code>c:\tools\chocolatey-management-web</code> folder.</p>
+<p>Open this file in a text editor, and add the following entry:</p>
+<pre><code class="language-json">    "App": {
+        "WebSiteRootAddress": "&lt;URL_to_CCM&gt;"
+    }
+</code></pre>
+<ul>
+<li><code>URL_to_CCM</code> should be the accessible URL to access the CCM Website.  This will typically be the FQDN of the server that is hosting the CCM Web Site, but it will depend on your environments configuration.</li>
+</ul>
+<blockquote class="blockquote">
+<p>:memo: <strong>NOTE</strong>: When adding this entry, be sure to include a <code>,</code> either before or after the entry, depending on where you add it in the file.  i.e. the end result needs to be a properly formatted JSON document.</p>
+</blockquote>
+<p>The end result should look something like this:</p>
+<p><img src="/assets/images/features/ccm/updated_appsettingsjson_file.png" class="img-fluid" alt="Modified appsettings.json file"></p>
+<p>Once this change has been added, save the file, and then run the following to ensure that the process running the CCM Website is stopped:</p>
+<pre><code class="language-powershell">Get-Process -Name "ChocolateySoftware.ChocolateyManagement.Web.Mvc" -ErrorAction SilentlyContinue | Stop-Process -Force -PassThru
+</code></pre>
+<p>And then try accessing the website again.  Any emails that are then sent from CCM should then contain valid links back to the site.</p>
+<h3 id="step-4.3-application-settings-file">Step 4.3: Application Settings File</h3>
+<p>Some application settings will require you to edit the <code>appsettings.json</code> file, which is located in the <code>c:\tools\chocolatey-management-web</code> folder.</p>
+<p>Here is a copy of items that can be set. They are not required to be encrypted. Any item that is encrypted can be replaced by a non-encrypted value. During package install/upgrade, Chocolatey will encrypt certain settings (even if they were previously plain text).</p>
+<pre><code class="language-json">{
+  "ConnectionStrings": {
+        "Default": "Server=localhost; Database=ChocolateyManagement; Trusted_Connection=True;"
+  },
+  "App": {
+    "WebSiteRootAddress": "http://&lt;FQDN OR Binding HERE&gt;"
+  },
+  "Recaptcha": {
+    "SiteKey": "&lt;INSERT SITE KEY HERE&gt;",
+    "SecretKey": "&lt;INSERT SECRET KEY HERE&gt;"
+  }
+}
+</code></pre>
+<blockquote class="blockquote">
+<p>:warning: <strong>WARNING</strong>:</p>
+<p>Recaptcha is likely to require a publicly available CCM Web, and we currently have a strong recommendation to <em><strong>NOT</strong></em> open up the web to the internet. You likely do not want to set this or turn it on inside the Administration -&gt; Settings section. However if you do, you will NEED the items set here in the appsettings.json as well.</p>
+</blockquote>
+<hr>
+<h2 id="faq">FAQ</h2>
+<h3 id="can-i-install-the-chocolatey-central-management-web-site-under-a-virtual-directory-in-iis">Can I install the Chocolatey Central Management Web Site under a Virtual Directory in IIS?</h3>
+<p>Currently no.  The Chocolatey Central Management Web Site expects to reside at the site level within IIS.</p>
+<h3 id="what-is-the-ccm-compatibility-matrix">What is the CCM compatibility matrix?</h3>
+<p>Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of CCM and vice versa.  Please see the [[CCM Component Compatibility Matrix|CentralManagement#ccm-component-compatibility-matrix]] for details.</p>
+<h3 id="i-entered-incorrect-database-details-on-install-do-i-need-to-reinstall-to-fix-that">I entered incorrect database details on install, do I need to reinstall to fix that?</h3>
+<p>It depends. You can simply go to the appsettings.json file and adjust the connection string to be plaintext. It will remain in plaintext though (at least until upgrade), so if you have actual password details you need to keep secure, you should do a force installation.</p>
+<ol>
+<li><p>The file is located at <code>c:\tools\chocolatey-management-web\appsettings.json</code>.</p>
+</li>
+<li><p>You would open that up in an editor and modify the <code>"Default"</code> connection string.</p>
+</li>
+<li><p>It would look something like the following (adjust the connection string as necessary):</p>
+<pre><code class="language-json">{
+  "ConnectionStrings": {
+        "Default": "Server=Localhost\\SQLEXPRESS; Database=ChocolateyManagement; Trusted_Connection=True;"
+  },
+  "App": {
+    "WebSiteRootAddress": "http://&lt;FQDN OR Binding HERE&gt;"
+  }
+}
+</code></pre>
+</li>
+<li><p>Then restart the website by running from admin powershell: <code>Get-Process ChocolateySoftware.ChocolateyManagement.Web.Mvc | Stop-Process</code></p>
+</li>
+</ol>
+<blockquote class="blockquote">
+<p>:warning: <strong>WARNING</strong>: Do not put <code>sec:</code> or <code>secure-</code> at the start (prefix) of any values that you are adding/modifying directly. That tells Chocolatey components they are encrypted and it will attempt to decrypt them for use. If that is done incorrectly, it will cause things to crash.</p>
+</blockquote>
+<h3 id="where-is-the-management-website-installed">Where is the management website installed?</h3>
+<p>The default installation folder for <code>chocolatey-management-web</code> is at <code>c:\tools\chocolatey-management-web</code>. However, this is configurable based on <code>$env:ChocolateyToolsLocation</code>. We would not suggest changing that value once you have installed anything that makes use of it as permissions and other things will be pointing to that set of folders.</p>
+<hr>
+<h2 id="common-errors-and-resolutions">Common Errors and Resolutions</h2>
+<h3 id="the-specified-path-file-name-or-both-are-too-long">The specified path, file name, or both are too long</h3>
+<p>This error can occur when installing the <code>chocolatey-management-web</code> package.  Due to the nested folder structure contained within this package, when extracting to the default cache location, the path can become too long.  This problem is known is occur in the 0.1.0-beta-20181009 release of this package, and it should be corrected in subsequent releases.  As a workaround, adding the following parameters to the install command should allow the installation to complete successfully:</p>
+<pre><code class="language-powershell">--cache-location="'C:\Temp\choco'"
+</code></pre>
+<h3 id="http-error-when-trying-to-access-chocolatey-central-management-website">HTTP Error when trying to access Chocolatey Central Management Website</h3>
+<p>When you try to access the Chocolatey Central Management Website (by default, this is hosted on http://localhost), errors messages similar to the following may be returned:</p>
+<p><code>HTTP Error 500.19 - Internal Server Error</code></p>
+<p>These errors happen very early in the application execution, and as a result, are not logged to the standard log location.  It is possible to increase the logging that is performed by the ASP.NET Worker Process, so that additional information about the error can be found.  Follow these steps to enable that additional logging:</p>
+<ol>
+<li>In Windows Explorer, navigate to the <code>c:/tools/chocolatey-management-web</code> folder</li>
+<li>Find the <code>web.config</code> file and open this in a text editor</li>
+<li>Locate the <code>stdoutLogEnabled</code> attribute, which will be set to false by default</li>
+<li>Change this to true, and save the file</li>
+<li>Check to see if there is a running process called <code>ChocolateySoftware.ChocolateyManagement.Web.Mvc.exe</code>.  If there is, stop it.</li>
+<li>Attempt to access the website again.  An additional log file will be created in the <code>App_Data\Logs\stdout</code> folder</li>
+<li>Review this log for additional error information</li>
+<li>Ensure that you set the <code>stdoutLogEnabled</code> attribute back to false</li>
+</ol>
+<p>In these situations, we have found that incorrect database connection strings are typically the root cause of the problem.</p>
+<h3 id="the-term-install-chocolateyappsettingsjsonfile-is-not-recognized-as-the-name-of-a-cmdlet-function-script-file-or-operable-program">The term 'Install-ChocolateyAppSettingsJsonFile' is not recognized as the name of a cmdlet, function, script file, or operable program.</h3>
+<p>In the beta version of Chocolatey.Extension, there was a Cmdlet named Install-ChocolateyAppSettingsJsonFile and this was used in the 0.1.0-beta-20181009 release of the Chocolatey Central Management components. In the final released version of the Chocolatey.Extension, this was renamed to Install-AppSettingsJsonFile.</p>
+<p>As a result, the Chocolatey Central Management beta no longer works with the released version of Chocolatey.Extension. This will be corrected once the next release of the Chocolatey Central Management components is completed.</p>
+<h3 id="cannot-process-command-because-of-one-or-more-missing-mandatory-parameters-filepath">Cannot process command because of one or more missing mandatory parameters: FilePath</h3>
+<p>During the creation of Chocolatey Central Management, some additional PowerShell cmdlets were created, and these are installed as part of the Chocolatey Extension package.  These cmdlets went through a number of iterations, and as a result, different combinations of Chocolatey Central Management packages were incompatible with the Chocolatey Extension package, resulting in the error:</p>
+<p><code>Cannot process command because of one or more missing mandatory parameters: FilePath</code></p>
+<p>The guidance in this case is either to pin to the specific version of the Chocolatey Extension package required by the version of Chocolatey Central Management being used, or, update to the latest versions of all packages, where the situation should be addressed.</p>
+<h3 id="all-attempts-to-send-email-from-ccm-result-in-an-error">All attempts to send email from CCM result in an error</h3>
+<p>When any attempt is made by CCM to send an email, an error occurs.  This either results in an HTTP 500 errors similar to the following:</p>
+<p><img src="/assets/images/features/ccm/error_when_sending_email_500.png" class="img-fluid" alt="HTTP 500 error when sending email"></p>
+<p>Or an inline error, similar to this:</p>
+<p><img src="/assets/images/features/ccm/error_when_sending_email_inline.png" class="img-fluid" alt="Inline error when sending email"></p>
+<p>Checking the log file, an error similar to this is found:</p>
+<pre><code class="language-powershell">ERROR 2019-06-14 00:54:03,491 [55   ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HLNGIPBBV01R", Request id "0HLNGIPBBV01R:00000001": An unhandled exception was thrown by the application.
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:25
+</code></pre>
+<p>This is caused due to the default SMTP configuration being used by CCM, which is incompatible with the environment.  CCM, by default, assumes that there is an available SMTP Server available on the current machine, using port 25.  To fix this, follow the installation steps <a href="#smtp-configuration">above</a>.</p>
+<h3 id="emails-sent-from-ccm-to-users-has-links-that-contains-localhost-rather-than-actual-ccm-server-name">Emails sent from CCM to users has links that contains localhost, rather than actual CCM Server name</h3>
+<p>There is a requirement within the CCM site to send emails to end users of the application.  For example, when registering a new user, or resetting a password.  When this happens, the email should contain a link back to the CCM Site, which the user can click on to bring up the site in their browser.  However, emails sent from CCM contain links that contain localhost in the address, which means when clicked on, they fail to open correctly.  This can be fixed by making a change to the <code>appsettings.json</code> file which is located in the <code>c:\tools\chocolatey-management-web</code> folder.</p>
+<p>Open this file in a text editor, and add the following entry:</p>
+<pre><code class="language-json">    "App": {
+        "WebSiteRootAddress": "&lt;URL_to_CCM&gt;"
+    }
+</code></pre>
+<p>NOTE: When adding this entry, be sure to include a <code>,</code> either before or after the entry, depending on where you add it in the file.  i.e. the end result needs to be a properly formatted JSON document.</p>
+<p>where <code>URL_to_CCM</code> should be the accessible URL to access the CCM Website.  This will typically be the FQDN of the server that is hosting the CCM Web Site, but it will depend on your environments configuration.</p>
+<p>The end result should look something like this:</p>
+<p><img src="/assets/images/features/ccm/updated_appsettingsjson_file.png" class="img-fluid" alt="Modified appsettings.json file"></p>
+<p>Once this change has been added, save the file, and then run the following to ensure that the process running the CCM Website is stopped:</p>
+<pre><code class="language-powershell">Get-Process -Name "ChocolateySoftware.ChocolateyManagement.Web.Mvc" -ErrorAction SilentlyContinue | Stop-Process -Force -PassThru
+</code></pre>
+<p>And then try accessing the website again.  Any emails that are then sent from CCM should then contain valid links back to the site.</p>
+<h3 id="the-updated-license-file-is-not-being-picked-up-in-the-website">The updated license file is not being picked up in the website</h3>
+<p>You need to restart the web executable currently. We are looking to have it automatically picked up in future releases. Here's a script to handle that:</p>
+<pre><code class="language-powershell">Get-Service chocolatey-* | Stop-Service
+Get-Process ChocolateySoftware.ChocolateyManagement.Web.Mvc | Stop-Process
+Get-Service chocolatey-* | Start-Service
+</code></pre>
+<h3 id="a-computer-or-group-is-not-showing-as-available-for-deployments-but-i-have-plenty-of-available-licenses">A computer or group is not showing as available for deployments but I have plenty of available licenses</h3>
+<p>Once you upgrade to Central Management v0.3.0+, you have upgraded the Agent on the machine to v0.11.0+, and it has successfully completed a check in, then that messaging should go away. Note that clients do not get a message back that there was a failure as a security feature - you'll need to consult the Central Management Service logs. You can find that at <code>$env:ChocolateyInstall\logs\ccm-service.log</code>, or if you are on a version of CCM prior to 0.2.0, the log will be located at <code>$env:ChocolateyInstall\lib\chocolatey-management-service\tools\service\logs\chocolatey.service.host.log</code>.</p>
+<h3 id="failed-to-generate-a-user-instance-of-sql-server-due-to-failure-in-retrieving-the-users-local-application-data-path">Failed to generate a user instance of SQL Server due to failure in retrieving the user's local application data path.</h3>
+<p>You may see the following: "System.Data.SqlClient.SqlException (0x80131904): Failed to generate a user instance of SQL Server due to failure in retrieving the user's local application data path. Please make sure the user has a local user profile on the computer. The connection will be closed."</p>
+<p>This means you are attempting to attach a Local DB file as part of your connection. This is an invalid scenario as noted at <a href="#use-windows-account-to-attach-sql-server">Use Windows Account to Attach SQL Server</a>.</p>
+<h3 id="the-website-app-pool-shuts-down-almost-as-soon-as-it-is-started">The website app pool shuts down almost as soon as it is started</h3>
+<p>If you see the app pool shutting down immediately when you start it.</p>
+<ul>
+<li>Check the event log first. It's very helpful in seeing what the actual issues are</li>
+<li>Turn on stdout logging in the config at <code>c:\tools\chocolatey-management-web\web.config</code> if it is not already on. The attribute is named <code>stdoutLogEnabled</code> (set it to true). This will allow logging to <code>c:\tools\chocolatey-management-web\App_Data\Logs</code>. Permissions will play a role in this so ensure <a href="#non-default-app-pool-user-considerations">the user has the right access</a>.</li>
+<li>Check for <a href="#non-default-app-pool-user-considerations">Non-Default App Pool User Considerations</a>.</li>
+</ul>
+<hr>
+<p>[[Central Management Setup|CentralManagementSetup]] | [[Chocolatey Central Management|CentralManagement]]</p>
+
+	</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                <p class="text-muted">
+    Copyright © Chocolatey Software, Inc.
+    <br>
+    Website generated by <a href="http://wyam.io" target="_blank">Wyam</a>
+</p>
+
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        <a class="github-button" href="https://github.com/chocolatey/choco" target="_blank">
+    <i class="fa fa-github"></i>
+    GitHub
+</a>
+<script>
+    ((window.gitter = {}).chat = {}).options = {
+        room: 'chocolatey/choco'
+    };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
+
+<script type="text/javascript" src="/assets/js/anchor.min.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    anchors.options.placement = 'left';
+    anchors.add();
+
+    var snippets = document.querySelectorAll("pre > code");
+    [].forEach.call(snippets, function(snippet) {
+        snippet.insertAdjacentHTML("beforebegin", "<button class='btn-copy' data-clipboard-snippet><img class='clippy' width=13 src='/assets/images/clippy.svg' alt='Copy to clipboard'></button>");
+    });
+    var clipboardSnippets = new Clipboard('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+    clipboardSnippets.on('success', function(e) {
+        e.clearSelection();
+        showTooltip(e.trigger, "Copied!");
+    });
+    clipboardSnippets.on('error', function(e) {
+        showTooltip(e.trigger, fallbackMessage(e.action));
+    });
+    var btns = document.querySelectorAll('.btn-copy');
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener('mouseleave', function(e) {
+            e.currentTarget.setAttribute('class', 'btn-copy');
+            e.currentTarget.removeAttribute('aria-label');
+        });
+    }
+    function showTooltip(elem, msg) {
+        elem.setAttribute('class', 'btn-copy tooltipped tooltipped-s');
+        elem.setAttribute('aria-label', msg);
+    }
+    function fallbackMessage(action) {
+        var actionMsg = '';
+        var actionKey = (action === 'cut' ? 'X' : 'C');
+        if (/iPhone|iPad/i.test(navigator.userAgent)) {
+            actionMsg = 'No support :(';
+        } else if (/Mac/i.test(navigator.userAgent)) {
+            actionMsg = 'Press ⌘-' + actionKey + ' to ' + action;
+        } else {
+            actionMsg = 'Press Ctrl-' + actionKey + ' to ' + action;
+        }
+        return actionMsg;
+    }
+</script>
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

@@ -1,0 +1,598 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>docs - Package Shims</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+                            <span>docs</span>
+                </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                            
+
+        <li class="active"><a href="/docs">Documentation</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+        <div><p><a href="https://github.com/chocolatey/docs/tree/master/input/docs/features/free/shim.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#shimming-automatically-add-executables-to-path-free-open-source">Shimming - Automatically Add Executables to PATH (Free / Open Source)</a></p>
+<p><a href="#benefits">Benefits</a></p>
+<p><a href="#usage">Usage</a></p>
+<p><a href="#see-it-in-action">See It In Action</a></p>
+<p><a href="#options-and-switches">Options and Switches</a></p>
+<p><a href="#faq">FAQ</a></p>
+<p><a href="#how-do-i-take-advantage-of-this-feature">How do I take advantage of this feature?</a></p>
+<p><a href="#how-does-it-work">How does it work?</a></p>
+<p><a href="#how-is-this-better-than-symlinks">How is this better than symlinks?</a></p>
+<p><a href="#does-it-require-admin-rights">Does it require admin rights?</a></p>
+<p><a href="#does-the-shim-work-with-uac">Does the shim work with UAC?</a></p>
+<p><a href="#why-not-simple-batch-redirection">Why not simple batch redirection?</a></p>
+<p><a href="#have-you-thought-about-shimming-in-more-places">Have you thought about shimming in more places?</a></p>
+<p><a href="#i-need-to-shim-a-non-exe-file">I need to shim a non-exe file.</a></p>
+<p><a href="#i-need-to-exclude-a-file-from-shimming">I need to exclude a file from shimming.</a></p>
+<p><a href="#how-can-i-ensure-a-gui-shim">How can I ensure a GUI shim?</a></p>
+<p><a href="#a-package-messed-up-and-should-have-set-up-a-shim-as-a-gui">A package messed up and should have set up a shim as a GUI.</a></p>
+<p><a href="#an-executable-requires-being-run-from-the-folder-where-it-actually-is">An executable requires being run from the folder where it actually is.</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    
+
+                    <ul class="sidebar-menu">
+                        
+
+                <li><a href="/docs/home">Docs Home</a></li>
+                <li><a href="/docs/why">Why Chocolatey?</a></li>
+                <li><a href="/docs/security">Security</a></li>
+                <li class="treeview active">
+                    <a href="/docs/features">Features</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li class="treeview active">
+                    <a href="/docs/features/free">Free</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/features/free/how-to-host-feed">Host packages internally</a></li>
+                <li><a href="/docs/features/free/infrastructure-automation">Integrates with everything</a></li>
+                <li class="selected"><a href="/docs/features/free/shim">Package Shims</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/features/paid">Paid</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/features/paid/agent-service">Self Service/Background Mode (C4B)</a></li>
+                <li><a href="/docs/features/paid/chocolatey-central-management">Chocolatey Central Management (C4B)</a></li>
+                <li><a href="/docs/features/paid/automatically-recompile-packages">Package Internalizer (C4B)</a></li>
+                <li><a href="/docs/features/paid/create-packages-from-installers">Package Builder (C4B)</a></li>
+                <li><a href="/docs/features/paid/package-audit">Package Audit (C4B)</a></li>
+                <li><a href="/docs/features/paid/branding">Branding Chocolatey Applications (C4B)</a></li>
+                <li><a href="/docs/features/paid/virus-check">Runtime Malware Protection (Pro+)</a></li>
+                <li><a href="/docs/features/paid/private-cdn">Download CDN Cache (Pro+)</a></li>
+                <li><a href="/docs/features/paid/package-reducer">Package Reducer (Pro+)</a></li>
+                <li><a href="/docs/features/paid/install-directory-override">Ubiquitous Install Directory Option (Pro+)</a></li>
+                <li><a href="/docs/features/paid/package-throttle">Package Throttle (Pro+)</a></li>
+                <li><a href="/docs/features/paid/synchronize">Package Synchronizer (Pro+ Auto / C4B Sync Command)</a></li>
+
+                    </ul>
+                </li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/general">General</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li class="treeview">
+                    <a href="/docs/general/release-notes">Release Notes</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/general/release-notes/open-source">Open Source</a></li>
+                <li><a href="/docs/general/release-notes/licensed">Licensed</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/docs/general/troubleshooting">Troubleshooting</a></li>
+                <li><a href="/docs/general/faqs">FAQs</a></li>
+                <li><a href="/docs/general/moderation">Chocolatey.org Moderation</a></li>
+                <li><a href="/docs/general/community-packages-disclaimer">Chocolatey.org Packages Disclaimer</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/usage">Usage</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/usage/installation">How to install</a></li>
+                <li><a href="/docs/usage/installation-licensed">How to install licensed edition</a></li>
+                <li><a href="/docs/usage/chocolatey-configuration">Configuration/chocolatey.config</a></li>
+                <li><a href="/docs/usage/uninstallation">How to uninstall</a></li>
+                <li><a href="/docs/usage/getting-started">Getting Started</a></li>
+                <li class="treeview">
+                    <a href="/docs/usage/commands">Commands</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/usage/commands/reference">Complete Reference</a></li>
+                <li><a href="/docs/usage/commands/list">List/Search</a></li>
+                <li><a href="/docs/usage/commands/info">Info</a></li>
+                <li><a href="/docs/usage/commands/install">Install</a></li>
+                <li><a href="/docs/usage/commands/pin">Pin</a></li>
+                <li><a href="/docs/usage/commands/outdated">Outdated</a></li>
+                <li><a href="/docs/usage/commands/upgrade">Upgrade</a></li>
+                <li><a href="/docs/usage/commands/uninstall">Uninstall</a></li>
+                <li><a href="/docs/usage/commands/config">Config</a></li>
+                <li><a href="/docs/usage/commands/sources">Source/Sources</a></li>
+                <li><a href="/docs/usage/commands/feature">Feature</a></li>
+                <li><a href="/docs/usage/commands/download">Download</a></li>
+
+                    </ul>
+                </li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/creating-packages">Creating Packages</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/creating-packages/create-packages">Create Packages</a></li>
+                <li><a href="/docs/creating-packages/create-packages-quick-start">Quick Start</a></li>
+                <li class="treeview">
+                    <a href="/docs/creating-packages/commands">Commands</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/creating-packages/commands/new">New</a></li>
+                <li><a href="/docs/creating-packages/commands/pack">Pack</a></li>
+                <li><a href="/docs/creating-packages/commands/api-key">ApiKey</a></li>
+                <li><a href="/docs/creating-packages/commands/push">Push</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/creating-packages/helpers">PowerShell Reference</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/creating-packages/helpers/reference">Function and Variable Reference</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateypackage">Install-ChocolateyPackage</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateyzippackage">Install-ChocolateyZipPackage</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateypowershellcommand">Install-ChocolateyPowerShellCommand</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateyvsixpackage">Install-ChocolateyVsixPackage</a></li>
+                <li><a href="/docs/creating-packages/helpers/get-chocolateywebfile">Get-ChocolateyWebFile</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateyinstallpackage">Install-ChocolateyInstallPackage</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/docs/creating-packages/automatic-packages">Automatic Packaging</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/how-tos">How To's</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/how-tos/proxy-settings-for-chocolatey">Use Chocolatey w/Proxy Server</a></li>
+                <li><a href="/docs/how-tos/change-cache">Change Download Cache Location aka Don't use TEMP for downloads</a></li>
+                <li><a href="/docs/how-tos/install-upgrade-package-without-scripts">Install/Upgrade a Package w/out running install scripts</a></li>
+                <li><a href="/docs/how-tos/package-triage-process">Request Package Fixes/Updates</a></li>
+                <li><a href="/docs/how-tos/recompile-packages">Manually Recompile Packages, Embedding/Internalizing Remote Resources</a></li>
+                <li><a href="/docs/how-tos/package-maintainer-handover">Take Over Package Maintenance Exclusively</a></li>
+                <li><a href="/docs/how-tos/parse-packageparameters-argument">Parse Package Parameters</a></li>
+                <li><a href="/docs/how-tos/mount-an-iso-in-chocolatey-package">Mount Iso</a></li>
+                <li><a href="/docs/how-tos/create-custom-package-templates">Create Custom Package Templates</a></li>
+                <li><a href="/docs/how-tos/create-extensions">Extend Chocolatey With PowerSHell Modules (extensions)</a></li>
+                <li><a href="/docs/how-tos/deprecate-a-chocolatey-package">Deprecate a Package</a></li>
+                <li><a href="/docs/how-tos/set-up-chocolatey-server">Set up the Chocolatey.Server</a></li>
+                <li><a href="/docs/how-tos/setup-offline-installation">Set up Chocolatey for Internal/organizational use</a></li>
+                <li><a href="/docs/how-tos/setup-internal-package-repository">Automate Package Internalizer (MSP/C4B)</a></li>
+                <li><a href="/docs/how-tos/chocolatey-for-business-quick-start-guide">C4B Quick Start Guide</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/chocolatey-gui">Chocolatey GUI</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/chocolatey-gui/overview">Chocolatey GUI Overview</a></li>
+                <li><a href="/docs/chocolatey-gui/known-issues">Chocolatey GUI Known Issues</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/quick-deployment">Quick Deployment Environment (QDE)</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/quick-deployment/overview">Overview</a></li>
+                <li><a href="/docs/quick-deployment/setup">Setup</a></li>
+                <li><a href="/docs/quick-deployment/desktop-readme">Desktop Readme</a></li>
+                <li><a href="/docs/quick-deployment/ssl-setup">SSL Setup</a></li>
+                <li><a href="/docs/quick-deployment/firewall-changes">Firewall Changes</a></li>
+                <li><a href="/docs/quick-deployment/client-setup">Client Setup</a></li>
+                <li><a href="/docs/quick-deployment/internet-setup">Internet Setup</a></li>
+                <li class="treeview">
+                    <a href="/docs/quick-deployment/v1">V1</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/quick-deployment/v1/setup">Setup</a></li>
+                <li><a href="/docs/quick-deployment/v1/desktop-readme">Desktop Readme</a></li>
+                <li><a href="/docs/quick-deployment/v1/ssl-setup">SSL Setup</a></li>
+                <li><a href="/docs/quick-deployment/v1/firewall-changes">Firewall Changes</a></li>
+                <li><a href="/docs/quick-deployment/v1/client-setup">Client Setup</a></li>
+
+                    </ul>
+                </li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/central-management">Chocolatey Central Management (CCM)</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/central-management/overview">Central Management Overview</a></li>
+                <li><a href="/docs/central-management/setup">Central Managment Setup</a></li>
+                <li><a href="/docs/central-management/setup-client">Central Management Client Setup</a></li>
+                <li><a href="/docs/central-management/setup-upgrade">Central Management Upgrade</a></li>
+                <li><a href="/docs/central-management/deployments">Central Management Deployments</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/use-cases">Use Cases</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/use-cases/development-environment-setup">Development Environment</a></li>
+                <li><a href="/docs/use-cases/hosting-chocolatey-packages-on-myget">Host on MyGet</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/learning-resources">Learning Resources</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/learning-resources/resources">Resources</a></li>
+                <li><a href="/docs/learning-resources/videos">Videos</a></li>
+                <li><a href="/docs/learning-resources/presentations">Presentations</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/additional-information">Additional Information</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/additional-information/legal">Legal</a></li>
+                <li><a href="/docs/additional-information/history">History</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/docs/chocolatey-install-ps1">Chocolatey Install Ps1</a></li>
+                <li><a href="/docs/chocolatey-story">Chocolatey Story</a></li>
+                <li><a href="/docs/chocolatey-vs-ninite">Chocolatey Vs Ninite</a></li>
+                <li><a href="/docs/default-chocolatey-install-reasoning">Default Chocolatey Install Reasoning</a></li>
+                <li><a href="/docs/logo-use-policy">Logo Use Policy</a></li>
+                <li><a href="/docs/migrate-old-chocolatey-directory-to-programdata">Migrate Old Chocolatey Directory To Programdata</a></li>
+                <li><a href="/docs/packaging-next">Packaging Next</a></li>
+                <li><a href="/docs/roadmap">Roadmap</a></li>
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+		<section class="content-header">
+			<h1>Package Shims</h1>
+		</section>
+	<section class="content">
+		<h1 id="shimming-automatically-add-executables-to-path-free-open-source">Shimming - Automatically Add Executables to PATH (Free / Open Source)</h1>
+<p>Shimming is like symlinking, but it works much better. It's a form of redirection, where you create a "shim" that redirects input to the actual binary process and shares the output. It can also work to simply call the actual binary when it shims GUI applications.</p>
+<p>We like to call this "batch redirection that works".</p>
+<p>This also allows applications and tools to be on the "PATH" without cluttering up the PATH environment variable.</p>
+<!-- TOC -->
+<ul>
+<li><a href="#benefits">Benefits</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#see-it-in-action">See It In Action</a></li>
+<li><a href="#options-and-switches">Options and Switches</a></li>
+<li><a href="#faq">FAQ</a>
+<ul>
+<li><a href="#how-do-i-take-advantage-of-this-feature">How do I take advantage of this feature?</a></li>
+<li><a href="#how-does-it-work">How does it work?</a></li>
+<li><a href="#how-is-this-better-than-symlinks">How is this better than symlinks?</a></li>
+<li><a href="#does-it-require-admin-rights">Does it require admin rights?</a></li>
+<li><a href="#does-the-shim-work-with-uac">Does the shim work with UAC?</a></li>
+<li><a href="#why-not-simple-batch-redirection">Why not simple batch redirection?</a></li>
+<li><a href="#have-you-thought-about-shimming-in-more-places">Have you thought about shimming in more places?</a></li>
+<li><a href="#i-need-to-shim-a-non-exe-file">I need to shim a non-exe file.</a></li>
+<li><a href="#i-need-to-exclude-a-file-from-shimming">I need to exclude a file from shimming.</a></li>
+<li><a href="#how-can-i-ensure-a-gui-shim">How can I ensure a GUI shim?</a></li>
+<li><a href="#a-package-messed-up-and-should-have-set-up-a-shim-as-a-gui">A package messed up and should have set up a shim as a GUI.</a></li>
+<li><a href="#an-executable-requires-being-run-from-the-folder-where-it-actually-is">An executable requires being run from the folder where it actually is.</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="benefits">Benefits</h2>
+<p>These are the benefits of creating a shim:</p>
+<ul>
+<li>Provides an exe file that calls a target executable.</li>
+<li>Runs the target executable where it is, which means all dependencies and other things used are all in the original location</li>
+<li>When items require elevated privileges, shims will raise UAC prompts.</li>
+<li>The exe can be called from powershell, bash, cmd.exe, or other shells just like you would call the target.</li>
+<li>Blocks and waits for command line apps to finish running, exits immediately when running a GUI app.</li>
+<li>Uses the icon of the target if the target exists on creation.</li>
+<li>Works better than symlinks. Symlinks on Windows fall down at file dependencies. So if your file depends on other files and DLLs, all of those need to also be linked.</li>
+<li>Does not require special privileges like creating symlinks (symbolic links) do. So you can create shims without administrative rights.</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<p>Chocolatey automatically shims executables in package folders that are not explicitly ignored, putting them into the <code>"$($env:ChocolateyInstall)\bin"</code> folder (and subsequently onto the PATH). This typically resolves to <code>C:\ProgramData\chocolatey\bin</code> unless you customized your install options or a non-administrator install.</p>
+<p>These executables can come as part of the package or downloaded to the package folder during the install script.</p>
+<p>Chocolatey ensures the folder <code>"$($env:ChocolateyInstall)\bin"</code> in the PATH environment variable, allowing you to put tools on the PATH without cluttering up the PATH.</p>
+<h2 id="see-it-in-action">See It In Action</h2>
+<p><img src="/assets/images/features/features_shimgen.png" class="img-fluid" alt="Shimming - if you are on https://chocolatey.org/docs/features-shim, see commented html below for detailed description of image"></p>
+<!--
+Text in the image above:
+
+Automatically Adds Package Executables to PATH without clutter (Shimming)
+
+- Exclusive to Chocolatey - When executables are found in the package directory, they are automatically shimmed to a folder on the PATH.
+- When items require elevated privileges, shims will raise UAC prompts.
+- Like symbolic links or batch redirects, but better.
+- Shims have logging and other options - pass `--shimgen-help` to a shimmed executable for options.
+
+The image shows installing ruby.portable, then running `ruby -v` followed by `ruby -v --shimgen-log` and the additional output that comes out from the shim.
+-->
+<h2 id="options-and-switches">Options and Switches</h2>
+<p>You pass these arguments to an executable that is a shim (e.g. executables in the bin directory of your Chocolatey install, not choco.exe):</p>
+<ul>
+<li><code>--shimgen-help</code> - shows this help menu and exits without running the target</li>
+<li><code>--shimgen-log</code> - logging is shown on command line</li>
+<li><code>--shimgen-waitforexit</code> - explicitly tell the shim to wait for target to exit - useful when something is calling a gui and wanting to block - command line programs explicitly have waitforexit already set.</li>
+<li><code>--shimgen-exit</code> - explicitly tell the shim to exit immediately.</li>
+<li><code>--shimgen-gui</code> - explicitly behave as if the target is a GUI application. This is helpful in situations where the package did not have a proper .gui file.</li>
+<li><code>--shimgen-usetargetworkingdirectory</code> - set the working directory to the target path. Useful when programs need to be running from where they are located (usually indicates programs that have issues being run globally).</li>
+<li><code>--shimgen-noop</code> - Do not actually call the target. Useful to see what would happen if you ran the command.</li>
+</ul>
+<h2 id="faq">FAQ</h2>
+<h3 id="how-do-i-take-advantage-of-this-feature">How do I take advantage of this feature?</h3>
+<p>This works with all versions of Chocolatey. Just use packages and when those packages have exe files, those are automatically shimmed so they are on the PATH.</p>
+<h3 id="how-does-it-work">How does it work?</h3>
+<p>Chocolatey uses a tool called ShimGen that inspects an executable and creates a small binary, known as a "shim", that simply calls the executable. Then it places that shim in the <code>"$($env:ChocolateyInstall)\bin"</code>. It creates the shim by generating it at runtime based on the actual binary's information.</p>
+<h3 id="how-is-this-better-than-symlinks">How is this better than symlinks?</h3>
+<p>When you symlink a file on Windows, you must symlink all of its dependencies like dlls and config files. If you put that all into the <code>"$($env:ChocolateyInstall)\bin"</code> folder to take advantage of being on the PATH, you can quickly see that you will get into a form of "DLL hell" when other executables depend on different versions of the same DLL. You would also need to symlink folders and files for things like plugins, extensions, skins, and other things that are in the original directory. If you are trying to create a symlink to not add more locations to your PATH environment variable, then this particular shortcoming defeats that purpose entirely.</p>
+<p>Shimming by design does not run into this issue.</p>
+<h3 id="does-it-require-admin-rights">Does it require admin rights?</h3>
+<p>No, and this is another thing that sets it apart from symlinks. To create symlinks on Windows, you need to have <code>SeCreateSymbolicLinkPrivilege</code>, which is one of the privileges granted to Administrators.</p>
+<h3 id="does-the-shim-work-with-uac">Does the shim work with UAC?</h3>
+<p>Yes! When a shim detects that elevation is required, it will automatically request elevation.</p>
+<h3 id="why-not-simple-batch-redirection">Why not simple batch redirection?</h3>
+<p>We tried using batch ("<em>.bat") files, and it mostly works, but when applications calling other applications expect the file name to be ".exe", a file named "</em>.bat" doesn't work. Batch files also don't work in all shells, and shims do.</p>
+<h3 id="have-you-thought-about-shimming-in-more-places">Have you thought about shimming in more places?</h3>
+<p>Yes, but we have not decided whether shimming Program Files is a good idea yet or not. Packages can explicitly enforce shims with [[Install-BinFile|HelpersInstallBinFile]].</p>
+<h3 id="i-need-to-shim-a-non-exe-file">I need to shim a non-exe file.</h3>
+<p>If you are creating a package and you need to shim a file that doesn't end in .exe (like a .bat file), you should look at [[Install-BinFile|HelpersInstallBinFile]].</p>
+<h3 id="i-need-to-exclude-a-file-from-shimming">I need to exclude a file from shimming.</h3>
+<p>If you are creating a package and you want to skip creation of a shim for a particular file, you can create a "*.ignore" file.</p>
+<p>Set an empty file next to the executable (or where it will be downloaded/unpacked to), sharing the same name with the executable and appending ".ignore". For example, if your file is named "<code>bob.exe</code>", you need a file named "<code>bob.exe.ignore</code>" (pay attention to case - "<code>BOB.exe.ignore</code>" may not work with all versions of Chocolatey).</p>
+<p>[[Read more...|CreatePackages#how-do-i-exclude-executables-from-getting-shims]]</p>
+<h3 id="how-can-i-ensure-a-gui-shim">How can I ensure a GUI shim?</h3>
+<p>Chocolatey 0.9.10+ will automatically detect GUI applications and adjust the shim accordingly. The detection may not always be accurate, and older versions of Chocolatey don't handle this, so it's best to create a "*.gui" file to direct the shim creation to be for a GUI application.</p>
+<p>If you are creating a package and want the shim to exit immediately after calling the application, create an empty "*.gui" file next to where the exe file is (or where it will be downloaded/unpacked to), sharing the same name with the executable and appending ".gui". For example, if your file is named "<code>bob.exe</code>", you need a file named "<code>bob.exe.gui</code>" (pay attention to case - "<code>BOB.exe.gui</code>" may not work with all versions of Chocolatey).</p>
+<p>[[Read more...|CreatePackages#how-do-i-set-up-shims-for-applications-that-have-a-gui]]</p>
+<h3 id="a-package-messed-up-and-should-have-set-up-a-shim-as-a-gui">A package messed up and should have set up a shim as a GUI.</h3>
+<p>Call the shim with <code>--shimgen-gui</code> to target the correct behavior.</p>
+<h3 id="an-executable-requires-being-run-from-the-folder-where-it-actually-is">An executable requires being run from the folder where it actually is.</h3>
+<p>Call the shim with <code>--shimgen-usetargetworkingdirectory</code>. There are badly behaved applications that don't run well from anywhere, and they require some extra help so they will run correctly.</p>
+
+	</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                <p class="text-muted">
+    Copyright © Chocolatey Software, Inc.
+    <br>
+    Website generated by <a href="http://wyam.io" target="_blank">Wyam</a>
+</p>
+
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        <a class="github-button" href="https://github.com/chocolatey/choco" target="_blank">
+    <i class="fa fa-github"></i>
+    GitHub
+</a>
+<script>
+    ((window.gitter = {}).chat = {}).options = {
+        room: 'chocolatey/choco'
+    };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
+
+<script type="text/javascript" src="/assets/js/anchor.min.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    anchors.options.placement = 'left';
+    anchors.add();
+
+    var snippets = document.querySelectorAll("pre > code");
+    [].forEach.call(snippets, function(snippet) {
+        snippet.insertAdjacentHTML("beforebegin", "<button class='btn-copy' data-clipboard-snippet><img class='clippy' width=13 src='/assets/images/clippy.svg' alt='Copy to clipboard'></button>");
+    });
+    var clipboardSnippets = new Clipboard('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+    clipboardSnippets.on('success', function(e) {
+        e.clearSelection();
+        showTooltip(e.trigger, "Copied!");
+    });
+    clipboardSnippets.on('error', function(e) {
+        showTooltip(e.trigger, fallbackMessage(e.action));
+    });
+    var btns = document.querySelectorAll('.btn-copy');
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener('mouseleave', function(e) {
+            e.currentTarget.setAttribute('class', 'btn-copy');
+            e.currentTarget.removeAttribute('aria-label');
+        });
+    }
+    function showTooltip(elem, msg) {
+        elem.setAttribute('class', 'btn-copy tooltipped tooltipped-s');
+        elem.setAttribute('aria-label', msg);
+    }
+    function fallbackMessage(action) {
+        var actionMsg = '';
+        var actionKey = (action === 'cut' ? 'X' : 'C');
+        if (/iPhone|iPad/i.test(navigator.userAgent)) {
+            actionMsg = 'No support :(';
+        } else if (/Mac/i.test(navigator.userAgent)) {
+            actionMsg = 'Press ⌘-' + actionKey + ' to ' + action;
+        } else {
+            actionMsg = 'Press Ctrl-' + actionKey + ' to ' + action;
+        }
+        return actionMsg;
+    }
+</script>
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

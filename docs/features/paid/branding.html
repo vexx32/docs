@@ -1,0 +1,697 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>docs - Branding Chocolatey Applications (C4B)</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+                            <span>docs</span>
+                </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                            
+
+        <li class="active"><a href="/docs">Documentation</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+        <div><p><a href="https://github.com/chocolatey/docs/tree/master/input/docs/features/paid/branding.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#branding-business-editions-only">Branding (Business Editions Only)</a></p>
+<p><a href="#requirements-for-branding">Requirements for branding</a></p>
+<p><a href="#location-of-branding-files">Location of branding files</a></p>
+<p><a href="#default-location">Default Location</a></p>
+<p><a href="#custom-location">Custom Location</a></p>
+<p><a href="#chocolateyguibranding.dll">ChocolateyGuiBranding.dll</a></p>
+<p><a href="#branding-in-action">Branding in action</a></p>
+<p><a href="#deploying-branding">Deploying Branding</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    
+
+                    <ul class="sidebar-menu">
+                        
+
+                <li><a href="/docs/home">Docs Home</a></li>
+                <li><a href="/docs/why">Why Chocolatey?</a></li>
+                <li><a href="/docs/security">Security</a></li>
+                <li class="treeview active">
+                    <a href="/docs/features">Features</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li class="treeview">
+                    <a href="/docs/features/free">Free</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/features/free/how-to-host-feed">Host packages internally</a></li>
+                <li><a href="/docs/features/free/infrastructure-automation">Integrates with everything</a></li>
+                <li><a href="/docs/features/free/shim">Package Shims</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview active">
+                    <a href="/docs/features/paid">Paid</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/features/paid/agent-service">Self Service/Background Mode (C4B)</a></li>
+                <li><a href="/docs/features/paid/chocolatey-central-management">Chocolatey Central Management (C4B)</a></li>
+                <li><a href="/docs/features/paid/automatically-recompile-packages">Package Internalizer (C4B)</a></li>
+                <li><a href="/docs/features/paid/create-packages-from-installers">Package Builder (C4B)</a></li>
+                <li><a href="/docs/features/paid/package-audit">Package Audit (C4B)</a></li>
+                <li class="selected"><a href="/docs/features/paid/branding">Branding Chocolatey Applications (C4B)</a></li>
+                <li><a href="/docs/features/paid/virus-check">Runtime Malware Protection (Pro+)</a></li>
+                <li><a href="/docs/features/paid/private-cdn">Download CDN Cache (Pro+)</a></li>
+                <li><a href="/docs/features/paid/package-reducer">Package Reducer (Pro+)</a></li>
+                <li><a href="/docs/features/paid/install-directory-override">Ubiquitous Install Directory Option (Pro+)</a></li>
+                <li><a href="/docs/features/paid/package-throttle">Package Throttle (Pro+)</a></li>
+                <li><a href="/docs/features/paid/synchronize">Package Synchronizer (Pro+ Auto / C4B Sync Command)</a></li>
+
+                    </ul>
+                </li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/general">General</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li class="treeview">
+                    <a href="/docs/general/release-notes">Release Notes</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/general/release-notes/open-source">Open Source</a></li>
+                <li><a href="/docs/general/release-notes/licensed">Licensed</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/docs/general/troubleshooting">Troubleshooting</a></li>
+                <li><a href="/docs/general/faqs">FAQs</a></li>
+                <li><a href="/docs/general/moderation">Chocolatey.org Moderation</a></li>
+                <li><a href="/docs/general/community-packages-disclaimer">Chocolatey.org Packages Disclaimer</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/usage">Usage</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/usage/installation">How to install</a></li>
+                <li><a href="/docs/usage/installation-licensed">How to install licensed edition</a></li>
+                <li><a href="/docs/usage/chocolatey-configuration">Configuration/chocolatey.config</a></li>
+                <li><a href="/docs/usage/uninstallation">How to uninstall</a></li>
+                <li><a href="/docs/usage/getting-started">Getting Started</a></li>
+                <li class="treeview">
+                    <a href="/docs/usage/commands">Commands</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/usage/commands/reference">Complete Reference</a></li>
+                <li><a href="/docs/usage/commands/list">List/Search</a></li>
+                <li><a href="/docs/usage/commands/info">Info</a></li>
+                <li><a href="/docs/usage/commands/install">Install</a></li>
+                <li><a href="/docs/usage/commands/pin">Pin</a></li>
+                <li><a href="/docs/usage/commands/outdated">Outdated</a></li>
+                <li><a href="/docs/usage/commands/upgrade">Upgrade</a></li>
+                <li><a href="/docs/usage/commands/uninstall">Uninstall</a></li>
+                <li><a href="/docs/usage/commands/config">Config</a></li>
+                <li><a href="/docs/usage/commands/sources">Source/Sources</a></li>
+                <li><a href="/docs/usage/commands/feature">Feature</a></li>
+                <li><a href="/docs/usage/commands/download">Download</a></li>
+
+                    </ul>
+                </li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/creating-packages">Creating Packages</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/creating-packages/create-packages">Create Packages</a></li>
+                <li><a href="/docs/creating-packages/create-packages-quick-start">Quick Start</a></li>
+                <li class="treeview">
+                    <a href="/docs/creating-packages/commands">Commands</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/creating-packages/commands/new">New</a></li>
+                <li><a href="/docs/creating-packages/commands/pack">Pack</a></li>
+                <li><a href="/docs/creating-packages/commands/api-key">ApiKey</a></li>
+                <li><a href="/docs/creating-packages/commands/push">Push</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/creating-packages/helpers">PowerShell Reference</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/creating-packages/helpers/reference">Function and Variable Reference</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateypackage">Install-ChocolateyPackage</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateyzippackage">Install-ChocolateyZipPackage</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateypowershellcommand">Install-ChocolateyPowerShellCommand</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateyvsixpackage">Install-ChocolateyVsixPackage</a></li>
+                <li><a href="/docs/creating-packages/helpers/get-chocolateywebfile">Get-ChocolateyWebFile</a></li>
+                <li><a href="/docs/creating-packages/helpers/install-chocolateyinstallpackage">Install-ChocolateyInstallPackage</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/docs/creating-packages/automatic-packages">Automatic Packaging</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/how-tos">How To's</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/how-tos/proxy-settings-for-chocolatey">Use Chocolatey w/Proxy Server</a></li>
+                <li><a href="/docs/how-tos/change-cache">Change Download Cache Location aka Don't use TEMP for downloads</a></li>
+                <li><a href="/docs/how-tos/install-upgrade-package-without-scripts">Install/Upgrade a Package w/out running install scripts</a></li>
+                <li><a href="/docs/how-tos/package-triage-process">Request Package Fixes/Updates</a></li>
+                <li><a href="/docs/how-tos/recompile-packages">Manually Recompile Packages, Embedding/Internalizing Remote Resources</a></li>
+                <li><a href="/docs/how-tos/package-maintainer-handover">Take Over Package Maintenance Exclusively</a></li>
+                <li><a href="/docs/how-tos/parse-packageparameters-argument">Parse Package Parameters</a></li>
+                <li><a href="/docs/how-tos/mount-an-iso-in-chocolatey-package">Mount Iso</a></li>
+                <li><a href="/docs/how-tos/create-custom-package-templates">Create Custom Package Templates</a></li>
+                <li><a href="/docs/how-tos/create-extensions">Extend Chocolatey With PowerSHell Modules (extensions)</a></li>
+                <li><a href="/docs/how-tos/deprecate-a-chocolatey-package">Deprecate a Package</a></li>
+                <li><a href="/docs/how-tos/set-up-chocolatey-server">Set up the Chocolatey.Server</a></li>
+                <li><a href="/docs/how-tos/setup-offline-installation">Set up Chocolatey for Internal/organizational use</a></li>
+                <li><a href="/docs/how-tos/setup-internal-package-repository">Automate Package Internalizer (MSP/C4B)</a></li>
+                <li><a href="/docs/how-tos/chocolatey-for-business-quick-start-guide">C4B Quick Start Guide</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/chocolatey-gui">Chocolatey GUI</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/chocolatey-gui/overview">Chocolatey GUI Overview</a></li>
+                <li><a href="/docs/chocolatey-gui/known-issues">Chocolatey GUI Known Issues</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/quick-deployment">Quick Deployment Environment (QDE)</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/quick-deployment/overview">Overview</a></li>
+                <li><a href="/docs/quick-deployment/setup">Setup</a></li>
+                <li><a href="/docs/quick-deployment/desktop-readme">Desktop Readme</a></li>
+                <li><a href="/docs/quick-deployment/ssl-setup">SSL Setup</a></li>
+                <li><a href="/docs/quick-deployment/firewall-changes">Firewall Changes</a></li>
+                <li><a href="/docs/quick-deployment/client-setup">Client Setup</a></li>
+                <li><a href="/docs/quick-deployment/internet-setup">Internet Setup</a></li>
+                <li class="treeview">
+                    <a href="/docs/quick-deployment/v1">V1</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/quick-deployment/v1/setup">Setup</a></li>
+                <li><a href="/docs/quick-deployment/v1/desktop-readme">Desktop Readme</a></li>
+                <li><a href="/docs/quick-deployment/v1/ssl-setup">SSL Setup</a></li>
+                <li><a href="/docs/quick-deployment/v1/firewall-changes">Firewall Changes</a></li>
+                <li><a href="/docs/quick-deployment/v1/client-setup">Client Setup</a></li>
+
+                    </ul>
+                </li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/central-management">Chocolatey Central Management (CCM)</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/central-management/overview">Central Management Overview</a></li>
+                <li><a href="/docs/central-management/setup">Central Managment Setup</a></li>
+                <li><a href="/docs/central-management/setup-client">Central Management Client Setup</a></li>
+                <li><a href="/docs/central-management/setup-upgrade">Central Management Upgrade</a></li>
+                <li><a href="/docs/central-management/deployments">Central Management Deployments</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/use-cases">Use Cases</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/use-cases/development-environment-setup">Development Environment</a></li>
+                <li><a href="/docs/use-cases/hosting-chocolatey-packages-on-myget">Host on MyGet</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/learning-resources">Learning Resources</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/learning-resources/resources">Resources</a></li>
+                <li><a href="/docs/learning-resources/videos">Videos</a></li>
+                <li><a href="/docs/learning-resources/presentations">Presentations</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/docs/additional-information">Additional Information</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/docs/additional-information/legal">Legal</a></li>
+                <li><a href="/docs/additional-information/history">History</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/docs/chocolatey-install-ps1">Chocolatey Install Ps1</a></li>
+                <li><a href="/docs/chocolatey-story">Chocolatey Story</a></li>
+                <li><a href="/docs/chocolatey-vs-ninite">Chocolatey Vs Ninite</a></li>
+                <li><a href="/docs/default-chocolatey-install-reasoning">Default Chocolatey Install Reasoning</a></li>
+                <li><a href="/docs/logo-use-policy">Logo Use Policy</a></li>
+                <li><a href="/docs/migrate-old-chocolatey-directory-to-programdata">Migrate Old Chocolatey Directory To Programdata</a></li>
+                <li><a href="/docs/packaging-next">Packaging Next</a></li>
+                <li><a href="/docs/roadmap">Roadmap</a></li>
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+		<section class="content-header">
+			<h1>Branding Chocolatey Applications (C4B)</h1>
+		</section>
+	<section class="content">
+		<h1 id="branding-business-editions-only">Branding (Business Editions Only)</h1>
+<!-- TOC -->
+<ul>
+<li><a href="#requirements-for-branding">Requirements for branding</a></li>
+<li><a href="#location-of-branding-files">Location of branding files</a>
+<ul>
+<li><a href="#default-location">Default Location</a></li>
+<li><a href="#custom-location">Custom Location</a></li>
+</ul>
+</li>
+<li><a href="#chocolateyguibrandingdll">ChocolateyGuiBranding.dll</a></li>
+</ul>
+<!-- /TOC -->
+<p>We are aware that some of customers want to be able to brand Chocolatey GUI so
+that is "looks" like their own internal applications.  Out of the box, Chocolatey
+GUI's main screen looks like this:</p>
+<p><img src="/assets/images/gui/main-screen.png" class="img-fluid" alt="Chocolatey GUI Main Screen"></p>
+<p>However, with branding applied, Chocolatey GUI's main screen can instead look like
+this:</p>
+<p><img src="/assets/images/gui/main-screen-with-branding.png" class="img-fluid" alt="Chocolatey GUI Main Screen with Branding"></p>
+<p>Here, the logo of a company called A Squared Software Ltd is being used, instead
+of the main Chocolatey logo.  In addition, a <em>Powered By Chocolatey</em> logo is added
+to the bottom left corner of the application.</p>
+<h2 id="requirements-for-branding">Requirements for branding</h2>
+<blockquote class="blockquote">
+<p>:memo: <strong>NOTE:</strong> Branding of Chocolatey GUI is only available to our Business
+License customers, and requires the <strong>Chocolatey GUI licensed extension</strong>
+(chocolateygui.extension) to be installed, alongside Chocolatey GUI.  Currently,
+the chocolateygui.extension package is only available in a beta version, please
+reach out to support via the normal channels to get access to the package.</p>
+</blockquote>
+<p>In order for branding to work, there are a number of image files that are required.
+These have to be named exactly as the following:</p>
+<ul>
+<li>icon_256x256.ico</li>
+<li>logo_150x250.png</li>
+<li>splash_700x302.png</li>
+<li>splash_975x421.png</li>
+<li>splash_1250x540.png</li>
+</ul>
+<blockquote class="blockquote">
+<p>:memo: <strong>NOTE:</strong> The reason that there are multiple splash screen images is because
+Chocolatey GUI makes a decision, based on the resolution of the screen, which
+splash screen image to display to the user.</p>
+</blockquote>
+<p>The numbers in the file names are a suggestion as to the width and height of each
+image.  While the images don't have to <em>exactly</em> match these dimensions, it is
+recommended that they are as close as possible to these dimensions.</p>
+<h2 id="location-of-branding-files">Location of branding files</h2>
+<p>In order for your custom branding files to be applied, you must place the above
+files into one of two specific places.</p>
+<h3 id="default-location">Default Location</h3>
+<p>By default, Chocolatey GUI will look for custom branding files in the Chocolatey
+installation directory (normally <code>c:/programdata/chocolatey</code>, and then in a folder
+called <code>branding/gui</code>.  i.e. it will look in the following folder:</p>
+<p><code>c:/programdata/chocolatey/branding/gui</code></p>
+<h3 id="custom-location">Custom Location</h3>
+<p>It is possible to use a custom location by first settings an environment variable
+called <code>ChocolateyBrandingLocation</code> to a new location.  For example, if you created
+this environment variable with a value of <code>c:/temp/branding</code>, then Chocolatey GUI
+would then expect to find the above asset files in this location:</p>
+<p><code>c:/temp/branding/gui</code></p>
+<h2 id="chocolateyguibranding.dll">ChocolateyGuiBranding.dll</h2>
+<p>The first time Chocolatey GUI, with the Chocolatey GUI licensed extension installed,
+is executed, and the above asset files are in one of the defined locations, a new
+file will be generated in the same location called <code>ChocolateyGuiBranding.dll</code>.
+The new file actually contains all the image files that were created, as they have
+been embedded as resources within this assembly file.  This approach is used in
+order to optimize the loading of the assets.  Once this ChocolateyGuiBranding.dll
+has been created, Chocolatey GUI will use it each time the application runs.  The
+original image asset files are actually no longer required, and can be removed.
+If at any point you need to re-generate the branding that is being used, simply
+delete the following two files:</p>
+<ul>
+<li>ChocolateyGuiBranding.dll</li>
+<li>ChocolateyGuiBranding.resources</li>
+</ul>
+<p>Then update, your image asset files, and re-run Chocolatey GUI and the branding
+assembly will be re-generated.</p>
+<p>Using a single ChocolateyGuiBranding.dll as the source of branding makes it very
+simple to generate and distribute this assembly to apply branding across your
+entire organisation.</p>
+<h1 id="branding-in-action">Branding in action</h1>
+<p>The below GIF shows the default opening of the Chocolatey GUI application when
+there is no branding applied.</p>
+<p><img src="/assets/images/gui/in-action.gif" class="img-fluid" alt="Chocolatey GUI in action"></p>
+<p>In this GIF, we see branding being applied to the Chocolatey GUI application.</p>
+<p><img src="/assets/images/gui/in-action-with-branding.gif" class="img-fluid" alt="Chocolatey GUI in action with branding"></p>
+<p>Notice that the splash screen image has been replaced, as well as the logo at the
+top left of the application, and the icon in the taskbar.</p>
+<blockquote class="blockquote">
+<p>:memo: <strong>NOTE:</strong> There is an open issue regarding the icon in the taskbar not
+being correctly replaced, visit <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/157">https://github.com/chocolatey/chocolatey-licensed-issues/issues/157</a>
+for more information.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>:memo: <strong>NOTE</strong>: To see all feature videos for Chocolatey for Business, please visit <a href="https://chocolatey.org/resources/features#c4b">https://chocolatey.org/resources/features#c4b</a>.</p>
+</blockquote>
+<h1 id="deploying-branding">Deploying Branding</h1>
+<p>What follows is a suggestion on how a branded version of Chocolatey GUI can be
+deployed out to your environment.</p>
+<blockquote class="blockquote">
+<p>:memo: <strong>NOTE:</strong> In order for the below to work, you must have the Chocolatey GUI licensed
+extension (chocolateygui.extension) installed.</p>
+</blockquote>
+<ol>
+<li>Follow the steps above to place the branding image assets into the correct location.</li>
+<li>Run the Chocolatey GUI application to generate the ChocolateyGuiBranding.dll</li>
+<li>Create a new folder on your file system to house the branding Chocolatey Package</li>
+<li>In this folder, create a <code>tools</code> folder</li>
+<li>Copy the generated <code>ChocolateyGuiBranding.dll</code> into this folder</li>
+<li>Copy the following xml into a file called <code>chocolateygui-branding.nuspec</code>.</li>
+</ol>
+<pre><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd"&gt;
+  &lt;metadata&gt;
+    &lt;id&gt;chocolateygui-branding&lt;/id&gt;
+    &lt;version&gt;0.1.0&lt;/version&gt;
+    &lt;title&gt;chocolateygui-branding (Install)&lt;/title&gt;
+    &lt;authors&gt;__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__&lt;/authors&gt;
+    &lt;projectUrl&gt;https://_Software_Location_REMOVE_OR_FILL_OUT_&lt;/projectUrl&gt;
+    &lt;tags&gt;chocolateygui-branding SPACE_SEPARATED&lt;/tags&gt;
+    &lt;summary&gt;__REPLACE__&lt;/summary&gt;
+    &lt;description&gt;__REPLACE__MarkDown_Okay &lt;/description&gt;
+    &lt;dependencies&gt;
+      &lt;dependency id="chocolateygui" /&gt;
+    &lt;/dependencies&gt;
+  &lt;/metadata&gt;
+  &lt;files&gt;
+    &lt;file src="tools\**" target="tools" /&gt;
+  &lt;/files&gt;
+&lt;/package&gt;
+</code></pre>
+<p><code>7.</code> Copy the following PowerShell into a file called <code>tools\chocolateyInstall.ps1</code></p>
+<pre><code class="language-powershell">  $toolsDir                      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+  $helpersFile                   = Join-Path -Path $toolsDir -ChildPath 'helpers.ps1'
+
+  . $helpersFile
+
+  $chocolateyGuiBrandingAssembly = Join-Path -Path $toolsDir -ChildPath 'ChocolateyGuiBranding.dll'
+  $chocolateyGuiBrandingLocation = Join-Path -Path (Get-BrandingLocation) -ChildPath 'gui'
+
+  if(!(Test-Path -Path $chocolateyGuiBrandingLocation)){
+    New-Item $chocolateyGuiBrandingLocation -ItemType Directory -Force | Out-Null
+  }
+
+  Copy-Item -Path $chocolateyGuiBrandingAssembly -Destination $chocolateyGuiBrandingLocation
+</code></pre>
+<p><code>8.</code> Copy the following PowerShell into a file called <code>tools\chocolateyuninstall.ps1</code></p>
+<pre><code class="language-powershell">  $toolsDir                      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+  $helpersFile                   = Join-Path -Path $toolsDir -ChildPath 'helpers.ps1'
+
+  . $helpersFile
+
+  $chocolateyGuiBrandingLocation = Join-Path -Path (Get-BrandingLocation) -ChildPath 'gui'
+  $chocolateyGuiBrandingAssembly = Join-Path -Path $chocolateyGuiBrandingLocation -ChildPath 'ChocolateyGuiBranding.dll'
+
+  Remove-Item -Path $chocolateyGuiBrandingAssembly -Force -ErrorAction Continue | Out-Null
+</code></pre>
+<p><code>9.</code> Copy the following PowerShell into a file called <code>tools\helpers.ps1</code></p>
+<pre><code class="language-powershell">  function Get-BrandingLocation {
+    &lt;#
+    .SYNOPSIS
+    Gets the top level location for branding files used by Chocolatey
+    applications
+    .DESCRIPTION
+    Creates or uses an environment variable that a user can control to
+    communicate with packages about where they would like branding files to
+    be located.
+    .NOTES
+    Sets an environment variable called `ChocolateyBrandingLocation`.
+    .INPUTS
+    None
+    .OUTPUTS
+    None
+    #&gt;
+
+      $brandingLocation = $env:ChocolateyBrandingLocation
+
+      if ($null -eq $brandingLocation) {
+        $chocoInstallLocation = $env:ChocolateyInstall
+        $brandingLocation = Join-Path -Path $chocoInstallLocation -ChildPath 'branding'
+      }
+
+      # Add a drive letter if one doesn't exist
+      if (-not($brandingLocation -imatch "^\w:")) {
+        $brandingLocation = Join-Path $env:systemdrive $brandingLocation
+      }
+
+      if (-not($env:ChocolateyBrandingLocation -eq $brandingLocation)) {
+        try {
+          Set-EnvironmentVariable -Name "ChocolateyBrandingLocation" -Value $brandingLocation -Scope User
+        } catch {
+          if (Test-ProcessAdminRights) {
+            # sometimes User scope may not exist (such as with core)
+            Set-EnvironmentVariable -Name "ChocolateyBrandingLocation" -Value $brandingLocation -Scope Machine
+          } else {
+            throw $_.Exception
+          }
+        }
+      }
+
+      return $brandingLocation
+      }
+</code></pre>
+<p><code>10.</code> Run the command <code>choco pack</code></p>
+<p><code>11.</code> Deploy the generated <code>chocolateygui-branding.nupkg</code> to the repository that you are using</p>
+<p><code>12.</code> Install the Chocolatey GUI Branding package</p>
+
+	</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                <p class="text-muted">
+    Copyright © Chocolatey Software, Inc.
+    <br>
+    Website generated by <a href="http://wyam.io" target="_blank">Wyam</a>
+</p>
+
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        <a class="github-button" href="https://github.com/chocolatey/choco" target="_blank">
+    <i class="fa fa-github"></i>
+    GitHub
+</a>
+<script>
+    ((window.gitter = {}).chat = {}).options = {
+        room: 'chocolatey/choco'
+    };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
+
+<script type="text/javascript" src="/assets/js/anchor.min.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    anchors.options.placement = 'left';
+    anchors.add();
+
+    var snippets = document.querySelectorAll("pre > code");
+    [].forEach.call(snippets, function(snippet) {
+        snippet.insertAdjacentHTML("beforebegin", "<button class='btn-copy' data-clipboard-snippet><img class='clippy' width=13 src='/assets/images/clippy.svg' alt='Copy to clipboard'></button>");
+    });
+    var clipboardSnippets = new Clipboard('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+    clipboardSnippets.on('success', function(e) {
+        e.clearSelection();
+        showTooltip(e.trigger, "Copied!");
+    });
+    clipboardSnippets.on('error', function(e) {
+        showTooltip(e.trigger, fallbackMessage(e.action));
+    });
+    var btns = document.querySelectorAll('.btn-copy');
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener('mouseleave', function(e) {
+            e.currentTarget.setAttribute('class', 'btn-copy');
+            e.currentTarget.removeAttribute('aria-label');
+        });
+    }
+    function showTooltip(elem, msg) {
+        elem.setAttribute('class', 'btn-copy tooltipped tooltipped-s');
+        elem.setAttribute('aria-label', msg);
+    }
+    function fallbackMessage(action) {
+        var actionMsg = '';
+        var actionKey = (action === 'cut' ? 'X' : 'C');
+        if (/iPhone|iPad/i.test(navigator.userAgent)) {
+            actionMsg = 'No support :(';
+        } else if (/Mac/i.test(navigator.userAgent)) {
+            actionMsg = 'Press ⌘-' + actionKey + ' to ' + action;
+        } else {
+            actionMsg = 'Press Ctrl-' + actionKey + ' to ' + action;
+        }
+        return actionMsg;
+    }
+</script>
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>
