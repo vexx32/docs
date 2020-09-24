@@ -18,6 +18,8 @@
         <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+        <script type="text/javascript" src="/docs/assets/js/clipboard.min.js"></script>
+        <script type="text/javascript" src="/docs/assets/js/anchor.min.js"></script>
 
         <title>Chocolatey - Story of Bob and Richard</title>
     </head>
@@ -26,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/docs"><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/docs/><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -72,48 +74,215 @@
                             <div class="row flex-grow-1 align-items-stretch">
                                     <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body">
                                             <div class="sidebar-nav-item">
-<a href="/docs/">Root Page</a>                                            </div>
+<a href="/docs/en-us">Home</a>                                            </div>
+                                                <div class="sidebar-nav-item">
+<a href="/docs/en-us/why">Why Chocolatey?</a>                                                </div>
+                                                <div class="sidebar-nav-item">
+<a href="/docs/en-us/security">Security</a>                                                </div>
                                                 <div class="sidebar-nav-item has-children">
-<a href="/docs/en-us">Docs Home</a>                                                </div>
-                                                    <div class="sidebar-nav-children active">
+<a href="/docs/en-us/features">Features</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
                                                             <div class="sidebar-nav-child">
-                                                                <a href="/docs/en-us/why">Why Chocolatey?</a>
+                                                                <a href="/docs/en-us/features/free">Free</a>
                                                             </div>
                                                             <div class="sidebar-nav-child">
-                                                                <a href="/docs/en-us/security">Security</a>
+                                                                <a href="/docs/en-us/features/paid">Paid</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us/general">General</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/general/release-notes">Release Notes</a>
                                                             </div>
                                                             <div class="sidebar-nav-child">
-                                                                <a href="/docs/en-us/features">Features</a>
+                                                                <a href="/docs/en-us/general/troubleshooting">Troubleshooting</a>
                                                             </div>
                                                             <div class="sidebar-nav-child">
-                                                                <a href="/docs/en-us/general">General</a>
+                                                                <a href="/docs/en-us/general/faqs">FAQs</a>
                                                             </div>
                                                             <div class="sidebar-nav-child">
-                                                                <a href="/docs/en-us/usage">Usage</a>
+                                                                <a href="/docs/en-us/general/moderation">Chocolatey.org Moderation</a>
                                                             </div>
                                                             <div class="sidebar-nav-child">
-                                                                <a href="/docs/en-us/creating-packages">Creating Packages</a>
+                                                                <a href="/docs/en-us/general/community-packages-disclaimer">Chocolatey.org Packages Disclaimer</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us/usage">Usage</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/usage/installation">How to install</a>
                                                             </div>
                                                             <div class="sidebar-nav-child">
-                                                                <a href="/docs/en-us/how-tos">How To&#x27;s</a>
+                                                                <a href="/docs/en-us/usage/installation-licensed">How to install licensed edition</a>
                                                             </div>
                                                             <div class="sidebar-nav-child">
-                                                                <a href="/docs/en-us/chocolatey-gui">Chocolatey GUI</a>
+                                                                <a href="/docs/en-us/usage/chocolatey-configuration">Configuration/chocolatey.config</a>
                                                             </div>
                                                             <div class="sidebar-nav-child">
-                                                                <a href="/docs/en-us/quick-deployment">Quick Deployment Environment (QDE)</a>
+                                                                <a href="/docs/en-us/usage/uninstallation">How to uninstall</a>
                                                             </div>
                                                             <div class="sidebar-nav-child">
-                                                                <a href="/docs/en-us/central-management">Chocolatey Central Management (CCM)</a>
+                                                                <a href="/docs/en-us/usage/getting-started">Getting Started</a>
                                                             </div>
                                                             <div class="sidebar-nav-child">
-                                                                <a href="/docs/en-us/use-cases">Use Cases</a>
+                                                                <a href="/docs/en-us/usage/commands">Commands</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us/creating-packages">Creating Packages</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/creating-packages/create-packages">Create Packages</a>
                                                             </div>
                                                             <div class="sidebar-nav-child">
-                                                                <a href="/docs/en-us/learning-resources">Learning Resources</a>
+                                                                <a href="/docs/en-us/creating-packages/create-packages-quick-start">Quick Start</a>
                                                             </div>
                                                             <div class="sidebar-nav-child">
-                                                                <a href="/docs/en-us/additional-information">Additional Information</a>
+                                                                <a href="/docs/en-us/creating-packages/commands">Commands</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/creating-packages/helpers">PowerShell Reference</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/creating-packages/automatic-packages">Automatic Packaging</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us/how-tos">How To&#x27;s</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos/proxy-settings-for-chocolatey">Use Chocolatey w/Proxy Server</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos/change-cache">Change Download Cache Location aka Don&#x27;t use TEMP for downloads</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos/install-upgrade-package-without-scripts">Install/Upgrade a Package w/out running install scripts</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos/package-triage-process">Request Package Fixes/Updates</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos/recompile-packages">Manually Recompile Packages, Embedding/Internalizing Remote Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos/package-maintainer-handover">Take Over Package Maintenance Exclusively</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos/parse-packageparameters-argument">Parse Package Parameters</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos/mount-an-iso-in-chocolatey-package">Mount Iso</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos/create-custom-package-templates">Create Custom Package Templates</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos/create-extensions">Extend Chocolatey With PowerSHell Modules (extensions)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos/deprecate-a-chocolatey-package">Deprecate a Package</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos/set-up-chocolatey-server">Set up the Chocolatey.Server</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos/setup-offline-installation">Set up Chocolatey for Internal/organizational use</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos/setup-internal-package-repository">Automate Package Internalizer (MSP/C4B)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos/chocolatey-for-business-quick-start-guide">C4B Quick Start Guide</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us/chocolatey-gui">Chocolatey GUI</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/chocolatey-gui/overview">Chocolatey GUI Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/chocolatey-gui/known-issues">Chocolatey GUI Known Issues</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us/quick-deployment">Quick Deployment Environment (QDE)</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment/overview">Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment/setup">Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment/desktop-readme">Desktop Readme</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment/ssl-setup">SSL Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment/firewall-changes">Firewall Changes</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment/client-setup">Client Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment/internet-setup">Internet Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment/v1">QDE v1</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us/central-management">Central Management Overview</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/central-management/setup">Central Management Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/central-management/setup-client">Central Management Client Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/central-management/setup-upgrade">Central Management Upgrade</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/central-management/deployments">Central Management Deployments</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us/use-cases">Use Cases</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/use-cases/development-environment-setup">Development Environment</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/use-cases/hosting-chocolatey-packages-on-myget">Host on MyGet</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us/learning-resources">Learning Resources</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/learning-resources/resources">Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/learning-resources/videos">Videos</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/learning-resources/presentations">Presentations</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us/additional-information">Additional Information</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/additional-information/legal">Legal</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/additional-information/history">History</a>
                                                             </div>
                                                     </div>
                                     </div>
@@ -151,6 +320,49 @@
             </div>
         </div>
         <script>
+            anchors.options.placement = 'left';
+            anchors.add();
+
+            var snippets = document.querySelectorAll("pre > code");
+            [].forEach.call(snippets, function(snippet) {
+                snippet.insertAdjacentHTML("beforebegin", "<button class='btn-copy' data-clipboard-snippet><img class='clippy' width=13 src='/docs/assets/images/clippy.svg' alt='Copy to clipboard'></button>");
+            });
+            var clipboardSnippets = new Clipboard('[data-clipboard-snippet]', {
+                target: function(trigger) {
+                    return trigger.nextElementSibling;
+                }
+            });
+            clipboardSnippets.on('success', function(e) {
+                e.clearSelection();
+                showTooltip(e.trigger, "Copied!");
+            });
+            clipboardSnippets.on('error', function(e) {
+                showTooltip(e.trigger, fallbackMessage(e.action));
+            });
+            var btns = document.querySelectorAll('.btn-copy');
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener('mouseleave', function(e) {
+                    e.currentTarget.setAttribute('class', 'btn-copy');
+                    e.currentTarget.removeAttribute('aria-label');
+                });
+            }
+            function showTooltip(elem, msg) {
+                elem.setAttribute('class', 'btn-copy tooltipped tooltipped-s');
+                elem.setAttribute('aria-label', msg);
+            }
+            function fallbackMessage(action) {
+                var actionMsg = '';
+                var actionKey = (action === 'cut' ? 'X' : 'C');
+                if (/iPhone|iPad/i.test(navigator.userAgent)) {
+                    actionMsg = 'No support :(';
+                } else if (/Mac/i.test(navigator.userAgent)) {
+                    actionMsg = 'Press ⌘-' + actionKey + ' to ' + action;
+                } else {
+                    actionMsg = 'Press Ctrl-' + actionKey + ' to ' + action;
+                }
+                return actionMsg;
+            }
+
             $(document).ready(function() {
                 mermaid.initialize(
                 {
@@ -194,5 +406,15 @@
 				}
             });
         </script>
+        <a class="github-button" href="https://github.com/chocolatey/choco" target="_blank">
+            <i class="fa fa-github"></i>
+                GitHub
+        </a>
+        <script>
+            ((window.gitter = {}).chat = {}).options = {
+                room: 'chocolatey/choco'
+            };
+        </script>
+        <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
     </body>
 </html>
