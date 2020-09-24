@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/docs/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/docs/assets/css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+
+        <title>Chocolatey - Central Management Deployments</title>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column">
+
+            <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-3">
+                    <a class="navbar-brand" href="/docs"><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-light font-size-lg" href="https://github.com/chocolatey/docs"><i class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex-grow-1 d-flex  bg-body flex-column section-docs">
+                    <div id="titlebar" class="py-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
+                                    <div class="section text-uppercase">Chocolatey</div>
+                                    <div class="text-white m-0 title">Central Management Deployments</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="undertitle">
+                        <div class="container bg-body">
+                            <div class="row">
+                                    <div class="col-md-3 col-lg-2 bg-body">
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 bg-white">
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-section">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="flex-grow-1 d-flex flex-column bg-body">
+                        <div class="container flex-grow-1 d-flex flex-column bg-white">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                    <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body">
+                                            <div class="sidebar-nav-item">
+<a href="/docs/">Root Page</a>                                            </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us">Docs Home</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/why">Why Chocolatey?</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/security">Security</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/features">Features</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/general">General</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/usage">Usage</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/creating-packages">Creating Packages</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos">How To&#x27;s</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/chocolatey-gui">Chocolatey GUI</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment">Quick Deployment Environment (QDE)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/central-management">Chocolatey Central Management (CCM)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/use-cases">Use Cases</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/learning-resources">Learning Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/additional-information">Additional Information</a>
+                                                            </div>
+                                                    </div>
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
+                                        <h1 id="chocolatey-central-management-deployments">Chocolatey Central Management Deployments</h1>
+<blockquote>
+<p>:warning: <strong>WARNING</strong>: This is a Work in Progress. Please check back later.</p>
+<p>Please see <a href="https://chocolatey.org/blog/announcing-deployments">https://chocolatey.org/blog/announcing-deployments</a> for now.</p>
+</blockquote>
+<!-- TOC depthFrom:2 -->
+<ul>
+<li><a href="#faq">FAQ</a>
+<ul>
+<li><a href="#what-versions-of-components-do-i-need-for-deployments-to-work-properly">What versions of components do I need for Deployments to work properly?</a></li>
+<li><a href="#what-is-the-ccm-compatibility-matrix">What is the CCM compatibility matrix?</a></li>
+<li><a href="#why-do-i-see-some-machines-have-not-opted-in-for-deployments">Why do I see some machines have not opted in for Deployments?</a></li>
+<li><a href="#i-have-plenty-of-licenses-why-do-some-machines-show-not-opted-in-for-deployments-and-also-exceeds-your-current-license-count">I have plenty of licenses, why do some machines show not opted in for deployments and also exceeds your current license count?</a></li>
+<li><a href="#can-i-use-chocolatey-deployments-to-upgrade-ccm-based-components">Can I use Chocolatey Deployments to upgrade CCM based components?</a></li>
+<li><a href="#what-is-run-actual">What is Run Actual?</a></li>
+</ul>
+</li>
+<li><a href="#common-errors-and-resolutions">Common Errors and Resolutions</a>
+<ul>
+<li><a href="#the-updated-license-file-is-not-being-picked-up-in-the-website">The updated license file is not being picked up in the website</a></li>
+<li><a href="#a-computer-or-group-is-not-showing-as-available-for-deployments-but-i-have-plenty-of-available-licenses">A computer or group is not showing as available for deployments but I have plenty of available licenses</a></li>
+</ul>
+</li>
+<li><a href="#related-topics">Related Topics</a></li>
+</ul>
+<!-- /TOC -->
+<p><em><strong>JOIN US FOR A WEBINAR on June 23rd, 2020 (or watch on demand after the fact)</strong></em> - <a href="https://chocolatey.org/events/chocolatey-deployments">https://chocolatey.org/events/chocolatey-deployments</a></p>
+<hr />
+<h2 id="faq">FAQ</h2>
+<h3 id="what-versions-of-components-do-i-need-for-deployments-to-work-properly">What versions of components do I need for Deployments to work properly?</h3>
+<p>While you might be able to get things to work with CCM v0.2.x and Chocolatey Agent v0.10.x, it's best to use the following:</p>
+<ul>
+<li>CCM components (<code>chocolatey-management-*</code> all 3 packages) - v0.3.0+</li>
+<li>Chocolatey Agents (<code>chocolatey-agent</code> package on all clients) - v0.11.0+</li>
+<li>Chocolatey Licensed Extension (<code>chocolatey.extension</code> on all clients) - v2.1.1+</li>
+</ul>
+<h3 id="what-is-the-ccm-compatibility-matrix">What is the CCM compatibility matrix?</h3>
+<p>Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of CCM and vice versa.  Please see the [[CCM Component Compatibility Matrix|CentralManagement#ccm-component-compatibility-matrix]] for details.</p>
+<h3 id="why-do-i-see-some-machines-have-not-opted-in-for-deployments">Why do I see some machines have not opted in for Deployments?</h3>
+<p>If you are on the Groups screen, you may notice that some machines show up highlighted with a coloring, and one of those colorings is an orange - the legend below it mentions &quot;Not Opted In For Deploymens (Configuration)&quot;.</p>
+<p><img src="/assets/images/groups/ccm-groups-eligibility.png" alt="Group eligibility legend" /></p>
+<p>As you can see from the text, it is meant to help you figure out the issue:</p>
+<blockquote>
+<p>The computer has not opted in or a group contains computers that have not opted in for deployments by configuration. Please ensure the computer has at least chocolatey-agent v0.10.0+ installed and the feature &quot;useChocolateyCentralManagementDeployments&quot; has been set to enabled on the client computer.</p>
+</blockquote>
+<p>This is telling you that you need to ensure you set the client to allow for the the use of Deployments. As it is a security consideration, it requires an explicit opt-in on client machines. See [[Client Setup - Features |CentralManagementSetupClient#features]] for details on how to set it.</p>
+<h3 id="i-have-plenty-of-licenses-why-do-some-machines-show-not-opted-in-for-deployments-and-also-exceeds-your-current-license-count">I have plenty of licenses, why do some machines show not opted in for deployments and also exceeds your current license count?</h3>
+<p>Once you upgrade to at least CCM v0.2.0, every machine will show that until they check in the next time. Once they check in, that will go away. So it's basically normal to see that until those machines check in again.</p>
+<h3 id="can-i-use-chocolatey-deployments-to-upgrade-ccm-based-components">Can I use Chocolatey Deployments to upgrade CCM based components?</h3>
+<p>Likely you absolutely can, just keep in mind that there may be a specific ordering in how you would upgrade everything and adhere to that order. In some instances, you may need to upgrade agents first, then CCM components as once CCM is upgraded it may not be able to talk to the agents. However agents will stop being able to talk to CCM for a small period of time while you are upgrading CCM, but then things will start working again.</p>
+<h3 id="what-is-run-actual">What is Run Actual?</h3>
+<p>You may have seen <code>--run-actual</code> get attached to scripts where you are running choco commands - what is it?</p>
+<p>This is a switch that is passed to opt out of Chocolatey Self-Service. It's typically passed by the agent service back to choco to run a command for a user. You typically would not issue this, but the agent service will, so you are likely to see it in the logs if you are looking closely.</p>
+<hr />
+<h2 id="common-errors-and-resolutions">Common Errors and Resolutions</h2>
+<h3 id="the-updated-license-file-is-not-being-picked-up-in-the-website">The updated license file is not being picked up in the website</h3>
+<p>You need to restart the web executable currently. We are looking to have it automatically picked up in future releases. Here's a script to handle that:</p>
+<pre><code class="language-powershell">Get-Service chocolatey-* | Stop-Service
+Get-Process ChocolateySoftware.ChocolateyManagement.Web.Mvc | Stop-Process
+Get-Service chocolatey-* | Start-Service
+</code></pre>
+<h3 id="a-computer-or-group-is-not-showing-as-available-for-deployments-but-i-have-plenty-of-available-licenses">A computer or group is not showing as available for deployments but I have plenty of available licenses</h3>
+<p>Once you upgrade to Central Management v0.3.0+, you have upgraded the Agent on the machine to v0.11.0+, and it has successfully completed a check in, then that messaging should go away. Note that clients do not get a message back that there was a failure as a security feature - you'll need to consult the Central Management Service logs. You can find that at <code>$env:ChocolateyInstall\logs\ccm-service.log</code>, or if you are on a version of CCM prior to 0.2.0, the log will be located at <code>$env:ChocolateyInstall\lib\chocolatey-management-service\tools\service\logs\chocolatey.service.host.log</code>.</p>
+<hr />
+<h2 id="related-topics">Related Topics</h2>
+<ul>
+<li>[[Chocolatey Central Management|CentralManagement]]</li>
+<li>[[Central Management - Groups|CentralManagementGroups]]</li>
+<li>[[Central Management - Computers|CentralManagementComputers]]</li>
+<li>[[Central Management - Reports|CentralManagementReports]]</li>
+</ul>
+<hr />
+<p>[[Chocolatey Central Management|CentralManagement]]</p>
+
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
+                                            <div class="border-bottom mb-3">
+                                                <p class="small font-weight-bold">On This Page</p>
+                                                    <p class="small"><a href="#chocolatey-central-management-deployments">Chocolatey Central Management Deployments</a></p>
+                                                    <p class="small"><a href="#faq">FAQ</a></p>
+                                                    <p class="small"><a href="#what-versions-of-components-do-i-need-for-deployments-to-work-properly">What versions of components do I need for Deployments to work properly?</a></p>
+                                                    <p class="small"><a href="#what-is-the-ccm-compatibility-matrix">What is the CCM compatibility matrix?</a></p>
+                                                    <p class="small"><a href="#why-do-i-see-some-machines-have-not-opted-in-for-deployments">Why do I see some machines have not opted in for Deployments?</a></p>
+                                                    <p class="small"><a href="#i-have-plenty-of-licenses-why-do-some-machines-show-not-opted-in-for-deployments-and-also-exceeds-your-current-license-count">I have plenty of licenses, why do some machines show not opted in for deployments and also exceeds your current license count?</a></p>
+                                                    <p class="small"><a href="#can-i-use-chocolatey-deployments-to-upgrade-ccm-based-components">Can I use Chocolatey Deployments to upgrade CCM based components?</a></p>
+                                                    <p class="small"><a href="#what-is-run-actual">What is Run Actual?</a></p>
+                                                    <p class="small"><a href="#common-errors-and-resolutions">Common Errors and Resolutions</a></p>
+                                                    <p class="small"><a href="#the-updated-license-file-is-not-being-picked-up-in-the-website">The updated license file is not being picked up in the website</a></p>
+                                                    <p class="small"><a href="#a-computer-or-group-is-not-showing-as-available-for-deployments-but-i-have-plenty-of-available-licenses">A computer or group is not showing as available for deployments but I have plenty of available licenses</a></p>
+                                                    <p class="small"><a href="#related-topics">Related Topics</a></p>
+                                            </div>
+                                        <p class="small font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/central-management/deployments.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="p-3 text-white font-size-sm">
+            <div class="container">
+                <div>
+                    <span>© 2020 Chocolatey Software, Inc.</span>
+                    <span class="float-right" style="color: #888888;">1.0.0</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/docs/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/docs/assets/css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+
+        <title>Chocolatey - Source</title>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column">
+
+            <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-3">
+                    <a class="navbar-brand" href="/docs"><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-light font-size-lg" href="https://github.com/chocolatey/docs"><i class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex-grow-1 d-flex  bg-body flex-column section-docs">
+                    <div id="titlebar" class="py-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
+                                    <div class="section text-uppercase">Chocolatey</div>
+                                    <div class="text-white m-0 title">Source</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="undertitle">
+                        <div class="container bg-body">
+                            <div class="row">
+                                    <div class="col-md-3 col-lg-2 bg-body">
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 bg-white">
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-section">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="flex-grow-1 d-flex flex-column bg-body">
+                        <div class="container flex-grow-1 d-flex flex-column bg-white">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                    <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body">
+                                            <div class="sidebar-nav-item">
+<a href="/docs/">Root Page</a>                                            </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us">Docs Home</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/why">Why Chocolatey?</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/security">Security</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/features">Features</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/general">General</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/usage">Usage</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/creating-packages">Creating Packages</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos">How To&#x27;s</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/chocolatey-gui">Chocolatey GUI</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment">Quick Deployment Environment (QDE)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/central-management">Chocolatey Central Management (CCM)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/use-cases">Use Cases</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/learning-resources">Learning Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/additional-information">Additional Information</a>
+                                                            </div>
+                                                    </div>
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
+                                        <!-- This file is automatically generated based on output from https://github.com/chocolatey/choco/tree/stable/src/chocolatey/infrastructure.app/commands/ChocolateySourceCommand.cs using https://github.com/chocolatey/choco/tree/stable/GenerateDocs.ps1. Contributions are welcome at the original location(s). If the file is not found, it is not part of the open source edition of Chocolatey or the name of the file is different. -->
+<h1 id="source-command-choco-source">Source Command (choco source)</h1>
+<p>Chocolatey will allow you to interact with sources.</p>
+<p><strong>NOTE:</strong> Mostly compatible with older chocolatey client (0.9.8.x and
+below) with options and switches. When enabling, disabling or removing
+a source, use <code>-name</code> in front of the option now. In most cases you
+can still pass options and switches with one dash (<code>-</code>). For more
+details, see [[how to pass arguments|CommandsReference#how-to-pass-options--switches]] (<code>choco -?</code>).</p>
+<!-- TOC -->
+<ul>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#exit-codes">Exit Codes</a></li>
+<li><a href="#options-and-switches">Options and Switches</a></li>
+</ul>
+<!-- /TOC -->
+<h2 id="usage">Usage</h2>
+<pre><code>choco source [list]|add|remove|disable|enable [&lt;options/switches&gt;]
+choco sources [list]|add|remove|disable|enable [&lt;options/switches&gt;]
+</code></pre>
+<h2 id="examples">Examples</h2>
+<pre><code>choco source
+choco source list
+choco source add -n=bob -s=&quot;https://somewhere/out/there/api/v2/&quot;
+choco source add -n=bob -s &quot;'https://somewhere/out/there/api/v2/'&quot; -cert=\Users\bob\bob.pfx
+choco source add -n=bob -s &quot;'https://somewhere/out/there/api/v2/'&quot; -u=bob -p=12345
+choco source disable -n=bob
+choco source enable -n=bob
+choco source remove -n=bob
+</code></pre>
+<p>When it comes to the source location, this can be a folder/file share or an http
+location. If it is a url, it will be a location you can go to in a browser and
+it returns OData with something that says Packages in the browser, similar to
+what you see when you go to <a href="https://chocolatey.org/api/v2/">https://chocolatey.org/api/v2/</a>.</p>
+<p><strong>NOTE:</strong> See scripting in [[how to pass arguments|CommandsReference#how-to-pass-options--switches]] (<code>choco -?</code>) for how to
+write proper scripts and integrations.</p>
+<h2 id="exit-codes">Exit Codes</h2>
+<p>Exit codes that normally result from running this command.</p>
+<p>Normal:</p>
+<ul>
+<li>0: operation was successful, no issues detected</li>
+<li>-1 or 1: an error has occurred</li>
+</ul>
+<p>If you find other exit codes that we have not yet documented, please
+file a ticket so we can document it at
+<a href="https://github.com/chocolatey/choco/issues/new/choose">https://github.com/chocolatey/choco/issues/new/choose</a>.</p>
+<h2 id="options-and-switches">Options and Switches</h2>
+<p><strong>NOTE:</strong> Options and switches apply to all items passed, so if you are
+running a command like install that allows installing multiple
+packages, and you use <code>--version=1.0.0</code>, it is going to look for and
+try to install version 1.0.0 of every package passed. So please split
+out multiple package calls when wanting to pass specific options.</p>
+<p>Includes [[default options/switches|CommandsReference#default-options-and-switches]] (included below for completeness).</p>
+<pre><code>
+ -?, --help, -h
+     Prints out the help menu.
+
+ -d, --debug
+     Debug - Show debug messaging.
+
+ -v, --verbose
+     Verbose - Show verbose messaging. Very verbose messaging, avoid using
+       under normal circumstances.
+
+     --trace
+     Trace - Show trace messaging. Very, very verbose trace messaging. Avoid
+       except when needing super low-level .NET Framework debugging. Available
+       in 0.10.4+.
+
+     --nocolor, --no-color
+     No Color - Do not show colorization in logging output. This overrides
+       the feature 'logWithoutColor', set to 'False'. Available in 0.10.9+.
+
+     --acceptlicense, --accept-license
+     AcceptLicense - Accept license dialogs automatically. Reserved for
+       future use.
+
+ -y, --yes, --confirm
+     Confirm all prompts - Chooses affirmative answer instead of prompting.
+       Implies --accept-license
+
+ -f, --force
+     Force - force the behavior. Do not use force during normal operation -
+       it subverts some of the smart behavior for commands.
+
+     --noop, --whatif, --what-if
+     NoOp / WhatIf - Don't actually do anything.
+
+ -r, --limitoutput, --limit-output
+     LimitOutput - Limit the output to essential information
+
+     --timeout, --execution-timeout=VALUE
+     CommandExecutionTimeout (in seconds) - The time to allow a command to
+       finish before timing out. Overrides the default execution timeout in the
+       configuration of 2700 seconds. '0' for infinite starting in 0.10.4.
+
+ -c, --cache, --cachelocation, --cache-location=VALUE
+     CacheLocation - Location for download cache, defaults to %TEMP% or value
+       in chocolatey.config file.
+
+     --allowunofficial, --allow-unofficial, --allowunofficialbuild, --allow-unofficial-build
+     AllowUnofficialBuild - When not using the official build you must set
+       this flag for choco to continue.
+
+     --failstderr, --failonstderr, --fail-on-stderr, --fail-on-standard-error, --fail-on-error-output
+     FailOnStandardError - Fail on standard error output (stderr), typically
+       received when running external commands during install providers. This
+       overrides the feature failOnStandardError.
+
+     --use-system-powershell
+     UseSystemPowerShell - Execute PowerShell using an external process
+       instead of the built-in PowerShell host. Should only be used when
+       internal host is failing. Available in 0.9.10+.
+
+     --no-progress
+     Do Not Show Progress - Do not show download progress percentages.
+       Available in 0.10.4+.
+
+     --proxy=VALUE
+     Proxy Location - Explicit proxy location. Overrides the default proxy
+       location of ''. Available for config settings in 0.9.9.9+, this CLI
+       option available in 0.10.4+.
+
+     --proxy-user=VALUE
+     Proxy User Name - Explicit proxy user (optional). Requires explicity
+       proxy (`--proxy` or config setting). Overrides the default proxy user of
+       '123'. Available for config settings in 0.9.9.9+, this CLI option
+       available in 0.10.4+.
+
+     --proxy-password=VALUE
+     Proxy Password - Explicit proxy password (optional) to be used with
+       username. Requires explicity proxy (`--proxy` or config setting) and
+       user name.  Overrides the default proxy password (encrypted in settings
+       if set). Available for config settings in 0.9.9.9+, this CLI option
+       available in 0.10.4+.
+
+     --proxy-bypass-list=VALUE
+     ProxyBypassList - Comma separated list of regex locations to bypass on
+       proxy. Requires explicity proxy (`--proxy` or config setting). Overrides
+       the default proxy bypass list of ''. Available in 0.10.4+.
+
+     --proxy-bypass-on-local
+     Proxy Bypass On Local - Bypass proxy for local connections. Requires
+       explicity proxy (`--proxy` or config setting). Overrides the default
+       proxy bypass on local setting of 'True'. Available in 0.10.4+.
+
+     --log-file=VALUE
+     Log File to output to in addition to regular loggers. Available in 0.1-
+       0.8+.
+
+ -n, --name=VALUE
+     Name - the name of the source. Required with actions other than list.
+       Defaults to empty.
+
+ -s, --source=VALUE
+     Source - The source. This can be a folder/file share or an http locatio-
+       n. If it is a url, it will be a location you can go to in a browser and
+       it returns OData with something that says Packages in the browser,
+       similar to what you see when you go to https://chocolatey.org/api/v2/.
+       Required with add action. Defaults to empty.
+
+ -u, --user=VALUE
+     User - used with authenticated feeds. Defaults to empty.
+
+ -p, --password=VALUE
+     Password - the user's password to the source. Encrypted in chocolate-
+       y.config file.
+
+     --cert=VALUE
+     Client certificate - PFX pathname for an x509 authenticated feeds.
+       Defaults to empty. Available in 0.9.10+.
+
+     --cp, --certpassword=VALUE
+     Certificate Password - the client certificate's password to the source.
+       Defaults to empty. Available in 0.9.10+.
+
+     --priority=VALUE
+     Priority - The priority order of this source as compared to other
+       sources, lower is better. Defaults to 0 (no priority). All priorities
+       above 0 will be evaluated first, then zero-based values will be
+       evaluated in config file order. Available in 0.9.9.9+.
+
+     --bypassproxy, --bypass-proxy
+     Bypass Proxy - Should this source explicitly bypass any explicitly or
+       system configured proxies? Defaults to false. Available in 0.10.4+.
+
+     --allowselfservice, --allow-self-service
+     Allow Self-Service - Should this source be allowed to be used with self-
+       service? Requires business edition (v1.10.0+) with feature
+       'useBackgroundServiceWithSelfServiceSourcesOnly' turned on. Defaults to
+       false. Available in 0.10.4+.
+
+     --adminonly, --admin-only
+     Visible to Administrators Only - Should this source be visible to non-
+       administrators? Requires business edition (v1.12.2+). Defaults to false.
+       Available in 0.10.8+.
+
+</code></pre>
+<p>[[Command Reference|CommandsReference]]</p>
+<p><em><strong>NOTE:</strong></em> This documentation has been automatically generated from <code>choco source -h</code>.</p>
+
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
+                                            <div class="border-bottom mb-3">
+                                                <p class="small font-weight-bold">On This Page</p>
+                                                    <p class="small"><a href="#source-command-choco-source">Source Command (choco source)</a></p>
+                                                    <p class="small"><a href="#usage">Usage</a></p>
+                                                    <p class="small"><a href="#examples">Examples</a></p>
+                                                    <p class="small"><a href="#exit-codes">Exit Codes</a></p>
+                                                    <p class="small"><a href="#options-and-switches">Options and Switches</a></p>
+                                            </div>
+                                        <p class="small font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/usage/commands/source.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="p-3 text-white font-size-sm">
+            <div class="container">
+                <div>
+                    <span>© 2020 Chocolatey Software, Inc.</span>
+                    <span class="float-right" style="color: #888888;">1.0.0</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+            });
+        </script>
+    </body>
+</html>

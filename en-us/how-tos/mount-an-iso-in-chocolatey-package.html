@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/docs/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/docs/assets/css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+
+        <title>Chocolatey - Mount Iso</title>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column">
+
+            <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-3">
+                    <a class="navbar-brand" href="/docs"><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-light font-size-lg" href="https://github.com/chocolatey/docs"><i class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex-grow-1 d-flex  bg-body flex-column section-docs">
+                    <div id="titlebar" class="py-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
+                                    <div class="section text-uppercase">Chocolatey</div>
+                                    <div class="text-white m-0 title">Mount Iso</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="undertitle">
+                        <div class="container bg-body">
+                            <div class="row">
+                                    <div class="col-md-3 col-lg-2 bg-body">
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 bg-white">
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-section">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="flex-grow-1 d-flex flex-column bg-body">
+                        <div class="container flex-grow-1 d-flex flex-column bg-white">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                    <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body">
+                                            <div class="sidebar-nav-item">
+<a href="/docs/">Root Page</a>                                            </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us">Docs Home</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/why">Why Chocolatey?</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/security">Security</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/features">Features</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/general">General</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/usage">Usage</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/creating-packages">Creating Packages</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos">How To&#x27;s</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/chocolatey-gui">Chocolatey GUI</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment">Quick Deployment Environment (QDE)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/central-management">Chocolatey Central Management (CCM)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/use-cases">Use Cases</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/learning-resources">Learning Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/additional-information">Additional Information</a>
+                                                            </div>
+                                                    </div>
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
+                                        <h1 id="mount-iso-image">Mount ISO image</h1>
+<!-- TOC -->
+<ul>
+<li><a href="#mounting-isos---the-problem">Mounting ISOs - The Problem</a></li>
+<li><a href="#chocolatey-isomountextension">chocolatey-isomount.extension</a>
+<ul>
+<li><a href="#step-1-get-chocolatey-isomountextension-package">Step 1: Get chocolatey-isomount.extension Package</a></li>
+<li><a href="#step-2-add-chocolatey-isomountextension-dependency">Step 2: Add chocolatey-isomount.extension Dependency</a></li>
+<li><a href="#step-3-add-chocolatey-isomountextension-code">Step 3: Add chocolatey-isomount.extension Code</a>
+<ul>
+<li><a href="#embedded-iso-or-on-a-fileshare">Embedded ISO or on a fileshare</a></li>
+<li><a href="#download-iso-from-an-url">Download ISO from an URL</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#imdisk">ImDisk</a>
+<ul>
+<li><a href="#step-1-get-imdisk-package">Step 1: Get ImDisk Package</a></li>
+<li><a href="#step-2-add-imdisk-dependency">Step 2: Add ImDisk Dependency</a></li>
+<li><a href="#step-3-add-imdisk-code">Step 3: Add ImDisk Code</a></li>
+</ul>
+</li>
+<li><a href="#mount-diskimage">Mount-DiskImage</a>
+<ul>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#step-1-add-mount-diskimage-code">Step 1: Add Mount-DiskImage Code</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="mounting-isos-the-problem">Mounting ISOs - The Problem</h2>
+<p>There are times when using an installer file directly is not an option as what you need is contained in an ISO. In later versions of the Windows Operating System (defined in <a href="#mount-diskimage">Mount-DiskImage</a> below), PowerShell provides the ability to mount this ISO file directly using the <code>Mount-DiskImage</code> cmdlet.  However, in earlier versions of Windows, this is not possible. In order to maintain backwards compatibility with older Operating Systems, when using an ISO file, you can use ImDisk Virtual Disk Driver.</p>
+<h2 id="chocolatey-isomount.extension">chocolatey-isomount.extension</h2>
+<p>One of the community maintainers has created an extension package to automate the installation of software from inside an ISO file. This extension is based on the <a href="#mount-diskimage">Mount-DiskImage</a> method below and therefore has the same <a href="#requirements">Requirements</a>.</p>
+<h3 id="step-1-get-chocolatey-isomount.extension-package">Step 1: Get chocolatey-isomount.extension Package</h3>
+<p>You will need to take a dependency on the <a href="https://chocolatey.org/packages/chocolatey-isomount.extension">chocolatey-isomount.extension package</a> If you are using Chocolatey in an organizational context, be sure to cache the chocolatey-isomount.extension package and place it on your internal sources.</p>
+<ol>
+<li>MSP/C4B: Run <code>choco download chocolatey-isomount.extension</code></li>
+<li>FOSS: Download <a href="https://chocolatey.org/api/v2/package/chocolatey-isomount.extension">chocolatey-isomount.extension</a></li>
+<li>Deploy the package to your internal repository.</li>
+</ol>
+<p><strong>NOTE</strong>: MSP stands for Managed Service Provider. It along with Chocolatey for Business (C4B) are commercial editions of Chocolatey that come with [[Package Internalizer|FeaturesAutomaticallyRecompilePackages]] to convert existing packages to be 100% offline and reliable. FOSS (free open source software) is short for the open source edition.</p>
+<h3 id="step-2-add-chocolatey-isomount.extension-dependency">Step 2: Add chocolatey-isomount.extension Dependency</h3>
+<p>Open your package's nuspec up and add a dependency on <code>chocolatey-isomount.extension</code>. This will be inserted just above the closing &quot;metadata&quot; tag (<code>&lt;/metadata&gt;</code>).</p>
+<pre><code class="language-xml">  &lt;dependencies&gt;
+      &lt;dependency id=&quot;chocolatey-isomount.extension&quot; version=&quot;1.0.0&quot; /&gt;
+  &lt;/dependencies&gt;
+</code></pre>
+<p><strong>NOTE:</strong> The above version is a minimum version dependency. Your version may be newer, you can substitute it there.</p>
+<h3 id="step-3-add-chocolatey-isomount.extension-code">Step 3: Add chocolatey-isomount.extension Code</h3>
+<p>Now in your chocolateyInstall.ps1, you will want something similar to the following:</p>
+<h4 id="embedded-iso-or-on-a-fileshare">Embedded ISO or on a fileshare</h4>
+<pre><code class="language-powershell">$packageName= 'bob'
+$toolsDir   = &quot;$(Split-Path -Parent $MyInvocation.MyCommand.Definition)&quot;
+$fileLocation = Join-Path $toolsDir 'ISO_EMBEDDED_IN_PACKAGE'
+
+$packageArgs = &#64;{
+    packageName   = $packageName
+    fileType      = 'msi'
+    file          = 'setup.msi'
+    file64        = 'x64\setup64.msi'
+    silentArgs    = &quot;/qn /norestart&quot;
+    validExitCodes= &#64;(0, 3010, 1641)
+    softwareName  = 'Bob*'
+    isoFile       = $fileLocation
+}
+
+Install-ChocolateyIsoInstallPackage &#64;packageArgs
+</code></pre>
+<h4 id="download-iso-from-an-url">Download ISO from an URL</h4>
+<pre><code class="language-powershell">$packageName= 'bob'
+$toolsDir   = &quot;$(Split-Path -Parent $MyInvocation.MyCommand.Definition)&quot;
+$url        = 'https://somewhere.com/file.iso'
+
+$packageArgs = &#64;{
+    packageName   = $packageName
+    fileType      = 'msi'
+    url           = $url
+    file          = 'setup.msi'
+    file64        = 'x64\setup64.msi'
+    silentArgs    = &quot;/qn /norestart&quot;
+    validExitCodes= &#64;(0, 3010, 1641)
+    softwareName  = 'Bob*'
+    checksum      = '12345'
+    checksumType  = 'sha256'
+}
+
+Install-ChocolateyIsoPackage &#64;packageArgs
+</code></pre>
+<h2 id="imdisk">ImDisk</h2>
+<p>The most compatible with all versions of Windows option is to use ImDisk. ImDisk Virtual Disk Driver (imdisk) is a software package that allows an ISO file to be mounted, but more importantly, it works for Windows NT/2000/XP/Vista/7/8/8.1 or Windows Server 2003/2008/2012/2016 (so basically, everything!). That means that you can use one, common, method, for mounting ISO files when required within your Chocolatey Packages.</p>
+<h3 id="step-1-get-imdisk-package">Step 1: Get ImDisk Package</h3>
+<p>You will need to take a dependency on the <a href="https://chocolatey.org/packages/imdisk">ImDisk package</a>. If you are using Chocolatey in an organizational context, be sure to [[internalize|How-To-Recompile-Packages]] (not cache) the ImDisk package and place it on your internal sources.</p>
+<ol>
+<li>MSP/C4B: Run <code>choco download imdisk --internalize</code></li>
+<li>FOSS: Download <a href="https://chocolatey.org/api/v2/package/imdisk">imdisk</a> - [[internalize manually|How-To-Recompile-Packages]]</li>
+<li>Deploy the package to your internal repository.</li>
+</ol>
+<p><strong>NOTE</strong>: MSP stands for Managed Service Provider. It along with Chocolatey for Business (C4B) are commercial editions of Chocolatey that come with [[Package Internalizer|FeaturesAutomaticallyRecompilePackages]] to convert existing packages to be 100% offline and reliable. FOSS (free open source software) is short for the open source edition.</p>
+<h3 id="step-2-add-imdisk-dependency">Step 2: Add ImDisk Dependency</h3>
+<p>Open your package's nuspec up and add a dependency on <code>imdisk</code>. This will be inserted just above the closing &quot;metadata&quot; tag (<code>&lt;/metadata&gt;</code>).</p>
+<pre><code class="language-xml">  &lt;dependencies&gt;
+      &lt;dependency id=&quot;imdisk&quot; version=&quot;2.0.9&quot; /&gt;
+  &lt;/dependencies&gt;
+</code></pre>
+<p><strong>NOTE:</strong> The above version is a minimum version dependency. Your version may be newer, you can substitute it there.</p>
+<h3 id="step-3-add-imdisk-code">Step 3: Add ImDisk Code</h3>
+<p>Now in your chocolateyInstall.ps1, you will want something similar to the following:</p>
+<pre><code class="language-powershell"># Internal use:
+# - Option 1: If the ISO is smaller than 1GB, embed the binary directly into the package for the most reliable use skip this
+# - Option 2: Store ISO on a file share and skip this
+# - Option 3: Download from internal sources, like a binary (raw) repository in Artifactory, Nexus, or ProGet.
+# Community repo: Download the ISO file from the internet if you don't have distribution rights or the file is larger than 250MB.
+Get-ChocolateyWebFile 'WindowsSDK2008' &quot;$env:temp\winsdk2008.iso&quot; 'http://download.microsoft.com/download/f/e/6/fe6eb291-e187-4b06-ad78-bb45d066c30f/6.0.6001.18000.367-KRMSDK_EN.iso'
+
+# Next, mount the ISO file, ready for using it's contents (NOTE: the last parameter here is the drive letter that will be assigned to the mounted ISO)
+imdisk -a -f &quot;$env:temp\winsdk2008.iso&quot; -m &quot;w:&quot;
+
+# Run commands against the mounted ISO, in this case, run the setup.exe
+Install-ChocolateyInstallPackage 'WindowsSDK2008' 'exe' '/q' 'w:\Setup.exe'
+
+# Unmount the ISO file when finished
+imdisk -d -m w:
+
+</code></pre>
+<h2 id="mount-diskimage">Mount-DiskImage</h2>
+<p><a href="https://docs.microsoft.com/en-us/powershell/module/storage/mount-diskimage">Mount-DiskImage</a>
+is an alternative that is built-in, so no package dependencies required. However it may need admin permission to perform (with VHDs it will) and is only available in certain versions of PowerShell/Windows.</p>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li>PowerShell v3+</li>
+<li>Windows 8+/Windows Server 2012+</li>
+</ul>
+<p>It is both an Operating System version dependency <em><strong>and</strong></em> a PowerShell version dependency (although by default those operating systems will have the right version of PowerShell already available). The great news is if you have that, it becomes as simple as the following code.</p>
+<h3 id="step-1-add-mount-diskimage-code">Step 1: Add Mount-DiskImage Code</h3>
+<p>In your chocolateyInstall.ps1, you will want something similar to the following:</p>
+<pre><code class="language-powershell"># Internal use:
+# - Option 1: If the ISO is smaller than 1GB, embed the binary directly into the package for the most reliable use skip this
+# - Option 2: Store ISO on a file share and skip this
+# - Option 3: Download from internal sources, like a binary (raw) repository in Artifactory, Nexus, or ProGet.
+# Community repo: Download the ISO file from the internet if you don't have distribution rights or the file is larger than 250MB.
+Get-ChocolateyWebFile 'WindowsSDK2008' &quot;$env:temp\winsdk2008.iso&quot; 'http://download.microsoft.com/download/f/e/6/fe6eb291-e187-4b06-ad78-bb45d066c30f/6.0.6001.18000.367-KRMSDK_EN.iso'
+
+# Next, mount the ISO file, ready for using it's contents
+$iso = Get-Item &quot;$env:temp\winsdk2008.iso&quot;
+
+Mount-DiskImage -ImagePath $iso
+
+#Get the drive letter where iso is mounted
+$driveLetter = (Get-DiskImage $iso | Get-Volume).DriveLetter
+
+# Run commands against the mounted ISO, in this case, run the setup.exe
+Install-ChocolateyInstallPackage 'WindowsSDK2008' 'exe' '/q' &quot;${driveLetter}:\Setup.exe&quot;
+
+# Unmount the ISO file when finished
+Dismount-DiskImage -ImagePath $iso
+
+</code></pre>
+<p><strong>NOTE:</strong> Code sample was taken from this <a href="https://chocolatey.org/packages/WindowsSDK2008/6.0.6001">package</a>, thanks to <a href="https://chocolatey.org/profiles/dave42">dave42</a> for sharing.</p>
+
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
+                                            <div class="border-bottom mb-3">
+                                                <p class="small font-weight-bold">On This Page</p>
+                                                    <p class="small"><a href="#mount-iso-image">Mount ISO image</a></p>
+                                                    <p class="small"><a href="#mounting-isos-the-problem">Mounting ISOs - The Problem</a></p>
+                                                    <p class="small"><a href="#chocolatey-isomount.extension">chocolatey-isomount.extension</a></p>
+                                                    <p class="small"><a href="#step-1-get-chocolatey-isomount.extension-package">Step 1: Get chocolatey-isomount.extension Package</a></p>
+                                                    <p class="small"><a href="#step-2-add-chocolatey-isomount.extension-dependency">Step 2: Add chocolatey-isomount.extension Dependency</a></p>
+                                                    <p class="small"><a href="#step-3-add-chocolatey-isomount.extension-code">Step 3: Add chocolatey-isomount.extension Code</a></p>
+                                                    <p class="small"><a href="#imdisk">ImDisk</a></p>
+                                                    <p class="small"><a href="#step-1-get-imdisk-package">Step 1: Get ImDisk Package</a></p>
+                                                    <p class="small"><a href="#step-2-add-imdisk-dependency">Step 2: Add ImDisk Dependency</a></p>
+                                                    <p class="small"><a href="#step-3-add-imdisk-code">Step 3: Add ImDisk Code</a></p>
+                                                    <p class="small"><a href="#mount-diskimage">Mount-DiskImage</a></p>
+                                                    <p class="small"><a href="#requirements">Requirements</a></p>
+                                                    <p class="small"><a href="#step-1-add-mount-diskimage-code">Step 1: Add Mount-DiskImage Code</a></p>
+                                            </div>
+                                        <p class="small font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/how-tos/mount-an-iso-in-chocolatey-package.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="p-3 text-white font-size-sm">
+            <div class="container">
+                <div>
+                    <span>© 2020 Chocolatey Software, Inc.</span>
+                    <span class="float-right" style="color: #888888;">1.0.0</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+            });
+        </script>
+    </body>
+</html>

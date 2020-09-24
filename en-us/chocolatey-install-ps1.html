@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/docs/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/docs/assets/css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+
+        <title>Chocolatey - ChocolateyInstall PowerShell Script</title>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column">
+
+            <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-3">
+                    <a class="navbar-brand" href="/docs"><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-light font-size-lg" href="https://github.com/chocolatey/docs"><i class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex-grow-1 d-flex  bg-body flex-column section-docs">
+                    <div id="titlebar" class="py-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
+                                    <div class="section text-uppercase">Chocolatey</div>
+                                    <div class="text-white m-0 title">ChocolateyInstall PowerShell Script</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="undertitle">
+                        <div class="container bg-body">
+                            <div class="row">
+                                    <div class="col-md-3 col-lg-2 bg-body">
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 bg-white">
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-section">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="flex-grow-1 d-flex flex-column bg-body">
+                        <div class="container flex-grow-1 d-flex flex-column bg-white">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                    <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body">
+                                            <div class="sidebar-nav-item">
+<a href="/docs/">Root Page</a>                                            </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us">Docs Home</a>                                                </div>
+                                                    <div class="sidebar-nav-children active">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/why">Why Chocolatey?</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/security">Security</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/features">Features</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/general">General</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/usage">Usage</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/creating-packages">Creating Packages</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos">How To&#x27;s</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/chocolatey-gui">Chocolatey GUI</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment">Quick Deployment Environment (QDE)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/central-management">Chocolatey Central Management (CCM)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/use-cases">Use Cases</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/learning-resources">Learning Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/additional-information">Additional Information</a>
+                                                            </div>
+                                                    </div>
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
+                                        <h1 id="chocolateyinstall-powershell-script">ChocolateyInstall PowerShell Script</h1>
+<p>Chocolatey uses PowerShell as a package install provider and will look for this file in the package. If it finds it, it will execute the contents of the file, attaching the helper modules. Check out the [[Helper Reference|HelpersReference]] for more information on each of the helpers you can include.</p>
+<p>It really is just PowerShell, so you can use regular PowerShell here and it should run fine. <strong>Note:</strong> Please maintain compatibility with Posh v2. Not every OS we support is on Posh v2 (nor comes OOB with Posh v3+). It's best to work with the widest compatibility of systems out there.</p>
+<h2 id="when-is-the-script-triggered">When is the script triggered?</h2>
+<p>If present in a package, the <code>ChocolateyInstall.ps1</code> script will be triggered at the following points:</p>
+<ul>
+<li>When a package is installed for the first time, after the package contents have been extracted.</li>
+<li>In an [[Upgrade|CommandsUpgrade]] scenario, the install script for the new package will be run after any <code>chocolateyBeforeModify.ps1</code> script associated with the previous version of the package.</li>
+</ul>
+<h3 id="example">Example?</h3>
+<p>This is what it takes to install <a href="https://chocolatey.org/packages/stexbar">StExBar</a>:</p>
+<pre><code class="language-powershell">$name   = 'StExBar'
+$url = 'http://stexbar.googlecode.com/files/StExBar-1.8.3.msi'
+$url64 = 'http://stexbar.googlecode.com/files/StExBar64-1.8.3.msi'
+$silent = '/quiet'
+
+Install-ChocolateyPackage $name 'msi' $silent $url $url64
+</code></pre>
+<p>The Install-ChocolateyPackage helper uses the url, msi, and silent args to download and silently install and update StExBar.</p>
+
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
+                                            <div class="border-bottom mb-3">
+                                                <p class="small font-weight-bold">On This Page</p>
+                                                    <p class="small"><a href="#chocolateyinstall-powershell-script">ChocolateyInstall PowerShell Script</a></p>
+                                                    <p class="small"><a href="#when-is-the-script-triggered">When is the script triggered?</a></p>
+                                                    <p class="small"><a href="#example">Example?</a></p>
+                                            </div>
+                                        <p class="small font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/chocolatey-install-ps1.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="p-3 text-white font-size-sm">
+            <div class="container">
+                <div>
+                    <span>© 2020 Chocolatey Software, Inc.</span>
+                    <span class="float-right" style="color: #888888;">1.0.0</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+            });
+        </script>
+    </body>
+</html>

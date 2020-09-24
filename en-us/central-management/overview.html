@@ -1,0 +1,453 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/docs/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/docs/assets/css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+
+        <title>Chocolatey - Central Management Overview</title>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column">
+
+            <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-3">
+                    <a class="navbar-brand" href="/docs"><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-light font-size-lg" href="https://github.com/chocolatey/docs"><i class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex-grow-1 d-flex  bg-body flex-column section-docs">
+                    <div id="titlebar" class="py-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
+                                    <div class="section text-uppercase">Chocolatey</div>
+                                    <div class="text-white m-0 title">Central Management Overview</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="undertitle">
+                        <div class="container bg-body">
+                            <div class="row">
+                                    <div class="col-md-3 col-lg-2 bg-body">
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 bg-white">
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-section">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="flex-grow-1 d-flex flex-column bg-body">
+                        <div class="container flex-grow-1 d-flex flex-column bg-white">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                    <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body">
+                                            <div class="sidebar-nav-item">
+<a href="/docs/">Root Page</a>                                            </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us">Docs Home</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/why">Why Chocolatey?</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/security">Security</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/features">Features</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/general">General</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/usage">Usage</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/creating-packages">Creating Packages</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos">How To&#x27;s</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/chocolatey-gui">Chocolatey GUI</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment">Quick Deployment Environment (QDE)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/central-management">Chocolatey Central Management (CCM)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/use-cases">Use Cases</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/learning-resources">Learning Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/additional-information">Additional Information</a>
+                                                            </div>
+                                                    </div>
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
+                                        <h1 id="chocolatey-central-management-ccm">Chocolatey Central Management (CCM)</h1>
+<p>Chocolatey Central Management (CCM) provides you insights across your desktop and endpoint environments. CCM is available with Chocolatey for Business only.</p>
+<p>Once installed and configured, you can use CCM to:</p>
+<ul>
+<li>Bring reporting to the organizational level</li>
+<li>Quickly see all software across the organization and see what needs attention immediately</li>
+<li>Create reports for tracking and auditing purposes</li>
+<li>Manage endpoints with deployments through groups and collections</li>
+</ul>
+<p><img src="/assets/images/features/ccm/central-management.png" alt="Central Management Logo" /></p>
+<p>This provides an overview on Chocolatey Central Management (CCM). It provides both setup and use of CCM.</p>
+<hr />
+<!-- TOC depthFrom:2 depthTo:5 -->
+<ul>
+<li><a href="#ccm-components">CCM Components</a>
+<ul>
+<li><a href="#ccm-component-compatibility-matrix">CCM Component Compatibility Matrix</a></li>
+</ul>
+</li>
+<li><a href="#getting-ccm">Getting CCM</a></li>
+<li><a href="#stay-up-to-date">Stay Up To Date</a></li>
+<li><a href="#links">Links</a>
+<ul>
+<li><a href="#setup--installation">Setup / Installation</a></li>
+<li><a href="#setup--upgrade">Setup / Upgrade</a></li>
+<li><a href="#using-central-management">Using Central Management</a></li>
+</ul>
+</li>
+<li><a href="#related-articles">Related Articles</a></li>
+<li><a href="#roadmap">Roadmap</a></li>
+<li><a href="#faqs">FAQs</a>
+<ul>
+<li><a href="#how-do-i-take-advantage-of-chocolatey-central-management">How do I take advantage of Chocolatey Central Management?</a></li>
+<li><a href="#im-a-licensed-customer-now-what">I'm a licensed customer, now what?</a></li>
+<li><a href="#will-this-become-available-for-lower-editions-of-chocolatey">Will this become available for lower editions of Chocolatey?</a></li>
+<li><a href="#whats-the-minimum-version-of-the-chocolatey-packages-i-need-to-use-ccm">What's the minimum version of the Chocolatey packages I need to use CCM?</a></li>
+<li><a href="#where-can-i-find-all-the-log-files-for-chocolatey-central-management">Where can I find all the log files for Chocolatey Central Management</a></li>
+<li><a href="#where-can-i-find-the-changelog-or-release-notes-for-chocolatey-central-management">Where can I find the changelog or release notes for Chocolatey Central Management?</a></li>
+<li><a href="#how-do-i-get-support">How do I get support?</a></li>
+<li><a href="#how-do-i-set-up-chocolatey-central-management">How do I set up Chocolatey Central Management?</a></li>
+<li><a href="#what-is-the-ccm-compatibility-matrix">What is the CCM compatibility matrix?</a></li>
+<li><a href="#if-i-update-the-license-file-do-i-need-to-restart-my-services-and-web">If I update the license file, do I need to restart my services and web?</a></li>
+</ul>
+</li>
+<li><a href="#common-errors-and-resolutions">Common Errors and Resolutions</a>
+<ul>
+<li><a href="#computers-checking-in-are-overwriting-each-other">Computers checking in are overwriting each other</a></li>
+<li><a href="#an-internal-error-occurred-during-your-request">An Internal error occurred during your request</a></li>
+<li><a href="#systemdatasqlclientsqlexception-invalid-column-name">System.Data.SqlClient.SqlException: Invalid column name</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<hr />
+<h2 id="ccm-components">CCM Components</h2>
+<p>The following are all of the Chocolatey components required for Central Management to work.</p>
+<ul>
+<li>Chocolatey (<code>chocolatey</code> package) v0.10.12+</li>
+<li>Chocolatey for Business (C4B) Edition.</li>
+<li>Chocolatey Licensed Extension (<code>chocolatey.extension</code> package) v2.0.0+</li>
+<li>Chocolatey Agent (<code>chocolatey-agent</code> package) v0.9.0+</li>
+<li>CCM Database (<code>chocolatey-management-database</code> package) v0.1.0+
+<ul>
+<li>This deploys the CCM database schema to a specified SQL Server instance</li>
+</ul>
+</li>
+<li>CCM Service (<code>chocolatey-management-service</code> package) v0.1.0+
+<ul>
+<li>This installs the CCM Service, which the Chocolatey Agent will communicate with.</li>
+</ul>
+</li>
+<li>CCM Website (<code>chocolatey-management-web</code> package) v0.1.0+
+<ul>
+<li>This is the CCM front end website that is the main user interface of the application</li>
+</ul>
+</li>
+</ul>
+<h3 id="ccm-component-compatibility-matrix">CCM Component Compatibility Matrix</h3>
+<p>Central Management has specific needs that are mostly handled by packaging aspects. As the Chocolatey Agent and Central Management communicate with each other, there are some versions that may not be compatible with each other due to mistakes or fixes that needed to be implemented. This serves as a means of capturing that for you.</p>
+<blockquote>
+<p>:memo: <strong>NOTE</strong></p>
+<p>Central Management packages (all three) are treated as a singular unit, meaning all three packages across one or more machines must all be on the same version. Using different versions of Central Management packages (db, service, web) is completely unsupported and likely will not even work properly.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Central Management</th>
+<th>Chocolatey Agent</th>
+<th>Chocolatey Licensed Extension</th>
+<th>Chocolatey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.3.0+</td>
+<td>0.11.0+</td>
+<td>2.1.0+</td>
+<td>0.10.15+</td>
+</tr>
+<tr>
+<td>0.2.x</td>
+<td>0.10.x</td>
+<td>2.1.0+</td>
+<td>0.10.15+</td>
+</tr>
+<tr>
+<td>0.1.1</td>
+<td>0.9.x</td>
+<td>2.0.3+</td>
+<td>0.10.15+</td>
+</tr>
+<tr>
+<td>0.1.0</td>
+<td>0.9.x</td>
+<td>2.0.0+</td>
+<td>0.10.12+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="getting-ccm">Getting CCM</h2>
+<p>CCM is only available for Chocolatey for Business (C4B) customers. If you are a C4B customer, you can head to the install components section:</p>
+<ul>
+<li>[[Central Management Setup|CentralManagementSetup]]</li>
+<li>[[Central Management Client Setup|CentralManagementSetupClient]]</li>
+</ul>
+<p>If you are not a customer yet, you can <a href="https://chocolatey.org/contact/trial">reach out for a trial</a>.</p>
+<blockquote>
+<p>:memo: <strong>NOTE</strong></p>
+<p>Trials are limited to organizations. If you are personally wanting to work with CCM and other C4B components, you can purchase a C4B starter pack - see <a href="https://chocolatey.org/pricing">pricing</a>.</p>
+</blockquote>
+<hr />
+<h2 id="stay-up-to-date">Stay Up To Date</h2>
+<ul>
+<li>[[Release Notes Central Management|ReleaseNotesCentralManagement]]</li>
+<li><a href="https://groups.google.com/group/chocolatey-announce">Release Announcements Only Mailing List</a></li>
+</ul>
+<hr />
+<h2 id="links">Links</h2>
+<h3 id="setup-installation">Setup / Installation</h3>
+<ul>
+<li>[[Central Management Setup|CentralManagementSetup]]
+<ul>
+<li>[[Central Management Database Setup|CentralManagementSetupDatabase]]</li>
+<li>[[Central Management Service Setup|CentralManagementSetupService]]</li>
+<li>[[Central Management Web Setup|CentralManagementSetupWeb]]</li>
+</ul>
+</li>
+<li>[[Central Management Client Setup|CentralManagementSetupClient]]</li>
+</ul>
+<h3 id="setup-upgrade">Setup / Upgrade</h3>
+<ul>
+<li>[[Upgrading Central Management|CentralManagementSetupUpgrade]]</li>
+</ul>
+<h3 id="using-central-management">Using Central Management</h3>
+<ul>
+<li>[[CCM Computers|CentralManagementComputers]]</li>
+<li>[[CCM Software|CentralManagementSoftware]]</li>
+<li>[[CCM Groups|CentralManagementGroups]]</li>
+<li>[[CCM Deployments|CentralManagementDeployments]]</li>
+<li>[[CCM Reports|CentralManagementReports]]</li>
+</ul>
+<p><img src="/assets/images/features/ccm/ccm_overview.jpg" alt="CCM Overview" /></p>
+<hr />
+<h2 id="related-articles">Related Articles</h2>
+<ul>
+<li>[[Quick Deployment Environment (QDE)|QuickDeploymentEnvironment]]</li>
+</ul>
+<hr />
+<h2 id="roadmap">Roadmap</h2>
+<p>Chocolatey Central Management will allow:</p>
+<ul>
+<li><del>Centralized Software Management for your entire organization.</del> Completed June 2020.</li>
+<li><del>Centralized reporting of software.</del> Completed May 2019</li>
+<li><del>Know immediately what software is out of date and on what machines.</del> Completed May 2019</li>
+<li><del>Know within seconds the entire estate of software and what versions are installed.</del> Completed May 2019
+<ul>
+<li><del>Including zips and archives* that do not show up in Programs and Features</del> Completed May 2019</li>
+<li><del>Including internal software* that does not show up in Programs and Features</del> Completed May 2019</li>
+</ul>
+</li>
+<li>Adhoc reporting for a particular machine or set of machines</li>
+<li><del>Run arbitrary Chocolatey commands against one or more machines</del> Completed June 2020.</li>
+<li><del>See how many machines you are actively managing in your organization</del> Completed May 2019</li>
+<li>More...</li>
+</ul>
+<p>* - When deployed through Chocolatey.</p>
+<hr />
+<h2 id="faqs">FAQs</h2>
+<h3 id="how-do-i-take-advantage-of-chocolatey-central-management">How do I take advantage of Chocolatey Central Management?</h3>
+<p>You must have a <a href="https://chocolatey.org/compare">Business edition of Chocolatey</a>. Business editions are great for organizations that need to manage the total software lifecycle.</p>
+<h3 id="im-a-licensed-customer-now-what">I'm a licensed customer, now what?</h3>
+<p>See <a href="#getting-ccm">Getting CCM</a>.</p>
+<h3 id="will-this-become-available-for-lower-editions-of-chocolatey">Will this become available for lower editions of Chocolatey?</h3>
+<p>CCM will only be available in Chocolatey for Business (C4B).</p>
+<h3 id="whats-the-minimum-version-of-the-chocolatey-packages-i-need-to-use-ccm">What's the minimum version of the Chocolatey packages I need to use CCM?</h3>
+<p>See <a href="#ccm-components">CCM Components</a>.</p>
+<h3 id="where-can-i-find-all-the-log-files-for-chocolatey-central-management">Where can I find all the log files for Chocolatey Central Management</h3>
+<p>Chocolatey Central Management is made up of a number of components, so there will be a few possible places to find the log files, which you may be asked for when engaging with support.</p>
+<ul>
+<li>The Chocolatey Central Management Website log file located at <code>c:\tools\chocolatey-management-web\App_Data\Logs\ccm-website.log</code>. If you are on a version of CCM prior to 0.2.0, the log will be located at <code>c:\tools\chocolatey-management-web\App_Data\Logs\Logs.txt</code>.</li>
+<li>The Chocolatey Central Management service log file is located at <code>$env:ChocolateyInstall\logs\ccm-service.log</code>. If you are on a version of CCM prior to 0.2.0, the log will be located at <code>$env:ChocolateyInstall\lib\chocolatey-management-service\tools\service\logs\chocolatey.service.host.log</code>.</li>
+<li>The Chocolatey Agent log file is located at <code>$env:ChocolateyInstall\logs\chocolatey-agent.log</code>. If you are on a version of Chocolatey Agent prior to 0.10.0, the log will be located at <code>$env:ChocolateyInstall\lib\chocolatey-agent\tools\service\logs\chocolatey-agent.log</code>.</li>
+</ul>
+<h3 id="where-can-i-find-the-changelog-or-release-notes-for-chocolatey-central-management">Where can I find the changelog or release notes for Chocolatey Central Management?</h3>
+<p>Please see [[Release Notes Central Management|ReleaseNotesCentralManagement]].</p>
+<h3 id="how-do-i-get-support">How do I get support?</h3>
+<p>Please run <code>choco support</code> from a licensed edition and follow the instructions.</p>
+<h3 id="how-do-i-set-up-chocolatey-central-management">How do I set up Chocolatey Central Management?</h3>
+<p>You can start from a pre-configured environment known as [[Quick Deployment Environment (QDE)|QuickDeploymentEnvironment]], or see <a href="#setup--installation">Setup / Installation</a>.</p>
+<h3 id="what-is-the-ccm-compatibility-matrix">What is the CCM compatibility matrix?</h3>
+<p>Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of CCM and vice versa.  Please see the <a href="#ccm-component-compatibility-matrix">CCM Component Compatibility Matrix</a> for details.</p>
+<h3 id="if-i-update-the-license-file-do-i-need-to-restart-my-services-and-web">If I update the license file, do I need to restart my services and web?</h3>
+<p>Yes, you do need to restart the agents, the service, and the web to pick up the license. Here's a handy script:</p>
+<pre><code class="language-powershell">Get-Service chocolatey-* | Stop-Service
+Get-Process ChocolateySoftware.ChocolateyManagement.Web.Mvc | Stop-Process
+Get-Service chocolatey-* | Start-Service
+</code></pre>
+<p>For your agent machines:</p>
+<pre><code class="language-powershell">Get-Service chocolatey-* | Stop-Service
+Get-Service chocolatey-* | Start-Service
+</code></pre>
+<hr />
+<h2 id="common-errors-and-resolutions">Common Errors and Resolutions</h2>
+<h3 id="computers-checking-in-are-overwriting-each-other">Computers checking in are overwriting each other</h3>
+<p>You are generating machines from a base image that already had Chocolatey commercial code on it. This is okay, but you need to remove the Chocolatey Machine Id Guid, which is used to identify a machine as unique.</p>
+<p>When the licensed agent service is installed on a machine, a unique machine id is given to the machine. If you are starting from a template, there is no opportunity for that to be different and when those machines start checking in, they will start overwriting each other.</p>
+<p>Basically you need to go find the machine id at <code>HKEY_LOCAL_MACHINE\SOFTWARE\Chocolatey\</code> (<code>UniqueId</code>) and remove it as part of your image deployment mechanism.</p>
+<pre><code class="language-powershell">Write-Host &quot;Removing Chocolatey Unique Machine GUID&quot;
+Remove-ItemProperty -Path &quot;HKLM:\Software\Chocolatey&quot; -Name &quot;UniqueId&quot; -Force
+# Restart the Agent Service if it is running
+</code></pre>
+<p>Once you've removed this, you'll need to restart the Agent Service to get it regenerated.</p>
+<blockquote>
+<p>:information_source: You may <em><strong>also</strong></em> need to remove the ChocolateyLocalAdmin user (if you are using it for services) and reinstall the Agent service (and CCM service if on this machine) to get that password corrected.</p>
+</blockquote>
+<h3 id="an-internal-error-occurred-during-your-request">An Internal error occurred during your request</h3>
+<p>Check the log files. You may have incorrect database access, but most likely it can come because you didn't follow the steps for setup appropriately.</p>
+<h3 id="system.data.sqlclient.sqlexception-invalid-column-name">System.Data.SqlClient.SqlException: Invalid column name</h3>
+<p>This means you are upgrading things out of order. Please make sure your database is upgraded first, then the service, then the web.</p>
+
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
+                                            <div class="border-bottom mb-3">
+                                                <p class="small font-weight-bold">On This Page</p>
+                                                    <p class="small"><a href="#chocolatey-central-management-ccm">Chocolatey Central Management (CCM)</a></p>
+                                                    <p class="small"><a href="#ccm-components">CCM Components</a></p>
+                                                    <p class="small"><a href="#ccm-component-compatibility-matrix">CCM Component Compatibility Matrix</a></p>
+                                                    <p class="small"><a href="#getting-ccm">Getting CCM</a></p>
+                                                    <p class="small"><a href="#stay-up-to-date">Stay Up To Date</a></p>
+                                                    <p class="small"><a href="#links">Links</a></p>
+                                                    <p class="small"><a href="#setup-installation">Setup / Installation</a></p>
+                                                    <p class="small"><a href="#setup-upgrade">Setup / Upgrade</a></p>
+                                                    <p class="small"><a href="#using-central-management">Using Central Management</a></p>
+                                                    <p class="small"><a href="#related-articles">Related Articles</a></p>
+                                                    <p class="small"><a href="#roadmap">Roadmap</a></p>
+                                                    <p class="small"><a href="#faqs">FAQs</a></p>
+                                                    <p class="small"><a href="#how-do-i-take-advantage-of-chocolatey-central-management">How do I take advantage of Chocolatey Central Management?</a></p>
+                                                    <p class="small"><a href="#im-a-licensed-customer-now-what">I&#x27;m a licensed customer, now what?</a></p>
+                                                    <p class="small"><a href="#will-this-become-available-for-lower-editions-of-chocolatey">Will this become available for lower editions of Chocolatey?</a></p>
+                                                    <p class="small"><a href="#whats-the-minimum-version-of-the-chocolatey-packages-i-need-to-use-ccm">What&#x27;s the minimum version of the Chocolatey packages I need to use CCM?</a></p>
+                                                    <p class="small"><a href="#where-can-i-find-all-the-log-files-for-chocolatey-central-management">Where can I find all the log files for Chocolatey Central Management</a></p>
+                                                    <p class="small"><a href="#where-can-i-find-the-changelog-or-release-notes-for-chocolatey-central-management">Where can I find the changelog or release notes for Chocolatey Central Management?</a></p>
+                                                    <p class="small"><a href="#how-do-i-get-support">How do I get support?</a></p>
+                                                    <p class="small"><a href="#how-do-i-set-up-chocolatey-central-management">How do I set up Chocolatey Central Management?</a></p>
+                                                    <p class="small"><a href="#what-is-the-ccm-compatibility-matrix">What is the CCM compatibility matrix?</a></p>
+                                                    <p class="small"><a href="#if-i-update-the-license-file-do-i-need-to-restart-my-services-and-web">If I update the license file, do I need to restart my services and web?</a></p>
+                                                    <p class="small"><a href="#common-errors-and-resolutions">Common Errors and Resolutions</a></p>
+                                                    <p class="small"><a href="#computers-checking-in-are-overwriting-each-other">Computers checking in are overwriting each other</a></p>
+                                                    <p class="small"><a href="#an-internal-error-occurred-during-your-request">An Internal error occurred during your request</a></p>
+                                                    <p class="small"><a href="#system.data.sqlclient.sqlexception-invalid-column-name">System.Data.SqlClient.SqlException: Invalid column name</a></p>
+                                            </div>
+                                        <p class="small font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/central-management/overview.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="p-3 text-white font-size-sm">
+            <div class="container">
+                <div>
+                    <span>© 2020 Chocolatey Software, Inc.</span>
+                    <span class="float-right" style="color: #888888;">1.0.0</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+            });
+        </script>
+    </body>
+</html>

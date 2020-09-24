@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/docs/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/docs/assets/css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+
+        <title>Chocolatey - Manually Recompile Packages, Embedding/Internalizing Remote Resources</title>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column">
+
+            <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-3">
+                    <a class="navbar-brand" href="/docs"><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-light font-size-lg" href="https://github.com/chocolatey/docs"><i class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex-grow-1 d-flex  bg-body flex-column section-docs">
+                    <div id="titlebar" class="py-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
+                                    <div class="section text-uppercase">Chocolatey</div>
+                                    <div class="text-white m-0 title">Manually Recompile Packages, Embedding/Internalizing Remote Resources</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="undertitle">
+                        <div class="container bg-body">
+                            <div class="row">
+                                    <div class="col-md-3 col-lg-2 bg-body">
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 bg-white">
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-section">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="flex-grow-1 d-flex flex-column bg-body">
+                        <div class="container flex-grow-1 d-flex flex-column bg-white">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                    <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body">
+                                            <div class="sidebar-nav-item">
+<a href="/docs/">Root Page</a>                                            </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us">Docs Home</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/why">Why Chocolatey?</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/security">Security</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/features">Features</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/general">General</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/usage">Usage</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/creating-packages">Creating Packages</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos">How To&#x27;s</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/chocolatey-gui">Chocolatey GUI</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment">Quick Deployment Environment (QDE)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/central-management">Chocolatey Central Management (CCM)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/use-cases">Use Cases</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/learning-resources">Learning Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/additional-information">Additional Information</a>
+                                                            </div>
+                                                    </div>
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
+                                        <h1 id="how-to-internalizerecompile-packages">How To Internalize/Recompile Packages</h1>
+<!--remove <div id="RightNav"> remove-->
+<!-- TOC -->
+<ul>
+<li><a href="#what-is-it-why">What is it? Why?</a></li>
+<li><a href="#process-of-internalization">Process of Internalization</a></li>
+<li><a href="#how-to-internalize-an-existing-package-automatically">How to Internalize An Existing Package Automatically</a></li>
+<li><a href="#how-to-internalizerecompile-an-existing-package-manually">How To Internalize/Recompile An Existing Package Manually</a></li>
+</ul>
+<!-- /TOC -->
+<!--remove </div> remove-->
+<h2 id="what-is-it-why">What is it? Why?</h2>
+<p>Sometimes creating packages from scratch can be an involved process. Not all software installers are created equal (and not all are easily automated either)! Thankfully there is already a tremendous resource you can use to make the process of getting your software all packaged up even smoother.</p>
+<p>On <a href="https://chocolatey.org">chocolatey.org</a>, you will find packages with all of the install logic you need to automatically install your software. However, many of these publicly available packages also rely on software that is available from official distribution points because they are subject to <a href="https://en.wikipedia.org/wiki/Software_license">software licensing and copyright law</a>. Unless you’re granted the right to distribute the software via the license, you can’t redistribute it publicly. These laws do not apply when you use internal packages, and that is a good thing!</p>
+<p>Why? Downloading software from the internet creates a failure point because it may not be available, the software vendor site could go down, etc. With internal packages, you don’t have to worry about any of that. You can create internal packages and embed the software directly in the package and/or use internal file shares.</p>
+<p>This is where internalizing/recompiling existing community packages comes in. Internalizing a package lets you take an existing package and internalize all of the resources to embedded/internal resources so you can reuse the install logic without the hassle of downloading files from the internet. This guarantees complete control, trust, reliability, and repeatability of a package for organizations that have a low tolerance for production issues.</p>
+<p><strong>NOTE: Internalizing a package is not the same thing as caching the nupkg files like Artifactory, Nexus, ProGet, etc can do.</strong></p>
+<h2 id="process-of-internalization">Process of Internalization</h2>
+<p>Internalizing a Chocolatey package at a high level involves:</p>
+<ol>
+<li>Downloading and unpacking the existing package as a zip file.</li>
+<li>Downloading the resources the package has and putting them in the package or somewhere internal ([[UNC, internal Http repository, DFS|How-To-Host-Feed]], [[SCCM Distribution point|FeaturesInfrastructureAutomation]], etc).</li>
+<li>Editing the install script to point to the internal/embedded software.</li>
+<li>Packaging it back up (recompiling).</li>
+<li>Pushing it to your internal server.</li>
+<li>And that’s it!</li>
+</ol>
+<p>Recompiling is a great way to quickly get your organization up to speed on managing software with Chocolatey packages.</p>
+<h2 id="how-to-internalize-an-existing-package-automatically">How to Internalize An Existing Package Automatically</h2>
+<p>See [[Package Internalizer - Automatically Internalize/Recompile Packages|FeaturesAutomaticallyRecompilePackages]].</p>
+<ul>
+<li>Have Chocolatey for Business (or Chocolatey for MSP).</li>
+<li>Call a command like the following:
+<ul>
+<li><code>choco download notepadplusplus.commandline --internalize</code></li>
+<li><code>choco download git.install --internalize --resources-location \\unc\share</code></li>
+<li><code>choco download nodejs.install --internalize --resources-location http://some/internal/url --internalize-all-urls</code>.</li>
+</ul>
+</li>
+<li>That's it! It does all of the manual steps below in a fraction of the time.</li>
+</ul>
+<p>Package Internalizer can be hooked up to continuous integration automation or scheduled tasks to really reduce manual work.</p>
+<h2 id="how-to-internalizerecompile-an-existing-package-manually">How To Internalize/Recompile An Existing Package Manually</h2>
+<p>Chocolatey's <a href="https://chocolatey.org/packages">community feed</a> has quite a few packages but they are geared towards community and use the internet for downloading from official distribution sites due to copyright law and a publicly offered repository. However, they are attractive as they have everything necessary to install a piece of software on your machine. Through the internalization process, by which you take a community package and bring all of the bits internal and/or embed them into the pacakge, you can convert an existing package to be 100% offline and reliable and host it on an internal Chocolatey repository. This gives you complete control over a package and removes the aforementioned production trust and control issues.</p>
+<p>To make the existing package local, use these steps.</p>
+<p><code>1.</code> Download the package from Chocolatey's community feed by going to the <a href="https://chocolatey.org/packages/notepadplusplus.commandline">package page</a> and clicking the download link.</p>
+<p><img src="/assets/images/recompile/choco_npp_download.png" alt="Download Link" /></p>
+<p><code>2.</code> Rename the downloaded file to end with <code>.zip</code> and unpack the file as a regular archive.</p>
+<p><img src="/assets/images/recompile/choco_rename_nupkg_zip.png" alt="Rename to append .zip suffix" /></p>
+<p><code>3.</code> Delete the <code>_rels</code> and <code>package</code> folders and the <code>[Content_Types].xml</code> file. These are created during <code>choco pack</code> and should not be included, as they will be regenerated (and their existence leads to issues).</p>
+<p><img src="/assets/images/recompile/choco_delete_pkg_files.png" alt="Remove _rels, package, and the xml file" /></p>
+<p><code>4.</code> Next, open <code>tools\chocolateyInstall.ps1</code>.</p>
+<pre><code class="language-powershell">Install-ChocolateyZipPackage 'notepadplusplus.commandline' 'https://notepad-plus-plus.org/repository/6.x/6.8.7/npp.6.8.7.bin.zip' &quot;$(Split-Path -parent $MyInvocation.MyCommand.Definition)&quot;
+</code></pre>
+<p><code>5.</code> Download the zip file and place it in the tools folder of the package.</p>
+<p><img src="/assets/images/recompile/choco_download_zip.png" alt="Zip file embedding in package" /></p>
+<p><code>6.</code> If the file ends in <code>.exe</code>, create an empty file called <code>*.exe.ignore</code>, where the name is an exact match with the exe with <code>.ignore</code> appended at the end (e.g. <code>bob.exe</code> would have a file next to it named <code>bob.exe.ignore</code>).</p>
+<p><code>7.</code> Next, edit <code>chocolateyInstall.ps1</code> to point to this embedded file instead of reaching out to the internet (if the size of the file is over 100MB, you might want to put it on a file share somewhere internally for better performance).</p>
+<pre><code class="language-powershell">$toolsDir   = &quot;$(Split-Path -parent $MyInvocation.MyCommand.Definition)&quot;
+Install-ChocolateyZipPackage 'notepadplusplus.commandline' &quot;$toolsDir\npp.6.8.7.bin.zip&quot; &quot;$toolsDir&quot;
+</code></pre>
+<p>The double quotes allow for string interpolation (meaning variables get interpreted instead of taken literally).</p>
+<p><code>8.</code> Next, open the <code>*.nuspec</code> file to view its contents and make any necessary changes.</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;package xmlns=&quot;http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd&quot;&gt;
+ &lt;metadata&gt;
+   &lt;id&gt;notepadplusplus.commandline&lt;/id&gt;
+   &lt;version&gt;6.8.7&lt;/version&gt;
+   &lt;title&gt;Notepad++ (Portable, CommandLine)&lt;/title&gt;
+   &lt;authors&gt;Don Ho&lt;/authors&gt;
+   &lt;owners&gt;Rob Reynolds&lt;/owners&gt;
+   &lt;projectUrl&gt;https://notepad-plus-plus.org/&lt;/projectUrl&gt;
+   &lt;iconUrl&gt;https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/notepadplusplus.png&lt;/iconUrl&gt;
+   &lt;requireLicenseAcceptance&gt;false&lt;/requireLicenseAcceptance&gt;
+   &lt;description&gt;Notepad++ is a ... &lt;/description&gt;
+   &lt;summary&gt;Notepad++ is a free (as in &quot;free speech&quot; and also as in &quot;free beer&quot;) source code editor and Notepad replacement that supports several languages. &lt;/summary&gt;
+   &lt;tags&gt;notepad notepadplusplus notepad-plus-plus&lt;/tags&gt;
+ &lt;/metadata&gt;
+&lt;/package&gt;
+</code></pre>
+<p>Some organizations will change the version field to denote this is an edited internal package, for example changing <code>6.8.7</code> to <code>6.8.7.20151202</code>. For now, this is not necessary.</p>
+<p><code>9.</code> Now you can navigate via the command line to the folder with the <code>.nuspec</code> file (from a Windows machine unless you've installed Mono and built choco.exe from source) and use <code>choco pack</code>. You can also be more specific and type <code>choco pack path\to\notepadplusplus.commandline.nuspec</code>. The output should be similar to below.</p>
+<pre><code class="language-sh">Attempting to build package from 'notepadplusplus.commandline.nuspec'.
+Successfully created package 'notepadplusplus.commandline.6.8.7.nupkg'
+</code></pre>
+<p><code>10.</code> Normally you test on a system to ensure that the package you just built is good prior to pushing the package (just the *.nupkg) to your internal repository. This can be done by using <code>choco.exe</code> on a test system to install (<code>choco install notepadplusplus.commandline -source .</code>) and uninstall (<code>choco uninstall notepadplusplus.commandline</code>).</p>
+<p><strong>NOTE:</strong> Originally posted at <a href="https://puppet.com/blog/chocolatey-creating-recompiled-packages">https://puppet.com/blog/chocolatey-creating-recompiled-packages</a> and <a href="https://docs.puppet.com/pe/latest/windows_modules.html">https://docs.puppet.com/pe/latest/windows_modules.html</a></p>
+
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
+                                            <div class="border-bottom mb-3">
+                                                <p class="small font-weight-bold">On This Page</p>
+                                                    <p class="small"><a href="#how-to-internalizerecompile-packages">How To Internalize/Recompile Packages</a></p>
+                                                    <p class="small"><a href="#what-is-it-why">What is it? Why?</a></p>
+                                                    <p class="small"><a href="#process-of-internalization">Process of Internalization</a></p>
+                                                    <p class="small"><a href="#how-to-internalize-an-existing-package-automatically">How to Internalize An Existing Package Automatically</a></p>
+                                                    <p class="small"><a href="#how-to-internalizerecompile-an-existing-package-manually">How To Internalize/Recompile An Existing Package Manually</a></p>
+                                            </div>
+                                        <p class="small font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/how-tos/recompile-packages.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="p-3 text-white font-size-sm">
+            <div class="container">
+                <div>
+                    <span>© 2020 Chocolatey Software, Inc.</span>
+                    <span class="float-right" style="color: #888888;">1.0.0</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+            });
+        </script>
+    </body>
+</html>

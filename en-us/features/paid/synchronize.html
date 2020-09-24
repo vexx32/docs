@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/docs/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/docs/assets/css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+
+        <title>Chocolatey - Package Synchronizer (Pro&#x2B; Auto / C4B Sync Command)</title>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column">
+
+            <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-3">
+                    <a class="navbar-brand" href="/docs"><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-light font-size-lg" href="https://github.com/chocolatey/docs"><i class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex-grow-1 d-flex  bg-body flex-column section-docs">
+                    <div id="titlebar" class="py-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
+                                    <div class="section text-uppercase">Chocolatey</div>
+                                    <div class="text-white m-0 title">Package Synchronizer (Pro&#x2B; Auto / C4B Sync Command)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="undertitle">
+                        <div class="container bg-body">
+                            <div class="row">
+                                    <div class="col-md-3 col-lg-2 bg-body">
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 bg-white">
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-section">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="flex-grow-1 d-flex flex-column bg-body">
+                        <div class="container flex-grow-1 d-flex flex-column bg-white">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                    <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body">
+                                            <div class="sidebar-nav-item">
+<a href="/docs/">Root Page</a>                                            </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us">Docs Home</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/why">Why Chocolatey?</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/security">Security</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/features">Features</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/general">General</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/usage">Usage</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/creating-packages">Creating Packages</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos">How To&#x27;s</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/chocolatey-gui">Chocolatey GUI</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment">Quick Deployment Environment (QDE)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/central-management">Chocolatey Central Management (CCM)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/use-cases">Use Cases</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/learning-resources">Learning Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/additional-information">Additional Information</a>
+                                                            </div>
+                                                    </div>
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
+                                        <h1 id="synchronize-with-programs-and-features-licensed-editions-only">Synchronize with Programs And Features (Licensed Editions Only)</h1>
+<p>Chocolatey maintains its own state of the world, while Windows maintains the state of Programs and Features. If an application is upgraded or uninstalled outside of Chocolatey, such as is the case with Google Chrome and its auto updating utility, Chocolatey open source doesn't know about the change. The synchronize features in licensed editions keep Chocolatey's state in sync with Programs and Features, removing possible system-installed state drift.</p>
+<ul>
+<li><a href="#automatic-synchronize">Automatic Sync (All Licensed Editions)</a></li>
+<li><a href="#sync-command">Synchronize Command</a> (currently Business edition only - check <a href="https://chocolatey.org/compare#compare">https://chocolatey.org/compare#compare</a> for availability)</li>
+<li><a href="#all-packages-in-programs-and-features">All Packages in Programs And Features (C4B)</a></li>
+</ul>
+<!-- TOC -->
+<ul>
+<li><a href="#automatic-synchronize">Automatic Synchronize</a>
+<ul>
+<li><a href="#usage">Usage</a>
+<ul>
+<li><a href="#automatic-updating-software">Automatic Updating Software?</a></li>
+<li><a href="#more-details-on-external-upgrades">More Details On External Upgrades</a></li>
+</ul>
+</li>
+<li><a href="#see-it-in-action">See It In Action</a></li>
+<li><a href="#options-and-switches">Options and Switches</a></li>
+<li><a href="#faq">FAQ</a>
+<ul>
+<li><a href="#how-do-i-take-advantage-of-this-feature">How do I take advantage of this feature?</a></li>
+<li><a href="#im-a-licensed-customer-now-what">I'm a licensed customer, now what?</a></li>
+<li><a href="#how-does-it-work">How does it work?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sync-command">Sync Command</a>
+<ul>
+<li><a href="#usage-1">Usage</a>
+<ul>
+<li><a href="#setup">Setup</a></li>
+</ul>
+</li>
+<li><a href="#see-it-in-action">See it in action</a></li>
+<li><a href="#options-and-switches-1">Options and Switches</a></li>
+<li><a href="#faq-1">FAQ</a>
+<ul>
+<li><a href="#how-do-i-take-advantage-of-this-feature-1">How do I take advantage of this feature?</a></li>
+<li><a href="#im-a-business-customer-now-what">I'm a business customer, now what?</a></li>
+<li><a href="#how-does-it-work-1">How does it work?</a></li>
+<li><a href="#do-i-get-the-packages-to-add-to-source">Do I get the packages to add to source?</a></li>
+<li><a href="#some-packages-have-a-todo-list">Some packages have a TODO list</a></li>
+<li><a href="#how-do-i-get-machine-parseable-output">How do I get machine parseable output?</a></li>
+<li><a href="#what-if-i-have-an-existing-package-that-is-just-not-tracking-to-programs-and-features">What if I have an existing package that is just not tracking to Programs and Features?</a></li>
+</ul>
+</li>
+<li><a href="#sync-command-known-issues">Sync Command Known issues</a></li>
+</ul>
+</li>
+<li><a href="#all-packages-in-programs-and-features">All Packages in Programs and Features</a>
+<ul>
+<li><a href="#usage-2">Usage</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#setup-1">Setup</a></li>
+<li><a href="#options-and-switches-2">Options and Switches</a></li>
+<li><a href="#faq-2">FAQ</a>
+<ul>
+<li><a href="#how-do-i-take-advantage-of-this-feature-2">How do I take advantage of this feature?</a></li>
+<li><a href="#im-a-business-customer-now-what-1">I'm a business customer, now what?</a></li>
+<li><a href="#how-does-it-work-2">How does it work?</a></li>
+</ul>
+</li>
+<li><a href="#packages-in-programs-and-features-known-issues">Packages in Programs and Features Known Issues</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="automatic-synchronize">Automatic Synchronize</h2>
+<p>In all licensed editions, Chocolatey syncs the state of <em><strong>already installed Chocolatey packages</strong></em> (nupkg files) to the state of the software they are linked up with - so if the software is uninstalled or upgraded outside of Chocolatey, it removes the package or notes the upgrade. This behavior is known as automatic synchronization or autosync for short. There is also choco sync, which is different and is covered in <a href="#sync-command">Sync Command</a> below.</p>
+<p>There is an important distinction between packages and software to understand with Chocolatey. Chocolatey manages packages (nupkg files), and packages manage software. Many packages are what we call &quot;installer packages&quot; - packages that manage an installer and an installation into Programs and Features. Once that software is in Programs and Features, it could be manipulated outside of Chocolatey. If it is removed without the command going through Chocolatey, open source Chocolatey will still have the package installed (which is technically correct from a package manager state, but incorrect based on expectations). With open source you end up with a disconnect if you are not careful. Licensed editions of Chocolatey are able to see system state and correct this discrepancy with autosync by updating the state of the package based on what has occurred outside of Chocolatey.</p>
+<p>For software management, which encompasses package management and above that for Windows, the state of the software is really what should be reflected with those installed packages. So if that software has been uninstalled from Programs and Features or upgraded outside of Chocolatey, autosync removes those packages to match that state or notes the upgrade (note it doesn't change the version of the package - that's much trickier to get correct).</p>
+<p>As commercial editions lean more towards software management, they have much better system integration. Autosync is great for ensuring that Chocolatey matches the state of changes on the system for what the packages it is tracking.</p>
+<h3 id="usage">Usage</h3>
+<p><img src="/assets/images/features/features_synchronize.png" alt="Automatic Synchronize - if you are on https://chocolatey.org/docs/features-synchronize, see commented html below for detailed description of image" /></p>
+<p>In the image above, someone manually removed the 1Password software. On the next run of Chocolatey, auto sync sees the software has been removed, so it removes the package tracking to that software in response to those system changes.</p>
+<!--
+Text in the image above:
+
+Synchronize with Programs and Features
+
+- Chocolatey for Business - any Chocolatey command will trigger synchronization
+- Synchronizes state between Chocolatey and Programs and Features
+- Currently supports manual software removals
+- Adding upgrade tracking
+
+This image shows running `choco list -lo`. Chocolatey for Business automatically detects that 1Password has been manually uninstalled and synchronizes Chocolatey's state.
+-->
+<h4 id="automatic-updating-software">Automatic Updating Software?</h4>
+<p>When you have software like Google Chrome that automatically updates, it is recommended typically that you pin the package to let the software automatically upgrade. Chocolatey's autosync will track the software updates in the background and store those which will be helpful if you later remove the software from Programs and Features directly or want to run choco uninstall on the package to remove the software.</p>
+<h4 id="more-details-on-external-upgrades">More Details On External Upgrades</h4>
+<p>You could also upgrade the software directly outside of Chocolatey, which would similarly create a discrepancy between the software being on a newer version than the package shows.</p>
+<p>Chocolatey's autosync understands that an upgrade occurred and tracks that for the software, but not the packaging. So you won't see anything visual that indicates the sync as the package version will remain the same.</p>
+<blockquote>
+<p>:memo: <strong>Why doesn't Chocolatey upgrade the package version?</strong></p>
+<p>There is not always a one to one line up between package version and software version. The version of software you think you are based on the software telling you and what that software reports as the version in the registry are different many times, unfortunately. This makes it very difficlt to update a package version correctly.</p>
+</blockquote>
+<p>For example, for the longest time Google Chrome had a version number in the registry at 65.x when the version being displayed to users was at like 59.x. The packaging was at 59.x following what people note as the version based on what Google Chrome tells them. This is just one of many examples.</p>
+<blockquote>
+<p>:memo: <strong>Software version tracking assists in uninstallations where Chocolatey's autouninstaller is invoked.</strong></p>
+</blockquote>
+<p>If the software is an MSI, the Product Guid is used for managing uninstalls. Guess what typically changes on every upgrade? Yes, the Product Guid. So autosync is keeping track of the new ones as the software automatically upgrades. Without tracking that, if you were to say <code>choco uninstall googlechrome</code> without autosync and there was no <code>chocolateyUninstall.ps1</code> in the package, then the software could potentially be left on the system because Chocolatey's automatic uninstaller wouldn't have the right Product Guid and thus be unable to handle software uninstallation.</p>
+<h3 id="see-it-in-action">See It In Action</h3>
+<p><img src="/assets/images/gifs/choco_business_features.gif" alt="auto package creation/synchronize" /></p>
+<blockquote>
+<p>:memo: <strong>NOTE</strong>: To see all feature videos for Chocolatey for Business, please visit <a href="https://chocolatey.org/resources/features#c4b">https://chocolatey.org/resources/features#c4b</a>.</p>
+</blockquote>
+<h3 id="options-and-switches">Options and Switches</h3>
+<p>There are none - automatic sync just happens every run.</p>
+<h3 id="faq">FAQ</h3>
+<h4 id="how-do-i-take-advantage-of-this-feature">How do I take advantage of this feature?</h4>
+<p>You must have a <a href="https://chocolatey.org/pricing">licensed edition of Chocolatey</a> (Pro, MSP, or Business). Pro is a personal, named license that costs about the price of a lunch outing per month and comes with several other features. Business editions are great for organizations that need to manage the total software management lifecycle. MSP editions contain a subset of the Business edition features.</p>
+<h4 id="im-a-licensed-customer-now-what">I'm a licensed customer, now what?</h4>
+<p>It just works.</p>
+<h4 id="how-does-it-work">How does it work?</h4>
+<p>Chocolatey tracks applications that it installs, so it is able to keep up with those applications as they are upgraded and uninstalled, even outside of Chocolatey.</p>
+<h2 id="sync-command">Sync Command</h2>
+<p>Starting in 1.9.0 of the licensed extension, sync has been added as a preview feature for organizations to try out. Currently Business edition only, but expected to be in Pro+ at some point - check <a href="https://chocolatey.org/compare#compare">https://chocolatey.org/compare#compare</a> for availability.</p>
+<p>Sync looks at all software that is in Programs and Features that is not being managed with Chocolatey packages and brings them under management. This means you can run one command and suddenly, all of the software installed on a machine is under management by Chocolatey!</p>
+<h3 id="usage-1">Usage</h3>
+<p>To synchronize your system, Simply call <code>choco sync</code> and Chocolatey will ensure that all software in Programs and Features comes under Chocolatey management and provides you the packages/package sources so you can add them to source control for managing those packages over time.</p>
+<h4 id="setup">Setup</h4>
+<p>At 1.9.0, sync is in preview. You need to turn it on by enabling the feature  <code>allowPreviewFeatures</code>:</p>
+<ul>
+<li><code>choco feature enable -n allowPreviewFeatures</code></li>
+</ul>
+<h3 id="see-it-in-action-1">See it in action</h3>
+<p>We've prepared a short video to show sync in action:
+<a href="https://youtu.be/tzSsYHYsjf4" title="Chocolatey's Package Synchronizer - Sync Command"><img src="https://cloud.githubusercontent.com/assets/63502/22050108/ade28e5a-dcfd-11e6-8835-afc9f699e400.png" alt="Chocolatey's Package Synchronizer - Sync Command" /></a></p>
+<blockquote>
+<p>:memo: <strong>NOTE</strong>: To see all feature videos for Chocolatey for Business, please visit <a href="https://chocolatey.org/resources/features#c4b">https://chocolatey.org/resources/features#c4b</a>.</p>
+</blockquote>
+<p>In the following image, sync is run on a system that has 18 applications installed and a base Chocolatey for Business install. Note after running sync, all software on the machine is now being managed by Chocolatey.</p>
+<p><img src="/assets/images/features/features_choco_sync.png" alt="Chocolatey's Package Synchronizer Sync Command - if you are on https://chocolatey.org/docs/features-synchronize, see commented html below for detailed description of image" /></p>
+<!--
+Text in the image above:
+
+Package Synchronizer's Sync Command
+
+- Brings unmanaged software under Chocolatey management
+- Provides you the source packaging and package output
+- Automate existing systems in under 90 seconds!
+- Machine parseable with `-r`
+- Links existing packages not tracking to Programs and Features
+
+This image shows running `choco sync`. It shows first a system that has 18 applications installed outside of Chocolatey, then runs `choco sync` and watches Chocolatey generate packages and baseline the system. Then it shows `choco list -lo --include-programs` again, which shows that all software on the machine is now being managed by Chocolatey.
+
+-->
+<h3 id="options-and-switches-1">Options and Switches</h3>
+<p>The following are available in the [[choco sync|CommandsSync]] command.</p>
+<pre><code>     --id=VALUE
+     Id - The Display Name from Programs and Features
+
+     --out, --outdir, --outputdirectory, --output-directory=VALUE
+     OutputDirectory - Specifies the directory for the generated Chocolatey
+       package file(s). If not specified, uses a subdirectory of the current
+       directory.
+</code></pre>
+<h3 id="faq-1">FAQ</h3>
+<h4 id="how-do-i-take-advantage-of-this-feature-1">How do I take advantage of this feature?</h4>
+<p>You must have the <a href="https://chocolatey.org/pricing">business edition of Chocolatey</a>. Business editions are great for organizations that need to manage the total software management lifecycle.</p>
+<h4 id="im-a-business-customer-now-what">I'm a business customer, now what?</h4>
+<p>You would periodically run <code>choco sync</code>.</p>
+<h4 id="how-does-it-work-1">How does it work?</h4>
+<p>Chocolatey takes a look at all software in Programs and Features that is not under Chocolatey management, generates packages on the fly and baselines them under the Chocolatey install, ensuring all of the links are tracked.</p>
+<h4 id="do-i-get-the-packages-to-add-to-source">Do I get the packages to add to source?</h4>
+<p>Yes! Chocolatey will tell you the location of the sync files so you can put them into source control.</p>
+<h4 id="some-packages-have-a-todo-list">Some packages have a TODO list</h4>
+<p>Generating packages on the fly from Programs and Features for non-MSI installers doesn't provide everything necessary to ensure an actual install. So when you take those packages back to source, you will need to finish out the packaging for those so that later when you upgrade, things will work appropriately.</p>
+<h4 id="how-do-i-get-machine-parseable-output">How do I get machine parseable output?</h4>
+<p>Use <code>-r</code>. <code>choco sync -r</code>. Requires Chocolatey v0.10.4+.</p>
+<h4 id="what-if-i-have-an-existing-package-that-is-just-not-tracking-to-programs-and-features">What if I have an existing package that is just not tracking to Programs and Features?</h4>
+<p>Synchronize can recognize existing packages and sync to those as long as the name of the package is a close match to the software name (e.g. Google Chrome becomes either google-chrome or googlechrome).</p>
+<h3 id="sync-command-known-issues">Sync Command Known issues</h3>
+<ul>
+<li>Any packages you've installed side by side (<code>-m</code>) will show up every time during sync.</li>
+<li>If you have both a 64-bit and 32-bit version of some software installed, sync will track to one on the first run and the other on the next run. This is not a normal scenario.</li>
+</ul>
+<h2 id="all-packages-in-programs-and-features">All Packages in Programs and Features</h2>
+<p>In C4B, you can flip a switch and see all packages in Programs and Features, even those packages that don't have underlying native installers! This makes reporting back to legacy inventory reporting systems a snap.</p>
+<h3 id="usage-2">Usage</h3>
+<p><img src="/assets/images/features/features_packages_in_programs_and_features.png" alt="All Packages in Programs And Features - if you are on https://chocolatey.org/docs/features-synchronize, see commented html below for detailed description of image" /></p>
+<!--
+Text in the image above:
+
+Package Synchronizer - All Packages in Programs and Features
+
+- All packages show up, even if they don't use a native installer
+- Managed automatically by Chocolatey
+- Supporting legacy inventory tracking systems is now a snap
+- No need to build MSIs for internal software
+
+This image shows a display of `choco list -lo` side by side with Programs and Features. It links a package with a native installer (Launchy) to show that it didn't do anything differently. It links a package that uses a zip archive (Screen To Gif), shows part of the nuspec file and how that all maps to the Programs and Features entry.
+-->
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li>Chocolatey (<code>chocolatey</code> package) v0.10.7+.</li>
+<li>Chocolatey for Business (C4B) Edition.</li>
+<li>Chocolatey Licensed Extension (<code>chocolatey.extension</code> package) v1.10.0+.</li>
+</ul>
+<h3 id="setup-1">Setup</h3>
+<ul>
+<li><code>choco feature enable -n showAllPackagesInProgramsAndFeatures</code></li>
+</ul>
+<h3 id="options-and-switches-2">Options and Switches</h3>
+<p>Global Feature Setting:</p>
+<ul>
+<li><code>showAllPackagesInProgramsAndFeatures</code> - Package Synchronizer's Packages In Programs And Features Synchronization - Show all packages in Programs and Features, not just packages that use a native installer.</li>
+</ul>
+<h3 id="faq-2">FAQ</h3>
+<h4 id="how-do-i-take-advantage-of-this-feature-2">How do I take advantage of this feature?</h4>
+<p>You must have the <a href="https://chocolatey.org/pricing">business edition of Chocolatey</a>. Business editions are great for organizations that need to manage the total software management lifecycle.</p>
+<h4 id="im-a-business-customer-now-what-1">I'm a business customer, now what?</h4>
+<p>Once you set the feature, it just works automatically.</p>
+<h4 id="how-does-it-work-2">How does it work?</h4>
+<p>Chocolatey tracks packages that manage natively installed software. For packages that are zip archives or configuration, Chocolatey will add an entry into Programs and Features based on the nuspec. It's smart enough not to add an entry for a meta-package - say <code>notepadplusplus</code> and <code>notepadplusplus.install</code> are installed. The meta-package would be <code>notepadpluplus</code>.</p>
+<h3 id="packages-in-programs-and-features-known-issues">Packages in Programs and Features Known Issues</h3>
+<ul>
+<li>MSU type packages will show up - Chocolatey doesn't automatically track Windows Updates types of installers. So if you install WMF 5 through Chocolatey and turn this feature on, it will show up as well.</li>
+<li>You must run choco at least one more time after setting the feature for it to take effect. So flip the feature and then run <code>choco -v</code>.</li>
+</ul>
+
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
+                                            <div class="border-bottom mb-3">
+                                                <p class="small font-weight-bold">On This Page</p>
+                                                    <p class="small"><a href="#synchronize-with-programs-and-features-licensed-editions-only">Synchronize with Programs And Features (Licensed Editions Only)</a></p>
+                                                    <p class="small"><a href="#automatic-synchronize">Automatic Synchronize</a></p>
+                                                    <p class="small"><a href="#usage">Usage</a></p>
+                                                    <p class="small"><a href="#see-it-in-action">See It In Action</a></p>
+                                                    <p class="small"><a href="#options-and-switches">Options and Switches</a></p>
+                                                    <p class="small"><a href="#faq">FAQ</a></p>
+                                                    <p class="small"><a href="#sync-command">Sync Command</a></p>
+                                                    <p class="small"><a href="#usage-1">Usage</a></p>
+                                                    <p class="small"><a href="#see-it-in-action-1">See it in action</a></p>
+                                                    <p class="small"><a href="#options-and-switches-1">Options and Switches</a></p>
+                                                    <p class="small"><a href="#faq-1">FAQ</a></p>
+                                                    <p class="small"><a href="#sync-command-known-issues">Sync Command Known issues</a></p>
+                                                    <p class="small"><a href="#all-packages-in-programs-and-features">All Packages in Programs and Features</a></p>
+                                                    <p class="small"><a href="#usage-2">Usage</a></p>
+                                                    <p class="small"><a href="#requirements">Requirements</a></p>
+                                                    <p class="small"><a href="#setup-1">Setup</a></p>
+                                                    <p class="small"><a href="#options-and-switches-2">Options and Switches</a></p>
+                                                    <p class="small"><a href="#faq-2">FAQ</a></p>
+                                                    <p class="small"><a href="#packages-in-programs-and-features-known-issues">Packages in Programs and Features Known Issues</a></p>
+                                            </div>
+                                        <p class="small font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/features/paid/synchronize.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="p-3 text-white font-size-sm">
+            <div class="container">
+                <div>
+                    <span>© 2020 Chocolatey Software, Inc.</span>
+                    <span class="float-right" style="color: #888888;">1.0.0</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+            });
+        </script>
+    </body>
+</html>

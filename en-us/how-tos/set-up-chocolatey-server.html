@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/docs/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/docs/assets/css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+
+        <title>Chocolatey - Set up the Chocolatey.Server</title>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column">
+
+            <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-3">
+                    <a class="navbar-brand" href="/docs"><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-light font-size-lg" href="https://github.com/chocolatey/docs"><i class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex-grow-1 d-flex  bg-body flex-column section-docs">
+                    <div id="titlebar" class="py-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
+                                    <div class="section text-uppercase">Chocolatey</div>
+                                    <div class="text-white m-0 title">Set up the Chocolatey.Server</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="undertitle">
+                        <div class="container bg-body">
+                            <div class="row">
+                                    <div class="col-md-3 col-lg-2 bg-body">
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 bg-white">
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-section">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="flex-grow-1 d-flex flex-column bg-body">
+                        <div class="container flex-grow-1 d-flex flex-column bg-white">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                    <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body">
+                                            <div class="sidebar-nav-item">
+<a href="/docs/">Root Page</a>                                            </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us">Docs Home</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/why">Why Chocolatey?</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/security">Security</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/features">Features</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/general">General</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/usage">Usage</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/creating-packages">Creating Packages</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos">How To&#x27;s</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/chocolatey-gui">Chocolatey GUI</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment">Quick Deployment Environment (QDE)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/central-management">Chocolatey Central Management (CCM)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/use-cases">Use Cases</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/learning-resources">Learning Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/additional-information">Additional Information</a>
+                                                            </div>
+                                                    </div>
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
+                                        <h1 id="how-to-setup-the-chocolatey.server-package">How To Setup the Chocolatey.Server Package</h1>
+<!-- TOC -->
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#links">Links</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#setup">Setup</a>
+<ul>
+<li><a href="#setup-with-ansible">Setup with Ansible</a></li>
+<li><a href="#setup-with-chef">Setup with Chef</a></li>
+<li><a href="#setup-with-puppet">Setup with Puppet</a></li>
+<li><a href="#setup-manually">Setup Manually</a></li>
+<li><a href="#setup-with-powershell-script">Setup with PowerShell Script</a></li>
+</ul>
+</li>
+<li><a href="#additional-configuration">Additional Configuration</a>
+<ul>
+<li><a href="#performance">Performance</a>
+<ul>
+<li><a href="#future">Future</a></li>
+</ul>
+</li>
+<li><a href="#configure-simple-server-alongside-wsus-admin-site">Configure Simple Server alongside WSUS admin-site</a></li>
+</ul>
+</li>
+<li><a href="#common-errors-and-resolutions">Common Errors and Resolutions</a>
+<ul>
+<li><a href="#error-404-on-push">Error 404 on Push</a></li>
+<li><a href="#error-500">Error 500</a></li>
+<li><a href="#error-50019---the-requested-page-cannot-be-accessed-because-the-related-configuration-data-for-the-page-is-invalid">Error 500.19 - &quot;The requested page cannot be accessed because the related configuration data for the page is invalid.&quot;</a></li>
+<li><a href="#other-error">Other error</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<p><strong>NOTE:</strong> Refer to [[How To Set Up Chocolatey For Organizational/Internal Use|How-To-Setup-Offline-Installation]] in tandem with this article.</p>
+<h2 id="summary">Summary</h2>
+<p><strong>tl;dr - Chocolatey.Server is not recommended for most organizational use cases. There are more robust options out there. However if you have a very simple use case or are conducting a POC, Chocolatey.Server may be good enough for your needs. If you don't find it robust enough, our recommendation is to look to something more robust like Artifactory, Nexus, or ProGet (two of which are also free to use).</strong></p>
+<p>The <a href="https://chocolatey.org/packages/chocolatey.server">Chocolatey.Server package</a> contains the binaries for a fully ready to go Chocolatey NuGet Server where you can serve packages over HTTP using a NuGet-compatible v2 OData Atom Feed. Chocolatey Simple Server (aka Chocolatey Server aka chocolatey.server) is an implementation of a NuGet.Server compiled and ready to go.</p>
+<p><strong>NOTE</strong>: This is meant to be a simple implementation and may not have the features to be used in a robust environment where you need multiple repositories with multiple users/API keys. If you are an organization, the recommendation is to evaluate your needs and determine if you instead need a Repository Server like Nexus, Artifactory Pro, or ProGet. See [[hosting your own server|How-To-Host-Feed]] for those options.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://chocolatey.org/packages/chocolatey.server">Package</a></li>
+<li><a href="https://github.com/chocolatey/simple-server/blob/master/CHANGELOG.md">Changelog</a></li>
+<li><a href="https://github.com/chocolatey/simple-server">Source Code</a></li>
+</ul>
+<p>When you install it, it will install the website typically to <code>c:\tools\chocolatey.server</code>.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>.NET Framework 4.6+.</li>
+<li>You need a Windows box with at least 50GB of free space (or where ever you are going to put the packages).</li>
+<li>50GB of free space for where ever you will put packages.</li>
+<li>We recommend at least 8GB RAM, but more if you can.</li>
+<li>Ability to set up an IIS site and unblock website ports.</li>
+<li>If you have an IIS site for WSUS administration, see <a href="#configure-simple-server-alongside-wsus-admin-site">Configure Simple Server alongside WSUS admin-site</a> for instructions on how to make Chocolatey Simple Server work alongside the WSUS admin-site.</li>
+<li>If you can ensure your server is up to date with all of the Windows Updates, you will move through this process quite a bit quicker.</li>
+</ul>
+<h2 id="setup">Setup</h2>
+<h3 id="setup-with-ansible">Setup with Ansible</h3>
+<p>If you are using Ansible, you can use the <a href="https://galaxy.ansible.com/jborean93/win_chocolatey_server">win_chocolatey_server</a> role to set up an Chocolatey.Server instance on a host running Windows Server 2008 R2 or newer.</p>
+<p>This Ansible role allows you to configure the following:</p>
+<ul>
+<li>The API token required to push packages</li>
+<li>Multiple credentials that can be used for basic authentication</li>
+<li>The location to install Chocolatey.Server to</li>
+<li>Binding settings for the Chocolatey.Server website such as the http and https port as well as the https certificate thumpbrint</li>
+<li>Generate a self-signed certificate alongside a https binding if a CA is not available</li>
+<li>Automatically install the Chocolatey nupkg from a path or a URL</li>
+</ul>
+<h3 id="setup-with-chef">Setup with Chef</h3>
+<p>If you are using Chef, you can use <a href="https://github.com/galenemery/chocolatey_server">Galen Emery's POC</a> as a starting point to set up a Chocolatey Simple Server.</p>
+<h3 id="setup-with-puppet">Setup with Puppet</h3>
+<p>If you are using the Puppet module <a href="https://forge.puppet.com/chocolatey/chocolatey_server">chocolatey/chocolatey_server</a>, it will do all of the additional setup for this package and allow some customization. <strong>NOTE: For now it may be best to look at the one in GitHub.</strong></p>
+<p>The module works with Windows Server 2008/2012.
+For a simple <code>include chocolatey_server</code> it does the following automatically:</p>
+<ul>
+<li>Ensures IIS is installed</li>
+<li>Ensures ASP.NET is installed</li>
+<li>Ensures the chocolatey.server package is installed</li>
+<li>Ensures an app pool for the chocolatey.server site</li>
+<li>Ensures the IIS website is setup for chocolatey.server</li>
+<li>Ensures permissions for the site are set correctly.</li>
+</ul>
+<h3 id="setup-manually">Setup Manually</h3>
+<ul>
+<li>If your Windows updates are not up to date, there are two required Windows updates you are going to need (heads up they take awhile)
+<ul>
+<li>Install KB2919355 - <code>choco install KB2919355 -y</code> - this one or the other Windows update takes a <em><strong>very</strong></em> long time to install, just be patient</li>
+<li>Restart your machine.</li>
+<li>Install KB2919442 - <code>choco install KB2919442 -y</code> (IIRC this is the one that takes forever...) -</li>
+<li>Reboot that machine again</li>
+</ul>
+</li>
+<li>You need at least .NET Framework 4.6. If you don't have that or newer, then run <code>choco install dotnet4.6.1 -y</code>
+<ul>
+<li>Reboot one more time, thanks Windows!!</li>
+</ul>
+</li>
+<li>Install or upgrade the package - <code>choco upgrade chocolatey.server -y</code></li>
+<li>Ensure IIS is installed. You can try <code>choco install IIS-WebServer --source windowsfeatures</code></li>
+<li>Ensure that ASP.NET is installed. Try <code>choco install IIS-ASPNET45 --source windowsfeatures</code> (Windows Server 2012). Use <code>IIS-ASPNET</code> for Windows Server 2008, possibly <code>IIS-ASPNET46</code> for Windows Server 2016.</li>
+<li>Disable or remove the Default website</li>
+<li>Set up an app pool for Chocolatey.Server. Ensure 32-bit is enabled and the managed runtime version is <code>v4.0</code> (or some version of 4). Ensure it is &quot;Integrated&quot; and not &quot;Classic&quot;.</li>
+<li>Set up an IIS website pointed to the install location and set it to use the app pool.</li>
+<li>Go to explorer and right click on <code>c:\tools\chocolatey.server</code> and add the following permissions:
+<ul>
+<li><code>IIS_IUSRS</code> - Read</li>
+<li><code>IUSR</code> - Read</li>
+<li><code>IIS APPPOOL\&lt;app pool name&gt;</code> - Read</li>
+</ul>
+</li>
+<li>Right click on the <code>App_Data</code> subfolder and add the following permissions:
+<ul>
+<li><code>IIS_IUSRS</code> - Modify</li>
+<li><code>IIS APPPOOL\&lt;app pool name&gt;</code> - Modify</li>
+</ul>
+</li>
+</ul>
+<h3 id="setup-with-powershell-script">Setup with PowerShell Script</h3>
+<p>To install and configure Chocolatey.Server using PowerShell run the following script in an <strong>elevated administrator session</strong>:</p>
+<pre><code class="language-powershell">$siteName = 'ChocolateyServer'
+$appPoolName = 'ChocolateyServerAppPool'
+$sitePath = 'c:\tools\chocolatey.server'
+
+function Add-Acl {
+    [CmdletBinding()]
+    Param (
+        [string]$Path,
+        [System.Security.AccessControl.FileSystemAccessRule]$AceObject
+    )
+
+    Write-Verbose &quot;Retrieving existing ACL from $Path&quot;
+    $objACL = Get-ACL -Path $Path
+    $objACL.AddAccessRule($AceObject)
+    Write-Verbose &quot;Setting ACL on $Path&quot;
+    Set-ACL -Path $Path -AclObject $objACL
+}
+
+function New-AclObject {
+    [CmdletBinding()]
+    Param (
+        [string]$SamAccountName,
+        [System.Security.AccessControl.FileSystemRights]$Permission,
+        [System.Security.AccessControl.AccessControlType]$AccessControl = 'Allow',
+        [System.Security.AccessControl.InheritanceFlags]$Inheritance = 'None',
+        [System.Security.AccessControl.PropagationFlags]$Propagation = 'None'
+    )
+
+    New-Object -TypeName System.Security.AccessControl.FileSystemAccessRule($SamAccountName, $Permission, $Inheritance, $Propagation, $AccessControl)
+}
+
+if ($null -eq (Get-Command -Name 'choco.exe' -ErrorAction SilentlyContinue)) {
+    Write-Warning &quot;Chocolatey not installed. Cannot install standard packages.&quot;
+    Exit 1
+}
+# Install Chocolatey.Server prereqs
+choco install IIS-WebServer --source windowsfeatures
+choco install IIS-ASPNET45 --source windowsfeatures
+
+# Install Chocolatey.Server
+choco upgrade chocolatey.server -y
+
+# Step by step instructions here https://chocolatey.org/docs/how-to-set-up-chocolatey-server#setup-normally
+# Import the right modules
+Import-Module WebAdministration
+# Disable or remove the Default website
+Get-Website -Name 'Default Web Site' | Stop-Website
+Set-ItemProperty &quot;IIS:\Sites\Default Web Site&quot; serverAutoStart False    # disables website
+
+# Set up an app pool for Chocolatey.Server. Ensure 32-bit is enabled and the managed runtime version is v4.0 (or some version of 4). Ensure it is &quot;Integrated&quot; and not &quot;Classic&quot;.
+New-WebAppPool -Name $appPoolName -Force
+Set-ItemProperty IIS:\AppPools\$appPoolName enable32BitAppOnWin64 True       # Ensure 32-bit is enabled
+Set-ItemProperty IIS:\AppPools\$appPoolName managedRuntimeVersion v4.0       # managed runtime version is v4.0
+Set-ItemProperty IIS:\AppPools\$appPoolName managedPipelineMode Integrated   # Ensure it is &quot;Integrated&quot; and not &quot;Classic&quot;
+Restart-WebAppPool -Name $appPoolName   # likely not needed ... but just in case
+
+# Set up an IIS website pointed to the install location and set it to use the app pool.
+New-Website -Name $siteName -ApplicationPool $appPoolName -PhysicalPath $sitePath
+
+# Add permissions to c:\tools\chocolatey.server:
+'IIS_IUSRS', 'IUSR', &quot;IIS APPPOOL\$appPoolName&quot; | ForEach-Object {
+    $obj = New-AclObject -SamAccountName $_ -Permission 'ReadAndExecute' -Inheritance 'ContainerInherit','ObjectInherit'
+    Add-Acl -Path $sitePath -AceObject $obj
+}
+
+# Add the permissions to the App_Data subfolder:
+$appdataPath = Join-Path -Path $sitePath -ChildPath 'App_Data'
+'IIS_IUSRS', &quot;IIS APPPOOL\$appPoolName&quot; | ForEach-Object {
+    $obj = New-AclObject -SamAccountName $_ -Permission 'Modify' -Inheritance 'ContainerInherit', 'ObjectInherit'
+    Add-Acl -Path $appdataPath -AceObject $obj
+}
+</code></pre>
+<h2 id="additional-configuration">Additional Configuration</h2>
+<p>Looking for where the apikey is and how it is changed, that is all done through the web.config. The config is pretty well-documented on each of the appSettings key values.</p>
+<p>To update the apiKey, it is kept in the web.config, search for that value and update it. If you reach out to the server on https://localhost (it will show you what the apikey is, only locally though).</p>
+<h3 id="performance">Performance</h3>
+<p>To configure for performance, you will want to do the following:</p>
+<ul>
+<li>Keep the site warm (<a href="https://serverfault.com/a/595215/79259">https://serverfault.com/a/595215/79259</a>):
+<ul>
+<li>Turn on Application Initialization in Windows Features under Web Server (IIS) -&gt; Web Server -&gt; Application Development -&gt; Application Initialization (you can also try <code>choco install IIS-ApplicationInit --source windowsfeatures</code>)</li>
+<li>Application Pool Advanced Settings:
+<ul>
+<li>General: Start Mode -&gt; Always Running</li>
+<li>Process Model: Idle Time-out (minutes) -&gt; 0</li>
+<li>Recycling: Regular Time Interval (minutes) -&gt; 0</li>
+</ul>
+</li>
+<li>Under the Site's Advanced Settings:
+<ul>
+<li>Preload Enabled -&gt; True</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="future">Future</h4>
+<p>We are looking to add support for the package source to automatically handle this aspect - <a href="http://blog.nuget.org/20150922/Accelerate-Package-Source.html">http://blog.nuget.org/20150922/Accelerate-Package-Source.html</a></p>
+<h3 id="configure-simple-server-alongside-wsus-admin-site">Configure Simple Server alongside WSUS admin-site</h3>
+<p>If you are running the Simple Server next to a WSUS admin-site, you need to change some settings in the IIS-Configuration for making the Simple Server work correctly again.
+This is due to the fact that the WSUS admin-site installation registers two modules in the IIS root configuration, which will be passed down to all other sites running on that IIS instance, including the Chocolatey Simple Server site.</p>
+<p>To make the Chocolatey Simple Server work again, you will need to disable inheritance for these modules in order to remove them from the Chocolatey Simple Server site.</p>
+<p><em>Before making changes to your IIS configuration, read all steps carefully and make sure that you have a backup</em></p>
+<p>You can do this either by powershell:</p>
+<pre><code class="language-powershell"># Import WebAdministration
+Import-Module WebAdministration
+
+# Remove locks from modules
+Remove-WebConfigurationLock -Filter &quot;system.webServer/modules/add[&#64;name='DynamicCompressionModule']&quot; -PSPath IIS:\
+Remove-WebConfigurationLock -Filter &quot;system.webServer/modules/add[&#64;name='StaticCompressionModule']&quot; -PSPath IIS:\
+
+# Remove modules from the Chocolatey Simple Server site
+Disable-WebGlobalModule -PSPath 'IIS:\Sites\ChocolateyServer\' -Name DynamicCompressionModule
+Disable-WebGlobalModule -PSPath 'IIS:\Sites\ChocolateyServer\' -Name StaticCompressionModule
+
+# Restart website
+Stop-Website -Name &quot;ChocolateyServer&quot;
+Start-Website -Name &quot;ChocolateyServer&quot;
+</code></pre>
+<p>or manual:</p>
+<ol>
+<li>Open the IIS Management Console</li>
+<li>Click on the server name on the upper left pane</li>
+<li>On the right pane doubleclick on <code>Modules</code>. All available modules will show up</li>
+<li>Search for <code>DynamicCompressionModule</code>, right-click it and choose <code>Unlock</code></li>
+<li>Do the same for <code>StaticCompressionModule</code></li>
+<li>Under <code>Sites</code> on the left pane click on the site for your Chocolatey Simple Server, most likely <code>ChocolateyServer</code></li>
+<li>Again, search for <code>Modules</code> on the right pane and doubleclick it</li>
+<li>Search for <code>DynamicCompressionModule</code>, right-click it and choose <code>Remove</code></li>
+<li>Restart the Chocolatey Simple Server site</li>
+</ol>
+<p>The Chocolatey Simple Server should now be able to handle requests correctly again.</p>
+<h2 id="common-errors-and-resolutions">Common Errors and Resolutions</h2>
+<p>When you are attempting to install the Simple Server, you may run into some errors depending on your configuration. Here are some common ones we've seen that you may get when you browse to the the site.</p>
+<h3 id="error-404-on-push">Error 404 on Push</h3>
+<p>If you can do everything except push packages, it is likely your application pool is set to Classic mode and can't find directories. It needs to be &quot;Integrated&quot;. Please change that to Integrated and then recycle the application pool. That should resolve the issue of pushing packages. Reference: <a href="https://stackoverflow.com/a/37702935/18475">https://stackoverflow.com/a/37702935/18475</a>.</p>
+<h3 id="error-500">Error 500</h3>
+<p>Take a closer look at the error. It may be one of the other errors below.</p>
+<h3 id="error-500.19-the-requested-page-cannot-be-accessed-because-the-related-configuration-data-for-the-page-is-invalid">Error 500.19 - &quot;The requested page cannot be accessed because the related configuration data for the page is invalid.&quot;</h3>
+<p>This can mean a couple of things:</p>
+<ul>
+<li>You missed ensuring the website is using an app pool that is at least .NET 4.0. Check the app pool that your site is using, then ensure that app pool has <code>32-bit</code> enabled and the managed runtime version is <code>v4.0</code> (or some version of 4).</li>
+<li>You have made a change to the xml file and it is not valid xml. This typically happens if you put an xml escape character into the password (<code>&amp;</code>). To do that you would need to set CData around the value or use a different password. It could also happen if you accidentallly change the xml and it is no longer valid.</li>
+<li>You are attempting to set up Chocolatey Server next to WSUS Administration website. See <a href="#configure-simple-server-alongside-wsus-admin-site">Configure Simple Server alongside WSUS admin-site</a> for instructions on how to make Chocolatey Simple Server work alongside the WSUS admin-site.</li>
+</ul>
+<h3 id="other-error">Other error</h3>
+<p>Turn on customErrors under system.web - <customErrors mode="Off" /> - see this guide to set it - <a href="https://stackify.com/web-config-customerrors-asp-net/">https://stackify.com/web-config-customerrors-asp-net/</a></p>
+<p>Then browse to the site to see if you can gather any more information.</p>
+<p>If so, and you are a commercial edition customer, please open a support ticket. If you are using open source Chocolatey, please open a ticket at <a href="https://github.com/chocolatey/simple-server/issues">https://github.com/chocolatey/simple-server/issues</a>.</p>
+
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
+                                            <div class="border-bottom mb-3">
+                                                <p class="small font-weight-bold">On This Page</p>
+                                                    <p class="small"><a href="#how-to-setup-the-chocolatey.server-package">How To Setup the Chocolatey.Server Package</a></p>
+                                                    <p class="small"><a href="#summary">Summary</a></p>
+                                                    <p class="small"><a href="#links">Links</a></p>
+                                                    <p class="small"><a href="#requirements">Requirements</a></p>
+                                                    <p class="small"><a href="#setup">Setup</a></p>
+                                                    <p class="small"><a href="#setup-with-ansible">Setup with Ansible</a></p>
+                                                    <p class="small"><a href="#setup-with-chef">Setup with Chef</a></p>
+                                                    <p class="small"><a href="#setup-with-puppet">Setup with Puppet</a></p>
+                                                    <p class="small"><a href="#setup-manually">Setup Manually</a></p>
+                                                    <p class="small"><a href="#setup-with-powershell-script">Setup with PowerShell Script</a></p>
+                                                    <p class="small"><a href="#additional-configuration">Additional Configuration</a></p>
+                                                    <p class="small"><a href="#performance">Performance</a></p>
+                                                    <p class="small"><a href="#configure-simple-server-alongside-wsus-admin-site">Configure Simple Server alongside WSUS admin-site</a></p>
+                                                    <p class="small"><a href="#common-errors-and-resolutions">Common Errors and Resolutions</a></p>
+                                                    <p class="small"><a href="#error-404-on-push">Error 404 on Push</a></p>
+                                                    <p class="small"><a href="#error-500">Error 500</a></p>
+                                                    <p class="small"><a href="#error-500.19-the-requested-page-cannot-be-accessed-because-the-related-configuration-data-for-the-page-is-invalid">Error 500.19 - &quot;The requested page cannot be accessed because the related configuration data for the page is invalid.&quot;</a></p>
+                                                    <p class="small"><a href="#other-error">Other error</a></p>
+                                            </div>
+                                        <p class="small font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/how-tos/set-up-chocolatey-server.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="p-3 text-white font-size-sm">
+            <div class="container">
+                <div>
+                    <span>© 2020 Chocolatey Software, Inc.</span>
+                    <span class="float-right" style="color: #888888;">1.0.0</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+            });
+        </script>
+    </body>
+</html>

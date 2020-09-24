@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/docs/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/docs/assets/css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+
+        <title>Chocolatey - Runtime Malware Protection (Pro&#x2B;)</title>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column">
+
+            <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-3">
+                    <a class="navbar-brand" href="/docs"><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-light font-size-lg" href="https://github.com/chocolatey/docs"><i class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex-grow-1 d-flex  bg-body flex-column section-docs">
+                    <div id="titlebar" class="py-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
+                                    <div class="section text-uppercase">Chocolatey</div>
+                                    <div class="text-white m-0 title">Runtime Malware Protection (Pro&#x2B;)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="undertitle">
+                        <div class="container bg-body">
+                            <div class="row">
+                                    <div class="col-md-3 col-lg-2 bg-body">
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 bg-white">
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-section">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="flex-grow-1 d-flex flex-column bg-body">
+                        <div class="container flex-grow-1 d-flex flex-column bg-white">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                    <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body">
+                                            <div class="sidebar-nav-item">
+<a href="/docs/">Root Page</a>                                            </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us">Docs Home</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/why">Why Chocolatey?</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/security">Security</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/features">Features</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/general">General</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/usage">Usage</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/creating-packages">Creating Packages</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos">How To&#x27;s</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/chocolatey-gui">Chocolatey GUI</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment">Quick Deployment Environment (QDE)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/central-management">Chocolatey Central Management (CCM)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/use-cases">Use Cases</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/learning-resources">Learning Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/additional-information">Additional Information</a>
+                                                            </div>
+                                                    </div>
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
+                                        <h1 id="runtime-malware-protection-virus-scanning-licensed-editions-only">Runtime Malware Protection / Virus Scanning (Licensed Editions Only)</h1>
+<p>We are pleased to offer runtime malware protection for our <a href="https://chocolatey.org/pricing">customers</a>! Virus checking is available in two flavors - VirusTotal and Generic malware verification.</p>
+<!-- TOC -->
+<ul>
+<li><a href="#usage">Usage</a>
+<ul>
+<li><a href="#virustotal">VirusTotal</a></li>
+<li><a href="#generic">Generic</a></li>
+</ul>
+</li>
+<li><a href="#see-it-in-action">See It In Action</a></li>
+<li><a href="#options-and-switches">Options And Switches</a></li>
+<li><a href="#faq">FAQ</a>
+<ul>
+<li><a href="#how-do-i-take-advantage-of-this-feature">How do I take advantage of this feature?</a></li>
+<li><a href="#im-a-licensed-customer-now-what">I'm a licensed customer, now what?</a></li>
+<li><a href="#how-do-i-turn-this-feature-on">How do I turn this feature on?</a></li>
+<li><a href="#how-do-i-turn-this-feature-off">How do I turn this feature off?</a></li>
+<li><a href="#how-do-i-override-the-minium-number-of-positives">How do I override the minium number of positives?</a></li>
+<li><a href="#how-does-the-virustotal-integration-work">How does the VirusTotal integration work?</a></li>
+<li><a href="#how-does-virustotal-verify-the-binary">How does VirusTotal verify the binary?</a></li>
+<li><a href="#what-if-virustotal-doesnt-have-results-for-a-binary">What if VirusTotal doesn't have results for a binary?</a></li>
+<li><a href="#do-you-have-plans-to-offer-better-integration-with-particular-anti-virus-scanners">Do you have plans to offer better integration with particular anti-virus scanners?</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="usage">Usage</h2>
+<p>When a binary is not flagged:
+<img src="/assets/images/virus_scan_normal.png" alt="Virus scan pass" /></p>
+<p>When a binary is flagged:
+<img src="/assets/images/virus_scan_flagged.png" alt="Virus scan failure" /></p>
+<h3 id="virustotal">VirusTotal</h3>
+<p>We've teamed up with the amazing <a href="https://virustotal.com/">VirusTotal</a> to offer a second opinion to your built-in anti-virus solution. When your packages download content from the internet, Chocolatey Pro will automatically check the executables prior to running any content. If a certain number of positives have been identified (configurable), Chocolatey will fail the install automatically (but can be overridden).</p>
+<p>VirusTotal scans binaries against over 50 different anti-virus scanners. Chocolatey will use the information based on sending a SHA256 checksum of the binary to VirusTotal and determining what the scans have determined.</p>
+<p>By default the virus scanner is already enabled and set to VirusTotal for Pro licenses. Organizations usually are more wary about reaching out to the internet, so the feature is set to Generic and the virus scanner may not be enabled by default (because it needs configuration). If you need to configure the virus scanner to use VirusTotal, please run the following two commands:</p>
+<ul>
+<li><code>choco config set virusScannerType VirusTotal</code></li>
+<li><code>choco feature enable -n virusCheck</code></li>
+</ul>
+<p>Because some scanners can be quite aggressive and may falsely identify a binary as a false positive for malware, Chocolatey doesn't flag a binary until a certain number of scanners have identified the binary as malware. This number defaults to <code>5</code> in the configuration. This means 5 AV scanners need to flag the binary for Chocolatey to stop and fail the install/upgrade. You can adjust this value in two ways, by adjusting the configuration and per choco command.</p>
+<p>To adjust the configuration value, which will globally set the number, please run the following replacing <code>##</code> with the value you want as a minimum:</p>
+<ul>
+<li><code>choco config set virusCheckMinimumPositives ##</code></li>
+</ul>
+<p>You can also adjust the default number of positives prior to flagging a binary with the <code>virusCheckMinimumPositives</code> configuration value. By default it is set to <code>5</code>, which means 5 AV scanners need to flag the binary for Chocolatey to stop and fail the install/upgrade.</p>
+<p>If you need to override the minimum number of positives just for one install/upgrade, you can do that by passing <code>--virus-positives-minimum=VALUE</code> with your install or upgrade commands.</p>
+<h3 id="generic">Generic</h3>
+<p>If you are an organization and you do not want to reach out to the internet for virus scan verification, you will want to take advantage of hooking Chocolatey up to your existing AV solution.</p>
+<p>Chocolatey will just need to know the full path to the AV command line executable, the arguments to pass, and valid exit codes (comma separated).
+Then you will get the same benefit of runtime virus checking as an added benefit on top of the protection it is already providing.</p>
+<p>If you need to configure the virus scanner to use your built-in antivirus solution, please run the following two commands:</p>
+<ul>
+<li><code>choco config set virusScannerType Generic</code></li>
+<li><code>choco config set genericVirusScannerPath &quot;full path to av command line&quot;</code></li>
+<li><code>choco config set genericVirusScannerArgs &quot;[[File]]&quot;</code></li>
+<li><code>choco config set genericVirusScannerValidExitCodes &quot;0, ##&quot;</code></li>
+<li><code>choco feature enable -n virusCheck</code></li>
+</ul>
+<p>The <code>genericVirusScannerPath</code> should be the full path to the anti-virus command line executable. What we are looking for is the command line interface to the scanner.</p>
+<p>In <code>genericVirusScannerArgs</code>, these are the arguments that Chocolatey will pass to the AV console. Chocolatey will automatically replace <code>[[File]]</code> with the full path to the binary that it is scanning.</p>
+<p>In <code>genericVirusScannerValidExitCodes</code>, these are exit codes that indicate that a binary is okay. This defaults to <code>0</code>, but you can configure this with as many exit codes as necessary by adding them to the configuration as comma separated values.</p>
+<h2 id="see-it-in-action">See It In Action</h2>
+<p><img src="/assets/images/gifs/chocopro_install_stopped.gif" alt="Pro install in action" /></p>
+<blockquote>
+<p>:memo: <strong>NOTE</strong>: To see all feature videos for Chocolatey for Business, please visit <a href="https://chocolatey.org/resources/features#c4b">https://chocolatey.org/resources/features#c4b</a>.</p>
+</blockquote>
+<h2 id="options-and-switches">Options And Switches</h2>
+<p>The following options are added to install and upgrade commands.</p>
+<pre><code>    --svc, --skipvirus, --skip-virus, --skipviruscheck, --skip-virus-check
+     Skip Virus Check - Skip the virus check for downloaded files on this ru-
+       n. Overrides the default feature 'virusCheck' set to 'True'. Available
+       in 0.9.10+. Licensed versions only.
+
+     --virus, --viruscheck, --virus-check
+     Virus Check - check downloaded files for viruses. Overrides the default
+       feature 'virusCheck' set to 'True'. Available in 0.9.10+. Licensed
+       versions only.
+
+     --viruspositivesmin, --virus-positives-minimum=VALUE
+     Virus Check Minimum Scan Result Positives - the minimum number of scan
+       result positives required to flag a package.  Used when
+       virusScannerType is VirusTotal.  Overrides the default configuration
+       value 'virusCheckMinimumPositives' set to '5'. Available in 0.9.10+.
+       Licensed versions only.
+</code></pre>
+<h2 id="faq">FAQ</h2>
+<h3 id="how-do-i-take-advantage-of-this-feature">How do I take advantage of this feature?</h3>
+<p>You must have a <a href="https://chocolatey.org/pricing">licensed edition of Chocolatey</a> (Pro, Business, or MSP). Pro is a personal, named license that costs about the price of a lunch outing per month and comes with several other features. Business editions are great for organizations that need to manage the total software management lifecycle. MSP editions contain a subset of the Business edition features. MSPs are only able to use the Generic Virus Scanner.</p>
+<h3 id="im-a-licensed-customer-now-what">I'm a licensed customer, now what?</h3>
+<p>When you install package that download content, those items will automatically be verified if the feature is turned on (it is automatically turned on for Pro users). We don't turn it on automatically in Business editions because many organizations are wary about reaching out to the internet and the generic virus scanner requires additional configuration.</p>
+<h3 id="how-do-i-turn-this-feature-on">How do I turn this feature on?</h3>
+<ul>
+<li>Globally - <code>choco feature enable -n virusCheck</code></li>
+<li>Per command - use the switch <code>--virus-check</code> with install/upgrade commands.</li>
+</ul>
+<p>You need to provide additional configuration if you are using the Generic virus scanner.</p>
+<h3 id="how-do-i-turn-this-feature-off">How do I turn this feature off?</h3>
+<ul>
+<li>Globally - <code>choco feature disable -n virusCheck</code></li>
+<li>Per command - use the switch <code>--skip-virus-check</code> with install/upgrade commands.</li>
+</ul>
+<h3 id="how-do-i-override-the-minium-number-of-positives">How do I override the minium number of positives?</h3>
+<ul>
+<li>Globally - <code>choco config set virusCheckMinimumPositives &lt;value&gt;</code></li>
+<li>Per command - use the option <code>--virus-positives-minimum=&lt;value&gt;</code> with install/upgrade commands.</li>
+</ul>
+<h3 id="how-does-the-virustotal-integration-work">How does the VirusTotal integration work?</h3>
+<ul>
+<li>After a download, Chocolatey will check a file against Virus Total's scan engines to determine how safe the file is as a secondary check to the virus scanner you may already have running.</li>
+<li>If there are existing scan results, it will determine based on the number of positives whether the file is likely safe or not (you can adjust the minimum positives number up or down).</li>
+<li>If the number is over the minimum positives, it will require you to make the determination on the safety of the file. In other words, it will protect you by failing the install, but it will give you instructions on how to override Chocolatey.</li>
+<li>If Chocolatey doesn't find a virus scan has been completed before, it will ask you if you want to upload the file. It will default to no (some users will have things they don't want pushed publicly).</li>
+<li>Whether or not you choose to upload a file when no scan is found, the virus check will fail the install as a matter of protection. Chocolatey will not make the determination if you got the file you were supposed to get from the source you thought you were getting it from, so it errors on the side of caution.</li>
+<li>A scan across all of the engines can take awhile, so it will fail with an error and notes on how you can move forward immediately if you trust the file. Virus scans can take up to 15 minutes so it will request you try again in about 15 minutes.</li>
+</ul>
+<h3 id="how-does-virustotal-verify-the-binary">How does VirusTotal verify the binary?</h3>
+<p>Chocolatey gets the binary's signature by getting a SHA256 checksum of the binary. A SHA256 checksum is extremely secure and accurate, SHA256 has not been broken. It then submits that value to VirusTotal to see if there are pre-existing results. If there are, due to the checksum, the file is <strong>the <em>exact</em> same binary</strong>. Then Chocolatey inspects the results and determines if the file is safe or if it should fail.</p>
+<h3 id="what-if-virustotal-doesnt-have-results-for-a-binary">What if VirusTotal doesn't have results for a binary?</h3>
+<p>Chocolatey will ask if you want the binary submitted to VirusTotal to be scanned (if the file is under 500MB). Then it will upload the binary their servers, ask you to try the install again in 15 minutes and fail the install. If this is running as a script, the question will timeout after 30 seconds and default to no upload.</p>
+<h3 id="do-you-have-plans-to-offer-better-integration-with-particular-anti-virus-scanners">Do you have plans to offer better integration with particular anti-virus scanners?</h3>
+<p>Yes! If you are considering or have a business edition of Chocolatey, please let us know what you need and we can get that scanner on the list. There are so many different virus checking solutions and a generic scanner provides the best opportunity to serve all of them.</p>
+
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
+                                            <div class="border-bottom mb-3">
+                                                <p class="small font-weight-bold">On This Page</p>
+                                                    <p class="small"><a href="#runtime-malware-protection-virus-scanning-licensed-editions-only">Runtime Malware Protection / Virus Scanning (Licensed Editions Only)</a></p>
+                                                    <p class="small"><a href="#usage">Usage</a></p>
+                                                    <p class="small"><a href="#virustotal">VirusTotal</a></p>
+                                                    <p class="small"><a href="#generic">Generic</a></p>
+                                                    <p class="small"><a href="#see-it-in-action">See It In Action</a></p>
+                                                    <p class="small"><a href="#options-and-switches">Options And Switches</a></p>
+                                                    <p class="small"><a href="#faq">FAQ</a></p>
+                                                    <p class="small"><a href="#how-do-i-take-advantage-of-this-feature">How do I take advantage of this feature?</a></p>
+                                                    <p class="small"><a href="#im-a-licensed-customer-now-what">I&#x27;m a licensed customer, now what?</a></p>
+                                                    <p class="small"><a href="#how-do-i-turn-this-feature-on">How do I turn this feature on?</a></p>
+                                                    <p class="small"><a href="#how-do-i-turn-this-feature-off">How do I turn this feature off?</a></p>
+                                                    <p class="small"><a href="#how-do-i-override-the-minium-number-of-positives">How do I override the minium number of positives?</a></p>
+                                                    <p class="small"><a href="#how-does-the-virustotal-integration-work">How does the VirusTotal integration work?</a></p>
+                                                    <p class="small"><a href="#how-does-virustotal-verify-the-binary">How does VirusTotal verify the binary?</a></p>
+                                                    <p class="small"><a href="#what-if-virustotal-doesnt-have-results-for-a-binary">What if VirusTotal doesn&#x27;t have results for a binary?</a></p>
+                                                    <p class="small"><a href="#do-you-have-plans-to-offer-better-integration-with-particular-anti-virus-scanners">Do you have plans to offer better integration with particular anti-virus scanners?</a></p>
+                                            </div>
+                                        <p class="small font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/features/paid/virus-check.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="p-3 text-white font-size-sm">
+            <div class="container">
+                <div>
+                    <span>© 2020 Chocolatey Software, Inc.</span>
+                    <span class="float-right" style="color: #888888;">1.0.0</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,502 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/docs/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/docs/assets/css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+
+        <title>Chocolatey - Uninstall</title>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column">
+
+            <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-3">
+                    <a class="navbar-brand" href="/docs"><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-light font-size-lg" href="https://github.com/chocolatey/docs"><i class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex-grow-1 d-flex  bg-body flex-column section-docs">
+                    <div id="titlebar" class="py-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
+                                    <div class="section text-uppercase">Chocolatey</div>
+                                    <div class="text-white m-0 title">Uninstall</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="undertitle">
+                        <div class="container bg-body">
+                            <div class="row">
+                                    <div class="col-md-3 col-lg-2 bg-body">
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 bg-white">
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-section">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="flex-grow-1 d-flex flex-column bg-body">
+                        <div class="container flex-grow-1 d-flex flex-column bg-white">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                    <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body">
+                                            <div class="sidebar-nav-item">
+<a href="/docs/">Root Page</a>                                            </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us">Docs Home</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/why">Why Chocolatey?</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/security">Security</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/features">Features</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/general">General</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/usage">Usage</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/creating-packages">Creating Packages</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos">How To&#x27;s</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/chocolatey-gui">Chocolatey GUI</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment">Quick Deployment Environment (QDE)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/central-management">Chocolatey Central Management (CCM)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/use-cases">Use Cases</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/learning-resources">Learning Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/additional-information">Additional Information</a>
+                                                            </div>
+                                                    </div>
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
+                                        <!-- This file is automatically generated based on output from https://github.com/chocolatey/choco/tree/stable/src/chocolatey/infrastructure.app/commands/ChocolateyUninstallCommand.cs using https://github.com/chocolatey/choco/tree/stable/GenerateDocs.ps1. Contributions are welcome at the original location(s). If the file is not found, it is not part of the open source edition of Chocolatey or the name of the file is different. -->
+<h1 id="uninstall-command-choco-uninstall">Uninstall Command (choco uninstall)</h1>
+<p>Uninstalls a package or a list of packages. Some may prefer to use
+<code>cuninst</code> as a shortcut for [[<code>choco uninstall</code>|Commandsuninstall]].</p>
+<p><strong>NOTE:</strong> 100% compatible with older chocolatey client (0.9.8.32 and below)
+with options and switches. Add <code>-y</code> for previous behavior with no
+prompt. In most cases you can still pass options and switches with one
+dash (<code>-</code>). For more details, see [[how to pass arguments|CommandsReference#how-to-pass-options--switches]] (<code>choco -?</code>).</p>
+<!-- TOC -->
+<ul>
+<li><a href="#details">Details</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#see-it-in-action">See It In Action</a></li>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#exit-codes">Exit Codes</a></li>
+<li><a href="#options-and-switches">Options and Switches</a></li>
+</ul>
+<!-- /TOC -->
+<h2 id="details">Details</h2>
+<p>Choco 0.9.9+ automatically tracks registry changes for &quot;Programs and
+Features&quot; of the underlying software's native installers when
+installing packages. The &quot;Automatic Uninstaller&quot; (auto uninstaller)
+service is a feature that can use that information to automatically
+determine how to uninstall these natively installed applications. This
+means that a package may not need an explicit chocolateyUninstall.ps1
+to reverse the installation done in the install script.</p>
+<p>Chocolatey tracks packages, which are the files in
+<code>$env:ChocolateyInstall\lib\packagename</code>. These packages may or may not
+contain the software (applications/tools) that each package represents.
+The software may actually be installed in Program Files (most native
+installers will install the software there) or elsewhere on the
+machine.</p>
+<p>With auto uninstaller turned off, a chocolateyUninstall.ps1 is required
+to perform uninstall from the system. In the absence of
+chocolateyUninstall.ps1, choco uninstall only removes the package from
+Chocolatey but does not remove the software from your system (unless
+in the package directory).</p>
+<p><strong>NOTE:</strong> A package with a failing uninstall can be removed with the
+<code>-n --skipautouninstaller</code> flags. This will remove the package from
+chocolatey without attempting to uninstall the program.</p>
+<p><strong>NOTE:</strong> Starting in 0.9.10+, the Automatic Uninstaller (AutoUninstaller)
+is turned on by default. To turn it off, run the following command:</p>
+<pre><code>choco feature disable -n autoUninstaller
+</code></pre>
+<p><strong>NOTE:</strong> <a href="https://chocolatey.org/compare">Chocolatey Pro</a> / Business automatically synchronizes with
+Programs and Features, ensuring manually removed apps are
+automatically removed from Chocolatey's repository.</p>
+<p><strong>NOTE:</strong> Synchronizer and AutoUninstaller enhancements in licensed
+versions of Chocolatey ensure that Autouninstaller is up to 95%
+effective at removing software without an uninstall script. This is
+because synchronizer ensures the registry snapshot stays up to date
+and licensed enhancements have the ability to inspect more locations
+to determine how to automatically uninstall software.</p>
+<h2 id="usage">Usage</h2>
+<pre><code>choco uninstall &lt;pkg|all&gt; [pkg2 pkgN] [options/switches]
+cuninst &lt;pkg|all&gt; [pkg2 pkgN] [options/switches]
+</code></pre>
+<p><strong>NOTE:</strong> <code>all</code> is a special package keyword that will allow you to
+uninstall all packages.</p>
+<h2 id="see-it-in-action">See It In Action</h2>
+<p><img src="https://raw.githubusercontent.com/wiki/chocolatey/choco/images/gifs/choco_uninstall.gif" alt="choco uninstall" /></p>
+<h2 id="examples">Examples</h2>
+<pre><code>choco uninstall git
+choco uninstall notepadplusplus googlechrome atom 7zip
+choco uninstall notepadplusplus googlechrome atom 7zip -dv
+choco uninstall ruby --version 1.8.7.37402
+choco uninstall nodejs.install --all-versions
+</code></pre>
+<p><strong>NOTE:</strong> See scripting in [[how to pass arguments|CommandsReference#how-to-pass-options--switches]] (<code>choco -?</code>) for how to
+write proper scripts and integrations.</p>
+<h2 id="exit-codes">Exit Codes</h2>
+<p>Exit codes that normally result from running this command.</p>
+<p>Normal:</p>
+<ul>
+<li>0: operation was successful, no issues detected</li>
+<li>-1 or 1: an error has occurred</li>
+</ul>
+<p>Package Exit Codes:</p>
+<ul>
+<li>1605: software is not installed</li>
+<li>1614: product is uninstalled</li>
+<li>1641: success, reboot initiated</li>
+<li>3010: success, reboot required</li>
+<li>other (not listed): likely an error has occurred</li>
+</ul>
+<p>In addition to normal exit codes, packages are allowed to exit
+with their own codes when the feature 'usePackageExitCodes' is
+turned on. Available in v0.9.10+.</p>
+<p>Reboot Exit Codes:</p>
+<ul>
+<li>350: pending reboot detected, no action has occurred</li>
+<li>1604: install suspended, incomplete</li>
+</ul>
+<p>In addition to the above exit codes, you may also see reboot exit codes
+when the feature 'exitOnRebootDetected' is turned on. It typically requires
+the feature 'usePackageExitCodes' to also be turned on to work properly.
+Available in v0.10.12+.</p>
+<h2 id="options-and-switches">Options and Switches</h2>
+<p><strong>NOTE:</strong> Options and switches apply to all items passed, so if you are
+running a command like install that allows installing multiple
+packages, and you use <code>--version=1.0.0</code>, it is going to look for and
+try to install version 1.0.0 of every package passed. So please split
+out multiple package calls when wanting to pass specific options.</p>
+<p>Includes [[default options/switches|CommandsReference#default-options-and-switches]] (included below for completeness).</p>
+<pre><code>
+
+
+ -?, --help, -h
+     Prints out the help menu.
+
+ -d, --debug
+     Debug - Show debug messaging.
+
+ -v, --verbose
+     Verbose - Show verbose messaging. Very verbose messaging, avoid using
+       under normal circumstances.
+
+     --trace
+     Trace - Show trace messaging. Very, very verbose trace messaging. Avoid
+       except when needing super low-level .NET Framework debugging. Available
+       in 0.10.4+.
+
+     --nocolor, --no-color
+     No Color - Do not show colorization in logging output. This overrides
+       the feature 'logWithoutColor', set to 'False'. Available in 0.10.9+.
+
+     --acceptlicense, --accept-license
+     AcceptLicense - Accept license dialogs automatically. Reserved for
+       future use.
+
+ -y, --yes, --confirm
+     Confirm all prompts - Chooses affirmative answer instead of prompting.
+       Implies --accept-license
+
+ -f, --force
+     Force - force the behavior. Do not use force during normal operation -
+       it subverts some of the smart behavior for commands.
+
+     --noop, --whatif, --what-if
+     NoOp / WhatIf - Don't actually do anything.
+
+ -r, --limitoutput, --limit-output
+     LimitOutput - Limit the output to essential information
+
+     --timeout, --execution-timeout=VALUE
+     CommandExecutionTimeout (in seconds) - The time to allow a command to
+       finish before timing out. Overrides the default execution timeout in the
+       configuration of 2700 seconds. '0' for infinite starting in 0.10.4.
+
+ -c, --cache, --cachelocation, --cache-location=VALUE
+     CacheLocation - Location for download cache, defaults to %TEMP% or value
+       in chocolatey.config file.
+
+     --allowunofficial, --allow-unofficial, --allowunofficialbuild, --allow-unofficial-build
+     AllowUnofficialBuild - When not using the official build you must set
+       this flag for choco to continue.
+
+     --failstderr, --failonstderr, --fail-on-stderr, --fail-on-standard-error, --fail-on-error-output
+     FailOnStandardError - Fail on standard error output (stderr), typically
+       received when running external commands during install providers. This
+       overrides the feature failOnStandardError.
+
+     --use-system-powershell
+     UseSystemPowerShell - Execute PowerShell using an external process
+       instead of the built-in PowerShell host. Should only be used when
+       internal host is failing. Available in 0.9.10+.
+
+     --no-progress
+     Do Not Show Progress - Do not show download progress percentages.
+       Available in 0.10.4+.
+
+     --proxy=VALUE
+     Proxy Location - Explicit proxy location. Overrides the default proxy
+       location of ''. Available for config settings in 0.9.9.9+, this CLI
+       option available in 0.10.4+.
+
+     --proxy-user=VALUE
+     Proxy User Name - Explicit proxy user (optional). Requires explicity
+       proxy (`--proxy` or config setting). Overrides the default proxy user of
+       '123'. Available for config settings in 0.9.9.9+, this CLI option
+       available in 0.10.4+.
+
+     --proxy-password=VALUE
+     Proxy Password - Explicit proxy password (optional) to be used with
+       username. Requires explicity proxy (`--proxy` or config setting) and
+       user name.  Overrides the default proxy password (encrypted in settings
+       if set). Available for config settings in 0.9.9.9+, this CLI option
+       available in 0.10.4+.
+
+     --proxy-bypass-list=VALUE
+     ProxyBypassList - Comma separated list of regex locations to bypass on
+       proxy. Requires explicity proxy (`--proxy` or config setting). Overrides
+       the default proxy bypass list of ''. Available in 0.10.4+.
+
+     --proxy-bypass-on-local
+     Proxy Bypass On Local - Bypass proxy for local connections. Requires
+       explicity proxy (`--proxy` or config setting). Overrides the default
+       proxy bypass on local setting of 'True'. Available in 0.10.4+.
+
+     --log-file=VALUE
+     Log File to output to in addition to regular loggers. Available in 0.1-
+       0.8+.
+
+ -s, --source=VALUE
+     Source - The source to find the package(s) to install. Special sources
+       include: ruby, webpi, cygwin, windowsfeatures, and python. Defaults to
+       default feeds.
+
+     --version=VALUE
+     Version - A specific version to uninstall. Defaults to unspecified.
+
+ -a, --allversions, --all-versions
+     AllVersions - Uninstall all versions? Defaults to false.
+
+     --ua, --uninstallargs, --uninstallarguments, --uninstall-arguments=VALUE
+     UninstallArguments - Uninstall Arguments to pass to the native installer
+       in the package. Defaults to unspecified.
+
+ -o, --override, --overrideargs, --overridearguments, --override-arguments
+     OverrideArguments - Should uninstall arguments be used exclusively
+       without appending to current package passed arguments? Defaults to false.
+
+     --notsilent, --not-silent
+     NotSilent - Do not uninstall this silently. Defaults to false.
+
+     --params, --parameters, --pkgparameters, --packageparameters, --package-parameters=VALUE
+     PackageParameters - Parameters to pass to the package. Defaults to
+       unspecified.
+
+     --argsglobal, --args-global, --installargsglobal, --install-args-global, --applyargstodependencies, --apply-args-to-dependencies, --apply-install-arguments-to-dependencies
+     Apply Install Arguments To Dependencies  - Should install arguments be
+       applied to dependent packages? Defaults to false.
+
+     --paramsglobal, --params-global, --packageparametersglobal, --package-parameters-global, --applyparamstodependencies, --apply-params-to-dependencies, --apply-package-parameters-to-dependencies
+     Apply Package Parameters To Dependencies  - Should package parameters be
+       applied to dependent packages? Defaults to false.
+
+ -m, --sxs, --sidebyside, --side-by-side, --allowmultiple, --allow-multiple, --allowmultipleversions, --allow-multiple-versions
+     AllowMultipleVersions - Should multiple versions of a package be
+       installed? Defaults to false.
+
+ -x, --forcedependencies, --force-dependencies, --removedependencies, --remove-dependencies
+     RemoveDependencies - Uninstall dependencies when uninstalling package(s-
+       ). Defaults to false.
+
+ -n, --skippowershell, --skip-powershell, --skipscripts, --skip-scripts, --skip-automation-scripts
+     Skip Powershell - Do not run chocolateyUninstall.ps1. Defaults to false.
+
+     --ignorepackagecodes, --ignorepackageexitcodes, --ignore-package-codes, --ignore-package-exit-codes
+     IgnorePackageExitCodes - Exit with a 0 for success and 1 for non-succes-
+       s, no matter what package scripts provide for exit codes. Overrides the
+       default feature 'usePackageExitCodes' set to 'True'. Available in 0.-
+       9.10+.
+
+     --usepackagecodes, --usepackageexitcodes, --use-package-codes, --use-package-exit-codes
+     UsePackageExitCodes - Package scripts can provide exit codes. Use those
+       for choco's exit code when non-zero (this value can come from a
+       dependency package). Chocolatey defines valid exit codes as 0, 1605,
+       1614, 1641, 3010. Overrides the default feature 'usePackageExitCodes'
+       set to 'True'. Available in 0.9.10+.
+
+     --autouninstaller, --use-autouninstaller
+     UseAutoUninstaller - Use auto uninstaller service when uninstalling.
+       Overrides the default feature 'autoUninstaller' set to 'True'. Available
+       in 0.9.10+.
+
+     --skipautouninstaller, --skip-autouninstaller
+     SkipAutoUninstaller - Skip auto uninstaller service when uninstalling.
+       Overrides the default feature 'autoUninstaller' set to 'True'. Available
+       in 0.9.10+.
+
+     --failonautouninstaller, --fail-on-autouninstaller
+     FailOnAutoUninstaller - Fail the package uninstall if the auto
+       uninstaller reports and error. Overrides the default feature
+       'failOnAutoUninstaller' set to 'False'. Available in 0.9.10+.
+
+     --ignoreautouninstallerfailure, --ignore-autouninstaller-failure
+     Ignore Auto Uninstaller Failure - Do not fail the package if auto
+       uninstaller reports an error. Overrides the default feature
+       'failOnAutoUninstaller' set to 'False'. Available in 0.9.10+.
+
+     --stoponfirstfailure, --stop-on-first-failure, --stop-on-first-package-failure
+     Stop On First Package Failure - stop running install, upgrade or
+       uninstall on first package failure instead of continuing with others.
+       Overrides the default feature 'stopOnFirstPackageFailure' set to 'False-
+       '. Available in 0.10.4+.
+
+     --exitwhenrebootdetected, --exit-when-reboot-detected
+     Exit When Reboot Detected - Stop running install, upgrade, or uninstall
+       when a reboot request is detected. Requires 'usePackageExitCodes'
+       feature to be turned on. Will exit with either 350 or 1604.  Overrides
+       the default feature 'exitOnRebootDetected' set to 'False'.  Available in
+       0.10.12+.
+
+     --ignoredetectedreboot, --ignore-detected-reboot
+     Ignore Detected Reboot - Ignore any detected reboots if found. Overrides
+       the default feature 'exitOnRebootDetected' set to 'False'.  Available in
+       0.10.12+.
+
+     --fromprograms, --from-programs, --fromprogramsandfeatures, --from-programs-and-features
+     From Programs and Features - Uninstalls a program from programs and
+       features. Name used for id must be a match or a wildcard (*) to Display
+       Name in Programs and Features. Available in [licensed editions](https://chocolatey.org/compare) only
+       (licensed version 1.8.0+) and requires v0.10.4+.
+
+</code></pre>
+<p>[[Command Reference|CommandsReference]]</p>
+<p><em><strong>NOTE:</strong></em> This documentation has been automatically generated from <code>choco uninstall -h</code>.</p>
+
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
+                                            <div class="border-bottom mb-3">
+                                                <p class="small font-weight-bold">On This Page</p>
+                                                    <p class="small"><a href="#uninstall-command-choco-uninstall">Uninstall Command (choco uninstall)</a></p>
+                                                    <p class="small"><a href="#details">Details</a></p>
+                                                    <p class="small"><a href="#usage">Usage</a></p>
+                                                    <p class="small"><a href="#see-it-in-action">See It In Action</a></p>
+                                                    <p class="small"><a href="#examples">Examples</a></p>
+                                                    <p class="small"><a href="#exit-codes">Exit Codes</a></p>
+                                                    <p class="small"><a href="#options-and-switches">Options and Switches</a></p>
+                                            </div>
+                                        <p class="small font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/usage/commands/uninstall.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="p-3 text-white font-size-sm">
+            <div class="container">
+                <div>
+                    <span>© 2020 Chocolatey Software, Inc.</span>
+                    <span class="float-right" style="color: #888888;">1.0.0</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+            });
+        </script>
+    </body>
+</html>

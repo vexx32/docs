@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/docs/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/docs/assets/css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+
+        <title>Chocolatey - Central Management Upgrade</title>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column">
+
+            <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-3">
+                    <a class="navbar-brand" href="/docs"><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-light font-size-lg" href="https://github.com/chocolatey/docs"><i class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex-grow-1 d-flex  bg-body flex-column section-docs">
+                    <div id="titlebar" class="py-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
+                                    <div class="section text-uppercase">Chocolatey</div>
+                                    <div class="text-white m-0 title">Central Management Upgrade</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="undertitle">
+                        <div class="container bg-body">
+                            <div class="row">
+                                    <div class="col-md-3 col-lg-2 bg-body">
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 bg-white">
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-section">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="flex-grow-1 d-flex flex-column bg-body">
+                        <div class="container flex-grow-1 d-flex flex-column bg-white">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                    <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body">
+                                            <div class="sidebar-nav-item">
+<a href="/docs/">Root Page</a>                                            </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/en-us">Docs Home</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/why">Why Chocolatey?</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/security">Security</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/features">Features</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/general">General</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/usage">Usage</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/creating-packages">Creating Packages</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/how-tos">How To&#x27;s</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/chocolatey-gui">Chocolatey GUI</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/quick-deployment">Quick Deployment Environment (QDE)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/central-management">Chocolatey Central Management (CCM)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/use-cases">Use Cases</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/learning-resources">Learning Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/en-us/additional-information">Additional Information</a>
+                                                            </div>
+                                                    </div>
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
+                                        <h1 id="chocolatey-central-management-upgrade">Chocolatey Central Management Upgrade</h1>
+<p>This will guide us through upgrading an existing Chocolatey Central Management installation to newer versions.</p>
+<blockquote>
+<p>:memo: <strong>NOTE</strong>: Looking for installation instructions? See [[Central Management Setup|CentralManagementSetup]].</p>
+</blockquote>
+<blockquote>
+<p>:warning: <strong>WARNING</strong></p>
+<p>Unless otherwise noted, please follow these steps in <em><strong>exact</strong></em> order. These steps build on each other and need to be completed in order.</p>
+</blockquote>
+<blockquote>
+<p>:warning: <strong>WARNING</strong></p>
+<p>All deployed components of the CCM packages should <strong>always</strong> be the <em><strong>SAME VERSION</strong></em>. The only time you should not have this is when you are in a state of upgrading and that transition time should be quite short.</p>
+</blockquote>
+<hr />
+<!-- TOC depthFrom:2 depthTo:5 -->
+<ul>
+<li><a href="#step-1-download-latest-packages">Step 1: Download Latest Packages</a></li>
+<li><a href="#step-2-upgrade-central-management-database">Step 2: Upgrade Central Management Database</a></li>
+<li><a href="#step-3-setup-central-management-windows-services">Step 3: Setup Central Management Windows Service(s)</a></li>
+<li><a href="#step-4-setup-central-management-website">Step 4: Setup Central Management Website</a></li>
+<li><a href="#step-5-upgrade-agent-machines">Step 5: Upgrade Agent Machines</a>
+<ul>
+<li><a href="#new-deployments-feature-example">New Deployments Feature Example</a></li>
+</ul>
+</li>
+<li><a href="#faqs">FAQs</a>
+<ul>
+<li><a href="#can-i-simply-upgrade-all-three-ccm-packages-in-the-same-command">Can I simply upgrade all three CCM packages in the same command?</a></li>
+<li><a href="#if-i-update-the-license-file-do-i-need-to-restart-my-services-and-web">If I update the license file, do I need to restart my services and web?</a></li>
+<li><a href="#can-i-use-chocolatey-deployments-to-upgrade-ccm-based-components">Can I use Chocolatey Deployments to upgrade CCM based components?</a></li>
+</ul>
+</li>
+<li><a href="#common-errors-and-resolutions">Common Errors and Resolutions</a>
+<ul>
+<li><a href="#error-there-was-an-error-deserializing-the-requested-json-file-c%5Cprogramdata%5Cchocolatey%5Clib%5Cchocolatey-management-database%5Ctools%5Capp%5Cappsettingsjson-padding-is-invalid-and-cannot-be-removed">ERROR: There was an error deserializing the requested JSON file: C:\ProgramData\chocolatey\lib\chocolatey-management-database\tools\app\appsettings.json Padding is invalid and cannot be removed.</a></li>
+<li><a href="#when-i-upgrade-the-website-it-wipes-out-any-http-port-bindings-i-created">When I upgrade the website, it wipes out any http port bindings I created</a></li>
+<li><a href="#error-the-term-install-settingsjsonfile-is-not-recognized-as-the-name-of-a-cmdlet-function-script-file-or-operable-program">ERROR: The term ‘Install-SettingsJsonFile’ is not recognized as the name of a cmdlet, function, script file, or operable program.</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<hr />
+<h2 id="step-1-download-latest-packages">Step 1: Download Latest Packages</h2>
+<blockquote>
+<p>:memo: <strong>NOTE</strong></p>
+<p>Make sure you have read over the [[CCM Compability Matrix|CentralManagement#ccm-component-compatibility-matrix]] prior to starting internalization as this will save you some headaches.</p>
+</blockquote>
+<p>Similar to how we internalized in [[Setup - Internalize Packages|CentralManagementSetup#step-1-internalize-packages]], we need to get the latest editions of everything compatible. Be sure that the versions of packages you have match up with the [[Complatibility Matrix|CentralManagement#ccm-component-compatibility-matrix]].</p>
+<blockquote>
+<p>:warning: <strong>TRIALS</strong>: You need to <em><strong>first reach out</strong></em> to your sales representative to get the latest binaries - your trial license won't have direct access to the licensed repository.</p>
+</blockquote>
+<pre><code class="language-powershell"># To run this, you need Chocolatey for Business installed (chocolatey / chocolatey.extension).
+# - TRIALS are fine, but there are modifications noted in the script.
+
+# Update the values and remove the &lt; &gt;
+$YourInternalRepositoryPushUrl = '&lt;INSERT REPOSITORY URL HERE&gt;'
+$YourInternalRepositoryApiKey = '&lt;YOUR API KEY HERE&gt;'
+# You get this from the chocolatey.license.xml file:
+$YourBusinessLicenseGuid = '&lt;INSERT NON-TRIAL C4B LICENSE GUID HERE&gt;'
+
+# Download Chocolatey community related items, no internalization necessary
+choco download chocolatey chocolateygui --force --source=&quot;'https://chocolatey.org/api/v2/'&quot; --output-directory=&quot;'C:\packages'&quot;
+
+# Download Licensed Packages
+# TRIAL? Please reach out to your sales person to get the latest binaries.
+## DO NOT RUN WITH `--internalize` and `--internalize-all-urls` - see https://github.com/chocolatey/chocolatey-licensed-issues/issues/155
+choco download chocolatey-agent chocolatey.extension chocolatey-management-database chocolatey-management-service chocolatey-management-web --force --source=&quot;'https://licensedpackages.chocolatey.org/api/v2/;https://chocolatey.org/api/v2/'&quot; --output-directory=&quot;'C:\packages'&quot;  --user=&quot;'user'&quot; --password=&quot;'$YourBusinessLicenseGuid'&quot;
+
+# Push all downloaded packages to your internal repository
+Get-ChildItem C:\packages -Recurse -Filter *.nupkg | Foreach-Object { choco push $_.Fullname --source=&quot;'$YourInternalRepositoryPushUrl'&quot; --api-key=&quot;'$YourInternalRepositoryApiKey'&quot;}
+</code></pre>
+<hr />
+<h2 id="step-2-upgrade-central-management-database">Step 2: Upgrade Central Management Database</h2>
+<blockquote>
+<p>:memo: <strong>NOTE</strong>: Please see [[Central Management Database Setup|CentralManagementSetupDatabase]] for details about all arguments that can be passed and set.</p>
+</blockquote>
+<pre><code class="language-powershell">choco upgrade chocolatey-management-database -y
+</code></pre>
+<blockquote>
+<p>:warning: <strong>WARNING</strong> If you are using QDE and receive an error about deserializing and padding, see the resolution below.</p>
+</blockquote>
+<hr />
+<h2 id="step-3-setup-central-management-windows-services">Step 3: Setup Central Management Windows Service(s)</h2>
+<blockquote>
+<p>:memo: <strong>NOTE</strong>: Please see [[Central Management Service Setup|CentralManagementSetupService]] for details about all arguments that can be passed and set.</p>
+</blockquote>
+<pre><code class="language-powershell">choco upgrade chocolatey-management-service -y
+</code></pre>
+<blockquote>
+<p>:warning: <strong>WARNING</strong>: If you passed non-default options for any of the following:</p>
+<ul>
+<li><code>/Username:</code> / <code>/Password:</code> / <code>/EnterPassword</code></li>
+<li><code>/PortNumber:</code></li>
+</ul>
+<p>You <em><strong>will need to pass</strong></em> those items again for upgrades in current releases of CCM.</p>
+</blockquote>
+<blockquote>
+<p>:warning: <strong>WARNING</strong>: If you passed a non-default option for the following:</p>
+<ul>
+<li><code>/CertificateDnsName:</code> / <code>/CertificateThumbprint:</code></li>
+</ul>
+<p>You <em><strong>may need to pass</strong></em> those items again under the following conditions:</p>
+<ul>
+<li>Your certificate's DNS name does not match <code>&lt;hostname&gt;*</code>(a certficate that at least starts with the hostname).</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>:memo: <strong>NOTE</strong>: Database details that have not changed will not need to be passed.</p>
+</blockquote>
+<p>There may be additional (new) things you will want to configure. Please see [[Central Management Service Setup|CentralManagementSetupService]] for details.</p>
+<hr />
+<h2 id="step-4-setup-central-management-website">Step 4: Setup Central Management Website</h2>
+<blockquote>
+<p>:memo: <strong>NOTE</strong>: Please see [[Central Management Web Setup|CentralManagementSetupWeb]] for details about all arguments that can be passed and set.</p>
+</blockquote>
+<pre><code class="language-powershell">choco upgrade chocolatey-management-web -y
+</code></pre>
+<blockquote>
+<p>:warning: <strong>WARNING</strong></p>
+<p>You may need to adjust permissions/roles for your user if not using the default <code>ccmadmin</code> account. Please see the roles and permissions your account has versus what is available in <code>Administration -&gt; Users</code>.</p>
+</blockquote>
+<hr />
+<h2 id="step-5-upgrade-agent-machines">Step 5: Upgrade Agent Machines</h2>
+<blockquote>
+<p>:memo: <strong>NOTE</strong>: Please see [[Central Management Client Setup|CentralManagementSetupClient]] for details about all arguments that can be passed and set.</p>
+</blockquote>
+<pre><code class="language-powershell">choco upgrade chocolatey-agent -y
+</code></pre>
+<p>There may be additional (new) things you will want to configure. Please see [[Central Management Client Setup|CentralManagementSetupClient]] for details.</p>
+<blockquote>
+<p>:memo: <strong>NOTE</strong>: This could include the agent(s) on the CCM machine(s).</p>
+</blockquote>
+<blockquote>
+<p>:warning: <strong>WARNING</strong>: The Chocolatey Agent installed on the same machine that has the CCM Service installed will share the <code>centralManagementServiceUrl</code> setting, so that agent can only report into that CCM Service.</p>
+</blockquote>
+<h3 id="new-deployments-feature-example">New Deployments Feature Example</h3>
+<p>As an example, configuring using Deployments would have the folllowing:</p>
+<pre><code class="language-powershell"># Requires Chocolatey Licensed Extension v2.1.0+, Chocolatey-Agent v0.10.0+, and Chocolatey Central Management v0.2.0+:
+choco feature enable --name=&quot;'useChocolateyCentralManagementDeployments'&quot;
+</code></pre>
+<blockquote>
+<p>:warning: <strong>WARNING</strong></p>
+<p>As these features have security considerations (it is enabling cross-machine communication), they must be turned on explicitly.
+If you decide you want to open this up for over the internet communication, you should also set <code>centralManagementClientCommunicationSaltAdditivePassword</code> and <code>centralManagementServiceCommunicationSaltAdditivePassword</code>.
+For more in-depth configuration options and settings for your endpoints, you can view the [[CCM Client Setup page|CentralManagementSetupClient]]</p>
+</blockquote>
+<hr />
+<h2 id="faqs">FAQs</h2>
+<h3 id="can-i-simply-upgrade-all-three-ccm-packages-in-the-same-command">Can I simply upgrade all three CCM packages in the same command?</h3>
+<p>We strongly advise against it as there is an explicit order that things must be upgraded in. Since CCM components can be installed on separate machines, there is no explicit dependency that can be taken. Just note that running</p>
+<pre><code class="language-powershell"># !!!DO NOT DO THIS!!!
+# choco upgrade chocolatey-management-database chocolatey-management-service chocolatey-management-web -y
+</code></pre>
+<p>when you have everything on the same box may work, but it may not. Please follow the steps here for best success.</p>
+<h3 id="if-i-update-the-license-file-do-i-need-to-restart-my-services-and-web">If I update the license file, do I need to restart my services and web?</h3>
+<p>Yes, you do need to restart the agents, the service, and the web to pick up the license. Here's a script to handle that:</p>
+<pre><code class="language-powershell">Get-Service chocolatey-* | Stop-Service
+Get-Process ChocolateySoftware.ChocolateyManagement.Web.Mvc | Stop-Process
+Get-Service chocolatey-* | Start-Service
+</code></pre>
+<h3 id="can-i-use-chocolatey-deployments-to-upgrade-ccm-based-components">Can I use Chocolatey Deployments to upgrade CCM based components?</h3>
+<p>Likely you absolutely can, just keep in mind that there may be a specific ordering in how you would upgrade everything and adhere to that order. In some instances, you may need to upgrade agents first, then CCM components as once CCM is upgraded it may not be able to talk to the agents. However agents will stop being able to talk to CCM for a small period of time while you are upgrading CCM, but then things will start working again.</p>
+<hr />
+<h2 id="common-errors-and-resolutions">Common Errors and Resolutions</h2>
+<h3 id="error-there-was-an-error-deserializing-the-requested-json-file-cprogramdatachocolateylibchocolatey-management-databasetoolsappappsettings.json-padding-is-invalid-and-cannot-be-removed">ERROR: There was an error deserializing the requested JSON file: C:\ProgramData\chocolatey\lib\chocolatey-management-database\tools\app\appsettings.json Padding is invalid and cannot be removed.</h3>
+<p>This means that the Chocolatey Unique Machine GUID has been changed since you installed the database, as you might see with some versions of QDE (which might be corrected in a version you have.)</p>
+<p>In that case you should run the following script:</p>
+<pre><code class="language-powershell">Remove-Item -Force -Path &quot;$env:ChocolateyInstall\lib\chocolatey-management-database\tools\app\appsettings.json&quot; -ErrorAction SilentlyContinue
+choco upgrade chocolatey-management-database -y --package-parameters=&quot;'/SqlServerInstance:localhost\SQLEXPRESS'&quot; --source=&quot;'c:\choco-setup\packages'&quot;
+</code></pre>
+<h3 id="when-i-upgrade-the-website-it-wipes-out-any-http-port-bindings-i-created">When I upgrade the website, it wipes out any http port bindings I created</h3>
+<p>This was an issue in releases prior to upgrading to CCM v0.3.0 - see  <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/156">https://github.com/chocolatey/chocolatey-licensed-issues/issues/156</a>.
+If you run into this, please recreate the bindings again.</p>
+<h3 id="error-the-term-install-settingsjsonfile-is-not-recognized-as-the-name-of-a-cmdlet-function-script-file-or-operable-program">ERROR: The term ‘Install-SettingsJsonFile’ is not recognized as the name of a cmdlet, function, script file, or operable program.</h3>
+<p>This is <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/161">https://github.com/chocolatey/chocolatey-licensed-issues/issues/161</a>.</p>
+<p>There are two workarounds noted:</p>
+<ul>
+<li>Delete the appsettings.json file prior to upgrade</li>
+<li>Do not pass database details if they have not changed during upgrade.</li>
+</ul>
+<hr />
+<p>[[Central Management Setup|CentralManagementSetup]] | [[Chocolatey Central Management|CentralManagement]]</p>
+
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
+                                            <div class="border-bottom mb-3">
+                                                <p class="small font-weight-bold">On This Page</p>
+                                                    <p class="small"><a href="#chocolatey-central-management-upgrade">Chocolatey Central Management Upgrade</a></p>
+                                                    <p class="small"><a href="#step-1-download-latest-packages">Step 1: Download Latest Packages</a></p>
+                                                    <p class="small"><a href="#step-2-upgrade-central-management-database">Step 2: Upgrade Central Management Database</a></p>
+                                                    <p class="small"><a href="#step-3-setup-central-management-windows-services">Step 3: Setup Central Management Windows Service(s)</a></p>
+                                                    <p class="small"><a href="#step-4-setup-central-management-website">Step 4: Setup Central Management Website</a></p>
+                                                    <p class="small"><a href="#step-5-upgrade-agent-machines">Step 5: Upgrade Agent Machines</a></p>
+                                                    <p class="small"><a href="#new-deployments-feature-example">New Deployments Feature Example</a></p>
+                                                    <p class="small"><a href="#faqs">FAQs</a></p>
+                                                    <p class="small"><a href="#can-i-simply-upgrade-all-three-ccm-packages-in-the-same-command">Can I simply upgrade all three CCM packages in the same command?</a></p>
+                                                    <p class="small"><a href="#if-i-update-the-license-file-do-i-need-to-restart-my-services-and-web">If I update the license file, do I need to restart my services and web?</a></p>
+                                                    <p class="small"><a href="#can-i-use-chocolatey-deployments-to-upgrade-ccm-based-components">Can I use Chocolatey Deployments to upgrade CCM based components?</a></p>
+                                                    <p class="small"><a href="#common-errors-and-resolutions">Common Errors and Resolutions</a></p>
+                                                    <p class="small"><a href="#error-there-was-an-error-deserializing-the-requested-json-file-cprogramdatachocolateylibchocolatey-management-databasetoolsappappsettings.json-padding-is-invalid-and-cannot-be-removed">ERROR: There was an error deserializing the requested JSON file: C:\ProgramData\chocolatey\lib\chocolatey-management-database\tools\app\appsettings.json Padding is invalid and cannot be removed.</a></p>
+                                                    <p class="small"><a href="#when-i-upgrade-the-website-it-wipes-out-any-http-port-bindings-i-created">When I upgrade the website, it wipes out any http port bindings I created</a></p>
+                                                    <p class="small"><a href="#error-the-term-install-settingsjsonfile-is-not-recognized-as-the-name-of-a-cmdlet-function-script-file-or-operable-program">ERROR: The term &#x2018;Install-SettingsJsonFile&#x2019; is not recognized as the name of a cmdlet, function, script file, or operable program.</a></p>
+                                            </div>
+                                        <p class="small font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/central-management/setup-upgrade.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="p-3 text-white font-size-sm">
+            <div class="container">
+                <div>
+                    <span>© 2020 Chocolatey Software, Inc.</span>
+                    <span class="float-right" style="color: #888888;">1.0.0</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+            });
+        </script>
+    </body>
+</html>
