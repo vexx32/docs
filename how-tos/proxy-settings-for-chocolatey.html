@@ -1,0 +1,457 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/docs/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/docs/assets/css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+
+        <title>Chocolatey - Use Chocolatey w/Proxy Server</title>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column">
+
+            <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-3">
+                    <a class="navbar-brand" href="/docs"><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-light font-size-lg" href="https://github.com/chocolatey/docs"><i class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex-grow-1 d-flex  bg-body flex-column section-docs">
+                    <div id="titlebar" class="py-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
+                                    <div class="section text-uppercase">Chocolatey</div>
+                                    <div class="text-white m-0 title">Use Chocolatey w/Proxy Server</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="undertitle">
+                        <div class="container bg-body">
+                            <div class="row">
+                                    <div class="col-md-3 col-lg-2 bg-body">
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 bg-white">
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-section">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="flex-grow-1 d-flex flex-column bg-body">
+                        <div class="container flex-grow-1 d-flex flex-column bg-white">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                    <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body">
+                                            <div class="sidebar-nav-item">
+<a href="/docs/">Docs Home</a>                                            </div>
+                                                <div class="sidebar-nav-item">
+<a href="/docs/why">Why Chocolatey?</a>                                                </div>
+                                                <div class="sidebar-nav-item">
+<a href="/docs/security">Security</a>                                                </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/features">Features</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/features/free">Free</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/features/paid">Paid</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/general">General</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/release-notes">Release Notes</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/troubleshooting">Troubleshooting</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/faqs">FAQs</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/moderation">Chocolatey.org Moderation</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/community-packages-disclaimer">Chocolatey.org Packages Disclaimer</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/usage">Usage</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/installation">How to install</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/installation-licensed">How to install licensed edition</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/chocolatey-configuration">Configuration/chocolatey.config</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/uninstallation">How to uninstall</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/getting-started">Getting Started</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/commands">Commands</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/creating-packages">Creating Packages</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/create-packages">Create Packages</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/create-packages-quick-start">Quick Start</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/commands">Commands</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/helpers">PowerShell Reference</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/automatic-packages">Automatic Packaging</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/how-tos">How To&#x27;s</a>                                                </div>
+                                                    <div class="sidebar-nav-children active">
+                                                            <div class="sidebar-nav-child active">
+                                                                <a href="/docs/how-tos/proxy-settings-for-chocolatey">Use Chocolatey w/Proxy Server</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/change-cache">Change Download Cache Location aka Don&#x27;t use TEMP for downloads</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/install-upgrade-package-without-scripts">Install/Upgrade a Package w/out running install scripts</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/package-triage-process">Request Package Fixes/Updates</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/recompile-packages">Manually Recompile Packages, Embedding/Internalizing Remote Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/package-maintainer-handover">Take Over Package Maintenance Exclusively</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/parse-packageparameters-argument">Parse Package Parameters</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/mount-an-iso-in-chocolatey-package">Mount Iso</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/create-custom-package-templates">Create Custom Package Templates</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/create-extensions">Extend Chocolatey With PowerSHell Modules (extensions)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/deprecate-a-chocolatey-package">Deprecate a Package</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/set-up-chocolatey-server">Set up the Chocolatey.Server</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/setup-offline-installation">Set up Chocolatey for Internal/organizational use</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/setup-internal-package-repository">Automate Package Internalizer (MSP/C4B)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/chocolatey-for-business-quick-start-guide">C4B Quick Start Guide</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/chocolatey-gui">Chocolatey GUI</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/chocolatey-gui/overview">Chocolatey GUI Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/chocolatey-gui/known-issues">Chocolatey GUI Known Issues</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/quick-deployment">Quick Deployment Environment (QDE)</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/overview">Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/setup">Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/desktop-readme">Desktop Readme</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/ssl-setup">SSL Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/firewall-changes">Firewall Changes</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/client-setup">Client Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/internet-setup">Internet Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/v1">QDE v1</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/central-management">Chocolatey Central Management (CCM)</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/overview">Central Management Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/setup">Central Management Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/setup-client">Central Management Client Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/setup-upgrade">Central Management Upgrade</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/deployments">Central Management Deployments</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/use-cases">Use Cases</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/use-cases/development-environment-setup">Development Environment</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/use-cases/hosting-chocolatey-packages-on-myget">Host on MyGet</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/learning-resources">Learning Resources</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/learning-resources/resources">Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/learning-resources/videos">Videos</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/learning-resources/presentations">Presentations</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/additional-information">Additional Information</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/additional-information/legal">Legal</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/additional-information/history">History</a>
+                                                            </div>
+                                                    </div>
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
+                                        <h1 id="proxy-support-for-chocolatey">Proxy Support For Chocolatey</h1>
+<!-- TOC -->
+<ul>
+<li><a href="#installing-chocolatey-behind-a-proxy-server">Installing Chocolatey behind a proxy server</a>
+<ul>
+<li><a href="#troubleshooting-installation">Troubleshooting Installation</a></li>
+</ul>
+</li>
+<li><a href="#system-proxy-settings">System Proxy Settings</a></li>
+<li><a href="#existing-proxy-environment-variables">Existing Proxy Environment Variables</a></li>
+<li><a href="#explicit-proxy-settings">Explicit Proxy Settings</a>
+<ul>
+<li><a href="#example">Example</a></li>
+<li><a href="#explicit-proxy-settings-at-runtime">Explicit Proxy Settings at Runtime</a></li>
+</ul>
+</li>
+<li><a href="#what-to-do-if-my-proxy-is-socks">What to do if my proxy is socks?</a></li>
+</ul>
+<!-- /TOC -->
+<h2 id="installing-chocolatey-behind-a-proxy-server">Installing Chocolatey behind a proxy server</h2>
+<p>When trying to install Chocolatey behind a proxy server, you may be faced with errors like</p>
+<blockquote>
+<p>Get Response returned: (407) Proxy Authentication Required</p>
+</blockquote>
+<p>or</p>
+<blockquote>
+<p>The underlying connection was closed: Could not establish trust relationship for the SSL / TLS secure channel.</p>
+</blockquote>
+<p>Steps to help address this:</p>
+<ol>
+<li>Copy the <a href="https://chocolatey.org/install.ps1">install.ps1</a> file locally.</li>
+<li>Open a PowerShell command line.</li>
+<li>Set the following environment variables - <code>$env:chocolateyProxyLocation</code> (with proxyserver:proxyport), <code>$env:chocolateyProxyUser</code> (if it is a domain account, ensure you have the appropriate domain prefix for the account, e.g. <code>AD\UserName</code> or <code>UserName</code>), and <code>$env:chocolateyProxyPassword</code> with your password.</li>
+<li>With that same shell open where the environment variables are set, run the downloaded script to install Chocolatey.</li>
+</ol>
+<p>In PowerShell, it looks like this:</p>
+<pre><code class="language-powershell">$env:chocolateyProxyLocation = 'https://local/proxy/server'
+#$env:chocolateyProxyUser = 'username'
+#$env:chocolateyProxyPassword = 'password'
+# install script
+</code></pre>
+<p><strong>NOTE:</strong> This will only work with the installation methods that call <a href="https://chocolatey.org/install.ps1">https://chocolatey.org/install.ps1</a> (or use a similar script, like Puppet/Chef scripts do) as part of the install.</p>
+<h3 id="troubleshooting-installation">Troubleshooting Installation</h3>
+<p>You've tried everything and Chocolatey still won't install from <a href="https://chocolatey.org">https://chocolatey.org</a> -</p>
+<blockquote>
+<p>The underlying connection was closed: Could not establish trust relationship for the SSL / TLS secure channel.</p>
+</blockquote>
+<p>It could also be that your trusted root certificates are missing or not up to date (Windows 2012 does not install root certificates by default). You will need to download and install the following certificates into your LocalMachine's <em>Trusted Root Certification Authorities</em> certificate store.</p>
+<p>To access <a href="https://chocolatey.org">chocolatey.org</a>:</p>
+<ul>
+<li><a href="https://certs.godaddy.com/repository">Go Daddy Secure Certificate Authority - G2</a> (File: <code>gdroot-g2.crt</code>; Thumbprint: <code>47BEABC922EAE80E78783462A79F45C254FDE68B</code>). (On the download page, this certificate is named <em>GoDaddy Class 2 Certification Authority Root Certificate - G2</em> and its listed thumbprint (<code>45140B3247EB9CC8C5B4F0D7B53091F73292089E6E5A63E2749DD3ACA9198EDA</code>) is wrong.</li>
+</ul>
+<p>To access <a href="https://packages.chocolatey.org">packages.chocolatey.org</a>:</p>
+<ul>
+<li><a href="https://support.comodo.com/index.php?/Default/Knowledgebase/Article/View/917/91/">AddTrust External CA Root</a> (File: <code>addtrustexternalcaroot.crt</code>; Thumbprint: <code>02FAF3E291435468607857694DF5E45B68851868</code>)</li>
+</ul>
+<h2 id="system-proxy-settings">System Proxy Settings</h2>
+<p>Chocolatey by default already supports system set proxy servers</p>
+<p><img src="https://cloud.githubusercontent.com/assets/63502/10038284/454be026-6189-11e5-8f83-e29d1705995c.png" alt="image" /></p>
+<p><strong>NOTE:</strong> Unfortunately proxy bypass lists may not be available when using this method. We recommend explicit proxy settings.</p>
+<h2 id="existing-proxy-environment-variables">Existing Proxy Environment Variables</h2>
+<p>Starting with Chocolatey v0.10.4, Chocolatey will automatically pick up the following environment variables if they are already set:</p>
+<ul>
+<li><code>http_proxy</code></li>
+<li><code>https_proxy</code></li>
+<li><code>no_proxy</code></li>
+</ul>
+<h2 id="explicit-proxy-settings">Explicit Proxy Settings</h2>
+<p>Chocolatey has explicit proxy support starting with 0.9.9.9.</p>
+<p>You can simply configure 1 up to 5 settings and Chocolatey will use a proxy server. <code>proxy</code> is required and is the location and port of the proxy server. The values for user/password are only used for credentials when both are present.</p>
+<pre><code class="language-sh">choco config set proxy &lt;locationandport&gt;
+choco config set proxyUser &lt;username&gt; #optional
+choco config set proxyPassword &lt;passwordThatGetsEncryptedInFile&gt; # optional
+choco config set proxyBypassList &quot;'&lt;bypasslist, comma separated&gt;'&quot; # optional, Chocolatey v0.10.4 required
+choco config set proxyBypassOnLocal true # optional, Chocolatey v0.10.4 required
+</code></pre>
+<h3 id="example">Example</h3>
+<p>Running the following commands in 0.9.9.9:</p>
+<pre><code class="language-sh">choco config set proxy http://localhost:8888
+choco config set proxyUser bob
+choco config set proxyPassword 123Sup#rSecur3
+choco config set proxyBypassList &quot;'http://localhost,http://this.location/'&quot; #0.10.4 required
+choco config set proxyBypassOnLocal true #0.10.4 required
+</code></pre>
+<p>Results in the following items being added to the config file:
+<img src="https://cloud.githubusercontent.com/assets/63502/10038348/4205507c-618a-11e5-911b-122eb960bc53.png" alt="image" /></p>
+<h3 id="explicit-proxy-settings-at-runtime">Explicit Proxy Settings at Runtime</h3>
+<p>Starting in 0.10.4, you can pass proxy information at runtime with each command. See <a href="https://github.com/chocolatey/choco/issues/1173">https://github.com/chocolatey/choco/issues/1173</a></p>
+<p><code>--proxy=&quot;'value'&quot; --proxy-user=&quot;'&lt;user&gt;'&quot; --proxy-password=&quot;'&lt;pwd&gt;'&quot; --proxy-bypass-list=&quot;'&lt;comma separated, list&gt;'&quot; --proxy-bypass-on-local</code></p>
+<h2 id="what-to-do-if-my-proxy-is-socks">What to do if my proxy is socks?</h2>
+<p>It may just work. It hasn't been validated yet.</p>
+
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
+                                            <div class="border-bottom mb-3">
+                                                <p class="small font-weight-bold">On This Page</p>
+                                                    <p class="small"><a href="#proxy-support-for-chocolatey">Proxy Support For Chocolatey</a></p>
+                                                    <p class="small"><a href="#installing-chocolatey-behind-a-proxy-server">Installing Chocolatey behind a proxy server</a></p>
+                                                    <p class="small"><a href="#troubleshooting-installation">Troubleshooting Installation</a></p>
+                                                    <p class="small"><a href="#system-proxy-settings">System Proxy Settings</a></p>
+                                                    <p class="small"><a href="#existing-proxy-environment-variables">Existing Proxy Environment Variables</a></p>
+                                                    <p class="small"><a href="#explicit-proxy-settings">Explicit Proxy Settings</a></p>
+                                                    <p class="small"><a href="#example">Example</a></p>
+                                                    <p class="small"><a href="#explicit-proxy-settings-at-runtime">Explicit Proxy Settings at Runtime</a></p>
+                                                    <p class="small"><a href="#what-to-do-if-my-proxy-is-socks">What to do if my proxy is socks?</a></p>
+                                            </div>
+                                        <p class="small font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/how-tos/proxy-settings-for-chocolatey.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="p-3 text-white font-size-sm">
+            <div class="container">
+                <div>
+                    <span>© 2020 Chocolatey Software, Inc.</span>
+                    <span class="float-right" style="color: #888888;">1.0.0</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+            });
+        </script>
+    </body>
+</html>

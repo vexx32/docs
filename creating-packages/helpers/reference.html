@@ -1,0 +1,569 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/docs/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/docs/assets/css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+
+        <title>Chocolatey - Function and Variable Reference</title>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column">
+
+            <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-3">
+                    <a class="navbar-brand" href="/docs"><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-light font-size-lg" href="https://github.com/chocolatey/docs"><i class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex-grow-1 d-flex  bg-body flex-column section-docs">
+                    <div id="titlebar" class="py-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
+                                    <div class="section text-uppercase">Chocolatey</div>
+                                    <div class="text-white m-0 title">Function and Variable Reference</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="undertitle">
+                        <div class="container bg-body">
+                            <div class="row">
+                                    <div class="col-md-3 col-lg-2 bg-body">
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 bg-white">
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-section">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="flex-grow-1 d-flex flex-column bg-body">
+                        <div class="container flex-grow-1 d-flex flex-column bg-white">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                    <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body">
+                                            <div class="sidebar-nav-item">
+<a href="/docs/">Docs Home</a>                                            </div>
+                                                <div class="sidebar-nav-item">
+<a href="/docs/why">Why Chocolatey?</a>                                                </div>
+                                                <div class="sidebar-nav-item">
+<a href="/docs/security">Security</a>                                                </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/features">Features</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/features/free">Free</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/features/paid">Paid</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/general">General</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/release-notes">Release Notes</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/troubleshooting">Troubleshooting</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/faqs">FAQs</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/moderation">Chocolatey.org Moderation</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/community-packages-disclaimer">Chocolatey.org Packages Disclaimer</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/usage">Usage</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/installation">How to install</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/installation-licensed">How to install licensed edition</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/chocolatey-configuration">Configuration/chocolatey.config</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/uninstallation">How to uninstall</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/getting-started">Getting Started</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/commands">Commands</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/creating-packages">Creating Packages</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/create-packages">Create Packages</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/create-packages-quick-start">Quick Start</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/commands">Commands</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/helpers">PowerShell Reference</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/automatic-packages">Automatic Packaging</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/how-tos">How To&#x27;s</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/proxy-settings-for-chocolatey">Use Chocolatey w/Proxy Server</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/change-cache">Change Download Cache Location aka Don&#x27;t use TEMP for downloads</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/install-upgrade-package-without-scripts">Install/Upgrade a Package w/out running install scripts</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/package-triage-process">Request Package Fixes/Updates</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/recompile-packages">Manually Recompile Packages, Embedding/Internalizing Remote Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/package-maintainer-handover">Take Over Package Maintenance Exclusively</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/parse-packageparameters-argument">Parse Package Parameters</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/mount-an-iso-in-chocolatey-package">Mount Iso</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/create-custom-package-templates">Create Custom Package Templates</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/create-extensions">Extend Chocolatey With PowerSHell Modules (extensions)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/deprecate-a-chocolatey-package">Deprecate a Package</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/set-up-chocolatey-server">Set up the Chocolatey.Server</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/setup-offline-installation">Set up Chocolatey for Internal/organizational use</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/setup-internal-package-repository">Automate Package Internalizer (MSP/C4B)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/chocolatey-for-business-quick-start-guide">C4B Quick Start Guide</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/chocolatey-gui">Chocolatey GUI</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/chocolatey-gui/overview">Chocolatey GUI Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/chocolatey-gui/known-issues">Chocolatey GUI Known Issues</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/quick-deployment">Quick Deployment Environment (QDE)</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/overview">Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/setup">Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/desktop-readme">Desktop Readme</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/ssl-setup">SSL Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/firewall-changes">Firewall Changes</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/client-setup">Client Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/internet-setup">Internet Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/v1">QDE v1</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/central-management">Chocolatey Central Management (CCM)</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/overview">Central Management Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/setup">Central Management Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/setup-client">Central Management Client Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/setup-upgrade">Central Management Upgrade</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/deployments">Central Management Deployments</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/use-cases">Use Cases</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/use-cases/development-environment-setup">Development Environment</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/use-cases/hosting-chocolatey-packages-on-myget">Host on MyGet</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/learning-resources">Learning Resources</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/learning-resources/resources">Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/learning-resources/videos">Videos</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/learning-resources/presentations">Presentations</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/additional-information">Additional Information</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/additional-information/legal">Legal</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/additional-information/history">History</a>
+                                                            </div>
+                                                    </div>
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
+                                        <h1 id="powershell-functions-aka-helpers-reference">PowerShell Functions aka Helpers Reference</h1>
+<!-- This documentation file is automatically generated from the files at $sourceFunctions using $($sourceLocation)GenerateDocs.ps1. Contributions are welcome at the original location(s). -->
+<!-- TOC -->
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#main-functions">Main Functions</a></li>
+<li><a href="#error--success-functions">Error / Success Functions</a></li>
+<li><a href="#more-functions">More Functions</a>
+<ul>
+<li><a href="#administrative-access-functions">Administrative Access Functions</a></li>
+<li><a href="#non-administrator-safe-functions">Non-Administrator Safe Functions</a></li>
+</ul>
+</li>
+<li><a href="#complete-list-alphabetical-order">Complete List (alphabetical order)</a></li>
+<li><a href="#chocolatey-for-business-functions">Chocolatey for Business Functions</a></li>
+<li><a href="#variables">Variables</a>
+<ul>
+<li><a href="#environment-variables">Environment Variables</a>
+<ul>
+<li><a href="#advanced-environment-variables">Advanced Environment Variables</a></li>
+<li><a href="#set-by-options-and-configuration">Set By Options and Configuration</a></li>
+<li><a href="#business-edition-variables">Business Edition Variables</a></li>
+<li><a href="#experimental-environment-variables">Experimental Environment Variables</a></li>
+<li><a href="#not-useful-or-anti-pattern-if-used">Not Useful Or Anti-Pattern If Used</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="summary">Summary</h2>
+<p>In your Chocolatey packaging, you have the ability to use these functions (and others with Chocolatey's [[PowerShell Extensions|How-To-Create-Extensions]]) to work with all aspects of software management. Keep in mind Chocolatey's automation scripts are just PowerShell, so you can do manage anything you want.</p>
+<p><strong>NOTE</strong>: These scripts are for package scripts, not for use directly in PowerShell. This is in the create packages section, not the using Chocolatey section.</p>
+<h2 id="main-functions">Main Functions</h2>
+<p>These functions call other functions and many times may be the only thing you need in your [[chocolateyInstall.ps1 file|ChocolateyInstallPS1]].</p>
+<ul>
+<li>[[Install-ChocolateyPackage|HelpersInstallChocolateyPackage]]</li>
+<li>[[Install-ChocolateyZipPackage|HelpersInstallChocolateyZipPackage]]</li>
+<li>[[Install-ChocolateyPowershellCommand|HelpersInstallChocolateyPowershellCommand]]</li>
+<li>[[Install-ChocolateyVsixPackage|HelpersInstallChocolateyVsixPackage]]</li>
+</ul>
+<h2 id="error-success-functions">Error / Success Functions</h2>
+<ul>
+<li>[[Write-ChocolateySuccess|HelpersWriteChocolateySuccess]] - <strong>DEPRECATED</strong></li>
+<li>[[Write-ChocolateyFailure|HelpersWriteChocolateyFailure]] - <strong>DEPRECATED</strong></li>
+</ul>
+<p>You really don't need a try catch with Chocolatey PowerShell files anymore.</p>
+<h2 id="more-functions">More Functions</h2>
+<h3 id="administrative-access-functions">Administrative Access Functions</h3>
+<p>When creating packages that need to run one of the following commands below, one should add the tag <code>admin</code> to the nuspec.</p>
+<ul>
+<li>[[Install-ChocolateyPackage|HelpersInstallChocolateyPackage]]</li>
+<li>[[Start-ChocolateyProcessAsAdmin|HelpersStartChocolateyProcessAsAdmin]]</li>
+<li>[[Install-ChocolateyInstallPackage|HelpersInstallChocolateyInstallPackage]]</li>
+<li>[[Install-ChocolateyPath|HelpersInstallChocolateyPath]] - when specifying machine path</li>
+<li>[[Install-ChocolateyEnvironmentVariable|HelpersInstallChocolateyEnvironmentVariable]] - when specifying machine path</li>
+<li>[[Install-ChocolateyExplorerMenuItem|HelpersInstallChocolateyExplorerMenuItem]]</li>
+<li>[[Install-ChocolateyFileAssociation|HelpersInstallChocolateyFileAssociation]]</li>
+</ul>
+<h3 id="non-administrator-safe-functions">Non-Administrator Safe Functions</h3>
+<p>When you have a need to run Chocolatey without Administrative access required (non-default install location), you can run the following functions without administrative access.</p>
+<p>These are the functions from above as one list.</p>
+<ul>
+<li>[[Install-ChocolateyZipPackage|HelpersInstallChocolateyZipPackage]]</li>
+<li>[[Install-ChocolateyPowershellCommand|HelpersInstallChocolateyPowershellCommand]]</li>
+<li>[[Write-ChocolateySuccess|HelpersWriteChocolateySuccess]]</li>
+<li>[[Write-ChocolateyFailure|HelpersWriteChocolateyFailure]]</li>
+<li>[[Get-ChocolateyWebFile|HelpersGetChocolateyWebFile]]</li>
+<li>[[Get-ChocolateyUnzip|HelpersGetChocolateyUnzip]]</li>
+<li>[[Install-ChocolateyPath|HelpersInstallChocolateyPath]] - when specifying user path</li>
+<li>[[Install-ChocolateyEnvironmentVariable|HelpersInstallChocolateyEnvironmentVariable]] - when specifying user path</li>
+<li>[[Install-ChocolateyDesktopLink|HelpersInstallChocolateyDesktopLink]] - <strong>DEPRECATED</strong> - see [[Install-ChocolateyShortcut|HelpersInstallChocolateyShortcut]]</li>
+<li>[[Install-ChocolateyPinnedTaskBarItem|HelpersInstallChocolateyPinnedTaskBarItem]]</li>
+<li>[[Install-ChocolateyShortcut|HelpersInstallChocolateyShortcut]] - v0.9.9+</li>
+<li>[[Update-SessionEnvironment|HelpersUpdateSessionEnvironment]]</li>
+<li>[[Get-PackageParameters|HelpersGetPackageParameters]] - v0.10.8+</li>
+</ul>
+<h2 id="complete-list-alphabetical-order">Complete List (alphabetical order)</h2>
+<ul>
+<li>[[Format-FileSize|HelpersFormatFileSize]]</li>
+<li>[[Get-ChecksumValid|HelpersGetChecksumValid]]</li>
+<li>[[Get-ChocolateyUnzip|HelpersGetChocolateyUnzip]]</li>
+<li>[[Get-ChocolateyWebFile|HelpersGetChocolateyWebFile]]</li>
+<li>[[Get-EnvironmentVariable|HelpersGetEnvironmentVariable]]</li>
+<li>[[Get-EnvironmentVariableNames|HelpersGetEnvironmentVariableNames]]</li>
+<li>[[Get-FtpFile|HelpersGetFtpFile]]</li>
+<li>[[Get-OSArchitectureWidth|HelpersGetOSArchitectureWidth]]</li>
+<li>[[Get-PackageParameters|HelpersGetPackageParameters]]</li>
+<li>[[Get-ToolsLocation|HelpersGetToolsLocation]]</li>
+<li>[[Get-UACEnabled|HelpersGetUACEnabled]]</li>
+<li>[[Get-UninstallRegistryKey|HelpersGetUninstallRegistryKey]]</li>
+<li>[[Get-VirusCheckValid|HelpersGetVirusCheckValid]]</li>
+<li>[[Get-WebFile|HelpersGetWebFile]]</li>
+<li>[[Get-WebFileName|HelpersGetWebFileName]]</li>
+<li>[[Get-WebHeaders|HelpersGetWebHeaders]]</li>
+<li>[[Install-BinFile|HelpersInstallBinFile]]</li>
+<li>[[Install-ChocolateyDesktopLink|HelpersInstallChocolateyDesktopLink]]</li>
+<li>[[Install-ChocolateyEnvironmentVariable|HelpersInstallChocolateyEnvironmentVariable]]</li>
+<li>[[Install-ChocolateyExplorerMenuItem|HelpersInstallChocolateyExplorerMenuItem]]</li>
+<li>[[Install-ChocolateyFileAssociation|HelpersInstallChocolateyFileAssociation]]</li>
+<li>[[Install-ChocolateyInstallPackage|HelpersInstallChocolateyInstallPackage]]</li>
+<li>[[Install-ChocolateyPackage|HelpersInstallChocolateyPackage]]</li>
+<li>[[Install-ChocolateyPath|HelpersInstallChocolateyPath]]</li>
+<li>[[Install-ChocolateyPinnedTaskBarItem|HelpersInstallChocolateyPinnedTaskBarItem]]</li>
+<li>[[Install-ChocolateyPowershellCommand|HelpersInstallChocolateyPowershellCommand]]</li>
+<li>[[Install-ChocolateyShortcut|HelpersInstallChocolateyShortcut]]</li>
+<li>[[Install-ChocolateyVsixPackage|HelpersInstallChocolateyVsixPackage]]</li>
+<li>[[Install-ChocolateyZipPackage|HelpersInstallChocolateyZipPackage]]</li>
+<li>[[Install-Vsix|HelpersInstallVsix]]</li>
+<li>[[Set-EnvironmentVariable|HelpersSetEnvironmentVariable]]</li>
+<li>[[Set-PowerShellExitCode|HelpersSetPowerShellExitCode]]</li>
+<li>[[Start-ChocolateyProcessAsAdmin|HelpersStartChocolateyProcessAsAdmin]]</li>
+<li>[[Test-ProcessAdminRights|HelpersTestProcessAdminRights]]</li>
+<li>[[Uninstall-BinFile|HelpersUninstallBinFile]]</li>
+<li>[[Uninstall-ChocolateyEnvironmentVariable|HelpersUninstallChocolateyEnvironmentVariable]]</li>
+<li>[[Uninstall-ChocolateyPackage|HelpersUninstallChocolateyPackage]]</li>
+<li>[[Uninstall-ChocolateyZipPackage|HelpersUninstallChocolateyZipPackage]]</li>
+<li>[[Update-SessionEnvironment|HelpersUpdateSessionEnvironment]]</li>
+<li>[[Write-ChocolateyFailure|HelpersWriteChocolateyFailure]]</li>
+<li>[[Write-ChocolateySuccess|HelpersWriteChocolateySuccess]]</li>
+<li>[[Write-FileUpdateLog|HelpersWriteFileUpdateLog]]</li>
+<li>[[Write-FunctionCallLogMessage|HelpersWriteFunctionCallLogMessage]]</li>
+</ul>
+<h2 id="chocolatey-for-business-functions">Chocolatey for Business Functions</h2>
+<ul>
+<li>[[Install-ChocolateyWindowsService|HelpersInstallChocolateyWindowsService]]</li>
+<li>[[Start-ChocolateyWindowsService|HelpersStartChocolateyWindowsService]]</li>
+<li>[[Stop-ChocolateyWindowsService|HelpersStopChocolateyWindowsService]]</li>
+<li>[[Uninstall-ChocolateyWindowsService|HelpersUninstallChocolateyWindowsService]]</li>
+</ul>
+<h2 id="variables">Variables</h2>
+<p>There are also a number of environment variables providing access to some values from the nuspec and other information that may be useful. They are accessed via <code>$env:variableName</code>.</p>
+<h3 id="environment-variables">Environment Variables</h3>
+<p>Chocolatey makes a number of environment variables available (You can access any of these with $env:TheVariableNameBelow):</p>
+<ul>
+<li>TEMP/TMP - Overridden to the CacheLocation, but may be the same as the original TEMP folder</li>
+<li>ChocolateyInstall - Top level folder where Chocolatey is installed</li>
+<li>ChocolateyPackageName - The name of the package, equivalent to the <code>&lt;id /&gt;</code> field in the nuspec (0.9.9+)</li>
+<li>ChocolateyPackageTitle - The title of the package, equivalent to the <code>&lt;title /&gt;</code> field in the nuspec (0.10.1+)</li>
+<li>ChocolateyPackageVersion - The version of the package, equivalent to the <code>&lt;version /&gt;</code> field in the nuspec (0.9.9+)</li>
+<li>ChocolateyPackageFolder - The top level location of the package folder - the folder where Chocolatey has downloaded and extracted the NuGet package, typically <code>C:\ProgramData\chocolatey\lib\packageName</code>.</li>
+</ul>
+<h4 id="advanced-environment-variables">Advanced Environment Variables</h4>
+<p>The following are more advanced settings:</p>
+<ul>
+<li>ChocolateyPackageParameters - Parameters to use with packaging, not the same as install arguments (which are passed directly to the native installer). Based on <code>--package-parameters</code>. (0.9.8.22+)</li>
+<li>CHOCOLATEY_VERSION - The version of Choco you normally see. Use if you are 'lighting' things up based on choco version. (0.9.9+) - Otherwise take a dependency on the specific version you need.</li>
+<li>ChocolateyForceX86 = If available and set to 'true', then user has requested 32bit version. (0.9.9+) - Automatically handled in built in Choco functions.</li>
+<li>OS_PLATFORM - Like Windows, OSX, Linux. (0.9.9+)</li>
+<li>OS_VERSION - The version of OS, like 6.1 something something for Windows. (0.9.9+)</li>
+<li>OS_NAME - The reported name of the OS. (0.9.9+)</li>
+<li>IS_PROCESSELEVATED = Is the process elevated? (0.9.9+)</li>
+<li>ChocolateyToolsLocation - formerly 'ChocolateyBinRoot' ('ChocolateyBinRoot' will be removed with Chocolatey v2.0.0), this is where tools being installed outside of Chocolatey packaging will go. (0.9.10+)</li>
+</ul>
+<h4 id="set-by-options-and-configuration">Set By Options and Configuration</h4>
+<p>Some environment variables are set based on options that are passed, configuration and/or features that are turned on:</p>
+<ul>
+<li>ChocolateyEnvironmentDebug - Was <code>--debug</code> passed? If using the built-in PowerShell host, this is always true (but only logs debug messages to console if <code>--debug</code> was passed) (0.9.10+)</li>
+<li>ChocolateyEnvironmentVerbose - Was <code>--verbose</code> passed? If using the built-in PowerShell host, this is always true (but only logs verbose messages to console if <code>--verbose</code> was passed). (0.9.10+)</li>
+<li>ChocolateyForce - Was <code>--force</code> passed? (0.9.10+)</li>
+<li>ChocolateyForceX86 - Was <code>-x86</code> passed? (CHECK)</li>
+<li>ChocolateyRequestTimeout - How long before a web request will time out. Set by config <code>webRequestTimeoutSeconds</code> (CHECK)</li>
+<li>ChocolateyResponseTimeout - How long to wait for a download to complete? Set by config <code>commandExecutionTimeoutSeconds</code> (CHECK)</li>
+<li>ChocolateyPowerShellHost - Are we using the built-in PowerShell host? Set by <code>--use-system-powershell</code> or the feature <code>powershellHost</code> (0.9.10+)</li>
+</ul>
+<h4 id="business-edition-variables">Business Edition Variables</h4>
+<ul>
+<li>ChocolateyInstallArgumentsSensitive - Encrypted arguments passed from command line <code>--install-arguments-sensitive</code> that are not logged anywhere. (0.10.1+ and licensed editions 1.6.0+)</li>
+<li>ChocolateyPackageParametersSensitive - Package parameters passed from command line <code>--package-parameters-senstivite</code> that are not logged anywhere.  (0.10.1+ and licensed editions 1.6.0+)</li>
+<li>ChocolateyLicensedVersion - What version is the licensed edition on?</li>
+<li>ChocolateyLicenseType - What edition / type of the licensed edition is installed?</li>
+</ul>
+<h4 id="experimental-environment-variables">Experimental Environment Variables</h4>
+<p>The following are experimental or use not recommended:</p>
+<ul>
+<li>OS_IS64BIT = This may not return correctly - it may depend on the process the app is running under (0.9.9+)</li>
+<li>CHOCOLATEY_VERSION_PRODUCT = the version of Choco that may match CHOCOLATEY_VERSION but may be different (0.9.9+) - based on git describe</li>
+<li>IS_ADMIN = Is the user an administrator? But doesn't tell you if the process is elevated. (0.9.9+)</li>
+</ul>
+<h4 id="not-useful-or-anti-pattern-if-used">Not Useful Or Anti-Pattern If Used</h4>
+<ul>
+<li>ChocolateyInstallOverride = Not for use in package automation scripts. Based on <code>--override-arguments</code> being passed. (0.9.9+)</li>
+<li>ChocolateyInstallArguments = The installer arguments meant for the native installer. You should use chocolateyPackageParameters instead. Based on <code>--install-arguments</code> being passed. (0.9.9+)</li>
+<li>ChocolateyIgnoreChecksums - Was <code>--ignore-checksums</code> passed or the feature <code>checksumFiles</code> turned off? (0.9.9.9+)</li>
+<li>ChocolateyAllowEmptyChecksums - Was <code>--allow-empty-checksums</code> passed or the feature <code>allowEmptyChecksums</code> turned on? (0.10.0+)</li>
+<li>ChocolateyAllowEmptyChecksumsSecure - Was <code>--allow-empty-checksums-secure</code> passed or the feature <code>allowEmptyChecksumsSecure</code> turned on? (0.10.0+)</li>
+<li>ChocolateyCheckLastExitCode - Should Chocolatey check LASTEXITCODE? Is the feature <code>scriptsCheckLastExitCode</code> turned on? (0.10.3+)</li>
+<li>ChocolateyChecksum32 - Was <code>--download-checksum</code> passed? (0.10.0+)</li>
+<li>ChocolateyChecksumType32 - Was <code>--download-checksum-type</code> passed? (0.10.0+)</li>
+<li>ChocolateyChecksum64 - Was <code>--download-checksum-x64</code> passed? (0.10.0)+</li>
+<li>ChocolateyChecksumType64 - Was <code>--download-checksum-type-x64</code> passed? (0.10.0)+</li>
+<li>ChocolateyPackageExitCode - The exit code of the script that just ran - usually set by <code>Set-PowerShellExitCode</code> (CHECK)</li>
+<li>ChocolateyLastPathUpdate - Set by Chocolatey as part of install, but not used for anything in particular in packaging.</li>
+<li>ChocolateyProxyLocation - The explicit proxy location as set in the configuration <code>proxy</code> (0.9.9.9+)</li>
+<li>ChocolateyDownloadCache - Use available download cache? Set by <code>--skip-download-cache</code>, <code>--use-download-cache</code>, or feature <code>downloadCache</code> (0.9.10+ and licensed editions 1.1.0+)</li>
+<li>ChocolateyProxyBypassList - Explicitly set locations to ignore in configuration <code>proxyBypassList</code> (0.10.4+)</li>
+<li>ChocolateyProxyBypassOnLocal - Should the proxy bypass on local connections? Set based on configuration <code>proxyBypassOnLocal</code> (0.10.4+)</li>
+<li>http_proxy - Set by original <code>http_proxy</code> passthrough, or same as <code>ChocolateyProxyLocation</code> if explicitly set. (0.10.4+)</li>
+<li>https_proxy - Set by original <code>https_proxy</code> passthrough, or same as <code>ChocolateyProxyLocation</code> if explicitly set. (0.10.4+)</li>
+<li>no_proxy- Set by original <code>no_proxy</code> passthrough, or same as <code>ChocolateyProxyBypassList</code> if explicitly set. (0.10.4+)</li>
+</ul>
+
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
+                                            <div class="border-bottom mb-3">
+                                                <p class="small font-weight-bold">On This Page</p>
+                                                    <p class="small"><a href="#powershell-functions-aka-helpers-reference">PowerShell Functions aka Helpers Reference</a></p>
+                                                    <p class="small"><a href="#summary">Summary</a></p>
+                                                    <p class="small"><a href="#main-functions">Main Functions</a></p>
+                                                    <p class="small"><a href="#error-success-functions">Error / Success Functions</a></p>
+                                                    <p class="small"><a href="#more-functions">More Functions</a></p>
+                                                    <p class="small"><a href="#administrative-access-functions">Administrative Access Functions</a></p>
+                                                    <p class="small"><a href="#non-administrator-safe-functions">Non-Administrator Safe Functions</a></p>
+                                                    <p class="small"><a href="#complete-list-alphabetical-order">Complete List (alphabetical order)</a></p>
+                                                    <p class="small"><a href="#chocolatey-for-business-functions">Chocolatey for Business Functions</a></p>
+                                                    <p class="small"><a href="#variables">Variables</a></p>
+                                                    <p class="small"><a href="#environment-variables">Environment Variables</a></p>
+                                            </div>
+                                        <p class="small font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/creating-packages/helpers/reference.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="p-3 text-white font-size-sm">
+            <div class="container">
+                <div>
+                    <span>© 2020 Chocolatey Software, Inc.</span>
+                    <span class="float-right" style="color: #888888;">1.0.0</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+            });
+        </script>
+    </body>
+</html>

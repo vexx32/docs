@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-	<id>http://chocolatey.github.io/docs//docs</id>
-	<title>docs</title>
-	<link rel="self" href="http://chocolatey.github.io/docs//docs" />
-	<rights>2020</rights>
-	<updated>2020-09-23T13:27:47Z</updated>
-</feed>

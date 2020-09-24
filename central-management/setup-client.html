@@ -1,0 +1,554 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/docs/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/docs/assets/css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+
+        <title>Chocolatey - Central Management Client Setup</title>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column">
+
+            <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-3">
+                    <a class="navbar-brand" href="/docs"><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-light font-size-lg" href="https://github.com/chocolatey/docs"><i class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex-grow-1 d-flex  bg-body flex-column section-docs">
+                    <div id="titlebar" class="py-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
+                                    <div class="section text-uppercase">Chocolatey</div>
+                                    <div class="text-white m-0 title">Central Management Client Setup</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="undertitle">
+                        <div class="container bg-body">
+                            <div class="row">
+                                    <div class="col-md-3 col-lg-2 bg-body">
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 bg-white">
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-section">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="flex-grow-1 d-flex flex-column bg-body">
+                        <div class="container flex-grow-1 d-flex flex-column bg-white">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                    <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body">
+                                            <div class="sidebar-nav-item">
+<a href="/docs/">Docs Home</a>                                            </div>
+                                                <div class="sidebar-nav-item">
+<a href="/docs/why">Why Chocolatey?</a>                                                </div>
+                                                <div class="sidebar-nav-item">
+<a href="/docs/security">Security</a>                                                </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/features">Features</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/features/free">Free</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/features/paid">Paid</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/general">General</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/release-notes">Release Notes</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/troubleshooting">Troubleshooting</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/faqs">FAQs</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/moderation">Chocolatey.org Moderation</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/community-packages-disclaimer">Chocolatey.org Packages Disclaimer</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/usage">Usage</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/installation">How to install</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/installation-licensed">How to install licensed edition</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/chocolatey-configuration">Configuration/chocolatey.config</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/uninstallation">How to uninstall</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/getting-started">Getting Started</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/commands">Commands</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/creating-packages">Creating Packages</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/create-packages">Create Packages</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/create-packages-quick-start">Quick Start</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/commands">Commands</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/helpers">PowerShell Reference</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/automatic-packages">Automatic Packaging</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/how-tos">How To&#x27;s</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/proxy-settings-for-chocolatey">Use Chocolatey w/Proxy Server</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/change-cache">Change Download Cache Location aka Don&#x27;t use TEMP for downloads</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/install-upgrade-package-without-scripts">Install/Upgrade a Package w/out running install scripts</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/package-triage-process">Request Package Fixes/Updates</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/recompile-packages">Manually Recompile Packages, Embedding/Internalizing Remote Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/package-maintainer-handover">Take Over Package Maintenance Exclusively</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/parse-packageparameters-argument">Parse Package Parameters</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/mount-an-iso-in-chocolatey-package">Mount Iso</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/create-custom-package-templates">Create Custom Package Templates</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/create-extensions">Extend Chocolatey With PowerSHell Modules (extensions)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/deprecate-a-chocolatey-package">Deprecate a Package</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/set-up-chocolatey-server">Set up the Chocolatey.Server</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/setup-offline-installation">Set up Chocolatey for Internal/organizational use</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/setup-internal-package-repository">Automate Package Internalizer (MSP/C4B)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/chocolatey-for-business-quick-start-guide">C4B Quick Start Guide</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/chocolatey-gui">Chocolatey GUI</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/chocolatey-gui/overview">Chocolatey GUI Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/chocolatey-gui/known-issues">Chocolatey GUI Known Issues</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/quick-deployment">Quick Deployment Environment (QDE)</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/overview">Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/setup">Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/desktop-readme">Desktop Readme</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/ssl-setup">SSL Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/firewall-changes">Firewall Changes</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/client-setup">Client Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/internet-setup">Internet Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/v1">QDE v1</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/central-management">Chocolatey Central Management (CCM)</a>                                                </div>
+                                                    <div class="sidebar-nav-children active">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/overview">Central Management Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/setup">Central Management Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child active">
+                                                                <a href="/docs/central-management/setup-client">Central Management Client Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/setup-upgrade">Central Management Upgrade</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/deployments">Central Management Deployments</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/use-cases">Use Cases</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/use-cases/development-environment-setup">Development Environment</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/use-cases/hosting-chocolatey-packages-on-myget">Host on MyGet</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/learning-resources">Learning Resources</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/learning-resources/resources">Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/learning-resources/videos">Videos</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/learning-resources/presentations">Presentations</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/additional-information">Additional Information</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/additional-information/legal">Legal</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/additional-information/history">History</a>
+                                                            </div>
+                                                    </div>
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
+                                        <h1 id="chocolatey-central-management-client-setup">Chocolatey Central Management Client Setup</h1>
+<p>This will guide us through getting an agent installed and configured to check into Central Management and to be set up for handling deployment tasks.</p>
+<hr />
+<!-- TOC depthFrom:2 -->
+<ul>
+<li><a href="#setup">Setup</a>
+<ul>
+<li><a href="#step-1-install-chocolatey-agent">Step 1: Install Chocolatey Agent</a></li>
+<li><a href="#step-2-update-configuration">Step 2: Update Configuration</a>
+<ul>
+<li><a href="#config-settings">Config Settings</a></li>
+<li><a href="#features">Features</a></li>
+</ul>
+</li>
+<li><a href="#step-3-verify-installation">Step 3: Verify Installation</a></li>
+</ul>
+</li>
+<li><a href="#faq">FAQ</a>
+<ul>
+<li><a href="#can-i-run-self-service-and-central-management-deployments-at-the-same-time">Can I run Self-Service and Central Management Deployments at the same time?</a></li>
+<li><a href="#how-can-i-increase-the-level-of-logging-for-chocolatey-central-management">How can I increase the level of logging for Chocolatey Central Management?</a></li>
+<li><a href="#can-i-save-an-image-with-the-agent-already-installed-that-i-can-deploy-new-machines-from">Can I save an image with the agent already installed that I can deploy new machines from?</a></li>
+<li><a href="#what-is-the-ccm-compatibility-matrix">What is the CCM compatibility matrix?</a></li>
+<li><a href="#what-is-run-actual">What is Run Actual?</a></li>
+<li><a href="#where-is-the-agent-service-installed">Where is the agent service installed?</a></li>
+</ul>
+</li>
+<li><a href="#common-errors-and-resolutions">Common Errors And Resolutions</a>
+<ul>
+<li><a href="#unable-to-report-computer-information-to-ccm">Unable to report computer information to CCM</a></li>
+<li><a href="#unable-to-check-for-deployments-from-ccm">Unable to check for deployments from CCM</a></li>
+<li><a href="#we-are-seeing-the-error-attempted-to-call-report_computer_information-with-an-improper-passphrase-in-the-ccm-service-log">We are seeing the error &quot;attempted to call report_computer_information with an improper passphrase&quot; in the CCM Service log</a></li>
+<li><a href="#the-client-reports-successful-checkin-but-nothing-is-showing-up-in-ccm">The client reports successful checkin, but nothing is showing up in CCM</a></li>
+<li><a href="#chocolatey-agent-service-is-unable-to-communicate-with-chocolatey-central-management-service">Chocolatey Agent Service is unable to communicate with Chocolatey Central Management Service</a></li>
+<li><a href="#the-remote-server-returned-an-unexpected-response-413-request-entity-too-large">The remote server returned an unexpected response: (413) Request Entity Too Large</a></li>
+<li><a href="#computers-checking-in-are-overwriting-each-other">Computers checking in are overwriting each other</a></li>
+<li><a href="#the-agent-services-are-not-picking-up-the-new-license">The agent services are not picking up the new license</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<hr />
+<h2 id="setup">Setup</h2>
+<h3 id="step-1-install-chocolatey-agent">Step 1: Install Chocolatey Agent</h3>
+<p>First you need Chocolatey Agent installed. As there may be some steps involved with the install of the agent, please see [[Chocolatey Agent Setup|FeaturesAgentService#setup]].</p>
+<hr />
+<h3 id="step-2-update-configuration">Step 2: Update Configuration</h3>
+<p>At a minimum you need the following items set to be able to have a Chocolatey Agent be &quot;opted-in&quot; for both checking into Central Management and Deployments:</p>
+<pre><code class="language-powershell">choco config set CentralManagementServiceUrl https://&lt;FQDN_CCM_SERVICE&gt;:24020/ChocolateyManagementService
+choco feature enable --name=&quot;'useChocolateyCentralManagement'&quot;
+# Requires Chocolatey Licensed Extension v2.1.0+, Chocolatey-Agent v0.10.0+, and Chocolatey Central Management v0.2.0+:
+choco feature enable --name=&quot;'useChocolateyCentralManagementDeployments'&quot;
+</code></pre>
+<blockquote>
+<p>:warning: <strong>WARNING</strong>: The Chocolatey Agent installed on the same machine that has the CCM Service installed will share the <code>centralManagementServiceUrl</code> setting, so that agent can only report into that CCM Service.</p>
+</blockquote>
+<p>Please see config settings and features below for a full list.</p>
+<blockquote>
+<p>:memo: <strong>NOTE</strong></p>
+<p>As these features have security considerations as it is enabling cross-machine communication, they must be turned on explicitly.
+If you decide you want to open this up for over the internet communication, you should also set <code>centralManagementClientCommunicationSaltAdditivePassword</code> and <code>centralManagementServiceCommunicationSaltAdditivePassword</code> - see <a href="#configuration">Configuration</a> below.</p>
+</blockquote>
+<h4 id="config-settings">Config Settings</h4>
+<ul>
+<li><code>centralManagementServiceUrl</code> = <strong>' '</strong> - The URL that should be used to communicate with Chocolatey Central Management. It should look something like https://servicemachineFQDN:24020/ChocolateyManagementService. See <a href="https://chocolatey.org/docs/features-chocolatey-central-management#fqdn-usage">https://chocolatey.org/docs/features-chocolatey-central-management#fqdn-usage</a>. Defaults to '' (empty). Available in business editions v2.0.0+ only.</li>
+<li><code>centralManagementReportPackagesTimerIntervalInSeconds</code> = <strong>'1800'</strong> - Amount of time, in seconds, between each execution of the background service to report installed and outdated packages to Chocolatey Central Management. Defaults to '1800'. Available in business editions v2.0.0+ only.</li>
+<li><code>centralManagementReceiveTimeoutInSeconds</code> = <strong>'30'</strong> - The amount of time, in seconds, that the background agent should wait to receive information from Chocolatey Central Management. Defaults to '30'. Available in business editions v2.0.0+ only.</li>
+<li><code>centralManagementSendTimeoutInSeconds</code> = <strong>'30'</strong> - The amount of time, in seconds, that the background agent should wait to send information to Chocolatey Central Management. Defaults to '30'. Available in business editions v2.0.0+ only.</li>
+<li><code>centralManagementCertificateValidationMode</code> = <strong>'PeerOrChainTrust'</strong> - The certificate mode that is used in communication to Chocolatey Central Management. Defaults to 'PeerOrChainTrust'. Available in business editions v2.0.0+ only.</li>
+<li><code>centralManagementMaxReceiveMessageSizeInBytes</code> = <strong>'2147483647'</strong> - The size of the permitted message, in bytes, which can be exchanged between the Chocolatey Background Agent and Chocolatey Central Management. Defaults to '2147483647'. Available in business editions v2.0.3+ only.</li>
+<li><code>centralManagementDeploymentCheckTimerIntervalInSeconds</code> = <strong>'180'</strong> - Amount of time, in seconds, between each execution of the background service to check for a new deployment step from Chocolatey Central Management. Defaults to '180'. Available in business editions v2.1.0+ only.</li>
+<li><code>centralManagementClientCommunicationSaltAdditivePassword</code> = <strong>' '</strong> - Chocolatey Central Management Client Communication Salt Additive - The salt additive to use in the salt recipe for encrypting and verifying communication from an agent TO an instance of Central Management Service (will need to be set the same on all clients contacting that service AND the instance of the management service itself). When not set a default encryption phrase set by the system will be used. When set the unencrypted value must match exactly with what is set in the configuration for Central Management Service and every client contacting that instance of Central Management Service. Value is not shared over the wire. Because this is a much more involved process, it is recommended only setting this if you are transmitting messages over the internet. Defaults to ''. Needs to be at least 8 characters long if set or it will throw errors and use the default. Available in business editions v2.1.0+ only. Requires Chocolatey Agent v0.10.0+ and Central Management 0.2.0+. IMPORTANT: If this value is set, agents less than v0.10.0 will be unable to contact Central Management to report in.</li>
+<li><code>centralManagementServiceCommunicationSaltAdditivePassword</code> = <strong>' '</strong> - Chocolatey Central Management Communication Salt Additive - The salt additive to use in the salt recipe for encrypting and verifying communication FROM an instance of Central Management Service to an agent (will need to be set the same on all clients contacting that service AND the instance of the management service itself). When not set a default encryption phrase set by the system will be used. When set the unencrypted value must match exactly with what is set in the configuration for Central Management Service and every client contacting that instance of Central Management Service. Value is not shared over the wire. Because this is a much more involved process, it is recommended only setting this if you are transmitting messages over the internet. Defaults to ''. Needs to be at least 8 characters long if set or it will throw errors and use the default. Available in business editions v2.1.0+ only. Requires Chocolatey Agent v0.10.0+ and Central Management 0.2.0+.</li>
+</ul>
+<blockquote>
+<p>:warning: <strong>WARNING</strong>: The Chocolatey Agent installed on the same machine that has the CCM Service installed will share the <code>centralManagementServiceUrl</code> setting, so that agent can only report into that CCM Service.</p>
+</blockquote>
+<p>Also found at [[Chocolatey Configuration|ChocolateyConfiguration]].</p>
+<h4 id="features">Features</h4>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> <code>useChocolateyCentralManagement</code> - Use Chocolatey Central Management - Lists of installed and outdated packages will be reported to the chosen Chocolatey Central Management server.  Business editions only (version 2.0.0+). See <a href="https://chocolatey.org/docs/features-chocolatey-central-management">https://chocolatey.org/docs/features-chocolatey-central-management</a></li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> <code>useChocolateyCentralManagementDeployments</code> - Use Chocolatey Central Management Deployments - Centrally managed deployments of packages and scripts can be sent from Chocolatey Central Management.  Business editions only (version 2.1.0+). See <a href="https://chocolatey.org/docs/features-chocolatey-central-management">https://chocolatey.org/docs/features-chocolatey-central-management</a></li>
+</ul>
+<p>Also found at [[Chocolatey Configuration|ChocolateyConfiguration]].</p>
+<hr />
+<h3 id="step-3-verify-installation">Step 3: Verify Installation</h3>
+<ul>
+<li>Open the services snap-in (services.msc) and check for the presence of the <code>Chocolatey Agent</code> which should be in the started state.</li>
+<li>The installation folder for <code>chocolatey-agent</code> is at <code>$env:ChocolateyInstall\lib\chocolatey-agent\tools\service</code>.</li>
+<li>Open the Service log file located at <code>$env:ChocolateyInstall\logs\chocolatey-agent.log</code> and verify that there are no recently reported errors. If you are on a version of Chocolatey Agent prior to 0.10.0, the log will be located at <code>$env:ChocolateyInstall\lib\chocolatey-agent\tools\service\logs\chocolatey-agent.log</code>.</li>
+<li>There should be messages of connecting to the ccm server and checking in. It will be similar to this:
+<img src="/assets/images/features/ccm/agent_ccm_setup_good.png" alt="Agent Setup For CCM" />
+Connection to report in:
+<img src="/assets/images/features/ccm/agent_ccm_communication.png" alt="Agent Checkin to CCM" /></li>
+</ul>
+<hr />
+<h2 id="faq">FAQ</h2>
+<h3 id="can-i-run-self-service-and-central-management-deployments-at-the-same-time">Can I run Self-Service and Central Management Deployments at the same time?</h3>
+<p>Yes</p>
+<h3 id="how-can-i-increase-the-level-of-logging-for-chocolatey-central-management">How can I increase the level of logging for Chocolatey Central Management?</h3>
+<p>This can be done by changing the level value, which should be currently <code>INFO</code>, to use <code>DEBUG</code>, as per the following:</p>
+<pre><code class="language-xml">&lt;root&gt;
+  &lt;level value=&quot;DEBUG&quot; /&gt;
+  &lt;appender-ref ref=&quot;ColoredConsoleAppender&quot; /&gt;
+  &lt;appender-ref ref=&quot;RollingLogFileAppender&quot; /&gt;
+&lt;/root&gt;
+</code></pre>
+<p>In the following files:</p>
+<ul>
+<li><code>$env:ChocolateyInstall\lib\chocolatey-management-service\tools\service\log4net.config</code>. If you are on a version less than 0.2.0, then it will be in <code>$env:ChocolateyInstall\lib\chocolatey-management-service\tools\service\chocolatey-central-management.exe.config</code>.</li>
+<li><code>$env:ChocolateyInstall\lib\chocolatey-agent\tools\service\chocolatey-agent.exe.config</code></li>
+</ul>
+<p>When the value is changed, the services may also need restarted.</p>
+<h3 id="can-i-save-an-image-with-the-agent-already-installed-that-i-can-deploy-new-machines-from">Can I save an image with the agent already installed that I can deploy new machines from?</h3>
+<p>Yes, however you need to keep in mind that there is a unique machine Id that will need to be erased so it can be regenerated.</p>
+<p>Make sure to include the following in your provisioning script to deploy the new images:</p>
+<pre><code class="language-powershell">Write-Host &quot;Removing Chocolatey Unique Machine GUID&quot;
+Remove-ItemProperty -Path &quot;HKLM:\Software\Chocolatey&quot; -Name &quot;UniqueId&quot; -Force
+# Restart the Agent Service if it is running
+</code></pre>
+<p>Once you've removed this, you'll need to restart the Agent Service to get it regenerated.</p>
+<blockquote>
+<p>:information_source: You may <em><strong>also</strong></em> need to remove the ChocolateyLocalAdmin user (if you are using it for services) and reinstall the Agent service (and CCM service if on this machine) to get that password corrected.</p>
+</blockquote>
+<h3 id="what-is-the-ccm-compatibility-matrix">What is the CCM compatibility matrix?</h3>
+<p>Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of CCM and vice versa.  Please see the [[CCM Component Compatibility Matrix|CentralManagement#ccm-component-compatibility-matrix]] for details.</p>
+<h3 id="what-is-run-actual">What is Run Actual?</h3>
+<p>You may have seen <code>--run-actual</code>, what is that?</p>
+<p>This is a switch that is passed to opt out of Chocolatey Self-Service. It's typically passed by the agent service back to choco to run a command for a user. You typically would not issue this, but the agent service will, so you are likely to see it in the logs if you are looking closely.</p>
+<h3 id="where-is-the-agent-service-installed">Where is the agent service installed?</h3>
+<p>The installation folder for <code>chocolatey-agent</code> is at <code>$env:ChocolateyInstall\lib\chocolatey-agent\tools\service</code>.</p>
+<hr />
+<h2 id="common-errors-and-resolutions">Common Errors And Resolutions</h2>
+<h3 id="unable-to-report-computer-information-to-ccm">Unable to report computer information to CCM</h3>
+<p>You may see messaging like the following in the chocolatey-agent.log:</p>
+<pre><code class="language-sh">[INFO ] - Creating secure channel to https://ccmserver:24020/ChocolateyManagementService ahead of CCM check-in...
+[ERROR] - Unable to report computer information to CCM.:
+ The message with Action 'http://tempuri.org/IChocolateyManagementService/report_computer_information' cannot be
+ processed at the receiver, due to a ContractFilter mismatch at the EndpointDispatcher. This may be because of either a
+ contract mismatch (mismatched Actions between sender and receiver) or a binding/security mismatch between the sender
+ and the receiver.  Check that sender and receiver have the same contract and the same binding (including security
+ requirements, e.g. Message, Transport, None).
+</code></pre>
+<p>This is due to having a Chocolatey Agent that is v0.10.0+ versus an older Central Management Service (&lt; v0.2.0). Newer agents are incompatible because they use newer and more secure methods of communication. Please upgrade Central Management to v0.2.0+ at your earliest convenience. Or if you are on CCM v0.3.0+, your agents need to be on v0.11.0+. Please refer to the [[CCM Compability Matrix|CentralManagement#ccm-component-compatibility-matrix]].</p>
+<h3 id="unable-to-check-for-deployments-from-ccm">Unable to check for deployments from CCM</h3>
+<p>This will provide similar messaging as the above. The fix is the same, upgrade Chocolatey Central Management to v0.2.0+. Or if you are on CCM v0.3.0+, your agents need to be on v0.11.0+. Please refer to the [[CCM Compability Matrix|CentralManagement#ccm-component-compatibility-matrix]]. You may need to be on at least v0.3.0 and agents on v0.11.0+ if you are experiencing improper passphrase issues noted below, it means you need to likely upgrade to v0.3.0+ / v0.11.0 across your infrastructure.</p>
+<h3 id="we-are-seeing-the-error-attempted-to-call-report_computer_information-with-an-improper-passphrase-in-the-ccm-service-log">We are seeing the error &quot;attempted to call report_computer_information with an improper passphrase&quot; in the CCM Service log</h3>
+<p>If you are in the CCM service logs, you may be seeing the above error. That is a bug that was found with the communication of CCM v0.2.0 and Chocolatey Agent v0.10.0. That was resolved in CCM v0.3.0 and Chocolatey Agent v0.11.0. Please see the [[CCM Component Compatibility Matrix|CentralManagement#ccm-component-compatibility-matrix]] and <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/152">Licensed Issue #152</a> for more details.</p>
+<h3 id="the-client-reports-successful-checkin-but-nothing-is-showing-up-in-ccm">The client reports successful checkin, but nothing is showing up in CCM</h3>
+<p>You need to check the CCM service logs. The agent will always report success when it communicates with the service successfully. The service may reject what it receives, but due to security settings, it won't tell the client about that.</p>
+<p>The logs are located at <code>$env:ChocolateyInstall\logs\ccm-service.log</code>. If you are on a version of CCM prior to 0.2.0, the log will be located at <code>$env:ChocolateyInstall\lib\chocolatey-management-service\tools\service\logs\chocolatey.service.host.log</code>.</p>
+<h3 id="chocolatey-agent-service-is-unable-to-communicate-with-chocolatey-central-management-service">Chocolatey Agent Service is unable to communicate with Chocolatey Central Management Service</h3>
+<p>There is a known issue with the beta release of Chocolatey Central Management where an inconsistent Port Number is used between these two services.  One used 24020 and the other used 24040.  The correct default Port Number is 24020, and this is used in the 0.1.0 release of Chocolatey Central Management.  If required, the Port Number can be explicitly set during the installation of the Chocolatey Central Management packages using the following option when installing <code>chocolatey-management-service</code>:</p>
+<pre><code class="language-powershell">--params=&quot;'/PortNumber=24020'&quot;
+</code></pre>
+<h3 id="the-remote-server-returned-an-unexpected-response-413-request-entity-too-large">The remote server returned an unexpected response: (413) Request Entity Too Large</h3>
+<p>When reporting a larger number of packages (approximately 200), this error may be reported.  This is due to the size of the information, in bytes, being too large to send between the Chocolatey Agent Service and the Chocolatey Central Management Service.  This has been identified as a <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/95">bug</a>, which is due to be corrected in version 0.1.1 of Chocolatey Central Management</p>
+<h3 id="computers-checking-in-are-overwriting-each-other">Computers checking in are overwriting each other</h3>
+<p>You are generating machines from a base image that already had Chocolatey commercial code on it. This is okay, but you need to remove the Chocolatey Machine Id Guid, which is used to identify a machine as unique.</p>
+<p>When the licensed agent service is installed on a machine, a unique machine id is given to the machine. If you are starting from a template, there is no opportunity for that to be different and when those machines start checking in, they will start overwriting each other.</p>
+<p>Basically you need to go find the machine id at <code>HKEY_LOCAL_MACHINE\SOFTWARE\Chocolatey\</code> (<code>UniqueId</code>) and remove it as part of your image deployment mechanism.</p>
+<pre><code class="language-powershell">Write-Host &quot;Removing Chocolatey Unique Machine GUID&quot;
+Remove-ItemProperty -Path &quot;HKLM:\Software\Chocolatey&quot; -Name &quot;UniqueId&quot; -Force
+# Restart the Agent Service if it is running
+</code></pre>
+<p>Once you've removed this, you'll need to restart the Agent Service to get it regenerated.</p>
+<blockquote>
+<p>:information_source: You may <em><strong>also</strong></em> need to remove the ChocolateyLocalAdmin user (if you are using it for services) and reinstall the Agent service (and CCM service if on this machine) to get that password corrected.</p>
+</blockquote>
+<h3 id="the-agent-services-are-not-picking-up-the-new-license">The agent services are not picking up the new license</h3>
+<p>Currently, you do need to restart agents. Here's a handy script:</p>
+<pre><code class="language-powershell">Get-Service chocolatey-* | Stop-Service
+Get-Service chocolatey-* | Start-Service
+</code></pre>
+<hr />
+<p>[[Central Management Setup|CentralManagementSetup]] | [[Chocolatey Central Management|CentralManagement]]</p>
+
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
+                                            <div class="border-bottom mb-3">
+                                                <p class="small font-weight-bold">On This Page</p>
+                                                    <p class="small"><a href="#chocolatey-central-management-client-setup">Chocolatey Central Management Client Setup</a></p>
+                                                    <p class="small"><a href="#setup">Setup</a></p>
+                                                    <p class="small"><a href="#step-1-install-chocolatey-agent">Step 1: Install Chocolatey Agent</a></p>
+                                                    <p class="small"><a href="#step-2-update-configuration">Step 2: Update Configuration</a></p>
+                                                    <p class="small"><a href="#step-3-verify-installation">Step 3: Verify Installation</a></p>
+                                                    <p class="small"><a href="#faq">FAQ</a></p>
+                                                    <p class="small"><a href="#can-i-run-self-service-and-central-management-deployments-at-the-same-time">Can I run Self-Service and Central Management Deployments at the same time?</a></p>
+                                                    <p class="small"><a href="#how-can-i-increase-the-level-of-logging-for-chocolatey-central-management">How can I increase the level of logging for Chocolatey Central Management?</a></p>
+                                                    <p class="small"><a href="#can-i-save-an-image-with-the-agent-already-installed-that-i-can-deploy-new-machines-from">Can I save an image with the agent already installed that I can deploy new machines from?</a></p>
+                                                    <p class="small"><a href="#what-is-the-ccm-compatibility-matrix">What is the CCM compatibility matrix?</a></p>
+                                                    <p class="small"><a href="#what-is-run-actual">What is Run Actual?</a></p>
+                                                    <p class="small"><a href="#where-is-the-agent-service-installed">Where is the agent service installed?</a></p>
+                                                    <p class="small"><a href="#common-errors-and-resolutions">Common Errors And Resolutions</a></p>
+                                                    <p class="small"><a href="#unable-to-report-computer-information-to-ccm">Unable to report computer information to CCM</a></p>
+                                                    <p class="small"><a href="#unable-to-check-for-deployments-from-ccm">Unable to check for deployments from CCM</a></p>
+                                                    <p class="small"><a href="#we-are-seeing-the-error-attempted-to-call-report_computer_information-with-an-improper-passphrase-in-the-ccm-service-log">We are seeing the error &quot;attempted to call report_computer_information with an improper passphrase&quot; in the CCM Service log</a></p>
+                                                    <p class="small"><a href="#the-client-reports-successful-checkin-but-nothing-is-showing-up-in-ccm">The client reports successful checkin, but nothing is showing up in CCM</a></p>
+                                                    <p class="small"><a href="#chocolatey-agent-service-is-unable-to-communicate-with-chocolatey-central-management-service">Chocolatey Agent Service is unable to communicate with Chocolatey Central Management Service</a></p>
+                                                    <p class="small"><a href="#the-remote-server-returned-an-unexpected-response-413-request-entity-too-large">The remote server returned an unexpected response: (413) Request Entity Too Large</a></p>
+                                                    <p class="small"><a href="#computers-checking-in-are-overwriting-each-other">Computers checking in are overwriting each other</a></p>
+                                                    <p class="small"><a href="#the-agent-services-are-not-picking-up-the-new-license">The agent services are not picking up the new license</a></p>
+                                            </div>
+                                        <p class="small font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/central-management/setup-client.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="p-3 text-white font-size-sm">
+            <div class="container">
+                <div>
+                    <span>© 2020 Chocolatey Software, Inc.</span>
+                    <span class="float-right" style="color: #888888;">1.0.0</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+            });
+        </script>
+    </body>
+</html>

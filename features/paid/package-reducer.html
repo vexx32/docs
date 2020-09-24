@@ -1,0 +1,583 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/docs/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/docs/assets/css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+
+        <title>Chocolatey - Package Reducer (Pro&#x2B;)</title>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column">
+
+            <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-3">
+                    <a class="navbar-brand" href="/docs"><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-light font-size-lg" href="https://github.com/chocolatey/docs"><i class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex-grow-1 d-flex  bg-body flex-column section-docs">
+                    <div id="titlebar" class="py-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
+                                    <div class="section text-uppercase">Chocolatey</div>
+                                    <div class="text-white m-0 title">Package Reducer (Pro&#x2B;)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="undertitle">
+                        <div class="container bg-body">
+                            <div class="row">
+                                    <div class="col-md-3 col-lg-2 bg-body">
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 bg-white">
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-section">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="flex-grow-1 d-flex flex-column bg-body">
+                        <div class="container flex-grow-1 d-flex flex-column bg-white">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                    <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body">
+                                            <div class="sidebar-nav-item">
+<a href="/docs/">Docs Home</a>                                            </div>
+                                                <div class="sidebar-nav-item">
+<a href="/docs/why">Why Chocolatey?</a>                                                </div>
+                                                <div class="sidebar-nav-item">
+<a href="/docs/security">Security</a>                                                </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/features">Features</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/features/free">Free</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/features/paid">Paid</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/general">General</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/release-notes">Release Notes</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/troubleshooting">Troubleshooting</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/faqs">FAQs</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/moderation">Chocolatey.org Moderation</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/community-packages-disclaimer">Chocolatey.org Packages Disclaimer</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/usage">Usage</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/installation">How to install</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/installation-licensed">How to install licensed edition</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/chocolatey-configuration">Configuration/chocolatey.config</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/uninstallation">How to uninstall</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/getting-started">Getting Started</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/commands">Commands</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/creating-packages">Creating Packages</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/create-packages">Create Packages</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/create-packages-quick-start">Quick Start</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/commands">Commands</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/helpers">PowerShell Reference</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/automatic-packages">Automatic Packaging</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/how-tos">How To&#x27;s</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/proxy-settings-for-chocolatey">Use Chocolatey w/Proxy Server</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/change-cache">Change Download Cache Location aka Don&#x27;t use TEMP for downloads</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/install-upgrade-package-without-scripts">Install/Upgrade a Package w/out running install scripts</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/package-triage-process">Request Package Fixes/Updates</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/recompile-packages">Manually Recompile Packages, Embedding/Internalizing Remote Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/package-maintainer-handover">Take Over Package Maintenance Exclusively</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/parse-packageparameters-argument">Parse Package Parameters</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/mount-an-iso-in-chocolatey-package">Mount Iso</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/create-custom-package-templates">Create Custom Package Templates</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/create-extensions">Extend Chocolatey With PowerSHell Modules (extensions)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/deprecate-a-chocolatey-package">Deprecate a Package</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/set-up-chocolatey-server">Set up the Chocolatey.Server</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/setup-offline-installation">Set up Chocolatey for Internal/organizational use</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/setup-internal-package-repository">Automate Package Internalizer (MSP/C4B)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/chocolatey-for-business-quick-start-guide">C4B Quick Start Guide</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/chocolatey-gui">Chocolatey GUI</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/chocolatey-gui/overview">Chocolatey GUI Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/chocolatey-gui/known-issues">Chocolatey GUI Known Issues</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/quick-deployment">Quick Deployment Environment (QDE)</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/overview">Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/setup">Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/desktop-readme">Desktop Readme</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/ssl-setup">SSL Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/firewall-changes">Firewall Changes</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/client-setup">Client Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/internet-setup">Internet Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/v1">QDE v1</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/central-management">Chocolatey Central Management (CCM)</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/overview">Central Management Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/setup">Central Management Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/setup-client">Central Management Client Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/setup-upgrade">Central Management Upgrade</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/deployments">Central Management Deployments</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/use-cases">Use Cases</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/use-cases/development-environment-setup">Development Environment</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/use-cases/hosting-chocolatey-packages-on-myget">Host on MyGet</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/learning-resources">Learning Resources</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/learning-resources/resources">Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/learning-resources/videos">Videos</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/learning-resources/presentations">Presentations</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/additional-information">Additional Information</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/additional-information/legal">Legal</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/additional-information/history">History</a>
+                                                            </div>
+                                                    </div>
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
+                                        <h1 id="package-reducer-licensed-editions-only">Package Reducer (Licensed Editions Only)</h1>
+<blockquote>
+<p>Reduce the size of your package installations automatically!</p>
+</blockquote>
+<p>If you have a significant number of Chocolatey packages you manage, you may notice that you also may have a pretty significant space usage under the Chocolatey lib directory. Package reducer automatically decreases the size of nupkg files to around 5KB and removes installers and zips automatically from your package install directories. This may allow you to save GBs of usage for a large amount of packages being managed!</p>
+<!-- TOC -->
+<ul>
+<li><a href="#automatic">Automatic</a>
+<ul>
+<li><a href="#usage">Usage</a>
+<ul>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#setup">Setup</a></li>
+</ul>
+</li>
+<li><a href="#see-it-in-action">See It In Action</a></li>
+<li><a href="#options-and-switches">Options and Switches</a></li>
+<li><a href="#faq">FAQ</a>
+<ul>
+<li><a href="#how-do-i-take-advantage-of-this-feature">How do I take advantage of this feature?</a></li>
+<li><a href="#im-a-licensed-customer-now-what">I'm a licensed customer, now what?</a></li>
+<li><a href="#how-does-it-work">How does it work?</a></li>
+<li><a href="#how-do-i-turn-this-feature-on">How do I turn this feature on?</a></li>
+<li><a href="#how-do-i-turn-this-feature-off">How do I turn this feature off?</a></li>
+<li><a href="#can-i-just-deflate-nupkg-file-sizes">Can I just deflate nupkg file sizes?</a></li>
+<li><a href="#can-i-apply-reducer-to-already-installed-packages">Can I apply reducer to already installed packages?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#optimize-command">Optimize Command</a>
+<ul>
+<li><a href="#usage-1">Usage</a>
+<ul>
+<li><a href="#requirements-1">Requirements</a></li>
+</ul>
+</li>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#see-it-in-action-1">See It In Action</a></li>
+<li><a href="#options-and-switches-1">Options and Switches</a></li>
+<li><a href="#faq-1">FAQ</a>
+<ul>
+<li><a href="#how-do-i-take-advantage-of-this-feature-1">How do I take advantage of this feature?</a></li>
+<li><a href="#im-a-licensed-customer-now-what-1">I'm a licensed customer, now what?</a></li>
+<li><a href="#how-does-it-work-1">How does it work?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="automatic">Automatic</h2>
+<h3 id="usage">Usage</h3>
+<p>When you normally create packages that embed or download resources, the impact on a system includes the following:</p>
+<ul>
+<li>A nupkg file size takes up some space - this is like a fancy zip file and may contain binaries</li>
+<li>Files extracted or downloaded to the package directory - this may include zips and installers</li>
+<li>The actual install location if using an installer</li>
+<li>MSI cached by Windows - Windows caches the complete MSI binaries</li>
+</ul>
+<p>Typically with this in mind, the size of nupkg could account for an up to 4x impact on a system considering the above. So we typically recommend organizations set a comfortable threshold for package sizes (around 500MB) before splitting out binaries to downloaded resources.</p>
+<p>Package Reducer nearly removes that need as it reduces the nupkg file to 5KB by removing all the embedded files. Then it takes it a step further and removes zip and installers from the package directory automatically (configurable by a feature switch, see <a href="#setup">Setup</a>).</p>
+<p>When you turn on Package Reducer, the first two items above no longer take up any significant space. This can reduce space usage in the order of GBs for some installations of Chocolatey.</p>
+<p>With Package Reducer:</p>
+<ul>
+<li>nupkg file is reduced to 5KB or less, no matter the size on install</li>
+<li>zips / installers are automatically removed from the package directory if they are found</li>
+</ul>
+<p>The following file extensions are removed automatically:</p>
+<ul>
+<li>7z / zip / rar / gz / tar / sfx</li>
+<li>iso</li>
+<li>msi / msu / msp</li>
+<li>exe files if they are detected to be an installer</li>
+</ul>
+<p>So the space usage impact changes to what you'd normally experience outside of Chocolatey:</p>
+<ul>
+<li>the actual install location (package directory, Program Files, etc)</li>
+<li>MSI cache for MSIs</li>
+</ul>
+<h4 id="requirements">Requirements</h4>
+<ul>
+<li>Chocolatey (<code>chocolatey</code> package) v0.10.7+.</li>
+<li>Chocolatey Licensed Edition</li>
+<li>Chocolatey Licensed Extension (<code>chocolatey.extension</code> package) v1.12.0+.</li>
+</ul>
+<h4 id="setup">Setup</h4>
+<p>To turn on Package Reducer, you need to run the following:</p>
+<ul>
+<li><code>choco upgrade chocolatey.extension &lt;options&gt;</code></li>
+<li><code>choco feature enable -n reduceInstalledPackageSpaceUsage</code></li>
+<li>If you want to limit to just nupkg files being reduced and not automatically removing zips and installers, run the following: <code>choco feature enable -n reduceOnlyNupkgSize</code></li>
+</ul>
+<h3 id="see-it-in-action">See It In Action</h3>
+<p><img src="/assets/images/features/features_package_reducer.png" alt="Package Reducer - if you are on https://chocolatey.org/docs/features-package-reducer, see commented html below for detailed description of image" /></p>
+<!--
+Text in the image above:
+
+Package Reducer - Reduce Space Usage Automatically on Install/Upgrade
+
+- Nupkg file is reduced to 5KB or less, no matter the size
+- Zips / installers are automatically removed from the package directory if found
+- Zips / installers are removed from TEMP cache if found
+
+The image shows an installation without and with package reducer. The difference in size is over 20MB, as the package included the binaries.
+
+-->
+<blockquote>
+<p>:memo: <strong>NOTE</strong>: To see all feature videos for Chocolatey for Business, please visit <a href="https://chocolatey.org/resources/features#c4b">https://chocolatey.org/resources/features#c4b</a>.</p>
+</blockquote>
+<h3 id="options-and-switches">Options and Switches</h3>
+<p>Global Config Setting:</p>
+<ul>
+<li><code>reduceInstalledPackageSpaceUsage</code> - Reduce Installed Package Size (Package Reducer) - Reduce size of the nupkg file to very small and remove extracted archives and installers.</li>
+</ul>
+<p><code>choco install</code> / <code>choco upgrade</code> provide the following option(s):</p>
+<pre><code>     --reduce, --reduce-package-size, --deflate, --deflate-package-size
+     Reducer Installed Package Size (Package Reducer) - Reduce size of the
+       nupkg file to very small and remove extracted archives and installers.
+       Overrides the default feature 'reduceInstalledPackageSpaceUsage' set to
+       'False'. Licensed editions only (version 1.12.0+). See
+       https://chocolatey.org/docs/features-package-reducer
+
+     --no-reduce, --no-reduce-package-size, --no-deflate, --no-deflate-package-size
+     Do Not Reduce Installed Package Size - Leave the nupkg and files alone
+       in the package. Overrides the default feature
+       'reduceInstalledPackageSpaceUsage' set to 'False'. Licensed editions
+       only (version 1.12.0+). See https://chocolatey.org/docs/features-package-reducer
+
+     --reduce-nupkg-only, --deflate-nupkg-only
+     Reduce Only Nupkg File Size - reduce only the size of nupkg file when
+       using Package Reducer. Overrides the default feature
+       'reduceOnlyNupkgSize' set to 'False'. Licensed editions only (version -
+       1.12.0+). See https://chocolatey.org/docs/features-package-reducer
+</code></pre>
+<h3 id="faq">FAQ</h3>
+<h4 id="how-do-i-take-advantage-of-this-feature">How do I take advantage of this feature?</h4>
+<p>You must have a <a href="https://chocolatey.org/pricing">licensed edition of Chocolatey</a> (Pro, MSP, or Business) and use the community package repository to install/upgrade packages. Pro is a personal, named license that costs about the price of a lunch outing per month and comes with several other features. Business editions are great for organizations that need to manage the total software management lifecycle. MSP editions are for managed service providers and contain the same features as Pro (minus VirusTotal integration).</p>
+<h4 id="im-a-licensed-customer-now-what">I'm a licensed customer, now what?</h4>
+<p>Once you have set up the feature(s), it will automatically reduce the size of the packaging on install and upgrade.</p>
+<h4 id="how-does-it-work">How does it work?</h4>
+<p>It just works. When you install or upgrade a package, it will automatically reduce the size of the installation directory if you've set up Package Reducer properly.</p>
+<h4 id="how-do-i-turn-this-feature-on">How do I turn this feature on?</h4>
+<ul>
+<li>Globally - <code>choco feature enable -n reduceInstalledPackageSpaceUsage</code></li>
+<li>Per command - use the option <code>--reduce-package-size</code> with install/upgrade commands.</li>
+</ul>
+<h4 id="how-do-i-turn-this-feature-off">How do I turn this feature off?</h4>
+<ul>
+<li>Globally - <code>choco feature disable -n reduceInstalledPackageSpaceUsage</code></li>
+<li>Per command - use the option <code>--no-reduce-package-size</code> with install/upgrade commands.</li>
+</ul>
+<h4 id="can-i-just-deflate-nupkg-file-sizes">Can I just deflate nupkg file sizes?</h4>
+<p>Yes!</p>
+<ul>
+<li>Globally - <code>choco feature disable -n reduceInstalledPackageSpaceUsage</code></li>
+<li>Per command - use the option <code>--reduce-nupkg-only</code> with install/upgrade commands.</li>
+</ul>
+<h4 id="can-i-apply-reducer-to-already-installed-packages">Can I apply reducer to already installed packages?</h4>
+<p>See the next section, the <code>choco optimize</code> command.</p>
+<h2 id="optimize-command">Optimize Command</h2>
+<p>Package Reducer's Package Optimizer is available in all licensed editions starting at Chocolatey Licensed Extension v1.12.0. It is similar to the automatic reduction, except it reduces the size of existing installations.</p>
+<p>With Package Optimizer:</p>
+<ul>
+<li>nupkg file is reduced to 5KB or less, no matter the size.</li>
+<li>zips / installers are automatically removed from the package directory if they are found.</li>
+<li>zips / installers are removed from TEMP cache if found.</li>
+</ul>
+<p>The following file extensions are removed automatically:</p>
+<ul>
+<li>7z / zip / rar / gz / tar / sfx</li>
+<li>iso</li>
+<li>msi / msu / msp</li>
+<li>exe files if they are detected to be an installer</li>
+</ul>
+<h3 id="usage-1">Usage</h3>
+<pre><code class="language-sh">choco optimize [&lt;options/switches&gt;]
+</code></pre>
+<h4 id="requirements-1">Requirements</h4>
+<ul>
+<li>Chocolatey (<code>chocolatey</code> package) v0.10.7+.</li>
+<li>Chocolatey Licensed Edition</li>
+<li>Chocolatey Licensed Extension (<code>chocolatey.extension</code> package) v1.12.0+.</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<pre><code class="language-sh">choco optimize
+choco optimize --reduce-nupkg-only
+</code></pre>
+<h3 id="see-it-in-action-1">See It In Action</h3>
+<p><img src="/assets/images/features/features_package_reducer_optimize.png" alt="choco optimize - if you are on https://chocolatey.org/docs/features-package-reducer, see commented html below for detailed description of image" /></p>
+<!--
+Text in the image above:
+
+Package Reducer's Package Optimizer (choco optimize) - Reduce Space for Existing Package Installs
+
+- Great for reducing MB and even GB of space with Chocolatey installations!
+- Nupkg file is reduced to 5KB or less, no matter the size
+- Zips / installers are automatically removed from the package directory if found
+- Zips / installers are removed from TEMP cache if found
+
+This image shows a display of `choco optimize` reducing space for 34 existing installed packages. It shows what it is doing for each package, and shows how much space each package has now been saved. It shows a summary which shows the total space reduced for the machine overall.
+-->
+<h3 id="options-and-switches-1">Options and Switches</h3>
+<pre><code class="language-sh">    --reduce-nupkg-only, --deflate-nupkg-only
+    Reduce Only Nupkg File Size - reduce only the size of nupkg file when
+      using Package Optimizer. Licensed editions only (version 1.12.0+).
+</code></pre>
+<h3 id="faq-1">FAQ</h3>
+<h4 id="how-do-i-take-advantage-of-this-feature-1">How do I take advantage of this feature?</h4>
+<p>You must have a <a href="https://chocolatey.org/pricing">licensed edition of Chocolatey</a> (Pro, MSP, or Business) and use the community package repository to install/upgrade packages. Pro is a personal, named license that costs about the price of a lunch outing per month and comes with several other features. Business editions are great for organizations that need to manage the total software management lifecycle. MSP editions are for managed service providers and contain the same features as Pro (minus VirusTotal integration).</p>
+<h4 id="im-a-licensed-customer-now-what-1">I'm a licensed customer, now what?</h4>
+<p>You can just run <code>choco optimize</code>. Couple it with package reducer features to automatically ensure your Chocolatey installation stays very small.</p>
+<h4 id="how-does-it-work-1">How does it work?</h4>
+<p>It goes through all existing packages and removes unnecessary installers and zips. It also deflates nupkg files down to 5KB or less.</p>
+
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
+                                            <div class="border-bottom mb-3">
+                                                <p class="small font-weight-bold">On This Page</p>
+                                                    <p class="small"><a href="#package-reducer-licensed-editions-only">Package Reducer (Licensed Editions Only)</a></p>
+                                                    <p class="small"><a href="#automatic">Automatic</a></p>
+                                                    <p class="small"><a href="#usage">Usage</a></p>
+                                                    <p class="small"><a href="#see-it-in-action">See It In Action</a></p>
+                                                    <p class="small"><a href="#options-and-switches">Options and Switches</a></p>
+                                                    <p class="small"><a href="#faq">FAQ</a></p>
+                                                    <p class="small"><a href="#optimize-command">Optimize Command</a></p>
+                                                    <p class="small"><a href="#usage-1">Usage</a></p>
+                                                    <p class="small"><a href="#examples">Examples</a></p>
+                                                    <p class="small"><a href="#see-it-in-action-1">See It In Action</a></p>
+                                                    <p class="small"><a href="#options-and-switches-1">Options and Switches</a></p>
+                                                    <p class="small"><a href="#faq-1">FAQ</a></p>
+                                            </div>
+                                        <p class="small font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/features/paid/package-reducer.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="p-3 text-white font-size-sm">
+            <div class="container">
+                <div>
+                    <span>© 2020 Chocolatey Software, Inc.</span>
+                    <span class="float-right" style="color: #888888;">1.0.0</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,535 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/docs/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/docs/assets/css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+
+        <title>Chocolatey - Central Management</title>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column">
+
+            <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-3">
+                    <a class="navbar-brand" href="/docs"><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-light font-size-lg" href="https://github.com/chocolatey/docs"><i class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex-grow-1 d-flex  bg-body flex-column section-docs">
+                    <div id="titlebar" class="py-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
+                                    <div class="section text-uppercase">Chocolatey</div>
+                                    <div class="text-white m-0 title">Central Management</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="undertitle">
+                        <div class="container bg-body">
+                            <div class="row">
+                                    <div class="col-md-3 col-lg-2 bg-body">
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 bg-white">
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-section">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="flex-grow-1 d-flex flex-column bg-body">
+                        <div class="container flex-grow-1 d-flex flex-column bg-white">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                    <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body">
+                                            <div class="sidebar-nav-item">
+<a href="/docs/">Docs Home</a>                                            </div>
+                                                <div class="sidebar-nav-item">
+<a href="/docs/why">Why Chocolatey?</a>                                                </div>
+                                                <div class="sidebar-nav-item">
+<a href="/docs/security">Security</a>                                                </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/features">Features</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/features/free">Free</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/features/paid">Paid</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/general">General</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/release-notes">Release Notes</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/troubleshooting">Troubleshooting</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/faqs">FAQs</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/moderation">Chocolatey.org Moderation</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/community-packages-disclaimer">Chocolatey.org Packages Disclaimer</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/usage">Usage</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/installation">How to install</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/installation-licensed">How to install licensed edition</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/chocolatey-configuration">Configuration/chocolatey.config</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/uninstallation">How to uninstall</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/getting-started">Getting Started</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/commands">Commands</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/creating-packages">Creating Packages</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/create-packages">Create Packages</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/create-packages-quick-start">Quick Start</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/commands">Commands</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/helpers">PowerShell Reference</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/automatic-packages">Automatic Packaging</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/how-tos">How To&#x27;s</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/proxy-settings-for-chocolatey">Use Chocolatey w/Proxy Server</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/change-cache">Change Download Cache Location aka Don&#x27;t use TEMP for downloads</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/install-upgrade-package-without-scripts">Install/Upgrade a Package w/out running install scripts</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/package-triage-process">Request Package Fixes/Updates</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/recompile-packages">Manually Recompile Packages, Embedding/Internalizing Remote Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/package-maintainer-handover">Take Over Package Maintenance Exclusively</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/parse-packageparameters-argument">Parse Package Parameters</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/mount-an-iso-in-chocolatey-package">Mount Iso</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/create-custom-package-templates">Create Custom Package Templates</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/create-extensions">Extend Chocolatey With PowerSHell Modules (extensions)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/deprecate-a-chocolatey-package">Deprecate a Package</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/set-up-chocolatey-server">Set up the Chocolatey.Server</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/setup-offline-installation">Set up Chocolatey for Internal/organizational use</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/setup-internal-package-repository">Automate Package Internalizer (MSP/C4B)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/chocolatey-for-business-quick-start-guide">C4B Quick Start Guide</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/chocolatey-gui">Chocolatey GUI</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/chocolatey-gui/overview">Chocolatey GUI Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/chocolatey-gui/known-issues">Chocolatey GUI Known Issues</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/quick-deployment">Quick Deployment Environment (QDE)</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/overview">Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/setup">Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/desktop-readme">Desktop Readme</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/ssl-setup">SSL Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/firewall-changes">Firewall Changes</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/client-setup">Client Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/internet-setup">Internet Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/v1">QDE v1</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/central-management">Chocolatey Central Management (CCM)</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/overview">Central Management Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/setup">Central Management Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/setup-client">Central Management Client Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/setup-upgrade">Central Management Upgrade</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/deployments">Central Management Deployments</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/use-cases">Use Cases</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/use-cases/development-environment-setup">Development Environment</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/use-cases/hosting-chocolatey-packages-on-myget">Host on MyGet</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/learning-resources">Learning Resources</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/learning-resources/resources">Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/learning-resources/videos">Videos</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/learning-resources/presentations">Presentations</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/additional-information">Additional Information</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/additional-information/legal">Legal</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/additional-information/history">History</a>
+                                                            </div>
+                                                    </div>
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
+                                        <h1 id="chocolatey-release-notes-chocolatey-central-management">Chocolatey Release Notes - Chocolatey Central Management</h1>
+<h2 id="summary">Summary</h2>
+<p>This covers the release notes for the Chocolatey Central Management (<code>chocolatey-management-database</code>, <code>chocolatey-management-service</code>, and <code>chocolatey-management-web</code>) packages, which covers Central Management server-side functionality. For more information, installation options, etc, please refer to [[Chocolatey Central Management|CentralManagement]].</p>
+<ul>
+<li>Installation - [[Central Management Setup|CentralManagementSetup]]</li>
+<li>Upgrade - [[Central Management Upgrade|CentralManagementSetupUpgrade]]</li>
+</ul>
+<p><strong>NOTE</strong>: This package is available to Chocolatey for Business (C4B) customers only.</p>
+<h2 id="other-release-notes">Other Release Notes</h2>
+<ul>
+<li>Refer to [[Open Source Release Notes|ReleaseNotes]] as commercial editions build on top of open source.</li>
+<li>Chocolatey for Business (C4B) customers - also refer to [[Chocolatey Licensed Extension Release Notes|ReleaseNotesExtension]] and [[Chocolatey Agent Release Notes|ReleaseNotesAgent]].</li>
+</ul>
+<h2 id="known-issues">Known Issues</h2>
+<ul>
+<li>Please see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/labels/CentralManagement">https://github.com/chocolatey/chocolatey-licensed-issues/labels/CentralManagement</a></li>
+<li>Some issues may be held internally, please follow your support routes to learn more.</li>
+</ul>
+<h2 id="june-25-2020">0.3.0 (June 25, 2020)</h2>
+<h3 id="breaking-changes">BREAKING CHANGES</h3>
+<ul>
+<li>Chocolatey Central Management v0.3.0 will only work with Chocolatey Agent v0.11.0+. Upgrade order doesn't matter as you'll need to be on CCM v0.3.0 and Agent v0.11.0 before things start working again.See <a href="https://chocolatey.org/docs/central-management#ccm-component-compatibility-matrix">https://chocolatey.org/docs/central-management#ccm-component-compatibility-matrix</a>.</li>
+</ul>
+<h3 id="bug-fixes">BUG FIXES</h3>
+<ul>
+<li>Fix - Service - Communication with Chocolatey Agent fails on Incorrect Passphrase - see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/152">Licensed #152</a></li>
+<li>Fix - Web - Do not recreate website w/bindings on upgrade - see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/156">Licensed #156</a></li>
+</ul>
+<h2 id="june-18-2020">0.2.0 (June 18, 2020)</h2>
+<p>Deployments Release - we are excited to bring about managing remote machines with <a href="https://chocolatey.org/blog/announcing-deployments">Central Management Deployments</a> coming in this release! There are quite a few things we've brought into the initial release and we think you'll agree that it is a powerful, yet easy to use interface. Read <a href="https://chocolatey.org/blog/announcing-deployments">the announcement.</a>. We've also overhauled the documentation to make it understandable and approachable. Please see <a href="https://chocolatey.org/docs/central-management">https://chocolatey.org/docs/central-management</a>.</p>
+<blockquote>
+<p>:memo: <strong>NOTE</strong>: Log locations have changed. Please see [[Central Management FAQs|CentralManagement#faqs]] for more information.</p>
+</blockquote>
+<h3 id="features">FEATURES</h3>
+<ul>
+<li><a href="https://chocolatey.org/blog/announcing-deployments">Central Management Deployments</a>:
+<ul>
+<li>Create target groups to deploy to</li>
+<li>Create a deployment with one or more steps</li>
+<li>Each step can target multiple groups, and different groups in each step if desired</li>
+<li>Script a Chocolatey package</li>
+<li>With additional permissions, run a full PowerShell script instead</li>
+<li>Choose how failures in each step are handled</li>
+<li>Reorder steps</li>
+<li>Control permissions on who can deploy Chocolatey packages and who can run full scripts</li>
+<li>See progress on active deployments</li>
+<li>View logs for computers that executed a deployment step</li>
+<li>Report on completed deployments including exporting to PDF for sharing with executive staff</li>
+</ul>
+</li>
+</ul>
+<h3 id="bug-fixes-1">BUG FIXES</h3>
+<ul>
+<li>[Security] Fix - Framework does not encrypt LDAP Password in the database - see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/144">licensed #144</a></li>
+<li>Fix - Service - Error on installation when providing existing certificate: Cannot index into a null array - see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/143">licensed #143</a></li>
+<li>Fix - Web - Do not enable recaptcha by default for site registration - see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/128">licensed #128</a></li>
+<li>Fix - Web - Create/Edit Computer and Software modals are not saving changes - see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/125">licensed #125</a></li>
+<li>Fix - Web - Remove default permission to edit software and computers</li>
+<li>Fix - Web - Restrict What Can Be Created or Edited For Computers and Software</li>
+<li>Fix - Web - Deleted/Hidden items are still being used for counts for paging purposes in Software</li>
+<li>Fix - Web - The license count looks clickable at times when it is not clickable</li>
+<li>Fix - Web - After installation of CCM, doing an iisreset breaks the site</li>
+<li>Fix - All - Monitoring chocolatey.config for changes could potentially lock the file from being written to by choco</li>
+<li>Fix - All - Logging - CCM service not responding to calls and stops logging after choco configuration file is edited</li>
+<li>Fix - Service - Changing CentralManagementServiceUrl value in chocolatey.config causes running management service to crash</li>
+</ul>
+<h3 id="improvements">IMPROVEMENTS</h3>
+<ul>
+<li>Web - Allow removing computers as a default permission for ccmadmin role - see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/133">licensed #133</a></li>
+<li>Service - On install/upgrade, write out the FQDN and link to provide to chocolatey agents</li>
+<li>Logging - Service and DB Migrator should log to the root logs folder of Chocolatey Installation</li>
+<li>All - Logging - Adjust format to match closer with other Chocolatey log file formats</li>
+<li>Service - Set higher encryption when available (TLS 1.2)</li>
+<li>Database Install - Add <code>/SkipDatabasePermissionCheck</code> parameter to skip permissions check - see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/147">licensed #147</a></li>
+<li>Trial licenses that do not include counts will allow 100 licenses - see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/140">licensed #140</a></li>
+</ul>
+<h2 id="january-30-2020">0.1.1 (January 30, 2020)</h2>
+<h3 id="bug-fixes-2">BUG FIXES</h3>
+<ul>
+<li>[Security] Fix - Database - Don't emit Connection String information to log file</li>
+<li>[Security] Fix - Web - Add missing ability to use Active Directory (LDAP) for authentication</li>
+<li>Fix - Web - Error on installation 'HTTP Error 500.21 - Internal Server Error Handler &quot;aspNetCore&quot; has a bad module &quot;AspNetCoreModule&quot; in its module list' - see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/114">Licensed #114</a></li>
+<li>Fix - Service - Unable to parse netsh entries that contain hostname:port bindings - see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/96">Licensed #96</a></li>
+<li>Fix - Web - When setting SMTP configuration the SSL checkbox status is being ignored - see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/87">Licensed #87</a></li>
+<li>Fix - Service - &quot;The remote server returned an unexpected response: (413) Request Entity Too Large.&quot; - see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/95">Licensed #95</a></li>
+<li>Fix - Service - Unable to install CCM service with less than PowerShell v5 due to error on New-Guid cmdlet</li>
+<li>Fix - Web - Time discrepancy between Computers and Computer details - see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/97">Licensed #97</a></li>
+<li>Fix - Web - Remove ability to brand sections of CCM for now as it wasn't meant to be there yet and doesn't work</li>
+<li>Fix - Service - Unable to uninstall chocolatey-management-service due to incorrect name in package uninstall script</li>
+<li>Fix - Web - License count information is not being displayed correctly (e.g. 90 / n/a) - see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/80">Licensed #80</a></li>
+<li>Fix - Service - IP Address of Computer is not updating - see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/86">Licensed #86</a></li>
+<li>Fix - Web - Unable to upload a profile picture for user</li>
+<li>Fix - Web - Hovering over tooltips in Internet Explorer causes the page to jump</li>
+<li>Fix - Web - Clicking the Chocolatey icon in top left hand corner opens new tab</li>
+<li>Fix - Web - Website Logs are not appearing the in Maintenance Tab</li>
+<li>Fix - All - Move from DEBUG level reporting by default to INFO level reporting to reduce amount of logging</li>
+<li>Fix - Web - Improve wording in email templates and ensure consistent naming is used</li>
+</ul>
+<h3 id="improvements-1">IMPROVEMENTS</h3>
+<ul>
+<li>Database - Check whether provided SQL Server connection string actually works prior to starting installation</li>
+<li>Web - Optimize/Reduce Size of Chocolatey package by removing unnecessary files - see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/62">Licensed #62</a></li>
+<li>All - Show a warning when no package parameters are passed when initially installing CCM packages</li>
+<li>All - Show a warning during installation when provided SQL Server connection string doesn't provide an explicit user/password to connect with</li>
+<li>Service - Adjust logs to provide more appropriate information for normal operations</li>
+<li>Web - Autofocus on new password text box on password change screen</li>
+</ul>
+<h2 id="may-22-2019">0.1.0 (May 22, 2019)</h2>
+<p>Initial preview release</p>
+<h3 id="features-1">FEATURES</h3>
+<ul>
+<li>Reports - Ability to view and generate report (Excel/PDF) for all currently outdated software</li>
+<li>Dashboard - Provide a dashboard screen with key KPI values</li>
+<li>Overview - Show number of machines checking into CCM and compare to number currently licensed</li>
+</ul>
+<h3 id="bug-fixes-3">BUG FIXES</h3>
+<ul>
+<li>Fix - Packaging - Before upgrading Web Package ensure that dotnet process isn't running</li>
+<li>Fix - Web Site - Ensure that minified versions of all assets are used</li>
+<li>Fix - Web Site - Ensure consistent Date/Time Formatting used everywhere</li>
+<li>Fix - Web Site - Corrected duplicate display of search input box on some screens</li>
+<li>Fix - Web Site - Error when attempting to sort by any column in table on Computer Details screen</li>
+<li>Fix - Web Site - Erorr when attempting to sort by Name or Package Title column in table on Software screen</li>
+<li>Fix - Web Site - Tab does not sort by oudated first on Software screen</li>
+<li>Fix - Web Site - Timezone modification doesn't provide useful information to user</li>
+<li>Fix - Web Site - Only show Software that is installed on at least one machine</li>
+<li>Fix - Web Site - Excel Export generates errors when DateTime values are included</li>
+<li>Fix - Versioning - Ensure correct version number is stamped on all generated assemblies</li>
+<li>Fix - Service - Correct usage of default port number, which should be 24020</li>
+<li>Fix - Service - New-SelfSignedCertificate usage doesn't work on earlier PowerShell versions</li>
+<li>Fix - Service - Ensure correct error handling for incorrect/missing SQL Server credentials</li>
+<li>Fix - Database - Ensure SQL Server 2008 support</li>
+<li>Fix - Database - Migrator doesn't exit with non-zero exit code when there is an error</li>
+<li>Fix - Installation - Ensure usage of FQDN for all components</li>
+</ul>
+<h3 id="improvements-2">IMPROVEMENTS</h3>
+<ul>
+<li>Logging - Provided better logging during Service Certificate installation</li>
+<li>Installation - Verify and usage persisted appsettings.json file during upgrade</li>
+<li>Installation - Reduce issues unpacking web package by shortening paths in packaging</li>
+<li>Uninstallation - Remove modifications that were done as part of installation</li>
+<li>Database - Don't attempt to seed database tables everytime application starts</li>
+<li>Packaging - Removed unneccessary files from package, making it much smaller</li>
+<li>Packaging - Added requied dependencies to packages</li>
+<li>Packaging - Add information about available installation parameters to package description</li>
+<li>Service - Allow modification of configuration settings without the need to restart Windows Service</li>
+</ul>
+<h2 id="beta-20181009-october-9-2018">0.1.0-beta-20181009 (October 9, 2018)</h2>
+<h3 id="features-2">FEATURES</h3>
+<ul>
+<li>[Security] Installation - Provide encryption for all persisted configuration data</li>
+<li>[Security] Installation - Sign all PowerShell Scripts and assemblies shipped as part of release</li>
+<li>[Security] Web Site - Provide full RBAC to site and API</li>
+<li>Audit - Provide ability to list all computers that are currently in use across environment</li>
+<li>Audit - Provide ability to list all software that is currently installed across environment</li>
+<li>Reports - Ability to view and generate report (Excel/PDF) for all currently installed software</li>
+<li>Reports - Ability to view and generate report (Excel/PDF) for all computers currently in use</li>
+</ul>
+
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
+                                            <div class="border-bottom mb-3">
+                                                <p class="small font-weight-bold">On This Page</p>
+                                                    <p class="small"><a href="#chocolatey-release-notes-chocolatey-central-management">Chocolatey Release Notes - Chocolatey Central Management</a></p>
+                                                    <p class="small"><a href="#summary">Summary</a></p>
+                                                    <p class="small"><a href="#other-release-notes">Other Release Notes</a></p>
+                                                    <p class="small"><a href="#known-issues">Known Issues</a></p>
+                                                    <p class="small"><a href="#june-25-2020">0.3.0 (June 25, 2020)</a></p>
+                                                    <p class="small"><a href="#breaking-changes">BREAKING CHANGES</a></p>
+                                                    <p class="small"><a href="#bug-fixes">BUG FIXES</a></p>
+                                                    <p class="small"><a href="#june-18-2020">0.2.0 (June 18, 2020)</a></p>
+                                                    <p class="small"><a href="#features">FEATURES</a></p>
+                                                    <p class="small"><a href="#bug-fixes-1">BUG FIXES</a></p>
+                                                    <p class="small"><a href="#improvements">IMPROVEMENTS</a></p>
+                                                    <p class="small"><a href="#january-30-2020">0.1.1 (January 30, 2020)</a></p>
+                                                    <p class="small"><a href="#bug-fixes-2">BUG FIXES</a></p>
+                                                    <p class="small"><a href="#improvements-1">IMPROVEMENTS</a></p>
+                                                    <p class="small"><a href="#may-22-2019">0.1.0 (May 22, 2019)</a></p>
+                                                    <p class="small"><a href="#features-1">FEATURES</a></p>
+                                                    <p class="small"><a href="#bug-fixes-3">BUG FIXES</a></p>
+                                                    <p class="small"><a href="#improvements-2">IMPROVEMENTS</a></p>
+                                                    <p class="small"><a href="#beta-20181009-october-9-2018">0.1.0-beta-20181009 (October 9, 2018)</a></p>
+                                                    <p class="small"><a href="#features-2">FEATURES</a></p>
+                                            </div>
+                                        <p class="small font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/general/release-notes/central-management.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="p-3 text-white font-size-sm">
+            <div class="container">
+                <div>
+                    <span>© 2020 Chocolatey Software, Inc.</span>
+                    <span class="float-right" style="color: #888888;">1.0.0</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+            });
+        </script>
+    </body>
+</html>

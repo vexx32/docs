@@ -1,0 +1,562 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="/docs/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/docs/assets/css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+
+        <title>Chocolatey - Package Builder (C4B)</title>
+    </head>
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column">
+
+            <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-3">
+                    <a class="navbar-brand" href="/docs"><img id="logo" src="/docs/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-light font-size-lg" href="https://github.com/chocolatey/docs"><i class="fab fa-github"></i> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="flex-grow-1 d-flex  bg-body flex-column section-docs">
+                    <div id="titlebar" class="py-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
+                                    <div class="section text-uppercase">Chocolatey</div>
+                                    <div class="text-white m-0 title">Package Builder (C4B)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="undertitle">
+                        <div class="container bg-body">
+                            <div class="row">
+                                    <div class="col-md-3 col-lg-2 bg-body">
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 bg-white">
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-section">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="flex-grow-1 d-flex flex-column bg-body">
+                        <div class="container flex-grow-1 d-flex flex-column bg-white">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                    <div class="sidebar col-md-3 col-lg-2 pt-2 bg-body">
+                                            <div class="sidebar-nav-item">
+<a href="/docs/">Docs Home</a>                                            </div>
+                                                <div class="sidebar-nav-item">
+<a href="/docs/why">Why Chocolatey?</a>                                                </div>
+                                                <div class="sidebar-nav-item">
+<a href="/docs/security">Security</a>                                                </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/features">Features</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/features/free">Free</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/features/paid">Paid</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/general">General</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/release-notes">Release Notes</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/troubleshooting">Troubleshooting</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/faqs">FAQs</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/moderation">Chocolatey.org Moderation</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/general/community-packages-disclaimer">Chocolatey.org Packages Disclaimer</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/usage">Usage</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/installation">How to install</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/installation-licensed">How to install licensed edition</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/chocolatey-configuration">Configuration/chocolatey.config</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/uninstallation">How to uninstall</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/getting-started">Getting Started</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/usage/commands">Commands</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/creating-packages">Creating Packages</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/create-packages">Create Packages</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/create-packages-quick-start">Quick Start</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/commands">Commands</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/helpers">PowerShell Reference</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/creating-packages/automatic-packages">Automatic Packaging</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/how-tos">How To&#x27;s</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/proxy-settings-for-chocolatey">Use Chocolatey w/Proxy Server</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/change-cache">Change Download Cache Location aka Don&#x27;t use TEMP for downloads</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/install-upgrade-package-without-scripts">Install/Upgrade a Package w/out running install scripts</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/package-triage-process">Request Package Fixes/Updates</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/recompile-packages">Manually Recompile Packages, Embedding/Internalizing Remote Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/package-maintainer-handover">Take Over Package Maintenance Exclusively</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/parse-packageparameters-argument">Parse Package Parameters</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/mount-an-iso-in-chocolatey-package">Mount Iso</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/create-custom-package-templates">Create Custom Package Templates</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/create-extensions">Extend Chocolatey With PowerSHell Modules (extensions)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/deprecate-a-chocolatey-package">Deprecate a Package</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/set-up-chocolatey-server">Set up the Chocolatey.Server</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/setup-offline-installation">Set up Chocolatey for Internal/organizational use</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/setup-internal-package-repository">Automate Package Internalizer (MSP/C4B)</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/how-tos/chocolatey-for-business-quick-start-guide">C4B Quick Start Guide</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/chocolatey-gui">Chocolatey GUI</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/chocolatey-gui/overview">Chocolatey GUI Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/chocolatey-gui/known-issues">Chocolatey GUI Known Issues</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/quick-deployment">Quick Deployment Environment (QDE)</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/overview">Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/setup">Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/desktop-readme">Desktop Readme</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/ssl-setup">SSL Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/firewall-changes">Firewall Changes</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/client-setup">Client Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/internet-setup">Internet Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/quick-deployment/v1">QDE v1</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/central-management">Chocolatey Central Management (CCM)</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/overview">Central Management Overview</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/setup">Central Management Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/setup-client">Central Management Client Setup</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/setup-upgrade">Central Management Upgrade</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/central-management/deployments">Central Management Deployments</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/use-cases">Use Cases</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/use-cases/development-environment-setup">Development Environment</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/use-cases/hosting-chocolatey-packages-on-myget">Host on MyGet</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/learning-resources">Learning Resources</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/learning-resources/resources">Resources</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/learning-resources/videos">Videos</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/learning-resources/presentations">Presentations</a>
+                                                            </div>
+                                                    </div>
+                                                <div class="sidebar-nav-item has-children">
+<a href="/docs/additional-information">Additional Information</a>                                                </div>
+                                                    <div class="sidebar-nav-children">
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/additional-information/legal">Legal</a>
+                                                            </div>
+                                                            <div class="sidebar-nav-child">
+                                                                <a href="/docs/additional-information/history">History</a>
+                                                            </div>
+                                                    </div>
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
+                                        <h1 id="package-builder-create-packages-automatically-from-installers-business-editions-only">Package Builder - Create Packages Automatically From Installers (Business Editions Only)</h1>
+<blockquote>
+<p>Chocolatey's Package Builder allows you to create fully ready to go software deployments for Windows in 5-10 seconds! There is nothing faster than Chocolatey when it comes to preparing software for an unattended deployment across your organization.</p>
+</blockquote>
+<ul>
+<li>Generate packages based on installers and zips</li>
+<li>Generate packages by reflecting over Programs and Features</li>
+<li>Generate packages from the Package Builder UI</li>
+</ul>
+<p>Creating packages is a pretty quick process as compared to manually installing software on multiple machines. There is still some time involved to create a package. Even the best packagers take between 5-10 minutes to create a package. Chocolatey's Package Builder creates high quality packages in 5-10 seconds when pointed to native installers and zips! You can even point package builder to both a 32-bit and 64-bit url and seconds later you have a fully functioning package using all local/embedded resources!</p>
+<p>Chocolatey for Business is able to inspect an installer and determine silent arguments and complete packaging components for you, saving you hours of time in packaging and maintaining software!</p>
+<!-- TOC depthTo:5 -->
+<ul>
+<li><a href="#usage">Usage</a>
+<ul>
+<li><a href="#command-line">Command Line</a></li>
+<li><a href="#package-builder-ui">Package Builder UI</a></li>
+</ul>
+</li>
+<li><a href="#see-it-in-action">See It In Action</a>
+<ul>
+<li><a href="#package-builder-cli-and-scripts">Package Builder CLI and Scripts</a></li>
+<li><a href="#package-builder-ui-1">Package Builder UI</a></li>
+<li><a href="#generate-packages-from-programs-and-features">Generate Packages from Programs and Features</a></li>
+<li><a href="#more-business-concepts">More business concepts</a></li>
+</ul>
+</li>
+<li><a href="#options-and-switches">Options and Switches</a></li>
+<li><a href="#faq">FAQ</a>
+<ul>
+<li><a href="#how-do-i-take-advantage-of-package-builder">How do I take advantage of Package Builder?</a></li>
+<li><a href="#im-a-licensed-customer-now-what">I'm a licensed customer, now what?</a></li>
+<li><a href="#will-this-become-available-for-lower-editions-of-chocolatey">Will this become available for lower editions of Chocolatey?</a></li>
+<li><a href="#how-does-it-work">How does it work?</a></li>
+<li><a href="#what-types-of-extensions-are-supported">What types of extensions are supported?</a></li>
+<li><a href="#will-it-catch-all-types-of-installers">Will it catch all types of installers?</a></li>
+<li><a href="#does-it-always-find-the-silent-uninstall-arguments">Does it always find the silent uninstall arguments?</a></li>
+<li><a href="#this-was-unable-to-detect-custom-installer-arguments">This was unable to detect custom installer arguments.</a></li>
+<li><a href="#does-it-create-auto-unattend-files">Does it create auto unattend files?</a></li>
+<li><a href="#does-it-work-with-zip-archive">Does it work with zip archive?</a></li>
+<li><a href="#does-this-work-with-keeping-the-installer-on-a-unc-share-or-elsewhere-yet">Does this work with keeping the installer on a UNC share or elsewhere yet?</a></li>
+</ul>
+</li>
+<li><a href="#common-issues-and-resolutions">Common Issues and Resolutions</a>
+<ul>
+<li><a href="#i-get-name-is-required-please-pass-in-a-name-for-the-new-package">I get &quot;Name is required. Please pass in a name for the new package.&quot;</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="usage">Usage</h2>
+<h3 id="command-line">Command Line</h3>
+<p>When calling <code>choco new</code>, just add <code>--file=value</code> to point to a native installer and Chocolatey for Business will automatically determine the silent arguments, create the packaging and wrap that all around the installer.</p>
+<p><img src="/assets/images/features/features_packages_from_installers.png" alt="Create Packages from Installers - if you are on https://chocolatey.org/docs/features-create-packages-from-installers, see commented html below for detailed description of image" /></p>
+<!--
+Text in the image above:
+
+Chocolatey for Business automatically creates all packaging from an installer!
+
+Create Packages for Installers In Seconds
+
+- What used to take minutes or hours, is now done in seconds.
+- Allows customization
+- Automatically create packages for your entire organization's file share in under 15 minutes, saving you weeks of work.
+
+This image shows running `choco new --file .\installers\1Password-4.6.0.598.exe`.
+
+-->
+<h3 id="package-builder-ui">Package Builder UI</h3>
+<p>Starting in version 1.8.0 of the licensed editions, you have access to the Package Builder UI.</p>
+<p>Simply right click on an installer, executable, or zip type and select &quot;Create Chocolatey Package...&quot;</p>
+<p><img src="https://cloud.githubusercontent.com/assets/63502/20328042/bb944018-ab55-11e6-884f-0a45babce40a.png" alt="Package Builder UI" /></p>
+<p>Then just add in and fill out the requested information. It uses <code>choco new</code> under the covers allowing you to really ramp up fast, especially when you don't have a lot of command line experience.</p>
+<p>Another way to bring up the ui is to call <code>packagebuilder</code> from the command line.</p>
+<h2 id="see-it-in-action">See It In Action</h2>
+<h3 id="package-builder-cli-and-scripts">Package Builder CLI and Scripts</h3>
+<p>We've prepared a short video going over the concepts:
+<a href="https://www.youtube.com/watch?v=6TXY5Ie-3wg&amp;list=PLfn-TaDnc1us5X-PVlxW8M1h-6mXEXZSG&amp;index=1" title="Chocolatey's Package Builder - Package Builder CLI and Scripting"><img src="https://cloud.githubusercontent.com/assets/63502/20327872/b0caf0d8-ab54-11e6-8c40-8bdeeb8eb13c.png" alt="Chocolatey's Package Builder - Package Builder CLI and Scripting" /></a></p>
+<p>Quickly script out creating packages for your entire organization's cache of software, allowing you to completely automate your Windows installations in moments, not months. You can do that with a simple script:</p>
+<pre><code class="language-powershell"># Path to your installers, will navigate subdirectories
+$path = '\\company.file.server\installers'
+
+# Generate packages over supported types of files
+$supportedTypes = &#64;('.exe', '.msi', '.7z', '.zip', '.msu', '.msp')
+Get-ChildItem -Path $path -Recurse | ?{
+  $extension = [System.IO.Path]::GetExtension($_.Name)
+  $supportedTypes.Contains($extension)
+  } | %{
+  Write-Host &quot;$($_.FullName)&quot;
+  # Run choco new against the installer
+  &amp; choco new --file &quot;$($_.FullName)&quot; --build-package --outputdirectory $pwd
+}
+</code></pre>
+<p>As you see this script, it is doing the following:</p>
+<ul>
+<li>Taking a path to where installers, zips, etc are located (<code>$path = '\\company.file.server\installers'</code>)</li>
+<li>Setting up support types of files to use with Package Builder (<code>$supportedTypes = &#64;('.exe', '.msi', '.7z', '.zip', '.msu', '.msp')</code>)</li>
+<li>Looping over all that it finds in that folder and all subdirectories (<code>Get-ChildItem -Path $path -Recurse</code>)</li>
+<li>Find files that apply (<code>$supportedTypes.Contains($extension)</code>)</li>
+<li>Run choco new, but point it to the full path to the file (<code>&amp; choco new --file &quot;$($_.FullName)&quot;</code>), ask it to attempt to build the package (<code>--build-package</code>) and have the output in present working directory (<code> --outputdirectory $pwd</code>)</li>
+</ul>
+<h3 id="package-builder-ui-1">Package Builder UI</h3>
+<p>Not every person is going to love the command line or may not be familiar with the command line and at Chocolatey we realize this. We've spent countless hours talking to customers and with their feedback we're introducing Package Builder UI. This also gives you an opportunity to transition from existing UI tools while taking advantage of powerful Chocolatey concepts!</p>
+<p>We've prepared a short video to show the power of the UI:
+<a href="https://www.youtube.com/watch?v=qJNKR_PEQqY&amp;list=PLfn-TaDnc1us5X-PVlxW8M1h-6mXEXZSG&amp;index=2" title="Chocolatey's Package Builder - Package Builder UI"><img src="https://cloud.githubusercontent.com/assets/63502/20327926/f54ac81e-ab54-11e6-9cb1-60df170c338e.png" alt="Chocolatey's Package Builder - Package Builder UI" /></a></p>
+<h3 id="generate-packages-from-programs-and-features">Generate Packages from Programs and Features</h3>
+<p>Another way Package Builder can generate packages is based on looking at what is installed on a system in Programs and Features. This gives you lightning quick ramp up time in both package and automating your Windows software installations!</p>
+<p><a href="https://www.youtube.com/watch?v=Mw_ReipnskI&amp;list=PLfn-TaDnc1us5X-PVlxW8M1h-6mXEXZSG&amp;index=3" title="Chocolatey's Package Builder - Generate Packages from Programs and Features Automatically!"><img src="https://cloud.githubusercontent.com/assets/63502/20327972/46c8ff3a-ab55-11e6-9c03-32b0f83540bb.png" alt="Chocolatey's Package Builder - Generate Packages from Programs and Features Automatically!" /></a></p>
+<blockquote>
+<p>:memo: <strong>NOTE</strong>: To see all feature videos for Chocolatey for Business, please visit <a href="https://chocolatey.org/resources/features#c4b">https://chocolatey.org/resources/features#c4b</a>.</p>
+</blockquote>
+<h3 id="more-business-concepts">More business concepts</h3>
+<p><img src="/assets/images/gifs/choco_business_features.gif" alt="auto package creation/synchronize" /></p>
+<h2 id="options-and-switches">Options and Switches</h2>
+<p>When running <code>choco new</code> in the Business editions, pass the following:</p>
+<pre><code class="language-sh">     --file, --url=VALUE
+     Inspect a file (native installer, zip, patch/upgrade file, or remote url
+       to download first) to to completely create a package with proper silent
+       arguments! Can be 32-bit or 64-bit architecture.  Available in Business
+       editions only (licensed version 1.4.0+, url/zip starting in 1.6.0).
+
+     --file64, --url64=VALUE
+     Optional - used when specifying both a 32-bit and a 64-bit file. Can be
+       an installer or a zip, or remote url to download. Available in Business
+       editions only (licensed version 1.6.0+).
+
+     --keepremote, --originallocation, --original-location, --useoriginallocation, --use-original-location, --useoriginalfileslocation, --use-original-files-location
+     Use Original Files Location - when using file or url, use the original
+       location in packaging. Available in Business editions only (licensed
+       version 1.6.0+).
+
+     --checksum, --downloadchecksum, --download-checksum=VALUE
+     Download Checksum - checksum to verify File/Url with. Defaults to empty.
+       Available in Business editions only (licensed version 1.7.0+).
+
+     --checksum64, --checksumx64, --downloadchecksumx64, --download-checksum-x64=VALUE
+     Download Checksum 64-bit - checksum to verify File64/Url64 with.
+       Defaults to empty. Available in Business editions only (licensed version
+       1.7.0+).
+
+     --checksumtype, --checksum-type, --downloadchecksumtype, --download-checksum-type=VALUE
+     Download Checksum Type - checksum type for File/Url (and optional
+       separate 64-bit files when specifying both). Used in conjunction with
+       Download Checksum and Download Checksum 64-bit. Available values are
+       'md5', 'sha1', 'sha256' or 'sha512'. Defaults to 'sha256'.  Available in
+       Business editions only (licensed version 1.7.0+).
+
+     --pauseonerror, --pause-on-error
+     Pause on Error - Pause when there is an error with creating the package.
+       Available in Business editions only (licensed version 1.7.0+).
+
+     --buildpackage, --build-package
+     Build Package - Attempt to compile the package after creating it.
+       Available in Business editions only (licensed version 1.7.0+).
+</code></pre>
+<h2 id="faq">FAQ</h2>
+<h3 id="how-do-i-take-advantage-of-package-builder">How do I take advantage of Package Builder?</h3>
+<p>You must have a <a href="https://chocolatey.org/compare">Business edition of Chocolatey</a>. Business editions are great for organizations that need to manage the total software lifecycle.</p>
+<h3 id="im-a-licensed-customer-now-what">I'm a licensed customer, now what?</h3>
+<p>When you run <code>choco new</code>, you can add <code>--file</code> and point Chocolatey at the installer file and let Chocolatey figure out everything for creating a package and the silent arguments and wrap that around the installer.</p>
+<h3 id="will-this-become-available-for-lower-editions-of-chocolatey">Will this become available for lower editions of Chocolatey?</h3>
+<p>Package Builder will only be available in C4B (Chocolatey for Business).</p>
+<h3 id="how-does-it-work">How does it work?</h3>
+<p>It inspects the installer file using a series of rules that helps determine the installer type. From there it builds a package with the information it is able to extract from the installer.</p>
+<h3 id="what-types-of-extensions-are-supported">What types of extensions are supported?</h3>
+<p>Package Builder supports <code>.exe</code>, <code>.msi</code>, <code>.msu</code>, <code>.msp</code>, <code>.7z</code>, and <code>.zip</code>.</p>
+<h3 id="will-it-catch-all-types-of-installers">Will it catch all types of installers?</h3>
+<p>It is able to detect 12 types of installers currently.</p>
+<h3 id="does-it-always-find-the-silent-uninstall-arguments">Does it always find the silent uninstall arguments?</h3>
+<p>In over 70% of the cases it will, but not always. Even with this in mind, it still removes 90% of the packaging work. When it can't create a fully unattended softare deployment, it will create a TODO file for you to complete. See the next question on how to handle cases where it can not.</p>
+<h3 id="this-was-unable-to-detect-custom-installer-arguments">This was unable to detect custom installer arguments.</h3>
+<p>Unfortunately, some installers out there are just a pain to work with. In the case of custom installers, you may be able to find the silent arguments for install and uninstall by searching online. If you can not find anything, consider unpacking the installer and putting the software binaries directly in the package.</p>
+<h3 id="does-it-create-auto-unattend-files">Does it create auto unattend files?</h3>
+<p>Unfortunately, it is not able to do this. See the [[automatic internalize and recompile packages feature|FeaturesAutomaticallyRecompilePackages]] to take advantage of thousands of existing packages without a need for internet access.</p>
+<h3 id="does-it-work-with-zip-archive">Does it work with zip archive?</h3>
+<p>Yes, but somewhat naively. It will generate the packaging to unpack the archive for both 7z and zip files.</p>
+<h3 id="does-this-work-with-keeping-the-installer-on-a-unc-share-or-elsewhere-yet">Does this work with keeping the installer on a UNC share or elsewhere yet?</h3>
+<p>Yes, as of Licensed version v1.6.0+. Use <code>--use-original-location</code>.</p>
+<h2 id="common-issues-and-resolutions">Common Issues and Resolutions</h2>
+<h3 id="i-get-name-is-required.please-pass-in-a-name-for-the-new-package">I get &quot;Name is required. Please pass in a name for the new package.&quot;</h3>
+<p>This occurs when you are not running Chocolatey for Business or don't have your client properly licensed. Please see [licensed installation|Installation-Licensed]] for more details.</p>
+
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
+                                            <div class="border-bottom mb-3">
+                                                <p class="small font-weight-bold">On This Page</p>
+                                                    <p class="small"><a href="#package-builder-create-packages-automatically-from-installers-business-editions-only">Package Builder - Create Packages Automatically From Installers (Business Editions Only)</a></p>
+                                                    <p class="small"><a href="#usage">Usage</a></p>
+                                                    <p class="small"><a href="#command-line">Command Line</a></p>
+                                                    <p class="small"><a href="#package-builder-ui">Package Builder UI</a></p>
+                                                    <p class="small"><a href="#see-it-in-action">See It In Action</a></p>
+                                                    <p class="small"><a href="#package-builder-cli-and-scripts">Package Builder CLI and Scripts</a></p>
+                                                    <p class="small"><a href="#package-builder-ui-1">Package Builder UI</a></p>
+                                                    <p class="small"><a href="#generate-packages-from-programs-and-features">Generate Packages from Programs and Features</a></p>
+                                                    <p class="small"><a href="#more-business-concepts">More business concepts</a></p>
+                                                    <p class="small"><a href="#options-and-switches">Options and Switches</a></p>
+                                                    <p class="small"><a href="#faq">FAQ</a></p>
+                                                    <p class="small"><a href="#how-do-i-take-advantage-of-package-builder">How do I take advantage of Package Builder?</a></p>
+                                                    <p class="small"><a href="#im-a-licensed-customer-now-what">I&#x27;m a licensed customer, now what?</a></p>
+                                                    <p class="small"><a href="#will-this-become-available-for-lower-editions-of-chocolatey">Will this become available for lower editions of Chocolatey?</a></p>
+                                                    <p class="small"><a href="#how-does-it-work">How does it work?</a></p>
+                                                    <p class="small"><a href="#what-types-of-extensions-are-supported">What types of extensions are supported?</a></p>
+                                                    <p class="small"><a href="#will-it-catch-all-types-of-installers">Will it catch all types of installers?</a></p>
+                                                    <p class="small"><a href="#does-it-always-find-the-silent-uninstall-arguments">Does it always find the silent uninstall arguments?</a></p>
+                                                    <p class="small"><a href="#this-was-unable-to-detect-custom-installer-arguments">This was unable to detect custom installer arguments.</a></p>
+                                                    <p class="small"><a href="#does-it-create-auto-unattend-files">Does it create auto unattend files?</a></p>
+                                                    <p class="small"><a href="#does-it-work-with-zip-archive">Does it work with zip archive?</a></p>
+                                                    <p class="small"><a href="#does-this-work-with-keeping-the-installer-on-a-unc-share-or-elsewhere-yet">Does this work with keeping the installer on a UNC share or elsewhere yet?</a></p>
+                                                    <p class="small"><a href="#common-issues-and-resolutions">Common Issues and Resolutions</a></p>
+                                                    <p class="small"><a href="#i-get-name-is-required.please-pass-in-a-name-for-the-new-package">I get &quot;Name is required. Please pass in a name for the new package.&quot;</a></p>
+                                            </div>
+                                        <p class="small font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/features/paid/create-packages-from-installers.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="p-3 text-white font-size-sm">
+            <div class="container">
+                <div>
+                    <span>© 2020 Chocolatey Software, Inc.</span>
+                    <span class="float-right" style="color: #888888;">1.0.0</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+            });
+        </script>
+    </body>
+</html>
