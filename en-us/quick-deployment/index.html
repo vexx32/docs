@@ -21,7 +21,7 @@
         <script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
         <script type="text/javascript" src="/assets/js/anchor.min.js"></script>
 
-        <title>Chocolatey - Quick Deployment Environment (QDE)</title>
+        <title>Chocolatey - Quick Deployment Environment (QDE) Overview</title>
     </head>
     <body class="d-flex flex-column">
         <div class="flex-grow-1 d-flex flex-column">
@@ -51,7 +51,7 @@
                             <div class="row">
                                 <div class="offset-md-3 offset-lg-2 px-3 px-md-0">
                                     <div class="section text-uppercase">Chocolatey</div>
-                                    <div class="text-white m-0 title">Quick Deployment Environment (QDE)</div>
+                                    <div class="text-white m-0 title">Quick Deployment Environment (QDE) Overview</div>
                                 </div>
                             </div>
                         </div>
@@ -209,11 +209,8 @@
                                                             </div>
                                                     </div>
                                                 <div class="sidebar-nav-item active has-children">
-<a href="/en-us/quick-deployment">Quick Deployment Environment (QDE)</a>                                                </div>
+<a href="/en-us/quick-deployment">Quick Deployment Environment (QDE) Overview</a>                                                </div>
                                                     <div class="sidebar-nav-children active">
-                                                            <div class="sidebar-nav-child">
-                                                                <a href="/en-us/quick-deployment/overview">Overview</a>
-                                                            </div>
                                                             <div class="sidebar-nav-child">
                                                                 <a href="/en-us/quick-deployment/setup">Setup</a>
                                                             </div>
@@ -287,13 +284,125 @@
                                                     </div>
                                     </div>
                                     <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
-                                        <h1 id="todo">Todo</h1>
+                                        <h1 id="chocolatey-quick-deployment-environment-qde">Chocolatey Quick Deployment Environment (QDE)</h1>
+<h2 id="summary">Summary</h2>
+<p>This is an overview on the Chocolatey Quick Deployment Environment (QDE).
+It provides a single virtual machine appliance to be imported into your hypervisor-of-choice, which contains most of the various components of a Chocolatey organizational solution.</p>
+<blockquote>
+<p>:warning: <strong>Warning</strong></p>
+<p>This solution targets environments up to about <strong>1000 nodes</strong>.
+If you need a solution for a larger environment, QDE is generally suitable only as a proof-of-concept.
+For best results, we would recommend a distributed infrastructure, separating each component into its own discrete node.
+If you find yourself in need of a more scalable solution, please contact Support and we'll be more than happy to provide guidance for larger solutions.</p>
+</blockquote>
+<p><img src="/assets/images/quickdeploy/QDE-architecture.gif" alt="QDE Architecture" /></p>
+<!-- TOC depthFrom:2 -->
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#qde-components">QDE Components</a></li>
+<li><a href="#getting-qde">Getting QDE</a></li>
+<li><a href="#related-articles">Related Articles</a></li>
+<li><a href="#links">Links</a></li>
+<li><a href="#faq">FAQ</a>
+<ul>
+<li><a href="#how-do-we-take-advantage-of-qde">How do we take advantage of QDE?</a></li>
+<li><a href="#how-much-time-does-this-save">How much time does this save?</a></li>
+<li><a href="#what-if-were-already-a-c4b-customer">What if we're already a C4B customer?</a></li>
+<li><a href="#how-do-we-upgrade-qde">How do we upgrade QDE?</a></li>
+<li><a href="#what-if-we-have-a-larger-environment--1k-nodes">What if we have a larger environment? (&gt; 1k nodes)</a></li>
+<li><a href="#can-we-brag-about-how-fast-we-were-able-to-get-configured">Can we brag about how fast we were able to get configured?</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="qde-components">QDE Components</h2>
+<p>The QDE appliance provides a unified architecture containing the following components:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Sonatype Nexus Repository OSS</strong></td>
+<td style="text-align: left;">This is your package repository, where you'll be storing your Chocolatey packages (nupkg files). It comes pre-configured with some initial repositories to help you keep everything organized.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Jenkins</strong></td>
+<td style="text-align: left;">This is your automation engine, that lets you run tasks on-demand and on a schedule. It hosts the PowerShell scripts to help you auto-internalize packages from the Chocolatey Community Repository.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Chocolatey Central Management</strong></td>
+<td style="text-align: left;">This is your web dashboard for Chocolatey, that will allow you to track and monitor Chocolatey packages on your endpoint clients. You can see what packages are installed where, and whether or not they are out-of-date.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Scripts for Internal Deployment</strong></td>
+<td style="text-align: left;">Various scripts to help you configure this solution are included, for your convenience.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="getting-qde">Getting QDE</h2>
+<p>To get QDE into your environment, please <a href="https://chocolatey.org/contact/quick-deployment">reach out to us</a> so we can work to get you set up.</p>
+<blockquote>
+<p>:memo: <strong>Note</strong></p>
+<p>A QDE environment is a fully functional Chocolatey for Business (C4B) environment; as such, it will require a business or trial license.</p>
+</blockquote>
+<h2 id="related-articles">Related Articles</h2>
+<p>A lot of what is done in QDE condenses or completely eliminates the work found in these related articles:</p>
+<ul>
+<li>[[Organizational Deployment Guide|How-To-Setup-Offline-Installation]]</li>
+<li><a href="https://chocolatey.org/install#organization">Chocolatey Installation</a></li>
+<li>[[Chocolatey Commercial Installation|Installation-Licensed]]</li>
+<li>[[Automate Package Internalization|How-To-Setup-Internal-Package-Repository]]</li>
+</ul>
+<p>If you find that QDE is only good for a proof-of-concept in your environment due to having thousands of endpoints, you will want to understand how to scale out that infrastructure.
+The above articles document how that is done.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li>[[QDE Setup|QuickDeploymentSetup]]</li>
+<li>[[QDE Desktop ReadMe File|QuickDeploymentDesktopReadme]] (included here for convenience)</li>
+<li>[[QDE SSL/TLS Setup|QuickDeploymentSslSetup]]</li>
+<li>[[QDE Firewall Changes|QuickDeploymentFirewallChanges]]</li>
+<li>[[QDE Client Setup|QuickDeploymentClientSetup]] (setting up your client machines)</li>
+<li><a href="#how-do-i-upgrade-qde">How do I upgrade QDE?</a>.</li>
+</ul>
+<h2 id="faq">FAQ</h2>
+<h3 id="how-do-we-take-advantage-of-qde">How do we take advantage of QDE?</h3>
+<p>You must have a <a href="https://chocolatey.org/compare">Business edition of Chocolatey</a> or be on an active trial license. Fill out the <a href="https://chocolatey.org/contact/quick-deployment">quick deployment request form</a> and we will reach out with all the necessary information to get you started.</p>
+<h3 id="how-much-time-does-this-save">How much time does this save?</h3>
+<p>Typically, setting up a proper Chocolatey Central Management server and any accompanying infrastructure takes somewhere between 1-5 days, even when you have everything you need to get started. Setting up a new piece of infrastructure can be pretty cumbersome, we know. The QDE contains pretty much everything you need to get started in a single image, all ready to go. At most, it should only take a couple of hours to get everything ready to go from there.</p>
+<h3 id="what-if-were-already-a-c4b-customer">What if we're already a C4B customer?</h3>
+<p>Fill out the <a href="https://chocolatey.org/contact/quick-deployment">quick deployment request form</a> and we will reach out with all the necessary information to get you started. Be sure to mention you are already a C4B customer.</p>
+<h3 id="how-do-we-upgrade-qde">How do we upgrade QDE?</h3>
+<p>While we will continue to make improvements to the QDE, there is no upgrade path for the Virtual Machine itself.
+You can choose to start over with a newer version, but that feels like the wrong way to go.</p>
+<p>It is simple to upgrade the components and that it how we recommend upgrading aspects of QDE.
+Should you want to upgrade say Central Management, you can follow the Central Management steps for upgrade at [[Upgrade Central Management|CentralManagementSetupUpgrade]].</p>
+<h3 id="what-if-we-have-a-larger-environment-1k-nodes">What if we have a larger environment? (&gt; 1k nodes)</h3>
+<p>While this solution will be great to get a glimpse of what Chocolatey can really do for you, by its nature it isn't the silver bullet for every environment.
+If you have a larger environment, we would strongly recommend taking the time to set up the various services on separate hosts to make them easier to manage and ensure they have the necessary resources to handle heavier loads.</p>
+<h3 id="can-we-brag-about-how-fast-we-were-able-to-get-configured">Can we brag about how fast we were able to get configured?</h3>
+<p>Please do! :slightly_smiling_face:</p>
 
                                     </div>
                                 <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
                                             <div class="border-bottom mb-3">
                                                 <p class="small font-weight-bold">On This Page</p>
-                                                    <p class="small"><a href="#todo">Todo</a></p>
+                                                    <p class="small"><a href="#chocolatey-quick-deployment-environment-qde">Chocolatey Quick Deployment Environment (QDE)</a></p>
+                                                    <p class="small"><a href="#summary">Summary</a></p>
+                                                    <p class="small"><a href="#qde-components">QDE Components</a></p>
+                                                    <p class="small"><a href="#getting-qde">Getting QDE</a></p>
+                                                    <p class="small"><a href="#related-articles">Related Articles</a></p>
+                                                    <p class="small"><a href="#links">Links</a></p>
+                                                    <p class="small"><a href="#faq">FAQ</a></p>
+                                                    <p class="small"><a href="#how-do-we-take-advantage-of-qde">How do we take advantage of QDE?</a></p>
+                                                    <p class="small"><a href="#how-much-time-does-this-save">How much time does this save?</a></p>
+                                                    <p class="small"><a href="#what-if-were-already-a-c4b-customer">What if we&#x27;re already a C4B customer?</a></p>
+                                                    <p class="small"><a href="#how-do-we-upgrade-qde">How do we upgrade QDE?</a></p>
+                                                    <p class="small"><a href="#what-if-we-have-a-larger-environment-1k-nodes">What if we have a larger environment? (&amp;gt; 1k nodes)</a></p>
+                                                    <p class="small"><a href="#can-we-brag-about-how-fast-we-were-able-to-get-configured">Can we brag about how fast we were able to get configured?</a></p>
                                             </div>
                                         <p class="small font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/quick-deployment/index.md"><i class="fad fa-pencil"></i> Edit This Page</a></p>
                                 </div>
@@ -306,7 +415,7 @@
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">1.0.0</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.67</span>
                 </div>
             </div>
         </div>
