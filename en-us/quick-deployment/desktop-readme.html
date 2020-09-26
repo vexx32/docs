@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -288,7 +288,7 @@
 <blockquote>
 <p>:memo: <strong>NOTE</strong></p>
 <p>This document is for <strong>Version 2</strong> of the Quick Deployment Environment.
-If you're using an older version of QDE, please refer to the [[QDEv1 Desktop Readme page|QuickDeploymentDesktopReadmeV1]].</p>
+If you're using an older version of QDE, please refer to the <a href="./v1/desktop-readme">QDEv1 Desktop Readme page</a>.</p>
 </blockquote>
 <p>Thanks for trying Chocolatey for Business!
 This system has been pre-configured as a fully functioning C4B environment.
@@ -353,9 +353,9 @@ You may want to take a snapshot before continuing just in case.</li>
 <h2 id="step-0-complete-prerequisites">Step 0: Complete Prerequisites</h2>
 <p>There are some initial steps you will need to have taken before you work through this document.
 Please make sure you have taken those steps ahead of time.
-See the <a href="https://chocolatey.org/docs/quick-deployment-setup#step-3-virtual-environment-setup">Online Documentation</a> for the most up to date information.</p>
+See the <a href="./setup#step-3-virtual-environment-setup">Online Documentation</a> for the most up to date information.</p>
 <ul>
-<li>[[QDE Setup|QuickDeploymentSetup]]</li>
+<li><a href="./setup">QDE Setup</a></li>
 </ul>
 <h2 id="step-1-expand-disk-size">Step 1: Expand Disk Size</h2>
 <p>By default, QDE is provisioned with a 100GB hard disk drive.
@@ -497,7 +497,7 @@ Consult the <a href="https://help.sonatype.com/repomanager3">Nexus documentation
 </tr>
 </tbody>
 </table>
-<p>For using Jenkins, please refer to our <a href="https://chocolatey.org/docs/how-to-setup-internal-package-repository">online documentation</a>.</p>
+<p>For using Jenkins, please refer to our <a href="../how-tos/setup-internal-package-repository">online documentation</a>.</p>
 <p>At most, you will need to:</p>
 <ol>
 <li>Login to Jenkins and complete first-time setup (see below).</li>
@@ -638,7 +638,7 @@ To do so:</p>
 </li>
 </ol>
 <h2 id="step-5-install-and-configure-chocolatey-on-clients">Step 5: Install and Configure Chocolatey On Clients</h2>
-<p>Refer to <a href="https://chocolatey.org/docs/quick-deployment-client-setup">the Client Setup documentation</a>.</p>
+<p>Refer to <a href="./client-setup">the Client Setup documentation</a>.</p>
 <h2 id="step-6-license-the-qde-vm">Step 6: License the QDE VM</h2>
 <p>This VM is running an <strong>UNACTIVATED</strong> Server 2019 Standard Operating System.
 If you plan to use this virtual machine long-term, you <em>will</em> need to apply a license to the VM.
@@ -654,7 +654,7 @@ If you use a KMS server in your environment, and have it configured on clients v
 <blockquote>
 <p>:memo: <strong>NOTE</strong></p>
 <p>This document is for <strong>Version 2</strong> of the Quick Deployment Environment.
-If you're using an older version of QDE, please refer to the [[document for that version|QuickDeploymentDesktopReadmeV1]].</p>
+If you're using an older version of QDE, please refer to the <a href="./v1/desktop-readme">document for that version</a>.</p>
 </blockquote>
 <h3 id="server-error-warning-when-resetting-admin-credential-in-nexus">&quot;Server Error&quot; warning when resetting &quot;admin&quot; credential in Nexus</h3>
 <p>When attempting to reset the <code>admin</code> account credential in Nexus, you receive a &quot;Server Error&quot; warning in the top right corner of the page, as shown below:</p>
@@ -675,12 +675,12 @@ Stop-Process -Name explorer -Force
 </code></pre>
 <h2 id="see-also">See Also</h2>
 <ul>
-<li>[[Quick Deployment Environment|QuickDeploymentEnvironment]]</li>
-<li>[[QDE Setup|QuickDeploymentSetup]]</li>
-<li>[[QDE Desktop ReadMe File|QuickDeploymentDesktopReadme]]</li>
-<li>[[QDE SSL/TLS Setup|QuickDeploymentSslSetup]]</li>
-<li>[[QDE Firewall Changes|QuickDeploymentFirewallChanges]]</li>
-<li>[[QDE Client Setup|QuickDeploymentClientSetup]] (setting up your client machines)</li>
+<li><a href="./">Quick Deployment Environment</a></li>
+<li><a href="./setup">QDE Setup</a></li>
+<li><a href="./desktop-readme">QDE Desktop ReadMe File</a></li>
+<li><a href="./ssl-setup">QDE SSL/TLS Setup</a></li>
+<li><a href="./firewall-changes">QDE Firewall Changes</a></li>
+<li><a href="./client-setup">QDE Client Setup</a> (setting up your client machines)</li>
 </ul>
 
                                     </div>
@@ -723,7 +723,7 @@ Stop-Process -Name explorer -Force
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

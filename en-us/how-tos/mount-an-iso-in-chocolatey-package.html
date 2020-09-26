@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -326,7 +326,7 @@
 <li>FOSS: Download <a href="https://chocolatey.org/api/v2/package/chocolatey-isomount.extension">chocolatey-isomount.extension</a></li>
 <li>Deploy the package to your internal repository.</li>
 </ol>
-<p><strong>NOTE</strong>: MSP stands for Managed Service Provider. It along with Chocolatey for Business (C4B) are commercial editions of Chocolatey that come with [[Package Internalizer|FeaturesAutomaticallyRecompilePackages]] to convert existing packages to be 100% offline and reliable. FOSS (free open source software) is short for the open source edition.</p>
+<p><strong>NOTE</strong>: MSP stands for Managed Service Provider. It along with Chocolatey for Business (C4B) are commercial editions of Chocolatey that come with <a href="../features/paid/automatically-recompile-packages">Package Internalizer</a> to convert existing packages to be 100% offline and reliable. FOSS (free open source software) is short for the open source edition.</p>
 <h3 id="step-2-add-chocolatey-isomount.extension-dependency">Step 2: Add chocolatey-isomount.extension Dependency</h3>
 <p>Open your package's nuspec up and add a dependency on <code>chocolatey-isomount.extension</code>. This will be inserted just above the closing &quot;metadata&quot; tag (<code>&lt;/metadata&gt;</code>).</p>
 <pre><code class="language-xml">  &lt;dependencies&gt;
@@ -377,13 +377,13 @@ Install-ChocolateyIsoPackage &#64;packageArgs
 <h2 id="imdisk">ImDisk</h2>
 <p>The most compatible with all versions of Windows option is to use ImDisk. ImDisk Virtual Disk Driver (imdisk) is a software package that allows an ISO file to be mounted, but more importantly, it works for Windows NT/2000/XP/Vista/7/8/8.1 or Windows Server 2003/2008/2012/2016 (so basically, everything!). That means that you can use one, common, method, for mounting ISO files when required within your Chocolatey Packages.</p>
 <h3 id="step-1-get-imdisk-package">Step 1: Get ImDisk Package</h3>
-<p>You will need to take a dependency on the <a href="https://chocolatey.org/packages/imdisk">ImDisk package</a>. If you are using Chocolatey in an organizational context, be sure to [[internalize|How-To-Recompile-Packages]] (not cache) the ImDisk package and place it on your internal sources.</p>
+<p>You will need to take a dependency on the <a href="https://chocolatey.org/packages/imdisk">ImDisk package</a>. If you are using Chocolatey in an organizational context, be sure to <a href="./recompile-packages">internalize</a> (not cache) the ImDisk package and place it on your internal sources.</p>
 <ol>
 <li>MSP/C4B: Run <code>choco download imdisk --internalize</code></li>
-<li>FOSS: Download <a href="https://chocolatey.org/api/v2/package/imdisk">imdisk</a> - [[internalize manually|How-To-Recompile-Packages]]</li>
+<li>FOSS: Download <a href="https://chocolatey.org/api/v2/package/imdisk">imdisk</a> - <a href="./recompile-packages">internalize manually</a></li>
 <li>Deploy the package to your internal repository.</li>
 </ol>
-<p><strong>NOTE</strong>: MSP stands for Managed Service Provider. It along with Chocolatey for Business (C4B) are commercial editions of Chocolatey that come with [[Package Internalizer|FeaturesAutomaticallyRecompilePackages]] to convert existing packages to be 100% offline and reliable. FOSS (free open source software) is short for the open source edition.</p>
+<p><strong>NOTE</strong>: MSP stands for Managed Service Provider. It along with Chocolatey for Business (C4B) are commercial editions of Chocolatey that come with <a href="../features/paid/automatically-recompile-packages">Package Internalizer</a> to convert existing packages to be 100% offline and reliable. FOSS (free open source software) is short for the open source edition.</p>
 <h3 id="step-2-add-imdisk-dependency">Step 2: Add ImDisk Dependency</h3>
 <p>Open your package's nuspec up and add a dependency on <code>imdisk</code>. This will be inserted just above the closing &quot;metadata&quot; tag (<code>&lt;/metadata&gt;</code>).</p>
 <pre><code class="language-xml">  &lt;dependencies&gt;
@@ -474,7 +474,7 @@ Dismount-DiskImage -ImagePath $iso
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

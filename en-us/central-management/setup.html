@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -298,14 +298,14 @@ While it is envisioned that CCM will be installed across multiple servers (split
 </blockquote>
 <blockquote>
 <p>:memo: <strong>NOTE</strong></p>
-<p>If this seems like a lot to set up, you have the ability to get access to the [[Quick Deployment Environment (QDE)|QuickDeploymentEnvironment]]. It comes preloaded with Central Management and other Chocolatey recommended infrastructure. Please see [[Quick Deployment Environment (QDE)|QuickDeploymentEnvironment]].</p>
+<p>If this seems like a lot to set up, you have the ability to get access to the <a href="../quick-deployment">Quick Deployment Environment (QDE)</a>. It comes preloaded with Central Management and other Chocolatey recommended infrastructure. Please see <a href="../quick-deployment">Quick Deployment Environment (QDE)</a>.</p>
 </blockquote>
 <blockquote>
 <p>:warning: <strong>WARNING</strong></p>
 <p>All deployed components of the CCM packages should <strong>always</strong> be the <em><strong>SAME VERSION</strong></em>. The only time you should not have this is when you are in a state of upgrading and that transition time should be quite short.</p>
 </blockquote>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: Looking for upgrade instructions? See [[Central Management Upgrade|CentralManagementSetupUpgrade]].</p>
+<p>:memo: <strong>NOTE</strong>: Looking for upgrade instructions? See <a href="./setup-upgrade">Central Management Upgrade</a>.</p>
 </blockquote>
 <hr />
 <!-- TOC depthFrom:2 depthTo:5 -->
@@ -338,7 +338,7 @@ While it is envisioned that CCM will be installed across multiple servers (split
 <h2 id="step-1-internalize-packages">Step 1: Internalize Packages</h2>
 <blockquote>
 <p>:memo: <strong>NOTE</strong></p>
-<p>Make sure you have read over the [[CCM Compability Matrix|CentralManagement#ccm-component-compatibility-matrix]] prior to starting internalization as this will save you some headaches.</p>
+<p>Make sure you have read over the <a href="./index#ccm-component-compatibility-matrix">CCM Compability Matrix</a> prior to starting internalization as this will save you some headaches.</p>
 </blockquote>
 <p>The complete installation of CCM requires several packages that are available from the community repository. Let's get them internalized. We will internalize them to a <code>C:\packages</code> directory. It is highly recommended that you push the packages to an internal repository before continuing with other steps in this guide. Change the values in the first lines of this script to match what you need in your environment.</p>
 <pre><code class="language-powershell"># To run this, you need Chocolatey for Business installed (chocolatey / chocolatey.extension).
@@ -385,28 +385,28 @@ Get-ChildItem C:\packages -Recurse -Filter *.nupkg | Foreach-Object { choco push
 </blockquote>
 <hr />
 <h2 id="step-2-setup-central-management-database">Step 2: Setup Central Management Database</h2>
-<p>Please see [[Central Management Database Setup|CentralManagementSetupDatabase]].</p>
+<p>Please see <a href="./setup-database">Central Management Database Setup</a>.</p>
 <blockquote>
 <p>:memo: <strong>NOTE</strong>: While we'd like to support different database engines at some point in the distant future, currently only SQL Server is supported.</p>
 </blockquote>
 <hr />
 <h2 id="step-3-setup-central-management-windows-services">Step 3: Setup Central Management Windows Service(s)</h2>
-<p>Please see [[Central Management Service Setup|CentralManagementSetupService]].</p>
+<p>Please see <a href="./setup-service">Central Management Service Setup</a>.</p>
 <blockquote>
 <p>:memo: <strong>NOTE</strong>: If Step 1 is not succesful, do not move on to this step until you resolve issues with database setup.</p>
 </blockquote>
 <hr />
 <h2 id="step-4-setup-central-management-website">Step 4: Setup Central Management Website</h2>
-<p>Please see [[Central Management Web Setup|CentralManagementSetupWeb]].</p>
+<p>Please see <a href="./setup-web">Central Management Web Setup</a>.</p>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: If Step 1 or 2 is not succesful, do not move on to this step until you resolve issues with previous steps.</p>
+<p>:memo: <strong>NOTE</strong>: If Step 1 or 2 is not successful, do not move on to this step until you resolve issues with previous steps.</p>
 </blockquote>
 <hr />
 <h2 id="step-5-setting-up-agent-machines">Step 5: Setting up Agent Machines</h2>
-<p>Please see [[Central Management Client Setup|CentralManagementSetupClient]].</p>
+<p>Please see <a href="./setup-client">Central Management Client Setup</a>.</p>
 <hr />
 <h2 id="upgrading">Upgrading?</h2>
-<p>Looking for upgrade instructions? See [[Central Management Upgrade|CentralManagementSetupUpgrade]].</p>
+<p>Looking for upgrade instructions? See <a href="./setup-upgrade">Central Management Upgrade</a>.</p>
 <hr />
 <h2 id="common-errors-and-resolutions">Common Errors and Resolutions</h2>
 <h3 id="executable-script-code-found-in-signature-block">Executable script code found in signature block</h3>
@@ -416,7 +416,7 @@ Get-ChildItem C:\packages -Recurse -Filter *.nupkg | Foreach-Object { choco push
 <p>You need to check the CCM service logs. The agent will always report success when it communicates with the service successfully. The service may reject what it receives, but due to security settings, it won't tell the client about that.</p>
 <p>The logs are located at <code>$env:ChocolateyInstall\logs\ccm-service.log</code>. If you are on a version of CCM prior to 0.2.0, the log will be located at <code>$env:ChocolateyInstall\lib\chocolatey-management-service\tools\service\logs\chocolatey.service.host.log</code>.</p>
 <hr />
-<p>[[Chocolatey Central Management|CentralManagement]]</p>
+<p><a href="./">Chocolatey Central Management</a></p>
 
                                     </div>
                                 <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
@@ -445,7 +445,7 @@ Get-ChildItem C:\packages -Recurse -Filter *.nupkg | Foreach-Object { choco push
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -286,8 +286,8 @@
                                     <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
                                         <h1 id="package-internalizer">Package Internalizer</h1>
 <p>Automatically Internalize/Recompile Existing Packages (Business and MSP Editions Only)</p>
-<p>There are thousands of existing packages on the <a href="https://chocolatey.org/packages">community repository</a> that are a tremendous resource when it comes to creating packages that have software that can sometimes be tricky! Unfortunately you may be wary of using those packages without changes because many of those packages are subject to distribution rights and thus have an internet dependency (which creates both [[trust and control issues|CommunityPackagesDisclaimer]]). There is a process for downloading and internalizing packages to use internal or embedded locations for that software that is called <strong>internalizing</strong> (also known as recompiling).</p>
-<p>Chocolatey for Business is able to automatically download packages and resources, edit the scripts, and recompile packages to internalize and remove internet dependencies from those packages, saving you hours of time in [[manually internalizing/recompiling packages|How-To-Recompile-Packages]]!</p>
+<p>There are thousands of existing packages on the <a href="https://chocolatey.org/packages">community repository</a> that are a tremendous resource when it comes to creating packages that have software that can sometimes be tricky! Unfortunately you may be wary of using those packages without changes because many of those packages are subject to distribution rights and thus have an internet dependency (which creates both <a href="../../general/community-packages-disclaimer">trust and control issues</a>). There is a process for downloading and internalizing packages to use internal or embedded locations for that software that is called <strong>internalizing</strong> (also known as recompiling).</p>
+<p>Chocolatey for Business is able to automatically download packages and resources, edit the scripts, and recompile packages to internalize and remove internet dependencies from those packages, saving you hours of time in <a href="../../how-tos/recompile-packages">manually internalizing/recompiling packages</a>!</p>
 <!-- TOC -->
 <ul>
 <li><a href="#usage">Usage</a></li>
@@ -308,7 +308,7 @@
 <!-- /TOC -->
 <h2 id="usage">Usage</h2>
 <p>Call <code>choco download</code> with options including the name of an existing package for Chocolatey for Business to download and download all existing remote resources.</p>
-<p><img src="/assets/images/features/features_recompile_packages.png" alt="Internalize Existing Packages, Recompiling Resources - if you are on https://chocolatey.org/docs/features-automatically-recompile-packages, see commented html below for detailed description of image" /></p>
+<p><img src="/assets/images/features/features_recompile_packages.png" alt="Internalize Existing Packages, Recompiling Resources - if you are on https://docs.chocolatey.org/en-us/features/paid/automatically-recompile-packages, see commented html below for detailed description of image" /></p>
 <!--
 Text in the image above:
 
@@ -366,7 +366,7 @@ This image shows running `choco download --recompile git.install`.
        the switch appropriately. Overrides the feature
        'internalizeAppendUseOriginalLocation' set to by default to 'False'.
 </code></pre>
-<p>See [[download command|CommandsDownload]] for more information.</p>
+<p>See <a href="../../usage/commands/download">download command</a> for more information.</p>
 <h2 id="resources">Resources</h2>
 <p>Community posts that include Package Internalizer:</p>
 <ul>
@@ -417,7 +417,7 @@ This image shows running `choco download --recompile git.install`.
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

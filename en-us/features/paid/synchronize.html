@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -359,7 +359,7 @@
 <p>For software management, which encompasses package management and above that for Windows, the state of the software is really what should be reflected with those installed packages. So if that software has been uninstalled from Programs and Features or upgraded outside of Chocolatey, autosync removes those packages to match that state or notes the upgrade (note it doesn't change the version of the package - that's much trickier to get correct).</p>
 <p>As commercial editions lean more towards software management, they have much better system integration. Autosync is great for ensuring that Chocolatey matches the state of changes on the system for what the packages it is tracking.</p>
 <h3 id="usage">Usage</h3>
-<p><img src="/assets/images/features/features_synchronize.png" alt="Automatic Synchronize - if you are on https://chocolatey.org/docs/features-synchronize, see commented html below for detailed description of image" /></p>
+<p><img src="/assets/images/features/features_synchronize.png" alt="Automatic Synchronize - if you are on https://docs.chocolatey.org/en-us/features/paid/synchronize, see commented html below for detailed description of image" /></p>
 <p>In the image above, someone manually removed the 1Password software. On the next run of Chocolatey, auto sync sees the software has been removed, so it removes the package tracking to that software in response to those system changes.</p>
 <!--
 Text in the image above:
@@ -418,7 +418,7 @@ This image shows running `choco list -lo`. Chocolatey for Business automatically
 <p>:memo: <strong>NOTE</strong>: To see all feature videos for Chocolatey for Business, please visit <a href="https://chocolatey.org/resources/features#c4b">https://chocolatey.org/resources/features#c4b</a>.</p>
 </blockquote>
 <p>In the following image, sync is run on a system that has 18 applications installed and a base Chocolatey for Business install. Note after running sync, all software on the machine is now being managed by Chocolatey.</p>
-<p><img src="/assets/images/features/features_choco_sync.png" alt="Chocolatey's Package Synchronizer Sync Command - if you are on https://chocolatey.org/docs/features-synchronize, see commented html below for detailed description of image" /></p>
+<p><img src="/assets/images/features/features_choco_sync.png" alt="Chocolatey's Package Synchronizer Sync Command - if you are on https://docs.chocolatey.org/en-us/features/paid/synchronize, see commented html below for detailed description of image" /></p>
 <!--
 Text in the image above:
 
@@ -434,7 +434,7 @@ This image shows running `choco sync`. It shows first a system that has 18 appli
 
 -->
 <h3 id="options-and-switches-1">Options and Switches</h3>
-<p>The following are available in the [[choco sync|CommandsSync]] command.</p>
+<p>The following are available in the <a href="../../usage/commands/sync">choco sync</a> command.</p>
 <pre><code>     --id=VALUE
      Id - The Display Name from Programs and Features
 
@@ -466,7 +466,7 @@ This image shows running `choco sync`. It shows first a system that has 18 appli
 <h2 id="all-packages-in-programs-and-features">All Packages in Programs and Features</h2>
 <p>In C4B, you can flip a switch and see all packages in Programs and Features, even those packages that don't have underlying native installers! This makes reporting back to legacy inventory reporting systems a snap.</p>
 <h3 id="usage-2">Usage</h3>
-<p><img src="/assets/images/features/features_packages_in_programs_and_features.png" alt="All Packages in Programs And Features - if you are on https://chocolatey.org/docs/features-synchronize, see commented html below for detailed description of image" /></p>
+<p><img src="/assets/images/features/features_packages_in_programs_and_features.png" alt="All Packages in Programs And Features - if you are on https://docs.chocolatey.org/en-us/features/paid/synchronize, see commented html below for detailed description of image" /></p>
 <!--
 Text in the image above:
 
@@ -542,7 +542,7 @@ This image shows a display of `choco list -lo` side by side with Programs and Fe
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

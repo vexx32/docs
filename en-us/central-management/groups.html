@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -285,7 +285,7 @@
                                     </div>
                                     <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
                                         <h1 id="chocolatey-central-management-groups">Chocolatey Central Management - Groups</h1>
-<p>Central Management's Groups are the basis on which a given [[Deployment|CentralManagementDeployments]] operates.
+<p>Central Management's Groups are the basis on which a given <a href="./central-management/deployments">Deployment</a> operates.
 In Central Management, a Group may contain one or more computers and/or other groups.
 Currently, Central Management's groups are entirely self-contained, and cannot be directly mapped from Active Directory groups.</p>
 <p>The <strong>Groups</strong> page can be accessed from the left-hand navigation menu on your Central Management Dashboard by selecting the <strong>Groups</strong> menu item.
@@ -355,7 +355,7 @@ If a Deployment is targeting ineligible groups, the deployment cannot be started
 <blockquote>
 <p>The computer has not opted in or a group contains computers that have not opted in for deployments by configuration. Please ensure the computer has at least chocolatey-agent v0.10.0+ installed and the feature &quot;useChocolateyCentralManagementDeployments&quot; has been set to enabled on the client computer.</p>
 </blockquote>
-<p>This is telling you that you need to ensure you set the client to allow for the the use of Deployments. As it is a security consideration, it requires an explicit opt-in on client machines. See [[Client Setup - Features |CentralManagementSetupClient#features]] for details on how to set it.</p>
+<p>This is telling you that you need to ensure you set the client to allow for the the use of Deployments. As it is a security consideration, it requires an explicit opt-in on client machines. See <a href="./setup-client#features">Client Setup - Features</a> for details on how to set it.</p>
 <h3 id="i-have-plenty-of-licenses-why-do-some-machines-show-not-opted-in-for-deployments-and-also-exceeds-your-current-license-count">I have plenty of licenses, why do some machines show not opted in for deployments and also exceeds your current license count?</h3>
 <p>Once you upgrade to at least CCM v0.2.0, every machine will show that until they check in the next time. Once they check in, that will go away. So it's basically normal to see that until those machines check in again.</p>
 <hr />
@@ -365,12 +365,12 @@ If a Deployment is targeting ineligible groups, the deployment cannot be started
 <hr />
 <h2 id="related-topics">Related Topics</h2>
 <ul>
-<li>[[Chocolatey Central Management|CentralManagement]]</li>
-<li>[[Central Management - Deployments|CentralManagementDeployments]]</li>
-<li>[[Central Management - Computers|CentralManagementComputers]]</li>
+<li><a href="./">Chocolatey Central Management</a></li>
+<li><a href="./deployments">Central Management - Deployments</a></li>
+<li><a href="./computers">Central Management - Computers</a></li>
 </ul>
 <hr />
-<p>[[Chocolatey Central Management|CentralManagement]]</p>
+<p><a href="./">Chocolatey Central Management</a></p>
 
                                     </div>
                                 <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
@@ -399,7 +399,7 @@ If a Deployment is targeting ineligible groups, the deployment cannot be started
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

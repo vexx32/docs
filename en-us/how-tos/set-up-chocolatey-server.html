@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -319,11 +319,11 @@
 </li>
 </ul>
 <!-- /TOC -->
-<p><strong>NOTE:</strong> Refer to [[How To Set Up Chocolatey For Organizational/Internal Use|How-To-Setup-Offline-Installation]] in tandem with this article.</p>
+<p><strong>NOTE:</strong> Refer to <a href="./setup-offline-installation">How To Set Up Chocolatey For Organizational/Internal Use</a> in tandem with this article.</p>
 <h2 id="summary">Summary</h2>
 <p><strong>tl;dr - Chocolatey.Server is not recommended for most organizational use cases. There are more robust options out there. However if you have a very simple use case or are conducting a POC, Chocolatey.Server may be good enough for your needs. If you don't find it robust enough, our recommendation is to look to something more robust like Artifactory, Nexus, or ProGet (two of which are also free to use).</strong></p>
 <p>The <a href="https://chocolatey.org/packages/chocolatey.server">Chocolatey.Server package</a> contains the binaries for a fully ready to go Chocolatey NuGet Server where you can serve packages over HTTP using a NuGet-compatible v2 OData Atom Feed. Chocolatey Simple Server (aka Chocolatey Server aka chocolatey.server) is an implementation of a NuGet.Server compiled and ready to go.</p>
-<p><strong>NOTE</strong>: This is meant to be a simple implementation and may not have the features to be used in a robust environment where you need multiple repositories with multiple users/API keys. If you are an organization, the recommendation is to evaluate your needs and determine if you instead need a Repository Server like Nexus, Artifactory Pro, or ProGet. See [[hosting your own server|How-To-Host-Feed]] for those options.</p>
+<p><strong>NOTE</strong>: This is meant to be a simple implementation and may not have the features to be used in a robust environment where you need multiple repositories with multiple users/API keys. If you are an organization, the recommendation is to evaluate your needs and determine if you instead need a Repository Server like Nexus, Artifactory Pro, or ProGet. See <a href="../features/free/how-to-host-feed">hosting your own server</a> for those options.</p>
 <h2 id="links">Links</h2>
 <ul>
 <li><a href="https://chocolatey.org/packages/chocolatey.server">Package</a></li>
@@ -446,7 +446,7 @@ choco install IIS-ASPNET45 --source windowsfeatures
 # Install Chocolatey.Server
 choco upgrade chocolatey.server -y
 
-# Step by step instructions here https://chocolatey.org/docs/how-to-set-up-chocolatey-server#setup-normally
+# Step by step instructions here https://docs.chocolatey.org/en-us/how-tos/set-up-chocolatey-server#setup-normally
 # Import the right modules
 Import-Module WebAdministration
 # Disable or remove the Default website
@@ -588,7 +588,7 @@ Start-Website -Name &quot;ChocolateyServer&quot;
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

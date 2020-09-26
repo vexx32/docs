@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -328,7 +328,7 @@
 <hr />
 <h2 id="setup">Setup</h2>
 <h3 id="step-1-install-chocolatey-agent">Step 1: Install Chocolatey Agent</h3>
-<p>First you need Chocolatey Agent installed. As there may be some steps involved with the install of the agent, please see [[Chocolatey Agent Setup|FeaturesAgentService#setup]].</p>
+<p>First you need Chocolatey Agent installed. As there may be some steps involved with the install of the agent, please see <a href="../features/paid/agent-service#setup">Chocolatey Agent Setup</a>.</p>
 <hr />
 <h3 id="step-2-update-configuration">Step 2: Update Configuration</h3>
 <p>At a minimum you need the following items set to be able to have a Chocolatey Agent be &quot;opted-in&quot; for both checking into Central Management and Deployments:</p>
@@ -348,7 +348,7 @@ If you decide you want to open this up for over the internet communication, you 
 </blockquote>
 <h4 id="config-settings">Config Settings</h4>
 <ul>
-<li><code>centralManagementServiceUrl</code> = <strong>' '</strong> - The URL that should be used to communicate with Chocolatey Central Management. It should look something like https://servicemachineFQDN:24020/ChocolateyManagementService. See <a href="https://chocolatey.org/docs/features-chocolatey-central-management#fqdn-usage">https://chocolatey.org/docs/features-chocolatey-central-management#fqdn-usage</a>. Defaults to '' (empty). Available in business editions v2.0.0+ only.</li>
+<li><code>centralManagementServiceUrl</code> = <strong>' '</strong> - The URL that should be used to communicate with Chocolatey Central Management. It should look something like https://servicemachineFQDN:24020/ChocolateyManagementService. See <a href="../features/paid/chocolatey-central-management#fqdn-usage">FQDN usage</a>. Defaults to '' (empty). Available in business editions v2.0.0+ only.</li>
 <li><code>centralManagementReportPackagesTimerIntervalInSeconds</code> = <strong>'1800'</strong> - Amount of time, in seconds, between each execution of the background service to report installed and outdated packages to Chocolatey Central Management. Defaults to '1800'. Available in business editions v2.0.0+ only.</li>
 <li><code>centralManagementReceiveTimeoutInSeconds</code> = <strong>'30'</strong> - The amount of time, in seconds, that the background agent should wait to receive information from Chocolatey Central Management. Defaults to '30'. Available in business editions v2.0.0+ only.</li>
 <li><code>centralManagementSendTimeoutInSeconds</code> = <strong>'30'</strong> - The amount of time, in seconds, that the background agent should wait to send information to Chocolatey Central Management. Defaults to '30'. Available in business editions v2.0.0+ only.</li>
@@ -361,13 +361,13 @@ If you decide you want to open this up for over the internet communication, you 
 <blockquote>
 <p>:warning: <strong>WARNING</strong>: The Chocolatey Agent installed on the same machine that has the CCM Service installed will share the <code>centralManagementServiceUrl</code> setting, so that agent can only report into that CCM Service.</p>
 </blockquote>
-<p>Also found at [[Chocolatey Configuration|ChocolateyConfiguration]].</p>
+<p>Also found at <a href="../usage/chocolatey-configuration">Chocolatey Configuration</a>.</p>
 <h4 id="features">Features</h4>
 <ul class="contains-task-list">
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> <code>useChocolateyCentralManagement</code> - Use Chocolatey Central Management - Lists of installed and outdated packages will be reported to the chosen Chocolatey Central Management server.  Business editions only (version 2.0.0+). See <a href="https://chocolatey.org/docs/features-chocolatey-central-management">https://chocolatey.org/docs/features-chocolatey-central-management</a></li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> <code>useChocolateyCentralManagementDeployments</code> - Use Chocolatey Central Management Deployments - Centrally managed deployments of packages and scripts can be sent from Chocolatey Central Management.  Business editions only (version 2.1.0+). See <a href="https://chocolatey.org/docs/features-chocolatey-central-management">https://chocolatey.org/docs/features-chocolatey-central-management</a></li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> <code>useChocolateyCentralManagement</code> - Use Chocolatey Central Management - Lists of installed and outdated packages will be reported to the chosen Chocolatey Central Management server.  Business editions only (version 2.0.0+). See <a href="../features/paid/chocolatey-central-management">docs</a></li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> <code>useChocolateyCentralManagementDeployments</code> - Use Chocolatey Central Management Deployments - Centrally managed deployments of packages and scripts can be sent from Chocolatey Central Management.  Business editions only (version 2.1.0+). See <a href="../features/paid/chocolatey-central-management">docs</a></li>
 </ul>
-<p>Also found at [[Chocolatey Configuration|ChocolateyConfiguration]].</p>
+<p>Also found at <a href="../usage/chocolatey-configuration">Chocolatey Configuration</a>.</p>
 <hr />
 <h3 id="step-3-verify-installation">Step 3: Verify Installation</h3>
 <ul>
@@ -409,7 +409,7 @@ Remove-ItemProperty -Path &quot;HKLM:\Software\Chocolatey&quot; -Name &quot;Uniq
 <p>:information_source: You may <em><strong>also</strong></em> need to remove the ChocolateyLocalAdmin user (if you are using it for services) and reinstall the Agent service (and CCM service if on this machine) to get that password corrected.</p>
 </blockquote>
 <h3 id="what-is-the-ccm-compatibility-matrix">What is the CCM compatibility matrix?</h3>
-<p>Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of CCM and vice versa.  Please see the [[CCM Component Compatibility Matrix|CentralManagement#ccm-component-compatibility-matrix]] for details.</p>
+<p>Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of CCM and vice versa.  Please see the <a href="./index#ccm-component-compatibility-matrix">CCM Component Compatibility Matrix</a> for details.</p>
 <h3 id="what-is-run-actual">What is Run Actual?</h3>
 <p>You may have seen <code>--run-actual</code>, what is that?</p>
 <p>This is a switch that is passed to opt out of Chocolatey Self-Service. It's typically passed by the agent service back to choco to run a command for a user. You typically would not issue this, but the agent service will, so you are likely to see it in the logs if you are looking closely.</p>
@@ -427,11 +427,11 @@ Remove-ItemProperty -Path &quot;HKLM:\Software\Chocolatey&quot; -Name &quot;Uniq
  and the receiver.  Check that sender and receiver have the same contract and the same binding (including security
  requirements, e.g. Message, Transport, None).
 </code></pre>
-<p>This is due to having a Chocolatey Agent that is v0.10.0+ versus an older Central Management Service (&lt; v0.2.0). Newer agents are incompatible because they use newer and more secure methods of communication. Please upgrade Central Management to v0.2.0+ at your earliest convenience. Or if you are on CCM v0.3.0+, your agents need to be on v0.11.0+. Please refer to the [[CCM Compability Matrix|CentralManagement#ccm-component-compatibility-matrix]].</p>
+<p>This is due to having a Chocolatey Agent that is v0.10.0+ versus an older Central Management Service (&lt; v0.2.0). Newer agents are incompatible because they use newer and more secure methods of communication. Please upgrade Central Management to v0.2.0+ at your earliest convenience. Or if you are on CCM v0.3.0+, your agents need to be on v0.11.0+. Please refer to the <a href="./index#ccm-component-compatibility-matrix">CCM Compability Matrix</a>.</p>
 <h3 id="unable-to-check-for-deployments-from-ccm">Unable to check for deployments from CCM</h3>
-<p>This will provide similar messaging as the above. The fix is the same, upgrade Chocolatey Central Management to v0.2.0+. Or if you are on CCM v0.3.0+, your agents need to be on v0.11.0+. Please refer to the [[CCM Compability Matrix|CentralManagement#ccm-component-compatibility-matrix]]. You may need to be on at least v0.3.0 and agents on v0.11.0+ if you are experiencing improper passphrase issues noted below, it means you need to likely upgrade to v0.3.0+ / v0.11.0 across your infrastructure.</p>
+<p>This will provide similar messaging as the above. The fix is the same, upgrade Chocolatey Central Management to v0.2.0+. Or if you are on CCM v0.3.0+, your agents need to be on v0.11.0+. Please refer to the <a href="./index#ccm-component-compatibility-matrix">CCM Compability Matrix</a>. You may need to be on at least v0.3.0 and agents on v0.11.0+ if you are experiencing improper passphrase issues noted below, it means you need to likely upgrade to v0.3.0+ / v0.11.0 across your infrastructure.</p>
 <h3 id="we-are-seeing-the-error-attempted-to-call-report_computer_information-with-an-improper-passphrase-in-the-ccm-service-log">We are seeing the error &quot;attempted to call report_computer_information with an improper passphrase&quot; in the CCM Service log</h3>
-<p>If you are in the CCM service logs, you may be seeing the above error. That is a bug that was found with the communication of CCM v0.2.0 and Chocolatey Agent v0.10.0. That was resolved in CCM v0.3.0 and Chocolatey Agent v0.11.0. Please see the [[CCM Component Compatibility Matrix|CentralManagement#ccm-component-compatibility-matrix]] and <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/152">Licensed Issue #152</a> for more details.</p>
+<p>If you are in the CCM service logs, you may be seeing the above error. That is a bug that was found with the communication of CCM v0.2.0 and Chocolatey Agent v0.10.0. That was resolved in CCM v0.3.0 and Chocolatey Agent v0.11.0. Please see the <a href="./index#ccm-component-compatibility-matrix">CCM Component Compatibility Matrix</a> and <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/152">Licensed Issue #152</a> for more details.</p>
 <h3 id="the-client-reports-successful-checkin-but-nothing-is-showing-up-in-ccm">The client reports successful checkin, but nothing is showing up in CCM</h3>
 <p>You need to check the CCM service logs. The agent will always report success when it communicates with the service successfully. The service may reject what it receives, but due to security settings, it won't tell the client about that.</p>
 <p>The logs are located at <code>$env:ChocolateyInstall\logs\ccm-service.log</code>. If you are on a version of CCM prior to 0.2.0, the log will be located at <code>$env:ChocolateyInstall\lib\chocolatey-management-service\tools\service\logs\chocolatey.service.host.log</code>.</p>
@@ -459,7 +459,7 @@ Remove-ItemProperty -Path &quot;HKLM:\Software\Chocolatey&quot; -Name &quot;Uniq
 Get-Service chocolatey-* | Start-Service
 </code></pre>
 <hr />
-<p>[[Central Management Setup|CentralManagementSetup]] | [[Chocolatey Central Management|CentralManagement]]</p>
+<p><a href="./setup">Central Management Setup</a> | <a href="./">Chocolatey Central Management</a></p>
 
                                     </div>
                                 <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
@@ -498,7 +498,7 @@ Get-Service chocolatey-* | Start-Service
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

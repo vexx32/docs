@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -336,13 +336,13 @@
 </ul>
 <!-- /TOC -->
 <h2 id="internal-organizational-chocolatey-deployments">Internal / Organizational Chocolatey Deployments</h2>
-<p>Refer to [[How To Set Up Chocolatey For Organizational/Internal Use|How-To-Setup-Offline-Installation]] in tandem with this article.</p>
+<p>Refer to <a href="../how-tos/setup-offline-installation">How To Set Up Chocolatey For Organizational/Internal Use</a> in tandem with this article.</p>
 <h2 id="some-administrative-actions">Some Administrative Actions</h2>
 <ul>
 <li>The email the license is sent to will automatically be subscribed to the customer advisory list. If there are other folks who need to be on that list for important notifications, please have them sign up at <a href="http://eepurl.com/b6zpGv">Chocolatey Customers</a>.</li>
 <li>Please sign up for software announcements at <a href="https://groups.google.com/d/forum/chocolatey-announce">Chocolatey Announce</a>. Direct others to sign up for the list as well.</li>
 <li>For support, remember to use the support email address (below).</li>
-<li>Learn how to install below. Installation is also found at <a href="https://chocolatey.org/docs/installation-licensed">https://chocolatey.org/docs/installation-licensed</a>.</li>
+<li>Learn how to install below.</li>
 </ul>
 <h2 id="how-do-i-know-when-the-license-is-installed">How Do I Know When the License is Installed?</h2>
 <p>Installing a licensed edition requires two parts</p>
@@ -387,9 +387,9 @@
 <blockquote>
 <p>:memo: <strong>NOTE</strong></p>
 <p><strong>Organization?</strong>
-If you are an organization deploying the licensed edition, you may want to review [[the organizational deployment guide|How-To-Setup-Offline-Installation]] in addition to this for options to deploy to more than one machine.</p>
+If you are an organization deploying the licensed edition, you may want to review <a href="../how-tos/setup-offline-installation">the organizational deployment guide</a> in addition to this for options to deploy to more than one machine.</p>
 <p>When deploying the license file out to many machines it is recommended to wrap the license placement logic into a Chocolatey package, embedding the license into the package. This is super helpful when you <a href="#how-do-i-upgrade-the-license-file">upgrade the license files</a> later when renewing or purchasing the full edition.</p>
-<p>Refer to [[How To Set Up Chocolatey For Organizational/Internal Use|How-To-Setup-Offline-Installation]] where we have a script you can run that will create the license package automagically.</p>
+<p>Refer to <a href="../how-tos/setup-offline-installation">How To Set Up Chocolatey For Organizational/Internal Use</a> where we have a script you can run that will create the license package automagically.</p>
 </blockquote>
 <h3 id="how-do-i-install-a-local-nupkg-file">How Do I Install a Local nupkg File?</h3>
 <p>See the next section - the logic is quite similar.</p>
@@ -432,7 +432,7 @@ If you are an organization deploying the licensed edition, you may want to revie
 <p>If your license expires or you remove licensing and then run choco, it may remove all of your licensed configuration settings, so be prepared to add those settings again once you have a valid license.</p>
 </blockquote>
 <h3 id="how-do-i-upgrade-the-license-file">How Do I Upgrade the License File?</h3>
-<p>You would simply place the new license file on top of the existing license file, overwriting it. This can be done in many ways, the recommended way is to create a package for the license itself. See <a href="How-To-Setup-Offline-Installation#exercise-4-create-a-package-for-the-license">Create a license for the package</a> as part of [[the organizational deployment guide|How-To-Setup-Offline-Installation]].</p>
+<p>You would simply place the new license file on top of the existing license file, overwriting it. This can be done in many ways, the recommended way is to create a package for the license itself. See <a href="How-To-Setup-Offline-Installation#exercise-4-create-a-package-for-the-license">Create a license for the package</a> as part of <a href="../how-tos/setup-offline-installation">the organizational deployment guide</a>.</p>
 <h3 id="how-do-i-upgrade-the-trial-edition">How Do I Upgrade the Trial Edition?</h3>
 <p>You will not be able to upgrade through regular means - please reach back out to the Chocolatey Software folks to get an updated edition (and possibly an extended trial license).</p>
 <h3 id="how-do-i-upgrade-the-trial-license-file">How Do I Upgrade the Trial License File?</h3>
@@ -571,7 +571,7 @@ chocolateyfeature {'useRememberedArgumentsForUpgrades':
 }
 
 ## - LICENSED OPTIONS -
-### See https://chocolatey.org/docs/installation-licensed
+### See https://docs.chocolatey.org/en-us/usage/installation-licensed
 
 file { ['C:/ProgramData/chocolatey','C:/ProgramData/chocolatey/license']:
   ensure =&gt; directory,
@@ -629,7 +629,7 @@ chocolateyfeature {'virusCheck':
 }
 
 ## Package Internalizer enhancement
-## See https://chocolatey.org/docs/features-automatically-recompile-packages
+## See https://docs.chocolatey.org/en-us/features/paid/automatically-recompile-packages
 chocolateyfeature {'internalizeAppendUseOriginalLocation':
   ensure  =&gt; enabled,
   require =&gt; Package['chocolatey.extension'],
@@ -675,7 +675,7 @@ chocolateysource {'local_chocolatey_server':
 <ul>
 <li><code>choco install chocolatey-agent &lt;options&gt;</code></li>
 </ul>
-<p>For more on the agent service, please see [[Agent Service|FeaturesAgentService]].</p>
+<p>For more on the agent service, please see <a href="../features/paid/agent-service">Agent Service</a>.</p>
 <h3 id="ensure-the-chocolatey-agent-service-with-puppet">Ensure the Chocolatey Agent Service with Puppet</h3>
 <p>This is used in conjunction with the script in <a href="#set-up-licensed-edition-with-puppet">Set Up Licensed Edition With Puppet</a>.
 Here are some additional commands and scripts you will need for that setup:</p>
@@ -684,7 +684,7 @@ Here are some additional commands and scripts you will need for that setup:</p>
 <li>Use <code>choco push</code> to push packages to your internal package repository (e.g. <code>choco push chocolatey-agent.0.8.0.nupkg -s http://internal_repo/ -k abc123</code>)</li>
 </ul>
 <pre><code class="language-puppet">## - Chocolatey Agent (Additional optional Chocolatey for Business install) -
-## See https://chocolatey.org/docs/features-agent-service
+## See https://docs.chocolatey.org/en-us/features/paid/agent-service
 
 ## ensure we set the user up properly
 chocolateyfeature {'useLocalSystemForServiceInstalls':
@@ -882,7 +882,7 @@ package {'chocolateygui':
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

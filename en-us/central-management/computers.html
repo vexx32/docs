@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -311,7 +311,7 @@
 <li>The <code>centralManagementServiceUrl</code> is set correctly in the chocolatey configuration file (typically to <code>https://&lt;FQDN_to_CCM_service_host&gt;:24020/ChocolateyManagementService</code>)</li>
 <li>The client has access to the above URL (this may require opening the port in your firewall, etc.) so that it can resolve the SSL certificate necessary to communicate with the CCM service.</li>
 </ol>
-<p>Please see [[Central Management Client Setup|CentralManagementSetupClient]] for more details and setup.</p>
+<p>Please see <a href="./setup-client">Central Management Client Setup</a> for more details and setup.</p>
 <hr />
 <h2 id="viewing-installed-software-on-a-computer">Viewing Installed Software on a Computer</h2>
 <p>From the main Computers page in Central Management, locate the computer of interest in the list or by providing a search term in the table filter.
@@ -335,17 +335,17 @@ Select the <strong>:gear: Actions</strong> menu in the corresponding right-hand 
 <h3 id="computers-are-not-showing-up-in-ccm">Computers are not showing up in CCM</h3>
 <p>You need to check the CCM service logs. The agent will always report success when it communicates with the service successfully. The service may reject what it receives, but due to security settings, it won't tell the client about that.</p>
 <p>The logs are located at <code>$env:ChocolateyInstall\logs\ccm-service.log</code>. If you are on a version of CCM prior to 0.2.0, the log will be located at <code>$env:ChocolateyInstall\lib\chocolatey-management-service\tools\service\logs\chocolatey.service.host.log</code>.</p>
-<p>For more common errors related to checking in, see the [[setup section (and component setup sub-sections)|CentralManagementSetup]] as they dive deeper into common errors and resolutions related to things such as this.</p>
+<p>For more common errors related to checking in, see the <a href="./setup">setup section (and component setup sub-sections)</a> as they dive deeper into common errors and resolutions related to things such as this.</p>
 <hr />
 <h2 id="related-topics">Related Topics</h2>
 <ul>
-<li>[[Chocolatey Central Management|CentralManagement]]</li>
-<li>[[Central Management - Software|CentralManagementSoftware]]</li>
-<li>[[Central Management - Groups|CentralManagementGroups]]</li>
-<li>[[Central Management - Reports|CentralManagementReports]]</li>
+<li><a href="./">Chocolatey Central Management</a></li>
+<li><a href="./software">Central Management - Software</a></li>
+<li><a href="./groups">Central Management - Groups</a></li>
+<li><a href="./reports">Central Management - Reports</a></li>
 </ul>
 <hr />
-<p>[[Chocolatey Central Management|CentralManagement]]</p>
+<p><a href="./">Chocolatey Central Management</a></p>
 
                                     </div>
                                 <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
@@ -370,7 +370,7 @@ Select the <strong>:gear: Actions</strong> menu in the corresponding right-hand 
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

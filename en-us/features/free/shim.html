@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -329,7 +329,7 @@
 <p>These executables can come as part of the package or downloaded to the package folder during the install script.</p>
 <p>Chocolatey ensures the folder <code>&quot;$($env:ChocolateyInstall)\bin&quot;</code> in the PATH environment variable, allowing you to put tools on the PATH without cluttering up the PATH.</p>
 <h2 id="see-it-in-action">See It In Action</h2>
-<p><img src="/assets/images/features/features_shimgen.png" alt="Shimming - if you are on https://chocolatey.org/docs/features-shim, see commented html below for detailed description of image" /></p>
+<p><img src="/assets/images/features/features_shimgen.png" alt="Shimming - if you are on https://docs.chocolatey.org/en-us/features/free/shim, see commented html below for detailed description of image" /></p>
 <!--
 Text in the image above:
 
@@ -368,17 +368,17 @@ The image shows installing ruby.portable, then running `ruby -v` followed by `ru
 <h3 id="why-not-simple-batch-redirection">Why not simple batch redirection?</h3>
 <p>We tried using batch (&quot;<em>.bat&quot;) files, and it mostly works, but when applications calling other applications expect the file name to be &quot;.exe&quot;, a file named &quot;</em>.bat&quot; doesn't work. Batch files also don't work in all shells, and shims do.</p>
 <h3 id="have-you-thought-about-shimming-in-more-places">Have you thought about shimming in more places?</h3>
-<p>Yes, but we have not decided whether shimming Program Files is a good idea yet or not. Packages can explicitly enforce shims with [[Install-BinFile|HelpersInstallBinFile]].</p>
+<p>Yes, but we have not decided whether shimming Program Files is a good idea yet or not. Packages can explicitly enforce shims with <a href="../../creating-packages/helpers/install-binfile">Install-BinFile</a>.</p>
 <h3 id="i-need-to-shim-a-non-exe-file">I need to shim a non-exe file.</h3>
-<p>If you are creating a package and you need to shim a file that doesn't end in .exe (like a .bat file), you should look at [[Install-BinFile|HelpersInstallBinFile]].</p>
+<p>If you are creating a package and you need to shim a file that doesn't end in .exe (like a .bat file), you should look at <a href="../../creating-packages/helpers/install-binfile">Install-BinFile</a>.</p>
 <h3 id="i-need-to-exclude-a-file-from-shimming">I need to exclude a file from shimming.</h3>
 <p>If you are creating a package and you want to skip creation of a shim for a particular file, you can create a &quot;*.ignore&quot; file.</p>
 <p>Set an empty file next to the executable (or where it will be downloaded/unpacked to), sharing the same name with the executable and appending &quot;.ignore&quot;. For example, if your file is named &quot;<code>bob.exe</code>&quot;, you need a file named &quot;<code>bob.exe.ignore</code>&quot; (pay attention to case - &quot;<code>BOB.exe.ignore</code>&quot; may not work with all versions of Chocolatey).</p>
-<p>[[Read more...|CreatePackages#how-do-i-exclude-executables-from-getting-shims]]</p>
+<p><a href="../../creating-packages/create-packages#how-do-i-exclude-executables-from-getting-shims">Read more...</a></p>
 <h3 id="how-can-i-ensure-a-gui-shim">How can I ensure a GUI shim?</h3>
 <p>Chocolatey 0.9.10+ will automatically detect GUI applications and adjust the shim accordingly. The detection may not always be accurate, and older versions of Chocolatey don't handle this, so it's best to create a &quot;*.gui&quot; file to direct the shim creation to be for a GUI application.</p>
 <p>If you are creating a package and want the shim to exit immediately after calling the application, create an empty &quot;*.gui&quot; file next to where the exe file is (or where it will be downloaded/unpacked to), sharing the same name with the executable and appending &quot;.gui&quot;. For example, if your file is named &quot;<code>bob.exe</code>&quot;, you need a file named &quot;<code>bob.exe.gui</code>&quot; (pay attention to case - &quot;<code>BOB.exe.gui</code>&quot; may not work with all versions of Chocolatey).</p>
-<p>[[Read more...|CreatePackages#how-do-i-set-up-shims-for-applications-that-have-a-gui]]</p>
+<p><a href="../../creating-packages/create-packages#how-do-i-set-up-shims-for-applications-that-have-a-gui">Read more...</a></p>
 <h3 id="a-package-messed-up-and-should-have-set-up-a-shim-as-a-gui">A package messed up and should have set up a shim as a GUI.</h3>
 <p>Call the shim with <code>--shimgen-gui</code> to target the correct behavior.</p>
 <h3 id="an-executable-requires-being-run-from-the-folder-where-it-actually-is">An executable requires being run from the folder where it actually is.</h3>
@@ -418,7 +418,7 @@ The image shows installing ruby.portable, then running `ruby -v` followed by `ru
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

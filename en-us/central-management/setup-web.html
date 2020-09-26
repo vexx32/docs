@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -364,7 +364,7 @@
 <ul>
 <li>
 <blockquote>
-<p>:warning: The [[database|CentralManagementSetupDatabase]] must be setup and available, along with [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+<p>:warning: The <a href="./setup-database">database</a> must be setup and available, along with <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 </li>
 <li>Windows Server 2012+</li>
@@ -433,14 +433,14 @@ choco pin add --name=&quot;'dotnetcore-windowshosting'&quot; --version=&quot;'2.
 <h3 id="scenarios">Scenarios</h3>
 <h4 id="sql-server-windows-authentication">SQL Server Windows Authentication</h4>
 <h5 id="use-active-directory-domain-account">Use Active Directory Domain Account</h5>
-<p>Scenario 1: Active Directory - you have set up the [[database|CentralManagementSetupDatabase]] to use Windows Authentication (or Mixed Mode Authentication).</p>
+<p>Scenario 1: Active Directory - you have set up the <a href="./setup-database">database</a> to use Windows Authentication (or Mixed Mode Authentication).</p>
 <pre><code class="language-powershell">choco install chocolatey-management-web -y --package-parameters=&quot;'/ConnectionString:Server=&lt;RemoteSqlHost&gt;;Database=ChocolateyManagement;Trusted_Connection=True; /Username:&lt;DomainAccount&gt;'&quot; --package-parameters-sensitive=&quot;'/Password:&lt;domain account password&gt;'&quot;
 </code></pre>
 <blockquote>
 <p>:memo: <strong>NOTE</strong>: Note the connection string doesn't include credentials. That's because Windows Authentication for SQL Server uses the context of what is running it and why the service itself needs the right user/password. In this case, whatever is running the IIS Application Pool is the user you need to ensure has access to the database.</p>
 </blockquote>
 <h5 id="use-local-windows-account-to-local-sql-server">Use Local Windows Account to Local SQL Server</h5>
-<p>Scenario 2: Monolithic - you have set up the [[database|CentralManagementSetupDatabase]] to use Windows Authentication (or Mixed Mode Authentication). You wish to use a local Windows account to connect to the local database.</p>
+<p>Scenario 2: Monolithic - you have set up the <a href="./setup-database">database</a> to use Windows Authentication (or Mixed Mode Authentication). You wish to use a local Windows account to connect to the local database.</p>
 <ul>
 <li>Specify User:</li>
 </ul>
@@ -448,7 +448,7 @@ choco pin add --name=&quot;'dotnetcore-windowshosting'&quot; --version=&quot;'2.
 </code></pre>
 <blockquote>
 <p>:warning: <strong>WARNING</strong></p>
-<p>Please ensure the user <code>&lt;LocalWindowsAccount&gt;</code> has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+<p>Please ensure the user <code>&lt;LocalWindowsAccount&gt;</code> has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 <ul>
 <li>Default User (<code>IIS APPPOOL\ChocolateyCentralManagement</code>)</li>
@@ -457,7 +457,7 @@ choco pin add --name=&quot;'dotnetcore-windowshosting'&quot; --version=&quot;'2.
 </code></pre>
 <blockquote>
 <p>:warning: <strong>WARNING</strong></p>
-<p>Please ensure the user <code>IIS APPPOOL\ChocolateyCentralManagement</code> has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+<p>Please ensure the user <code>IIS APPPOOL\ChocolateyCentralManagement</code> has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 <blockquote>
 <p>:memo: <strong>NOTE</strong>: Note the connection string doesn't include credentials. That's because Windows Authentication for SQL Server uses the context of what is running it and why the service itself needs the right user/password. Whatever is running the IIS Application Pool is the user you need to ensure is in the database.</p>
@@ -473,7 +473,7 @@ choco pin add --name=&quot;'dotnetcore-windowshosting'&quot; --version=&quot;'2.
 It can also result in &quot;Failed to generate a user instance of SQL Server due to failure in retrieving the user's local application data path.&quot;</p>
 </blockquote>
 <h5 id="use-local-windows-account-to-remote-sql-server">Use Local Windows Account to Remote SQL Server</h5>
-<p>Scenario 3: you have set up the [[database|CentralManagementSetupDatabase]] to use Windows Authentication (or Mixed Mode Authentication). You wish to use a local Windows account to connect to a remote database (on another computer).</p>
+<p>Scenario 3: you have set up the <a href="./setup-database">database</a> to use Windows Authentication (or Mixed Mode Authentication). You wish to use a local Windows account to connect to a remote database (on another computer).</p>
 <blockquote>
 <p>:warning: <strong>WARNING</strong></p>
 <p>STOP right here.
@@ -482,12 +482,12 @@ This is an invalid scenario and will not work. Please look at one of the other o
 <p>It's worth noting here that <code>ChocolateyLocalAdmin</code> on two boxes is NOT the same account, so there is no way for Windows to recognize the account from a different box.</p>
 <h4 id="sql-server-account-authentication">SQL Server Account Authentication</h4>
 <h5 id="use-sql-server-authentication-locally">Use SQL Server Authentication Locally</h5>
-<p>Scenario 4: Monolithic - you are installing the management service on the same machine as a SQL Server Express instance. You likely have a smaller environment where you have up to 1,000 machines. You have set up the [[database|CentralManagementSetupDatabase]] to use Mixed Mode Authentication.</p>
+<p>Scenario 4: Monolithic - you are installing the management service on the same machine as a SQL Server Express instance. You likely have a smaller environment where you have up to 1,000 machines. You have set up the <a href="./setup-database">database</a> to use Mixed Mode Authentication.</p>
 <pre><code class="language-powershell">choco install chocolatey-management-web -y --package-parameters-sensitive=&quot;'/ConnectionString:Server=Localhost;Database=ChocolateyManagement;User ID=ChocoUser;Password=Ch0c0R0cks;'&quot;
 </code></pre>
 <blockquote>
 <p>:warning: <strong>WARNING</strong></p>
-<p>Please ensure the login has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+<p>Please ensure the login has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 <ul>
 <li>SQL Server Express:</li>
@@ -496,15 +496,15 @@ This is an invalid scenario and will not work. Please look at one of the other o
 </code></pre>
 <blockquote>
 <p>:warning: <strong>WARNING</strong></p>
-<p>Please ensure the login has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+<p>Please ensure the login has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 <h5 id="use-sql-server-account-to-remote-sql-server">Use SQL Server Account to Remote SQL Server</h5>
-<p>Scenario 5: Split - you are installing the management service(s) on a server, and targeting an existing SQL Server instance in your organization. You have set up the [[database|CentralManagementSetupDatabase]] to use Mixed Mode Authentication.</p>
+<p>Scenario 5: Split - you are installing the management service(s) on a server, and targeting an existing SQL Server instance in your organization. You have set up the <a href="./setup-database">database</a> to use Mixed Mode Authentication.</p>
 <pre><code class="language-powershell">choco install chocolatey-management-web -y --package-parameters-sensitive=&quot;'/ConnectionString:Server=&lt;RemoteSqlHost&gt;;Database=ChocolateyManagement;User ID=ChocoUser;Password=Ch0c0R0cks;'&quot;
 </code></pre>
 <blockquote>
 <p>:warning: <strong>WARNING</strong></p>
-<p>Please ensure the login has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+<p>Please ensure the login has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 <hr />
 <h2 id="step-3-verify-installation">Step 3: Verify Installation</h2>
@@ -579,7 +579,7 @@ This is an invalid scenario and will not work. Please look at one of the other o
 <h3 id="can-i-install-the-chocolatey-central-management-web-site-under-a-virtual-directory-in-iis">Can I install the Chocolatey Central Management Web Site under a Virtual Directory in IIS?</h3>
 <p>Currently no.  The Chocolatey Central Management Web Site expects to reside at the site level within IIS.</p>
 <h3 id="what-is-the-ccm-compatibility-matrix">What is the CCM compatibility matrix?</h3>
-<p>Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of CCM and vice versa.  Please see the [[CCM Component Compatibility Matrix|CentralManagement#ccm-component-compatibility-matrix]] for details.</p>
+<p>Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of CCM and vice versa.  Please see the <a href="./index#ccm-component-compatibility-matrix">CCM Component Compatibility Matrix</a> for details.</p>
 <h3 id="i-entered-incorrect-database-details-on-install-do-i-need-to-reinstall-to-fix-that">I entered incorrect database details on install, do I need to reinstall to fix that?</h3>
 <p>It depends. You can simply go to the appsettings.json file and adjust the connection string to be plaintext. It will remain in plaintext though (at least until upgrade), so if you have actual password details you need to keep secure, you should do a force installation.</p>
 <ol>
@@ -678,7 +678,7 @@ Get-Service chocolatey-* | Start-Service
 <li>Check for <a href="#non-default-app-pool-user-considerations">Non-Default App Pool User Considerations</a>.</li>
 </ul>
 <hr />
-<p>[[Central Management Setup|CentralManagementSetup]] | [[Chocolatey Central Management|CentralManagement]]</p>
+<p><a href="./setup">Central Management Setup</a> | <a href="./">Chocolatey Central Management</a></p>
 
                                     </div>
                                 <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
@@ -725,7 +725,7 @@ Get-Service chocolatey-* | Start-Service
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

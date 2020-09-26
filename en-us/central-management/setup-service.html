@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -373,7 +373,7 @@
 <ul>
 <li>
 <blockquote>
-<p>:warning: The [[database|CentralManagementSetupDatabase]] must be setup and available, along with [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+<p>:warning: The <a href="./setup-database">database</a> must be setup and available, along with <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 </li>
 <li>Windows Server 2012+</li>
@@ -433,7 +433,7 @@ choco config set --name=&quot;'centralManagementServiceUrl'&quot; --value=&quot;
 </ul>
 <h3 id="chocolatey-configuration">Chocolatey Configuration</h3>
 <ul>
-<li><code>centralManagementServiceUrl</code> = <strong>' '</strong> (empty) - The URL that should be used to communicate with Chocolatey Central Management. It should look something like https://servicemachineFQDN:24020/ChocolateyManagementService. See <a href="https://chocolatey.org/docs/central-management-setup-service#fqdn-usage">https://chocolatey.org/docs/central-management-setup-service#fqdn-usage</a>. Defaults to '' (empty). NOTE: Chocolatey Agent and CCM Service share this value on a machine that contains both. If blank, the CCM Service will construct a URL based on defaults of the machine, but is required to be set for Agents.</li>
+<li><code>centralManagementServiceUrl</code> = <strong>' '</strong> (empty) - The URL that should be used to communicate with Chocolatey Central Management. It should look something like https://servicemachineFQDN:24020/ChocolateyManagementService. See <a href="../features/paid/chocolatey-central-management#fqdn-usage">FQDN usage</a>. Defaults to '' (empty). NOTE: Chocolatey Agent and CCM Service share this value on a machine that contains both. If blank, the CCM Service will construct a URL based on defaults of the machine, but is required to be set for Agents.</li>
 </ul>
 <blockquote>
 <p>:warning: <strong>WARNING</strong>: The Chocolatey Agent installed on the same machine that has the CCM Service installed will share the <code>centralManagementServiceUrl</code> setting, so that agent can only report into that CCM Service.</p>
@@ -473,18 +473,18 @@ choco config set --name=&quot;'centralManagementServiceUrl'&quot; --value=&quot;
 <h3 id="scenarios">Scenarios</h3>
 <h4 id="sql-server-windows-authentication">SQL Server Windows Authentication</h4>
 <h5 id="use-active-directory-domain-account">Use Active Directory Domain Account</h5>
-<p>Scenario 1: Active Directory - you have set up the [[database|CentralManagementSetupDatabase]] to use Windows Authentication (or Mixed Mode Authentication).</p>
+<p>Scenario 1: Active Directory - you have set up the <a href="./setup-database">database</a> to use Windows Authentication (or Mixed Mode Authentication).</p>
 <pre><code class="language-powershell">choco install chocolatey-management-service -y --package-parameters=&quot;'/ConnectionString:Server=&lt;RemoteSqlHost&gt;;Database=ChocolateyManagement;Trusted_Connection=True; /Username:&lt;DomainAccount&gt;'&quot; --package-parameters-sensitive=&quot;'/Password:&lt;domain account password&gt;'&quot;
 </code></pre>
 <blockquote>
 <p>:warning: <strong>WARNING</strong></p>
-<p>Please ensure the user <code>&lt;DomainAccount&gt;</code> has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+<p>Please ensure the user <code>&lt;DomainAccount&gt;</code> has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 <blockquote>
 <p>:memo: <strong>NOTE</strong>: Note the connection string doesn't include credentials. That's because Windows Authentication for SQL Server uses the context of what is running it and why the service itself needs the right user/password.</p>
 </blockquote>
 <h5 id="use-local-windows-account-to-local-sql-server">Use Local Windows Account to Local SQL Server</h5>
-<p>Scenario 2: Monolithic - you have set up the [[database|CentralManagementSetupDatabase]] to use Windows Authentication (or Mixed Mode Authentication). You wish to use a local Windows account to connect to the local database.</p>
+<p>Scenario 2: Monolithic - you have set up the <a href="./setup-database">database</a> to use Windows Authentication (or Mixed Mode Authentication). You wish to use a local Windows account to connect to the local database.</p>
 <ul>
 <li>Specify User:</li>
 </ul>
@@ -492,7 +492,7 @@ choco config set --name=&quot;'centralManagementServiceUrl'&quot; --value=&quot;
 </code></pre>
 <blockquote>
 <p>:warning: <strong>WARNING</strong></p>
-<p>Please ensure the user <code>&lt;LocalWindowsAccount&gt;</code> has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+<p>Please ensure the user <code>&lt;LocalWindowsAccount&gt;</code> has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 <ul>
 <li>ChocolateyLocalAdmin User:</li>
@@ -501,7 +501,7 @@ choco config set --name=&quot;'centralManagementServiceUrl'&quot; --value=&quot;
 </code></pre>
 <blockquote>
 <p>:warning: <strong>WARNING</strong></p>
-<p>Please ensure the user <code>ChocolateyLocalAdmin</code> has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+<p>Please ensure the user <code>ChocolateyLocalAdmin</code> has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 <blockquote>
 <p>:memo: <strong>NOTE</strong>: Note the connection string doesn't include credentials. That's because Windows Authentication for SQL Server uses the context of what is running it and why the service itself needs the right user/password.</p>
@@ -517,7 +517,7 @@ choco config set --name=&quot;'centralManagementServiceUrl'&quot; --value=&quot;
 It can also result in &quot;Failed to generate a user instance of SQL Server due to failure in retrieving the user's local application data path.&quot;</p>
 </blockquote>
 <h5 id="use-local-windows-account-to-remote-sql-server">Use Local Windows Account to Remote SQL Server</h5>
-<p>Scenario 3: you have set up the [[database|CentralManagementSetupDatabase]] to use Windows Authentication (or Mixed Mode Authentication). You wish to use a local Windows account to connect to a remote database (on another computer).</p>
+<p>Scenario 3: you have set up the <a href="./setup-database">database</a> to use Windows Authentication (or Mixed Mode Authentication). You wish to use a local Windows account to connect to a remote database (on another computer).</p>
 <blockquote>
 <p>:warning: <strong>WARNING</strong></p>
 <p>STOP right here.
@@ -526,12 +526,12 @@ This is an invalid scenario and will not work. Please look at one of the other o
 <p>It's worth noting here that the local Windows user <code>ChocolateyLocalAdmin</code> on two boxes is NOT the same account, so there is no way for Windows to recognize the account from a different box.</p>
 <h4 id="sql-server-account-authentication">SQL Server Account Authentication</h4>
 <h5 id="use-sql-server-authentication-locally">Use SQL Server Authentication Locally</h5>
-<p>Scenario 4: Monolithic - you are installing the management service on the same machine as a SQL Server Express instance. You likely have a smaller environment where you have up to 1,000 machines. You have set up the [[database|CentralManagementSetupDatabase]] to use Mixed Mode Authentication.</p>
+<p>Scenario 4: Monolithic - you are installing the management service on the same machine as a SQL Server Express instance. You likely have a smaller environment where you have up to 1,000 machines. You have set up the <a href="./setup-database">database</a> to use Mixed Mode Authentication.</p>
 <pre><code class="language-powershell">choco install chocolatey-management-service -y --package-parameters-sensitive=&quot;'/ConnectionString:Server=Localhost;Database=ChocolateyManagement;User ID=ChocoUser;Password=Ch0c0R0cks;'&quot;
 </code></pre>
 <blockquote>
 <p>:warning: <strong>WARNING</strong></p>
-<p>Please ensure the login has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+<p>Please ensure the login has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 <ul>
 <li>SQL Server Express:</li>
@@ -540,15 +540,15 @@ This is an invalid scenario and will not work. Please look at one of the other o
 </code></pre>
 <blockquote>
 <p>:warning: <strong>WARNING</strong></p>
-<p>Please ensure the login has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+<p>Please ensure the login has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 <h5 id="use-sql-server-account-to-remote-sql-server">Use SQL Server Account to Remote SQL Server</h5>
-<p>Scenario 5: Split - you are installing the management service(s) on a server, and targeting an existing SQL Server instance in your organization. You have set up the [[database|CentralManagementSetupDatabase]] to use Mixed Mode Authentication.</p>
+<p>Scenario 5: Split - you are installing the management service(s) on a server, and targeting an existing SQL Server instance in your organization. You have set up the <a href="./setup-database">database</a> to use Mixed Mode Authentication.</p>
 <pre><code class="language-powershell">choco install chocolatey-management-service -y --package-parameters-sensitive=&quot;'/ConnectionString:Server=&lt;RemoteSqlHost&gt;;Database=ChocolateyManagement;User ID=ChocoUser;Password=Ch0c0R0cks;'&quot;
 </code></pre>
 <blockquote>
 <p>:warning: <strong>WARNING</strong></p>
-<p>Please ensure the login has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See [[logins and access|CentralManagementSetupDatabase#step-2-set-up-sql-server-logins-and-access]].</p>
+<p>Please ensure the login has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 <hr />
 <h2 id="step-3-verify-installation">Step 3: Verify Installation</h2>
@@ -594,7 +594,7 @@ This is an invalid scenario and will not work. Please look at one of the other o
 <p>:memo: <strong>NOTE:</strong> If you are an expert in managing X509 certificates with load balancing, you can certainly set this up, but if you can't get it to work, move to a supported scenario. Support folks will tell you the same.</p>
 </blockquote>
 <h3 id="we-want-to-set-up-the-chocolatey-central-management-service-to-use-a-domain-account-that-will-have-local-admin-on-each-box.can-we-do-this">We want to set up the Chocolatey Central Management service to use a domain account that will have local admin on each box. Can we do this?</h3>
-<p>Yes, absolutely. You will pass those credentials through at install/upgrade time, and you will also want to turn on the feature useRememberedArgumentsForUpgrades (see <a href="https://chocolatey.org/docs/chocolatey-configuration#features">configuration</a>) so that future upgrades will have that information available. The remembered arguments are stored encrypted on the box (that encryption is reversible so you may opt to pass that information each time).</p>
+<p>Yes, absolutely. You will pass those credentials through at install/upgrade time, and you will also want to turn on the feature useRememberedArgumentsForUpgrades (see <a href="../usage/chocolatey-configuration#features">configuration</a>) so that future upgrades will have that information available. The remembered arguments are stored encrypted on the box (that encryption is reversible so you may opt to pass that information each time).</p>
 <ul>
 <li><code>/Username</code>: - provide username - instead of using the default 'ChocolateyLocalAdmin' user. This user should be a local administrator.</li>
 <li><code>/Password</code>: - optional password for the user.</li>
@@ -629,7 +629,7 @@ This is an invalid scenario and will not work. Please look at one of the other o
 <h3 id="can-i-take-advantage-of-chocolatey-managed-passwords-with-my-own-windows-services">Can I take advantage of Chocolatey managed passwords with my own Windows services?</h3>
 <p>Yes, absolutely. If you use C4B's PowerShell Windows Services code, you will be able to install services and have Chocolatey manage the password for those as well.</p>
 <h3 id="what-is-the-ccm-compatibility-matrix">What is the CCM compatibility matrix?</h3>
-<p>Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of CCM and vice versa.  Please see the [[CCM Component Compatibility Matrix|CentralManagement#ccm-component-compatibility-matrix]] for details.</p>
+<p>Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of CCM and vice versa.  Please see the <a href="./index#ccm-component-compatibility-matrix">CCM Component Compatibility Matrix</a> for details.</p>
 <h3 id="i-entered-incorrect-database-details-on-install-do-i-need-to-reinstall-to-fix-that">I entered incorrect database details on install, do I need to reinstall to fix that?</h3>
 <p>It depends. You can simply go to the appsettings.json file and adjust the connection string to be plaintext. It will remain in plaintext though (at least until upgrade), so if you have actual password details you need to keep secure, you should do a force installation.</p>
 <ol>
@@ -679,11 +679,11 @@ This is an invalid scenario and will not work. Please look at one of the other o
  and the receiver.  Check that sender and receiver have the same contract and the same binding (including security
  requirements, e.g. Message, Transport, None).
 </code></pre>
-<p>This is due to having a Chocolatey Agent that is v0.10.0+ versus an older Central Management Service (&lt; v0.2.0). Newer agents are incompatible because they use newer and more secure methods of communication. Please upgrade Central Management to v0.2.0+ at your earliest convenience. Or if you are on CCM v0.3.0+, your agents need to be on v0.11.0+. Please refer to the [[CCM Compability Matrix|CentralManagement#ccm-component-compatibility-matrix]].</p>
+<p>This is due to having a Chocolatey Agent that is v0.10.0+ versus an older Central Management Service (&lt; v0.2.0). Newer agents are incompatible because they use newer and more secure methods of communication. Please upgrade Central Management to v0.2.0+ at your earliest convenience. Or if you are on CCM v0.3.0+, your agents need to be on v0.11.0+. Please refer to the <a href="./index#ccm-component-compatibility-matrix">CCM Compability Matrix</a>.</p>
 <h3 id="unable-to-check-for-deployments-from-ccm">Unable to check for deployments from CCM</h3>
-<p>This will provide similar messaging as the above. The fix is the same, upgrade Chocolatey Central Management to v0.2.0+. Or if you are on CCM v0.3.0+, your agents need to be on v0.11.0+. Please refer to the [[CCM Compability Matrix|CentralManagement#ccm-component-compatibility-matrix]]. You may need to be on at least v0.3.0 and agents on v0.11.0+ if you are experiencing improper passphrase issues noted below, it means you need to likely upgrade to v0.3.0+ / v0.11.0 across your infrastructure.</p>
+<p>This will provide similar messaging as the above. The fix is the same, upgrade Chocolatey Central Management to v0.2.0+. Or if you are on CCM v0.3.0+, your agents need to be on v0.11.0+. Please refer to the <a href="./index#ccm-component-compatibility-matrix">CCM Compability Matrix</a>. You may need to be on at least v0.3.0 and agents on v0.11.0+ if you are experiencing improper passphrase issues noted below, it means you need to likely upgrade to v0.3.0+ / v0.11.0 across your infrastructure.</p>
 <h3 id="we-are-seeing-the-error-attempted-to-call-report_computer_information-with-an-improper-passphrase-in-the-ccm-service-log">We are seeing the error &quot;attempted to call report_computer_information with an improper passphrase&quot; in the CCM Service log</h3>
-<p>If you are in the CCM service logs, you may be seeing the above error. That is a bug that was found with the communication of CCM v0.2.0 and Chocolatey Agent v0.10.0. That was resolved in CCM v0.3.0 and Chocolatey Agent v0.11.0. Please see the [[CCM Component Compatibility Matrix|CentralManagement#ccm-component-compatibility-matrix]] and <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/152">Licensed Issue #152</a> for more details.</p>
+<p>If you are in the CCM service logs, you may be seeing the above error. That is a bug that was found with the communication of CCM v0.2.0 and Chocolatey Agent v0.10.0. That was resolved in CCM v0.3.0 and Chocolatey Agent v0.11.0. Please see the <a href="./index#ccm-component-compatibility-matrix">CCM Component Compatibility Matrix</a> and <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/152">Licensed Issue #152</a> for more details.</p>
 <h3 id="the-client-reports-successful-checkin-but-nothing-is-showing-up-in-ccm">The client reports successful checkin, but nothing is showing up in CCM</h3>
 <p>You need to check the CCM service logs. The agent will always report success when it communicates with the service successfully. The service may reject what it receives, but due to security settings, it won't tell the client about that.</p>
 <p>The logs are located at <code>$env:ChocolateyInstall\logs\ccm-service.log</code>. If you are on a version of CCM prior to 0.2.0, the log will be located at <code>$env:ChocolateyInstall\lib\chocolatey-management-service\tools\service\logs\chocolatey.service.host.log</code>.</p>
@@ -739,7 +739,7 @@ Get-Service chocolatey-* | Start-Service
 <li>Run <code>netsh http add urlacl url=https://+:24020/ChocolateyManagementService user=&lt;DOMAIN\USERNAME&gt;</code> from an elevated shell (replacing <code>&lt;DOMAIN\USERNAME&gt;</code> with the account)</li>
 </ul>
 <hr />
-<p>[[Central Management Setup|CentralManagementSetup]] | [[Chocolatey Central Management|CentralManagement]]</p>
+<p><a href="./setup">Central Management Setup</a> | <a href="./">Chocolatey Central Management</a></p>
 
                                     </div>
                                 <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
@@ -802,7 +802,7 @@ Get-Service chocolatey-* | Start-Service
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

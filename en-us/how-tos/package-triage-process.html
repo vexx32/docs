@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -298,13 +298,13 @@
 </ul>
 <h3 id="are-you-a-software-vendor">Are you a Software Vendor?</h3>
 <h4 id="does-a-chocolatey-package-that-installs-my-software-violate-distribution-rights">Does a Chocolatey package that installs my software violate distribution rights?</h4>
-<p>In most cases no. Most packages you will find on the community feed, also known as <a href="https://chocolatey.org/packages">https://chocolatey.org/packages</a> use automation scripts to download the software from the [[official distribution point|Legal#distributions-aka-chocolatey-packages]].</p>
+<p>In most cases no. Most packages you will find on the community feed, also known as <a href="https://chocolatey.org/packages">https://chocolatey.org/packages</a> use automation scripts to download the software from the <a href="../additional-information/legal#distributions-aka-chocolatey-packages">official distribution point</a>.</p>
 <p>If you visit the package page and slide down to the Files heading, you can see what is included in the package. Many times you will see only a chocolateyInstall.ps1 and a chocolateyUninstall.ps1. You can also see the contents of those files right here so you can review what they are doing (the language is PowerShell, but with most packages it is typically easy to follow what they are doing).</p>
 <p><img src="/assets/images/moderation-10.jpg" alt="files section with chocolateyInstall.ps1 expanded" /></p>
 <p>If you don't trust the package page (or if the package was published before July 2014), we invite you to download the actual package and inspect the contents (the .nupkg is just a .zip file after all). On the left menu there is a download link. You can download and rename the .nupkg to a .zip file and extract it to see the contents.</p>
 <p><img src="/assets/images/triage-download.jpg" alt="download link" /></p>
 <p>Many of the packages may look like they include binaries because of the result after an install, but that's just a fantastic effect of the automation scripts working smoothly and almost unnoticeably.</p>
-<p>We take distribution rights very seriously - see [[legal|Legal#distributions-aka-chocolatey-packages]]. If you do happen to find that the package <em><strong>is</strong></em> violating your distribution rights, please see the next section.</p>
+<p>We take distribution rights very seriously - see <a href="../additional-information/legal#distributions-aka-chocolatey-packages">legal</a>. If you do happen to find that the package <em><strong>is</strong></em> violating your distribution rights, please see the next section.</p>
 <h4 id="the-package-is-violating-distribution-rights">The package IS violating distribution rights</h4>
 <p>You've checked the previous section and it doesn't apply, and you've found that the package <em><strong>is</strong></em> violating distribution rights as it bundles software binaries without your permission and/or license doesn't allow for it.</p>
 <p>It's not often that a moderator would approved a package that violates distribution rights, but if you find one, please click the &quot;Report Abuse&quot; link on the left hand side of the package page, and fill out and submit the form. The site admins for the community feed will follow up with you shortly after.</p>
@@ -318,7 +318,7 @@
 <p>Use the Contact Maintainers link on the package page of the community feed or the Disqus comment thread (at the bottom of the package page) to reach out to the maintainers. Neither require an account on Chocolatey.org.</p>
 <p><img src="/assets/images/triage-maintainers.jpg" alt="contact maintainers link" /></p>
 <h3 id="package-request-package-missing">Package Request? Package Missing?</h3>
-<p>If you are looking for packages to be added to the community feed (aka <a href="https://chocolatey.org/packages">https://chocolatey.org/packages</a>) - you are part of the community and we welcome your packages. It's super simple to create and maintain packages, see [[Creating packages|CreatePackages]].</p>
+<p>If you are looking for packages to be added to the community feed (aka <a href="https://chocolatey.org/packages">https://chocolatey.org/packages</a>) - you are part of the community and we welcome your packages. It's super simple to create and maintain packages, see <a href="../creating-packages/create-packages">Creating packages</a>.</p>
 <p>When it comes to community packages, we really want folks who are using the software to be package maintainers versus folks who may not be using the software. So when you are asking for other folks to add packages, please consider that it may be better for you to keep the package up to date than someone else who may not be invested in ensuring it stays updated.</p>
 <p>We now have an RFP/RFM (request for package/request for maintainership, respectively) process at <a href="https://github.com/chocolatey/chocolatey-package-requests">Chocolatey Package Requests (https://github.com/chocolatey/chocolatey-package-requests)</a>.</p>
 <h3 id="package-is-broken">Package is Broken?</h3>
@@ -376,7 +376,7 @@
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

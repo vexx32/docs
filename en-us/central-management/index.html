@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -407,8 +407,8 @@
 <h2 id="getting-ccm">Getting CCM</h2>
 <p>CCM is only available for Chocolatey for Business (C4B) customers. If you are a C4B customer, you can head to the install components section:</p>
 <ul>
-<li>[[Central Management Setup|CentralManagementSetup]]</li>
-<li>[[Central Management Client Setup|CentralManagementSetupClient]]</li>
+<li><a href="./setup">Central Management Setup</a></li>
+<li><a href="./setup-client">Central Management Client Setup</a></li>
 </ul>
 <p>If you are not a customer yet, you can <a href="https://chocolatey.org/contact/trial">reach out for a trial</a>.</p>
 <blockquote>
@@ -418,39 +418,39 @@
 <hr />
 <h2 id="stay-up-to-date">Stay Up To Date</h2>
 <ul>
-<li>[[Release Notes Central Management|ReleaseNotesCentralManagement]]</li>
+<li><a href="../general/release-notes/central-management">Release Notes Central Management</a></li>
 <li><a href="https://groups.google.com/group/chocolatey-announce">Release Announcements Only Mailing List</a></li>
 </ul>
 <hr />
 <h2 id="links">Links</h2>
 <h3 id="setup-installation">Setup / Installation</h3>
 <ul>
-<li>[[Central Management Setup|CentralManagementSetup]]
+<li><a href="./setup">Central Management Setup</a>
 <ul>
-<li>[[Central Management Database Setup|CentralManagementSetupDatabase]]</li>
-<li>[[Central Management Service Setup|CentralManagementSetupService]]</li>
-<li>[[Central Management Web Setup|CentralManagementSetupWeb]]</li>
+<li><a href="./setup-database">Central Management Database Setup</a></li>
+<li><a href="./setup-service">Central Management Service Setup</a></li>
+<li><a href="./setup-web">Central Management Web Setup</a></li>
 </ul>
 </li>
-<li>[[Central Management Client Setup|CentralManagementSetupClient]]</li>
+<li><a href="./setup-client">Central Management Client Setup</a></li>
 </ul>
 <h3 id="setup-upgrade">Setup / Upgrade</h3>
 <ul>
-<li>[[Upgrading Central Management|CentralManagementSetupUpgrade]]</li>
+<li><a href="./setup-upgrade">Upgrading Central Management</a></li>
 </ul>
 <h3 id="using-central-management">Using Central Management</h3>
 <ul>
-<li>[[CCM Computers|CentralManagementComputers]]</li>
-<li>[[CCM Software|CentralManagementSoftware]]</li>
-<li>[[CCM Groups|CentralManagementGroups]]</li>
-<li>[[CCM Deployments|CentralManagementDeployments]]</li>
-<li>[[CCM Reports|CentralManagementReports]]</li>
+<li><a href="./computers">CCM Computers</a></li>
+<li><a href="./software">CCM Software</a></li>
+<li><a href="./groups">CCM Groups</a></li>
+<li><a href="./deployments">CCM Deployments</a></li>
+<li><a href="./reports">CCM Reports</a></li>
 </ul>
 <p><img src="/assets/images/features/ccm/ccm_overview.jpg" alt="CCM Overview" /></p>
 <hr />
 <h2 id="related-articles">Related Articles</h2>
 <ul>
-<li>[[Quick Deployment Environment (QDE)|QuickDeploymentEnvironment]]</li>
+<li><a href="../quick-deployment">Quick Deployment Environment (QDE)</a></li>
 </ul>
 <hr />
 <h2 id="roadmap">Roadmap</h2>
@@ -489,11 +489,11 @@
 <li>The Chocolatey Agent log file is located at <code>$env:ChocolateyInstall\logs\chocolatey-agent.log</code>. If you are on a version of Chocolatey Agent prior to 0.10.0, the log will be located at <code>$env:ChocolateyInstall\lib\chocolatey-agent\tools\service\logs\chocolatey-agent.log</code>.</li>
 </ul>
 <h3 id="where-can-i-find-the-changelog-or-release-notes-for-chocolatey-central-management">Where can I find the changelog or release notes for Chocolatey Central Management?</h3>
-<p>Please see [[Release Notes Central Management|ReleaseNotesCentralManagement]].</p>
+<p>Please see <a href="../general/release-notes/central-management">Release Notes Central Management</a>.</p>
 <h3 id="how-do-i-get-support">How do I get support?</h3>
 <p>Please run <code>choco support</code> from a licensed edition and follow the instructions.</p>
 <h3 id="how-do-i-set-up-chocolatey-central-management">How do I set up Chocolatey Central Management?</h3>
-<p>You can start from a pre-configured environment known as [[Quick Deployment Environment (QDE)|QuickDeploymentEnvironment]], or see <a href="#setup--installation">Setup / Installation</a>.</p>
+<p>You can start from a pre-configured environment known as <a href="../quick-deployment">Quick Deployment Environment (QDE)</a>, or see <a href="#setup--installation">Setup / Installation</a>.</p>
 <h3 id="what-is-the-ccm-compatibility-matrix">What is the CCM compatibility matrix?</h3>
 <p>Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of CCM and vice versa.  Please see the <a href="#ccm-component-compatibility-matrix">CCM Component Compatibility Matrix</a> for details.</p>
 <h3 id="if-i-update-the-license-file-do-i-need-to-restart-my-services-and-web">If I update the license file, do I need to restart my services and web?</h3>
@@ -567,7 +567,7 @@ Remove-ItemProperty -Path &quot;HKLM:\Software\Chocolatey&quot; -Name &quot;Uniq
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

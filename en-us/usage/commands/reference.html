@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -298,32 +298,32 @@
 <h2 id="commands">Commands</h2>
 <p>This is a listing of all of the different things you can pass to choco.</p>
 <ul>
-<li>[[list|CommandsList]] - lists remote or local packages</li>
-<li>[[search|CommandsSearch]] - searches remote or local packages (alias for list)</li>
-<li>[[info|CommandsInfo]] - retrieves package information. Shorthand for choco search pkgname --exact --verbose</li>
-<li>[[install|CommandsInstall]] - installs packages from various sources</li>
-<li>[[pin|CommandsPin]] - suppress upgrades for a package</li>
-<li>[[outdated|CommandsOutdated]] - retrieves packages that are outdated. Similar to upgrade all --noop</li>
-<li>[[upgrade|CommandsUpgrade]] - upgrades packages from various sources</li>
-<li>[[uninstall|CommandsUninstall]] - uninstalls a package</li>
-<li>[[pack|CommandsPack]] - packages up a nuspec to a compiled nupkg</li>
-<li>[[push|CommandsPush]] - pushes a compiled nupkg</li>
-<li>[[new|CommandsNew]] - generates files necessary for a chocolatey package from a template</li>
-<li>[[sources|CommandsSources]] - view and configure default sources (alias for source)</li>
-<li>[[source|CommandsSource]] - view and configure default sources</li>
-<li>[[config|CommandsConfig]] - Retrieve and configure config file settings</li>
-<li>[[feature|CommandsFeature]] - view and configure choco features</li>
-<li>[[features|CommandsFeatures]] - view and configure choco features (alias for feature)</li>
-<li>[[setapikey|CommandsSetapikey]] - retrieves or saves an apikey for a particular source (alias for apikey)</li>
-<li>[[apikey|CommandsApikey]] - retrieves or saves an apikey for a particular source</li>
-<li>[[unpackself|CommandsUnpackself]] - have chocolatey set itself up</li>
-<li>[[version|CommandsVersion]] - [DEPRECATED] will be removed in v1 - use [[<code>choco outdated</code>|Commandsoutdated]] or <code>cup &lt;pkg|all&gt; -whatif</code> instead</li>
-<li>[[update|CommandsUpdate]] - [DEPRECATED] RESERVED for future use (you are looking for upgrade, these are not the droids you are looking for)</li>
-<li>[[support|CommandsSupport]] - provides support information</li>
-<li>[[download|CommandsDownload]] - downloads packages - optionally internalizing all remote resources</li>
-<li>[[synchronize|CommandsSynchronize]] - synchronizes against system installed software - generates missing packages</li>
-<li>[[sync|CommandsSync]] - synchronizes against system installed software - generates missing packages</li>
-<li>[[optimize|CommandsOptimize]] - optimizes installation, reducing space usage</li>
+<li><a href="./list">list</a> - lists remote or local packages</li>
+<li><a href="./search">search</a> - searches remote or local packages (alias for list)</li>
+<li><a href="./info">info</a> - retrieves package information. Shorthand for choco search pkgname --exact --verbose</li>
+<li><a href="./install">install</a> - installs packages from various sources</li>
+<li><a href="./pin">pin</a> - suppress upgrades for a package</li>
+<li><a href="./outdated">outdated</a> - retrieves packages that are outdated. Similar to upgrade all --noop</li>
+<li><a href="./upgrade">upgrade</a> - upgrades packages from various sources</li>
+<li><a href="./uninstall">uninstall</a> - uninstalls a package</li>
+<li><a href="./pack">pack</a> - packages up a nuspec to a compiled nupkg</li>
+<li><a href="./push">push</a> - pushes a compiled nupkg</li>
+<li><a href="./new">new</a> - generates files necessary for a chocolatey package from a template</li>
+<li><a href="./sources">sources</a> - view and configure default sources (alias for source)</li>
+<li><a href="./source">source</a> - view and configure default sources</li>
+<li><a href="./config">config</a> - Retrieve and configure config file settings</li>
+<li><a href="./feature">feature</a> - view and configure choco features</li>
+<li><a href="./features">features</a> - view and configure choco features (alias for feature)</li>
+<li><a href="./setapikey">setapikey</a> - retrieves or saves an apikey for a particular source (alias for apikey)</li>
+<li><a href="./apikey">apikey</a> - retrieves or saves an apikey for a particular source</li>
+<li><a href="./unpackself">unpackself</a> - have chocolatey set itself up</li>
+<li><a href="./version">version</a> - [DEPRECATED] will be removed in v1 - use <a href="./outdated"><code>choco outdated</code></a> or <code>cup &lt;pkg|all&gt; -whatif</code> instead</li>
+<li><a href="./update">update</a> - [DEPRECATED] RESERVED for future use (you are looking for upgrade, these are not the droids you are looking for)</li>
+<li><a href="./support">support</a> - provides support information</li>
+<li><a href="./download">download</a> - downloads packages - optionally internalizing all remote resources</li>
+<li><a href="./synchronize">synchronize</a> - synchronizes against system installed software - generates missing packages</li>
+<li><a href="./sync">sync</a> - synchronizes against system installed software - generates missing packages</li>
+<li><a href="./optimize">optimize</a> - optimizes installation, reducing space usage</li>
 </ul>
 <p>Please run chocolatey with <code>choco command -help</code> for specific help on
 each command.</p>
@@ -378,9 +378,9 @@ based on choco not receiving things you think you are passing to it.</p>
 <li>For consistency, always use <code>choco</code>, not <code>choco.exe</code>. Never use
 shortcut commands like <code>cinst</code> or <code>cup</code>.</li>
 <li>Always have the command as the first argument to <code>choco</code>. e.g.
-[[<code>choco install</code>|Commandsinstall]], where [[<code>install</code>|Commandsinstall]] is the command.</li>
+<a href="./install"><code>choco install</code></a>, where <a href="./install"><code>install</code></a> is the command.</li>
 <li>If there is a subcommand, ensure that is the second argument. e.g.
-<code>choco source list</code>, where <code>source</code> is the command and [[<code>list</code>|Commandslist]] is the
+<code>choco source list</code>, where <code>source</code> is the command and <a href="./list"><code>list</code></a> is the
 subcommand.</li>
 <li>Typically the subject comes next. If installing packages, the
 subject would be the package names, e.g. <code>choco install pkg1 pkg2</code>.</li>
@@ -413,8 +413,8 @@ properly with double quotes bookending apostrophes, e.g.
 <li>If you are building PowerShell scripts, you can most likely just
 simply use apostrophes surrounding option values, e.g.
 <code>--source='internal_server'</code>.</li>
-<li>Prefer upgrade to install in scripts. You can't [[<code>install</code>|Commandsinstall]] to a newer
-version of something, but you can [[<code>choco upgrade</code>|Commandsupgrade]] which will do both
+<li>Prefer upgrade to install in scripts. You can't <a href="./install"><code>install</code></a> to a newer
+version of something, but you can <a href="./upgrade"><code>choco upgrade</code></a> which will do both
 upgrade or install (unless switched off explicitly).</li>
 <li>If you are sharing the script with others, pass <code>--source</code> to be
 explicit about where the package is coming from. Use full link and
@@ -590,7 +590,7 @@ out multiple package calls when wanting to pass specific options.</p>
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

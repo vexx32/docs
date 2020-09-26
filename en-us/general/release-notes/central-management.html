@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -286,16 +286,16 @@
                                     <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
                                         <h1 id="chocolatey-release-notes-chocolatey-central-management">Chocolatey Release Notes - Chocolatey Central Management</h1>
 <h2 id="summary">Summary</h2>
-<p>This covers the release notes for the Chocolatey Central Management (<code>chocolatey-management-database</code>, <code>chocolatey-management-service</code>, and <code>chocolatey-management-web</code>) packages, which covers Central Management server-side functionality. For more information, installation options, etc, please refer to [[Chocolatey Central Management|CentralManagement]].</p>
+<p>This covers the release notes for the Chocolatey Central Management (<code>chocolatey-management-database</code>, <code>chocolatey-management-service</code>, and <code>chocolatey-management-web</code>) packages, which covers Central Management server-side functionality. For more information, installation options, etc, please refer to <a href="../../central-management">Chocolatey Central Management</a>.</p>
 <ul>
-<li>Installation - [[Central Management Setup|CentralManagementSetup]]</li>
-<li>Upgrade - [[Central Management Upgrade|CentralManagementSetupUpgrade]]</li>
+<li>Installation - <a href="../../central-management/setup">Central Management Setup</a></li>
+<li>Upgrade - <a href="../../central-management/setup-upgrade">Central Management Upgrade</a></li>
 </ul>
 <p><strong>NOTE</strong>: This package is available to Chocolatey for Business (C4B) customers only.</p>
 <h2 id="other-release-notes">Other Release Notes</h2>
 <ul>
-<li>Refer to [[Open Source Release Notes|ReleaseNotes]] as commercial editions build on top of open source.</li>
-<li>Chocolatey for Business (C4B) customers - also refer to [[Chocolatey Licensed Extension Release Notes|ReleaseNotesExtension]] and [[Chocolatey Agent Release Notes|ReleaseNotesAgent]].</li>
+<li>Refer to <a href="./open-source">Open Source Release Notes</a> as commercial editions build on top of open source.</li>
+<li>Chocolatey for Business (C4B) customers - also refer to <a href="./extension">Chocolatey Licensed Extension Release Notes</a> and <a href="./agent">Chocolatey Agent Release Notes</a>.</li>
 </ul>
 <h2 id="known-issues">Known Issues</h2>
 <ul>
@@ -305,7 +305,7 @@
 <h2 id="june-25-2020">0.3.0 (June 25, 2020)</h2>
 <h3 id="breaking-changes">BREAKING CHANGES</h3>
 <ul>
-<li>Chocolatey Central Management v0.3.0 will only work with Chocolatey Agent v0.11.0+. Upgrade order doesn't matter as you'll need to be on CCM v0.3.0 and Agent v0.11.0 before things start working again.See <a href="https://chocolatey.org/docs/central-management#ccm-component-compatibility-matrix">https://chocolatey.org/docs/central-management#ccm-component-compatibility-matrix</a>.</li>
+<li>Chocolatey Central Management v0.3.0 will only work with Chocolatey Agent v0.11.0+. Upgrade order doesn't matter as you'll need to be on CCM v0.3.0 and Agent v0.11.0 before things start working again. See <a href="https://docs.chocolatey.org/en-us/central-management/#ccm-component-compatibility-matrix">https://docs.chocolatey.org/en-us/central-management/#ccm-component-compatibility-matrix</a>.</li>
 </ul>
 <h3 id="bug-fixes">BUG FIXES</h3>
 <ul>
@@ -313,9 +313,9 @@
 <li>Fix - Web - Do not recreate website w/bindings on upgrade - see <a href="https://github.com/chocolatey/chocolatey-licensed-issues/issues/156">Licensed #156</a></li>
 </ul>
 <h2 id="june-18-2020">0.2.0 (June 18, 2020)</h2>
-<p>Deployments Release - we are excited to bring about managing remote machines with <a href="https://chocolatey.org/blog/announcing-deployments">Central Management Deployments</a> coming in this release! There are quite a few things we've brought into the initial release and we think you'll agree that it is a powerful, yet easy to use interface. Read <a href="https://chocolatey.org/blog/announcing-deployments">the announcement.</a>. We've also overhauled the documentation to make it understandable and approachable. Please see <a href="https://chocolatey.org/docs/central-management">https://chocolatey.org/docs/central-management</a>.</p>
+<p>Deployments Release - we are excited to bring about managing remote machines with <a href="https://chocolatey.org/blog/announcing-deployments">Central Management Deployments</a> coming in this release! There are quite a few things we've brought into the initial release and we think you'll agree that it is a powerful, yet easy to use interface. Read <a href="https://chocolatey.org/blog/announcing-deployments">the announcement.</a>. We've also overhauled the documentation to make it understandable and approachable. Please see <a href="https://docs.chocolatey.org/en-us/central-management/">https://docs.chocolatey.org/en-us/central-management/</a>.</p>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: Log locations have changed. Please see [[Central Management FAQs|CentralManagement#faqs]] for more information.</p>
+<p>:memo: <strong>NOTE</strong>: Log locations have changed. Please see <a href="../../central-management#faqs">Central Management FAQs</a> for more information.</p>
 </blockquote>
 <h3 id="features">FEATURES</h3>
 <ul>
@@ -406,8 +406,8 @@
 <li>Fix - Web Site - Ensure consistent Date/Time Formatting used everywhere</li>
 <li>Fix - Web Site - Corrected duplicate display of search input box on some screens</li>
 <li>Fix - Web Site - Error when attempting to sort by any column in table on Computer Details screen</li>
-<li>Fix - Web Site - Erorr when attempting to sort by Name or Package Title column in table on Software screen</li>
-<li>Fix - Web Site - Tab does not sort by oudated first on Software screen</li>
+<li>Fix - Web Site - Error when attempting to sort by Name or Package Title column in table on Software screen</li>
+<li>Fix - Web Site - Tab does not sort by outdated first on Software screen</li>
 <li>Fix - Web Site - Timezone modification doesn't provide useful information to user</li>
 <li>Fix - Web Site - Only show Software that is installed on at least one machine</li>
 <li>Fix - Web Site - Excel Export generates errors when DateTime values are included</li>
@@ -425,9 +425,9 @@
 <li>Installation - Verify and usage persisted appsettings.json file during upgrade</li>
 <li>Installation - Reduce issues unpacking web package by shortening paths in packaging</li>
 <li>Uninstallation - Remove modifications that were done as part of installation</li>
-<li>Database - Don't attempt to seed database tables everytime application starts</li>
-<li>Packaging - Removed unneccessary files from package, making it much smaller</li>
-<li>Packaging - Added requied dependencies to packages</li>
+<li>Database - Don't attempt to seed database tables every time application starts</li>
+<li>Packaging - Removed unnecessary files from package, making it much smaller</li>
+<li>Packaging - Added required dependencies to packages</li>
 <li>Packaging - Add information about available installation parameters to package description</li>
 <li>Service - Allow modification of configuration settings without the need to restart Windows Service</li>
 </ul>
@@ -479,7 +479,7 @@
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

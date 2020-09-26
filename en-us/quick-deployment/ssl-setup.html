@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -288,13 +288,13 @@
 <blockquote>
 <p>:memo: <strong>NOTE</strong></p>
 <p>This document is for <strong>Version 2</strong> of the Quick Deployment Environment.
-If you're using an older version of QDE, please refer to the [[QDEv1 SSL Setup page|QuickDeploymentSslSetupV1]].</p>
+If you're using an older version of QDE, please refer to the <a href="./v1/ssl-setup">QDEv1 SSL Setup page</a>.</p>
 </blockquote>
 <p>During normal setup, all required SSL certificates are retrieved or generated as needed.
 You will only need to run this script yourself in the following cases:</p>
 <ul>
 <li>You want to expose this to the internet so clients can connect from outside your network, and you didn't set this up initially.
-See [[the Firewall Changes document|QuickDeploymentFirewallChanges]] document for more information and additional scripts to run in this case.</li>
+See <a href="./firewall-changes">the Firewall Changes document</a> document for more information and additional scripts to run in this case.</li>
 <li>If you change the hostname of the QDE server, or add it to a domain after having already completed setup.</li>
 <li>If you would like to change/replace the initial SSL/TLS certificates that were provided or generated during setup, for example to replace an expiring certificate.</li>
 </ul>
@@ -338,7 +338,7 @@ This is required in order for Nexus to be able to utilise the certificate.</li>
 <p>Timezones are super important here and time synchronization is really important when generating SSL Certificates.
 You will need make sure you have this correct, otherwise there is a potential edge case you could generate an SSL Certificate that is not yet valid.</p>
 </blockquote>
-<p>[[Quick Deployment Environment|QuickDeploymentEnvironment]]</p>
+<p><a href="./">Quick Deployment Environment</a></p>
 
                                     </div>
                                 <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
@@ -357,7 +357,7 @@ You will need make sure you have this correct, otherwise there is a potential ed
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -287,7 +287,7 @@
                                         <h1 id="chocolatey-central-management-upgrade">Chocolatey Central Management Upgrade</h1>
 <p>This will guide us through upgrading an existing Chocolatey Central Management installation to newer versions.</p>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: Looking for installation instructions? See [[Central Management Setup|CentralManagementSetup]].</p>
+<p>:memo: <strong>NOTE</strong>: Looking for installation instructions? See <a href="./setup">Central Management Setup</a>.</p>
 </blockquote>
 <blockquote>
 <p>:warning: <strong>WARNING</strong></p>
@@ -329,9 +329,9 @@
 <h2 id="step-1-download-latest-packages">Step 1: Download Latest Packages</h2>
 <blockquote>
 <p>:memo: <strong>NOTE</strong></p>
-<p>Make sure you have read over the [[CCM Compability Matrix|CentralManagement#ccm-component-compatibility-matrix]] prior to starting internalization as this will save you some headaches.</p>
+<p>Make sure you have read over the <a href="./index#ccm-component-compatibility-matrix">CCM Compability Matrix</a> prior to starting internalization as this will save you some headaches.</p>
 </blockquote>
-<p>Similar to how we internalized in [[Setup - Internalize Packages|CentralManagementSetup#step-1-internalize-packages]], we need to get the latest editions of everything compatible. Be sure that the versions of packages you have match up with the [[Complatibility Matrix|CentralManagement#ccm-component-compatibility-matrix]].</p>
+<p>Similar to how we internalized in <a href="./setup#step-1-internalize-packages">Setup - Internalize Packages</a>, we need to get the latest editions of everything compatible. Be sure that the versions of packages you have match up with the <a href="./index#ccm-component-compatibility-matrix">Complatibility Matrix</a>.</p>
 <blockquote>
 <p>:warning: <strong>TRIALS</strong>: You need to <em><strong>first reach out</strong></em> to your sales representative to get the latest binaries - your trial license won't have direct access to the licensed repository.</p>
 </blockquote>
@@ -358,7 +358,7 @@ Get-ChildItem C:\packages -Recurse -Filter *.nupkg | Foreach-Object { choco push
 <hr />
 <h2 id="step-2-upgrade-central-management-database">Step 2: Upgrade Central Management Database</h2>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: Please see [[Central Management Database Setup|CentralManagementSetupDatabase]] for details about all arguments that can be passed and set.</p>
+<p>:memo: <strong>NOTE</strong>: Please see <a href="./setup-database">Central Management Database Setup</a> for details about all arguments that can be passed and set.</p>
 </blockquote>
 <pre><code class="language-powershell">choco upgrade chocolatey-management-database -y
 </code></pre>
@@ -368,7 +368,7 @@ Get-ChildItem C:\packages -Recurse -Filter *.nupkg | Foreach-Object { choco push
 <hr />
 <h2 id="step-3-setup-central-management-windows-services">Step 3: Setup Central Management Windows Service(s)</h2>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: Please see [[Central Management Service Setup|CentralManagementSetupService]] for details about all arguments that can be passed and set.</p>
+<p>:memo: <strong>NOTE</strong>: Please see <a href="./setup-service">Central Management Service Setup</a> for details about all arguments that can be passed and set.</p>
 </blockquote>
 <pre><code class="language-powershell">choco upgrade chocolatey-management-service -y
 </code></pre>
@@ -393,11 +393,11 @@ Get-ChildItem C:\packages -Recurse -Filter *.nupkg | Foreach-Object { choco push
 <blockquote>
 <p>:memo: <strong>NOTE</strong>: Database details that have not changed will not need to be passed.</p>
 </blockquote>
-<p>There may be additional (new) things you will want to configure. Please see [[Central Management Service Setup|CentralManagementSetupService]] for details.</p>
+<p>There may be additional (new) things you will want to configure. Please see <a href="./setup-service">Central Management Service Setup</a> for details.</p>
 <hr />
 <h2 id="step-4-setup-central-management-website">Step 4: Setup Central Management Website</h2>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: Please see [[Central Management Web Setup|CentralManagementSetupWeb]] for details about all arguments that can be passed and set.</p>
+<p>:memo: <strong>NOTE</strong>: Please see <a href="./setup-web">Central Management Web Setup</a> for details about all arguments that can be passed and set.</p>
 </blockquote>
 <pre><code class="language-powershell">choco upgrade chocolatey-management-web -y
 </code></pre>
@@ -408,11 +408,11 @@ Get-ChildItem C:\packages -Recurse -Filter *.nupkg | Foreach-Object { choco push
 <hr />
 <h2 id="step-5-upgrade-agent-machines">Step 5: Upgrade Agent Machines</h2>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: Please see [[Central Management Client Setup|CentralManagementSetupClient]] for details about all arguments that can be passed and set.</p>
+<p>:memo: <strong>NOTE</strong>: Please see <a href="./setup-client">Central Management Client Setup</a> for details about all arguments that can be passed and set.</p>
 </blockquote>
 <pre><code class="language-powershell">choco upgrade chocolatey-agent -y
 </code></pre>
-<p>There may be additional (new) things you will want to configure. Please see [[Central Management Client Setup|CentralManagementSetupClient]] for details.</p>
+<p>There may be additional (new) things you will want to configure. Please see <a href="./setup-client">Central Management Client Setup</a> for details.</p>
 <blockquote>
 <p>:memo: <strong>NOTE</strong>: This could include the agent(s) on the CCM machine(s).</p>
 </blockquote>
@@ -428,7 +428,7 @@ choco feature enable --name=&quot;'useChocolateyCentralManagementDeployments'&qu
 <p>:warning: <strong>WARNING</strong></p>
 <p>As these features have security considerations (it is enabling cross-machine communication), they must be turned on explicitly.
 If you decide you want to open this up for over the internet communication, you should also set <code>centralManagementClientCommunicationSaltAdditivePassword</code> and <code>centralManagementServiceCommunicationSaltAdditivePassword</code>.
-For more in-depth configuration options and settings for your endpoints, you can view the [[CCM Client Setup page|CentralManagementSetupClient]]</p>
+For more in-depth configuration options and settings for your endpoints, you can view the <a href="./setup-client">CCM Client Setup page</a></p>
 </blockquote>
 <hr />
 <h2 id="faqs">FAQs</h2>
@@ -465,7 +465,7 @@ If you run into this, please recreate the bindings again.</p>
 <li>Do not pass database details if they have not changed during upgrade.</li>
 </ul>
 <hr />
-<p>[[Central Management Setup|CentralManagementSetup]] | [[Chocolatey Central Management|CentralManagement]]</p>
+<p><a href="./setup">Central Management Setup</a> | <a href="./">Chocolatey Central Management</a></p>
 
                                     </div>
                                 <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
@@ -498,7 +498,7 @@ If you run into this, please recreate the bindings again.</p>
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

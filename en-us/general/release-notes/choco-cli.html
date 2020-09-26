@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -286,7 +286,7 @@
                                     <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
                                         <h1 id="chocolatey-release-notes-open-source">Chocolatey Release Notes - Open Source</h1>
 <p>This covers changes for the &quot;chocolatey&quot; and &quot;chocolatey.lib&quot; packages, which are available as FOSS.</p>
-<p><strong>NOTE</strong>: For commercial editions, please also refer to [[Licensed Release Notes|ReleaseNotesLicensed]].</p>
+<p><strong>NOTE</strong>: For commercial editions, please also refer to <a href="./licensed">Licensed Release Notes</a>.</p>
 <h2 id="june-3-2019"><a href="https://github.com/chocolatey/choco/issues?q=milestone%3A0.10.15+is%3Aclosed">0.10.15</a> (June 3, 2019)</h2>
 <h3 id="bug-fixes">BUG FIXES</h3>
 <ul>
@@ -438,7 +438,7 @@
 <li>Pro/Business - Logging - See licensing logging output - see <a href="https://github.com/chocolatey/choco/issues/1488">#1488</a></li>
 </ul>
 <h2 id="august-30-2017"><a href="https://github.com/chocolatey/choco/issues?q=milestone%3A0.10.8+is%3Aclosed">0.10.8</a> (August 30, 2017)</h2>
-<p>With this release, Package Parameters are fully supported from both the user side and the packaging side. Check out <a href="https://chocolatey.org/docs/helpers-get-package-parameters">the documentation</a> and check out the <a href="https://chocolatey.org/docs/how-to-parse-package-parameters-argument">walkthrough</a> on how to use package parameters in your packaging. Note if you are pushing packages to the community repository, you must continue to take a dependency on the <code>chocolatey-core.extension</code> as a polyfill for older versions until at least six months after a new feature is released.</p>
+<p>With this release, Package Parameters are fully supported from both the user side and the packaging side. Check out <a href="https://docs.chocolatey.org/en-us/creating-packages/helpers/get-packageparameters">the documentation</a> and check out the <a href="../../how-tos/parse-packageparameters-argument">walkthrough</a> on how to use package parameters in your packaging. Note if you are pushing packages to the community repository, you must continue to take a dependency on the <code>chocolatey-core.extension</code> as a polyfill for older versions until at least six months after a new feature is released.</p>
 <p>What you can do with logging has greatly increased your ability to have more power over how it works and deeper output to determine errors (we've expanded <code>--trace</code> <a href="https://github.com/chocolatey/choco/issues/1379">#1379</a>). This release also gives packagers and users more power when working with the AutoUninstaller - opt-out (<a href="https://github.com/chocolatey/choco/issues/1257">#1257</a>) and passing arguments to the uninstaller (<a href="https://github.com/chocolatey/choco/issues/1133">#1133</a>).</p>
 <p>Another noteworthy addition is the ability to pass custom properties to Choco like you would do with <code>nuget pack</code>, allowing better integration with packages you manage in Visual Studio (<a href="https://github.com/chocolatey/choco/issues/1313">#1313</a>).</p>
 <h3 id="features-1">FEATURES</h3>
@@ -739,9 +739,9 @@
 <p><strong>Why the requirement, and why now?</strong> This is a measure of protection for the Chocolatey community. HTTP is easy to hack with both DNS poisoning and MITM (man in the middle) attacks. Without independent verification of the integrity of the downloaded resources, users can be left susceptible to these issues. We've been planning a move to require checksums for awhile now, with a planned longer and smoother transition for package maintainers to get packages updated to reduce breakages. Unfortunately there was a recent event with <a href="http://www.audacityteam.org/compromised-download-partner/">FOSSHub getting hacked</a> (the <a href="http://us8.campaign-archive1.com/?u=86a6d80146a0da7f2223712e4&amp;id=f2fe8dbe6b">community repository had 8 possibly affected packages</a> and <a href="http://us8.campaign-archive1.com/?u=86a6d80146a0da7f2223712e4&amp;id=2cbe87d486">we quickly took action</a>), which necessitated a need for us to move in a much swifter fashion to ensure the protection of the community sooner, rather than later. The changes in Chocolatey represented by the checksum changes are a major step in the process to ensure protection. Requiring for HTTPS as well will mitigate any future compromises of software distribution sites that are used with Chocolatey packages.</p>
 <p><strong>Can I shut this behavior off or opt out per package?</strong>
 You can shut off the checksum requirement by enabling the feature <code>allowEmptyChecksums</code>. This will return Chocolatey to previous behavior. We strongly recommend against it.</p>
-<p>You can shut it off or turn it per package install/upgrade with <code>--allow-empty-checksums</code> and <code>--require-checksums</code>, respectively. See <a href="https://chocolatey.org/docs/commands-install">https://chocolatey.org/docs/commands-install</a> / <a href="https://chocolatey.org/docs/commands-upgrade">https://chocolatey.org/docs/commands-upgrade</a>.</p>
+<p>You can shut it off or turn it per package install/upgrade with <code>--allow-empty-checksums</code> and <code>--require-checksums</code>, respectively. See <a href="https://docs.chocolatey.org/en-us/usage/commands/install">https://docs.chocolatey.org/en-us/usage/commands/install</a> / <a href="https://docs.chocolatey.org/en-us/usage/commands/upgrade">https://docs.chocolatey.org/en-us/usage/commands/upgrade</a>.</p>
 <p>You can also disable the feature <code>allowEmptyChecksumsSecure</code> to enforce checksums for packages that download from secure locations (HTTPS).</p>
-<p><strong>Other things I should know?</strong> Users also now have the ability to pass their own checksums and checksumtypes into the install. See <a href="https://chocolatey.org/docs/commands-install">https://chocolatey.org/docs/commands-install</a> / <a href="https://chocolatey.org/docs/commands-upgrade">https://chocolatey.org/docs/commands-upgrade</a>.</p>
+<p><strong>Other things I should know?</strong> Users also now have the ability to pass their own checksums and checksumtypes into the install. See <a href="https://docs.chocolatey.org/en-us/usage/commands/install">https://docs.chocolatey.org/en-us/usage/commands/install</a> / <a href="https://docs.chocolatey.org/en-us/usage/commands/upgrade">https://docs.chocolatey.org/en-us/usage/commands/upgrade</a>.</p>
 <h3 id="known-issues">KNOWN ISSUES</h3>
 <ul>
 <li><a href="https://github.com/chocolatey/choco/labels/Bug">Known Issues</a></li>
@@ -823,7 +823,7 @@ You can shut off the checksum requirement by enabling the feature <code>allowEmp
 <p>Alternative sources (<code>-source webpi</code>, <code>-s windowsfeature</code>, etc) are back! I mean, am I right?! Have you heard of auto uninstaller? If Chocolatey has installed something that works with Programs and Features, Chocolatey knows how to uninstall it without an uninstall script about 90+% of the time. This feature was in beta for the 0.9.9 series, it is on by default in 0.9.10 (unless you disabled it after trying it, you will need to reenable it, see <code>choco feature</code> for more details).</p>
 <p>Here's one you probably never knew existed - extensions. Chocolatey has had the ability to extend itself by adding PowerShell modules for years, and most folks either didn't know it existed or have never used them. We've enhanced them a bit in preparation for the licensed version of Chocolatey.</p>
 <p>We redesigned our <code>choco new</code> default packaging template and we've made managing templates as easy as managing packages.</p>
-<p><code>choco search</code>/<code>choco list</code> has so many enhancements, you may not need to visit dot org again. <a href="CommandsList#see-it-in-action">See it in action</a>.</p>
+<p><code>choco search</code>/<code>choco list</code> has so many enhancements, you may not need to visit dot org again. <a href="../../usage/commands/listist#see-it-in-action">See it in action</a>.</p>
 <ul>
 <li><a href="https://github.com/chocolatey/choco/issues/493">search -v provides moderation related information and a world of nuspec information</a></li>
 <li><a href="https://github.com/chocolatey/choco/issues/663">search by id only</a></li>
@@ -877,8 +877,8 @@ If you need the previous behavior, be sure to disable the feature <code>usePacka
 <li>Resolve sources by name - see <a href="https://github.com/chocolatey/choco/issues/356">#356</a></li>
 <li>Uninstall-ChocolateyEnvironmentVariable function - see <a href="https://github.com/chocolatey/choco/issues/772">#772</a></li>
 <li>Pro/Business - Ubiquitous Install Directory Switch - see <a href="https://github.com/chocolatey/choco/issues/258">#258</a></li>
-<li>Pro/Business - Runtime Virus Scanning - see <a href="https://chocolatey.org/docs/features-virus-check">virus scanning</a></li>
-<li>Pro/Business - Private CDN cache for downloads - see <a href="https://chocolatey.org/docs/features-private-cdn">private CDN cache</a></li>
+<li>Pro/Business - Runtime Virus Scanning - see <a href="https://docs.chocolatey.org/en-us/features/paid/virus-check">virus scanning</a></li>
+<li>Pro/Business - Private CDN cache for downloads - see <a href="https://docs.chocolatey.org/en-us/features/paid/private-cdn">private CDN cache</a></li>
 <li>Pro/Business - Sync &quot;choco installed status&quot; with &quot;Windows installed status&quot; - see <a href="https://github.com/chocolatey/choco/issues/567">#567</a></li>
 </ul>
 <h3 id="bug-fixes-20">BUG FIXES</h3>
@@ -1268,16 +1268,16 @@ If you need the previous behavior, be sure to disable the feature <code>usePacka
 <h3 id="features-9">FEATURES</h3>
 <ul>
 <li>In app documentation! Use <code>choco -?</code>, <code>choco -h</code> or <code>choco commandName -?</code> to learn about each command, complete with examples!</li>
-<li>WhatIf/Noop mode for all commands (<code>--noop</code> can also be specified as <code>-whatif</code>) - see <a href="https://github.com/chocolatey/chocolatey/issues/263">Chocolatey #263</a> and <a href="CommandsReference#default-options-and-switches">Default Options and Switches</a></li>
+<li>WhatIf/Noop mode for all commands (<code>--noop</code> can also be specified as <code>-whatif</code>) - see <a href="https://github.com/chocolatey/chocolatey/issues/263">Chocolatey #263</a> and <a href="../../usage/commands/reference#default-options-and-switches">Default Options and Switches</a></li>
 <li>Performs like a package manager, expect to see queries failing because of unmet dependency issues.</li>
 <li><strong>New Commands:</strong>
 <ol>
-<li><code>pin</code> - Suppress upgrades. This allows you to 'pin' an install to a particular version - see <a href="https://github.com/chocolatey/choco/issues/1">#1</a>, <a href="https://github.com/chocolatey/chocolatey/issues/5">Chocolatey #5</a> and <a href="CommandsPin">Pin Command</a></li>
-<li><code>apikey</code> - see <a href="CommandsApiKey">ApiKey Command</a></li>
-<li><code>new</code> - see <a href="CommandsNew">New Command</a> and <a href="https://github.com/chocolatey/chocolatey/issues/157">Chocolatey #157</a></li>
+<li><code>pin</code> - Suppress upgrades. This allows you to 'pin' an install to a particular version - see <a href="https://github.com/chocolatey/choco/issues/1">#1</a>, <a href="https://github.com/chocolatey/chocolatey/issues/5">Chocolatey #5</a> and <a href="../../usage/commands/pin">Pin Command</a></li>
+<li><code>apikey</code> - see <a href="../../usage/commands/apikey">ApiKey Command</a></li>
+<li><code>new</code> - see <a href="../../usage/commands/new">New Command</a> and <a href="https://github.com/chocolatey/chocolatey/issues/157">Chocolatey #157</a></li>
 </ol>
 </li>
-<li>New ways to pass arguments! See <a href="CommandsReference#how-to-pass-options--switches">How to Pass Options/Switches</a></li>
+<li>New ways to pass arguments! See <a href="../../usage/commands/reference#how-to-pass-options--switches">How to Pass Options/Switches</a></li>
 <li>Did we mention there is a help menu that is actually helpful now? Shiny!</li>
 <li>AutoUninstaller!!!! But it is not enabled by default this version. See <a href="https://github.com/chocolatey/choco/issues/15">#15</a>, <a href="https://github.com/chocolatey/choco/issues/9">#9</a> and <a href="https://github.com/chocolatey/chocolatey/issues/6">Chocolatey #6</a></li>
 <li><strong>New Helpers:</strong>
@@ -1291,7 +1291,7 @@ If you need the previous behavior, be sure to disable the feature <code>usePacka
 <ul>
 <li>Fix - Cannot upgrade from prerelease to same version released - see <a href="https://github.com/chocolatey/chocolatey/issues/122">Chocolatey #122</a></li>
 <li>Fix - install <code>--force</code> should not use cache - see <a href="https://github.com/chocolatey/chocolatey/issues/199">Chocolatey #199</a></li>
-<li>Fix - force dependencies as well - see <a href="CommandsInstall">--force-dependencies</a> and <a href="https://github.com/chocolatey/chocolatey/issues/199">Chocolatey #199</a></li>
+<li>Fix - force dependencies as well - see <a href="../../usage/commands/install">--force-dependencies</a> and <a href="https://github.com/chocolatey/chocolatey/issues/199">Chocolatey #199</a></li>
 <li>Fix - Chocolatey should not stop on error - see <a href="https://github.com/chocolatey/chocolatey/issues/192">Chocolatey #192</a></li>
 <li>Fix - Upgrading does not remove previous version - see <a href="https://github.com/chocolatey/chocolatey/issues/259">Chocolatey #259</a></li>
 <li>Fix - Non-elevated shell message spills errors - see <a href="https://github.com/chocolatey/chocolatey/issues/540">Chocolatey #540</a></li>
@@ -1317,7 +1317,7 @@ If you need the previous behavior, be sure to disable the feature <code>usePacka
 <li>Add $env:CHOCOLATEY_VERSION - see <a href="https://github.com/chocolatey/chocolatey/issues/251">Chocolatey #251</a></li>
 <li>Replace ascii cue with visual cues - see <a href="https://github.com/chocolatey/chocolatey/pull/376">Chocolatey #376</a></li>
 <li>Uninstall all versions of an app - see <a href="https://github.com/chocolatey/chocolatey/issues/389">Chocolatey #389</a></li>
-<li>Add parameters in packages.config files - see <a href="CommandsInstall#packagesconfig">Packages.config</a>, <a href="https://github.com/chocolatey/chocolatey/issues/472">Chocolatey #472</a>, and <a href="https://github.com/chocolatey/choco/issues/10">#10</a></li>
+<li>Add parameters in packages.config files - see <a href="../../usage/commands/install#packagesconfig">Packages.config</a>, <a href="https://github.com/chocolatey/chocolatey/issues/472">Chocolatey #472</a>, and <a href="https://github.com/chocolatey/choco/issues/10">#10</a></li>
 <li>Choco pack should support <code>-version</code> - see <a href="https://github.com/chocolatey/chocolatey/issues/526">Chocolatey #526</a></li>
 <li>Enhancements to Start-ChocolateyProcessAsAdmin - see <a href="https://github.com/chocolatey/chocolatey/pull/564">Chocolatey #564</a></li>
 <li>Install-ChocolateyFileAssociation - add label to new file types - see <a href="https://github.com/chocolatey/chocolatey/pull/564">Chocolatey #564</a></li>
@@ -2033,7 +2033,7 @@ If you need the previous behavior, be sure to disable the feature <code>usePacka
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -288,7 +288,7 @@
 <blockquote>
 <p>:memo: <strong>NOTE</strong></p>
 <p>This document is for <strong>Version 1</strong> of the Quick Deployment Environment.
-If you're using a newer version of QDE, please refer to the [[newer QDE SSL Setup page|QuickDeploymentSslSetup]].</p>
+If you're using a newer version of QDE, please refer to the <a href="../ssl-setup">newer QDE SSL Setup page</a>.</p>
 </blockquote>
 <p>All services have been protected with Self-Signed SSL certificates and are placed in the appropriate stores.
 Under the following situations you would want to run the script that follows:</p>
@@ -322,10 +322,10 @@ Just let things happen, as things are working as expected.</p>
 <p>:warning: <strong>WARNING</strong></p>
 <p>tl;dr: Think long and hard before changing the QDE hostname</p>
 <p>Renaming the QDE host requires a lot of things and needs to be completed FIRST prior to ANYTHING that is done on the QDE box. It is strongly recommended <strong>NOT</strong> to rename unless you absolutely need to. The most important reason has to do with how a client installs from QDE - it must learn to trust the QDE certificate. Once renamed, the easy option that's provided for you goes away and you will need to provide a hosted solution with an already trusted certificate.
-You can provide your own certificate that is already trusted on machines as part of the [[SSL/TLS Setup|QuickDeploymentSslSetupV1]]. Your other option is to host the script to trust the certificate with an already trusted certificate. You will find a template that you will need to edit at <code>c:\choco_setup_files</code> (in the QDE) named <code>Import-ChocoServerCertificate.ps1</code>.</p>
+You can provide your own certificate that is already trusted on machines as part of the <a href="./ssl-setup">SSL/TLS Setup</a>. Your other option is to host the script to trust the certificate with an already trusted certificate. You will find a template that you will need to edit at <code>c:\choco_setup_files</code> (in the QDE) named <code>Import-ChocoServerCertificate.ps1</code>.</p>
 <p>Please contact support if you need help here.</p>
 </blockquote>
-<p>[[Quick Deployment Environment|QuickDeploymentEnvironment]]</p>
+<p><a href="../">Quick Deployment Environment</a></p>
 
                                     </div>
                                 <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
@@ -344,7 +344,7 @@ You can provide your own certificate that is already trusted on machines as part
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

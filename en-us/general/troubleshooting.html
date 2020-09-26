@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -339,7 +339,7 @@
 <p><a id="markdown-general" name="general"></a></p>
 <h2 id="general">General</h2>
 <p>If you are unable to find answers to your questions here, please see <a href="https://chocolatey.org/support">https://chocolatey.org/support</a> (FOSS and Licensed) and <a href="https://chocolatey.org/bugs">https://chocolatey.org/bugs</a> to learn more about how you can report issues and get things fixed if they are broken.</p>
-<p>Also consider the [[frequently asked questions|ChocolateyFAQs]].</p>
+<p>Also consider the <a href="../general/faqs">frequently asked questions</a>.</p>
 <p><a id="markdown-chocolatey-installation" name="chocolatey-installation"></a></p>
 <h2 id="chocolatey-installation">Chocolatey Installation</h2>
 <p><a id="markdown-the-request-was-aborted-could-not-create-ssltls-secure-channel" name="the-request-was-aborted-could-not-create-ssltls-secure-channel"></a></p>
@@ -365,10 +365,10 @@ At line:1 char:1
 <p>Please see <a href="#im-getting-a-403-unauthorized-issue-when-attempting-to-use-the-community-package-repository">I'm getting a 403 unauthorized issue when attempting to use the community package repository.</a></p>
 <p><a id="markdown-i-am-having-trouble-with-powershell-to-install-chocolatey" name="i-am-having-trouble-with-powershell-to-install-chocolatey"></a></p>
 <h3 id="i-am-having-trouble-with-powershell-to-install-chocolatey">I am having trouble with PowerShell to install Chocolatey</h3>
-<p>See the More Options section of [[installation|Installation#more-install-options]].</p>
+<p>See the More Options section of <a href="../usage/installation#more-install-options">installation</a>.</p>
 <p><a id="markdown-licensed-installation-and-issues" name="licensed-installation-and-issues"></a></p>
 <h2 id="licensed-installation-and-issues">Licensed Installation and Issues</h2>
-<p>See [[licensed installation|Installation-Licensed]]. If you are having issues, please see <a href="https://chocolatey.org/support">https://chocolatey.org/support</a> for details on how to get support.</p>
+<p>See <a href="../usage/installation-licensed">licensed installation</a>. If you are having issues, please see <a href="https://chocolatey.org/support">https://chocolatey.org/support</a> for details on how to get support.</p>
 <p><a id="markdown-creating-packages" name="creating-packages"></a></p>
 <h2 id="creating-packages">Creating Packages</h2>
 <p><a id="markdown-install-chocolateypath-doesnt-seem-to-work" name="install-chocolateypath-doesnt-seem-to-work"></a></p>
@@ -430,7 +430,7 @@ Install-ChocolateyPackage $packageArgs # this is incorrect and will pass the ent
 </ul>
 <p><a id="markdown-error-this-package-does-not-support-64-bit-architecture-when-trying-to-install-from-a-local-or-included-binary" name="error-this-package-does-not-support-64-bit-architecture-when-trying-to-install-from-a-local-or-included-binary"></a></p>
 <h3 id="error-this-package-does-not-support-64-bit-architecture.when-trying-to-install-from-a-local-or-included-binary">&quot;ERROR: This package does not support 64 bit architecture.&quot; when trying to install from a local or included binary.</h3>
-<p>This is similar to the above, the error is the same. In most cases it stems from setting up your package parameters for <code>Install-ChocolateyInstallPackage</code> but calling <code>Install-ChocolateyPackage</code> instead. Learn the differences at the [[PowerShell function reference|HelpersReference]].</p>
+<p>This is similar to the above, the error is the same. In most cases it stems from setting up your package parameters for <code>Install-ChocolateyInstallPackage</code> but calling <code>Install-ChocolateyPackage</code> instead. Learn the differences at the <a href="../creating-packages/helpers/reference">PowerShell function reference</a>.</p>
 <p>Reference: <a href="https://groups.google.com/d/msgid/chocolatey/d11d8eb2-74b3-4c2c-b0bb-d1a1ed3df389%40googlegroups.com">https://groups.google.com/d/msgid/chocolatey/d11d8eb2-74b3-4c2c-b0bb-d1a1ed3df389%40googlegroups.com</a> (you will need to join the group to see the message)</p>
 <p><a id="markdown-my-package-cant-find-dependencies" name="my-package-cant-find-dependencies"></a></p>
 <h3 id="my-package-cant-find-dependencies">My package can't find dependencies</h3>
@@ -488,7 +488,7 @@ if (Test-Path($ChocolateyProfile)) {
 <li>It is being blocked in your organization</li>
 <li>We broke something (this is the least likely reason)</li>
 <li><strong>CloudFlare has blocked your IP <a href="https://support.cloudflare.com/hc/en-us/articles/203366080-Why-do-I-see-a-captcha-or-challenge-page-Attention-Required-trying-to-visit-a-site-protected-by-Cloudflare-as-a-site-visitor-">due to reasons</a></strong> (99% of the time, this is the issue)</li>
-<li>The Chocolatey Community Team may have blocked access due to excessive use - see [[excessive use for details|CommunityPackagesDisclaimer#excessive-use]]</li>
+<li>The Chocolatey Community Team may have blocked access due to excessive use - see <a href="../general/community-packages-disclaimer#excessive-use">excessive use for details</a></li>
 </ul>
 <p>You can use a tool like <a href="https://www.telerik.com/fiddler">Fiddler</a> to help determine what is going on.</p>
 <p>Cloudflare uses Project Honeypot to determine if your IP address is flagged, such as if you have malware on your box that is sending spam emails. Go to Project Honeypot and put in your IP address - <a href="http://www.projecthoneypot.org/search_ip.php">http://www.projecthoneypot.org/search_ip.php</a>. Check to see if your IP is flagged here.</p>
@@ -502,7 +502,7 @@ if (Test-Path($ChocolateyProfile)) {
 <p>Once this has been completed, you should have access to install Chocolatey and/or packages from the community repository.</p>
 <p><a id="markdown-im-getting-a-429-too-many-requests-issue-when-attempting-to-use-the-community-package-repository" name="im-getting-a-429-too-many-requests-issue-when-attempting-to-use-the-community-package-repository"></a></p>
 <h3 id="im-getting-a-429-too-many-requests-issue-when-attempting-to-use-the-community-package-repository">I'm getting a 429 too many requests issue when attempting to use the community package repository.</h3>
-<p>This means your IP address has been flagged for too many requests. Please see [[Rate Limiting|CommunityPackagesDisclaimer#rate-limiting]] for details and actions.</p>
+<p>This means your IP address has been flagged for too many requests. Please see <a href="./general/community-packages-disclaimer#rate-limiting">Rate Limiting</a> for details and actions.</p>
 <p>Reference Errors:</p>
 <ul>
 <li><code>Exception calling &quot;DownloadFile&quot; with &quot;2&quot; argument(s): The remote server returned an error: (429) Too Many Requests</code></li>
@@ -901,7 +901,7 @@ process {
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

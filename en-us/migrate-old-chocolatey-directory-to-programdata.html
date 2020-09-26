@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -285,7 +285,7 @@
                                     </div>
                                     <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
                                         <p>After an upgrade, you may see a message similar to the following:</p>
-<pre><code>The default install location has been changed to 'C:\ProgramData\chocolatey'.
+<pre><code class="language-shell">The default install location has been changed to 'C:\ProgramData\chocolatey'.
 This install will be updated to that location in the next version. It
 is strongly suggested you move this installation to the new location
 as soon as possible to limit write access from all users. Do not forget
@@ -294,20 +294,20 @@ to update PATH &amp; ChocolateyInstall environment variables.
 <p>The new path and name of the ChocolateyInstall variable may be different for you.</p>
 <p>Here's how to move Chocolatey.</p>
 <p>First, move the directory.  Open a <a href="http://www.howtogeek.com/howto/windows-vista/run-a-command-as-administrator-from-the-windows-vista-run-box/">Command Prompt as Administrator</a> and run the following:</p>
-<pre><code>cd c:\
+<pre><code class="language-shell">cd c:\
 md ProgramData\chocolatey
 xcopy /s /e c:\chocolatey\*.* ProgramData\chocolatey\.
 rd chocolatey /s /q
 </code></pre>
 <p>Next, check your environment variables. Note that some software that lives in <code>c:\chocolatey</code> may have added itself to your path.</p>
-<pre><code>PS C:\Users\james&gt; (echo $Env:PATH).split(&quot;;&quot;) | where {$_ -match &quot;chocolatey&quot;}
+<pre><code class="language-shell">PS C:\Users\james&gt; (echo $Env:PATH).split(&quot;;&quot;) | where {$_ -match &quot;chocolatey&quot;}
 C:\chocolatey\lib\minecraft.1.1\tools\minecraft.exe
 C:\chocolatey\bin
 </code></pre>
-<p><img src="http://i.imgur.com/Xser6iG.png" alt="" /></p>
-<p><img src="http://i.imgur.com/6SsGw9v.png" alt="" /></p>
-<p><img src="http://i.imgur.com/N6YtQSk.png" alt="" /></p>
-<p><img src="http://i.imgur.com/Bszc7qg.png" alt="" /></p>
+<p><img src="http://i.imgur.com/Xser6iG.png" alt="Right click and select properties" /></p>
+<p><img src="http://i.imgur.com/6SsGw9v.png" alt="Click advanced system settings" /></p>
+<p><img src="http://i.imgur.com/N6YtQSk.png" alt="Click environment variables button" /></p>
+<p><img src="http://i.imgur.com/Bszc7qg.png" alt="Edit environment variables" /></p>
 <p>Now, change your environment variables. Note that Chocolatey may appear in both the user PATH and the system PATH. I strongly recommend copy and pasting the contents of the text box to and from notepad for significantly easier editing.</p>
 
                                     </div>
@@ -323,7 +323,7 @@ C:\chocolatey\bin
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -288,7 +288,7 @@
 <blockquote>
 <p>:memo: <strong>NOTE</strong></p>
 <p>This document is for <strong>Version 1</strong> of the Quick Deployment Environment.
-If you're using a newer version of QDE, please refer to the [[newer QDE Setup page|QuickDeploymentSetup]].</p>
+If you're using a newer version of QDE, please refer to the <a href="../setup">newer QDE Setup page</a>.</p>
 </blockquote>
 <p>This document contains instructions for importing the QuickDeploy appliance/VM, or creating a VM and attaching the QuickDeploy disk image to it.
 You will receive a download link via email for an archive of the VM image. Once you have this downloaded, it will be ready for extraction and import into your environment.</p>
@@ -354,7 +354,7 @@ This is to ensure that the packages stored on the server are not publicly access
 <p>:warning: <strong>WARNING</strong></p>
 <p>tl;dr: Think long and hard before changing the QDE hostname</p>
 <p>Renaming the QDE host requires a lot of things and needs to be completed FIRST prior to ANYTHING that is done on the QDE box. It is strongly recommended <strong>NOT</strong> to rename unless you absolutely need to. The most important reason has to do with how a client installs from QDE - it must learn to trust the QDE certificate. Once renamed, the easy option that's provided for you goes away and you will need to provide a hosted solution with an already trusted certificate.
-You can provide your own certificate that is already trusted on machines as part of the [[SSL/TLS Setup|QuickDeploymentSslSetup]]. Your other option is to host the script to trust the certificate with an already trusted certificate. You will find a template that you will need to edit at <code>c:\choco_setup_files</code> (in the QDE) named <code>Import-ChocoServerCertificate.ps1</code>.</p>
+You can provide your own certificate that is already trusted on machines as part of the <a href="./ssl-setup">SSL/TLS Setup</a>. Your other option is to host the script to trust the certificate with an already trusted certificate. You will find a template that you will need to edit at <code>c:\choco_setup_files</code> (in the QDE) named <code>Import-ChocoServerCertificate.ps1</code>.</p>
 <p>Please contact support if you need help here.</p>
 </blockquote>
 <p>If you rename the QDE Environment, here's a small list of things you'll need to do:</p>
@@ -521,7 +521,7 @@ You will likely need to reconfigure it with a static IP address depending on you
 <hr />
 <h2 id="step-3-virtual-environment-setup">Step 3: Virtual Environment Setup</h2>
 <p>On the desktop of your QDE VM, there is a <code>Readme.html</code> file, that will guide you through the rest of the setup process once you are logged in.
-A version of this readme file can be found in the [[Quick Deployment Desktop Readme|QuickDeploymentDesktopReadme]].</p>
+A version of this readme file can be found in the <a href="./desktop-readme">Quick Deployment Desktop Readme</a>.</p>
 <blockquote>
 <p>:memo: <strong>NOTE</strong>: The online version is likely more up to date than the ReadMe you will find on the desktop (not including redacted items like credentials). If there are conflicts between the desktop readme and what you see online, prefer the online version.</p>
 </blockquote>
@@ -535,14 +535,14 @@ Resize-Partition -DriveLetter C -Size ((Get-PartitionSupportedSize -DriveLetter 
 </code></pre>
 <p>Alternatively, you can use the Disk Management utility to expand the disk, if a GUI is preferred.</p>
 <h3 id="step-3.2-add-license-file-to-qde">Step 3.2: Add License File to QDE</h3>
-<p>In the [[Quick Deployment Desktop Readme|QuickDeploymentDesktopReadme]], it is going to ask you to use the license file. That license file comes from an external location. It is best to copy/paste the file into QDE as a whole file, but you may have needed to set up any kind of extensions available for that.</p>
+<p>In the <a href="./desktop-readme">Quick Deployment Desktop Readme</a>, it is going to ask you to use the license file. That license file comes from an external location. It is best to copy/paste the file into QDE as a whole file, but you may have needed to set up any kind of extensions available for that.</p>
 <blockquote>
 <p>:warning: <strong>WARNING</strong></p>
 <p>If you find that you need to copy the text and paste the license file text into a new file in QDE, the file format and name is extremely important to get right. If you don't have UTF-8 or there is a space inserted, Chocolatey will consider it invalid.
 Please contact support if you need help here.</p>
 </blockquote>
 <h3 id="step-3.3-regenerate-ssl-certificates">Step 3.3: Regenerate SSL Certificates</h3>
-<p>See [[QDE SSL/TLS Setup|QuickDeploymentSslSetup]].</p>
+<p>See <a href="./ssl-setup">QDE SSL/TLS Setup</a>.</p>
 <h3 id="step-3.4-database-password-changes-optional">Step 3.4: Database Password Changes (Optional)</h3>
 <p>The database credentials are currently pre-set.
 If you would like to change the credentials associated with the database, you will need to follow these steps.</p>
@@ -561,17 +561,17 @@ Choco install chocolatey-management-web -y --package-parameters-sensitive=”’
 </code></pre>
 <hr />
 <h2 id="step-4-firewall-changes">Step 4: Firewall Changes</h2>
-<p>See [[QDE Firewall Changes|QuickDeploymentFirewallChanges]].</p>
+<p>See <a href="./firewall-changes">QDE Firewall Changes</a>.</p>
 <hr />
 <h2 id="step-5-install-and-configure-chocolatey-on-clients">Step 5: Install and Configure Chocolatey on Clients</h2>
-<p>See [[QDE Client Setup|QuickDeploymentClientSetup]].</p>
+<p>See <a href="./client-setup">QDE Client Setup</a>.</p>
 <hr />
 <h2 id="faq">FAQ</h2>
 <h3 id="how-do-i-upgrade-qde">How do I upgrade QDE?</h3>
 <p>While we will continue to make improvements to the QDE, there is no upgrade path for the Virtual Machine itself. You can choose to start over with a newer version, but that feels like the wrong way to go.</p>
-<p>It is simple to upgrade the components and that it how we recommend upgrading aspects of QDE. Should you want to upgrade say Central Management, you can follow the Central Management steps for upgrade at [[Upgrade Central Management|CentralManagementSetupUpgrade]].</p>
+<p>It is simple to upgrade the components and that it how we recommend upgrading aspects of QDE. Should you want to upgrade say Central Management, you can follow the Central Management steps for upgrade at <a href="./central-management/setup-upgrade">Upgrade Central Management</a>.</p>
 <hr />
-<p>[[Quick Deployment Environment|QuickDeploymentEnvironment]]</p>
+<p><a href="../">Quick Deployment Environment</a></p>
 
                                     </div>
                                 <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
@@ -610,7 +610,7 @@ Choco install chocolatey-management-web -y --package-parameters-sensitive=”’
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

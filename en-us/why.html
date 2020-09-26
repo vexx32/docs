@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -294,14 +294,14 @@
 <li>Unattended installations</li>
 </ul>
 <p>We didn't try to reinvent the wheel with Chocolatey. We are building on technologies you know, technologies you may have been using for years. It's going to feel good knowing that time you have spent working with software deployment plugs right into Chocolatey in a much better and more manageable way. Welcome to sane software management. With those familiar technologies, Chocolatey brings the concepts of true package management to allow you to version things, manage dependencies and installation order, better inventory management, and other features.</p>
-<p>Chocolatey also integrates with [[infrastructure management tools (like Puppet, Chef or SCCM)|FeaturesInfrastructureAutomation]] and other remote administration tools (like LabTech or LANDesk).</p>
+<p>Chocolatey also integrates with <a href="./features/free/infrastructure-automation">infrastructure management tools (like Puppet, Chef or SCCM)</a> and other remote administration tools (like LabTech or LANDesk).</p>
 <p>You are going to find the simplicity and absolute power of Chocolatey reinvigorating for Windows software deployments. Yes, we know that is a bold statement. Yes, we have hundreds of organizations and thousands of individuals that use Chocolatey that will back that statement up.</p>
 <p>Chocolatey is the package manager for Windows.</p>
 <h3 id="what-is-the-purpose-of-chocolatey">What is the purpose of Chocolatey?</h3>
 <p>How many times do you hear about an awesome tool/application from your friends and want to try it out? How much effort do you go through to set a tool and all of its requirements up on your machine? Do you realize that all of this manual effort is a pain? It's a pain we are used to! It's something we just do and don't realize we are wasting time doing all of this manual process. And worse, when we install applications it's always... Next Next Next Finish.</p>
 <p>There is a better way! Once you start to use Chocolatey to silently install applications, tools, and to quickly set up things on your machine, you will start to realize that it is more of a global automation tool. That makes it an enabler, enabling you to do just about anything. And to repeat it anywhere in the world with little more than an internet connection.</p>
 <p>Because Chocolatey is built on top of the NuGet infrastructure, that means you can install packages from Chocolatey.org, NuGet.org, MyGet.org, file shares, directories, custom feeds and from private feeds. That means you can set up your own server (even private) and your own internal packages with more company specific packages.</p>
-<p>[[Tell me a story|ChocolateyStory]]</p>
+<p><a href="./chocolatey-story">Tell me a story</a></p>
 <h3 id="what-is-chocolatey">What is Chocolatey?</h3>
 <p>Chocolatey helps good developers and system administrators become outstanding developers/sysadmins. Chocolatey goes to <em>eleven</em>.</p>
 <p>Chocolatey is something <strong>you need if you've ever installed, upgraded, or removed software on Windows</strong>. It is an <strong>existing, proven</strong>, project that was started <a href="https://github.com/ferventcoder/nugetpackages/commit/d16ed7ac675395b3bb8ecee90fb13efb03d4b619">in 2011</a>. For those familiar with *nix package managers, it is a binary package manager, sort of like yum or apt-get, but for Windows. The words &quot;binary package manager&quot; can be confusing for those who don't know what that means, but bear with me for a few minutes. Chocolatey is a tool that automates all the mundane getting and installing software work for you. You just select what you want installed and within a few minutes, Chocolatey has downloaded and installed (or upgraded) that software without need for further input from you. So <strong>while Chocolatey does the hard work, you can go get some coffee</strong>. Or <strong>sleep</strong>. Or do other more important things.</p>
@@ -315,7 +315,7 @@
 <li>Hope it didn't install any malware</li>
 <li>Now do it again for <em><strong>EVERY</strong></em> piece of software on your system.</li>
 </ol>
-<p><img src="https://cloud.githubusercontent.com/assets/63502/6924749/4e4e23d2-d7a0-11e4-9f4e-a44a02b227f6.gif" alt="chrisfarley-disbelief" /></p>
+<p><img src="https://cloud.githubusercontent.com/assets/63502/6924749/4e4e23d2-d7a0-11e4-9f4e-a44a02b227f6.gif" alt="chris-farley-disbelief" /></p>
 <p>Now contrast that with how you do the same with <strong>Chocolatey</strong>:</p>
 <ol>
 <li>Open command line.</li>
@@ -327,7 +327,7 @@
 <h3 id="can-i-use-chocolatey-with-existing-installed-software">Can I use Chocolatey with existing installed software?</h3>
 <p>Yes, yes you can. Chocolatey works in a similar manner to how you would do things if you downloaded and installed things yourself. Its design and infrastructure is built that way on purpose. It takes the pain of manually doing it yourself away (see previous section).</p>
 <p><img src="http://replygif.net/i/208.gif" alt="Yes, yes" /></p>
-<p>Now, Chocolatey <em><strong>can</strong></em> take over existing installs and be able to handle uninstalls in most cases. <em><strong>Can</strong></em> is very dependent on packaging and the underlying software installer that is used for the install ([[installer packages|ChocolateyFAQs#what-distinction-does-chocolatey-make-between-an-installable-and-a-portable-application]] are the context here).</p>
+<p>Now, Chocolatey <em><strong>can</strong></em> take over existing installs and be able to handle uninstalls in most cases. <em><strong>Can</strong></em> is very dependent on packaging and the underlying software installer that is used for the install (<a href="./general/faqs#what-distinction-does-chocolatey-make-between-an-installable-and-a-portable-application">installer packages</a> are the context here).</p>
 <p>Let me start by saying that testing how a single package won't give you a warm and fuzzy about how it will work with all packages. Software installers in the wild world of Windows have many completely different ways of going about things, all of which are dependent on those creating the installers, none of which have a consistent standard (except maybe MSI). Welcome to Windows.</p>
 <p>Now that we have baselined that - each piece of software out there is a special snowflake, so  each package has to be able to account for differences in the installers.</p>
 <p>So when a package takes over the existing install, if the registry snapshot doesn't differ, it won't be able to automatically uninstall it (if you have autoUninstaller turned on, check <code>choco feature</code>). If there is no <code>chocolateyUninstall.ps1</code> that would uninstall the software, choco won't be able to uninstall it. At some point it will though, choco continues to get better at things. And at some point in the near future it will contain a check to do nothing for an install if a registry key exists (and record that for later uninstall).</p>
@@ -347,7 +347,7 @@
 </ul>
 <p>To date, Chocolatey does all of this (virtual packages is coming).</p>
 <h3 id="other-questions">Other questions?</h3>
-<p>See the [[FAQs|ChocolateyFAQs]].</p>
+<p>See the <a href="./general/faqs">FAQs</a>.</p>
 
                                     </div>
                                 <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
@@ -371,7 +371,7 @@
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

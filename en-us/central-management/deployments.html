@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -321,7 +321,7 @@
 <li>Chocolatey Licensed Extension (<code>chocolatey.extension</code> on all clients) - v2.1.1+</li>
 </ul>
 <h3 id="what-is-the-ccm-compatibility-matrix">What is the CCM compatibility matrix?</h3>
-<p>Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of CCM and vice versa.  Please see the [[CCM Component Compatibility Matrix|CentralManagement#ccm-component-compatibility-matrix]] for details.</p>
+<p>Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of CCM and vice versa.  Please see the <a href="./#ccm-component-compatibility-matrix">CCM Component Compatibility Matrix</a> for details.</p>
 <h3 id="why-do-i-see-some-machines-have-not-opted-in-for-deployments">Why do I see some machines have not opted in for Deployments?</h3>
 <p>If you are on the Groups screen, you may notice that some machines show up highlighted with a coloring, and one of those colorings is an orange - the legend below it mentions &quot;Not Opted In For Deploymens (Configuration)&quot;.</p>
 <p><img src="/assets/images/groups/ccm-groups-eligibility.png" alt="Group eligibility legend" /></p>
@@ -329,7 +329,7 @@
 <blockquote>
 <p>The computer has not opted in or a group contains computers that have not opted in for deployments by configuration. Please ensure the computer has at least chocolatey-agent v0.10.0+ installed and the feature &quot;useChocolateyCentralManagementDeployments&quot; has been set to enabled on the client computer.</p>
 </blockquote>
-<p>This is telling you that you need to ensure you set the client to allow for the the use of Deployments. As it is a security consideration, it requires an explicit opt-in on client machines. See [[Client Setup - Features |CentralManagementSetupClient#features]] for details on how to set it.</p>
+<p>This is telling you that you need to ensure you set the client to allow for the the use of Deployments. As it is a security consideration, it requires an explicit opt-in on client machines. See <a href="./setup-client#features">Client Setup - Features</a> for details on how to set it.</p>
 <h3 id="i-have-plenty-of-licenses-why-do-some-machines-show-not-opted-in-for-deployments-and-also-exceeds-your-current-license-count">I have plenty of licenses, why do some machines show not opted in for deployments and also exceeds your current license count?</h3>
 <p>Once you upgrade to at least CCM v0.2.0, every machine will show that until they check in the next time. Once they check in, that will go away. So it's basically normal to see that until those machines check in again.</p>
 <h3 id="can-i-use-chocolatey-deployments-to-upgrade-ccm-based-components">Can I use Chocolatey Deployments to upgrade CCM based components?</h3>
@@ -350,13 +350,13 @@ Get-Service chocolatey-* | Start-Service
 <hr />
 <h2 id="related-topics">Related Topics</h2>
 <ul>
-<li>[[Chocolatey Central Management|CentralManagement]]</li>
-<li>[[Central Management - Groups|CentralManagementGroups]]</li>
-<li>[[Central Management - Computers|CentralManagementComputers]]</li>
-<li>[[Central Management - Reports|CentralManagementReports]]</li>
+<li><a href="./">Chocolatey Central Management</a></li>
+<li><a href="./groups">Central Management - Groups</a></li>
+<li><a href="./computers">Central Management - Computers</a></li>
+<li><a href="./reports">Central Management - Reports</a></li>
 </ul>
 <hr />
-<p>[[Chocolatey Central Management|CentralManagement]]</p>
+<p><a href="./">Chocolatey Central Management</a></p>
 
                                     </div>
                                 <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
@@ -386,7 +386,7 @@ Get-Service chocolatey-* | Start-Service
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

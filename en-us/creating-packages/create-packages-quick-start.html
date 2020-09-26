@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -286,7 +286,7 @@
                                     <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
                                         <h2 id="creating-chocolatey-packages-tldr-version">Creating Chocolatey Packages - TL;DR version</h2>
 <p>Here's a TL;DR quick start version of the package creating tutorial. Follow these steps to create a simple package.</p>
-<p><strong>Problem?</strong> Read the detailed version: [[Creating Chocolatey Packages|CreatePackages]]</p>
+<p><strong>Problem?</strong> Read the detailed version: <a href="./creating-packages/create-packages">Creating Chocolatey Packages</a></p>
 <!-- TOC -->
 <ul>
 <li><a href="#creating-chocolatey-packages---tldr-version">Creating Chocolatey Packages - TL;DR version</a></li>
@@ -307,12 +307,12 @@
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li>You have Chocolatey installed.</li>
-<li>You've read [[What are Chocolatey Packages?|GettingStarted#what-are-chocolatey-packages]] first.</li>
+<li>You've read <a href="../usage/getting-started#what-are-chocolatey-packages">What are Chocolatey Packages?</a> first.</li>
 <li>You know how a package works
 <ul>
-<li>A package contains a <code>nuspec</code> file. This defines the package. ([[Docs|CreatePackages#nuspec]])</li>
+<li>A package contains a <code>nuspec</code> file. This defines the package. (<a href="./create-packages#nuspec">Docs</a>)</li>
 <li>A package may contain embedded software.</li>
-<li>A package may contain an installation script. This can be [[very simple|CreatePackagesQuickStart#examples]].</li>
+<li>A package may contain an installation script. This can be <a href="./create-packages-quick-start#examples">very simple</a>.</li>
 </ul>
 </li>
 </ul>
@@ -389,7 +389,7 @@
 <li><code>%ChocolateyInstall%</code> - Chocolatey installation directory</li>
 <li><code>%ChocolateyInstall%\lib\package-name</code> - Package directory</li>
 <li><code>%cd%</code> or <code>$pwd</code> - current directory</li>
-<li>Environment variable reference available in the README when using <code>choco new</code> or [[online|HelpersReference#variables]].</li>
+<li>Environment variable reference available in the README when using <code>choco new</code> or <a href="./helpers/reference#variables">online</a>.</li>
 </ul>
 <h2 id="examples">Examples</h2>
 <p>Here are some simple examples. <strong>NOTE</strong>: This needs updated with checksums and newer package concepts. Please run <code>choco new</code> when creating packages as it contains all of the most up to date notes.</p>
@@ -414,7 +414,7 @@ $validExitCodes = &#64;(0,3010)
 Install-ChocolateyPackage $packageName $installerType $silentArgs $url $url64  -validExitCodes $validExitCodes
 </code></pre>
 <h3 id="parsing-package-parameters">Parsing Package Parameters</h3>
-<p>For a complete example of how you can use the PackageParameters argument of the <code>choco install</code> command, see this [[How-To|How-To-Parse-PackageParameters-Argument]].</p>
+<p>For a complete example of how you can use the PackageParameters argument of the <code>choco install</code> command, see this <a href="../how-tos/parse-packageparameters-argument">How-To</a>.</p>
 <h2 id="tips">Tips</h2>
 <ul>
 <li>If you cannot find the installer silent mode, you can try an old tool called <a href="http://www.softpedia.com/progDownload/Universal-Silent-Switch-Finder-Download-180984.html">Universal Silent Switch Finder 1.5.0.0</a> - <code>choco install ussf</code>.</li>
@@ -446,7 +446,7 @@ Install-ChocolateyPackage $packageName $installerType $silentArgs $url $url64  -
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

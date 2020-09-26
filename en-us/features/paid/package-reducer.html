@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -378,7 +378,7 @@
 <li>If you want to limit to just nupkg files being reduced and not automatically removing zips and installers, run the following: <code>choco feature enable -n reduceOnlyNupkgSize</code></li>
 </ul>
 <h3 id="see-it-in-action">See It In Action</h3>
-<p><img src="/assets/images/features/features_package_reducer.png" alt="Package Reducer - if you are on https://chocolatey.org/docs/features-package-reducer, see commented html below for detailed description of image" /></p>
+<p><img src="/assets/images/features/features_package_reducer.png" alt="Package Reducer - if you are on https://docs.chocolatey.org/en-us/features/paid/package-reducer, see commented html below for detailed description of image" /></p>
 <!--
 Text in the image above:
 
@@ -405,19 +405,19 @@ The image shows an installation without and with package reducer. The difference
        nupkg file to very small and remove extracted archives and installers.
        Overrides the default feature 'reduceInstalledPackageSpaceUsage' set to
        'False'. Licensed editions only (version 1.12.0+). See
-       https://chocolatey.org/docs/features-package-reducer
+       https://docs.chocolatey.org/en-us/features/paid/package-reducer
 
      --no-reduce, --no-reduce-package-size, --no-deflate, --no-deflate-package-size
      Do Not Reduce Installed Package Size - Leave the nupkg and files alone
        in the package. Overrides the default feature
        'reduceInstalledPackageSpaceUsage' set to 'False'. Licensed editions
-       only (version 1.12.0+). See https://chocolatey.org/docs/features-package-reducer
+       only (version 1.12.0+). See https://docs.chocolatey.org/en-us/features/paid/package-reducer
 
      --reduce-nupkg-only, --deflate-nupkg-only
      Reduce Only Nupkg File Size - reduce only the size of nupkg file when
        using Package Reducer. Overrides the default feature
        'reduceOnlyNupkgSize' set to 'False'. Licensed editions only (version -
-       1.12.0+). See https://chocolatey.org/docs/features-package-reducer
+       1.12.0+). See https://docs.chocolatey.org/en-us/features/paid/package-reducer
 </code></pre>
 <h3 id="faq">FAQ</h3>
 <h4 id="how-do-i-take-advantage-of-this-feature">How do I take advantage of this feature?</h4>
@@ -473,7 +473,7 @@ The image shows an installation without and with package reducer. The difference
 choco optimize --reduce-nupkg-only
 </code></pre>
 <h3 id="see-it-in-action-1">See It In Action</h3>
-<p><img src="/assets/images/features/features_package_reducer_optimize.png" alt="choco optimize - if you are on https://chocolatey.org/docs/features-package-reducer, see commented html below for detailed description of image" /></p>
+<p><img src="/assets/images/features/features_package_reducer_optimize.png" alt="choco optimize - if you are on https://docs.chocolatey.org/en-us/features/paid/package-reducer, see commented html below for detailed description of image" /></p>
 <!--
 Text in the image above:
 
@@ -527,7 +527,7 @@ This image shows a display of `choco optimize` reducing space for 34 existing in
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

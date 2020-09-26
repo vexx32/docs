@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -287,13 +287,13 @@
                                         <h1 id="chocolatey-release-notes-chocolatey-licensed-extension">Chocolatey Release Notes - Chocolatey Licensed Extension</h1>
 <h2 id="summary">Summary</h2>
 <p>This covers the release notes for the Chocolatey Licensed Extension (<code>chocolatey.extension</code>) package, where the commercial editions of Chocolatey get their enhanced functionality.
-Please see [[Install the Licensed Edition|Installation-Licensed]] for information on how to get and install the package.</p>
+Please see <a href="../../usage/installation-licensed">Install the Licensed Edition</a> for information on how to get and install the package.</p>
 <p><strong>NOTE</strong>: This package is available to all levels of commercial editions, so if you have paid for a license, you will have access to this package.</p>
 <p><strong>NOTE</strong>: Some features in the Chocolatey Licensed Extension are limited by the commercial edition you have. Please see <a href="https://chocolatey.org/compare">https://chocolatey.org/compare</a> for more information.</p>
 <h2 id="other-release-notes">Other Release Notes</h2>
 <ul>
-<li>Refer to [[Open Source Release Notes|ReleaseNotes]] as commercial editions build on top of open source.</li>
-<li>Chocolatey for Business (C4B) customers - also refer to [[Chocolatey Agent Release Notes|ReleaseNotesAgent]] and [[Chocolatey Central Management Release Notes|ReleaseNotesCentralManagement]].</li>
+<li>Refer to <a href="./open-source">Open Source Release Notes</a> as commercial editions build on top of open source.</li>
+<li>Chocolatey for Business (C4B) customers - also refer to <a href="./agent">Chocolatey Agent Release Notes</a> and <a href="./central-management">Chocolatey Central Management Release Notes</a>.</li>
 </ul>
 <h2 id="known-issues">Known Issues</h2>
 <ul>
@@ -534,7 +534,7 @@ Please see [[Install the Licensed Edition|Installation-Licensed]] for informatio
 <ul>
 <li>Run background service interactively - sometimes you install applications that are unattended but cannot be silent.</li>
 </ul>
-<p>If you want self-service to interactively manage installations, run <code>choco feature enable --name=useBackgroundServiceInteractively</code>. This requires that you use the <code>ChocolateyLocalAdmin</code> account with the Chocolatey-managed password as passwords are not stored and the service would need to produce that at runtime. There are some security considerations and why this is not turned on by default. Please see <a href="https://chocolatey.org/docs/features-agent-service#interactive-self-service-consideration">interactive self-service consideration</a>.</p>
+<p>If you want self-service to interactively manage installations, run <code>choco feature enable --name=useBackgroundServiceInteractively</code>. This requires that you use the <code>ChocolateyLocalAdmin</code> account with the Chocolatey-managed password as passwords are not stored and the service would need to produce that at runtime. There are some security considerations and why this is not turned on by default. Please see <a href="https://docs.chocolatey.org/en-us/features/paid/agent-service#interactive-self-service-consideration">interactive self-service consideration</a>.</p>
 <h3 id="bug-fixes-8">BUG FIXES</h3>
 <ul>
 <li>Windows Service Management Functions:
@@ -636,7 +636,7 @@ Please see [[Install the Licensed Edition|Installation-Licensed]] for informatio
 <ul>
 <li>Self-Service / Background Mode:
 <ul>
-<li>Allow commands to be configurable. Covered in more detail at <a href="https://chocolatey.org/docs/features-agent-service#setup">https://chocolatey.org/docs/features-agent-service#setup</a>.</li>
+<li>Allow commands to be configurable. Covered in more detail at <a href="https://docs.chocolatey.org/en-us/features/paid/agent-service#setup">https://docs.chocolatey.org/en-us/features/paid/agent-service#setup</a>.</li>
 </ul>
 </li>
 </ul>
@@ -749,11 +749,11 @@ Please see [[Install the Licensed Edition|Installation-Licensed]] for informatio
 <ul>
 <li><p>Package Reducer / Optimize (All licensed editions) - Reduce Space Usage for Chocolatey Installations</p>
 <p>If you have a significant number of Chocolatey packages you manage, you may notice that you also may have a pretty significant space usage under the Chocolatey lib directory. Package reducer automatically decreases the size of nupkg files to around 5KB and removes installers and zips automatically from your package install directories. This may allow you to save GBs of usage for a large amount of packages being managed.</p>
-<p>To learn more about Package Reducer and <code>choco optimize</code>, please see <a href="https://chocolatey.org/docs/features-package-reducer">https://chocolatey.org/docs/features-package-reducer</a>.</p>
+<p>To learn more about Package Reducer and <code>choco optimize</code>, please see <a href="https://docs.chocolatey.org/en-us/features/paid/package-reducer">https://docs.chocolatey.org/en-us/features/paid/package-reducer</a>.</p>
 </li>
 <li><p>Package Audit (C4B) - Learn Who and When</p>
 <p>Reporting is very important, and auditing not only when your installations occurred but who installed them can be critical. There is nothing that presents this kind of information as easily as you will be able to gather it with Chocolatey for Business (C4B) and Package Audit.</p>
-<p>To learn more about Package Audit, please see <a href="https://chocolatey.org/docs/features-package-audit">https://chocolatey.org/docs/features-package-audit</a>.</p>
+<p>To learn more about Package Audit, please see <a href="https://docs.chocolatey.org/en-us/features/paid/package-audit">https://docs.chocolatey.org/en-us/features/paid/package-audit</a>.</p>
 </li>
 </ul>
 <h3 id="improvements-12">IMPROVEMENTS</h3>
@@ -799,17 +799,17 @@ Please see [[Install the Licensed Edition|Installation-Licensed]] for informatio
 <ul>
 <li><p>[Security] Self-Service / Background Mode - support background mode with self-service sources only by default</p>
 <p>If you are using self-service functionality, when you upgrade to v1.10, you will need to go to those sources that you allow to be self-service and ensure they are selected to allow self-service (<code>choco source list</code>). Otherwise by default users are going to be locked out of using those sources. The move to opt-in is best from a security standpoint and we want to give you the ability to have folks opt-in to the better behavior.</p>
-<p>To change this behavior back to the way it was previously, simply run <code>choco disable -n useBackgroundServiceWithSelfServiceSourcesOnly</code>. For more details see <code>choco feature list</code> or <a href="https://chocolatey.org/docs/chocolatey-configuration#self-service-background-mode">https://chocolatey.org/docs/chocolatey-configuration#self-service-background-mode</a></p>
+<p>To change this behavior back to the way it was previously, simply run <code>choco disable -n useBackgroundServiceWithSelfServiceSourcesOnly</code>. For more details see <code>choco feature list</code> or <a href="https://docs.chocolatey.org/en-us/usage/chocolatey-configuration#self-service-background-mode">https://docs.chocolatey.org/en-us/usage/chocolatey-configuration#self-service-background-mode</a></p>
 </li>
 </ul>
 <h3 id="features-5">FEATURES</h3>
 <ul>
 <li><p>Package Throttle - Throttle Bandwidth / Rate Limit Download Speeds</p>
-<p>By default, Chocolatey downloads packages and resources as fast as it can. Package Throttle gives you a way to slow down Chocolatey so it doesn't overwhelm any bandwidth restrictions you may have. This is done as both a setting and per package install/upgrade. This is in bits per second (not bytes, bits is what most network traffic is measured in). When adding at runtime, simply add <code>--bps=VALUE</code>. To set the value in the configuration, call <code>choco config set maximumDownloadRateBitsPerSecond VALUE</code>. For more details see <a href="https://chocolatey.org/docs/features-package-reducer">https://chocolatey.org/docs/features-package-reducer</a>.</p>
+<p>By default, Chocolatey downloads packages and resources as fast as it can. Package Throttle gives you a way to slow down Chocolatey so it doesn't overwhelm any bandwidth restrictions you may have. This is done as both a setting and per package install/upgrade. This is in bits per second (not bytes, bits is what most network traffic is measured in). When adding at runtime, simply add <code>--bps=VALUE</code>. To set the value in the configuration, call <code>choco config set maximumDownloadRateBitsPerSecond VALUE</code>. For more details see <a href="https://docs.chocolatey.org/en-us/features/paid/package-reducer">https://docs.chocolatey.org/en-us/features/paid/package-reducer</a>.</p>
 </li>
 <li><p>Package Synchronizer's Show All Packages In Programs and Features</p>
 <p>This means packages that do not have an underlying installation can still show up in Programs and Features and be managed there as well, which allows for legacy inventory reporting systems to see all the software that is installed in the same way that Chocolatey is able to. A picture can probably best explain this feature, check out <a href="https://raw.githubusercontent.com/chocolatey/choco-wiki/e619d5d25018f9362d50749ee86554ebc4f4f04d/images/features/features_packages_in_programs_and_features.png">All Package In Programs and Features</a></p>
-<p>To turn this feature on, simply run the following command <code>choco feature enable -n showAllPackagesInProgramsAndFeatures</code>. For more details on the feature, see <a href="https://chocolatey.org/docs/chocolatey-configuration#package-synchronizer">https://chocolatey.org/docs/chocolatey-configuration#package-synchronizer</a> and <a href="https://chocolatey.org/docs/features-synchronize">https://chocolatey.org/docs/features-synchronize</a>. This does require one additional run of <code>choco</code> to take affect (same when disabling the feature), hopefully we can remove that in the future.</p>
+<p>To turn this feature on, simply run the following command <code>choco feature enable -n showAllPackagesInProgramsAndFeatures</code>. For more details on the feature, see <a href="https://docs.chocolatey.org/en-us/usage/chocolatey-configuration#package-synchronizer">https://docs.chocolatey.org/en-us/usage/chocolatey-configuration#package-synchronizer</a> and <a href="https://docs.chocolatey.org/en-us/features/paid/synchronize">https://docs.chocolatey.org/en-us/features/paid/synchronize</a>. This does require one additional run of <code>choco</code> to take affect (same when disabling the feature), hopefully we can remove that in the future.</p>
 </li>
 <li><p>Package-less Install / Direct Installer - Install and upgrade directly from installers (MSIs, EXEs, etc)!</p>
 <p>If Package Builder can create a fully unattended package for an installer, you don't even need a package first. You can simply call <code>choco install nameoffile.msi</code> or <code>choco upgrade nameoffile.exe</code> and Chocolatey will generate packaging on the fly and install/upgrade the package!</p>
@@ -941,7 +941,7 @@ Please see [[Install the Licensed Edition|Installation-Licensed]] for informatio
 <p>This release brings the coveted PackageBuilder UI to the Pro+ license (minus auto detection) and adds a tabbed interface that allows you to fill out the entire nuspec. Package Synchronizer now has <code>choco sync</code> to compliment the automatic synchronization. The sync command brings all unmanaged software in Programs and Features under Chocolatey management.</p>
 <h3 id="features-6">FEATURES</h3>
 <ul>
-<li>Package Synchronizer v2 - <code>choco sync</code> to associate existing packages with unmanaged software - see <a href="https://chocolatey.org/docs/features-synchronize#sync-command">https://chocolatey.org/docs/features-synchronize#sync-command</a></li>
+<li>Package Synchronizer v2 - <code>choco sync</code> to associate existing packages with unmanaged software - see <a href="https://docs.chocolatey.org/en-us/features/paid/synchronize#sync-command">https://docs.chocolatey.org/en-us/features/paid/synchronize#sync-command</a></li>
 <li>Package Builder UI:
 <ul>
 <li>Starts at Professional edition (minus autodetection)</li>
@@ -996,7 +996,7 @@ Please see [[Install the Licensed Edition|Installation-Licensed]] for informatio
 <h2 id="january-5-2017">1.8.4 (January 5, 2017)</h2>
 <h3 id="features-7">FEATURES</h3>
 <ul>
-<li>Support Self-Service Install / Background Mode - see <a href="https://chocolatey.org/docs/features-agent-service">https://chocolatey.org/docs/features-agent-service</a></li>
+<li>Support Self-Service Install / Background Mode - see <a href="https://docs.chocolatey.org/en-us/features/paid/agent-service">https://docs.chocolatey.org/en-us/features/paid/agent-service</a></li>
 <li>Manage Windows Services</li>
 </ul>
 <p>We've introduced some service management functions to the business edition. <code>Install-ChocolateyWindowsService</code>, <code>Uninstall-ChocolateyWindowsService</code>, <code>Start-ChocolateyWindowsService</code>, and <code>Stop-ChocolateyWindowsService</code>. Those will be documented soon enough. For now some example code should suffice.</p>
@@ -1588,7 +1588,7 @@ Uninstall-ChocolateyWindowsService -Name 'chocolatey-agent'
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -320,7 +320,7 @@
 </ul>
 <!-- /TOC -->
 <h2 id="summary">Summary</h2>
-<p>When running within an organization it is beneficial to use your own, internally controlled, package repository. But that doesn't mean you have to create all packages from scratch. Chocolatey allows you to create packages easily using the <a href="https://chocolatey.org/docs/features-create-packages-from-installers">package builder</a> but it also allows you to take packages from the Chocolatey Community Repository and recompile them for internal use - this is a process known as <a href="https://chocolatey.org/docs/features-automatically-recompile-packages">package internalization</a>. This guide shows you how to use that within your organization.</p>
+<p>When running within an organization it is beneficial to use your own, internally controlled, package repository. But that doesn't mean you have to create all packages from scratch. Chocolatey allows you to create packages easily using the <a href="../features/paid/create-packages-from-installers">package builder</a> but it also allows you to take packages from the Chocolatey Community Repository and recompile them for internal use - this is a process known as <a href="../features/paid/automatically-recompile-packages">package internalization</a>. This guide shows you how to use that within your organization.</p>
 <h2 id="organizational-requirements">Organizational Requirements</h2>
 <p>When distributing software across your organization you need confidence and control of your package source. We do not recommend an organization use the <a href="https://chocolatey.org" title="Chocolatey Community Repository">Chocolatey Community Repository</a> for the following reasons:</p>
 <ul>
@@ -343,7 +343,7 @@ To ensure the packages work in your environment you need to be in control of the
 <li>Production 'Internal Package Repository' - after the package has been processing in the Test 'Internal Package Repository' it will be pushed to your production package source for release to your organization.</li>
 </ol>
 <p>While it's not explicitly specified the glue that holds all of this together is automation using a self-hosted CI / CD tool such as <a href="https://chocolatey.org/packages/jenkins">Jenkins</a>, <a href="https://chocolatey.org/packages/gocdserver">GoCD</a>, <a href="https://chocolatey.org/packages/teamcity">TeamCity</a> etc. While it may be possible to do this with externally hosted solutions using local build agents (such as <a href="https://visualstudio.microsoft.com/team-services/">VSTS</a>) your mileage may vary.</p>
-<p><strong>NOTE:</strong> The Chocolatey Architecture Diagram shows the services separated. But don't mistake the services for servers. All of these services, package internalizer, source control and package repositories can all be run on one server. There is a caveat however. <a href="https://chocolatey.org/docs/how-to-set-up-chocolatey-server">Chocolatey Server</a> can only run one package source per server, so if you use this with a test and production repository source, as we recommend, you will need to run each on separate servers. This limitation does not apply to <a href="https://www.sonatype.com/nexus-repository-sonatype">Sonatype Nexus</a>, <a href="https://jfrog.com/artifactory/">Artifactory</a>, <a href="https://inedo.com/proget">ProGet</a> and others.</p>
+<p><strong>NOTE:</strong> The Chocolatey Architecture Diagram shows the services separated. But don't mistake the services for servers. All of these services, package internalizer, source control and package repositories can all be run on one server. There is a caveat however. <a href="./set-up-chocolatey-server">Chocolatey Server</a> can only run one package source per server, so if you use this with a test and production repository source, as we recommend, you will need to run each on separate servers. This limitation does not apply to <a href="https://www.sonatype.com/nexus-repository-sonatype">Sonatype Nexus</a>, <a href="https://jfrog.com/artifactory/">Artifactory</a>, <a href="https://inedo.com/proget">ProGet</a> and others.</p>
 <h2 id="building-your-internal-infrastructure">Building Your Internal Infrastructure</h2>
 <p>Lets build the internal infrastructure to support this process.</p>
 <h3 id="server-pre-requisites">Server Pre-Requisites</h3>
@@ -354,8 +354,8 @@ To ensure the packages work in your environment you need to be in control of the
 <li>Install <code>baretail</code>, <code>notepadplusplus.install</code> and <code>7zip</code> with Chocolatey: <code>choco install baretail notepadplusplus.install 7zip -y</code>;</li>
 </ol>
 <h3 id="internal-package-repositories">Internal Package Repositories</h3>
-<p>For this guide we have chosen to use <a href="https://chocolatey.org/docs/how-to-set-up-chocolatey-server">Chocolatey Server</a> to host our internal package repository. However as we noted earlier this has the limitation of hosting only one repository per server. For anything more than a simple environment, we recommend you use <a href="https://www.sonatype.com/nexus-repository-sonatype">Sonatype Nexus</a>, <a href="https://jfrog.com/download-artifactory-pro/">Artifactory Pro</a> or <a href="https://inedo.com/proget">ProGet</a>.</p>
-<p>The repositories to setup are for <em>test</em> and <em>production</em> which we will call <code>testrepo-srv</code> and <code>prodrepo-srv</code>. There are full <a href="https://chocolatey.org/docs/how-to-set-up-chocolatey-server#setup-normally">instructions for setting up Chocolatey server</a> but to make sure we end up with the same result we list specific instructions here. Follow these instructions for each server, <code>testrepo-srv</code> and <code>prodrepo-srv</code>:</p>
+<p>For this guide we have chosen to use <a href="./set-up-chocolatey-server">Chocolatey Server</a> to host our internal package repository. However as we noted earlier this has the limitation of hosting only one repository per server. For anything more than a simple environment, we recommend you use <a href="https://www.sonatype.com/nexus-repository-sonatype">Sonatype Nexus</a>, <a href="https://jfrog.com/download-artifactory-pro/">Artifactory Pro</a> or <a href="https://inedo.com/proget">ProGet</a>.</p>
+<p>The repositories to setup are for <em>test</em> and <em>production</em> which we will call <code>testrepo-srv</code> and <code>prodrepo-srv</code>. There are full <a href="./set-up-chocolatey-server#setup-normally">instructions for setting up Chocolatey server</a> but to make sure we end up with the same result we list specific instructions here. Follow these instructions for each server, <code>testrepo-srv</code> and <code>prodrepo-srv</code>:</p>
 <h4 id="install-and-configure-chocolatey-server">Install and Configure Chocolatey Server</h4>
 <p>Before starting, make sure you install Chocolatey Server on separate servers.</p>
 <ol>
@@ -404,7 +404,7 @@ To ensure the packages work in your environment you need to be in control of the
   # Install Chocolatey.Server
   choco upgrade chocolatey.server -y
 
-  # Step by step instructions here https://chocolatey.org/docs/how-to-set-up-chocolatey-server#setup-normally
+  # Step by step instructions here https://docs.chocolatey.org/en-us/how-tos/set-up-chocolatey-server#setup-normally
   # Import the right modules
   Import-Module WebAdministration
   # Disable or remove the Default website
@@ -943,7 +943,7 @@ To ensure the packages work in your environment you need to be in control of the
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

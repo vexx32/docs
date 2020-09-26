@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -291,7 +291,7 @@
 <p>This quick-start guide is intended for customers who have recently purchased Chocolatey for Business (C4B), or are evaluating C4B as part of a proof-of-concept.
 It illustrates only <strong>one</strong> method of setting up your Chocolatey environment, and is by <strong>NO</strong> means exhaustive.
 Our goal is to get you up-and-running quickly, and testing out the feature set.
-For a more complete reference of possible scenarios and solutions, please refer to the [[Organizational Deployment Documentation|HowToSetupOfflineInstallation]].</p>
+For a more complete reference of possible scenarios and solutions, please refer to the <a href="../how-tos/setup-offline-installation">Organizational Deployment Documentation</a>.</p>
 </blockquote>
 <p>If you have any questions or would like to discuss more involved implementations, please feel free to reach out to your Chocolatey representative.</p>
 <p>Let's get started!</p>
@@ -324,9 +324,9 @@ For a more complete reference of possible scenarios and solutions, please refer 
 <p>As illustrated in the diagram above, there are five main components to a default Chocolatey install, namely:</p>
 <ol>
 <li><strong>Administrator Workstation</strong>: This is the workstation of the implementer. Internet access, as well as running from an administrator-level user, are required.</li>
-<li><strong>Repository Server</strong>: This is the application that will serve out the Nuget package (.nupkg) files internally. This guide will assume you'd like to use Sonatype <a href="https://www.sonatype.com/nexus-repository-oss">Nexus</a>, although Jfrog <a href="https://jfrog.com/artifactory/">Artifactory</a> is an equally-suitable option. Further repository details are available at [[repository options|HowToHostFeed]].</li>
-<li><strong>Deployment/Configuration Management Solution</strong>: We are going to stick to PowerShell commands and scripts in this guide. However, it is <em>strongly</em> recommended to use a full-featured configuration management solution to manage your package deployments. Some examples are Puppet, Chef, Ansible, and SaltStack. Read more about them on the [[Infrastucture Automation page|FeaturesInfrastructureAutomation]].</li>
-<li><strong>Central Management Server</strong>: This is a standalone server that hosts the Chocolatey Central Management web interface, as well as the back-end database on which it relies. Currently, this interface provides reporting on packages installed on endpoints. In future, a feature will be added to enable deployments of packages and updates from this web console, as well. Installation of this component is not detailed in the scope of this guide, but the current documentation can be found on the the <a href="https://chocolatey.org/docs/central-management-setup">Chocolatey Central Management Setup page</a>. Your Chocolatey for Business license (including trial) does entitle you to this feature.</li>
+<li><strong>Repository Server</strong>: This is the application that will serve out the Nuget package (.nupkg) files internally. This guide will assume you'd like to use Sonatype <a href="https://www.sonatype.com/nexus-repository-oss">Nexus</a>, although Jfrog <a href="https://jfrog.com/artifactory/">Artifactory</a> is an equally-suitable option. Further repository details are available at <a href="../features/free/how-to-host-feed">repository options</a>.</li>
+<li><strong>Deployment/Configuration Management Solution</strong>: We are going to stick to PowerShell commands and scripts in this guide. However, it is <em>strongly</em> recommended to use a full-featured configuration management solution to manage your package deployments. Some examples are Puppet, Chef, Ansible, and SaltStack. Read more about them on the <a href="../features/free/infrastructure-automation">Infrastucture Automation page</a>.</li>
+<li><strong>Central Management Server</strong>: This is a standalone server that hosts the Chocolatey Central Management web interface, as well as the back-end database on which it relies. Currently, this interface provides reporting on packages installed on endpoints. In future, a feature will be added to enable deployments of packages and updates from this web console, as well. Installation of this component is not detailed in the scope of this guide, but the current documentation can be found on the the <a href="../central-management/setup">Chocolatey Central Management Setup page</a>. Your Chocolatey for Business license (including trial) does entitle you to this feature.</li>
 <li><strong>Clients/Nodes</strong>: These are the workstation or server endpoints you wish to manage packages on, with Chocolatey. Every node requires a license.</li>
 </ol>
 <h2 id="requirements">Requirements</h2>
@@ -352,9 +352,9 @@ For a more complete reference of possible scenarios and solutions, please refer 
 <li>All commands should be run from Administrator PowerShell window</li>
 </ul>
 <h3 id="deploymentconfiguration-management-solution">Deployment/Configuration Management Solution</h3>
-<p>Again, this is out of the scope of this document, but <em>highly</em> recommended when scaling out deployments. Read more about configuration management solutions on the [[Infrastructure Automation page|FeaturesInfrastructureAutomation]].</p>
+<p>Again, this is out of the scope of this document, but <em>highly</em> recommended when scaling out deployments. Read more about configuration management solutions on the <a href="../features/free/infrastructure-automation">Infrastructure Automation page</a>.</p>
 <h3 id="central-management-server">Central Management Server</h3>
-<p>As with configuration managers, this is out-of-scope for this document. Generally, though, enough resources to host an ASP.NET IIS deployment and a SQL Server back end are recommended. Requirements for this server are detailed [[here|FeaturesChocolateyCentralManagement#requirements]].</p>
+<p>As with configuration managers, this is out-of-scope for this document. Generally, though, enough resources to host an ASP.NET IIS deployment and a SQL Server back end are recommended. Requirements for this server are detailed <a href="../features/paid/chocolatey-central-management#requirements">here</a>.</p>
 <h3 id="clientsnodes">Clients/Nodes:</h3>
 <ul>
 <li>Start with 1 or 2 endpoints (scale up after initial config and testing)</li>
@@ -454,7 +454,7 @@ Restart-Service -Name nexus
 </ol>
 <h3 id="back-on-administrative-workstation">Back on Administrative Workstation</h3>
 <ol>
-<li><p>Download the script from [[Exercise 4 here|HowToSetupOfflineInstallation#exercise-4-create-a-package-for-the-license]], and save it in your <code>choco-setup\files</code> folder as <code>Add-LicensePackage.ps1</code>.
+<li><p>Download the script from <a href="./setup-offline-installation#exercise-4-create-a-package-for-the-license">Exercise 4 here</a>, and save it in your <code>choco-setup\files</code> folder as <code>Add-LicensePackage.ps1</code>.
 Run this script in a PowerShell Administrator console, to create the license package.</p>
 </li>
 <li><p>Ensure the chocolatey nupkg itself is in the C:\choco-setup\packages directory. The following code accomplishes this:</p>
@@ -493,10 +493,10 @@ Foreach-Object {
 </li>
 </ol>
 <h3 id="central-management-server-1">Central Management Server</h3>
-<p>Again, the setup of the Chocolatey Central Management server is beyond the scope of this document (please read over and follow the detailed instructions on the <a href="https://chocolatey.org/docs/central-management-setup">Chocolatey Central Management Setup page</a>.</p>
+<p>Again, the setup of the Chocolatey Central Management server is beyond the scope of this document (please read over and follow the detailed instructions on the <a href="../central-management/setup">Chocolatey Central Management Setup page</a>.</p>
 <h3 id="conclusion">Conclusion</h3>
 <p>Congratulations! If you followed all the steps detailed above, you should now have a fully-functioning Chocolatey implementation deployed in your environment.</p>
-<p>It is worth mentioning that some customers may have a more bespoke environment, with the presence of proxies and additional configuration management applications. Chocolatey is engineered to be quite flexible, specifically to account for these scenarios. Please refer to the many options for installation referenced on the [[Installation page|Installation#more-install-options]]. Again, If you have any questions or would like to discuss more involved implementations, please feel free to reach out to your Chocolatey representative.</p>
+<p>It is worth mentioning that some customers may have a more bespoke environment, with the presence of proxies and additional configuration management applications. Chocolatey is engineered to be quite flexible, specifically to account for these scenarios. Please refer to the many options for installation referenced on the <a href="../usage/installation-licensed#more-install-options">Installation page</a>. Again, If you have any questions or would like to discuss more involved implementations, please feel free to reach out to your Chocolatey representative.</p>
 
                                     </div>
                                 <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
@@ -529,7 +529,7 @@ Foreach-Object {
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

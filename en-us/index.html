@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -309,77 +309,77 @@
 <h2 id="what-is-chocolatey">What is Chocolatey?</h2>
 <p>tl;dr Chocolatey is a software management solution that allows you to manage 100% of your software, anywhere you have Windows, with any endpoint management tool. No other solution (including newly announced solutions) reach this level of management - most only can manage to software in Programs and Features.</p>
 <p>Chocolatey is a software management solution unlike anything else you've ever experienced on Windows. It focuses on simplicity, security, and infinite scalability. You write a software deployment in PowerShell once for any software (not just installers), then you can deploy it everywhere you have Windows with any solution that can manage systems (configuration management, endpoint management, etc) and track and manage updates of that software over time. Manage software on-premise, in the &quot;Cloud&quot;, or in <a href="https://github.com/Microsoft/vsts-agent-docker/blob/f870fbf259a803c6a6d902e1c01f631936069d66/windows/servercore/10.0.14393/standard/VS2017/Dockerfile">Docker containers</a> with Chocolatey.</p>
-<p>Whew, that was a mouthful! For a bit more detail into what all of that means and more, see [[What is Chocolatey?|GettingStarted#what-is-chocolatey]]</p>
+<p>Whew, that was a mouthful! For a bit more detail into what all of that means and more, see <a href="./usage/getting-started#what-is-chocolatey">What is Chocolatey?</a></p>
 <h2 id="requirements">Requirements</h2>
 <ul>
 <li>Windows 7+/Windows 2003+ (Server Core also, but not Windows Nano Server)</li>
 <li>Windows PowerShell v2+ (not PowerShell Core aka PowerShell 6 yet)</li>
 <li>.NET Framework 4.x+</li>
-<li>See [[Requirements|GettingStarted#requirements]]</li>
+<li>See <a href="./usage/getting-started#requirements">Requirements</a></li>
 </ul>
 <h2 id="information">Information</h2>
 <ul>
-<li>[[Frequently Asked Questions|ChocolateyFAQs]]</li>
-<li>[[Why Chocolatey|Why]]</li>
-<li>[[License Acceptance Terms|Legal#package-license-acceptance-terms]]</li>
-<li>[[Waiver of Responsibility|Legal#waiver-of-responsibility]]</li>
-<li>[[Release Notes|ReleaseNotes]]</li>
-<li>[[Release Notes Commercial|ReleaseNotesLicensed]]</li>
+<li><a href="./general/faqs">Frequently Asked Questions</a></li>
+<li><a href="./why">Why Chocolatey</a></li>
+<li><a href="./additional-information/legal#package-license-acceptance-terms">License Acceptance Terms</a></li>
+<li><a href="additional-information/legal#waiver-of-responsibility">Waiver of Responsibility</a></li>
+<li><a href="./general/release-notes/open-source">Release Notes</a></li>
+<li><a href="./general/release-notes/licensed">Release Notes Commercial</a></li>
 </ul>
 <h2 id="using-chocolatey">Using Chocolatey</h2>
 <ul>
-<li>[[Installing Chocolatey|Installation]]</li>
-<li>[[Uninstalling Chocolatey|Uninstallation]]</li>
-<li>[[Getting Started|GettingStarted]]</li>
-<li>[[Command Reference|CommandsReference]]</li>
-<li>Use Chocolatey to set up [[source code development environments|DevelopmentEnvironmentSetup]]!</li>
-<li>What distinction does Chocolatey make between an [[installable and a portable application|ChocolateyFAQs#what-distinction-does-chocolatey-make-between-an-installable-and-a-portable-application]]?</li>
+<li><a href="./usage/installation">Installing Chocolatey</a></li>
+<li><a href="./usage/uninstallation">Uninstalling Chocolatey</a></li>
+<li><a href="./usage/getting-started">Getting Started</a></li>
+<li><a href="./usage/commands/reference">Command Reference</a></li>
+<li>Use Chocolatey to set up <a href="./use-cases/development-environment-setup">source code development environments</a>!</li>
+<li>What distinction does Chocolatey make between an <a href="./general/faqs#what-distinction-does-chocolatey-make-between-an-installable-and-a-portable-application">installable and a portable application</a>?</li>
 </ul>
 <h2 id="create-packages">Create Packages</h2>
 <p>The Chocolatey Community Repository versus for internal use has different needs. Keep that in mind as you read over the _TODO.txt you see when you run <code>choco new</code>.</p>
 <ul>
-<li>[[Creating packages|CreatePackages]]</li>
-<li>[[Package Function and Variable Reference|HelpersReference]]</li>
-<li>[[Parse PackageParameters Argument|How-To-Parse-PackageParameters-Argument]]</li>
-<li>[[Mount an Iso in Chocolatey Package|How-To-Mount-An-Iso-In-Chocolatey-Package]]</li>
-<li>[[Deprecate a Chocolatey Package|How-To-Deprecate-A-Chocolatey-Package]]</li>
+<li><a href="./creating-packages/create-packages">Creating packages</a></li>
+<li><a href="./creating-packages/helpers/reference">Package Function and Variable Reference</a></li>
+<li><a href="./how-tos/parse-packageparameters-argument">Parse PackageParameters Argument</a></li>
+<li><a href="./how-tos/mount-an-iso-in-chocolatey-package">Mount an Iso in Chocolatey Package</a></li>
+<li><a href="./how-tos/deprecate-a-chocolatey-package">Deprecate a Chocolatey Package</a></li>
 <li><a href="https://chocolatey.org/packages">Chocolatey Community Repository</a>
 <ul>
-<li>Keep in Mind [[Distribution Rights|Legal#distributions-aka-chocolatey-packages]]</li>
-<li>[[Outdated packages? Triage process|PackageTriageProcess]]</li>
-<li>[[Moderation Process|Moderation]]</li>
+<li>Keep in Mind <a href="./additional-information/legal#distributions-aka-chocolatey-packages">Distribution Rights</a></li>
+<li><a href="./how-tos/package-triage-process">Outdated packages? Triage process</a></li>
+<li><a href="./general/moderation">Moderation Process</a></li>
 </ul>
 </li>
 </ul>
 <h2 id="individuals">Individuals</h2>
 <ul>
 <li><a href="https://chocolatey.org/install#individual">Installing Chocolatey for Personal Use</a></li>
-<li>[[Getting Started|GettingStarted]]</li>
-<li>[[Command Reference|CommandsReference]]</li>
+<li><a href="./usage/getting-started">Getting Started</a></li>
+<li><a href="./usage/commands/reference">Command Reference</a></li>
 </ul>
 <h2 id="organizations">Organizations</h2>
 <ul>
 <li><a href="https://chocolatey.org/install#organization">Installing Chocolatey For Organizations</a></li>
-<li>[[Quick Deployment Environment|QuickDeploymentEnvironment]]</li>
-<li>[[Host Your Own Feed|How-To-Host-Feed]]</li>
-<li>[[Deploy Chocolatey in an Organization|How-To-Setup-Offline-Installation]]</li>
-<li>[[Creating packages|CreatePackages]]
+<li><a href="./quick-deployment">Quick Deployment Environment</a></li>
+<li><a href="./features/free/how-to-host-feed">Host Your Own Feed</a></li>
+<li><a href="./how-tos/setup-offline-installation">Deploy Chocolatey in an Organization</a></li>
+<li><a href="./creating-packages/create-packages">Creating packages</a>
 <ul>
-<li>[[Package Function and Variable Reference|HelpersReference]]</li>
+<li><a href="./creating-packages/helpers/reference">Package Function and Variable Reference</a></li>
 </ul>
 </li>
-<li>[[Getting Started|GettingStarted]]</li>
-<li>[[Command Reference|CommandsReference]]</li>
+<li><a href="./usage/getting-started">Getting Started</a></li>
+<li><a href="./usage/commands/reference">Command Reference</a></li>
 </ul>
 <h2 id="road-map">Road Map</h2>
-<p>Where are [[we|Roadmap]]? Where are we [[going|Roadmap]]?</p>
+<p>Where are <a href="./roadmap">we</a>? Where are we <a href="./roadmap">going</a>?</p>
 <h3 id="important-reference-links">Important Reference Links</h3>
 <ul>
 <li><a href="https://chocolatey.org">Chocolatey Website and Community Package Repository</a></li>
 <li><a href="http://groups.google.com/group/chocolatey">Mailing List</a> / <a href="https://groups.google.com/group/chocolatey-announce">Release Announcements Only Mailing List</a> / <a href="http://groups.google.com/group/chocolatey-build-status">Build Status Mailing List</a></li>
 <li><a href="https://twitter.com/chocolateynuget">Twitter</a> / <a href="https://www.facebook.com/ChocolateySoftware">Facebook</a> / <a href="https://github.com/chocolatey">Github</a></li>
 <li><a href="https://chocolatey.org/blog">Blog</a> / <a href="https://chocolatey.us8.list-manage1.com/subscribe?u=86a6d80146a0da7f2223712e4&amp;id=73b018498d">Newsletter</a></li>
-<li><a href="https://chocolatey.org/docs">Documentation</a> / <a href="https://chocolatey.org/support">Support</a> / <a href="https://gitter.im/chocolatey/choco?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Gitter" /></a></li>
+<li><a href="https://docs.chocolatey.org">Documentation</a> / <a href="https://chocolatey.org/support">Support</a> / <a href="https://gitter.im/chocolatey/choco?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Gitter" /></a></li>
 </ul>
 <h2 id="see-it-in-action">See It In Action</h2>
 <p><img src="https://raw.githubusercontent.com/wiki/chocolatey/choco/images/gifs/choco_install.gif" alt="Chocolatey Install" /></p>
@@ -414,7 +414,7 @@
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>

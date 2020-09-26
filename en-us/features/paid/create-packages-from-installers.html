@@ -28,7 +28,7 @@
 
             <nav id="topnav" class="navbar navbar-expand-lg navbar-light">
                 <div class="container py-3">
-                    <a class="navbar-brand" href="/><img id="logo" src="/assets/logo.svg" alt="Chocolatey"> Chocolatey</a>
+                    <a class="navbar-brand" href="/"><img id="logo" src="/assets/logo.svg" alt="Chocolatey" /> Chocolatey</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -337,7 +337,7 @@
 <h2 id="usage">Usage</h2>
 <h3 id="command-line">Command Line</h3>
 <p>When calling <code>choco new</code>, just add <code>--file=value</code> to point to a native installer and Chocolatey for Business will automatically determine the silent arguments, create the packaging and wrap that all around the installer.</p>
-<p><img src="/assets/images/features/features_packages_from_installers.png" alt="Create Packages from Installers - if you are on https://chocolatey.org/docs/features-create-packages-from-installers, see commented html below for detailed description of image" /></p>
+<p><img src="/assets/images/features/features_packages_from_installers.png" alt="Create Packages from Installers - if you are on https://docs.chocolatey.org/en-us/features/paid/create-packages-from-installers, see commented html below for detailed description of image" /></p>
 <!--
 Text in the image above:
 
@@ -457,14 +457,14 @@ Get-ChildItem -Path $path -Recurse | ?{
 <h3 id="this-was-unable-to-detect-custom-installer-arguments">This was unable to detect custom installer arguments.</h3>
 <p>Unfortunately, some installers out there are just a pain to work with. In the case of custom installers, you may be able to find the silent arguments for install and uninstall by searching online. If you can not find anything, consider unpacking the installer and putting the software binaries directly in the package.</p>
 <h3 id="does-it-create-auto-unattend-files">Does it create auto unattend files?</h3>
-<p>Unfortunately, it is not able to do this. See the [[automatic internalize and recompile packages feature|FeaturesAutomaticallyRecompilePackages]] to take advantage of thousands of existing packages without a need for internet access.</p>
+<p>Unfortunately, it is not able to do this. See the <a href="./automatically-recompile-packages">automatic internalize and recompile packages feature</a> to take advantage of thousands of existing packages without a need for internet access.</p>
 <h3 id="does-it-work-with-zip-archive">Does it work with zip archive?</h3>
 <p>Yes, but somewhat naively. It will generate the packaging to unpack the archive for both 7z and zip files.</p>
 <h3 id="does-this-work-with-keeping-the-installer-on-a-unc-share-or-elsewhere-yet">Does this work with keeping the installer on a UNC share or elsewhere yet?</h3>
 <p>Yes, as of Licensed version v1.6.0+. Use <code>--use-original-location</code>.</p>
 <h2 id="common-issues-and-resolutions">Common Issues and Resolutions</h2>
 <h3 id="i-get-name-is-required.please-pass-in-a-name-for-the-new-package">I get &quot;Name is required. Please pass in a name for the new package.&quot;</h3>
-<p>This occurs when you are not running Chocolatey for Business or don't have your client properly licensed. Please see [licensed installation|Installation-Licensed]] for more details.</p>
+<p>This occurs when you are not running Chocolatey for Business or don't have your client properly licensed. Please see <a href="../../usage/installation-licensed">licensed installation</a> for more details.</p>
 
                                     </div>
                                 <div class="col-lg-2 d-none d-lg-block bg-body pl-3 pt-3">
@@ -506,7 +506,7 @@ Get-ChildItem -Path $path -Recurse | ?{
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.68</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.76</span>
                 </div>
             </div>
         </div>
