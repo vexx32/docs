@@ -5,21 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="/assets/bootstrap/bootstrap.css" rel="stylesheet" />
         <link href="/assets/css/styles.css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" data-no-mirror>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
-
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
-        <script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
-        <script type="text/javascript" src="/assets/js/anchor.min.js"></script>
 
         <title>Chocolatey - Central Management Upgrade</title>
     </head>
@@ -287,14 +275,14 @@
                                         <h1 id="chocolatey-central-management-upgrade">Chocolatey Central Management Upgrade</h1>
 <p>This will guide us through upgrading an existing Chocolatey Central Management installation to newer versions.</p>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: Looking for installation instructions? See <a href="./setup">Central Management Setup</a>.</p>
+<p>📝 <strong>NOTE</strong>: Looking for installation instructions? See <a href="./setup">Central Management Setup</a>.</p>
 </blockquote>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>Unless otherwise noted, please follow these steps in <em><strong>exact</strong></em> order. These steps build on each other and need to be completed in order.</p>
 </blockquote>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>All deployed components of the CCM packages should <strong>always</strong> be the <em><strong>SAME VERSION</strong></em>. The only time you should not have this is when you are in a state of upgrading and that transition time should be quite short.</p>
 </blockquote>
 <hr />
@@ -328,12 +316,12 @@
 <hr />
 <h2 id="step-1-download-latest-packages">Step 1: Download Latest Packages</h2>
 <blockquote>
-<p>:memo: <strong>NOTE</strong></p>
+<p>📝 <strong>NOTE</strong></p>
 <p>Make sure you have read over the <a href="./index#ccm-component-compatibility-matrix">CCM Compability Matrix</a> prior to starting internalization as this will save you some headaches.</p>
 </blockquote>
 <p>Similar to how we internalized in <a href="./setup#step-1-internalize-packages">Setup - Internalize Packages</a>, we need to get the latest editions of everything compatible. Be sure that the versions of packages you have match up with the <a href="./index#ccm-component-compatibility-matrix">Complatibility Matrix</a>.</p>
 <blockquote>
-<p>:warning: <strong>TRIALS</strong>: You need to <em><strong>first reach out</strong></em> to your sales representative to get the latest binaries - your trial license won't have direct access to the licensed repository.</p>
+<p>⚠️ <strong>TRIALS</strong>: You need to <em><strong>first reach out</strong></em> to your sales representative to get the latest binaries - your trial license won't have direct access to the licensed repository.</p>
 </blockquote>
 <pre><code class="language-powershell"># To run this, you need Chocolatey for Business installed (chocolatey / chocolatey.extension).
 # - TRIALS are fine, but there are modifications noted in the script.
@@ -358,22 +346,22 @@ Get-ChildItem C:\packages -Recurse -Filter *.nupkg | Foreach-Object { choco push
 <hr />
 <h2 id="step-2-upgrade-central-management-database">Step 2: Upgrade Central Management Database</h2>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: Please see <a href="./setup-database">Central Management Database Setup</a> for details about all arguments that can be passed and set.</p>
+<p>📝 <strong>NOTE</strong>: Please see <a href="./setup-database">Central Management Database Setup</a> for details about all arguments that can be passed and set.</p>
 </blockquote>
 <pre><code class="language-powershell">choco upgrade chocolatey-management-database -y
 </code></pre>
 <blockquote>
-<p>:warning: <strong>WARNING</strong> If you are using QDE and receive an error about deserializing and padding, see the resolution below.</p>
+<p>⚠️ <strong>WARNING</strong> If you are using QDE and receive an error about deserializing and padding, see the resolution below.</p>
 </blockquote>
 <hr />
 <h2 id="step-3-setup-central-management-windows-services">Step 3: Setup Central Management Windows Service(s)</h2>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: Please see <a href="./setup-service">Central Management Service Setup</a> for details about all arguments that can be passed and set.</p>
+<p>📝 <strong>NOTE</strong>: Please see <a href="./setup-service">Central Management Service Setup</a> for details about all arguments that can be passed and set.</p>
 </blockquote>
 <pre><code class="language-powershell">choco upgrade chocolatey-management-service -y
 </code></pre>
 <blockquote>
-<p>:warning: <strong>WARNING</strong>: If you passed non-default options for any of the following:</p>
+<p>⚠️ <strong>WARNING</strong>: If you passed non-default options for any of the following:</p>
 <ul>
 <li><code>/Username:</code> / <code>/Password:</code> / <code>/EnterPassword</code></li>
 <li><code>/PortNumber:</code></li>
@@ -381,7 +369,7 @@ Get-ChildItem C:\packages -Recurse -Filter *.nupkg | Foreach-Object { choco push
 <p>You <em><strong>will need to pass</strong></em> those items again for upgrades in current releases of CCM.</p>
 </blockquote>
 <blockquote>
-<p>:warning: <strong>WARNING</strong>: If you passed a non-default option for the following:</p>
+<p>⚠️ <strong>WARNING</strong>: If you passed a non-default option for the following:</p>
 <ul>
 <li><code>/CertificateDnsName:</code> / <code>/CertificateThumbprint:</code></li>
 </ul>
@@ -391,33 +379,33 @@ Get-ChildItem C:\packages -Recurse -Filter *.nupkg | Foreach-Object { choco push
 </ul>
 </blockquote>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: Database details that have not changed will not need to be passed.</p>
+<p>📝 <strong>NOTE</strong>: Database details that have not changed will not need to be passed.</p>
 </blockquote>
 <p>There may be additional (new) things you will want to configure. Please see <a href="./setup-service">Central Management Service Setup</a> for details.</p>
 <hr />
 <h2 id="step-4-setup-central-management-website">Step 4: Setup Central Management Website</h2>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: Please see <a href="./setup-web">Central Management Web Setup</a> for details about all arguments that can be passed and set.</p>
+<p>📝 <strong>NOTE</strong>: Please see <a href="./setup-web">Central Management Web Setup</a> for details about all arguments that can be passed and set.</p>
 </blockquote>
 <pre><code class="language-powershell">choco upgrade chocolatey-management-web -y
 </code></pre>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>You may need to adjust permissions/roles for your user if not using the default <code>ccmadmin</code> account. Please see the roles and permissions your account has versus what is available in <code>Administration -&gt; Users</code>.</p>
 </blockquote>
 <hr />
 <h2 id="step-5-upgrade-agent-machines">Step 5: Upgrade Agent Machines</h2>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: Please see <a href="./setup-client">Central Management Client Setup</a> for details about all arguments that can be passed and set.</p>
+<p>📝 <strong>NOTE</strong>: Please see <a href="./setup-client">Central Management Client Setup</a> for details about all arguments that can be passed and set.</p>
 </blockquote>
 <pre><code class="language-powershell">choco upgrade chocolatey-agent -y
 </code></pre>
 <p>There may be additional (new) things you will want to configure. Please see <a href="./setup-client">Central Management Client Setup</a> for details.</p>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: This could include the agent(s) on the CCM machine(s).</p>
+<p>📝 <strong>NOTE</strong>: This could include the agent(s) on the CCM machine(s).</p>
 </blockquote>
 <blockquote>
-<p>:warning: <strong>WARNING</strong>: The Chocolatey Agent installed on the same machine that has the CCM Service installed will share the <code>centralManagementServiceUrl</code> setting, so that agent can only report into that CCM Service.</p>
+<p>⚠️ <strong>WARNING</strong>: The Chocolatey Agent installed on the same machine that has the CCM Service installed will share the <code>centralManagementServiceUrl</code> setting, so that agent can only report into that CCM Service.</p>
 </blockquote>
 <h3 id="new-deployments-feature-example">New Deployments Feature Example</h3>
 <p>As an example, configuring using Deployments would have the folllowing:</p>
@@ -425,7 +413,7 @@ Get-ChildItem C:\packages -Recurse -Filter *.nupkg | Foreach-Object { choco push
 choco feature enable --name=&quot;'useChocolateyCentralManagementDeployments'&quot;
 </code></pre>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>As these features have security considerations (it is enabling cross-machine communication), they must be turned on explicitly.
 If you decide you want to open this up for over the internet communication, you should also set <code>centralManagementClientCommunicationSaltAdditivePassword</code> and <code>centralManagementServiceCommunicationSaltAdditivePassword</code>.
 For more in-depth configuration options and settings for your endpoints, you can view the <a href="./setup-client">CCM Client Setup page</a></p>
@@ -498,97 +486,20 @@ If you run into this, please recreate the bindings again.</p>
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.81</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.82</span>
                 </div>
             </div>
         </div>
-        <script>
-            anchors.options.placement = 'left';
-            anchors.add();
-
-            var snippets = document.querySelectorAll("pre > code");
-            [].forEach.call(snippets, function(snippet) {
-                snippet.insertAdjacentHTML("beforebegin", "<button class='btn-copy' data-clipboard-snippet><img class='clippy' width=13 src='/assets/images/clippy.svg' alt='Copy to clipboard'></button>");
-            });
-            var clipboardSnippets = new Clipboard('[data-clipboard-snippet]', {
-                target: function(trigger) {
-                    return trigger.nextElementSibling;
-                }
-            });
-            clipboardSnippets.on('success', function(e) {
-                e.clearSelection();
-                showTooltip(e.trigger, "Copied!");
-            });
-            clipboardSnippets.on('error', function(e) {
-                showTooltip(e.trigger, fallbackMessage(e.action));
-            });
-            var btns = document.querySelectorAll('.btn-copy');
-            for (var i = 0; i < btns.length; i++) {
-                btns[i].addEventListener('mouseleave', function(e) {
-                    e.currentTarget.setAttribute('class', 'btn-copy');
-                    e.currentTarget.removeAttribute('aria-label');
-                });
-            }
-            function showTooltip(elem, msg) {
-                elem.setAttribute('class', 'btn-copy tooltipped tooltipped-s');
-                elem.setAttribute('aria-label', msg);
-            }
-            function fallbackMessage(action) {
-                var actionMsg = '';
-                var actionKey = (action === 'cut' ? 'X' : 'C');
-                if (/iPhone|iPad/i.test(navigator.userAgent)) {
-                    actionMsg = 'No support :(';
-                } else if (/Mac/i.test(navigator.userAgent)) {
-                    actionMsg = 'Press ⌘-' + actionKey + ' to ' + action;
-                } else {
-                    actionMsg = 'Press Ctrl-' + actionKey + ' to ' + action;
-                }
-                return actionMsg;
-            }
-
-            $(document).ready(function() {
-                mermaid.initialize(
-                {
-                    flowchart:
-                    {
-                        useMaxWidth: false
-                    },
-					startOnLoad: false,
-					cloneCssStyles: false
-                });
-                mermaid.init(undefined, ".mermaid");
-
-                // Remove the max-width setting that Mermaid sets
-                var mermaidSvg = $('.mermaid svg');
-                mermaidSvg.addClass('img-responsive');
-                mermaidSvg.css('max-width', '');
-
-                // Make it scrollable
-				var target = document.querySelector(".mermaid svg");
-				if(target !== null)
-				{
-					var panZoom = window.panZoom = svgPanZoom(target, {
-						zoomEnabled: true,
-						controlIconsEnabled: true,
-						fit: true,
-						center: true,
-                        maxZoom: 20,
-                        zoomScaleSensitivity: 0.6
-					});
-
-                    // Do the reset once right away to fit the diagram
-                    panZoom.resize();
-                    panZoom.fit();
-                    panZoom.center();
-
-                    $(window).resize(function(){
-                        panZoom.resize();
-                        panZoom.fit();
-                        panZoom.center();
-                    });
-				}
-            });
-        </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+        <script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+        <script type="text/javascript" src="/assets/js/anchor.min.js"></script>
+        <script type="text/javascript" src="/assets/js/custom.js"></script>
         <script>
             ((window.gitter = {}).chat = {}).options = {
                 room: 'chocolatey/choco'

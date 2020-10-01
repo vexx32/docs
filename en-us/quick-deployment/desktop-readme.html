@@ -5,21 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="/assets/bootstrap/bootstrap.css" rel="stylesheet" />
         <link href="/assets/css/styles.css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" data-no-mirror>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
-
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
-        <script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
-        <script type="text/javascript" src="/assets/js/anchor.min.js"></script>
 
         <title>Chocolatey - Desktop Readme</title>
     </head>
@@ -286,7 +274,7 @@
                                     <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
                                         <h1 id="chocolatey-quick-deployment-environment-readme">Chocolatey Quick Deployment Environment README</h1>
 <blockquote>
-<p>:memo: <strong>NOTE</strong></p>
+<p>📝 <strong>NOTE</strong></p>
 <p>This document is for <strong>Version 2</strong> of the Quick Deployment Environment.
 If you're using an older version of QDE, please refer to the <a href="./v1/desktop-readme">QDEv1 Desktop Readme page</a>.</p>
 </blockquote>
@@ -339,7 +327,7 @@ To finish setting up QDE (Quick Deployment Environment), you'll need to closely 
 <!-- /TOC -->
 <h2 id="summary">Summary</h2>
 <blockquote>
-<p>:warning: <strong>Warning</strong></p>
+<p>⚠️ <strong>Warning</strong></p>
 <ul>
 <li>The commands outlined in this document need to be run from an administrative PowerShell session.
 Many of these scripts will function poorly or not at all in a non-administrative shell.</li>
@@ -381,13 +369,13 @@ Enter the following command:</p>
 please ensure the certificate is present in either the <code>Cert:\LocalMachine\My</code> or <code>Cert:\LocalMachine\TrustedPeople</code> stores before continuing.
 If you're not familiar with how to do this, please refer to <a href="https://www.digicert.com/kb/managing-client-certificates.htm">this DigiCert article for instructions</a>.</p>
 <blockquote>
-<p>:warning: <strong>Warning</strong></p>
+<p>⚠️ <strong>Warning</strong></p>
 <p>The private key of the certificate you're using <strong>must</strong> be exportable.
 If it is not, configuring Nexus will fail, as Nexus does not work with the Windows certificate store directly and maintains its own certificate store.</p>
 </blockquote>
 <p>You will need either the certificate thumbprint or the subject in order to use the certificate for setup:</p>
 <blockquote>
-<p>:memo: <strong>Note</strong></p>
+<p>📝 <strong>Note</strong></p>
 <ul>
 <li><code>-CertificateDnsName</code> is optional if you're providing the <code>-CertificateSubject</code>, but only if the subject does <strong>not</strong> contain wildcards.</li>
 <li>You can also optionally provide the <code>-InternetEnabled</code> switch if your QDE instance has a certificate with a public hostname and will be operating over the internet.
@@ -434,7 +422,7 @@ You can also call <code>Get-Help C:\choco-setup\files\Set-QDEnvironment.ps1 -Ful
 </table>
 <h3 id="select-community-packages-to-internalize">4. Select Community Packages to Internalize</h3>
 <blockquote>
-<p>:memo: <strong>Note</strong></p>
+<p>📝 <strong>Note</strong></p>
 <ul>
 <li>If your environment is air-gapped or you have otherwise locked down access to the Community Repository, you will need to ensure the community repository is accessible for this part of the script to work.
 It is completely optional, and you're more than welcome to skip this by selecting <strong>Cancel</strong> and only utilize the built in Jenkins tasks for internalization.</li>
@@ -450,7 +438,7 @@ We recommend you leave the VM running while it's happening; you can keep tabs on
 <h2 id="step-3-review-configure-host-services">Step 3: Review &amp; Configure Host Services</h2>
 <h3 id="nexus-repository">Nexus Repository</h3>
 <blockquote>
-<p>:memo: <strong>Note</strong></p>
+<p>📝 <strong>Note</strong></p>
 <p>If you have changed the hostname from the default, or you're using a FQDN for the server setup, this hostname will have changed.
 In that case, substitute the hostname for the new FQDN.</p>
 </blockquote>
@@ -515,7 +503,7 @@ Our documentation can assist with ensuring this is done correctly.</li>
 </li>
 <li><p>From the Plugin Installation Page select &quot;Install Suggested Plugins&quot;</p>
 <blockquote>
-<p>:memo: <strong>Note</strong></p>
+<p>📝 <strong>Note</strong></p>
 <p>Some of these may fail to install, and that is OK.</p>
 </blockquote>
 </li>
@@ -535,7 +523,7 @@ If after 30 seconds you don't see your browser auto-refresh, go ahead and do so 
 </details>
 <h3 id="chocolatey-central-management">Chocolatey Central Management</h3>
 <blockquote>
-<p>:memo: <strong>Note</strong></p>
+<p>📝 <strong>Note</strong></p>
 <p>If you have changed the hostname from the default, or you're using a FQDN for the server setup, this hostname will have changed.
 In that case, substitute the hostname for the new FQDN.</p>
 </blockquote>
@@ -587,7 +575,7 @@ In that case, substitute the hostname for the new FQDN.</p>
 <p>We recommend you use either Mozilla Firefox or Google Chrome to interact with all Web interfaces for the different services installed.
 You will find Google Chrome pre-installed in the environment.</p>
 <blockquote>
-<p>:warning: <strong>Warning</strong></p>
+<p>⚠️ <strong>Warning</strong></p>
 <p>There is a known issue in some QDE configurations where Firefox will be unable to load Nexus correctly.
 If this occurs, you need to disable the <code>Block dangerous and deceptive content</code> option under <strong>Security</strong> in order to load Nexus.</p>
 </blockquote>
@@ -615,7 +603,7 @@ See the next section for information on how to connect to Jenkins.</p>
 This will store your API key for a specific source as part of Chocolatey's configuration.
 This will be encrypted. To setup, do the following:</p>
 <blockquote>
-<p>:memo: <strong>Note</strong></p>
+<p>📝 <strong>Note</strong></p>
 <p>If you have changed the hostname from the default, or you're using a FQDN for the server setup, this hostname will have changed.
 In that case, substitute the hostname for the new FQDN.</p>
 </blockquote>
@@ -629,9 +617,9 @@ To do so:</p>
 <li>For each of the pre-existing jobs shown (e.g., <code>Internalize packages from the Community Repository</code>), do the following:
 <ol>
 <li>Hover over the name of the job and select the drop-down arrow that shows up</li>
-<li>Select <strong>:gear: Configure</strong></li>
+<li>Select <strong>⚙️ Configure</strong></li>
 <li>Scroll down until you see the <strong>Password Parameter</strong>; these will be named either <code>P_API_KEY</code>, <code>P_PROD_REPO_API_KEY</code>, or <code>P_LOCAL_REPO_API_KEY</code>, depending on the job you're editing</li>
-<li>Select <strong>Change Password</strong> next to the <strong>:lock: Concealed</strong> Default Value</li>
+<li>Select <strong>Change Password</strong> next to the <strong>🔒 Concealed</strong> Default Value</li>
 <li>Replace the contents of the field with the new API key</li>
 <li>Press the <strong>Save</strong> button at the bottom of the page</li>
 </ol>
@@ -645,14 +633,14 @@ If you plan to use this virtual machine long-term, you <em>will</em> need to app
 If you use a KMS server in your environment, and have it configured on clients via Group Policy, you likely have nothing to do here, but verify.</p>
 <p>If you rely on Retail or MAK licensing, you will need to apply the license using the following command, replacing the <code>x</code>'s with your actual product key:</p>
 <blockquote>
-<p>:memo: <strong>Note</strong></p>
+<p>📝 <strong>Note</strong></p>
 <p>Please run the below from an administrative PowerShell session.</p>
 </blockquote>
 <pre><code class="language-powershell">slmgr.vbs /ipk xxxxx-xxxxx-xxxxx-xxxxx
 </code></pre>
 <h2 id="common-errors-and-resolutions">Common Errors and Resolutions</h2>
 <blockquote>
-<p>:memo: <strong>NOTE</strong></p>
+<p>📝 <strong>NOTE</strong></p>
 <p>This document is for <strong>Version 2</strong> of the Quick Deployment Environment.
 If you're using an older version of QDE, please refer to the <a href="./v1/desktop-readme">document for that version</a>.</p>
 </blockquote>
@@ -723,97 +711,20 @@ Stop-Process -Name explorer -Force
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.81</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.82</span>
                 </div>
             </div>
         </div>
-        <script>
-            anchors.options.placement = 'left';
-            anchors.add();
-
-            var snippets = document.querySelectorAll("pre > code");
-            [].forEach.call(snippets, function(snippet) {
-                snippet.insertAdjacentHTML("beforebegin", "<button class='btn-copy' data-clipboard-snippet><img class='clippy' width=13 src='/assets/images/clippy.svg' alt='Copy to clipboard'></button>");
-            });
-            var clipboardSnippets = new Clipboard('[data-clipboard-snippet]', {
-                target: function(trigger) {
-                    return trigger.nextElementSibling;
-                }
-            });
-            clipboardSnippets.on('success', function(e) {
-                e.clearSelection();
-                showTooltip(e.trigger, "Copied!");
-            });
-            clipboardSnippets.on('error', function(e) {
-                showTooltip(e.trigger, fallbackMessage(e.action));
-            });
-            var btns = document.querySelectorAll('.btn-copy');
-            for (var i = 0; i < btns.length; i++) {
-                btns[i].addEventListener('mouseleave', function(e) {
-                    e.currentTarget.setAttribute('class', 'btn-copy');
-                    e.currentTarget.removeAttribute('aria-label');
-                });
-            }
-            function showTooltip(elem, msg) {
-                elem.setAttribute('class', 'btn-copy tooltipped tooltipped-s');
-                elem.setAttribute('aria-label', msg);
-            }
-            function fallbackMessage(action) {
-                var actionMsg = '';
-                var actionKey = (action === 'cut' ? 'X' : 'C');
-                if (/iPhone|iPad/i.test(navigator.userAgent)) {
-                    actionMsg = 'No support :(';
-                } else if (/Mac/i.test(navigator.userAgent)) {
-                    actionMsg = 'Press ⌘-' + actionKey + ' to ' + action;
-                } else {
-                    actionMsg = 'Press Ctrl-' + actionKey + ' to ' + action;
-                }
-                return actionMsg;
-            }
-
-            $(document).ready(function() {
-                mermaid.initialize(
-                {
-                    flowchart:
-                    {
-                        useMaxWidth: false
-                    },
-					startOnLoad: false,
-					cloneCssStyles: false
-                });
-                mermaid.init(undefined, ".mermaid");
-
-                // Remove the max-width setting that Mermaid sets
-                var mermaidSvg = $('.mermaid svg');
-                mermaidSvg.addClass('img-responsive');
-                mermaidSvg.css('max-width', '');
-
-                // Make it scrollable
-				var target = document.querySelector(".mermaid svg");
-				if(target !== null)
-				{
-					var panZoom = window.panZoom = svgPanZoom(target, {
-						zoomEnabled: true,
-						controlIconsEnabled: true,
-						fit: true,
-						center: true,
-                        maxZoom: 20,
-                        zoomScaleSensitivity: 0.6
-					});
-
-                    // Do the reset once right away to fit the diagram
-                    panZoom.resize();
-                    panZoom.fit();
-                    panZoom.center();
-
-                    $(window).resize(function(){
-                        panZoom.resize();
-                        panZoom.fit();
-                        panZoom.center();
-                    });
-				}
-            });
-        </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+        <script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+        <script type="text/javascript" src="/assets/js/anchor.min.js"></script>
+        <script type="text/javascript" src="/assets/js/custom.js"></script>
         <script>
             ((window.gitter = {}).chat = {}).options = {
                 room: 'chocolatey/choco'

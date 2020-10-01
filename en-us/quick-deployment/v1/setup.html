@@ -5,21 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="/assets/bootstrap/bootstrap.css" rel="stylesheet" />
         <link href="/assets/css/styles.css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" data-no-mirror>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
-
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
-        <script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
-        <script type="text/javascript" src="/assets/js/anchor.min.js"></script>
 
         <title>Chocolatey - Setup</title>
     </head>
@@ -286,14 +274,14 @@
                                     <div class="col-md-9 col-lg-8 pt-4 pt-md-0 pb-4 px-4">
                                         <h1 id="quick-deployment-environment-setup">Quick Deployment Environment Setup</h1>
 <blockquote>
-<p>:memo: <strong>NOTE</strong></p>
+<p>📝 <strong>NOTE</strong></p>
 <p>This document is for <strong>Version 1</strong> of the Quick Deployment Environment.
 If you're using a newer version of QDE, please refer to the <a href="../setup">newer QDE Setup page</a>.</p>
 </blockquote>
 <p>This document contains instructions for importing the QuickDeploy appliance/VM, or creating a VM and attaching the QuickDeploy disk image to it.
 You will receive a download link via email for an archive of the VM image. Once you have this downloaded, it will be ready for extraction and import into your environment.</p>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>Please follow these steps in <em><strong>exact</strong></em> order. These will be very important later when you are trying to use the environment.</p>
 </blockquote>
 <!-- TOC depthFrom:2 -->
@@ -351,7 +339,7 @@ This is to ensure that the packages stored on the server are not publicly access
 </ul>
 <h3 id="step-0.1-qde-rename-considerations">Step 0.1: QDE Rename Considerations</h3>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>tl;dr: Think long and hard before changing the QDE hostname</p>
 <p>Renaming the QDE host requires a lot of things and needs to be completed FIRST prior to ANYTHING that is done on the QDE box. It is strongly recommended <strong>NOT</strong> to rename unless you absolutely need to. The most important reason has to do with how a client installs from QDE - it must learn to trust the QDE certificate. Once renamed, the easy option that's provided for you goes away and you will need to provide a hosted solution with an already trusted certificate.
 You can provide your own certificate that is already trusted on machines as part of the <a href="./ssl-setup">SSL/TLS Setup</a>. Your other option is to host the script to trust the certificate with an already trusted certificate. You will find a template that you will need to edit at <code>c:\choco_setup_files</code> (in the QDE) named <code>Import-ChocoServerCertificate.ps1</code>.</p>
@@ -497,7 +485,7 @@ You can use this option to install and enable Hyper-V Integration Services.</li>
 </ul>
 <h3 id="platform-vmware-ovf-template">Platform: VMware (OVF template)</h3>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>The OVF import method can be tricky. Unless you have the <strong>exact</strong> same network settings as the host where the OVF was exported, you will likely run into failures on attempts to import it. You <em>could</em> workaround this by creating your own VM first, exporting the OVF file, using the Network settings from this file to replace the 2 sections of Network settings in the OVF of QDE, and then attempt to import the OVF for QDE. However, we realize this process is cumbersome, and would <strong>strongly</strong> advise you utilize the VMDK import method above for greatest compatibility. We are working to improve this process, but as of right now, the OVF method is to be used at your own risk.</p>
 </blockquote>
 <ol>
@@ -523,10 +511,10 @@ You will likely need to reconfigure it with a static IP address depending on you
 <p>On the desktop of your QDE VM, there is a <code>Readme.html</code> file, that will guide you through the rest of the setup process once you are logged in.
 A version of this readme file can be found in the <a href="./desktop-readme">Quick Deployment Desktop Readme</a>.</p>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: The online version is likely more up to date than the ReadMe you will find on the desktop (not including redacted items like credentials). If there are conflicts between the desktop readme and what you see online, prefer the online version.</p>
+<p>📝 <strong>NOTE</strong>: The online version is likely more up to date than the ReadMe you will find on the desktop (not including redacted items like credentials). If there are conflicts between the desktop readme and what you see online, prefer the online version.</p>
 </blockquote>
 <blockquote>
-<p>:warning: <strong>WARNING</strong>: If you have an existing corporate environment you will be servicing with the QDE VM, be sure to perform your organization-specific initial configuration <strong><em>before</em></strong> running setup scripts.</p>
+<p>⚠️ <strong>WARNING</strong>: If you have an existing corporate environment you will be servicing with the QDE VM, be sure to perform your organization-specific initial configuration <strong><em>before</em></strong> running setup scripts.</p>
 </blockquote>
 <h3 id="step-3.1-expand-disk-size">Step 3.1: Expand Disk Size</h3>
 <p>On the machine, please check the size of the C drive. If the volume needs to be expanded, expand it to the space you've allocated for the machine by running this command in a PowerShell administrative console:</p>
@@ -537,7 +525,7 @@ Resize-Partition -DriveLetter C -Size ((Get-PartitionSupportedSize -DriveLetter 
 <h3 id="step-3.2-add-license-file-to-qde">Step 3.2: Add License File to QDE</h3>
 <p>In the <a href="./desktop-readme">Quick Deployment Desktop Readme</a>, it is going to ask you to use the license file. That license file comes from an external location. It is best to copy/paste the file into QDE as a whole file, but you may have needed to set up any kind of extensions available for that.</p>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>If you find that you need to copy the text and paste the license file text into a new file in QDE, the file format and name is extremely important to get right. If you don't have UTF-8 or there is a space inserted, Chocolatey will consider it invalid.
 Please contact support if you need help here.</p>
 </blockquote>
@@ -610,97 +598,20 @@ Choco install chocolatey-management-web -y --package-parameters-sensitive=”’
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.81</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.82</span>
                 </div>
             </div>
         </div>
-        <script>
-            anchors.options.placement = 'left';
-            anchors.add();
-
-            var snippets = document.querySelectorAll("pre > code");
-            [].forEach.call(snippets, function(snippet) {
-                snippet.insertAdjacentHTML("beforebegin", "<button class='btn-copy' data-clipboard-snippet><img class='clippy' width=13 src='/assets/images/clippy.svg' alt='Copy to clipboard'></button>");
-            });
-            var clipboardSnippets = new Clipboard('[data-clipboard-snippet]', {
-                target: function(trigger) {
-                    return trigger.nextElementSibling;
-                }
-            });
-            clipboardSnippets.on('success', function(e) {
-                e.clearSelection();
-                showTooltip(e.trigger, "Copied!");
-            });
-            clipboardSnippets.on('error', function(e) {
-                showTooltip(e.trigger, fallbackMessage(e.action));
-            });
-            var btns = document.querySelectorAll('.btn-copy');
-            for (var i = 0; i < btns.length; i++) {
-                btns[i].addEventListener('mouseleave', function(e) {
-                    e.currentTarget.setAttribute('class', 'btn-copy');
-                    e.currentTarget.removeAttribute('aria-label');
-                });
-            }
-            function showTooltip(elem, msg) {
-                elem.setAttribute('class', 'btn-copy tooltipped tooltipped-s');
-                elem.setAttribute('aria-label', msg);
-            }
-            function fallbackMessage(action) {
-                var actionMsg = '';
-                var actionKey = (action === 'cut' ? 'X' : 'C');
-                if (/iPhone|iPad/i.test(navigator.userAgent)) {
-                    actionMsg = 'No support :(';
-                } else if (/Mac/i.test(navigator.userAgent)) {
-                    actionMsg = 'Press ⌘-' + actionKey + ' to ' + action;
-                } else {
-                    actionMsg = 'Press Ctrl-' + actionKey + ' to ' + action;
-                }
-                return actionMsg;
-            }
-
-            $(document).ready(function() {
-                mermaid.initialize(
-                {
-                    flowchart:
-                    {
-                        useMaxWidth: false
-                    },
-					startOnLoad: false,
-					cloneCssStyles: false
-                });
-                mermaid.init(undefined, ".mermaid");
-
-                // Remove the max-width setting that Mermaid sets
-                var mermaidSvg = $('.mermaid svg');
-                mermaidSvg.addClass('img-responsive');
-                mermaidSvg.css('max-width', '');
-
-                // Make it scrollable
-				var target = document.querySelector(".mermaid svg");
-				if(target !== null)
-				{
-					var panZoom = window.panZoom = svgPanZoom(target, {
-						zoomEnabled: true,
-						controlIconsEnabled: true,
-						fit: true,
-						center: true,
-                        maxZoom: 20,
-                        zoomScaleSensitivity: 0.6
-					});
-
-                    // Do the reset once right away to fit the diagram
-                    panZoom.resize();
-                    panZoom.fit();
-                    panZoom.center();
-
-                    $(window).resize(function(){
-                        panZoom.resize();
-                        panZoom.fit();
-                        panZoom.center();
-                    });
-				}
-            });
-        </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+        <script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+        <script type="text/javascript" src="/assets/js/anchor.min.js"></script>
+        <script type="text/javascript" src="/assets/js/custom.js"></script>
         <script>
             ((window.gitter = {}).chat = {}).options = {
                 room: 'chocolatey/choco'

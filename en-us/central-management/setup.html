@@ -5,21 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="/assets/bootstrap/bootstrap.css" rel="stylesheet" />
         <link href="/assets/css/styles.css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" data-no-mirror>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
-
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
-        <script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
-        <script type="text/javascript" src="/assets/js/anchor.min.js"></script>
 
         <title>Chocolatey - Central Management Setup</title>
     </head>
@@ -289,23 +277,23 @@
 While it is envisioned that CCM will be installed across multiple servers (split installation), it is certainly possible to run CCM on a single server (monolithic).</p>
 <p>When setting up Central Management, currently, the CCM packages do not provision the SQL Server Database Permissions that are required for the CCM components to function.  It is assumed that the necessary permissions have already been provided (see the <a href="#how-can-i-add-sql-server-permissions-through-powershell">FAQ</a> for one method of doing it).</p>
 <blockquote>
-<p>:memo: <strong>NOTE</strong></p>
+<p>📝 <strong>NOTE</strong></p>
 <p>Please read through all of this prior to running installation as you could run into issues that require support to help you correct later.</p>
 </blockquote>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>Unless otherwise noted, please follow these steps in <em><strong>exact</strong></em> order. These steps build on each other and need to be completed in order.</p>
 </blockquote>
 <blockquote>
-<p>:memo: <strong>NOTE</strong></p>
+<p>📝 <strong>NOTE</strong></p>
 <p>If this seems like a lot to set up, you have the ability to get access to the <a href="../quick-deployment">Quick Deployment Environment (QDE)</a>. It comes preloaded with Central Management and other Chocolatey recommended infrastructure. Please see <a href="../quick-deployment">Quick Deployment Environment (QDE)</a>.</p>
 </blockquote>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>All deployed components of the CCM packages should <strong>always</strong> be the <em><strong>SAME VERSION</strong></em>. The only time you should not have this is when you are in a state of upgrading and that transition time should be quite short.</p>
 </blockquote>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: Looking for upgrade instructions? See <a href="./setup-upgrade">Central Management Upgrade</a>.</p>
+<p>📝 <strong>NOTE</strong>: Looking for upgrade instructions? See <a href="./setup-upgrade">Central Management Upgrade</a>.</p>
 </blockquote>
 <hr />
 <!-- TOC depthFrom:2 depthTo:5 -->
@@ -337,7 +325,7 @@ While it is envisioned that CCM will be installed across multiple servers (split
 <hr />
 <h2 id="step-1-internalize-packages">Step 1: Internalize Packages</h2>
 <blockquote>
-<p>:memo: <strong>NOTE</strong></p>
+<p>📝 <strong>NOTE</strong></p>
 <p>Make sure you have read over the <a href="./index#ccm-component-compatibility-matrix">CCM Compability Matrix</a> prior to starting internalization as this will save you some headaches.</p>
 </blockquote>
 <p>The complete installation of CCM requires several packages that are available from the community repository. Let's get them internalized. We will internalize them to a <code>C:\packages</code> directory. It is highly recommended that you push the packages to an internal repository before continuing with other steps in this guide. Change the values in the first lines of this script to match what you need in your environment.</p>
@@ -381,25 +369,25 @@ choco download chocolatey-agent chocolatey.extension chocolatey-management-datab
 Get-ChildItem C:\packages -Recurse -Filter *.nupkg | Foreach-Object { choco push $_.Fullname --source=&quot;'$YourInternalRepositoryPushUrl'&quot; --api-key=&quot;'$YourInternalRepositoryApiKey'&quot;}
 </code></pre>
 <blockquote>
-<p>:information_source: If you are on a TRIAL, you have a step in the script above that you are skipping - noted by &quot;TRIAL?&quot; This is because you don't have direct access to the licensed repository. You will have received an email with download links that contained your trial license file. Refer back to that for the downloads.</p>
+<p>ℹ️ If you are on a TRIAL, you have a step in the script above that you are skipping - noted by &quot;TRIAL?&quot; This is because you don't have direct access to the licensed repository. You will have received an email with download links that contained your trial license file. Refer back to that for the downloads.</p>
 </blockquote>
 <hr />
 <h2 id="step-2-setup-central-management-database">Step 2: Setup Central Management Database</h2>
 <p>Please see <a href="./setup-database">Central Management Database Setup</a>.</p>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: While we'd like to support different database engines at some point in the distant future, currently only SQL Server is supported.</p>
+<p>📝 <strong>NOTE</strong>: While we'd like to support different database engines at some point in the distant future, currently only SQL Server is supported.</p>
 </blockquote>
 <hr />
 <h2 id="step-3-setup-central-management-windows-services">Step 3: Setup Central Management Windows Service(s)</h2>
 <p>Please see <a href="./setup-service">Central Management Service Setup</a>.</p>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: If Step 1 is not succesful, do not move on to this step until you resolve issues with database setup.</p>
+<p>📝 <strong>NOTE</strong>: If Step 1 is not succesful, do not move on to this step until you resolve issues with database setup.</p>
 </blockquote>
 <hr />
 <h2 id="step-4-setup-central-management-website">Step 4: Setup Central Management Website</h2>
 <p>Please see <a href="./setup-web">Central Management Web Setup</a>.</p>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: If Step 1 or 2 is not successful, do not move on to this step until you resolve issues with previous steps.</p>
+<p>📝 <strong>NOTE</strong>: If Step 1 or 2 is not successful, do not move on to this step until you resolve issues with previous steps.</p>
 </blockquote>
 <hr />
 <h2 id="step-5-setting-up-agent-machines">Step 5: Setting up Agent Machines</h2>
@@ -445,97 +433,20 @@ Get-ChildItem C:\packages -Recurse -Filter *.nupkg | Foreach-Object { choco push
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.81</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.82</span>
                 </div>
             </div>
         </div>
-        <script>
-            anchors.options.placement = 'left';
-            anchors.add();
-
-            var snippets = document.querySelectorAll("pre > code");
-            [].forEach.call(snippets, function(snippet) {
-                snippet.insertAdjacentHTML("beforebegin", "<button class='btn-copy' data-clipboard-snippet><img class='clippy' width=13 src='/assets/images/clippy.svg' alt='Copy to clipboard'></button>");
-            });
-            var clipboardSnippets = new Clipboard('[data-clipboard-snippet]', {
-                target: function(trigger) {
-                    return trigger.nextElementSibling;
-                }
-            });
-            clipboardSnippets.on('success', function(e) {
-                e.clearSelection();
-                showTooltip(e.trigger, "Copied!");
-            });
-            clipboardSnippets.on('error', function(e) {
-                showTooltip(e.trigger, fallbackMessage(e.action));
-            });
-            var btns = document.querySelectorAll('.btn-copy');
-            for (var i = 0; i < btns.length; i++) {
-                btns[i].addEventListener('mouseleave', function(e) {
-                    e.currentTarget.setAttribute('class', 'btn-copy');
-                    e.currentTarget.removeAttribute('aria-label');
-                });
-            }
-            function showTooltip(elem, msg) {
-                elem.setAttribute('class', 'btn-copy tooltipped tooltipped-s');
-                elem.setAttribute('aria-label', msg);
-            }
-            function fallbackMessage(action) {
-                var actionMsg = '';
-                var actionKey = (action === 'cut' ? 'X' : 'C');
-                if (/iPhone|iPad/i.test(navigator.userAgent)) {
-                    actionMsg = 'No support :(';
-                } else if (/Mac/i.test(navigator.userAgent)) {
-                    actionMsg = 'Press ⌘-' + actionKey + ' to ' + action;
-                } else {
-                    actionMsg = 'Press Ctrl-' + actionKey + ' to ' + action;
-                }
-                return actionMsg;
-            }
-
-            $(document).ready(function() {
-                mermaid.initialize(
-                {
-                    flowchart:
-                    {
-                        useMaxWidth: false
-                    },
-					startOnLoad: false,
-					cloneCssStyles: false
-                });
-                mermaid.init(undefined, ".mermaid");
-
-                // Remove the max-width setting that Mermaid sets
-                var mermaidSvg = $('.mermaid svg');
-                mermaidSvg.addClass('img-responsive');
-                mermaidSvg.css('max-width', '');
-
-                // Make it scrollable
-				var target = document.querySelector(".mermaid svg");
-				if(target !== null)
-				{
-					var panZoom = window.panZoom = svgPanZoom(target, {
-						zoomEnabled: true,
-						controlIconsEnabled: true,
-						fit: true,
-						center: true,
-                        maxZoom: 20,
-                        zoomScaleSensitivity: 0.6
-					});
-
-                    // Do the reset once right away to fit the diagram
-                    panZoom.resize();
-                    panZoom.fit();
-                    panZoom.center();
-
-                    $(window).resize(function(){
-                        panZoom.resize();
-                        panZoom.fit();
-                        panZoom.center();
-                    });
-				}
-            });
-        </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+        <script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+        <script type="text/javascript" src="/assets/js/anchor.min.js"></script>
+        <script type="text/javascript" src="/assets/js/custom.js"></script>
         <script>
             ((window.gitter = {}).chat = {}).options = {
                 room: 'chocolatey/choco'

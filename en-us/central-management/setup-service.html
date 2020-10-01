@@ -5,21 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="/assets/bootstrap/bootstrap.css" rel="stylesheet" />
         <link href="/assets/css/styles.css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" data-no-mirror>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/themes/prism.css">
-
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
-        <script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
-        <script type="text/javascript" src="/assets/js/anchor.min.js"></script>
 
         <title>Chocolatey - Central Management Service Setup</title>
     </head>
@@ -287,7 +275,7 @@
                                         <h1 id="central-management-windows-services-setup">Central Management Windows Service(s) Setup</h1>
 <p>This is the service that the agents (chocolatey-agent) communicates with. You could install one or more of these depending on the size of your environment (not multiple on one machine though). The FQDN and certificate used determine what the URL will be for the agents to check into Central Management.</p>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>Unless otherwise noted, please follow these steps in <em><strong>exact</strong></em> order. These steps build on each other and need to be completed in order.</p>
 </blockquote>
 <hr />
@@ -373,7 +361,7 @@
 <ul>
 <li>
 <blockquote>
-<p>:warning: The <a href="./setup-database">database</a> must be setup and available, along with <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
+<p>⚠️ The <a href="./setup-database">database</a> must be setup and available, along with <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 </li>
 <li>Windows Server 2012+</li>
@@ -387,7 +375,7 @@
 <h2 id="step-2-install-central-management-service-package">Step 2: Install Central Management Service Package</h2>
 <p>By default the service will install as a local administrative user <code>ChocolateyLocalAdmin</code> (and manage the password as well). However you can specify your own user with package parameters (such as using a domain account). You will need to specify credentials to the database as we'll see in scenarios below.</p>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>Timezones are super important here and time synchronization is really important when generating SSL Certificates. You want to make sure you have this correct and good. Otherwise there is a potential edge case you could generate an SSL Certificate that is not yet valid. As the service package could generate an SSL certificate if you don't pass an existing thumbprint, its best to ensure that time synchronization is not an issue with the machine you are installing this on.</p>
 </blockquote>
 <h3 id="fqdn-usage">FQDN Usage</h3>
@@ -421,7 +409,7 @@ choco config set --name=&quot;'centralManagementServiceUrl'&quot; --value=&quot;
 <li><code>/Database:</code> - Name of the SQL Server database to use. Alternative to passing full connection string with <code>/ConnectionString</code>. Uses <code>/SqlServerInstance</code> (above) to build a connection string. Defaults to <code>ChocolateyManagement</code>.</li>
 </ul>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: Items suffixed with &quot;<code>:</code>&quot; mean a value should be provided, items without are simply switches.</p>
+<p>📝 <strong>NOTE</strong>: Items suffixed with &quot;<code>:</code>&quot; mean a value should be provided, items without are simply switches.</p>
 </blockquote>
 <h3 id="service-settings">Service Settings</h3>
 <ul>
@@ -436,7 +424,7 @@ choco config set --name=&quot;'centralManagementServiceUrl'&quot; --value=&quot;
 <li><code>centralManagementServiceUrl</code> = <strong>' '</strong> (empty) - The URL that should be used to communicate with Chocolatey Central Management. It should look something like https://servicemachineFQDN:24020/ChocolateyManagementService. See <a href="../features/paid/chocolatey-central-management#fqdn-usage">FQDN usage</a>. Defaults to '' (empty). NOTE: Chocolatey Agent and CCM Service share this value on a machine that contains both. If blank, the CCM Service will construct a URL based on defaults of the machine, but is required to be set for Agents.</li>
 </ul>
 <blockquote>
-<p>:warning: <strong>WARNING</strong>: The Chocolatey Agent installed on the same machine that has the CCM Service installed will share the <code>centralManagementServiceUrl</code> setting, so that agent can only report into that CCM Service.</p>
+<p>⚠️ <strong>WARNING</strong>: The Chocolatey Agent installed on the same machine that has the CCM Service installed will share the <code>centralManagementServiceUrl</code> setting, so that agent can only report into that CCM Service.</p>
 </blockquote>
 <h3 id="chocolatey-managed-password">Chocolatey Managed Password</h3>
 <p>When Chocolatey manages the password for a local administrator, it creates a very complex password:</p>
@@ -477,11 +465,11 @@ choco config set --name=&quot;'centralManagementServiceUrl'&quot; --value=&quot;
 <pre><code class="language-powershell">choco install chocolatey-management-service -y --package-parameters=&quot;'/ConnectionString:Server=&lt;RemoteSqlHost&gt;;Database=ChocolateyManagement;Trusted_Connection=True; /Username:&lt;DomainAccount&gt;'&quot; --package-parameters-sensitive=&quot;'/Password:&lt;domain account password&gt;'&quot;
 </code></pre>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>Please ensure the user <code>&lt;DomainAccount&gt;</code> has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: Note the connection string doesn't include credentials. That's because Windows Authentication for SQL Server uses the context of what is running it and why the service itself needs the right user/password.</p>
+<p>📝 <strong>NOTE</strong>: Note the connection string doesn't include credentials. That's because Windows Authentication for SQL Server uses the context of what is running it and why the service itself needs the right user/password.</p>
 </blockquote>
 <h5 id="use-local-windows-account-to-local-sql-server">Use Local Windows Account to Local SQL Server</h5>
 <p>Scenario 2: Monolithic - you have set up the <a href="./setup-database">database</a> to use Windows Authentication (or Mixed Mode Authentication). You wish to use a local Windows account to connect to the local database.</p>
@@ -491,7 +479,7 @@ choco config set --name=&quot;'centralManagementServiceUrl'&quot; --value=&quot;
 <pre><code class="language-powershell">choco install chocolatey-management-service -y --package-parameters=&quot;'/ConnectionString:Server=&lt;Localhost\SQLEXPRESS&gt;;Database=ChocolateyManagement;Trusted_Connection=True; /Username:&lt;LocalWindowsAccount&gt;'&quot; --package-parameters-sensitive=&quot;'/Password:&lt;Local account password&gt;'&quot;
 </code></pre>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>Please ensure the user <code>&lt;LocalWindowsAccount&gt;</code> has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 <ul>
@@ -500,18 +488,18 @@ choco config set --name=&quot;'centralManagementServiceUrl'&quot; --value=&quot;
 <pre><code class="language-powershell">choco install chocolatey-management-service -y --package-parameters=&quot;'/ConnectionString:Server=&lt;Localhost\SQLEXPRESS&gt;;Database=ChocolateyManagement;Trusted_Connection=True;'&quot;
 </code></pre>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>Please ensure the user <code>ChocolateyLocalAdmin</code> has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 <blockquote>
-<p>:memo: <strong>NOTE</strong>: Note the connection string doesn't include credentials. That's because Windows Authentication for SQL Server uses the context of what is running it and why the service itself needs the right user/password.</p>
+<p>📝 <strong>NOTE</strong>: Note the connection string doesn't include credentials. That's because Windows Authentication for SQL Server uses the context of what is running it and why the service itself needs the right user/password.</p>
 </blockquote>
 <h5 id="use-windows-account-to-attach-sql-server">Use Windows Account to Attach SQL Server</h5>
 <p>You are using AttachDBFile or User Instance in your Connection String. This is effectively asking to attach a database file to the User's Data directory.</p>
 <pre><code class="language-powershell">choco install chocolatey-management-service -y --package-parameters=&quot;'/ConnectionString:Data Source=.\SQLEXPRESS;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|SomeDbFile.mdf;User Instance=true;'&quot;
 </code></pre>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>STOP right here. This is an unsupported scenario.</p>
 <p>While it may work, it's a really bad idea. Please look at one of the other options.
 It can also result in &quot;Failed to generate a user instance of SQL Server due to failure in retrieving the user's local application data path.&quot;</p>
@@ -519,7 +507,7 @@ It can also result in &quot;Failed to generate a user instance of SQL Server due
 <h5 id="use-local-windows-account-to-remote-sql-server">Use Local Windows Account to Remote SQL Server</h5>
 <p>Scenario 3: you have set up the <a href="./setup-database">database</a> to use Windows Authentication (or Mixed Mode Authentication). You wish to use a local Windows account to connect to a remote database (on another computer).</p>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>STOP right here.
 This is an invalid scenario and will not work. Please look at one of the other options. If you don't have LDAP, you will want to look at <a href="#sql-server-account-authentication">SQL Server Account Authentication</a> below.</p>
 </blockquote>
@@ -530,7 +518,7 @@ This is an invalid scenario and will not work. Please look at one of the other o
 <pre><code class="language-powershell">choco install chocolatey-management-service -y --package-parameters-sensitive=&quot;'/ConnectionString:Server=Localhost;Database=ChocolateyManagement;User ID=ChocoUser;Password=Ch0c0R0cks;'&quot;
 </code></pre>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>Please ensure the login has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 <ul>
@@ -539,7 +527,7 @@ This is an invalid scenario and will not work. Please look at one of the other o
 <pre><code class="language-powershell">choco install chocolatey-management-service -y --package-parameters-sensitive=&quot;'/ConnectionString:Server=Localhost\SQLEXPRESS;Database=ChocolateyManagement;User ID=ChocoUser;Password=Ch0c0R0cks;'&quot;
 </code></pre>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>Please ensure the login has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 <h5 id="use-sql-server-account-to-remote-sql-server">Use SQL Server Account to Remote SQL Server</h5>
@@ -547,7 +535,7 @@ This is an invalid scenario and will not work. Please look at one of the other o
 <pre><code class="language-powershell">choco install chocolatey-management-service -y --package-parameters-sensitive=&quot;'/ConnectionString:Server=&lt;RemoteSqlHost&gt;;Database=ChocolateyManagement;User ID=ChocoUser;Password=Ch0c0R0cks;'&quot;
 </code></pre>
 <blockquote>
-<p>:warning: <strong>WARNING</strong></p>
+<p>⚠️ <strong>WARNING</strong></p>
 <p>Please ensure the login has been given <code>db_datareader</code> and <code>db_datawriter</code> access to the database. See <a href="./setup-database#step-2-set-up-sql-server-logins-and-access">logins and access</a>.</p>
 </blockquote>
 <hr />
@@ -591,7 +579,7 @@ This is an invalid scenario and will not work. Please look at one of the other o
 <h3 id="can-we-install-central-management-service-behind-a-load-balancer">Can we install Central Management Service behind a load balancer?</h3>
 <p>Unfortunately, it's not a supported scenario. If you are trying to load balance requests to CCM service, you should install multiple instances on multiple machines and point clients explicitly to an instance so they can work together. If you are trying to load balance other things on a machine and CCM service just happens to be there (like with QDE), move CCM service to a different machine or allow direct connections to the box for CCM.</p>
 <blockquote>
-<p>:memo: <strong>NOTE:</strong> If you are an expert in managing X509 certificates with load balancing, you can certainly set this up, but if you can't get it to work, move to a supported scenario. Support folks will tell you the same.</p>
+<p>📝 <strong>NOTE:</strong> If you are an expert in managing X509 certificates with load balancing, you can certainly set this up, but if you can't get it to work, move to a supported scenario. Support folks will tell you the same.</p>
 </blockquote>
 <h3 id="we-want-to-set-up-the-chocolatey-central-management-service-to-use-a-domain-account-that-will-have-local-admin-on-each-box.can-we-do-this">We want to set up the Chocolatey Central Management service to use a domain account that will have local admin on each box. Can we do this?</h3>
 <p>Yes, absolutely. You will pass those credentials through at install/upgrade time, and you will also want to turn on the feature useRememberedArgumentsForUpgrades (see <a href="../usage/chocolatey-configuration#features">configuration</a>) so that future upgrades will have that information available. The remembered arguments are stored encrypted on the box (that encryption is reversible so you may opt to pass that information each time).</p>
@@ -651,7 +639,7 @@ This is an invalid scenario and will not work. Please look at one of the other o
 </li>
 </ol>
 <blockquote>
-<p>:warning: <strong>WARNING</strong>: Do not put <code>sec:</code> or <code>secure-</code> at the start (prefix) of any values that you are adding/modifying directly. That tells Chocolatey components they are encrypted and it will attempt to decrypt them for use. If that is done incorrectly, it will cause things to crash.</p>
+<p>⚠️ <strong>WARNING</strong>: Do not put <code>sec:</code> or <code>secure-</code> at the start (prefix) of any values that you are adding/modifying directly. That tells Chocolatey components they are encrypted and it will attempt to decrypt them for use. If that is done incorrectly, it will cause things to crash.</p>
 </blockquote>
 <h3 id="can-we-use-an-account-for-the-service-that-is-not-a-local-administrator">Can we use an account for the service that is not a local administrator?</h3>
 <p>This is not a supported scenario, especially considering the installation will attempt to ensure that the user becomes an administrator if they are not, in addition to <code>Logon as Service</code> and <code>Logon as Batch</code> privileges.</p>
@@ -802,97 +790,20 @@ Get-Service chocolatey-* | Start-Service
             <div class="container">
                 <div>
                     <span>© 2020 Chocolatey Software, Inc.</span>
-                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.81</span>
+                    <span class="float-right" style="color: #888888;">0.0.0-preview.0.82</span>
                 </div>
             </div>
         </div>
-        <script>
-            anchors.options.placement = 'left';
-            anchors.add();
-
-            var snippets = document.querySelectorAll("pre > code");
-            [].forEach.call(snippets, function(snippet) {
-                snippet.insertAdjacentHTML("beforebegin", "<button class='btn-copy' data-clipboard-snippet><img class='clippy' width=13 src='/assets/images/clippy.svg' alt='Copy to clipboard'></button>");
-            });
-            var clipboardSnippets = new Clipboard('[data-clipboard-snippet]', {
-                target: function(trigger) {
-                    return trigger.nextElementSibling;
-                }
-            });
-            clipboardSnippets.on('success', function(e) {
-                e.clearSelection();
-                showTooltip(e.trigger, "Copied!");
-            });
-            clipboardSnippets.on('error', function(e) {
-                showTooltip(e.trigger, fallbackMessage(e.action));
-            });
-            var btns = document.querySelectorAll('.btn-copy');
-            for (var i = 0; i < btns.length; i++) {
-                btns[i].addEventListener('mouseleave', function(e) {
-                    e.currentTarget.setAttribute('class', 'btn-copy');
-                    e.currentTarget.removeAttribute('aria-label');
-                });
-            }
-            function showTooltip(elem, msg) {
-                elem.setAttribute('class', 'btn-copy tooltipped tooltipped-s');
-                elem.setAttribute('aria-label', msg);
-            }
-            function fallbackMessage(action) {
-                var actionMsg = '';
-                var actionKey = (action === 'cut' ? 'X' : 'C');
-                if (/iPhone|iPad/i.test(navigator.userAgent)) {
-                    actionMsg = 'No support :(';
-                } else if (/Mac/i.test(navigator.userAgent)) {
-                    actionMsg = 'Press ⌘-' + actionKey + ' to ' + action;
-                } else {
-                    actionMsg = 'Press Ctrl-' + actionKey + ' to ' + action;
-                }
-                return actionMsg;
-            }
-
-            $(document).ready(function() {
-                mermaid.initialize(
-                {
-                    flowchart:
-                    {
-                        useMaxWidth: false
-                    },
-					startOnLoad: false,
-					cloneCssStyles: false
-                });
-                mermaid.init(undefined, ".mermaid");
-
-                // Remove the max-width setting that Mermaid sets
-                var mermaidSvg = $('.mermaid svg');
-                mermaidSvg.addClass('img-responsive');
-                mermaidSvg.css('max-width', '');
-
-                // Make it scrollable
-				var target = document.querySelector(".mermaid svg");
-				if(target !== null)
-				{
-					var panZoom = window.panZoom = svgPanZoom(target, {
-						zoomEnabled: true,
-						controlIconsEnabled: true,
-						fit: true,
-						center: true,
-                        maxZoom: 20,
-                        zoomScaleSensitivity: 0.6
-					});
-
-                    // Do the reset once right away to fit the diagram
-                    panZoom.resize();
-                    panZoom.fit();
-                    panZoom.center();
-
-                    $(window).resize(function(){
-                        panZoom.resize();
-                        panZoom.fit();
-                        panZoom.center();
-                    });
-				}
-            });
-        </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+        <script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+        <script type="text/javascript" src="/assets/js/anchor.min.js"></script>
+        <script type="text/javascript" src="/assets/js/custom.js"></script>
         <script>
             ((window.gitter = {}).chat = {}).options = {
                 room: 'chocolatey/choco'
