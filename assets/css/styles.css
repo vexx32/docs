@@ -3536,20 +3536,12 @@ h1, h2, h3 { color: #5c9fd8; }
 
 .page-box *:last-child { margin-bottom: 0; }
 
-/* Mermaid */
-.mermaid { overflow: hidden !important; visibility: hidden !important; margin-bottom: 1rem; margin-top: 1rem; min-height: 200px; }
-
-.mermaid[data-processed="true"] { visibility: visible !important; }
-
-.mermaid svg { min-height: 200px; }
-
-.node rect, .node circle, .node ellipse, .node polygon { fill: white !important; stroke: #202f3c !important; }
-
-.type-node rect, .type-node circle, .type-node ellipse, .type-node polygon { fill: #d7e8f6 !important; stroke: #202f3c !important; }
-
-.cluster rect { fill: #f8f9fa !important; stroke: #dee2e6 !important; }
-
 /*Start of Custom SCSS*/
+/*Scrollbars*/
+::-webkit-scrollbar { width: 8px; height: 8px; background-color: transparent; }
+
+::-webkit-scrollbar-thumb { border-radius: 10px; -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1); background-color: rgba(0, 0, 0, 0.1); }
+
 /*Blockquotes/Callout*/
 blockquote { padding: 1rem; background: #ffffff; box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); border-left: 6px solid #6c757d; }
 
@@ -3562,3 +3554,66 @@ blockquote.blockquote-danger { border-color: #f4516c; }
 blockquote.blockquote-primary { border-color: #5c9fd8; }
 
 blockquote.blockquote-success { border-color: #36bc98; }
+
+code[class*="language-"], pre[class*="language-"] { color: #43637f; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; word-wrap: normal; font-weight: bold; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-hyphens: none; -moz-hyphens: none; -ms-hyphens: none; hyphens: none; }
+
+/* Code blocks */
+pre[class*="language-"] { padding: 1em; margin: .5em 0; overflow: auto; }
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] { background-color: #ffffff; }
+
+/* Inline code */
+:not(pre) > code[class*="language-"] { padding: .1em; border-radius: .3em; }
+
+.token.comment, .token.prolog, .token.doctype, .token.cdata { color: #6c757d; font-weight: normal; }
+
+.token.punctuation { color: #586e75; }
+
+.token.namespace { color: #7396b5; }
+
+.token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted { color: #f4516c; }
+
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.url, .token.inserted { color: #5c9fd8; }
+
+.token.entity { color: #657b83; }
+
+.token.atrule, .token.attr-value, .token.keyword { color: #fd7e14; }
+
+.token.function, .token.class-name { color: #6f42c1; }
+
+.token.regex, .token.important, .token.variable { color: #36bc98; }
+
+.token.important, .token.bold { font-weight: bold; }
+
+.token.italic { font-style: italic; }
+
+.token.entity { cursor: help; }
+
+pre[class*="language-"].line-numbers { position: relative; padding-left: 3.8em; counter-reset: linenumber; }
+
+pre[class*="language-"].line-numbers > code { position: relative; white-space: inherit; }
+
+.line-numbers .line-numbers-rows { position: absolute; pointer-events: none; top: 0; font-size: 100%; left: -3.8em; width: 3em; /* works for line-numbers below 1000 lines */ letter-spacing: -1px; border-right: 1px solid #5c9fd8; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+.line-numbers-rows > span { display: block; counter-increment: linenumber; }
+
+.line-numbers-rows > span:before { content: counter(linenumber); color: #999; display: block; padding-right: 0.8em; text-align: right; font-weight: normal; }
+
+div.code-toolbar { position: relative; }
+
+div.code-toolbar > .toolbar { position: absolute; top: .3em; right: .2em; transition: opacity 0.3s ease-in-out; opacity: 0; }
+
+div.code-toolbar:hover > .toolbar { opacity: 1; }
+
+/* Separate line b/c rules are thrown out if selector is invalid. IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar { opacity: 1; }
+
+div.code-toolbar > .toolbar .toolbar-item { display: inline-block; }
+
+div.code-toolbar > .toolbar a { cursor: pointer; }
+
+div.code-toolbar > .toolbar button { background: none; border: 0; color: inherit; font: inherit; line-height: normal; overflow: visible; padding: 0; -webkit-user-select: none; /* for button */ -moz-user-select: none; -ms-user-select: none; }
+
+div.code-toolbar > .toolbar a, div.code-toolbar > .toolbar button, div.code-toolbar > .toolbar span { color: #ffffff; font-size: .8em; padding: .25em .5em; background: #6c757d; border-radius: .25em; }
+
+div.code-toolbar > .toolbar a:hover, div.code-toolbar > .toolbar a:focus, div.code-toolbar > .toolbar button:hover, div.code-toolbar > .toolbar button:focus, div.code-toolbar > .toolbar span:hover, div.code-toolbar > .toolbar span:focus { color: #ffffff; text-decoration: none; background: #545b62; }
