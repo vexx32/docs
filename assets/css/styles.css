@@ -3542,6 +3542,9 @@ h1, h2, h3 { color: #5c9fd8; }
 
 ::-webkit-scrollbar-thumb { border-radius: 10px; -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1); background-color: rgba(0, 0, 0, 0.1); }
 
+/*Left sidebar navigation*/
+#leftSidebarNav .navbar-nav { flex-direction: column; }
+
 /*Blockquotes/Callout*/
 blockquote { padding: 1rem; background: #ffffff; box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); border-left: 6px solid #6c757d; }
 
