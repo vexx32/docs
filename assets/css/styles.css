@@ -3247,7 +3247,7 @@ a.text-dark:hover, a.text-dark:focus { color: #121416 !important; }
   .table-dark th, .table-dark td, .table-dark thead th, .table-dark tbody + tbody { border-color: #dee2e6; }
   .table .thead-dark th { color: inherit; border-color: #dee2e6; } }
 
-html, body { display: flex; flex-direction: column; height: 100%; word-break: break-word; overflow-wrap: break-word; background: #f8f9fa; background: var(--background); color: var(--text); transition: 0.5s; }
+html, body { display: flex; flex-direction: column; width: 100%; min-height: 100vh; word-break: break-word; overflow-wrap: break-word; background: #f8f9fa; background: var(--background); color: var(--text); transition: 0.5s; }
 
 body > .container-fluid, body > .container-sm, body > .container-md, body > .container-lg, body > .container-xl { flex: 1 0 auto; }
 
@@ -3308,7 +3308,7 @@ label[for="themeToggle"]:focus-within { border-radius: 1rem; box-shadow: 0 0 0 0
 
 #themeToggle + .toggle-slot .sun-icon-wrapper .sun-icon { position: absolute; color: #ffc107; font-size: 1.25rem; }
 
-#themeToggle + .toggle-slot .toggle-button { transform: translate(2.35rem, 0.62rem); position: absolute; height: 1rem; width: 1rem; border-radius: 50%; background-color: rgba(255, 193, 7, 0.25); box-shadow: inset 0px 0px 0px 0.15rem #ffc107; transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71); }
+#themeToggle + .toggle-slot .toggle-button { transform: translate(2.35rem, 0.62rem); position: absolute; height: 1rem; width: 1rem; border-radius: 50%; background-color: rgba(255, 193, 7, 0.25); border: 1px solid #ffc107; transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71); }
 
 #themeToggle + .toggle-slot .moon-icon-wrapper { position: absolute; height: 1.25rem; opacity: 0; transform: translate(2rem, 0.25rem) rotate(0deg); transform-origin: 50% 50%; transition: opacity 150ms, transform 500ms cubic-bezier(0.26, 2.5, 0.46, 0.71); }
 
