@@ -4,17 +4,17 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Chocolatey - Setup / How to install" />
+        <meta property="og:title" content="Chocolatey - Set up a Development Environment" />
         <meta property="product:brand" content="Chocolatey" />
         <meta property="og:description" content="Chocolatey is software management automation for Windows that wraps installers, executables, zips, and scripts into compiled packages. Chocolatey integrates w/SCCM, Puppet, Chef, etc. Chocolatey is trusted by businesses to manage software deployments." />
         <meta name="description" content="Chocolatey is software management automation for Windows that wraps installers, executables, zips, and scripts into compiled packages. Chocolatey integrates w/SCCM, Puppet, Chef, etc. Chocolatey is trusted by businesses to manage software deployments." />
         <meta name="flattr:id" content="mqgjkp">
-        <meta property="DC.title" content="Chocolatey - Setup / How to install" />
+        <meta property="DC.title" content="Chocolatey - Set up a Development Environment" />
         <meta property="og:site_name" content="Chocolatey" />
         <meta property="og:type" content="product" />
         <meta property="product:category" content="software" />
         <meta property="og:image" content="https://chocolatey.org/content/images/icon_slogan.png" />
-        <meta property="og:url" content="https://docs.chocolatey.org/en-us/choco/installation" />
+        <meta property="og:url" content="https://docs.chocolatey.org/en-us/guides/usage/development-environment-setup" />
         <meta property="copyright" content="Chocolatey is Copyright 2020 - 2020 Chocolatey Software,Inc." />
 
 
@@ -28,7 +28,7 @@
             }
         </script>
         
-        <title>Chocolatey - Setup / How to install</title>
+        <title>Chocolatey - Set up a Development Environment</title>
     </head>
     <body>
         <nav id="topNav" class="navbar">
@@ -72,10 +72,10 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex">
-                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-ffdd46c3-b975-4e49-b8d9-6ea0314f94da"></div>
+                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-0dfb690d-22e0-4027-91a5-98c96f638382"></div>
                                                 <a href="/en-us/features">Features</a>
                                             </div>
-                                            <div class="collapse" id="id-ffdd46c3-b975-4e49-b8d9-6ea0314f94da">
+                                            <div class="collapse" id="id-0dfb690d-22e0-4027-91a5-98c96f638382">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/features/made-for-automation">Made for Automation</a>
@@ -87,16 +87,16 @@
                                                                 <a class="nav-link pl-5" href="/en-us/features/package-anything">Package anything</a>
                                                             </li>
                                                             <li class="nav-item">
-                                                                <a class="nav-link pl-5" href="/en-us/features/create-your-own-packages">Create your own packages</a>
+                                                                <a class="nav-link pl-5" href="/en-us/features/create-packages">Create your own packages</a>
                                                             </li>
                                                             <li class="nav-item">
-                                                                <a class="nav-link pl-5" href="/en-us/features/how-to-host-feed">Host packages internally</a>
+                                                                <a class="nav-link pl-5" href="/en-us/features/how-packages-internally">Host packages internally</a>
                                                             </li>
                                                             <li class="nav-item">
-                                                                <a class="nav-link pl-5" href="/en-us/features/infrastructure-automation">Integrates with everything</a>
+                                                                <a class="nav-link pl-5" href="/en-us/features/integrations">Integrates with everything</a>
                                                             </li>
                                                             <li class="nav-item">
-                                                                <a class="nav-link pl-5" href="/en-us/features/create-extensions">Extend Chocolatey With PowerShell Modules (extensions)</a>
+                                                                <a class="nav-link pl-5" href="/en-us/features/extensions">Extend Chocolatey With PowerShell Modules (extensions)</a>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/features/shim">Executable shimming (like symlinks but better)</a>
@@ -136,10 +136,10 @@
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex">
-                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-7c041a4c-aee1-43d0-9153-716cfefba3d3"></div>
+                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-22a58456-deed-4ddf-8a3c-15f1ef6c4466"></div>
                                                                     <a href="/en-us/features/package-synchronization">Package Synchronization</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-7c041a4c-aee1-43d0-9153-716cfefba3d3">
+                                                                <div class="collapse" id="id-22a58456-deed-4ddf-8a3c-15f1ef6c4466">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/features/package-synchronization/automatic-sync">Automatic Sync (Pro&#x2B;)</a>
@@ -166,30 +166,30 @@
                                             <a class="nav-link pl-c2" href="/en-us/configuration">Configuration</a>
                                         </li>
                                         <li class="nav-item">
-                                            <div class="nav-link nav-link-collapse d-flex active">
-                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-335eff8c-0cc1-43e6-9068-b6fe7454aa6e"></div>
+                                            <a class="nav-link pl-c2" href="/en-us/getting-started">Getting Started</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <div class="nav-link nav-link-collapse d-flex">
+                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-0d634319-1959-46c6-9915-13b99a931c81"></div>
                                                 <a href="/en-us/choco">Chocolatey CLI (choco)</a>
                                             </div>
-                                            <div class="collapse" id="id-335eff8c-0cc1-43e6-9068-b6fe7454aa6e">
+                                            <div class="collapse" id="id-0d634319-1959-46c6-9915-13b99a931c81">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/choco/release-notes">Release Notes</a>
                                                             </li>
                                                             <li class="nav-item">
-                                                                <a class="nav-link pl-5 active active-page" href="/en-us/choco/installation">Setup / How to install</a>
+                                                                <a class="nav-link pl-5" href="/en-us/choco/setup">Setup / How to install</a>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/choco/uninstallation">How to uninstall</a>
                                                             </li>
                                                             <li class="nav-item">
-                                                                <a class="nav-link pl-5" href="/en-us/choco/getting-started">Getting Started</a>
-                                                            </li>
-                                                            <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex">
-                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-505105b6-bfd8-48a8-b167-e2f812c53b39"></div>
+                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-a96987ca-06ae-44fd-8c4b-5224a56df442"></div>
                                                                     <a href="/en-us/choco/commands">Commands</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-505105b6-bfd8-48a8-b167-e2f812c53b39">
+                                                                <div class="collapse" id="id-a96987ca-06ae-44fd-8c4b-5224a56df442">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/choco/commands/config">Config</a>
@@ -262,10 +262,10 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex">
-                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-e8563d02-b0bd-4b71-b657-264a0b5fb037"></div>
+                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-2eecdef5-d323-4276-9552-d6df0f8db0e7"></div>
                                                 <a href="/en-us/chocolatey-gui">Chocolatey GUI</a>
                                             </div>
-                                            <div class="collapse" id="id-e8563d02-b0bd-4b71-b657-264a0b5fb037">
+                                            <div class="collapse" id="id-2eecdef5-d323-4276-9552-d6df0f8db0e7">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/chocolatey-gui/release-notes">Release Notes</a>
@@ -281,20 +281,20 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex">
-                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-4e5768af-9b7e-4022-b7e0-9a02442bd303"></div>
+                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-d8176d4e-1c51-4ad9-9c28-11f26b41a3c1"></div>
                                                 <a href="/en-us/community-packages">Community Packages (chocolatey.org)</a>
                                             </div>
-                                            <div class="collapse" id="id-4e5768af-9b7e-4022-b7e0-9a02442bd303">
+                                            <div class="collapse" id="id-d8176d4e-1c51-4ad9-9c28-11f26b41a3c1">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/community-packages/community-packages-disclaimer">Chocolatey.org Packages Disclaimer</a>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex">
-                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-9ebc733b-7a22-4ad8-8160-18db875fd55c"></div>
+                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-addb3157-a504-491a-bfe4-bd2478cfe760"></div>
                                                                     <a href="/en-us/community-packages/users">Users</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-9ebc733b-7a22-4ad8-8160-18db875fd55c">
+                                                                <div class="collapse" id="id-addb3157-a504-491a-bfe4-bd2478cfe760">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/community-packages/users/package-triage-process">Request Package Fixes/Updates</a>
@@ -304,10 +304,10 @@
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex">
-                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-1aedef18-c126-4c13-bf73-07dba8a517e6"></div>
+                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-4c1e9eed-39af-4b99-b628-36c0acd1ee28"></div>
                                                                     <a href="/en-us/community-packages/maintainers">Maintainers</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-1aedef18-c126-4c13-bf73-07dba8a517e6">
+                                                                <div class="collapse" id="id-4c1e9eed-39af-4b99-b628-36c0acd1ee28">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/community-packages/maintainers/moderation">Chocolatey.org Moderation</a>
@@ -326,26 +326,26 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex">
-                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-cfa77208-0570-428e-b0b9-9b3db158b4b4"></div>
+                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-5a1c2744-0f33-4a63-97ed-18864a0147a5"></div>
                                                 <a href="/en-us/licensed-extension">Chocolatey Licensed Extension</a>
                                             </div>
-                                            <div class="collapse" id="id-cfa77208-0570-428e-b0b9-9b3db158b4b4">
+                                            <div class="collapse" id="id-5a1c2744-0f33-4a63-97ed-18864a0147a5">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/licensed-extension/release-notes">Release Notes</a>
                                                             </li>
                                                             <li class="nav-item">
-                                                                <a class="nav-link pl-5" href="/en-us/licensed-extension/installation-licensed">Setup / How to install licensed edition</a>
+                                                                <a class="nav-link pl-5" href="/en-us/licensed-extension/setup">Setup / How to install licensed edition</a>
                                                             </li>
                                                 </ul>
                                             </div>
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex">
-                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-9b92253e-df54-4ea6-ae78-ef42e92ab43c"></div>
+                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-92f29da1-6e43-4a1a-8780-c6953ef003b2"></div>
                                                 <a href="/en-us/agent">Chocolatey Agent</a>
                                             </div>
-                                            <div class="collapse" id="id-9b92253e-df54-4ea6-ae78-ef42e92ab43c">
+                                            <div class="collapse" id="id-92f29da1-6e43-4a1a-8780-c6953ef003b2">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/agent/release-notes">Release Notes</a>
@@ -358,20 +358,20 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex">
-                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-98d0dafe-9470-42a1-940f-3ed1daab49c8"></div>
+                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-b6e4bf8e-9042-45cb-80a5-bcc48274d1c6"></div>
                                                 <a href="/en-us/central-management">Central Management</a>
                                             </div>
-                                            <div class="collapse" id="id-98d0dafe-9470-42a1-940f-3ed1daab49c8">
+                                            <div class="collapse" id="id-b6e4bf8e-9042-45cb-80a5-bcc48274d1c6">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/central-management/release-notes">Release Notes</a>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex">
-                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-a15fd046-1aa6-49fe-901b-2db4615afa93"></div>
+                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-a4f253d4-b7c9-4ddb-aab4-a2f1cd8b7ef3"></div>
                                                                     <a href="/en-us/central-management/setup">Setup</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-a15fd046-1aa6-49fe-901b-2db4615afa93">
+                                                                <div class="collapse" id="id-a4f253d4-b7c9-4ddb-aab4-a2f1cd8b7ef3">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/central-management/setup/database">Database</a>
@@ -393,10 +393,10 @@
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex">
-                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-5e79753e-c211-456b-b128-bac7adaf38bc"></div>
+                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-5afb5237-8f38-44f0-8e54-7ce4db0a77c3"></div>
                                                                     <a href="/en-us/central-management/usage">Usage</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-5e79753e-c211-456b-b128-bac7adaf38bc">
+                                                                <div class="collapse" id="id-5afb5237-8f38-44f0-8e54-7ce4db0a77c3">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/central-management/usage/computers">Computers</a>
@@ -421,20 +421,20 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex">
-                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-2bb74601-038c-4d88-a933-6db5a4630d14"></div>
+                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-ae7a0b19-9c33-4fb2-ad75-5a982c7e6d11"></div>
                                                 <a href="/en-us/quick-deployment">Quick Deployment Environment (QDE)</a>
                                             </div>
-                                            <div class="collapse" id="id-2bb74601-038c-4d88-a933-6db5a4630d14">
+                                            <div class="collapse" id="id-ae7a0b19-9c33-4fb2-ad75-5a982c7e6d11">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/quick-deployment/release-notes">Release Notes</a>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex">
-                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-17b312cc-9b41-483a-a86b-9e9c865ccd96"></div>
+                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-4a991de9-dce1-4563-b2e8-3d80b73f6bc9"></div>
                                                                     <a href="/en-us/quick-deployment/setup">Setup</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-17b312cc-9b41-483a-a86b-9e9c865ccd96">
+                                                                <div class="collapse" id="id-4a991de9-dce1-4563-b2e8-3d80b73f6bc9">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/quick-deployment/setup/desktop-readme">Desktop Readme</a>
@@ -456,10 +456,10 @@
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex">
-                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-0b7f4b7e-a349-48f5-b9e5-80649b5aa77d"></div>
+                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-8b9224fc-9990-4207-b93d-38112bf59788"></div>
                                                                     <a href="/en-us/quick-deployment/v1">QDE v1</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-0b7f4b7e-a349-48f5-b9e5-80649b5aa77d">
+                                                                <div class="collapse" id="id-8b9224fc-9990-4207-b93d-38112bf59788">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/quick-deployment/v1/setup">Setup</a>
@@ -484,10 +484,10 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex">
-                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-75bdaa82-f883-423a-a101-7f28f577003d"></div>
+                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-885611a4-70f4-4bc6-8518-451095e3ace7"></div>
                                                 <a href="/en-us/create">Package Creation</a>
                                             </div>
-                                            <div class="collapse" id="id-75bdaa82-f883-423a-a101-7f28f577003d">
+                                            <div class="collapse" id="id-885611a4-70f4-4bc6-8518-451095e3ace7">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/create/create-packages">Create Packages</a>
@@ -497,10 +497,10 @@
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex">
-                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-17ea8df4-e4c1-46ac-9e0b-19352862ab3d"></div>
+                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-7a4f82bc-eb6d-4f1c-801e-e1f7863ea47e"></div>
                                                                     <a href="/en-us/create/commands">Commands</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-17ea8df4-e4c1-46ac-9e0b-19352862ab3d">
+                                                                <div class="collapse" id="id-7a4f82bc-eb6d-4f1c-801e-e1f7863ea47e">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/create/commands/new">New</a>
@@ -519,10 +519,10 @@
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex">
-                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-9738eb4f-acd9-4154-b869-0a68b937dc41"></div>
+                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-97e5a4a7-5ef6-44f6-ae1f-7f65078b81f6"></div>
                                                                     <a href="/en-us/create/helpers">PowerShell Reference</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-9738eb4f-acd9-4154-b869-0a68b937dc41">
+                                                                <div class="collapse" id="id-97e5a4a7-5ef6-44f6-ae1f-7f65078b81f6">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/create/helpers/format-filesize">Format-FileSize</a>
@@ -681,40 +681,40 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <div class="nav-link nav-link-collapse d-flex">
-                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-eb6dd695-cde1-45b6-8b2e-73c720d96bf4"></div>
+                                            <div class="nav-link nav-link-collapse d-flex active">
+                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-6b4e4028-7e50-4244-81ea-506771cbfe44"></div>
                                                 <a href="/en-us/guides">Guides</a>
                                             </div>
-                                            <div class="collapse" id="id-eb6dd695-cde1-45b6-8b2e-73c720d96bf4">
+                                            <div class="collapse" id="id-6b4e4028-7e50-4244-81ea-506771cbfe44">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
-                                                                <div class="nav-link nav-link-collapse d-flex">
-                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-afcbe4b5-856c-44fb-908a-0ce3890f4036"></div>
-                                                                    <a href="/en-us/guides/using">Using Chocolatey</a>
+                                                                <div class="nav-link nav-link-collapse d-flex active">
+                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-f8eca003-aa23-49c9-b1b9-67d54b5817fd"></div>
+                                                                    <a href="/en-us/guides/usage">Using Chocolatey</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-afcbe4b5-856c-44fb-908a-0ce3890f4036">
+                                                                <div class="collapse" id="id-f8eca003-aa23-49c9-b1b9-67d54b5817fd">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
-                                                                                <a class="nav-link pl-c4" href="/en-us/guides/using/proxy-settings-for-chocolatey">Use Chocolatey w/Proxy Server</a>
+                                                                                <a class="nav-link pl-c4" href="/en-us/guides/usage/proxy-settings-for-chocolatey">Use Chocolatey w/Proxy Server</a>
                                                                             </li>
                                                                             <li class="nav-item">
-                                                                                <a class="nav-link pl-c4" href="/en-us/guides/using/change-cache">Change Download Cache Location aka Don&#x27;t use TEMP for downloads</a>
+                                                                                <a class="nav-link pl-c4" href="/en-us/guides/usage/change-cache">Change Download Cache Location aka Don&#x27;t use TEMP for downloads</a>
                                                                             </li>
                                                                             <li class="nav-item">
-                                                                                <a class="nav-link pl-c4" href="/en-us/guides/using/install-upgrade-package-without-scripts">Install/Upgrade a Package w/out running install scripts</a>
+                                                                                <a class="nav-link pl-c4" href="/en-us/guides/usage/install-upgrade-package-without-scripts">Install/Upgrade a Package w/out running install scripts</a>
                                                                             </li>
                                                                             <li class="nav-item">
-                                                                                <a class="nav-link pl-c4" href="/en-us/guides/using/development-environment-setup">Set up a Development Environment</a>
+                                                                                <a class="nav-link pl-c4 active active-page" href="/en-us/guides/usage/development-environment-setup">Set up a Development Environment</a>
                                                                             </li>
                                                                     </ul>
                                                                 </div>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex">
-                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-0362f473-a58e-438a-99a3-f39f8d5d3c52"></div>
+                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-41aa99da-9620-4d42-bd16-db3ef1bfbcaa"></div>
                                                                     <a href="/en-us/guides/create">Package Creation</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-0362f473-a58e-438a-99a3-f39f8d5d3c52">
+                                                                <div class="collapse" id="id-41aa99da-9620-4d42-bd16-db3ef1bfbcaa">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/guides/create/recompile-packages">Manually Recompile Packages, Embedding/Internalizing Remote Resources</a>
@@ -733,10 +733,10 @@
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex">
-                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-44159ffb-a17c-4f41-adfb-873073a7ffee"></div>
+                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-fb8721ab-21d8-42ae-8368-b076ff9838c9"></div>
                                                                     <a href="/en-us/guides/organizations">Organizations</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-44159ffb-a17c-4f41-adfb-873073a7ffee">
+                                                                <div class="collapse" id="id-fb8721ab-21d8-42ae-8368-b076ff9838c9">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/guides/organizations/organizational-deployment-guide">Set up Chocolatey for Internal/organizational use</a>
@@ -758,17 +758,17 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex">
-                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-c72a52d4-5e91-4a49-8578-53b234091f20"></div>
+                                                <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-7fd1b5b3-092f-49cb-ac9f-09b2ae036393"></div>
                                                 <a href="/en-us/information">Information</a>
                                             </div>
-                                            <div class="collapse" id="id-c72a52d4-5e91-4a49-8578-53b234091f20">
+                                            <div class="collapse" id="id-7fd1b5b3-092f-49cb-ac9f-09b2ae036393">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex">
-                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-42537b99-52bb-4ff8-b1bf-aae612e400d7"></div>
+                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-368bbcf4-6a07-4954-9bcf-44681dab5c60"></div>
                                                                     <a href="/en-us/information/release-notes">Release Notes</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-42537b99-52bb-4ff8-b1bf-aae612e400d7">
+                                                                <div class="collapse" id="id-368bbcf4-6a07-4954-9bcf-44681dab5c60">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/information/release-notes/open-source">Open Source</a>
@@ -790,10 +790,10 @@
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex">
-                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-96211dbe-f4ac-479c-a219-5fb2085d5382"></div>
+                                                                    <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-3c723709-46c4-41d0-a3f8-1e1c866a1974"></div>
                                                                     <a href="/en-us/information/learning-resources">More Learning Resources</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-96211dbe-f4ac-479c-a219-5fb2085d5382">
+                                                                <div class="collapse" id="id-3c723709-46c4-41d0-a3f8-1e1c866a1974">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/information/learning-resources/resources">Resources</a>
@@ -816,13 +816,14 @@
                 </div>
                 <div class="col-md-9 col-xl-10 py-3 py-md-5 mx-auto">
                     <div class="ml-md-4 d-xl-none">
-                        <h1 class="title">Setup / How to install</h1>                 
+                        <h1 class="title">Set up a Development Environment</h1>                 
 <nav aria-label="breadcrumb">
 	<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a href="/en-us">Chocolatey</a></li>
-			<li class="breadcrumb-item"><a href="/en-us/choco">Chocolatey CLI (choco)</a></li>
+			<li class="breadcrumb-item"><a href="/en-us/guides">Guides</a></li>
+			<li class="breadcrumb-item"><a href="/en-us/guides/usage">Using Chocolatey</a></li>
 		
-		<li class="breadcrumb-item active" aria-current="page">Setup / How to install</li>
+		<li class="breadcrumb-item active" aria-current="page">Set up a Development Environment</li>
 	</ol>
 </nav>
 
@@ -830,782 +831,272 @@
                     <div class="row">
                         <div id="mainContent" class="col-xl-10 pl-md-5 order-2 order-xl-1">
                              <div class="d-none d-xl-block">
-                                <h1 class="title">Setup / How to install</h1>                 
+                                <h1 class="title">Set up a Development Environment</h1>                 
 <nav aria-label="breadcrumb">
 	<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a href="/en-us">Chocolatey</a></li>
-			<li class="breadcrumb-item"><a href="/en-us/choco">Chocolatey CLI (choco)</a></li>
+			<li class="breadcrumb-item"><a href="/en-us/guides">Guides</a></li>
+			<li class="breadcrumb-item"><a href="/en-us/guides/usage">Using Chocolatey</a></li>
 		
-		<li class="breadcrumb-item active" aria-current="page">Setup / How to install</li>
+		<li class="breadcrumb-item active" aria-current="page">Set up a Development Environment</li>
 	</ol>
 </nav>
 
                              </div>
-                             <h2 id="requirements">Requirements</h2>
+                             <h2 id="set-up-a-development-environment-using-chocolatey">Set Up A Development Environment Using Chocolatey</h2>
+<p>How many of you out there are rake fans? Getting developers to look at your source code can sometimes be an issue. Wouldn't it be nice if it was simple for them to get all set up? What about Ruby DevKit? It would be nice, right?</p>
+<h2 id="set-up-from-the-source">Set up From the Source</h2>
+<p>This does the following:</p>
 <ul>
-<li>Windows 7+ / Windows Server 2003+</li>
-<li>PowerShell v2+ (Not PowerShell Core yet though)(minimum is v3 for install from this website due to <a href="https://chocolatey.org/blog/remove-support-for-old-tls-versions">TLS 1.2 requirement</a>)</li>
-<li>.NET Framework 4+ (the installation will attempt to install .NET 4.0 if you do not have it installed)(minimum is 4.5 for install from this website due to <a href="https://chocolatey.org/blog/remove-support-for-old-tls-versions">TLS 1.2 requirement</a>)</li>
+<li>downloads and installs Chocolatey</li>
+<li>installs nuget.commandline if it is not installed</li>
+<li>installs ruby.devkit if it is not installed</li>
+<li>installs ruby if it is not installed</li>
+<li>updates gems and installs some required gems for rake</li>
+<li>restores nuget packages from the configs</li>
+<li>builds the source with rake</li>
 </ul>
-<p>That's it! All you need is choco.exe (that you get from the installation scripts) and you are good to go! No Visual Studio required.</p>
-<h2 id="installing-chocolatey">Installing Chocolatey</h2>
-<p>Chocolatey installs in seconds. You are just a few steps from running choco right now!</p>
-<ol>
-<li>First, ensure that you are using an <em><strong><a href="http://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/">administrative shell</a></strong></em> - you can also install as a non-admin, check out <a href="#non-administrative-install">Non-Administrative Installation</a>.</li>
-<li>Copy the text specific to your command shell - <a href="#install-with-cmdexe">cmd.exe</a> or <a href="#install-with-powershellexe">powershell.exe</a>.</li>
-<li>Paste the copied text into your shell and press Enter.</li>
-<li>Wait a few seconds for the command to complete.</li>
-<li>If you don't see any errors, you are ready to use Chocolatey! Type <code>choco</code> or <code>choco -?</code> now, or see <a href="./getting-started">Getting Started</a> for usage instructions.</li>
-</ol>
-<p><strong>NOTES</strong>:</p>
-<ul>
-<li>If you are behind a proxy, please see <a href="#installing-behind-a-proxy">Installing behind a proxy</a>.</li>
-<li>Need completely offline solution? See <a href="#completely-offline-install">Completely Offline Install</a>.</li>
-<li>Installing the licensed edition? See <a href="../licensed-extension/installation-licensed">install licensed edition</a>.</li>
-<li><a class="btn-collapse-target" href="#more-install-options" data-href="#moreInstallOptions">More Options</a> / <a href="../troubleshooting">Troubleshooting</a></li>
-</ul>
-<h4 id="install-with-cmd.exe">Install with cmd.exe</h4>
-<p>Run the following command:</p>
-<pre><code class="language-sh">
-&#64;&quot;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&quot; -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &quot;[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))&quot; &amp;&amp; SET &quot;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&quot;
-
-</code></pre>
-<h4 id="install-with-powershell.exe">Install with PowerShell.exe</h4>
-<p>With PowerShell, there is an additional step. You must ensure <a href="https://go.microsoft.com/fwlink/?LinkID=135170">Get-ExecutionPolicy</a> is not Restricted. We suggest using <code>Bypass</code> to bypass the policy to get things installed or <code>AllSigned</code> for quite a bit more security.</p>
-<ul>
-<li>Run <code>Get-ExecutionPolicy</code>. If it returns <code>Restricted</code>, then run <code>Set-ExecutionPolicy AllSigned</code> or <code>Set-ExecutionPolicy Bypass -Scope Process</code>.</li>
-<li>Now run the following command:</li>
-</ul>
-<pre><code class="language-powershell">
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-
-</code></pre>
-<h4 id="additional-considerations">Additional considerations</h4>
-<p><strong>NOTE:</strong> Please inspect <a href="https://chocolatey.org/install.ps1">https://chocolatey.org/install.ps1</a> prior to running any of these scripts to ensure safety. We already know it's safe, but you should verify the security and contents of <em><strong>any</strong></em> script from the internet you are not familiar with. All of these scripts download a remote PowerShell script and execute it on your machine.</p>
-<p>We take security very seriously. <a href="https://chocolatey.org/security">Learn more</a>.</p>
-<blockquote>
-<p>&quot;Why do I need to enable TLS 1.2 in PowerShell? Shouldn't it be on by default when I load PowerShell?&quot;</p>
-</blockquote>
-<p>Unfortunately it's not always a default, and more of the time it is not.  The low level is that it depends on .NET Framework and Windows.</p>
-<ul>
-<li>Explicitly set - Basically you need .NET Fx 4.5 at a minimum to be able to explicitly set TLS 1.2.</li>
-<li>Load by default - To have it load by default when you run PowerShell, you need at least .NET Fx 4.7 AND the Operating System's SystemDefault to have TLS 1.2 enabled.</li>
-</ul>
-<p>The load by default is really hard to see, so you should check to ensure it is there. Assume it doesn't and set explicitly.</p>
-<h2 id="more-install-options">More Install Options</h2>
-<p><strong>Troubleshooting? Proxy? Need more options?</strong></p>
-<p><button class="btn btn-success btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#moreInstallOptions" aria-expanded="false" aria-controls="moreInstallOptions">More Install Options</button></p>
-<div class="collapse" id="moreInstallOptions">
-<ul>
-<li><a href="#install-from-powershell-v3">Install from PowerShell v3+</a></li>
-<li><a href="#completely-offline-install">Completely offline/internal install</a></li>
-<li><a href="#install-with-puppet">Install with Puppet</a></li>
-<li><a href="#install-using-powershell-from-cmdexe">Install using PowerShell from cmd.exe</a></li>
-<li><a href="#install-using-nuget-package-manager">Install using NuGet Package Manager</a></li>
-<li><a href="#install-using-nugetexe-from-powershell">Install using NuGet.exe from PowerShell</a></li>
-<li><a href="#install-downloaded-nuget-package-from-powershell">Install downloaded NuGet package from PowerShell</a></li>
-<li><a href="#install-licensed-edition">Install licensed edition</a></li>
-<li><a href="#installing-behind-a-proxy">Installing behind a proxy</a></li>
-<li><a href="#installing-behind-an-explicit-proxy">Installing behind an explicit proxy</a></li>
-<li><a href="#installing-to-a-different-location">Installing to a different location</a></li>
-<li><a href="#installing-a-particular-version-of-chocolatey">Installing a particular version of Chocolatey</a></li>
-<li><a href="#use-windows-built-in-compression-instead-of-downloading-7zip">Use Windows built-in compression instead of downloading 7zip</a></li>
-<li><a href="#installing-with-restricted-tls">Installing with restricted TLS</a></li>
-<li><a href="#non-administrative-install">Non-Administrative install</a></li>
-</ul>
-<h3 id="install-from-powershell-v3">Install from PowerShell v3+</h3>
-<p><strong>NOTE:</strong> The command for installing with PowerShell at the top of the page works for all versions of PowerShell from v2 on. This is provided as an additional note for folks who want a more terse command that is easier to remember.</p>
-<p>With PowerShell, there is an additional step or two. You must ensure <a href="https://go.microsoft.com/fwlink/?LinkID=135170">Get-ExecutionPolicy</a> is not Restricted. We suggest using <code>Bypass</code> to bypass the policy to get things installed or <code>AllSigned</code> for quite a bit more security.</p>
-<ul>
-<li>Run <code>Get-ExecutionPolicy</code>. If it returns <code>Restricted</code>, then run <code>Set-ExecutionPolicy AllSigned</code> or <code>Set-ExecutionPolicy Bypass</code>.</li>
-<li>Now run the following command:</li>
-</ul>
-<pre><code class="language-powershell">
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
-
-</code></pre>
-<h3 id="completely-offline-install">Completely offline install</h3>
-<p>With completely offline use of Chocolatey, you want to ensure you remove the default community package source (<code>choco source list</code> followed by <code>choco source remove -n chocolatey</code>, or however you would do that with a configuration manager <a href="https://forge.puppet.com/puppetlabs/chocolatey#sources-configuration">like Puppet</a>).</p>
-<ol>
-<li>The first step with offline is to obtain a copy of the Chocolatey Nupkg (nupkg files are just fancy zip files). Go to <a href="https://chocolatey.org/packages/chocolatey">https://chocolatey.org/packages/chocolatey</a> and find a version you want.</li>
-<li>Click on Download to download that version's nupkg file.</li>
-</ol>
-<p><img src="/assets/images/DownloadChocolateyPackage.png" alt="download chocolatey.nupkg visual" /></p>
-<ol>
-<li>You can also download <a href="https://chocolatey.org/api/v2/package/chocolatey">the latest version directly</a>.</li>
-<li>You can put the chocolatey.nupkg on an internal package repository and then address that full path, similar to how you see in the Puppet provider - <a href="https://forge.puppet.com/puppetlabs/chocolatey#manage-chocolatey-installation">https://forge.puppet.com/puppetlabs/chocolatey#manage-chocolatey-installation</a></li>
-<li>Then you would run a script similar to the below to address that local install. If it is on a repository somewhere, you will need to enhance the below script to get that file  (the Chocolatey Puppet provider install script shows that).</li>
-</ol>
-<pre><code class="language-powershell"># Download and install Chocolatey nupkg from an OData (HTTP/HTTPS) url such as Artifactory, Nexus, ProGet (all of these are recommended for organizational use), or Chocolatey.Server (great for smaller organizations and POCs)
-# This is where you see the top level API - with xml to Packages - should look nearly the same as https://chocolatey.org/api/v2/
-# If you are using Nexus, always add the trailing slash or it won't work
-# === EDIT HERE ===
-$packageRepo = '&lt;INSERT ODATA REPO URL&gt;'
-
-# If the above $packageRepo repository requires authentication, add the username and password here. Otherwise these leave these as empty strings.
-$repoUsername = ''    # this must be empty is NOT using authentication
-$repoPassword = ''    # this must be empty if NOT using authentication
-
-# Determine unzipping method
-# 7zip is the most compatible, but you need an internally hosted 7za.exe.
-# Make sure the version matches for the arguments as well.
-# Built-in does not work with Server Core, but if you have PowerShell 5
-# it uses Expand-Archive instead of COM
-$unzipMethod = 'builtin'
-#$unzipMethod = '7zip'
-#$7zipUrl = 'https://chocolatey.org/7za.exe' (download this file, host internally, and update this to internal)
-
-# === ENVIRONMENT VARIABLES YOU CAN SET ===
-# Prior to running this script, in a PowerShell session, you can set the
-# following environment variables and it will affect the output
-
-# - $env:ChocolateyEnvironmentDebug = 'true' # see output
-# - $env:chocolateyIgnoreProxy = 'true' # ignore proxy
-# - $env:chocolateyProxyLocation = '' # explicit proxy
-# - $env:chocolateyProxyUser = '' # explicit proxy user name (optional)
-# - $env:chocolateyProxyPassword = '' # explicit proxy password (optional)
-
-# === NO NEED TO EDIT ANYTHING BELOW THIS LINE ===
-# Ensure we can run everything
-Set-ExecutionPolicy Bypass -Scope Process -Force;
-
-# If the repository requires authentication, create the Credential object
-if ((-not [string]::IsNullOrEmpty($repoUsername)) -and (-not [string]::IsNullOrEmpty($repoPassword))) {
-    $securePassword = ConvertTo-SecureString $repoPassword -AsPlainText -Force
-    $repoCreds = New-Object System.Management.Automation.PSCredential ($repoUsername, $securePassword)
-}
-
-$searchUrl = ($packageRepo.Trim('/'), 'Packages()?$filter=(Id%20eq%20%27chocolatey%27)%20and%20IsLatestVersion') -join '/'
-
-# Reroute TEMP to a local location
-New-Item $env:ALLUSERSPROFILE\choco-cache -ItemType Directory -Force
-$env:TEMP = &quot;$env:ALLUSERSPROFILE\choco-cache&quot;
-
-$localChocolateyPackageFilePath = Join-Path $env:TEMP 'chocolatey.nupkg'
-$ChocoInstallPath = &quot;$($env:SystemDrive)\ProgramData\Chocolatey\bin&quot;
-$env:ChocolateyInstall = &quot;$($env:SystemDrive)\ProgramData\Chocolatey&quot;
-$env:Path += &quot;;$ChocoInstallPath&quot;
-$DebugPreference = 'Continue';
-
-# PowerShell v2/3 caches the output stream. Then it throws errors due
-# to the FileStream not being what is expected. Fixes &quot;The OS handle's
-# position is not what FileStream expected. Do not use a handle
-# simultaneously in one FileStream and in Win32 code or another
-# FileStream.&quot;
-function Fix-PowerShellOutputRedirectionBug {
-  $poshMajorVerion = $PSVersionTable.PSVersion.Major
-
-  if ($poshMajorVerion -lt 4) {
-    try{
-      # http://www.leeholmes.com/blog/2008/07/30/workaround-the-os-handles-position-is-not-what-filestream-expected/ plus comments
-      $bindingFlags = [Reflection.BindingFlags] &quot;Instance,NonPublic,GetField&quot;
-      $objectRef = $host.GetType().GetField(&quot;externalHostRef&quot;, $bindingFlags).GetValue($host)
-      $bindingFlags = [Reflection.BindingFlags] &quot;Instance,NonPublic,GetProperty&quot;
-      $consoleHost = $objectRef.GetType().GetProperty(&quot;Value&quot;, $bindingFlags).GetValue($objectRef, &#64;())
-      [void] $consoleHost.GetType().GetProperty(&quot;IsStandardOutputRedirected&quot;, $bindingFlags).GetValue($consoleHost, &#64;())
-      $bindingFlags = [Reflection.BindingFlags] &quot;Instance,NonPublic,GetField&quot;
-      $field = $consoleHost.GetType().GetField(&quot;standardOutputWriter&quot;, $bindingFlags)
-      $field.SetValue($consoleHost, [Console]::Out)
-      [void] $consoleHost.GetType().GetProperty(&quot;IsStandardErrorRedirected&quot;, $bindingFlags).GetValue($consoleHost, &#64;())
-      $field2 = $consoleHost.GetType().GetField(&quot;standardErrorWriter&quot;, $bindingFlags)
-      $field2.SetValue($consoleHost, [Console]::Error)
-    } catch {
-      Write-Output 'Unable to apply redirection fix.'
-    }
-  }
-}
-
-Fix-PowerShellOutputRedirectionBug
-
-# Attempt to set highest encryption available for SecurityProtocol.
-# PowerShell will not set this by default (until maybe .NET 4.6.x). This
-# will typically produce a message for PowerShell v2 (just an info
-# message though)
-try {
-  # Set TLS 1.2 (3072), then TLS 1.1 (768), then TLS 1.0 (192), finally SSL 3.0 (48)
-  # Use integers because the enumeration values for TLS 1.2 and TLS 1.1 won't
-  # exist in .NET 4.0, even though they are addressable if .NET 4.5+ is
-  # installed (.NET 4.5 is an in-place upgrade).
-  [System.Net.ServicePointManager]::SecurityProtocol = 3072 -bor 768 -bor 192 -bor 48
-} catch {
-  Write-Output 'Unable to set PowerShell to use TLS 1.2 and TLS 1.1 due to old .NET Framework installed. If you see underlying connection closed or trust errors, you may need to upgrade to .NET Framework 4.5+ and PowerShell v3+.'
-}
-
-function Get-Downloader {
-param (
-  [string]$url
- )
-  $downloader = new-object System.Net.WebClient
-
-  $defaultCreds = [System.Net.CredentialCache]::DefaultCredentials
-  if (Test-Path -Path variable:repoCreds) {
-    Write-Debug &quot;Using provided repository authentication credentials.&quot;
-    $downloader.Credentials = $repoCreds
-  } elseif ($defaultCreds -ne $null) {
-    Write-Debug &quot;Using default repository authentication credentials.&quot;
-    $downloader.Credentials = $defaultCreds
-  }
-
-  $ignoreProxy = $env:chocolateyIgnoreProxy
-  if ($ignoreProxy -ne $null -and $ignoreProxy -eq 'true') {
-    Write-Debug 'Explicitly bypassing proxy due to user environment variable.'
-    $downloader.Proxy = [System.Net.GlobalProxySelection]::GetEmptyWebProxy()
-  } else {
-    # check if a proxy is required
-    $explicitProxy = $env:chocolateyProxyLocation
-    $explicitProxyUser = $env:chocolateyProxyUser
-    $explicitProxyPassword = $env:chocolateyProxyPassword
-    if ($explicitProxy -ne $null -and $explicitProxy -ne '') {
-      # explicit proxy
-      $proxy = New-Object System.Net.WebProxy($explicitProxy, $true)
-      if ($explicitProxyPassword -ne $null -and $explicitProxyPassword -ne '') {
-        $passwd = ConvertTo-SecureString $explicitProxyPassword -AsPlainText -Force
-        $proxy.Credentials = New-Object System.Management.Automation.PSCredential ($explicitProxyUser, $passwd)
-      }
-
-      Write-Debug &quot;Using explicit proxy server '$explicitProxy'.&quot;
-      $downloader.Proxy = $proxy
-
-    } elseif (!$downloader.Proxy.IsBypassed($url)) {
-      # system proxy (pass through)
-      $creds = $defaultCreds
-      if ($creds -eq $null) {
-        Write-Debug 'Default credentials were null. Attempting backup method'
-        $cred = get-credential
-        $creds = $cred.GetNetworkCredential();
-      }
-
-      $proxyaddress = $downloader.Proxy.GetProxy($url).Authority
-      Write-Debug &quot;Using system proxy server '$proxyaddress'.&quot;
-      $proxy = New-Object System.Net.WebProxy($proxyaddress)
-      $proxy.Credentials = $creds
-      $downloader.Proxy = $proxy
-    }
-  }
-
-  return $downloader
-}
-
-function Download-File {
-param (
-  [string]$url,
-  [string]$file
- )
-  $downloader = Get-Downloader $url
-  $downloader.DownloadFile($url, $file)
-}
-
-function Download-Package {
-param (
-  [string]$packageODataSearchUrl,
-  [string]$file
- )
-  $downloader = Get-Downloader $packageODataSearchUrl
-
-  Write-Output &quot;Querying latest package from $packageODataSearchUrl&quot;
-  [xml]$pkg = $downloader.DownloadString($packageODataSearchUrl)
-  $packageDownloadUrl = $pkg.feed.entry.content.src
-
-  Write-Output &quot;Downloading $packageDownloadUrl to $file&quot;
-  $downloader.DownloadFile($packageDownloadUrl, $file)
-}
-
-function Install-ChocolateyFromPackage {
-param (
-  [string]$chocolateyPackageFilePath = ''
+<h3 id="setup.ps1">setup.ps1:</h3>
+<pre><code class="language-powershell">function Install-NeededFor {
+param(
+   [string] $packageName = ''
+  ,[bool] $defaultAnswer = $true
 )
+  if ($packageName -eq '') {return $false}
 
-  if ($chocolateyPackageFilePath -eq $null -or $chocolateyPackageFilePath -eq '') {
-    throw &quot;You must specify a local package to run the local install.&quot;
+  $yes = '6'
+  $no = '7'
+  $msgBoxTimeout='-1'
+  $defaultAnswerDisplay = 'Yes'
+  $buttonType = 0x4;
+  if (!$defaultAnswer) { $defaultAnswerDisplay = 'No'; $buttonType= 0x104;}
+
+  $answer = $msgBoxTimeout
+  try {
+    $timeout = 10
+    $question = &quot;Do you need to install $($packageName)? Defaults to `'$defaultAnswerDisplay`' after $timeout seconds&quot;
+    $msgBox = New-Object -ComObject WScript.Shell
+    $answer = $msgBox.Popup($question, $timeout, &quot;Install $packageName&quot;, $buttonType)
+  }
+  catch {
   }
 
-  if (!(Test-Path($chocolateyPackageFilePath))) {
-    throw &quot;No file exists at $chocolateyPackageFilePath&quot;
+  if ($answer -eq $yes -or ($answer -eq $msgBoxTimeout -and $defaultAnswer -eq $true)) {
+    write-host &quot;Installing $packageName&quot;
+    return $true
   }
 
-  $chocTempDir = Join-Path $env:TEMP &quot;chocolatey&quot;
-  $tempDir = Join-Path $chocTempDir &quot;chocInstall&quot;
-  if (![System.IO.Directory]::Exists($tempDir)) {[System.IO.Directory]::CreateDirectory($tempDir)}
-  $file = Join-Path $tempDir &quot;chocolatey.zip&quot;
-  Copy-Item $chocolateyPackageFilePath $file -Force
-
-  # unzip the package
-  Write-Output &quot;Extracting $file to $tempDir...&quot;
-  if ($unzipMethod -eq '7zip') {
-    $7zaExe = Join-Path $tempDir '7za.exe'
-    if (-Not (Test-Path ($7zaExe))) {
-      Write-Output 'Downloading 7-Zip commandline tool prior to extraction.'
-      # download 7zip
-      Download-File $7zipUrl &quot;$7zaExe&quot;
-    }
-
-    $params = &quot;x -o`&quot;$tempDir`&quot; -bd -y `&quot;$file`&quot;&quot;
-    # use more robust Process as compared to Start-Process -Wait (which doesn't
-    # wait for the process to finish in PowerShell v3)
-    $process = New-Object System.Diagnostics.Process
-    $process.StartInfo = New-Object System.Diagnostics.ProcessStartInfo($7zaExe, $params)
-    $process.StartInfo.RedirectStandardOutput = $true
-    $process.StartInfo.UseShellExecute = $false
-    $process.StartInfo.WindowStyle = [System.Diagnostics.ProcessWindowStyle]::Hidden
-    $process.Start() | Out-Null
-    $process.BeginOutputReadLine()
-    $process.WaitForExit()
-    $exitCode = $process.ExitCode
-    $process.Dispose()
-
-    $errorMessage = &quot;Unable to unzip package using 7zip. Perhaps try setting `$env:chocolateyUseWindowsCompression = 'true' and call install again. Error:&quot;
-    switch ($exitCode) {
-      0 { break }
-      1 { throw &quot;$errorMessage Some files could not be extracted&quot; }
-      2 { throw &quot;$errorMessage 7-Zip encountered a fatal error while extracting the files&quot; }
-      7 { throw &quot;$errorMessage 7-Zip command line error&quot; }
-      8 { throw &quot;$errorMessage 7-Zip out of memory&quot; }
-      255 { throw &quot;$errorMessage Extraction cancelled by the user&quot; }
-      default { throw &quot;$errorMessage 7-Zip signalled an unknown error (code $exitCode)&quot; }
-    }
-  } else {
-    if ($PSVersionTable.PSVersion.Major -lt 5) {
-      try {
-        $shellApplication = new-object -com shell.application
-        $zipPackage = $shellApplication.NameSpace($file)
-        $destinationFolder = $shellApplication.NameSpace($tempDir)
-        $destinationFolder.CopyHere($zipPackage.Items(),0x10)
-      } catch {
-        throw &quot;Unable to unzip package using built-in compression. Set `$env:chocolateyUseWindowsCompression = 'false' and call install again to use 7zip to unzip. Error: `n $_&quot;
-      }
-    } else {
-      Expand-Archive -Path &quot;$file&quot; -DestinationPath &quot;$tempDir&quot; -Force
-    }
-  }
-
-  # Call Chocolatey install
-  Write-Output 'Installing chocolatey on this machine'
-  $toolsFolder = Join-Path $tempDir &quot;tools&quot;
-  $chocInstallPS1 = Join-Path $toolsFolder &quot;chocolateyInstall.ps1&quot;
-
-  &amp; $chocInstallPS1
-
-  Write-Output 'Ensuring chocolatey commands are on the path'
-  $chocInstallVariableName = 'ChocolateyInstall'
-  $chocoPath = [Environment]::GetEnvironmentVariable($chocInstallVariableName)
-  if ($chocoPath -eq $null -or $chocoPath -eq '') {
-    $chocoPath = 'C:\ProgramData\Chocolatey'
-  }
-
-  $chocoExePath = Join-Path $chocoPath 'bin'
-
-  if ($($env:Path).ToLower().Contains($($chocoExePath).ToLower()) -eq $false) {
-    $env:Path = [Environment]::GetEnvironmentVariable('Path',[System.EnvironmentVariableTarget]::Machine);
-  }
-
-  Write-Output 'Ensuring chocolatey.nupkg is in the lib folder'
-  $chocoPkgDir = Join-Path $chocoPath 'lib\chocolatey'
-  $nupkg = Join-Path $chocoPkgDir 'chocolatey.nupkg'
-  if (!(Test-Path $nupkg)) {
-    Write-Output 'Copying chocolatey.nupkg is in the lib folder'
-    if (![System.IO.Directory]::Exists($chocoPkgDir)) { [System.IO.Directory]::CreateDirectory($chocoPkgDir); }
-    Copy-Item &quot;$file&quot; &quot;$nupkg&quot; -Force -ErrorAction SilentlyContinue
-  }
+  write-host &quot;Not installing $packageName&quot;
+  return $false
 }
 
-# Idempotence - do not install Chocolatey if it is already installed
-if (!(Test-Path $ChocoInstallPath)) {
-  # download the package to the local path
-  if (!(Test-Path $localChocolateyPackageFilePath)) {
-    Download-Package $searchUrl $localChocolateyPackageFilePath
-  }
 
-  # Install Chocolatey
-  Install-ChocolateyFromPackage $localChocolateyPackageFilePath
+# Install Chocolatey
+if (Install-NeededFor 'chocolatey') {
+  [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 }
+
+# install nuget, ruby.devkit, and ruby if they are missing
+cinst nuget.commandline
+
+if (Install-NeededFor 'ruby / ruby devkit') {
+  cinst ruby.devkit
+  cinst ruby --version 1.9.3.54500
+}
+
+# perform ruby updates and get gems
+gem update --system
+gem install rake
+gem install bundler
+
+# restore the nuget packages
+$nugetConfigs = Get-ChildItem '.\\' -Recurse | ?{$_.name -match &quot;packages\\.config&quot;} | select
+foreach ($nugetConfig in $nugetConfigs) {
+  Write-Host &quot;restoring packages from $($nugetConfig.FullName)&quot;
+  nuget install $($nugetConfig.FullName) /OutputDirectory packages
+}
+
+rake
 
 </code></pre>
-<h3 id="install-with-puppet">Install with Puppet</h3>
-<p><strong>NOTE</strong>: If you have the licensed edition, see <a href="../licensed-extension/installation-licensed#set-up-licensed-edition-with-puppet">Setting up Licensed Edition with Puppet</a> instead. This only additionally contains some package examples and setting up tab completion.</p>
-<p>Here's an example of setting Chocolatey up with Puppet that sets up and configures Chocolatey, sets up an internal package repository, and shows setting up the licensed edition and ensuring some packages.</p>
-<ul>
-<li>Download the chocolatey.nupkg from the community repository - <a href="https://chocolatey.org/api/v2/package/chocolatey">download the latest chocolatey nupkg</a> or see <a href="#completely-offline-install">Completely offline install</a> to get an older version.</li>
-<li>Optionally download the chocolatey.server package from the community repository - <a href="https://chocolatey.org/api/v2/package/chocolatey.server">download the latest chocolatey.server nupkg</a>.</li>
-<li>Use <code>choco push</code> to push those items to your internal package repository (e.g. <code>choco push chocolatey.0.10.7.nupkg -s http://internal_repo/ -k abc123</code>)</li>
-<li>Determine how to get the bare url to download the Chocolatey.Nupkg directly. You will need that for the internal url for installing Chocolatey offline. For the community repository, it is <a href="https://chocolatey.org/api/v2/package/chocolatey">https://chocolatey.org/api/v2/package/chocolatey</a></li>
-</ul>
-<pre><code class="language-puppet"># Requires puppetlabs/chocolatey module
-# See https://forge.puppet.com/puppetlabs/chocolatey
-
-## Set resource defaults for `package` resources on Windows to use the Chocolatey provider
-case $operatingsystem {
-  'windows':    {
-    Package {
-      provider =&gt; chocolatey,
-    }
-  }
-}
-
-## - Ensure Chocolatey Install -
-#include chocolatey
-## OR
-## Download chocolatey.nupkg to your internal repository (see above
-##  about getting the package for offline use)
-## Note: `chocolatey_download_url is completely different than normal
-##  source locations. This is directly to the bare download url for the
-##  chocolatey.nupkg, similar to what you see when you browse to
-##  https://chocolatey.org/api/v2/package/chocolatey
-class {'chocolatey':
-  chocolatey_download_url =&gt; 'https://&lt;internalurl/to&gt;/chocolatey.nupkg',
-  use_7zip                =&gt; false,
-}
-
-## If you need FIPS compliance
-## make this the first thing you configure before you do any additional
-## configuration or package installations
-#chocolateyfeature {'useFipsCompliantChecksums':
-#  ensure =&gt; enabled,
-#}
-
-## Keep chocolatey up to date based on your internal source
-## You control the upgrades based on when you push an updated version
-##  to your internal repository.
-## Note the source here is to the OData feed, similar to what you see
-##  when you browse to https://chocolatey.org/api/v2
-package {'chocolatey':
-  ensure   =&gt; latest,
-  provider =&gt; chocolatey,
-  source   =&gt; 'https://&lt;internal_repo&gt;/chocolatey',
-}
-
-
-## - Configure Chocolatey -
-### Config Settings
-
-## Move cache location so Chocolatey is very deterministic about
-## cleaning up temporary data
-chocolateyconfig {'cacheLocation':
-  value =&gt; 'c:\ProgramData\choco-cache',
-}
-
-## Increase timeout to 4 hours
-chocolateyconfig {'commandExecutionTimeoutSeconds':
-  value =&gt; '14400',
-}
-
-### Sources
-## Remove the default community package repository source
-chocolateysource {'chocolatey':
-  ensure   =&gt; absent,
-  location =&gt; 'https://chocolatey.org/api/v2/',
-}
-
-## Add default sources for your internal repositories
-chocolateysource {'internal_chocolatey':
-  ensure   =&gt; present,
-  location =&gt; 'http://internal_location/OData/endpoint',
-  priority =&gt; 1,
-  username =&gt; 'optional',
-  password =&gt; 'optional,not ensured',
-}
-
-### Features
-chocolateyfeature {'checksumFiles':
-  ensure =&gt; enabled,
-}
-
-## When using Puppet for installs
-chocolateyfeature {'showDownloadProgress':
-  ensure =&gt; disabled,
-}
-
-chocolateyfeature {'useRememberedArgumentsForUpgrades':
-  ensure =&gt; enabled,
-}
-
-
-## - Chocolatey Simple Server Package Repository -
-## Requires chocolatey/chocolatey_server module  - see
-##  https://forge.puppet.com/chocolatey/chocolatey_server
-## this contains the bits to install the custom server
-## - Ensures IIS and Ensure ASP.NET
-## - Installs and configures the Chocolatey.Server website and app pool
-## - Sets permissions appropriately
-
-#include chocolatey_server
-## OR
-## `server_package_source` is to the OData feed, similar to what you see
-##  when you browse to https://chocolatey.org/api/v2
-class {'chocolatey_server':
-  server_package_source =&gt; 'https://internalurl/odata/server',
-}
-
-chocolateysource {'local_chocolatey_server':
-  ensure   =&gt; present,
-  location =&gt; 'http://localhost/chocolatey',
-  priority =&gt; 2,
-}
-
-
-## - Tab Completion -
-## Ensure that when someone uses choco from powershell.exe, they have tab completion
-file {'C:/Users/Administrator/Documents/WindowsPowerShell':
-  ensure =&gt; directory,
-}
-
-file {'C:/Users/Administrator/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1':
-  ensure =&gt; file,
-  content =&gt; '$ChocolateyProfile = &quot;$env:ChocolateyInstall\helpers\chocolateyProfile.psm1&quot;
-if (Test-Path($ChocolateyProfile)) {
-  Import-Module &quot;$ChocolateyProfile&quot;
-}',
-}
-
-
-## - Package Examples -
-package {'roundhouse':
-  ensure   =&gt; '0.8.5.0',
-}
-
-package {'git':
-  ensure =&gt; latest,
-}
-
-## see https://forge.puppet.com/puppetlabs/chocolatey#install-options-with-spaces
-package {'launchy':
-  ensure          =&gt; installed,
-  install_options =&gt; ['--override', '--installArgs','&quot;', '/VERYSILENT','/NORESTART','&quot;'],
-}
-
-package {['virustotaluploader',
-          'googlechrome',
-          'notepadplusplus',
-          '7zip',
-          'ruby',
-          'charles',
-          'grepwin',
-          'stexbar',
-          'inkscape',
-          'gitextensions',
-          'pandoc',
-          'snagit',
-          'nodejs',
-          ]:
-  ensure =&gt; latest,
-  source =&gt; 'https://chocolatey.org/api/v2/',
-}
-
-package {'screentogif':
-  ensure =&gt; '2.2.160907',
-  source =&gt; 'https://chocolatey.org/api/v2/',
-}
-
-package {'dotnet4.5.2':
-  ensure =&gt; latest,
-}
-</code></pre>
-<h3 id="install-using-powershell-from-cmd.exe">Install using PowerShell from cmd.exe</h3>
-<p>This is the best method if you want to repeat it or include it in source control. It requires no change to your existing PowerShell to allow for remote unsigned scripts.</p>
-<p>Create a file named <code>installChocolatey.cmd</code> with the following:</p>
+<h3 id="setup.cmd">setup.cmd:</h3>
 <pre><code>&#64;echo off
-
 SET DIR=%~dp0%
-
-::download install.ps1
-%systemroot%\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command &quot;((new-object net.webclient).DownloadFile('https://chocolatey.org/install.ps1','%DIR%install.ps1'))&quot;
-::run installer
-%systemroot%\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command &quot;&amp; '%DIR%install.ps1' %*&quot;
-</code></pre>
-<p>You can also get to this file by going to <a href="https://chocolatey.org/installchocolatey.cmd">https://chocolatey.org/installchocolatey.cmd</a>.</p>
-<p>If you prefer to have the install.ps1 file already, comment out the download line in the batch file and download the <a href="https://chocolatey.org/install.ps1"><code>install.ps1</code></a> from <a href="https://chocolatey.org/install.ps1">chocolatey.org</a> and save it as <code>install.ps1</code> next to the <code>installChocolatey.cmd</code> file.</p>
-<p>Run <code>installChocolatey.cmd</code> from an elevated <code>cmd.exe</code> command prompt and it will install the latest version of Chocolatey. You can not run this from <code>powershell.exe</code> without making changes to your execution policy.</p>
-<p><strong>NOTE</strong>: To create and save a <code>.cmd</code> file, please use a text editor and nothing fancy like Microsoft Word or OneNote.</p>
-<h3 id="install-using-nuget-package-manager">Install using NuGet Package Manager</h3>
-<p>When you have Visual Studio 2010+ and the NuGet extension installed (pre-installed on any newer versions of Visual Studio), you can simply type the following three commands and you will have Chocolatey installed on your machine.</p>
-<p><code>Install-Package chocolatey</code>
-<code>Initialize-Chocolatey</code>
-<code>Uninstall-Package chocolatey</code></p>
-<h3 id="install-using-nuget.exe-from-powershell">Install using NuGet.exe from PowerShell</h3>
-<p>You can also use NuGet command line to download Chocolatey:</p>
-<p><code>nuget install chocolatey</code> or <code>nuget install chocolatey -pre</code></p>
-<p>Once you download it, open PowerShell (remote unsigned), navigate to the tools folder and run:</p>
-<p><code>&amp; .\chocolateyInstall.ps1</code></p>
-<h3 id="install-downloaded-nuget-package-from-powershell">Install downloaded NuGet package from PowerShell</h3>
-<p>You can also just download and unzip the Chocolatey package (<code>.nupkg</code> is a fancy zip file):</p>
-<ol>
-<li>Download the <a href="https://chocolatey.org/api/v2/package/chocolatey/">Chocolatey package</a>.</li>
-<li>Ensure the downloaded nupkg is not blocked.</li>
-<li>Unzip it using any application that supports <code>zip</code> format.</li>
-<li>Open a PowerShell command shell and navigate into the unzipped package's tools folder.</li>
-<li><strong>NOTE</strong>: Ensure PowerShell execution policy is set to at least bypass or remote signed (if you have issues, you may need to set it to Unrestricted).</li>
-<li>Call <code>&amp; .\chocolateyInstall.ps1</code> to allow Chocolatey to install.</li>
-<li><strong>NOTE</strong>: This will not set Chocolatey as an installed package, so it may be a good idea to also call <code>choco upgrade chocolatey -y</code> and let it reinstall the same version, but at least it will be available for upgrades then.</li>
-</ol>
-<h3 id="install-licensed-edition">Install licensed edition</h3>
-<p>Please see <a href="../licensed-extension/installation-licensed">installation of licensed edition</a>.</p>
-<h3 id="installing-behind-a-proxy">Installing behind a proxy</h3>
-<p>Have a proxy? Try</p>
-<ul>
-<li>Cmd.exe:</li>
-</ul>
-<pre><code class="language-sh">
-&#64;powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;[System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))&quot; &amp;&amp; SET PATH=&quot;%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&quot;
+&#64;PowerShell -NoProfile -ExecutionPolicy unrestricted -Command &quot;&amp; '%DIR%setup.ps1' %*&quot;
+pause
 
 </code></pre>
-<ul>
-<li>PowerShell.exe (Ensure <a href="https://go.microsoft.com/fwlink/?LinkID=135170">Get-ExecutionPolicy</a> is at least RemoteSigned):</li>
-</ul>
-<pre><code class="language-powershell">
-[System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-
-</code></pre>
-<h3 id="installing-behind-an-explicit-proxy">Installing behind an explicit proxy</h3>
-<p>See <a href="../guides/using/proxy-settings-for-chocolatey#installing-chocolatey-behind-a-proxy-server">Installing Chocolatey Behind a Proxy Server</a></p>
-<h3 id="installing-to-a-different-location">Installing to a different location</h3>
-<ol>
-<li>Create a <strong>machine</strong> level (<strong>user</strong> level will also work) environment variable named <code>ChocolateyInstall</code> and set it to the folder you want Chocolatey to install to prior to installation (this environment variable must be set globally or available to PowerShell- it is not enough to simply make it available to your current command prompt session).</li>
-<li>Don't use <code>&quot;C:\Chocolatey&quot;</code> unless necessary.</li>
-<li>Create the folder manually.</li>
-<li>If you have already installed (and want to change the location after the fact):</li>
-</ol>
-<ul>
-<li>Follow the above steps.</li>
-<li>Install Chocolatey again.</li>
-<li>Copy/Move over the items from the old lib/bin directory.</li>
-<li>Delete your old install directory.</li>
-</ul>
-<p><strong>NOTE</strong>: There is one really important consideration when installing Chocolatey to a non-default location: Chocolatey only locks down the permissions to Admins when installed to the default location <code>%PROGRAMDATA%\Chocolatey</code>, which means the same thing as <code>%SystemDrive%\ProgramData\Chocolatey</code>.
-If you are installing to another location, you will need to handle this yourself, i. e. restrict write access to Admins in case you so desire.
-This is due to alternative locations could have a range of permissions that should not be changed.
-See <a href="../default-chocolatey-install-reasoning">Why does Chocolatey install where it does</a> and <a href="https://github.com/chocolatey/choco/issues/398">GitHub Issue 398</a> for more details.</p>
-<h3 id="installing-a-particular-version-of-chocolatey">Installing a particular version of Chocolatey</h3>
-<p>Set the following environment variable prior to install:</p>
-<ul>
-<li><code>chocolateyVersion</code> - controls what version of Chocolatey is installed</li>
-</ul>
-<p>In PowerShell, it looks like this:</p>
-<pre><code class="language-powershell">$env:chocolateyVersion = '0.9.9.12'
-# install script
-</code></pre>
-<p><strong>NOTE:</strong> This will only work with the installation methods that call <a href="https://chocolatey.org/install.ps1">https://chocolatey.org/install.ps1</a> as part of the install.</p>
-<h3 id="use-windows-built-in-compression-instead-of-downloading-7zip">Use Windows built-in compression instead of downloading 7zip</h3>
-<p>Set the following environment variable prior to install:</p>
-<ul>
-<li><code>chocolateyUseWindowsCompression</code> - this will bypass the download and use of 7zip.</li>
-</ul>
-<p>In PowerShell, it looks like this:</p>
-<pre><code class="language-powershell">$env:chocolateyUseWindowsCompression = 'true'
-# install script
-</code></pre>
-<p><strong>NOTE:</strong> This will only work with the installation methods that call <a href="https://chocolatey.org/install.ps1">https://chocolatey.org/install.ps1</a> as part of the install.</p>
-<h3 id="installing-with-restricted-tls">Installing with restricted TLS</h3>
-<p><strong>NOTE:</strong> Chocolatey.org now requires TLS 1.2 at a minimum. Please see <a href="https://chocolatey.org/blog/remove-support-for-old-tls-versions">https://chocolatey.org/blog/remove-support-for-old-tls-versions</a>.</p>
-<p><strong>NOTE:</strong> If your server is restricted to TLS 1.1+, you need to add additional logic to be able to download and install Chocolatey (this is not necessary when running Chocolatey normally as it does this automatically).</p>
-<p><strong>NOTE:</strong> If this is for organizational use, you should consider hosting the Chocolatey package internally and installing from there.</p>
-<p>If you see an error that looks similar to the following:</p>
-<pre><code class="language-sh">Exception calling &quot;DownloadString&quot; with &quot;1&quot; argument(s): &quot;The underlying connection was closed: An unexpected error
-occurred on a receive.&quot;
-At line:1 char:1
-+ iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/in ...
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
-    + FullyQualifiedErrorId : WebException
-</code></pre>
-<p>OR:</p>
-<pre><code class="language-sh">Exception calling &quot;DownloadString&quot; with &quot;1&quot; argument(s): &quot;The request was aborted: Could not create SSL/TLS secure
-channel.&quot;
-At line:1 char:51
-+ ... ess -Force; iex ((New-Object System.Net.WebClient).DownloadString('ht ...
-+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
-    + FullyQualifiedErrorId : WebException
-</code></pre>
-<p>It's possible that you are attempting to install from a server that needs to use TLS 1.1 or TLS 1.2 (has restricted the use of TLS 1.0 and SSL v3), you have some options. Chocolatey.org now requires TLS 1.2 at a minimum.</p>
-<h4 id="option-1-host-internally">Option 1 - Host Internally</h4>
-<p>If you are an organization, this is your best option and it reduces issues with rate limiting that could occur later.</p>
-<p>See <a href="https://chocolatey.org/install#organization">https://chocolatey.org/install#organization</a> for details.</p>
-<h4 id="option-2-updated-powershell-and.net">Option 2 - Updated PowerShell and .NET</h4>
-<p>Upgrade to the following:</p>
-<ul>
-<li>PowerShell v3+</li>
-<li>.NET Framework 4.5</li>
-</ul>
+<p>The original is <a href="https://gist.github.com/1107920">on github</a>.</p>
+<h2 id="getting-the-source">Getting the Source</h2>
+<p>Create a package for your project and call it projectname*.dev*.  It should take a nuspec dependency on whatever source control you use. So in the case of git, a dependency on msysgit.
+Now, in <a href="../../chocolatey-install-ps1">chocolateyInstall.ps1</a>, you just need something like the following:</p>
 <pre><code class="language-powershell">try {
-  # Set TLS 1.2 (3072) as that is the minimum required by Chocolatey.org
-  # Use integers because the enumeration value for TLS 1.2 won't exist
-  # in .NET 4.0, even though they are addressable if .NET 4.5+ is
-  # installed (.NET 4.5 is an in-place upgrade).
-  [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
+
+  $dirSelected = Read-Host &quot;Please tell me the directory where you want to clone dropkick. Press enter to use .\\dropkick&quot;
+
+  if ($dirSelected -eq '') {$dirSelected = '.\\dropkick'}
+
+  git clone git://github.com/chucknorris/dropkick.git $dirSelected
+
+  Start-Sleep 6
 } catch {
-  Write-Warning 'Unable to set PowerShell to use TLS 1.2. This is required for contacting Chocolatey as of 03 FEB 2020. https://chocolatey.org/blog/remove-support-for-old-tls-versions. If you see underlying connection closed or trust errors, you may need to do one or more of the following: (1) upgrade to .NET Framework 4.5+ and PowerShell v3+, (2) Call [System.Net.ServicePointManager]::SecurityProtocol = 3072; in PowerShell prior to attempting installation, (3) specify internal Chocolatey package location (set $env:chocolateyDownloadUrl prior to install or host the package internally), (4) use the Download + PowerShell method of install. See https://docs.chocolatey.org/en-us/choco/installation for all install options.'
+&#64;&quot;
+Error Occurred: $($_.Exception.Message)
+&quot;&#64; | Write-Host -ForegroundColor White -BackgroundColor DarkRed
+	Start-Sleep 8
+	throw
+}
+</code></pre>
+<p>The above is from <a href="https://github.com/ferventcoder/chocolatey-packages/blob/master/manual/dropkick.dev/tools/chocolateyInstall.ps1">DropkicK.Dev</a></p>
+<h2 id="setup-a-full-environment-including-visual-studio-express-iis-express-and-sql-server-express-with-management-studio">Setup A Full Environment Including Visual Studio Express, IIS Express and SQL Server Express (with Management Studio)</h2>
+<p>The original <a href="https://gist.github.com/3825023">gist</a></p>
+<pre><code class="language-powershell">$scriptDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
+
+function Install-NeededFor {
+param(
+   [string] $packageName = ''
+  ,[bool] $defaultAnswer = $true
+)
+  if ($packageName -eq '') {return $false}
+
+  $yes = '6'
+  $no = '7'
+  $msgBoxTimeout='-1'
+  $defaultAnswerDisplay = 'Yes'
+  $buttonType = 0x4;
+  if (!$defaultAnswer) { $defaultAnswerDisplay = 'No'; $buttonType= 0x104;}
+
+  $answer = $msgBoxTimeout
+  try {
+    $timeout = 10
+    $question = &quot;Do you need to install $($packageName)? Defaults to `'$defaultAnswerDisplay`' after $timeout seconds&quot;
+    $msgBox = New-Object -ComObject WScript.Shell
+    $answer = $msgBox.Popup($question, $timeout, &quot;Install $packageName&quot;, $buttonType)
+  }
+  catch {
+  }
+
+  if ($answer -eq $yes -or ($answer -eq $msgBoxTimeout -and $defaultAnswer -eq $true)) {
+    write-host &quot;Installing $packageName&quot;
+    return $true
+  }
+
+  write-host &quot;Not installing $packageName&quot;
+  return $false
 }
 
-iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-</code></pre>
-<h4 id="option-3-manual">Option 3 - Manual</h4>
-<p>You need to download and unzip the Chocolatey package, then call the PowerShell install script from there. See the <a href="#download--powershell-method">Download + PowerShell Method</a> section below.</p>
-<h3 id="non-administrative-install">Non-Administrative install</h3>
-<p><strong>NOTE</strong>: This option should be a last resort and is considered to be a more advanced scenario - most things you do on Windows require administrative rights, especially surrounding software management, so you are going to be limited even in packages you attempt to install. If you are using the <a href="https://chocolatey.org/packages">community package repository</a>, there are over 200 packages you can install from the community repository without administrative permission - see <a href="https://chocolatey.org/packages?q=id%3Aportable+tag%3Aportable">https://chocolatey.org/packages?q=id%3Aportable+tag%3Aportable</a>.</p>
-<p>You must choose a different location than the default (see <a href="#installing-to-a-different-location">Installing to a different location</a> above). The default is a more secure location that only administrators can update.</p>
-<ol>
-<li>Save the script below as <code>ChocolateyInstallNonAdmin.ps1</code>.</li>
-<li>Use the script below, determine where you might want Chocolatey installed if it is not to <code>C:\ProgramData\chocoportable</code>.</li>
-<li>Open PowerShell.exe.</li>
-<li>Run the following <code>Set-ExecutionPolicy Bypass -Scope Process -Force;</code></li>
-<li>Run <code>.\ChocolateyInstallNonAdmin.ps1</code>.</li>
-</ol>
-<p>ChocolateyInstallNonAdmin.ps1:</p>
-<pre><code class="language-powershell"># Set directory for installation - Chocolatey does not lock
-# down the directory if not the default
-$InstallDir='C:\ProgramData\chocoportable'
-$env:ChocolateyInstall=&quot;$InstallDir&quot;
+# Install Chocolatey
+if (Install-NeededFor 'chocolatey') {
+  [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+}
 
-# If your PowerShell Execution policy is restrictive, you may
-# not be able to get around that. Try setting your session to
-# Bypass.
-Set-ExecutionPolicy Bypass -Scope Process -Force;
+if (Install-NeededFor 'autosave') {
+  cinstm nodejs.install
+  $nodePath = Join-Path $env:programfiles 'nodejs'
+   $is64bit = (Get-WmiObject Win32_Processor).AddressWidth -eq 64
+  if ($is64bit) {$nodePath = Join-Path ${env:ProgramFiles(x86)} 'nodejs'}
+  $env:Path = &quot;$($env:Path);$nodePath&quot;
+  npm install -g autosave
 
-# All install options - offline, proxy, etc at
-# https://chocolatey.org/install
-iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-</code></pre>
-<p>Examples of packages you can install:</p>
-<pre><code class="language-powershell">choco install puppet-agent.portable -y
-choco install ruby.portable -y
-choco install git.commandline -y
+  Write-Host 'You still need to enable experimental packages in Chrome and install the Chrome Extension'
+  Write-Host 'Details at https://github.com/NV/chrome-devtools-autosave#readme'
+}
 
-# pick an editor
-#choco install visualstudiocode.portable -y # not yet available
-choco install notepadplusplus.commandline -y
-#choco install nano -y
-#choco install vim-tux.portable
+Write-Host &quot;Grabbing required frameworks&quot;
+cinst netframework2 -source webpi
+cinst NETFramework35 -source webpi
+cinst NETFramework4 -source webpi
+cinst NETFramework4Update402 -source webpi
+cinst NETFramework4Update402_KB2544514_Only -source webpi
+cinst WindowsInstaller31 -source webpi
+cinst WindowsInstaller45 -source webpi
 
-# What else can I install without admin rights?
-# https://chocolatey.org/packages?q=id%3Aportable
+cinst roundhouse -pre
+
+Write-Host &quot;Checking for/installing SQLServer Express and Management Studio...&quot;
+cinst SQLManagementStudio -source webpi
+cinst SQLExpressTools -source webpi
+Write-Warning &quot;You will need to supply a password on the screen that is minimized&quot;
+cinst SQLExpress -source webpi
+Write-Host &quot;Finished checking for/install SQLServer Express and Management Studio&quot;
+
+Write-Host &quot;Checking for/installing Visual Studio Items...&quot;
+if (Install-NeededFor 'VS2010 Express &amp; SP1' $false) {
+ cinst VWD_RTW -source webpi
+ cinst VWD2010SP1AzurePack -source webpi
+}
+
+if (Install-NeededFor 'VS2010 Full Edition SP1') {
+ cinst VS2010SP1Pack -source webpi
+}
+
+cinst MVC3 -source webpi
+cinst MVC3Loc -source webpi
+Write-Host &quot;Finished checking for/installing Visual Studio Items.&quot;
+
+if (Install-NeededFor 'database' $false) {
+  &amp; .\build.bat
+  $sqlFiles = Join-Path $scriptDir 'code_drop\ProjectName.Database\ProjectName'
+  $dbServer = Read-Host &quot;Please tell me the server\instance location of the database (i.e. '(local)'). Press enter to use .\SQLEXPRESS&quot;
+  if ($dbServer -eq '') {$dbServer = '.\SQLEXPRESS'}
+  &amp; rh /d ProjectName /s $dbServer /f $sqlFiles /silent
+}
+
+if (Install-NeededFor 'IIS' $false) {
+  cinst ASPNET -source webpi
+  cinst ASPNET_REGIIS -source webpi
+  cinst DefaultDocument -source webpi
+  cinst DynamicContentCompression -source webpi
+  cinst HTTPRedirection -source webpi
+  cinst IIS7_ExtensionLessURLs -source webpi
+  cinst IISExpress -source webpi
+  cinst IISExpress_7_5 -source webpi
+  cinst IISManagementConsole -source webpi
+  cinst ISAPIExtensions -source webpi
+  cinst ISAPIFilters -source webpi
+  cinst NETExtensibility -source webpi
+  cinst RequestFiltering -source webpi
+  cinst StaticContent -source webpi
+  cinst StaticContentCompression -source webpi
+  cinst UrlRewrite2 -source webpi
+  cinst WindowsAuthentication -source webpi
+}
+
+$projectName = 'ProjectName'
+$srcDir = Join-Path $scriptDir &quot;src\$($projectName).Web&quot;
+if (Install-NeededFor 'website' $false) {
+  $networkSvc = 'NT AUTHORITY\NETWORK SERVICE'
+  Write-Host &quot;Setting folder permissions on `'$srcDir`' to 'Read' for user $networkSvc&quot;
+  $acl = Get-Acl $srcDir
+  $acl.SetAccessRuleProtection($True, $True)
+  $rule = New-Object System.Security.AccessControl.FileSystemAccessRule(&quot;$networkSvc&quot;,&quot;Read&quot;, &quot;ContainerInherit, ObjectInherit&quot;, &quot;None&quot;, &quot;Allow&quot;);
+  $acl.AddAccessRule($rule);
+  Set-Acl $srcDir $acl
+
+  Import-Module WebAdministration
+  $appPoolPath = &quot;IIS:\AppPools\$projectName&quot;
+  #$pool = new-object
+  Write-Warning &quot;You can safely ignore the next error if it occurs related to getting an app pool that doesn't exist&quot;
+  $pool = Get-Item $appPoolPath
+  if ($pool -eq $null) {
+    Write-Host &quot;Creating the app pool `'$appPoolPath`'&quot;
+    $pool = New-Item $appPoolPath
+  }
+
+  $pool.processModel.identityType = &quot;NetworkService&quot;
+  $pool | Set-Item
+  Set-itemproperty $appPoolPath -Name &quot;managedRuntimeVersion&quot; -Value &quot;v4.0&quot;
+  #Set-itemproperty $appPoolPath -Name &quot;managedPipelineMode&quot; -Value &quot;Integrated&quot;
+  Start-WebAppPool &quot;$projectName&quot;
+  Write-Host &quot;Creating the site `'$projectName`' with appPool `'$projectName`'&quot;
+  New-WebApplication &quot;$projectName&quot; -Site &quot;Default Web Site&quot; -PhysicalPath $srcDir -ApplicationPool &quot;$projectName&quot; -Force
+
+  Write-Host 'You still need to open Visual Studio and build the application one time prior to going to the site in a browser.'
+}
+
+Write-Host &quot;If you have made it here without errors, you should be setup and ready to hack on the apps.&quot;
+Write-Warning &quot;If you see any failures happen, you may want to reboot and continue to let installers catch up. This script is idempotent and will only apply changes that have not yet been applied.&quot;
 </code></pre>
-<p>If you prefer or need cmd.exe example, please see <a href="https://gist.github.com/ferventcoder/78fa6b6f4d6e2b12c89680cbc0daec78">https://gist.github.com/ferventcoder/78fa6b6f4d6e2b12c89680cbc0daec78</a></p>
-</div>
-<h2 id="upgrading-chocolatey">Upgrading Chocolatey</h2>
-<p>Once installed, Chocolatey can be upgraded in exactly the same way as any other package that has been installed using Chocolatey.  Simply use the command to upgrade to the latest stable release of Chocolatey:</p>
-<pre><code>choco upgrade chocolatey
-</code></pre>
-<h2 id="uninstalling-chocolatey">Uninstalling Chocolatey</h2>
-<p>See <a href="./uninstallation">uninstall</a>.</p>
-<h2 id="faqs">FAQs</h2>
-<h3 id="im-having-trouble-installing-chocolatey">I'm having trouble installing Chocolatey</h3>
-<p>Make sure you've reviewed <a class="btn-collapse-target" href="#more-install-options" data-href="#moreInstallOptions">More Install Options</a> and looked over <a href="../troubleshooting">Troubleshooting</a>. If you've done those things, reach out over the mailing list or over the chat (Gitter). The links to those can be found in the open source section of <a href="https://chocolatey.org/support">https://chocolatey.org/support</a>.</p>
-<h3 id="im-getting-a-403-attempting-to-install">I'm getting a 403 attempting to install</h3>
-<p>This is addressed in <a href="../troubleshooting">Troubleshooting</a>.</p>
-<h3 id="why-isnt-there-an-msi">Why isn't there an MSI?</h3>
-<p><strong>tl;dr</strong> - Chocolatey installs as a nupkg like everything else, a PowerShell install script just ensures that.</p>
-<p>Chocolatey was born out of providing automation for Windows and doing that with packages, packages that could surround an installer but didn't necessarily need to. The Chocolatey install scripts use the Chocolatey package (a nupkg file itself) to be installed and upgraded as just another package. This means Chocolatey is &quot;eating its own dogfood&quot; and it is unlikely we'd offer it as an MSI (native installer)as it would fly a bit in the face of what Chocolatey represents (although it is something that we would not rule out).</p>
-<p>The installation actually ensures a couple of things:</p>
-<ul>
-<li><p>PowerShell is installed and is set up properly.</p>
-<p>PowerShell is a requirement for using Chocolatey, not just for install. It is what drives the package installation process in most cases. Every package can have binaries and/or installation/uninstallation scripts (written in PowerShell). Chocolatey is the framework and each package gets to define how it is installed, upgraded, and uninstalled. It's an extremely flexible framework that has been proven to meet the insanity that is the Windows software installation ecosystem. That flexibility would not be easily achieved without PowerShell.</p>
-<p>We do recognize there are a few organizations that disable PowerShell, so it's very likely in the future our <a href="https://chocolatey.org/compare">Business Edition</a> will meet that need. PowerShell is a staple of Windows automation, so it is not the norm for an organization in this day and age to disable PowerShell.</p>
-<p>Having an install process that uses PowerShell helps you determine quickly if Chocolatey will be able to be used in your environment.</p>
-</li>
-<li><p>You are open to doing things in a slightly different way, e.g. working with packages as opposed to installers.</p>
-<p>You are open to the concept of using packages. Some folks might say this means we are asking folks to learn to 'do things &quot;our way&quot; because we know better'. It's less about &quot;knowing better&quot; and more about learning that Chocolatey does things in a slightly different way. It does that because the world of software is not just installers. Software goes beyond Programs and Features and a system that can track all of that also needs to as well. Package management is not a new concept in the world of software, perhaps just newer to Windows. If folks are not open to that, then they are probably not going to be open to Chocolatey. And that's completely fine. Chocolatey is not for everyone. We may eventually get to more of a masses approach. Right now we are targeting a specific type of audience - those that are looking for better ways to manage software on Windows and open to looking for the best process of doing that.</p>
-</li>
-</ul>
-<p>&nbsp;</p>
 
                              
                         </div>
@@ -1615,38 +1106,14 @@ choco install notepadplusplus.commandline -y
                                         <div class="card card-body py-0 px-xl-0 mb-3">
                                             <p class="font-weight-bold pt-3">On This Page</p>
                                             <ul class="list-unstyled py-3">
-                                                    <li class="level-2"><a href="#requirements">Requirements</a></li>
-                                                    <li class="level-2"><a href="#installing-chocolatey">Installing Chocolatey</a></li>
-                                                    <li class="level-4"><a href="#install-with-cmd.exe">Install with cmd.exe</a></li>
-                                                    <li class="level-4"><a href="#install-with-powershell.exe">Install with PowerShell.exe</a></li>
-                                                    <li class="level-4"><a href="#additional-considerations">Additional considerations</a></li>
-                                                    <li class="level-2"><a href="#more-install-options">More Install Options</a></li>
-                                                    <li class="level-3"><a href="#install-from-powershell-v3">Install from PowerShell v3&#x2B;</a></li>
-                                                    <li class="level-3"><a href="#completely-offline-install">Completely offline install</a></li>
-                                                    <li class="level-3"><a href="#install-with-puppet">Install with Puppet</a></li>
-                                                    <li class="level-3"><a href="#install-using-powershell-from-cmd.exe">Install using PowerShell from cmd.exe</a></li>
-                                                    <li class="level-3"><a href="#install-using-nuget-package-manager">Install using NuGet Package Manager</a></li>
-                                                    <li class="level-3"><a href="#install-using-nuget.exe-from-powershell">Install using NuGet.exe from PowerShell</a></li>
-                                                    <li class="level-3"><a href="#install-downloaded-nuget-package-from-powershell">Install downloaded NuGet package from PowerShell</a></li>
-                                                    <li class="level-3"><a href="#install-licensed-edition">Install licensed edition</a></li>
-                                                    <li class="level-3"><a href="#installing-behind-a-proxy">Installing behind a proxy</a></li>
-                                                    <li class="level-3"><a href="#installing-behind-an-explicit-proxy">Installing behind an explicit proxy</a></li>
-                                                    <li class="level-3"><a href="#installing-to-a-different-location">Installing to a different location</a></li>
-                                                    <li class="level-3"><a href="#installing-a-particular-version-of-chocolatey">Installing a particular version of Chocolatey</a></li>
-                                                    <li class="level-3"><a href="#use-windows-built-in-compression-instead-of-downloading-7zip">Use Windows built-in compression instead of downloading 7zip</a></li>
-                                                    <li class="level-3"><a href="#installing-with-restricted-tls">Installing with restricted TLS</a></li>
-                                                    <li class="level-4"><a href="#option-1-host-internally">Option 1 - Host Internally</a></li>
-                                                    <li class="level-4"><a href="#option-2-updated-powershell-and.net">Option 2 - Updated PowerShell and .NET</a></li>
-                                                    <li class="level-4"><a href="#option-3-manual">Option 3 - Manual</a></li>
-                                                    <li class="level-3"><a href="#non-administrative-install">Non-Administrative install</a></li>
-                                                    <li class="level-2"><a href="#upgrading-chocolatey">Upgrading Chocolatey</a></li>
-                                                    <li class="level-2"><a href="#uninstalling-chocolatey">Uninstalling Chocolatey</a></li>
-                                                    <li class="level-2"><a href="#faqs">FAQs</a></li>
-                                                    <li class="level-3"><a href="#im-having-trouble-installing-chocolatey">I&#x27;m having trouble installing Chocolatey</a></li>
-                                                    <li class="level-3"><a href="#im-getting-a-403-attempting-to-install">I&#x27;m getting a 403 attempting to install</a></li>
-                                                    <li class="level-3"><a href="#why-isnt-there-an-msi">Why isn&#x27;t there an MSI?</a></li>
+                                                    <li class="level-2"><a href="#set-up-a-development-environment-using-chocolatey">Set Up A Development Environment Using Chocolatey</a></li>
+                                                    <li class="level-2"><a href="#set-up-from-the-source">Set up From the Source</a></li>
+                                                    <li class="level-3"><a href="#setup.ps1">setup.ps1:</a></li>
+                                                    <li class="level-3"><a href="#setup.cmd">setup.cmd:</a></li>
+                                                    <li class="level-2"><a href="#getting-the-source">Getting the Source</a></li>
+                                                    <li class="level-2"><a href="#setup-a-full-environment-including-visual-studio-express-iis-express-and-sql-server-express-with-management-studio">Setup A Full Environment Including Visual Studio Express, IIS Express and SQL Server Express (with Management Studio)</a></li>
                                             </ul>
-                                                <p class="font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/choco/installation.md"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Edit This Page</a></p>
+                                                <p class="font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/guides/usage/development-environment-setup.md"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Edit This Page</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -1660,7 +1127,7 @@ choco install notepadplusplus.commandline -y
         </div>
         <footer class="p-3 small text-center">
             <span>© 2020 Chocolatey Software, Inc.</span>
-            <span>0.0.0-preview.0.123</span>
+            <span>0.0.0-preview.0.124</span>
         </footer>
         
         <script type="text/javascript" src="/assets/js/jquery.min.js"></script>

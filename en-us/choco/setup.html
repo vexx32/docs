@@ -2,17 +2,17 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Chocolatey - C4B Quick Start Guide">
+        <meta property="og:title" content="Chocolatey - Setup / How to install">
         <meta property="product:brand" content="Chocolatey">
         <meta property="og:description" content="Chocolatey is software management automation for Windows that wraps installers, executables, zips, and scripts into compiled packages. Chocolatey integrates w/SCCM, Puppet, Chef, etc. Chocolatey is trusted by businesses to manage software deployments.">
         <meta name="description" content="Chocolatey is software management automation for Windows that wraps installers, executables, zips, and scripts into compiled packages. Chocolatey integrates w/SCCM, Puppet, Chef, etc. Chocolatey is trusted by businesses to manage software deployments.">
         <meta name="flattr:id" content="mqgjkp">
-        <meta property="DC.title" content="Chocolatey - C4B Quick Start Guide">
+        <meta property="DC.title" content="Chocolatey - Setup / How to install">
         <meta property="og:site_name" content="Chocolatey">
         <meta property="og:type" content="product">
         <meta property="product:category" content="software">
         <meta property="og:image" content="https://chocolatey.org/content/images/icon_slogan.png">
-        <meta property="og:url" content="https://docs.chocolatey.org/en-us/guides/organizations/chocolatey-for-business-quick-start-guide">
+        <meta property="og:url" content="https://docs.chocolatey.org/en-us/choco/setup">
         <meta property="copyright" content="Chocolatey is Copyright 2020 - 2020 Chocolatey Software,Inc.">
 
 
@@ -26,7 +26,7 @@
             }
         </script>
         
-        <title>Chocolatey - C4B Quick Start Guide</title>
+        <title>Chocolatey - Setup / How to install</title>
     </head>
     <body>
         <nav id="topNav" class="navbar">
@@ -167,7 +167,7 @@
                                             <a class="nav-link pl-c2" href="/en-us/getting-started">Getting Started</a>
                                         </li>
                                         <li class="nav-item">
-                                            <div class="nav-link nav-link-collapse d-flex">
+                                            <div class="nav-link nav-link-collapse d-flex active">
                                                 <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-0d634319-1959-46c6-9915-13b99a931c81"></div>
                                                 <a href="/en-us/choco">Chocolatey CLI (choco)</a>
                                             </div>
@@ -177,7 +177,7 @@
                                                                 <a class="nav-link pl-5" href="/en-us/choco/release-notes">Release Notes</a>
                                                             </li>
                                                             <li class="nav-item">
-                                                                <a class="nav-link pl-5" href="/en-us/choco/setup">Setup / How to install</a>
+                                                                <a class="nav-link pl-5 active active-page" href="/en-us/choco/setup">Setup / How to install</a>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/choco/uninstallation">How to uninstall</a>
@@ -679,7 +679,7 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <div class="nav-link nav-link-collapse d-flex active">
+                                            <div class="nav-link nav-link-collapse d-flex">
                                                 <div class="btn btn-collapse collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-6b4e4028-7e50-4244-81ea-506771cbfe44"></div>
                                                 <a href="/en-us/guides">Guides</a>
                                             </div>
@@ -730,7 +730,7 @@
                                                                 </div>
                                                             </li>
                                                             <li class="nav-item">
-                                                                <div class="nav-link nav-link-collapse d-flex active">
+                                                                <div class="nav-link nav-link-collapse d-flex">
                                                                     <div class="btn btn-collapse pl-c2 collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#id-fb8721ab-21d8-42ae-8368-b076ff9838c9"></div>
                                                                     <a href="/en-us/guides/organizations">Organizations</a>
                                                                 </div>
@@ -743,7 +743,7 @@
                                                                                 <a class="nav-link pl-c4" href="/en-us/guides/organizations/automate-package-internalization">Automate Package Internalizer (MSP/C4B)</a>
                                                                             </li>
                                                                             <li class="nav-item">
-                                                                                <a class="nav-link pl-c4 active active-page" href="/en-us/guides/organizations/chocolatey-for-business-quick-start-guide">C4B Quick Start Guide</a>
+                                                                                <a class="nav-link pl-c4" href="/en-us/guides/organizations/chocolatey-for-business-quick-start-guide">C4B Quick Start Guide</a>
                                                                             </li>
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/guides/organizations/set-up-chocolatey-server">Set up the Chocolatey.Server</a>
@@ -814,14 +814,13 @@
                 </div>
                 <div class="col-md-9 col-xl-10 py-3 py-md-5 mx-auto">
                     <div class="ml-md-4 d-xl-none">
-                        <h1 class="title">C4B Quick Start Guide</h1>                 
+                        <h1 class="title">Setup / How to install</h1>                 
 <nav aria-label="breadcrumb">
 	<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a href="/en-us">Chocolatey</a></li>
-			<li class="breadcrumb-item"><a href="/en-us/guides">Guides</a></li>
-			<li class="breadcrumb-item"><a href="/en-us/guides/organizations">Organizations</a></li>
+			<li class="breadcrumb-item"><a href="/en-us/choco">Chocolatey CLI (choco)</a></li>
 		
-		<li class="breadcrumb-item active" aria-current="page">C4B Quick Start Guide</li>
+		<li class="breadcrumb-item active" aria-current="page">Setup / How to install</li>
 	</ol>
 </nav>
 
@@ -829,204 +828,782 @@
                     <div class="row">
                         <div id="mainContent" class="col-xl-10 pl-md-5 order-2 order-xl-1">
                              <div class="d-none d-xl-block">
-                                <h1 class="title">C4B Quick Start Guide</h1>                 
+                                <h1 class="title">Setup / How to install</h1>                 
 <nav aria-label="breadcrumb">
 	<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a href="/en-us">Chocolatey</a></li>
-			<li class="breadcrumb-item"><a href="/en-us/guides">Guides</a></li>
-			<li class="breadcrumb-item"><a href="/en-us/guides/organizations">Organizations</a></li>
+			<li class="breadcrumb-item"><a href="/en-us/choco">Chocolatey CLI (choco)</a></li>
 		
-		<li class="breadcrumb-item active" aria-current="page">C4B Quick Start Guide</li>
+		<li class="breadcrumb-item active" aria-current="page">Setup / How to install</li>
 	</ol>
 </nav>
 
                              </div>
-                             <p>Thank you for choosing Chocolatey as your partner in Windows software automation management. We are excited to help you dive in and successfully implement a deployment of all the necessary components.</p>
-<blockquote>
-<p>📝 <strong>NOTE</strong></p>
-<p>This quick-start guide is intended for customers who have recently purchased Chocolatey for Business (C4B), or are evaluating C4B as part of a proof-of-concept.
-It illustrates only <strong>one</strong> method of setting up your Chocolatey environment, and is by <strong>NO</strong> means exhaustive.
-Our goal is to get you up-and-running quickly, and testing out the feature set.
-For a more complete reference of possible scenarios and solutions, please refer to the <a href="./organizational-deployment-guide">Organizational Deployment Documentation</a>.</p>
-</blockquote>
-<p>If you have any questions or would like to discuss more involved implementations, please feel free to reach out to your Chocolatey representative.</p>
-<p>Let's get started!</p>
-<h2 id="components">Components</h2>
-<p><img src="/assets/images/C4B-implementation-diagram.jpg" alt="Implementation Diagram"></p>
-<p>As illustrated in the diagram above, there are five main components to a default Chocolatey install, namely:</p>
-<ol>
-<li><strong>Administrator Workstation</strong>: This is the workstation of the implementer. Internet access, as well as running from an administrator-level user, are required.</li>
-<li><strong>Repository Server</strong>: This is the application that will serve out the Nuget package (.nupkg) files internally. This guide will assume you'd like to use Sonatype <a href="https://www.sonatype.com/nexus-repository-oss">Nexus</a>, although Jfrog <a href="https://jfrog.com/artifactory/">Artifactory</a> is an equally-suitable option. Further repository details are available at <a href="/en-us/features/how-packages-internally">repository options</a>.</li>
-<li><strong>Deployment/Configuration Management Solution</strong>: We are going to stick to PowerShell commands and scripts in this guide. However, it is <em>strongly</em> recommended to use a full-featured configuration management solution to manage your package deployments. Some examples are Puppet, Chef, Ansible, and SaltStack. Read more about them on the <a href="/en-us/features/integrations">Infrastucture Automation page</a>.</li>
-<li><strong>Central Management Server</strong>: This is a standalone server that hosts the Chocolatey Central Management web interface, as well as the back-end database on which it relies. Currently, this interface provides reporting on packages installed on endpoints. In future, a feature will be added to enable deployments of packages and updates from this web console, as well. Installation of this component is not detailed in the scope of this guide, but the current documentation can be found on the the <a href="../../central-management/setup">Chocolatey Central Management Setup page</a>. Your Chocolatey for Business license (including trial) does entitle you to this feature.</li>
-<li><strong>Clients/Nodes</strong>: These are the workstation or server endpoints you wish to manage packages on, with Chocolatey. Every node requires a license.</li>
-</ol>
-<h2 id="requirements">Requirements</h2>
-<p>Below are the recommended guidelines of what's required for this specific deployment. More of each resource is preferred, if available.</p>
-<h3 id="administrator-workstation">Administrator Workstation</h3>
+                             <h2 id="requirements">Requirements</h2>
 <ul>
-<li>Windows 7+ / Windows Server 2003+ (ideally, Windows 10)</li>
-<li>2 cores (more preferred)</li>
-<li>4-8 GB RAM</li>
-<li>100 GB of free disk space (for package creation)</li>
-<li>Internet access</li>
-<li>Administrator user rights</li>
-<li>All commands should be run from Administrator PowerShell window</li>
+<li>Windows 7+ / Windows Server 2003+</li>
+<li>PowerShell v2+ (Not PowerShell Core yet though)(minimum is v3 for install from this website due to <a href="https://chocolatey.org/blog/remove-support-for-old-tls-versions">TLS 1.2 requirement</a>)</li>
+<li>.NET Framework 4+ (the installation will attempt to install .NET 4.0 if you do not have it installed)(minimum is 4.5 for install from this website due to <a href="https://chocolatey.org/blog/remove-support-for-old-tls-versions">TLS 1.2 requirement</a>)</li>
 </ul>
-<h3 id="repository-server-nexus">Repository Server (Nexus):</h3>
+<p>That's it! All you need is choco.exe (that you get from the installation scripts) and you are good to go! No Visual Studio required.</p>
+<h2 id="installing-chocolatey">Installing Chocolatey</h2>
+<p>Chocolatey installs in seconds. You are just a few steps from running choco right now!</p>
+<ol>
+<li>First, ensure that you are using an <em><strong><a href="http://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/">administrative shell</a></strong></em> - you can also install as a non-admin, check out <a href="#non-administrative-install">Non-Administrative Installation</a>.</li>
+<li>Copy the text specific to your command shell - <a href="#install-with-cmdexe">cmd.exe</a> or <a href="#install-with-powershellexe">powershell.exe</a>.</li>
+<li>Paste the copied text into your shell and press Enter.</li>
+<li>Wait a few seconds for the command to complete.</li>
+<li>If you don't see any errors, you are ready to use Chocolatey! Type <code>choco</code> or <code>choco -?</code> now, or see <a href="/en-us/getting-started">Getting Started</a> for usage instructions.</li>
+</ol>
+<p><strong>NOTES</strong>:</p>
 <ul>
-<li>Windows Server 2012+ (ideally, Windows Server 2016)</li>
-<li>4+ CPU cores (more preferred)</li>
-<li>16 GB+ RAM (4GB of RAM reserved specifically for JRE)</li>
-<li>1 TB of free space for local artifact storage (details <a href="https://help.sonatype.com/repomanager3/installation/system-requirements">here</a>)</li>
-<li>Internet access</li>
-<li>Administrator user rights</li>
-<li>All commands should be run from Administrator PowerShell window</li>
+<li>If you are behind a proxy, please see <a href="#installing-behind-a-proxy">Installing behind a proxy</a>.</li>
+<li>Need completely offline solution? See <a href="#completely-offline-install">Completely Offline Install</a>.</li>
+<li>Installing the licensed edition? See <a href="/en-us/licensed-extension/setup">install licensed edition</a>.</li>
+<li><a class="btn-collapse-target" href="#more-install-options" data-href="#moreInstallOptions">More Options</a> / <a href="../troubleshooting">Troubleshooting</a></li>
 </ul>
-<h3 id="deploymentconfiguration-management-solution">Deployment/Configuration Management Solution</h3>
-<p>Again, this is out of the scope of this document, but <em>highly</em> recommended when scaling out deployments. Read more about configuration management solutions on the <a href="/en-us/features/integrations">Infrastructure Automation page</a>.</p>
-<h3 id="central-management-server">Central Management Server</h3>
-<p>As with configuration managers, this is out-of-scope for this document. Generally, though, enough resources to host an ASP.NET IIS deployment and a SQL Server back end are recommended. Requirements for this server are detailed <a href="../../features/chocolatey-central-management#requirements">here</a>.</p>
-<h3 id="clientsnodes">Clients/Nodes:</h3>
+<h4 id="install-with-cmd.exe">Install with cmd.exe</h4>
+<p>Run the following command:</p>
+<pre><code class="language-sh">
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" &amp;&amp; SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+
+</code></pre>
+<h4 id="install-with-powershell.exe">Install with PowerShell.exe</h4>
+<p>With PowerShell, there is an additional step. You must ensure <a href="https://go.microsoft.com/fwlink/?LinkID=135170">Get-ExecutionPolicy</a> is not Restricted. We suggest using <code>Bypass</code> to bypass the policy to get things installed or <code>AllSigned</code> for quite a bit more security.</p>
 <ul>
-<li>Start with 1 or 2 endpoints (scale up after initial config and testing)</li>
-<li>Windows 7+ / Windows Server 2003+ (ideally, Windows 10 / Windows Server 2016)</li>
-<li>PowerShell v2+ (not PowerShell Core)</li>
-<li>.NET Framework 4.6.1+ (minimum required version for Chocolatey Central Management access)</li>
+<li>Run <code>Get-ExecutionPolicy</code>. If it returns <code>Restricted</code>, then run <code>Set-ExecutionPolicy AllSigned</code> or <code>Set-ExecutionPolicy Bypass -Scope Process</code>.</li>
+<li>Now run the following command:</li>
 </ul>
-<h2 id="installation">Installation</h2>
-<h3 id="preparation-on-administrator-workstation">Preparation on Administrator Workstation</h3>
-<ol>
-<li><p>From an Administrator PowerShell Window, run the following command to install Chocolatey:</p>
-<pre><code class="language-powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+<pre><code class="language-powershell">
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
 </code></pre>
-</li>
-<li><p>Download the <code>chocolatey.license.xml.txt</code> file that was attached your trial e-mail. Also, download the <code>chocolatey-c4b-quickstart.nupkg</code> file from the link in that same email. Save both the files to the administrator workstation, and make note of the <strong>full file path</strong> for the next step.</p>
-</li>
-<li><p>From an Administrator PowerShell Window, browse to the folder where you copied the above two files. Run the following command to install the <code>chocolatey-c4b-quickstart</code> package, making sure to pass the <strong>full file path</strong> to your license file:</p>
-<pre><code class="language-powershell">choco install chocolatey-c4b-quickstart --source . -y --params "'/LicenseFile:&lt;FULL_PATH_TO_LICENSE_FILE&gt;'"
-</code></pre>
+<h4 id="additional-considerations">Additional considerations</h4>
+<p><strong>NOTE:</strong> Please inspect <a href="https://chocolatey.org/install.ps1">https://chocolatey.org/install.ps1</a> prior to running any of these scripts to ensure safety. We already know it's safe, but you should verify the security and contents of <em><strong>any</strong></em> script from the internet you are not familiar with. All of these scripts download a remote PowerShell script and execute it on your machine.</p>
+<p>We take security very seriously. <a href="https://chocolatey.org/security">Learn more</a>.</p>
 <blockquote>
-<p>📝 <strong>NOTE</strong>: We have built this package to SIMPLIFY the initial setup greatly; it will perform the following:</p>
-<ul class="list-style-type-disc">
-  <li>Download appropriate ".nupkg" files needed to setup Chocolatey.</li>
-  <li>Install the license file in the correct directory</li>
-  <li>Download a script for Offline install of Chocolatey on endpoints</li>
+<p>"Why do I need to enable TLS 1.2 in PowerShell? Shouldn't it be on by default when I load PowerShell?"</p>
+</blockquote>
+<p>Unfortunately it's not always a default, and more of the time it is not.  The low level is that it depends on .NET Framework and Windows.</p>
+<ul>
+<li>Explicitly set - Basically you need .NET Fx 4.5 at a minimum to be able to explicitly set TLS 1.2.</li>
+<li>Load by default - To have it load by default when you run PowerShell, you need at least .NET Fx 4.7 AND the Operating System's SystemDefault to have TLS 1.2 enabled.</li>
 </ul>
-</blockquote>
-</li>
-<li><p>From an Administrator PowerShell Window, run the following command to install the <code>chocolatey.extension</code> package:</p>
-<pre><code class="language-powershell">choco install chocolatey.extension -y --source="'C:\choco-setup\packages'"
-</code></pre>
-</li>
-</ol>
-<h3 id="repository-server-setup">Repository Server Setup</h3>
-<p>As recommended, we will assume you have access to the internet from this server. You will need at least a temporary firewall allowance for this, in order to follow the below steps.</p>
-<ol>
-<li><p>Copy the entire <code>C:\choco-setup</code> directory from the Administrator workstation to the same location on your repository server.</p>
-</li>
-<li><p>From an Administrator PowerShell Window, run the following command to install Chocolatey:</p>
-<pre><code class="language-powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-</code></pre>
-</li>
-<li><p>From an Administrator PowerShell Window, run the following command to copy the license into the correct directory:</p>
-<pre><code class="language-powershell">$null = New-Item $env:ChocolateyInstall\license -ItemType Directory -Force
-Get-ChildItem -Path "C:\choco-setup" -Recurse | Where-Object { $_.Name -match "'chocolatey.license'" } | Copy-Item "'$($_.Fullname)'" "'$env:ChocolateyInstall\chocolatey.license.xml'" -Force
-</code></pre>
-</li>
-<li><p>From an Administrator PowerShell Window, run the following command to install the <code>chocolatey.extension</code> package:</p>
-<pre><code class="language-powershell">choco install chocolatey.extension -y --source="'C:\choco-setup\packages'"
-</code></pre>
-</li>
-<li><p>From an Administrator PowerShell Window, run the following command to install the <code>nexus-repository</code> package:</p>
-<pre><code class="language-powershell">choco install nexus-repository -y --no-progress
-</code></pre>
-<blockquote>
-<p>⚠️ <strong>WARNING</strong></p>
-<p>If you have already installed your Nexus repository, then the above step is not required.
-This guide assumes you are starting form scratch. It may be easier, if you are following this verbatim and don't have anything in your repositoryyet, to simply run <code>choco uninstall nexus-repository -y</code> and then <code>choco install nexus-repository -y</code>.
-As the next step requires a freshly-installed Nexus repository, with admin passwords not reset, this would be the most compatible approach.</p>
-</blockquote>
-</li>
-<li><p>Versions of Nexus newer than 3.21 have disabled the ability to run automated scripting by default. However, we'll need this to be enabled in order to automate our repository cleanup and creation.
-From an Administrator PowerShell Window, run the following command to install the enable Nexus scripting, and to restart the Nexus service for the changes to take effect:</p>
-<pre><code class="language-powershell">Add-Content C:\ProgramData\sonatype-work\nexus3\etc\nexus.properties "nexus.scripts.allowCreation=true"
-Restart-Service -Name nexus
-</code></pre>
-</li>
-<li><p>Download the <code>chocolatey-nexus-setup</code> package from the link provided in your trial email, and save it to the <code>\choco-setup\packages</code> directory on the Nexus server. From an Administrator PowerShell console, run:</p>
-<pre><code class="language-powershell">choco install chocolatey-nexus-setup --source="'C:\choco-setup\packages'"
-</code></pre>
-<blockquote>
-<p>This package will do the following:</p>
-<ul class="list-style-type-disc">
-  <li>Remove unwanted demo repositories</li>
-  <li>Add a "choco-hosted" Nuget repository</li>
-  <li>Add a "choco-install" raw repository</li>
-  <li>Add an "Install.ps1" script to the "choco-install" raw repository</li>
-  <li>Enable the Nuget API key realm</li>
-  <li>Output the API key for the Nexus server (copy this key for a later step)</li>
+<p>The load by default is really hard to see, so you should check to ensure it is there. Assume it doesn't and set explicitly.</p>
+<h2 id="more-install-options">More Install Options</h2>
+<p><strong>Troubleshooting? Proxy? Need more options?</strong></p>
+<p><button class="btn btn-success btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#moreInstallOptions" aria-expanded="false" aria-controls="moreInstallOptions">More Install Options</button></p>
+<div class="collapse" id="moreInstallOptions">
+<ul>
+<li><a href="#install-from-powershell-v3">Install from PowerShell v3+</a></li>
+<li><a href="#completely-offline-install">Completely offline/internal install</a></li>
+<li><a href="#install-with-puppet">Install with Puppet</a></li>
+<li><a href="#install-using-powershell-from-cmdexe">Install using PowerShell from cmd.exe</a></li>
+<li><a href="#install-using-nuget-package-manager">Install using NuGet Package Manager</a></li>
+<li><a href="#install-using-nugetexe-from-powershell">Install using NuGet.exe from PowerShell</a></li>
+<li><a href="#install-downloaded-nuget-package-from-powershell">Install downloaded NuGet package from PowerShell</a></li>
+<li><a href="#install-licensed-edition">Install licensed edition</a></li>
+<li><a href="#installing-behind-a-proxy">Installing behind a proxy</a></li>
+<li><a href="#installing-behind-an-explicit-proxy">Installing behind an explicit proxy</a></li>
+<li><a href="#installing-to-a-different-location">Installing to a different location</a></li>
+<li><a href="#installing-a-particular-version-of-chocolatey">Installing a particular version of Chocolatey</a></li>
+<li><a href="#use-windows-built-in-compression-instead-of-downloading-7zip">Use Windows built-in compression instead of downloading 7zip</a></li>
+<li><a href="#installing-with-restricted-tls">Installing with restricted TLS</a></li>
+<li><a href="#non-administrative-install">Non-Administrative install</a></li>
 </ul>
-</blockquote>
-</li>
-<li><p>You will require Google Chrome in order to login to the Nexus web UI (site can appear unresponsive in IE). From an Administrator PowerShell console, run:</p>
-<pre><code class="language-powershell">choco install googlechrome -y
+<h3 id="install-from-powershell-v3">Install from PowerShell v3+</h3>
+<p><strong>NOTE:</strong> The command for installing with PowerShell at the top of the page works for all versions of PowerShell from v2 on. This is provided as an additional note for folks who want a more terse command that is easier to remember.</p>
+<p>With PowerShell, there is an additional step or two. You must ensure <a href="https://go.microsoft.com/fwlink/?LinkID=135170">Get-ExecutionPolicy</a> is not Restricted. We suggest using <code>Bypass</code> to bypass the policy to get things installed or <code>AllSigned</code> for quite a bit more security.</p>
+<ul>
+<li>Run <code>Get-ExecutionPolicy</code>. If it returns <code>Restricted</code>, then run <code>Set-ExecutionPolicy AllSigned</code> or <code>Set-ExecutionPolicy Bypass</code>.</li>
+<li>Now run the following command:</li>
+</ul>
+<pre><code class="language-powershell">
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
+
 </code></pre>
-</li>
-<li><p>The administrative password for the Nexus web UI can be found in the following file:</p>
-<pre><code class="language-cmd">C:\ProgramData\sonatype-work\nexus3\admin.password
-</code></pre>
-</li>
-</ol>
-<p>Copy this password out of the above file, and use it for the next step.</p>
+<h3 id="completely-offline-install">Completely offline install</h3>
+<p>With completely offline use of Chocolatey, you want to ensure you remove the default community package source (<code>choco source list</code> followed by <code>choco source remove -n chocolatey</code>, or however you would do that with a configuration manager <a href="https://forge.puppet.com/puppetlabs/chocolatey#sources-configuration">like Puppet</a>).</p>
 <ol>
-<li>Login to the Nexus web UI (with Google Chrome) at http://localhost:8081 using the username "admin" and the password from above. Follow the prompts to reset the "admin" credential, and check the box to enable anonymous access. You can choose to not enable anonymous access, but passing credentials to acces the repository is out of the scope of this document.</li>
+<li>The first step with offline is to obtain a copy of the Chocolatey Nupkg (nupkg files are just fancy zip files). Go to <a href="https://chocolatey.org/packages/chocolatey">https://chocolatey.org/packages/chocolatey</a> and find a version you want.</li>
+<li>Click on Download to download that version's nupkg file.</li>
 </ol>
-<h3 id="back-on-administrative-workstation">Back on Administrative Workstation</h3>
+<p><img src="/assets/images/DownloadChocolateyPackage.png" alt="download chocolatey.nupkg visual"></p>
 <ol>
-<li><p>Download the script from <a href="./organizational-deployment-guide#exercise-4-create-a-package-for-the-license">Exercise 4 here</a>, and save it in your <code>choco-setup\files</code> folder as <code>Add-LicensePackage.ps1</code>.
-Run this script in a PowerShell Administrator console, to create the license package.</p>
-</li>
-<li><p>Ensure the chocolatey nupkg itself is in the C:\choco-setup\packages directory. The following code accomplishes this:</p>
-<pre><code class="language-powershell">Copy-Item "'$env:ChocolateyInstall\lib\chocolatey\chocolatey.nupkg'" C:\choco-setup\packages
+<li>You can also download <a href="https://chocolatey.org/api/v2/package/chocolatey">the latest version directly</a>.</li>
+<li>You can put the chocolatey.nupkg on an internal package repository and then address that full path, similar to how you see in the Puppet provider - <a href="https://forge.puppet.com/puppetlabs/chocolatey#manage-chocolatey-installation">https://forge.puppet.com/puppetlabs/chocolatey#manage-chocolatey-installation</a></li>
+<li>Then you would run a script similar to the below to address that local install. If it is on a repository somewhere, you will need to enhance the below script to get that file  (the Chocolatey Puppet provider install script shows that).</li>
+</ol>
+<pre><code class="language-powershell"># Download and install Chocolatey nupkg from an OData (HTTP/HTTPS) url such as Artifactory, Nexus, ProGet (all of these are recommended for organizational use), or Chocolatey.Server (great for smaller organizations and POCs)
+# This is where you see the top level API - with xml to Packages - should look nearly the same as https://chocolatey.org/api/v2/
+# If you are using Nexus, always add the trailing slash or it won't work
+# === EDIT HERE ===
+$packageRepo = '&lt;INSERT ODATA REPO URL&gt;'
+
+# If the above $packageRepo repository requires authentication, add the username and password here. Otherwise these leave these as empty strings.
+$repoUsername = ''    # this must be empty is NOT using authentication
+$repoPassword = ''    # this must be empty if NOT using authentication
+
+# Determine unzipping method
+# 7zip is the most compatible, but you need an internally hosted 7za.exe.
+# Make sure the version matches for the arguments as well.
+# Built-in does not work with Server Core, but if you have PowerShell 5
+# it uses Expand-Archive instead of COM
+$unzipMethod = 'builtin'
+#$unzipMethod = '7zip'
+#$7zipUrl = 'https://chocolatey.org/7za.exe' (download this file, host internally, and update this to internal)
+
+# === ENVIRONMENT VARIABLES YOU CAN SET ===
+# Prior to running this script, in a PowerShell session, you can set the
+# following environment variables and it will affect the output
+
+# - $env:ChocolateyEnvironmentDebug = 'true' # see output
+# - $env:chocolateyIgnoreProxy = 'true' # ignore proxy
+# - $env:chocolateyProxyLocation = '' # explicit proxy
+# - $env:chocolateyProxyUser = '' # explicit proxy user name (optional)
+# - $env:chocolateyProxyPassword = '' # explicit proxy password (optional)
+
+# === NO NEED TO EDIT ANYTHING BELOW THIS LINE ===
+# Ensure we can run everything
+Set-ExecutionPolicy Bypass -Scope Process -Force;
+
+# If the repository requires authentication, create the Credential object
+if ((-not [string]::IsNullOrEmpty($repoUsername)) -and (-not [string]::IsNullOrEmpty($repoPassword))) {
+    $securePassword = ConvertTo-SecureString $repoPassword -AsPlainText -Force
+    $repoCreds = New-Object System.Management.Automation.PSCredential ($repoUsername, $securePassword)
+}
+
+$searchUrl = ($packageRepo.Trim('/'), 'Packages()?$filter=(Id%20eq%20%27chocolatey%27)%20and%20IsLatestVersion') -join '/'
+
+# Reroute TEMP to a local location
+New-Item $env:ALLUSERSPROFILE\choco-cache -ItemType Directory -Force
+$env:TEMP = "$env:ALLUSERSPROFILE\choco-cache"
+
+$localChocolateyPackageFilePath = Join-Path $env:TEMP 'chocolatey.nupkg'
+$ChocoInstallPath = "$($env:SystemDrive)\ProgramData\Chocolatey\bin"
+$env:ChocolateyInstall = "$($env:SystemDrive)\ProgramData\Chocolatey"
+$env:Path += ";$ChocoInstallPath"
+$DebugPreference = 'Continue';
+
+# PowerShell v2/3 caches the output stream. Then it throws errors due
+# to the FileStream not being what is expected. Fixes "The OS handle's
+# position is not what FileStream expected. Do not use a handle
+# simultaneously in one FileStream and in Win32 code or another
+# FileStream."
+function Fix-PowerShellOutputRedirectionBug {
+  $poshMajorVerion = $PSVersionTable.PSVersion.Major
+
+  if ($poshMajorVerion -lt 4) {
+    try{
+      # http://www.leeholmes.com/blog/2008/07/30/workaround-the-os-handles-position-is-not-what-filestream-expected/ plus comments
+      $bindingFlags = [Reflection.BindingFlags] "Instance,NonPublic,GetField"
+      $objectRef = $host.GetType().GetField("externalHostRef", $bindingFlags).GetValue($host)
+      $bindingFlags = [Reflection.BindingFlags] "Instance,NonPublic,GetProperty"
+      $consoleHost = $objectRef.GetType().GetProperty("Value", $bindingFlags).GetValue($objectRef, @())
+      [void] $consoleHost.GetType().GetProperty("IsStandardOutputRedirected", $bindingFlags).GetValue($consoleHost, @())
+      $bindingFlags = [Reflection.BindingFlags] "Instance,NonPublic,GetField"
+      $field = $consoleHost.GetType().GetField("standardOutputWriter", $bindingFlags)
+      $field.SetValue($consoleHost, [Console]::Out)
+      [void] $consoleHost.GetType().GetProperty("IsStandardErrorRedirected", $bindingFlags).GetValue($consoleHost, @())
+      $field2 = $consoleHost.GetType().GetField("standardErrorWriter", $bindingFlags)
+      $field2.SetValue($consoleHost, [Console]::Error)
+    } catch {
+      Write-Output 'Unable to apply redirection fix.'
+    }
+  }
+}
+
+Fix-PowerShellOutputRedirectionBug
+
+# Attempt to set highest encryption available for SecurityProtocol.
+# PowerShell will not set this by default (until maybe .NET 4.6.x). This
+# will typically produce a message for PowerShell v2 (just an info
+# message though)
+try {
+  # Set TLS 1.2 (3072), then TLS 1.1 (768), then TLS 1.0 (192), finally SSL 3.0 (48)
+  # Use integers because the enumeration values for TLS 1.2 and TLS 1.1 won't
+  # exist in .NET 4.0, even though they are addressable if .NET 4.5+ is
+  # installed (.NET 4.5 is an in-place upgrade).
+  [System.Net.ServicePointManager]::SecurityProtocol = 3072 -bor 768 -bor 192 -bor 48
+} catch {
+  Write-Output 'Unable to set PowerShell to use TLS 1.2 and TLS 1.1 due to old .NET Framework installed. If you see underlying connection closed or trust errors, you may need to upgrade to .NET Framework 4.5+ and PowerShell v3+.'
+}
+
+function Get-Downloader {
+param (
+  [string]$url
+ )
+  $downloader = new-object System.Net.WebClient
+
+  $defaultCreds = [System.Net.CredentialCache]::DefaultCredentials
+  if (Test-Path -Path variable:repoCreds) {
+    Write-Debug "Using provided repository authentication credentials."
+    $downloader.Credentials = $repoCreds
+  } elseif ($defaultCreds -ne $null) {
+    Write-Debug "Using default repository authentication credentials."
+    $downloader.Credentials = $defaultCreds
+  }
+
+  $ignoreProxy = $env:chocolateyIgnoreProxy
+  if ($ignoreProxy -ne $null -and $ignoreProxy -eq 'true') {
+    Write-Debug 'Explicitly bypassing proxy due to user environment variable.'
+    $downloader.Proxy = [System.Net.GlobalProxySelection]::GetEmptyWebProxy()
+  } else {
+    # check if a proxy is required
+    $explicitProxy = $env:chocolateyProxyLocation
+    $explicitProxyUser = $env:chocolateyProxyUser
+    $explicitProxyPassword = $env:chocolateyProxyPassword
+    if ($explicitProxy -ne $null -and $explicitProxy -ne '') {
+      # explicit proxy
+      $proxy = New-Object System.Net.WebProxy($explicitProxy, $true)
+      if ($explicitProxyPassword -ne $null -and $explicitProxyPassword -ne '') {
+        $passwd = ConvertTo-SecureString $explicitProxyPassword -AsPlainText -Force
+        $proxy.Credentials = New-Object System.Management.Automation.PSCredential ($explicitProxyUser, $passwd)
+      }
+
+      Write-Debug "Using explicit proxy server '$explicitProxy'."
+      $downloader.Proxy = $proxy
+
+    } elseif (!$downloader.Proxy.IsBypassed($url)) {
+      # system proxy (pass through)
+      $creds = $defaultCreds
+      if ($creds -eq $null) {
+        Write-Debug 'Default credentials were null. Attempting backup method'
+        $cred = get-credential
+        $creds = $cred.GetNetworkCredential();
+      }
+
+      $proxyaddress = $downloader.Proxy.GetProxy($url).Authority
+      Write-Debug "Using system proxy server '$proxyaddress'."
+      $proxy = New-Object System.Net.WebProxy($proxyaddress)
+      $proxy.Credentials = $creds
+      $downloader.Proxy = $proxy
+    }
+  }
+
+  return $downloader
+}
+
+function Download-File {
+param (
+  [string]$url,
+  [string]$file
+ )
+  $downloader = Get-Downloader $url
+  $downloader.DownloadFile($url, $file)
+}
+
+function Download-Package {
+param (
+  [string]$packageODataSearchUrl,
+  [string]$file
+ )
+  $downloader = Get-Downloader $packageODataSearchUrl
+
+  Write-Output "Querying latest package from $packageODataSearchUrl"
+  [xml]$pkg = $downloader.DownloadString($packageODataSearchUrl)
+  $packageDownloadUrl = $pkg.feed.entry.content.src
+
+  Write-Output "Downloading $packageDownloadUrl to $file"
+  $downloader.DownloadFile($packageDownloadUrl, $file)
+}
+
+function Install-ChocolateyFromPackage {
+param (
+  [string]$chocolateyPackageFilePath = ''
+)
+
+  if ($chocolateyPackageFilePath -eq $null -or $chocolateyPackageFilePath -eq '') {
+    throw "You must specify a local package to run the local install."
+  }
+
+  if (!(Test-Path($chocolateyPackageFilePath))) {
+    throw "No file exists at $chocolateyPackageFilePath"
+  }
+
+  $chocTempDir = Join-Path $env:TEMP "chocolatey"
+  $tempDir = Join-Path $chocTempDir "chocInstall"
+  if (![System.IO.Directory]::Exists($tempDir)) {[System.IO.Directory]::CreateDirectory($tempDir)}
+  $file = Join-Path $tempDir "chocolatey.zip"
+  Copy-Item $chocolateyPackageFilePath $file -Force
+
+  # unzip the package
+  Write-Output "Extracting $file to $tempDir..."
+  if ($unzipMethod -eq '7zip') {
+    $7zaExe = Join-Path $tempDir '7za.exe'
+    if (-Not (Test-Path ($7zaExe))) {
+      Write-Output 'Downloading 7-Zip commandline tool prior to extraction.'
+      # download 7zip
+      Download-File $7zipUrl "$7zaExe"
+    }
+
+    $params = "x -o`"$tempDir`" -bd -y `"$file`""
+    # use more robust Process as compared to Start-Process -Wait (which doesn't
+    # wait for the process to finish in PowerShell v3)
+    $process = New-Object System.Diagnostics.Process
+    $process.StartInfo = New-Object System.Diagnostics.ProcessStartInfo($7zaExe, $params)
+    $process.StartInfo.RedirectStandardOutput = $true
+    $process.StartInfo.UseShellExecute = $false
+    $process.StartInfo.WindowStyle = [System.Diagnostics.ProcessWindowStyle]::Hidden
+    $process.Start() | Out-Null
+    $process.BeginOutputReadLine()
+    $process.WaitForExit()
+    $exitCode = $process.ExitCode
+    $process.Dispose()
+
+    $errorMessage = "Unable to unzip package using 7zip. Perhaps try setting `$env:chocolateyUseWindowsCompression = 'true' and call install again. Error:"
+    switch ($exitCode) {
+      0 { break }
+      1 { throw "$errorMessage Some files could not be extracted" }
+      2 { throw "$errorMessage 7-Zip encountered a fatal error while extracting the files" }
+      7 { throw "$errorMessage 7-Zip command line error" }
+      8 { throw "$errorMessage 7-Zip out of memory" }
+      255 { throw "$errorMessage Extraction cancelled by the user" }
+      default { throw "$errorMessage 7-Zip signalled an unknown error (code $exitCode)" }
+    }
+  } else {
+    if ($PSVersionTable.PSVersion.Major -lt 5) {
+      try {
+        $shellApplication = new-object -com shell.application
+        $zipPackage = $shellApplication.NameSpace($file)
+        $destinationFolder = $shellApplication.NameSpace($tempDir)
+        $destinationFolder.CopyHere($zipPackage.Items(),0x10)
+      } catch {
+        throw "Unable to unzip package using built-in compression. Set `$env:chocolateyUseWindowsCompression = 'false' and call install again to use 7zip to unzip. Error: `n $_"
+      }
+    } else {
+      Expand-Archive -Path "$file" -DestinationPath "$tempDir" -Force
+    }
+  }
+
+  # Call Chocolatey install
+  Write-Output 'Installing chocolatey on this machine'
+  $toolsFolder = Join-Path $tempDir "tools"
+  $chocInstallPS1 = Join-Path $toolsFolder "chocolateyInstall.ps1"
+
+  &amp; $chocInstallPS1
+
+  Write-Output 'Ensuring chocolatey commands are on the path'
+  $chocInstallVariableName = 'ChocolateyInstall'
+  $chocoPath = [Environment]::GetEnvironmentVariable($chocInstallVariableName)
+  if ($chocoPath -eq $null -or $chocoPath -eq '') {
+    $chocoPath = 'C:\ProgramData\Chocolatey'
+  }
+
+  $chocoExePath = Join-Path $chocoPath 'bin'
+
+  if ($($env:Path).ToLower().Contains($($chocoExePath).ToLower()) -eq $false) {
+    $env:Path = [Environment]::GetEnvironmentVariable('Path',[System.EnvironmentVariableTarget]::Machine);
+  }
+
+  Write-Output 'Ensuring chocolatey.nupkg is in the lib folder'
+  $chocoPkgDir = Join-Path $chocoPath 'lib\chocolatey'
+  $nupkg = Join-Path $chocoPkgDir 'chocolatey.nupkg'
+  if (!(Test-Path $nupkg)) {
+    Write-Output 'Copying chocolatey.nupkg is in the lib folder'
+    if (![System.IO.Directory]::Exists($chocoPkgDir)) { [System.IO.Directory]::CreateDirectory($chocoPkgDir); }
+    Copy-Item "$file" "$nupkg" -Force -ErrorAction SilentlyContinue
+  }
+}
+
+# Idempotence - do not install Chocolatey if it is already installed
+if (!(Test-Path $ChocoInstallPath)) {
+  # download the package to the local path
+  if (!(Test-Path $localChocolateyPackageFilePath)) {
+    Download-Package $searchUrl $localChocolateyPackageFilePath
+  }
+
+  # Install Chocolatey
+  Install-ChocolateyFromPackage $localChocolateyPackageFilePath
+}
+
 </code></pre>
-</li>
-<li><p>Upload all ".nupkg" files from <code>C:\choco-setup\packages</code> to Nexus repository using the fully-qualified domain name (FQDN) and apikey of the Nexus server:</p>
-<pre><code class="language-powershell">Get-ChildItem "'C:\choco-setup\packages\*.nupkg'" |
-Foreach-Object {
-    choco push $_.FullName --source="'http://&lt;_FQDN_OF_REPOSITORY_&gt;:8081/repository/choco-hosted/'" -k="'&lt;_API_KEY_&gt;'" --force
+<h3 id="install-with-puppet">Install with Puppet</h3>
+<p><strong>NOTE</strong>: If you have the licensed edition, see <a href="/en-us/licensed-extension/setup#set-up-licensed-edition-with-puppet">Setting up Licensed Edition with Puppet</a> instead. This only additionally contains some package examples and setting up tab completion.</p>
+<p>Here's an example of setting Chocolatey up with Puppet that sets up and configures Chocolatey, sets up an internal package repository, and shows setting up the licensed edition and ensuring some packages.</p>
+<ul>
+<li>Download the chocolatey.nupkg from the community repository - <a href="https://chocolatey.org/api/v2/package/chocolatey">download the latest chocolatey nupkg</a> or see <a href="#completely-offline-install">Completely offline install</a> to get an older version.</li>
+<li>Optionally download the chocolatey.server package from the community repository - <a href="https://chocolatey.org/api/v2/package/chocolatey.server">download the latest chocolatey.server nupkg</a>.</li>
+<li>Use <code>choco push</code> to push those items to your internal package repository (e.g. <code>choco push chocolatey.0.10.7.nupkg -s http://internal_repo/ -k abc123</code>)</li>
+<li>Determine how to get the bare url to download the Chocolatey.Nupkg directly. You will need that for the internal url for installing Chocolatey offline. For the community repository, it is <a href="https://chocolatey.org/api/v2/package/chocolatey">https://chocolatey.org/api/v2/package/chocolatey</a></li>
+</ul>
+<pre><code class="language-puppet"># Requires puppetlabs/chocolatey module
+# See https://forge.puppet.com/puppetlabs/chocolatey
+
+## Set resource defaults for `package` resources on Windows to use the Chocolatey provider
+case $operatingsystem {
+  'windows':    {
+    Package {
+      provider =&gt; chocolatey,
+    }
+  }
+}
+
+## - Ensure Chocolatey Install -
+#include chocolatey
+## OR
+## Download chocolatey.nupkg to your internal repository (see above
+##  about getting the package for offline use)
+## Note: `chocolatey_download_url is completely different than normal
+##  source locations. This is directly to the bare download url for the
+##  chocolatey.nupkg, similar to what you see when you browse to
+##  https://chocolatey.org/api/v2/package/chocolatey
+class {'chocolatey':
+  chocolatey_download_url =&gt; 'https://&lt;internalurl/to&gt;/chocolatey.nupkg',
+  use_7zip                =&gt; false,
+}
+
+## If you need FIPS compliance
+## make this the first thing you configure before you do any additional
+## configuration or package installations
+#chocolateyfeature {'useFipsCompliantChecksums':
+#  ensure =&gt; enabled,
+#}
+
+## Keep chocolatey up to date based on your internal source
+## You control the upgrades based on when you push an updated version
+##  to your internal repository.
+## Note the source here is to the OData feed, similar to what you see
+##  when you browse to https://chocolatey.org/api/v2
+package {'chocolatey':
+  ensure   =&gt; latest,
+  provider =&gt; chocolatey,
+  source   =&gt; 'https://&lt;internal_repo&gt;/chocolatey',
+}
+
+
+## - Configure Chocolatey -
+### Config Settings
+
+## Move cache location so Chocolatey is very deterministic about
+## cleaning up temporary data
+chocolateyconfig {'cacheLocation':
+  value =&gt; 'c:\ProgramData\choco-cache',
+}
+
+## Increase timeout to 4 hours
+chocolateyconfig {'commandExecutionTimeoutSeconds':
+  value =&gt; '14400',
+}
+
+### Sources
+## Remove the default community package repository source
+chocolateysource {'chocolatey':
+  ensure   =&gt; absent,
+  location =&gt; 'https://chocolatey.org/api/v2/',
+}
+
+## Add default sources for your internal repositories
+chocolateysource {'internal_chocolatey':
+  ensure   =&gt; present,
+  location =&gt; 'http://internal_location/OData/endpoint',
+  priority =&gt; 1,
+  username =&gt; 'optional',
+  password =&gt; 'optional,not ensured',
+}
+
+### Features
+chocolateyfeature {'checksumFiles':
+  ensure =&gt; enabled,
+}
+
+## When using Puppet for installs
+chocolateyfeature {'showDownloadProgress':
+  ensure =&gt; disabled,
+}
+
+chocolateyfeature {'useRememberedArgumentsForUpgrades':
+  ensure =&gt; enabled,
+}
+
+
+## - Chocolatey Simple Server Package Repository -
+## Requires chocolatey/chocolatey_server module  - see
+##  https://forge.puppet.com/chocolatey/chocolatey_server
+## this contains the bits to install the custom server
+## - Ensures IIS and Ensure ASP.NET
+## - Installs and configures the Chocolatey.Server website and app pool
+## - Sets permissions appropriately
+
+#include chocolatey_server
+## OR
+## `server_package_source` is to the OData feed, similar to what you see
+##  when you browse to https://chocolatey.org/api/v2
+class {'chocolatey_server':
+  server_package_source =&gt; 'https://internalurl/odata/server',
+}
+
+chocolateysource {'local_chocolatey_server':
+  ensure   =&gt; present,
+  location =&gt; 'http://localhost/chocolatey',
+  priority =&gt; 2,
+}
+
+
+## - Tab Completion -
+## Ensure that when someone uses choco from powershell.exe, they have tab completion
+file {'C:/Users/Administrator/Documents/WindowsPowerShell':
+  ensure =&gt; directory,
+}
+
+file {'C:/Users/Administrator/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1':
+  ensure =&gt; file,
+  content =&gt; '$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+  Import-Module "$ChocolateyProfile"
+}',
+}
+
+
+## - Package Examples -
+package {'roundhouse':
+  ensure   =&gt; '0.8.5.0',
+}
+
+package {'git':
+  ensure =&gt; latest,
+}
+
+## see https://forge.puppet.com/puppetlabs/chocolatey#install-options-with-spaces
+package {'launchy':
+  ensure          =&gt; installed,
+  install_options =&gt; ['--override', '--installArgs','"', '/VERYSILENT','/NORESTART','"'],
+}
+
+package {['virustotaluploader',
+          'googlechrome',
+          'notepadplusplus',
+          '7zip',
+          'ruby',
+          'charles',
+          'grepwin',
+          'stexbar',
+          'inkscape',
+          'gitextensions',
+          'pandoc',
+          'snagit',
+          'nodejs',
+          ]:
+  ensure =&gt; latest,
+  source =&gt; 'https://chocolatey.org/api/v2/',
+}
+
+package {'screentogif':
+  ensure =&gt; '2.2.160907',
+  source =&gt; 'https://chocolatey.org/api/v2/',
+}
+
+package {'dotnet4.5.2':
+  ensure =&gt; latest,
 }
 </code></pre>
-</li>
-</ol>
-<h3 id="client-nodes">Client Nodes</h3>
+<h3 id="install-using-powershell-from-cmd.exe">Install using PowerShell from cmd.exe</h3>
+<p>This is the best method if you want to repeat it or include it in source control. It requires no change to your existing PowerShell to allow for remote unsigned scripts.</p>
+<p>Create a file named <code>installChocolatey.cmd</code> with the following:</p>
+<pre><code>@echo off
+
+SET DIR=%~dp0%
+
+::download install.ps1
+%systemroot%\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "((new-object net.webclient).DownloadFile('https://chocolatey.org/install.ps1','%DIR%install.ps1'))"
+::run installer
+%systemroot%\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "&amp; '%DIR%install.ps1' %*"
+</code></pre>
+<p>You can also get to this file by going to <a href="https://chocolatey.org/installchocolatey.cmd">https://chocolatey.org/installchocolatey.cmd</a>.</p>
+<p>If you prefer to have the install.ps1 file already, comment out the download line in the batch file and download the <a href="https://chocolatey.org/install.ps1"><code>install.ps1</code></a> from <a href="https://chocolatey.org/install.ps1">chocolatey.org</a> and save it as <code>install.ps1</code> next to the <code>installChocolatey.cmd</code> file.</p>
+<p>Run <code>installChocolatey.cmd</code> from an elevated <code>cmd.exe</code> command prompt and it will install the latest version of Chocolatey. You can not run this from <code>powershell.exe</code> without making changes to your execution policy.</p>
+<p><strong>NOTE</strong>: To create and save a <code>.cmd</code> file, please use a text editor and nothing fancy like Microsoft Word or OneNote.</p>
+<h3 id="install-using-nuget-package-manager">Install using NuGet Package Manager</h3>
+<p>When you have Visual Studio 2010+ and the NuGet extension installed (pre-installed on any newer versions of Visual Studio), you can simply type the following three commands and you will have Chocolatey installed on your machine.</p>
+<p><code>Install-Package chocolatey</code>
+<code>Initialize-Chocolatey</code>
+<code>Uninstall-Package chocolatey</code></p>
+<h3 id="install-using-nuget.exe-from-powershell">Install using NuGet.exe from PowerShell</h3>
+<p>You can also use NuGet command line to download Chocolatey:</p>
+<p><code>nuget install chocolatey</code> or <code>nuget install chocolatey -pre</code></p>
+<p>Once you download it, open PowerShell (remote unsigned), navigate to the tools folder and run:</p>
+<p><code>&amp; .\chocolateyInstall.ps1</code></p>
+<h3 id="install-downloaded-nuget-package-from-powershell">Install downloaded NuGet package from PowerShell</h3>
+<p>You can also just download and unzip the Chocolatey package (<code>.nupkg</code> is a fancy zip file):</p>
 <ol>
-<li><p>Install Chocolatey using the offline <code>Install.ps1</code> script from offline repository:</p>
-<pre><code class="language-powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('http://&lt;_FQDN_OF_REPOSITORY_&gt;:8081/repository/choco-install/Install.ps1'))
-</code></pre>
-</li>
-<li><p>Add the Nexus repository as a Chocolatey source:</p>
-<pre><code class="language-powershell">choco source add --name="'choco-hosted'" --source="'http://&lt;_FQDN_OF_REPOSITORY_&gt;:8081/repository/choco-hosted/'"
-</code></pre>
-</li>
-<li><p>Remove Chocolatey Community Repository as a souce:</p>
-<pre><code class="language-powershell">choco source remove --name="'chocolatey'"
-</code></pre>
-</li>
-<li><p>Install the <code>chocolatey-license</code> package:</p>
-<pre><code class="language-powershell">choco install chocolatey-license -y
-</code></pre>
-</li>
-<li><p>Install the <code>chocolatey.extension</code> package:</p>
-<pre><code class="language-powershell">choco install chocolatey.extension -y
-</code></pre>
-</li>
+<li>Download the <a href="https://chocolatey.org/api/v2/package/chocolatey/">Chocolatey package</a>.</li>
+<li>Ensure the downloaded nupkg is not blocked.</li>
+<li>Unzip it using any application that supports <code>zip</code> format.</li>
+<li>Open a PowerShell command shell and navigate into the unzipped package's tools folder.</li>
+<li><strong>NOTE</strong>: Ensure PowerShell execution policy is set to at least bypass or remote signed (if you have issues, you may need to set it to Unrestricted).</li>
+<li>Call <code>&amp; .\chocolateyInstall.ps1</code> to allow Chocolatey to install.</li>
+<li><strong>NOTE</strong>: This will not set Chocolatey as an installed package, so it may be a good idea to also call <code>choco upgrade chocolatey -y</code> and let it reinstall the same version, but at least it will be available for upgrades then.</li>
 </ol>
-<h3 id="central-management-server-1">Central Management Server</h3>
-<p>Again, the setup of the Chocolatey Central Management server is beyond the scope of this document (please read over and follow the detailed instructions on the <a href="../../central-management/setup">Chocolatey Central Management Setup page</a>.</p>
-<h3 id="conclusion">Conclusion</h3>
-<p>Congratulations! If you followed all the steps detailed above, you should now have a fully-functioning Chocolatey implementation deployed in your environment.</p>
-<p>It is worth mentioning that some customers may have a more bespoke environment, with the presence of proxies and additional configuration management applications. Chocolatey is engineered to be quite flexible, specifically to account for these scenarios. Please refer to the many options for installation referenced on the <a href="/en-us/licensed-extension/setup#more-install-options">Installation page</a>. Again, If you have any questions or would like to discuss more involved implementations, please feel free to reach out to your Chocolatey representative.</p>
+<h3 id="install-licensed-edition">Install licensed edition</h3>
+<p>Please see <a href="/en-us/licensed-extension/setup">installation of licensed edition</a>.</p>
+<h3 id="installing-behind-a-proxy">Installing behind a proxy</h3>
+<p>Have a proxy? Try</p>
+<ul>
+<li>Cmd.exe:</li>
+</ul>
+<pre><code class="language-sh">
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "[System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" &amp;&amp; SET PATH="%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+
+</code></pre>
+<ul>
+<li>PowerShell.exe (Ensure <a href="https://go.microsoft.com/fwlink/?LinkID=135170">Get-ExecutionPolicy</a> is at least RemoteSigned):</li>
+</ul>
+<pre><code class="language-powershell">
+[System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultCredentials; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+</code></pre>
+<h3 id="installing-behind-an-explicit-proxy">Installing behind an explicit proxy</h3>
+<p>See <a href="../guides/usage/proxy-settings-for-chocolatey#installing-chocolatey-behind-a-proxy-server">Installing Chocolatey Behind a Proxy Server</a></p>
+<h3 id="installing-to-a-different-location">Installing to a different location</h3>
+<ol>
+<li>Create a <strong>machine</strong> level (<strong>user</strong> level will also work) environment variable named <code>ChocolateyInstall</code> and set it to the folder you want Chocolatey to install to prior to installation (this environment variable must be set globally or available to PowerShell- it is not enough to simply make it available to your current command prompt session).</li>
+<li>Don't use <code>"C:\Chocolatey"</code> unless necessary.</li>
+<li>Create the folder manually.</li>
+<li>If you have already installed (and want to change the location after the fact):</li>
+</ol>
+<ul>
+<li>Follow the above steps.</li>
+<li>Install Chocolatey again.</li>
+<li>Copy/Move over the items from the old lib/bin directory.</li>
+<li>Delete your old install directory.</li>
+</ul>
+<p><strong>NOTE</strong>: There is one really important consideration when installing Chocolatey to a non-default location: Chocolatey only locks down the permissions to Admins when installed to the default location <code>%PROGRAMDATA%\Chocolatey</code>, which means the same thing as <code>%SystemDrive%\ProgramData\Chocolatey</code>.
+If you are installing to another location, you will need to handle this yourself, i.&nbsp;e. restrict write access to Admins in case you so desire.
+This is due to alternative locations could have a range of permissions that should not be changed.
+See <a href="../default-chocolatey-install-reasoning">Why does Chocolatey install where it does</a> and <a href="https://github.com/chocolatey/choco/issues/398">GitHub Issue 398</a> for more details.</p>
+<h3 id="installing-a-particular-version-of-chocolatey">Installing a particular version of Chocolatey</h3>
+<p>Set the following environment variable prior to install:</p>
+<ul>
+<li><code>chocolateyVersion</code> - controls what version of Chocolatey is installed</li>
+</ul>
+<p>In PowerShell, it looks like this:</p>
+<pre><code class="language-powershell">$env:chocolateyVersion = '0.9.9.12'
+# install script
+</code></pre>
+<p><strong>NOTE:</strong> This will only work with the installation methods that call <a href="https://chocolatey.org/install.ps1">https://chocolatey.org/install.ps1</a> as part of the install.</p>
+<h3 id="use-windows-built-in-compression-instead-of-downloading-7zip">Use Windows built-in compression instead of downloading 7zip</h3>
+<p>Set the following environment variable prior to install:</p>
+<ul>
+<li><code>chocolateyUseWindowsCompression</code> - this will bypass the download and use of 7zip.</li>
+</ul>
+<p>In PowerShell, it looks like this:</p>
+<pre><code class="language-powershell">$env:chocolateyUseWindowsCompression = 'true'
+# install script
+</code></pre>
+<p><strong>NOTE:</strong> This will only work with the installation methods that call <a href="https://chocolatey.org/install.ps1">https://chocolatey.org/install.ps1</a> as part of the install.</p>
+<h3 id="installing-with-restricted-tls">Installing with restricted TLS</h3>
+<p><strong>NOTE:</strong> Chocolatey.org now requires TLS 1.2 at a minimum. Please see <a href="https://chocolatey.org/blog/remove-support-for-old-tls-versions">https://chocolatey.org/blog/remove-support-for-old-tls-versions</a>.</p>
+<p><strong>NOTE:</strong> If your server is restricted to TLS 1.1+, you need to add additional logic to be able to download and install Chocolatey (this is not necessary when running Chocolatey normally as it does this automatically).</p>
+<p><strong>NOTE:</strong> If this is for organizational use, you should consider hosting the Chocolatey package internally and installing from there.</p>
+<p>If you see an error that looks similar to the following:</p>
+<pre><code class="language-sh">Exception calling "DownloadString" with "1" argument(s): "The underlying connection was closed: An unexpected error
+occurred on a receive."
+At line:1 char:1
++ iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/in ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : WebException
+</code></pre>
+<p>OR:</p>
+<pre><code class="language-sh">Exception calling "DownloadString" with "1" argument(s): "The request was aborted: Could not create SSL/TLS secure
+channel."
+At line:1 char:51
++ ... ess -Force; iex ((New-Object System.Net.WebClient).DownloadString('ht ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : WebException
+</code></pre>
+<p>It's possible that you are attempting to install from a server that needs to use TLS 1.1 or TLS 1.2 (has restricted the use of TLS 1.0 and SSL v3), you have some options. Chocolatey.org now requires TLS 1.2 at a minimum.</p>
+<h4 id="option-1-host-internally">Option 1 - Host Internally</h4>
+<p>If you are an organization, this is your best option and it reduces issues with rate limiting that could occur later.</p>
+<p>See <a href="https://chocolatey.org/install#organization">https://chocolatey.org/install#organization</a> for details.</p>
+<h4 id="option-2-updated-powershell-and.net">Option 2 - Updated PowerShell and .NET</h4>
+<p>Upgrade to the following:</p>
+<ul>
+<li>PowerShell v3+</li>
+<li>.NET Framework 4.5</li>
+</ul>
+<pre><code class="language-powershell">try {
+  # Set TLS 1.2 (3072) as that is the minimum required by Chocolatey.org
+  # Use integers because the enumeration value for TLS 1.2 won't exist
+  # in .NET 4.0, even though they are addressable if .NET 4.5+ is
+  # installed (.NET 4.5 is an in-place upgrade).
+  [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
+} catch {
+  Write-Warning 'Unable to set PowerShell to use TLS 1.2. This is required for contacting Chocolatey as of 03 FEB 2020. https://chocolatey.org/blog/remove-support-for-old-tls-versions. If you see underlying connection closed or trust errors, you may need to do one or more of the following: (1) upgrade to .NET Framework 4.5+ and PowerShell v3+, (2) Call [System.Net.ServicePointManager]::SecurityProtocol = 3072; in PowerShell prior to attempting installation, (3) specify internal Chocolatey package location (set $env:chocolateyDownloadUrl prior to install or host the package internally), (4) use the Download + PowerShell method of install. See https://docs.chocolatey.org/en-us/choco/installation for all install options.'
+}
+
+iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+</code></pre>
+<h4 id="option-3-manual">Option 3 - Manual</h4>
+<p>You need to download and unzip the Chocolatey package, then call the PowerShell install script from there. See the <a href="#download--powershell-method">Download + PowerShell Method</a> section below.</p>
+<h3 id="non-administrative-install">Non-Administrative install</h3>
+<p><strong>NOTE</strong>: This option should be a last resort and is considered to be a more advanced scenario - most things you do on Windows require administrative rights, especially surrounding software management, so you are going to be limited even in packages you attempt to install. If you are using the <a href="https://chocolatey.org/packages">community package repository</a>, there are over 200 packages you can install from the community repository without administrative permission - see <a href="https://chocolatey.org/packages?q=id%3Aportable+tag%3Aportable">https://chocolatey.org/packages?q=id%3Aportable+tag%3Aportable</a>.</p>
+<p>You must choose a different location than the default (see <a href="#installing-to-a-different-location">Installing to a different location</a> above). The default is a more secure location that only administrators can update.</p>
+<ol>
+<li>Save the script below as <code>ChocolateyInstallNonAdmin.ps1</code>.</li>
+<li>Use the script below, determine where you might want Chocolatey installed if it is not to <code>C:\ProgramData\chocoportable</code>.</li>
+<li>Open PowerShell.exe.</li>
+<li>Run the following <code>Set-ExecutionPolicy Bypass -Scope Process -Force;</code></li>
+<li>Run <code>.\ChocolateyInstallNonAdmin.ps1</code>.</li>
+</ol>
+<p>ChocolateyInstallNonAdmin.ps1:</p>
+<pre><code class="language-powershell"># Set directory for installation - Chocolatey does not lock
+# down the directory if not the default
+$InstallDir='C:\ProgramData\chocoportable'
+$env:ChocolateyInstall="$InstallDir"
+
+# If your PowerShell Execution policy is restrictive, you may
+# not be able to get around that. Try setting your session to
+# Bypass.
+Set-ExecutionPolicy Bypass -Scope Process -Force;
+
+# All install options - offline, proxy, etc at
+# https://chocolatey.org/install
+iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+</code></pre>
+<p>Examples of packages you can install:</p>
+<pre><code class="language-powershell">choco install puppet-agent.portable -y
+choco install ruby.portable -y
+choco install git.commandline -y
+
+# pick an editor
+#choco install visualstudiocode.portable -y # not yet available
+choco install notepadplusplus.commandline -y
+#choco install nano -y
+#choco install vim-tux.portable
+
+# What else can I install without admin rights?
+# https://chocolatey.org/packages?q=id%3Aportable
+</code></pre>
+<p>If you prefer or need cmd.exe example, please see <a href="https://gist.github.com/ferventcoder/78fa6b6f4d6e2b12c89680cbc0daec78">https://gist.github.com/ferventcoder/78fa6b6f4d6e2b12c89680cbc0daec78</a></p>
+</div>
+<h2 id="upgrading-chocolatey">Upgrading Chocolatey</h2>
+<p>Once installed, Chocolatey can be upgraded in exactly the same way as any other package that has been installed using Chocolatey.  Simply use the command to upgrade to the latest stable release of Chocolatey:</p>
+<pre><code>choco upgrade chocolatey
+</code></pre>
+<h2 id="uninstalling-chocolatey">Uninstalling Chocolatey</h2>
+<p>See <a href="./uninstallation">uninstall</a>.</p>
+<h2 id="faqs">FAQs</h2>
+<h3 id="im-having-trouble-installing-chocolatey">I'm having trouble installing Chocolatey</h3>
+<p>Make sure you've reviewed <a class="btn-collapse-target" href="#more-install-options" data-href="#moreInstallOptions">More Install Options</a> and looked over <a href="../troubleshooting">Troubleshooting</a>. If you've done those things, reach out over the mailing list or over the chat (Gitter). The links to those can be found in the open source section of <a href="https://chocolatey.org/support">https://chocolatey.org/support</a>.</p>
+<h3 id="im-getting-a-403-attempting-to-install">I'm getting a 403 attempting to install</h3>
+<p>This is addressed in <a href="../troubleshooting">Troubleshooting</a>.</p>
+<h3 id="why-isnt-there-an-msi">Why isn't there an MSI?</h3>
+<p><strong>tl;dr</strong> - Chocolatey installs as a nupkg like everything else, a PowerShell install script just ensures that.</p>
+<p>Chocolatey was born out of providing automation for Windows and doing that with packages, packages that could surround an installer but didn't necessarily need to. The Chocolatey install scripts use the Chocolatey package (a nupkg file itself) to be installed and upgraded as just another package. This means Chocolatey is "eating its own dogfood" and it is unlikely we'd offer it as an MSI (native installer)as it would fly a bit in the face of what Chocolatey represents (although it is something that we would not rule out).</p>
+<p>The installation actually ensures a couple of things:</p>
+<ul>
+<li><p>PowerShell is installed and is set up properly.</p>
+<p>PowerShell is a requirement for using Chocolatey, not just for install. It is what drives the package installation process in most cases. Every package can have binaries and/or installation/uninstallation scripts (written in PowerShell). Chocolatey is the framework and each package gets to define how it is installed, upgraded, and uninstalled. It's an extremely flexible framework that has been proven to meet the insanity that is the Windows software installation ecosystem. That flexibility would not be easily achieved without PowerShell.</p>
+<p>We do recognize there are a few organizations that disable PowerShell, so it's very likely in the future our <a href="https://chocolatey.org/compare">Business Edition</a> will meet that need. PowerShell is a staple of Windows automation, so it is not the norm for an organization in this day and age to disable PowerShell.</p>
+<p>Having an install process that uses PowerShell helps you determine quickly if Chocolatey will be able to be used in your environment.</p>
+</li>
+<li><p>You are open to doing things in a slightly different way, e.g. working with packages as opposed to installers.</p>
+<p>You are open to the concept of using packages. Some folks might say this means we are asking folks to learn to 'do things "our way" because we know better'. It's less about "knowing better" and more about learning that Chocolatey does things in a slightly different way. It does that because the world of software is not just installers. Software goes beyond Programs and Features and a system that can track all of that also needs to as well. Package management is not a new concept in the world of software, perhaps just newer to Windows. If folks are not open to that, then they are probably not going to be open to Chocolatey. And that's completely fine. Chocolatey is not for everyone. We may eventually get to more of a masses approach. Right now we are targeting a specific type of audience - those that are looking for better ways to manage software on Windows and open to looking for the best process of doing that.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
 
                              
                         </div>
@@ -1036,22 +1613,38 @@ Foreach-Object {
                                         <div class="card card-body py-0 px-xl-0 mb-3">
                                             <p class="font-weight-bold pt-3">On This Page</p>
                                             <ul class="list-unstyled py-3">
-                                                    <li class="level-2"><a href="#components">Components</a></li>
                                                     <li class="level-2"><a href="#requirements">Requirements</a></li>
-                                                    <li class="level-3"><a href="#administrator-workstation">Administrator Workstation</a></li>
-                                                    <li class="level-3"><a href="#repository-server-nexus">Repository Server (Nexus):</a></li>
-                                                    <li class="level-3"><a href="#deploymentconfiguration-management-solution">Deployment/Configuration Management Solution</a></li>
-                                                    <li class="level-3"><a href="#central-management-server">Central Management Server</a></li>
-                                                    <li class="level-3"><a href="#clientsnodes">Clients/Nodes:</a></li>
-                                                    <li class="level-2"><a href="#installation">Installation</a></li>
-                                                    <li class="level-3"><a href="#preparation-on-administrator-workstation">Preparation on Administrator Workstation</a></li>
-                                                    <li class="level-3"><a href="#repository-server-setup">Repository Server Setup</a></li>
-                                                    <li class="level-3"><a href="#back-on-administrative-workstation">Back on Administrative Workstation</a></li>
-                                                    <li class="level-3"><a href="#client-nodes">Client Nodes</a></li>
-                                                    <li class="level-3"><a href="#central-management-server-1">Central Management Server</a></li>
-                                                    <li class="level-3"><a href="#conclusion">Conclusion</a></li>
+                                                    <li class="level-2"><a href="#installing-chocolatey">Installing Chocolatey</a></li>
+                                                    <li class="level-4"><a href="#install-with-cmd.exe">Install with cmd.exe</a></li>
+                                                    <li class="level-4"><a href="#install-with-powershell.exe">Install with PowerShell.exe</a></li>
+                                                    <li class="level-4"><a href="#additional-considerations">Additional considerations</a></li>
+                                                    <li class="level-2"><a href="#more-install-options">More Install Options</a></li>
+                                                    <li class="level-3"><a href="#install-from-powershell-v3">Install from PowerShell v3+</a></li>
+                                                    <li class="level-3"><a href="#completely-offline-install">Completely offline install</a></li>
+                                                    <li class="level-3"><a href="#install-with-puppet">Install with Puppet</a></li>
+                                                    <li class="level-3"><a href="#install-using-powershell-from-cmd.exe">Install using PowerShell from cmd.exe</a></li>
+                                                    <li class="level-3"><a href="#install-using-nuget-package-manager">Install using NuGet Package Manager</a></li>
+                                                    <li class="level-3"><a href="#install-using-nuget.exe-from-powershell">Install using NuGet.exe from PowerShell</a></li>
+                                                    <li class="level-3"><a href="#install-downloaded-nuget-package-from-powershell">Install downloaded NuGet package from PowerShell</a></li>
+                                                    <li class="level-3"><a href="#install-licensed-edition">Install licensed edition</a></li>
+                                                    <li class="level-3"><a href="#installing-behind-a-proxy">Installing behind a proxy</a></li>
+                                                    <li class="level-3"><a href="#installing-behind-an-explicit-proxy">Installing behind an explicit proxy</a></li>
+                                                    <li class="level-3"><a href="#installing-to-a-different-location">Installing to a different location</a></li>
+                                                    <li class="level-3"><a href="#installing-a-particular-version-of-chocolatey">Installing a particular version of Chocolatey</a></li>
+                                                    <li class="level-3"><a href="#use-windows-built-in-compression-instead-of-downloading-7zip">Use Windows built-in compression instead of downloading 7zip</a></li>
+                                                    <li class="level-3"><a href="#installing-with-restricted-tls">Installing with restricted TLS</a></li>
+                                                    <li class="level-4"><a href="#option-1-host-internally">Option 1 - Host Internally</a></li>
+                                                    <li class="level-4"><a href="#option-2-updated-powershell-and.net">Option 2 - Updated PowerShell and .NET</a></li>
+                                                    <li class="level-4"><a href="#option-3-manual">Option 3 - Manual</a></li>
+                                                    <li class="level-3"><a href="#non-administrative-install">Non-Administrative install</a></li>
+                                                    <li class="level-2"><a href="#upgrading-chocolatey">Upgrading Chocolatey</a></li>
+                                                    <li class="level-2"><a href="#uninstalling-chocolatey">Uninstalling Chocolatey</a></li>
+                                                    <li class="level-2"><a href="#faqs">FAQs</a></li>
+                                                    <li class="level-3"><a href="#im-having-trouble-installing-chocolatey">I'm having trouble installing Chocolatey</a></li>
+                                                    <li class="level-3"><a href="#im-getting-a-403-attempting-to-install">I'm getting a 403 attempting to install</a></li>
+                                                    <li class="level-3"><a href="#why-isnt-there-an-msi">Why isn't there an MSI?</a></li>
                                             </ul>
-                                                <p class="font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/guides/organizations/chocolatey-for-business-quick-start-guide.md"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Edit This Page</a></p>
+                                                <p class="font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/choco/setup.md"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Edit This Page</a></p>
                                         </div>
                                     </div>
                                 </div>
