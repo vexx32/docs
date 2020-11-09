@@ -3306,6 +3306,8 @@ img { max-width: 100%; height: auto; }
 
 .modal-content .modal-header, .modal-content .modal-footer { border-color: var(--border); }
 
+.modal-content .modal-header, .modal-content .modal-body, .modal-content .modal-footer { background: #fff; background: var(--background-light); }
+
 .modal-content .modal-header .close { color: var(--text); }
 
 /*Badges*/
@@ -3455,7 +3457,7 @@ label[for="themeToggle"]:focus-within { border-radius: 1rem; box-shadow: 0 0 0 0
 
 @media (max-width: 767.98px) { #searchBox { z-index: 99999; }
   #searchBox .modal-dialog { margin: 0; max-width: 100vw; }
-  #searchBox .modal-dialog .modal-content { min-height: 100vh; border-radius: 0; } }
+  #searchBox .modal-dialog .modal-content { height: 100vh; height: calc(var(--vh, 1vh) * 100); border-radius: 0; } }
 
 @media (min-width: 768px) { #leftSidebarNav .loader-container { background: #fff; background: var(--background-light); position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 1; visibility: hidden; animation: loaderFade 1s; }
   #leftSidebarNav .loader-container .loader { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(92, 159, 216, 0.25); -webkit-animation: loaderLines 1s infinite ease-in-out; animation: loaderLines 1s infinite ease-in-out; width: 1em; height: 4em; color: rgba(92, 159, 216, 0.25); text-indent: -9999em; margin: 88px auto; font-size: 11px; -webkit-transform: translateZ(0); -ms-transform: translateZ(0); transform: translateZ(0); -webkit-animation-delay: -0.16s; animation-delay: -0.16s; }
