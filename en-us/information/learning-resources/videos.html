@@ -57,20 +57,6 @@
             </a>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <button type="button" class="btn btn-search" data-toggle="modal" data-target="#searchBox">
-                        <span class="d-flex justify-content-between align-items-center">
-                            <span>
-                                <i class="fas fa-search" aria-hidden="true"></i>
-                                <span class="d-none d-sm-inline-block">Search...</span>
-                            </span>
-                            <span class="d-none d-md-block">
-                                <span class="badge badge-key badge-primary search-key"></span>
-                                <span class="badge badge-key badge-primary">k</span>
-                            </span>
-                        </span>
-                    </button>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="https://github.com/chocolatey/docs" aria-label="Edit on GitHub"><i class="fab fa-2x fa-github" aria-hidden="true"></i></a>
                 </li>
                 <li class="nav-item">
@@ -87,7 +73,21 @@
                         </div>
                     </label>
                 </li>
+                 <li class="nav-item d-md-none">
+                    <button type="button" aria-label="Search documentation" class="btn btn-search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </li>
             </ul>
+            <form id="searchBox" class="form-inline d-none d-md-flex" role="search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <input type="search" class="form-control" id="searchQuery" placeholder="Search..." aria-label="Search" autofocus />
+                <span class="d-none d-md-flex search-key-container">
+                    <span class="badge badge-key badge-primary search-key"></span>
+                    <span class="badge badge-key badge-primary">k</span>
+                </span>
+            </form>
+            <button type="button" aria-label="Close search" class="btn btn-search-close btn-link d-none">Close</button>
         </nav>
         <div class="container-fluid">
             <div class="row">
@@ -110,10 +110,10 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-68dd43ed-ab9c-455f-a95f-0a0b49ed4994" aria-label="collapse or expand navigation" href="#id-68dd43ed-ab9c-455f-a95f-0a0b49ed4994"></button>
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-113ca3b8-aa8d-4b2f-9e85-25c1b9faf9dd" aria-label="collapse or expand navigation" href="#id-113ca3b8-aa8d-4b2f-9e85-25c1b9faf9dd"></button>
                                                 <a href="/en-us/features">Features</a>
                                             </div>
-                                            <div class="collapse" id="id-68dd43ed-ab9c-455f-a95f-0a0b49ed4994">
+                                            <div class="collapse" id="id-113ca3b8-aa8d-4b2f-9e85-25c1b9faf9dd">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/features/made-for-automation">Made for Automation</a>
@@ -174,10 +174,10 @@
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-33961054-1612-4ba8-9eb8-53bb43332849" aria-label="collapse or expand navigation" href="#id-33961054-1612-4ba8-9eb8-53bb43332849"></button>
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-2d52747c-aed8-4898-b8e4-d54ea206730c" aria-label="collapse or expand navigation" href="#id-2d52747c-aed8-4898-b8e4-d54ea206730c"></button>
                                                                     <a href="/en-us/features/package-synchronization">Package Synchronization</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-33961054-1612-4ba8-9eb8-53bb43332849">
+                                                                <div class="collapse" id="id-2d52747c-aed8-4898-b8e4-d54ea206730c">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/features/package-synchronization/automatic-sync">Automatic Sync (Pro&#x2B;)</a>
@@ -208,10 +208,10 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-9e73e8be-f0e1-48f1-8fe2-f464ad4cbc35" aria-label="collapse or expand navigation" href="#id-9e73e8be-f0e1-48f1-8fe2-f464ad4cbc35"></button>
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-c1d40e35-54fa-495f-ae86-0cacb8aab9af" aria-label="collapse or expand navigation" href="#id-c1d40e35-54fa-495f-ae86-0cacb8aab9af"></button>
                                                 <a href="/en-us/choco">Chocolatey CLI (choco)</a>
                                             </div>
-                                            <div class="collapse" id="id-9e73e8be-f0e1-48f1-8fe2-f464ad4cbc35">
+                                            <div class="collapse" id="id-c1d40e35-54fa-495f-ae86-0cacb8aab9af">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/choco/release-notes">Release Notes</a>
@@ -224,10 +224,10 @@
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-fabd6a5a-53d7-42f5-bdd8-0ef8a20e256f" aria-label="collapse or expand navigation" href="#id-fabd6a5a-53d7-42f5-bdd8-0ef8a20e256f"></button>
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-af9ec200-0551-4277-973f-f2559a1ace60" aria-label="collapse or expand navigation" href="#id-af9ec200-0551-4277-973f-f2559a1ace60"></button>
                                                                     <a href="/en-us/choco/commands">Commands</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-fabd6a5a-53d7-42f5-bdd8-0ef8a20e256f">
+                                                                <div class="collapse" id="id-af9ec200-0551-4277-973f-f2559a1ace60">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/choco/commands/config">Config</a>
@@ -300,10 +300,10 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-9d880eb6-0243-4445-9448-0bfe7b38f06b" aria-label="collapse or expand navigation" href="#id-9d880eb6-0243-4445-9448-0bfe7b38f06b"></button>
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-78b49264-1ff1-42ed-ad6c-1513edf8ba2c" aria-label="collapse or expand navigation" href="#id-78b49264-1ff1-42ed-ad6c-1513edf8ba2c"></button>
                                                 <a href="/en-us/chocolatey-gui">Chocolatey GUI</a>
                                             </div>
-                                            <div class="collapse" id="id-9d880eb6-0243-4445-9448-0bfe7b38f06b">
+                                            <div class="collapse" id="id-78b49264-1ff1-42ed-ad6c-1513edf8ba2c">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/chocolatey-gui/release-notes">Release Notes</a>
@@ -319,20 +319,20 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-70399011-4952-4634-8166-22615b653fe9" aria-label="collapse or expand navigation" href="#id-70399011-4952-4634-8166-22615b653fe9"></button>
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-fee24af0-8172-48a5-868c-f7768d906c2d" aria-label="collapse or expand navigation" href="#id-fee24af0-8172-48a5-868c-f7768d906c2d"></button>
                                                 <a href="/en-us/community-packages">Community Packages (chocolatey.org)</a>
                                             </div>
-                                            <div class="collapse" id="id-70399011-4952-4634-8166-22615b653fe9">
+                                            <div class="collapse" id="id-fee24af0-8172-48a5-868c-f7768d906c2d">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/community-packages/community-packages-disclaimer">Chocolatey.org Packages Disclaimer</a>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-1fe60b01-00d7-4536-bd10-143a45142286" aria-label="collapse or expand navigation" href="#id-1fe60b01-00d7-4536-bd10-143a45142286"></button>
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-fe29362c-320a-407e-9e3e-cbbfcf854612" aria-label="collapse or expand navigation" href="#id-fe29362c-320a-407e-9e3e-cbbfcf854612"></button>
                                                                     <a href="/en-us/community-packages/users">Users</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-1fe60b01-00d7-4536-bd10-143a45142286">
+                                                                <div class="collapse" id="id-fe29362c-320a-407e-9e3e-cbbfcf854612">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/community-packages/users/package-triage-process">Request Package Fixes/Updates</a>
@@ -342,10 +342,10 @@
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-3be41b48-dbe6-4425-be00-1cfb519675dd" aria-label="collapse or expand navigation" href="#id-3be41b48-dbe6-4425-be00-1cfb519675dd"></button>
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-d055e3bd-cffd-4485-a7b6-cf049c6a99d8" aria-label="collapse or expand navigation" href="#id-d055e3bd-cffd-4485-a7b6-cf049c6a99d8"></button>
                                                                     <a href="/en-us/community-packages/maintainers">Maintainers</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-3be41b48-dbe6-4425-be00-1cfb519675dd">
+                                                                <div class="collapse" id="id-d055e3bd-cffd-4485-a7b6-cf049c6a99d8">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/community-packages/maintainers/moderation">Chocolatey.org Moderation</a>
@@ -364,10 +364,10 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-72b8a816-01b1-444b-9dc9-a0dfaf937352" aria-label="collapse or expand navigation" href="#id-72b8a816-01b1-444b-9dc9-a0dfaf937352"></button>
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-f6874568-cf78-4a94-8113-c0386b6611e9" aria-label="collapse or expand navigation" href="#id-f6874568-cf78-4a94-8113-c0386b6611e9"></button>
                                                 <a href="/en-us/licensed-extension">Chocolatey Licensed Extension</a>
                                             </div>
-                                            <div class="collapse" id="id-72b8a816-01b1-444b-9dc9-a0dfaf937352">
+                                            <div class="collapse" id="id-f6874568-cf78-4a94-8113-c0386b6611e9">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/licensed-extension/release-notes">Release Notes</a>
@@ -380,10 +380,10 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-e968b534-c522-4140-bc0e-52cddb09f078" aria-label="collapse or expand navigation" href="#id-e968b534-c522-4140-bc0e-52cddb09f078"></button>
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-491aad1f-8e46-45f9-83d9-97f9b5db1b1c" aria-label="collapse or expand navigation" href="#id-491aad1f-8e46-45f9-83d9-97f9b5db1b1c"></button>
                                                 <a href="/en-us/agent">Chocolatey Agent</a>
                                             </div>
-                                            <div class="collapse" id="id-e968b534-c522-4140-bc0e-52cddb09f078">
+                                            <div class="collapse" id="id-491aad1f-8e46-45f9-83d9-97f9b5db1b1c">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/agent/release-notes">Release Notes</a>
@@ -396,20 +396,20 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-5b961209-e2d9-471d-9be9-a4809fef941a" aria-label="collapse or expand navigation" href="#id-5b961209-e2d9-471d-9be9-a4809fef941a"></button>
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-7a8a7694-8fbb-48cf-bdcb-7b8f25f1c512" aria-label="collapse or expand navigation" href="#id-7a8a7694-8fbb-48cf-bdcb-7b8f25f1c512"></button>
                                                 <a href="/en-us/central-management">Chocolatey Central Management (CCM)</a>
                                             </div>
-                                            <div class="collapse" id="id-5b961209-e2d9-471d-9be9-a4809fef941a">
+                                            <div class="collapse" id="id-7a8a7694-8fbb-48cf-bdcb-7b8f25f1c512">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/central-management/release-notes">Release Notes</a>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-fe0a0c92-e202-4e55-90fd-0ae36eea363d" aria-label="collapse or expand navigation" href="#id-fe0a0c92-e202-4e55-90fd-0ae36eea363d"></button>
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-ab9dc77a-a410-4371-88f4-bf964f396615" aria-label="collapse or expand navigation" href="#id-ab9dc77a-a410-4371-88f4-bf964f396615"></button>
                                                                     <a href="/en-us/central-management/setup">Setup</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-fe0a0c92-e202-4e55-90fd-0ae36eea363d">
+                                                                <div class="collapse" id="id-ab9dc77a-a410-4371-88f4-bf964f396615">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/central-management/setup/database">Database</a>
@@ -431,10 +431,10 @@
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-a3a64a33-0112-4cd3-96c8-543108e718db" aria-label="collapse or expand navigation" href="#id-a3a64a33-0112-4cd3-96c8-543108e718db"></button>
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-c5dcf60d-cd00-4ee2-8582-456cf5a7ac74" aria-label="collapse or expand navigation" href="#id-c5dcf60d-cd00-4ee2-8582-456cf5a7ac74"></button>
                                                                     <a href="/en-us/central-management/usage">Usage</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-a3a64a33-0112-4cd3-96c8-543108e718db">
+                                                                <div class="collapse" id="id-c5dcf60d-cd00-4ee2-8582-456cf5a7ac74">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/central-management/usage/computers">Computers</a>
@@ -459,20 +459,20 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-7d34358a-b542-4c80-b305-778a34f5f325" aria-label="collapse or expand navigation" href="#id-7d34358a-b542-4c80-b305-778a34f5f325"></button>
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-8750de18-7c14-4069-a21b-9830148376c5" aria-label="collapse or expand navigation" href="#id-8750de18-7c14-4069-a21b-9830148376c5"></button>
                                                 <a href="/en-us/quick-deployment">Quick Deployment Environment (QDE)</a>
                                             </div>
-                                            <div class="collapse" id="id-7d34358a-b542-4c80-b305-778a34f5f325">
+                                            <div class="collapse" id="id-8750de18-7c14-4069-a21b-9830148376c5">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/quick-deployment/release-notes">Release Notes</a>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-85a8ac32-8b83-45cc-9ff4-24addf89f98a" aria-label="collapse or expand navigation" href="#id-85a8ac32-8b83-45cc-9ff4-24addf89f98a"></button>
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-1b272a60-91f4-43b8-9997-114b036f8b2d" aria-label="collapse or expand navigation" href="#id-1b272a60-91f4-43b8-9997-114b036f8b2d"></button>
                                                                     <a href="/en-us/quick-deployment/setup">Setup</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-85a8ac32-8b83-45cc-9ff4-24addf89f98a">
+                                                                <div class="collapse" id="id-1b272a60-91f4-43b8-9997-114b036f8b2d">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/quick-deployment/setup/desktop-readme">Desktop Readme</a>
@@ -494,10 +494,10 @@
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-909195a4-b4f9-4bcb-a0bb-c11fbad6de20" aria-label="collapse or expand navigation" href="#id-909195a4-b4f9-4bcb-a0bb-c11fbad6de20"></button>
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-8487e68c-a13a-4444-8313-9ba4921bb5cc" aria-label="collapse or expand navigation" href="#id-8487e68c-a13a-4444-8313-9ba4921bb5cc"></button>
                                                                     <a href="/en-us/quick-deployment/v1">QDE v1</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-909195a4-b4f9-4bcb-a0bb-c11fbad6de20">
+                                                                <div class="collapse" id="id-8487e68c-a13a-4444-8313-9ba4921bb5cc">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/quick-deployment/v1/setup">Setup</a>
@@ -522,10 +522,10 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-d2e5048b-5551-4bd7-ade1-3a650a898e5f" aria-label="collapse or expand navigation" href="#id-d2e5048b-5551-4bd7-ade1-3a650a898e5f"></button>
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-1c6381e0-2592-4d1e-b479-5f343413679e" aria-label="collapse or expand navigation" href="#id-1c6381e0-2592-4d1e-b479-5f343413679e"></button>
                                                 <a href="/en-us/create">Package Creation</a>
                                             </div>
-                                            <div class="collapse" id="id-d2e5048b-5551-4bd7-ade1-3a650a898e5f">
+                                            <div class="collapse" id="id-1c6381e0-2592-4d1e-b479-5f343413679e">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <a class="nav-link pl-5" href="/en-us/create/create-packages">Create Packages</a>
@@ -535,10 +535,10 @@
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-ddea07d7-f92d-4e6e-a855-dbfd72f43f8f" aria-label="collapse or expand navigation" href="#id-ddea07d7-f92d-4e6e-a855-dbfd72f43f8f"></button>
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-bbd53025-6fc7-46b6-82f3-65c3d6da292f" aria-label="collapse or expand navigation" href="#id-bbd53025-6fc7-46b6-82f3-65c3d6da292f"></button>
                                                                     <a href="/en-us/create/commands">Commands</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-ddea07d7-f92d-4e6e-a855-dbfd72f43f8f">
+                                                                <div class="collapse" id="id-bbd53025-6fc7-46b6-82f3-65c3d6da292f">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/create/commands/new">New</a>
@@ -557,10 +557,10 @@
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-78e5895d-7665-4b59-bea4-13f35694f288" aria-label="collapse or expand navigation" href="#id-78e5895d-7665-4b59-bea4-13f35694f288"></button>
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-2f8d9b76-d44a-4725-b342-caf73bf6e56a" aria-label="collapse or expand navigation" href="#id-2f8d9b76-d44a-4725-b342-caf73bf6e56a"></button>
                                                                     <a href="/en-us/create/functions">PowerShell Reference</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-78e5895d-7665-4b59-bea4-13f35694f288">
+                                                                <div class="collapse" id="id-2f8d9b76-d44a-4725-b342-caf73bf6e56a">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/create/functions/format-filesize">Format-FileSize</a>
@@ -720,17 +720,17 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-b7b5fa75-2191-4d6f-b82d-47e4e1440e2e" aria-label="collapse or expand navigation" href="#id-b7b5fa75-2191-4d6f-b82d-47e4e1440e2e"></button>
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-3f6c8ea1-cedb-4ee5-b71f-a894ec8dd47e" aria-label="collapse or expand navigation" href="#id-3f6c8ea1-cedb-4ee5-b71f-a894ec8dd47e"></button>
                                                 <a href="/en-us/guides">Guides</a>
                                             </div>
-                                            <div class="collapse" id="id-b7b5fa75-2191-4d6f-b82d-47e4e1440e2e">
+                                            <div class="collapse" id="id-3f6c8ea1-cedb-4ee5-b71f-a894ec8dd47e">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-4202acae-1502-43c5-add5-3828947eec45" aria-label="collapse or expand navigation" href="#id-4202acae-1502-43c5-add5-3828947eec45"></button>
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-f2fff788-8edf-4dda-bcbd-4100ed77a576" aria-label="collapse or expand navigation" href="#id-f2fff788-8edf-4dda-bcbd-4100ed77a576"></button>
                                                                     <a href="/en-us/guides/usage">Using Chocolatey</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-4202acae-1502-43c5-add5-3828947eec45">
+                                                                <div class="collapse" id="id-f2fff788-8edf-4dda-bcbd-4100ed77a576">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/guides/usage/proxy-settings-for-chocolatey">Use Chocolatey w/Proxy Server</a>
@@ -749,10 +749,10 @@
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-47933f60-31e2-41bb-b1a5-50329e1c6f56" aria-label="collapse or expand navigation" href="#id-47933f60-31e2-41bb-b1a5-50329e1c6f56"></button>
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-860800e3-3b8d-43b8-943e-2c3fa64d59b7" aria-label="collapse or expand navigation" href="#id-860800e3-3b8d-43b8-943e-2c3fa64d59b7"></button>
                                                                     <a href="/en-us/guides/create">Package Creation</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-47933f60-31e2-41bb-b1a5-50329e1c6f56">
+                                                                <div class="collapse" id="id-860800e3-3b8d-43b8-943e-2c3fa64d59b7">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/guides/create/recompile-packages">Manually Recompile Packages, Embedding/Internalizing Remote Resources</a>
@@ -771,10 +771,10 @@
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-6018516f-c9bc-4d7b-b486-8f5de23e4e18" aria-label="collapse or expand navigation" href="#id-6018516f-c9bc-4d7b-b486-8f5de23e4e18"></button>
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-c493ec33-585f-4e52-8d5e-0f80bac7da43" aria-label="collapse or expand navigation" href="#id-c493ec33-585f-4e52-8d5e-0f80bac7da43"></button>
                                                                     <a href="/en-us/guides/organizations">Organizations</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-6018516f-c9bc-4d7b-b486-8f5de23e4e18">
+                                                                <div class="collapse" id="id-c493ec33-585f-4e52-8d5e-0f80bac7da43">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/guides/organizations/organizational-deployment-guide">Set up Chocolatey for Internal/organizational use</a>
@@ -796,17 +796,17 @@
                                         </li>
                                         <li class="nav-item">
                                             <div class="nav-link nav-link-collapse d-flex align-items-start active">
-                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-57dafce1-f045-4b4a-9a0d-40286a4b2185" aria-label="collapse or expand navigation" href="#id-57dafce1-f045-4b4a-9a0d-40286a4b2185"></button>
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-171f9c0a-593d-4d2d-b1e0-6cad518e3d0d" aria-label="collapse or expand navigation" href="#id-171f9c0a-593d-4d2d-b1e0-6cad518e3d0d"></button>
                                                 <a href="/en-us/information">Information</a>
                                             </div>
-                                            <div class="collapse" id="id-57dafce1-f045-4b4a-9a0d-40286a4b2185">
+                                            <div class="collapse" id="id-171f9c0a-593d-4d2d-b1e0-6cad518e3d0d">
                                                 <ul class="navbar-nav">
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex align-items-start">
-                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-f1dd7a2f-0339-422c-a56e-88c192ae3745" aria-label="collapse or expand navigation" href="#id-f1dd7a2f-0339-422c-a56e-88c192ae3745"></button>
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-cbff9f5c-84d9-4392-8f08-ecbb1488794f" aria-label="collapse or expand navigation" href="#id-cbff9f5c-84d9-4392-8f08-ecbb1488794f"></button>
                                                                     <a href="/en-us/information/release-notes">Release Notes</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-f1dd7a2f-0339-422c-a56e-88c192ae3745">
+                                                                <div class="collapse" id="id-cbff9f5c-84d9-4392-8f08-ecbb1488794f">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/information/release-notes/open-source">Open Source</a>
@@ -828,10 +828,10 @@
                                                             </li>
                                                             <li class="nav-item">
                                                                 <div class="nav-link nav-link-collapse d-flex align-items-start active">
-                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-716f7b11-9faf-4ad6-9f44-60152d519e93" aria-label="collapse or expand navigation" href="#id-716f7b11-9faf-4ad6-9f44-60152d519e93"></button>
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-5c975455-964e-4b2f-a363-4de019220c8b" aria-label="collapse or expand navigation" href="#id-5c975455-964e-4b2f-a363-4de019220c8b"></button>
                                                                     <a href="/en-us/information/learning-resources">More Learning Resources</a>
                                                                 </div>
-                                                                <div class="collapse" id="id-716f7b11-9faf-4ad6-9f44-60152d519e93">
+                                                                <div class="collapse" id="id-5c975455-964e-4b2f-a363-4de019220c8b">
                                                                     <ul class="navbar-nav">
                                                                             <li class="nav-item">
                                                                                 <a class="nav-link pl-c4" href="/en-us/information/learning-resources/resources">Resources</a>
@@ -978,8 +978,10 @@
                                     <button class="btn btn-link btn-collapse font-weight-bold w-100 d-xl-none mb-2" type="button" data-toggle="collapse" data-target="#rightSidebar" aria-expanded="false" aria-controls="rightSidebar">Jump to Section</button>
                                     <div id="rightSidebar" class="sticky-top collapse">
                                         <div class="card card-body py-0 px-xl-0 mb-3">
+                                                <p class="font-weight-bold pt-3"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/information/learning-resources/videos.md"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Edit This Page</a></p>
+                                                <hr class="m-0" />
                                             <p class="font-weight-bold pt-3">On This Page</p>
-                                            <ul class="list-unstyled py-3">
+                                            <ul class="list-unstyled pb-3">
                                                     <li class="level-2"><a href="#training">Training</a></li>
                                                     <li class="level-2"><a href="#community">Community</a></li>
                                                     <li class="level-3"><a href="#section">2018</a></li>
@@ -992,7 +994,6 @@
                                                     <li class="level-3"><a href="#section-7">2011</a></li>
                                                     <li class="level-2"><a href="#case-studies">Case Studies</a></li>
                                             </ul>
-                                                <p class="font-weight-bold"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/information/learning-resources/videos.md"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Edit This Page</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -1005,31 +1006,9 @@
             <button type="button" class="btn btn-light btn-sm d-none d-md-inline-block" data-dismiss="alert" aria-label="Close">I accept</button>
             <button type="button" class="btn btn-light d-md-none" data-dismiss="alert" aria-label="Close">I accept</button>
         </div>
-        <div class="modal fade" id="searchBox" tabindex="-1" role="dialog" aria-labelledby="searchBox" aria-describedby="Search documentation" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Search Documentation</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body p-0">
-                        <form role="search" class="active">
-                            <i class="fas fa-search fa-lg" aria-hidden="true"></i>
-                            <input type="search" class="form-control form-control-lg" id="searchQuery" placeholder="Search..." aria-label="Search" autofocus />
-                        </form>
-                    </div>
-                    <div class="modal-footer d-flex justify-content-between">
-                        <a href="https://www.algolia.com/ref/docsearch/?utm_source=docsearch&utm_medium=link&utm_term=footer&utm_campaign=" target="_blank" rel="noreferrer"><div class="img-algolia"></div></a>
-                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <footer class="p-3 small text-center">
             <span>© 2020 Chocolatey Software, Inc.</span>
-            <span>0.0.0-preview.0.137</span>
+            <span>0.0.0-preview.0.138</span>
         </footer>
 
         <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
@@ -1049,7 +1028,7 @@
                 apiKey: '8148a7b5d009b8590bb85191c6f1823c',
                 indexName: 'chocolatey',
                 inputSelector: '#searchQuery',
-                debug: true // Set debug to true if you want to inspect the dropdown
+                debug: false // Set debug to true if you want to inspect the dropdown
             });
         </script>
     </body>
