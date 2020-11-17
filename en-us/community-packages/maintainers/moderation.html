@@ -1,0 +1,1321 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Chocolatey is software management automation for Windows that wraps installers, executables, zips, and scripts into compiled packages. Chocolatey integrates w/SCCM, Puppet, Chef, etc. Chocolatey is trusted by businesses to manage software deployments." />
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@chocolateynuget">
+        <meta name="twitter:title" content="Chocolatey Software | Chocolatey.org Moderation">
+        <meta name="twitter:image" content="https://docs.chocolatey.org/assets/images/twitter-share.png">
+        <meta property="og:title" content="Chocolatey Software | Chocolatey.org Moderation" />
+        <meta property="og:description" content="Chocolatey is software management automation for Windows that wraps installers, executables, zips, and scripts into compiled packages. Chocolatey integrates w/SCCM, Puppet, Chef, etc. Chocolatey is trusted by businesses to manage software deployments." />
+        <meta property="og:site_name" content="Chocolatey" />
+        <meta property="og:type" content="product" />
+        <meta property="og:image" content="https://chocolatey.org/content/images/icon_slogan.png" />
+        <meta property="og:url" content="https://docs.chocolatey.org/en-us/community-packages/maintainers/moderation" />
+        <meta property="product:brand" content="Chocolatey" />
+        <meta property="product:category" content="software" />
+        <meta name="flattr:id" content="mqgjkp">
+        <meta property="DC.title" content="Chocolatey Software | Chocolatey.org Moderation" />
+        <meta property="copyright" content="Chocolatey is Copyright 2020 - 2020 Chocolatey Software,Inc." />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" data-no-mirror>
+        <link rel="stylesheet" href="/assets/css/styles.css" />
+        <link rel="stylesheet" href="/assets/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script>
+            if(!/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+                const theme = localStorage.getItem('theme'), html = document.getElementsByTagName("html")[0];
+                if(theme){if(theme == 'dark') {html.setAttribute("data-user-color-scheme", "dark");}else{html.setAttribute("data-user-color-scheme", "light");}}
+            }
+        </script>
+
+        <title>Chocolatey Software | Chocolatey.org Moderation</title>
+    </head>
+    <body>
+                <div id="topNoticeAlert" class="alert alert-danger alert-dismissible alert-dismissible-center fade show d-none" role="alert">
+                    <p class="mb-0"><a href='https://chocolatey.org/covid-19'>Here's how we're responding to COVID-19 plus resources to help</a></p>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+        <div id="globalNav">
+            <div class="container-fluid">
+                <ul class="nav global-nav">
+    <li class="nav-item"><a class="nav-link" href="https://chocolatey.org" target="_blank" rel="noreferrer"><span class="d-sm-none">Back to </span>chocolatey.org</a></li>
+    <li class="nav-item"><a class="nav-link" href="https://chocolatey.org/community" target="_blank" rel="noreferrer"><span class="d-sm-none">Back to the </span>Community</a></li>
+    <li class="nav-item"><a class="nav-link" href="https://chocolatey.org/install" target="_blank" rel="noreferrer">Install</a></li>
+</ul>
+            </div>
+        </div>
+        <nav id="topNav" class="navbar">
+            <a class="navbar-brand" href="/">
+                <img class="d-md-none" src="/assets/logo.svg" alt="Chocolatey" />
+                <img class="d-none d-md-block" src="/assets/logo-square.svg" alt="Chocolatey" />
+            </a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/chocolatey/docs" aria-label="Edit on GitHub"><i class="fab fa-2x fa-github" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <label class="mb-0" for="themeToggle">
+                    <input id="themeToggle" class="toggle-checkbox" type="checkbox" aria-label="Toggle theme settings" />
+                        <div class="toggle-slot">
+                            <div class="sun-icon-wrapper">
+                                <div class="sun-icon fas fa-sun"></div>
+                            </div>
+                            <div class="toggle-button"></div>
+                            <div class="moon-icon-wrapper">
+                                <div class="moon-icon fas fa-moon"></div>
+                            </div>
+                        </div>
+                    </label>
+                </li>
+                 <li class="nav-item d-md-none">
+                    <button type="button" aria-label="Search documentation" class="btn btn-search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </li>
+            </ul>
+            <form id="searchBox" class="form-inline d-none d-md-flex" role="search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <input type="search" class="form-control" id="searchQuery" placeholder="Search..." aria-label="Search" autofocus />
+                <span class="d-none d-md-flex search-key-container">
+                    <span class="badge badge-key badge-primary search-key"></span>
+                    <span class="badge badge-key badge-primary">k</span>
+                </span>
+            </form>
+            <button type="button" aria-label="Close search" class="btn btn-search-close btn-link d-none">Close</button>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="leftSidebarNav" class="col-md-3 col-xl-2 p-0">
+                    <div class="loader-container"><div class="loader"></div></div>
+                    <nav class="navbar navbar-expand-md p-0">
+                        <button class="navbar-toggler btn" type="button" data-toggle="collapse" data-target="#leftSidebar" aria-expanded="false" aria-controls="leftSidebar" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+                        <div id="leftSidebar" class="collapse navbar-collapse">
+                            <ul class="nav global-nav">
+    <li class="nav-item"><a class="nav-link" href="https://chocolatey.org" target="_blank" rel="noreferrer"><span class="d-sm-none">Back to </span>chocolatey.org</a></li>
+    <li class="nav-item"><a class="nav-link" href="https://chocolatey.org/community" target="_blank" rel="noreferrer"><span class="d-sm-none">Back to the </span>Community</a></li>
+    <li class="nav-item"><a class="nav-link" href="https://chocolatey.org/install" target="_blank" rel="noreferrer">Install</a></li>
+</ul>
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                        <a class="nav-link pl-c2" href="/en-us">Chocolatey - Software Management for Windows</a>
+                                </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link pl-c2" href="/en-us/why">Why Chocolatey?</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-a1ba423a-d9ba-4c69-ba7a-5bdd7b15e718" aria-label="collapse or expand navigation" href="#id-a1ba423a-d9ba-4c69-ba7a-5bdd7b15e718"></button>
+                                                <a href="/en-us/features">Features</a>
+                                            </div>
+                                            <div class="collapse" id="id-a1ba423a-d9ba-4c69-ba7a-5bdd7b15e718">
+                                                <ul class="navbar-nav">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/made-for-automation">Made for Automation</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/powershell">Packaging for the masses - PowerShell</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/package-anything">Package anything</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/create-packages">Create your own packages</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/host-packages">Host packages internally</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/integrations">Integrates with everything</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/extensions">Extend Chocolatey With PowerShell Modules (extensions)</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/shim">Executable shimming (like symlinks but better)</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/self-service-anywhere">Self Service Anywhere (C4B) - Support modern workforce</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/chocolatey-central-management">Chocolatey Central Management (C4B) - Endpoint Management</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/package-internalizer">Package Internalizer (C4B)</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/package-builder">Package Builder (C4B)</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/package-audit">Package Audit (C4B)</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/package-reducer">Package Reducer (Pro&#x2B;)</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/branding">Branding Chocolatey Applications (C4B)</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/virus-check">Runtime Malware Protection (Pro&#x2B;)</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/private-cdn">CDN Download Cache (Pro&#x2B;)</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/install-directory-override">Ubiquitous Install Directory Option (Pro&#x2B;)</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/features/package-throttle">Package Throttle (Pro&#x2B;)</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-c86ea2c6-90ed-47de-8115-50b4324b644c" aria-label="collapse or expand navigation" href="#id-c86ea2c6-90ed-47de-8115-50b4324b644c"></button>
+                                                                    <a href="/en-us/features/package-synchronization">Package Synchronization</a>
+                                                                </div>
+                                                                <div class="collapse" id="id-c86ea2c6-90ed-47de-8115-50b4324b644c">
+                                                                    <ul class="navbar-nav">
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/features/package-synchronization/automatic-sync">Automatic Sync (Pro&#x2B;)</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/features/package-synchronization/sync-command">Choco Sync Command (C4B)</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/features/package-synchronization/packages-to-programs">Packages to Programs (C4B)</a>
+                                                                                </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link pl-c2" href="/en-us/faqs">FAQs</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link pl-c2" href="/en-us/troubleshooting">Troubleshooting</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link pl-c2" href="/en-us/configuration">Configuration</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link pl-c2" href="/en-us/getting-started">Getting Started</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-856de6e8-03d4-474a-9024-610bc8e5efee" aria-label="collapse or expand navigation" href="#id-856de6e8-03d4-474a-9024-610bc8e5efee"></button>
+                                                <a href="/en-us/choco">Chocolatey CLI (choco)</a>
+                                            </div>
+                                            <div class="collapse" id="id-856de6e8-03d4-474a-9024-610bc8e5efee">
+                                                <ul class="navbar-nav">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/choco/release-notes">Release Notes</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/choco/setup">Setup / Install</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/choco/uninstallation">How to uninstall</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-24fe7a7f-5742-449f-86b4-00ea941ec93d" aria-label="collapse or expand navigation" href="#id-24fe7a7f-5742-449f-86b4-00ea941ec93d"></button>
+                                                                    <a href="/en-us/choco/commands">Commands</a>
+                                                                </div>
+                                                                <div class="collapse" id="id-24fe7a7f-5742-449f-86b4-00ea941ec93d">
+                                                                    <ul class="navbar-nav">
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/config">Config</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/download">Download</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/feature">Feature</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/info">Info</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/install">Install</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/list">List/Search</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/optimize">Optimize</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/outdated">Outdated</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/pin">Pin</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/search">Search</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/setapikey">ApiKey</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/source">Source</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/sources">Source/Sources</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/support">Support</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/sync">Sync</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/synchronize">Synchronize</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/uninstall">Uninstall</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/unpackself">UnpackSelf</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/update">Update</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/upgrade">Upgrade</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/choco/commands/version">Version</a>
+                                                                                </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-d3387a2b-1016-4731-a000-c6be83f9906f" aria-label="collapse or expand navigation" href="#id-d3387a2b-1016-4731-a000-c6be83f9906f"></button>
+                                                <a href="/en-us/chocolatey-gui">Chocolatey GUI</a>
+                                            </div>
+                                            <div class="collapse" id="id-d3387a2b-1016-4731-a000-c6be83f9906f">
+                                                <ul class="navbar-nav">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/chocolatey-gui/release-notes">Release Notes</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/chocolatey-gui/setup">Setup</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/chocolatey-gui/known-issues">Known Issues</a>
+                                                            </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <div class="nav-link nav-link-collapse d-flex align-items-start active">
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-9385e1ff-9801-4e63-96a0-e5af4b117bad" aria-label="collapse or expand navigation" href="#id-9385e1ff-9801-4e63-96a0-e5af4b117bad"></button>
+                                                <a href="/en-us/community-packages">Community Packages (chocolatey.org)</a>
+                                            </div>
+                                            <div class="collapse" id="id-9385e1ff-9801-4e63-96a0-e5af4b117bad">
+                                                <ul class="navbar-nav">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/community-packages/community-packages-disclaimer">Chocolatey.org Packages Disclaimer</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-63c741ee-1341-4759-84b2-57fde6137bc8" aria-label="collapse or expand navigation" href="#id-63c741ee-1341-4759-84b2-57fde6137bc8"></button>
+                                                                    <a href="/en-us/community-packages/users">Users</a>
+                                                                </div>
+                                                                <div class="collapse" id="id-63c741ee-1341-4759-84b2-57fde6137bc8">
+                                                                    <ul class="navbar-nav">
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/community-packages/users/package-triage-process">Request Package Fixes/Updates</a>
+                                                                                </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <div class="nav-link nav-link-collapse d-flex align-items-start active">
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-ccc73241-d140-4958-8187-6daa78df0319" aria-label="collapse or expand navigation" href="#id-ccc73241-d140-4958-8187-6daa78df0319"></button>
+                                                                    <a href="/en-us/community-packages/maintainers">Maintainers</a>
+                                                                </div>
+                                                                <div class="collapse" id="id-ccc73241-d140-4958-8187-6daa78df0319">
+                                                                    <ul class="navbar-nav">
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4 active active-page" href="/en-us/community-packages/maintainers/moderation">Chocolatey.org Moderation</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/community-packages/maintainers/package-maintainer-handover">Take Over Package Maintenance Exclusively</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/community-packages/maintainers/deprecate-a-chocolatey-package">Deprecate a Package</a>
+                                                                                </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-30750fe2-400b-4c24-8051-14c33a72cba3" aria-label="collapse or expand navigation" href="#id-30750fe2-400b-4c24-8051-14c33a72cba3"></button>
+                                                <a href="/en-us/licensed-extension">Chocolatey Licensed Extension</a>
+                                            </div>
+                                            <div class="collapse" id="id-30750fe2-400b-4c24-8051-14c33a72cba3">
+                                                <ul class="navbar-nav">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/licensed-extension/release-notes">Release Notes</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/licensed-extension/setup">Setup / How to install licensed edition</a>
+                                                            </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-2d556bea-d47f-45ab-b4a9-8bcb26dfd257" aria-label="collapse or expand navigation" href="#id-2d556bea-d47f-45ab-b4a9-8bcb26dfd257"></button>
+                                                <a href="/en-us/agent">Chocolatey Agent</a>
+                                            </div>
+                                            <div class="collapse" id="id-2d556bea-d47f-45ab-b4a9-8bcb26dfd257">
+                                                <ul class="navbar-nav">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/agent/release-notes">Release Notes</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/agent/setup">Setup</a>
+                                                            </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-75990c5a-d381-414a-8606-2dd153c880ad" aria-label="collapse or expand navigation" href="#id-75990c5a-d381-414a-8606-2dd153c880ad"></button>
+                                                <a href="/en-us/central-management">Chocolatey Central Management (CCM)</a>
+                                            </div>
+                                            <div class="collapse" id="id-75990c5a-d381-414a-8606-2dd153c880ad">
+                                                <ul class="navbar-nav">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/central-management/release-notes">Release Notes</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-c532467d-7695-4ed2-97ba-8ccde4e021f4" aria-label="collapse or expand navigation" href="#id-c532467d-7695-4ed2-97ba-8ccde4e021f4"></button>
+                                                                    <a href="/en-us/central-management/setup">Setup</a>
+                                                                </div>
+                                                                <div class="collapse" id="id-c532467d-7695-4ed2-97ba-8ccde4e021f4">
+                                                                    <ul class="navbar-nav">
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/setup/database">Database</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/setup/service">Service</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/setup/website">Website</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/setup/client">Client</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/setup/upgrade">Upgrade</a>
+                                                                                </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-f4588ab6-3c04-4213-bf9c-67c062df22e3" aria-label="collapse or expand navigation" href="#id-f4588ab6-3c04-4213-bf9c-67c062df22e3"></button>
+                                                                    <a href="/en-us/central-management/usage">Usage</a>
+                                                                </div>
+                                                                <div class="collapse" id="id-f4588ab6-3c04-4213-bf9c-67c062df22e3">
+                                                                    <ul class="navbar-nav">
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/usage/computers">Computers</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/usage/software">Software</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/usage/groups">Groups</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/usage/deployments">Deployments</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/usage/reports">Reports</a>
+                                                                                </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-5238dab6-f31f-4ba1-a76c-4174ca05e0a6" aria-label="collapse or expand navigation" href="#id-5238dab6-f31f-4ba1-a76c-4174ca05e0a6"></button>
+                                                                    <a href="/en-us/central-management/chococcm">ChocoCCM</a>
+                                                                </div>
+                                                                <div class="collapse" id="id-5238dab6-f31f-4ba1-a76c-4174ca05e0a6">
+                                                                    <ul class="navbar-nav">
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/release-notes">Release Notes</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/setup">Setup</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                                                        <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-6694b287-2eb3-475b-8eb5-ac966322df3b" aria-label="collapse or expand navigation" href="#id-6694b287-2eb3-475b-8eb5-ac966322df3b"></button>
+                                                                                        <a href="/en-us/central-management/chococcm/functions">Functions</a>
+                                                                                    </div>
+                                                                                    <div class="collapse" id="id-6694b287-2eb3-475b-8eb5-ac966322df3b">
+                                                                                        <ul class="navbar-nav">
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/addccmgroup">Add-CCMGroup</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/addccmgroupmember">Add-CCMGroupMember</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/connectccmserver">Connect-CCMServer</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/disableccmdeployment">Disable-CCMDeployment</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/exportccmdeployment">Export-CCMDeployment</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/exportccmdeploymentreport">Export-CCMDeploymentReport</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/exportccmoutdatedsoftwarereport">Export-CCMOutdatedSoftwareReport</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/getccmcomputer">Get-CCMComputer</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/getccmdeployment">Get-CCMDeployment</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/getccmgroup">Get-CCMGroup</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/getccmgroupmember">Get-CCMGroupMember</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/getccmoutdatedsoftware">Get-CCMOutdatedSoftware</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/getccmoutdatedsoftwaremember">Get-CCMOutdatedSoftwareMember</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/getccmoutdatedsoftwarereport">Get-CCMOutdatedSoftwareReport</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/getccmoutdatedsoftwarereportdetail">Get-CCMOutdatedSoftwareReportDetail</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/getccmrole">Get-CCMRole</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/getccmsoftware">Get-CCMSoftware</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/getdeploymentresult">Get-DeploymentResult</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/importpdqdeploypackage">Import-PDQDeployPackage</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/moveccmdeploymenttoready">Move-CCMDeploymentToReady</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/newccmdeployment">New-CCMDeployment</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/newccmdeploymentstep">New-CCMDeploymentStep</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/newccmoutdatedsoftwarereport">New-CCMOutdatedSoftwareReport</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/removeccmdeployment">Remove-CCMDeployment</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/removeccmdeploymentstep">Remove-CCMDeploymentStep</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/removeccmgroup">Remove-CCMGroup</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/removeccmgroupmember">Remove-CCMGroupMember</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/removeccmstaledeployment">Remove-CCMStaleDeployment</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/setccmdeploymentstep">Set-CCMDeploymentStep</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/setccmgroup">Set-CCMGroup</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/setccmnotificationstatus">Set-CCMNotificationStatus</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/startccmdeployment">Start-CCMDeployment</a>
+                                                                                                </li>
+                                                                                                <li class="nav-item">
+                                                                                                    <a class="nav-link pl-c4" href="/en-us/central-management/chococcm/functions/stopccmdeployment">Stop-CCMDeployment</a>
+                                                                                                </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-dc84f8b1-1579-45be-9104-73c633fd9371" aria-label="collapse or expand navigation" href="#id-dc84f8b1-1579-45be-9104-73c633fd9371"></button>
+                                                <a href="/en-us/quick-deployment">Quick Deployment Environment (QDE)</a>
+                                            </div>
+                                            <div class="collapse" id="id-dc84f8b1-1579-45be-9104-73c633fd9371">
+                                                <ul class="navbar-nav">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/quick-deployment/release-notes">Release Notes</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-51bdcaf9-9341-4b14-aa6b-79a5a005a12b" aria-label="collapse or expand navigation" href="#id-51bdcaf9-9341-4b14-aa6b-79a5a005a12b"></button>
+                                                                    <a href="/en-us/quick-deployment/setup">Setup</a>
+                                                                </div>
+                                                                <div class="collapse" id="id-51bdcaf9-9341-4b14-aa6b-79a5a005a12b">
+                                                                    <ul class="navbar-nav">
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/quick-deployment/setup/desktop-readme">Desktop Readme</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/quick-deployment/setup/ssl-setup">SSL Setup</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/quick-deployment/setup/firewall-changes">Firewall Changes</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/quick-deployment/setup/client-setup">Client Setup</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/quick-deployment/setup/internet-setup">Internet Setup</a>
+                                                                                </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-6393836d-da34-4b77-9ca4-80b10c617d80" aria-label="collapse or expand navigation" href="#id-6393836d-da34-4b77-9ca4-80b10c617d80"></button>
+                                                                    <a href="/en-us/quick-deployment/v1">QDE v1</a>
+                                                                </div>
+                                                                <div class="collapse" id="id-6393836d-da34-4b77-9ca4-80b10c617d80">
+                                                                    <ul class="navbar-nav">
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/quick-deployment/v1/setup">Setup</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/quick-deployment/v1/desktop-readme">Desktop Readme</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/quick-deployment/v1/ssl-setup">SSL Setup</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/quick-deployment/v1/firewall-changes">Firewall Changes</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/quick-deployment/v1/client-setup">Client Setup</a>
+                                                                                </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-a8730861-afc7-4049-b35c-767e7c07abbd" aria-label="collapse or expand navigation" href="#id-a8730861-afc7-4049-b35c-767e7c07abbd"></button>
+                                                <a href="/en-us/create">Package Creation</a>
+                                            </div>
+                                            <div class="collapse" id="id-a8730861-afc7-4049-b35c-767e7c07abbd">
+                                                <ul class="navbar-nav">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/create/create-packages">Create Packages</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/create/create-packages-quick-start">Quick Start</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-84ae6fc0-d006-4782-a70c-e131d01786b3" aria-label="collapse or expand navigation" href="#id-84ae6fc0-d006-4782-a70c-e131d01786b3"></button>
+                                                                    <a href="/en-us/create/commands">Commands</a>
+                                                                </div>
+                                                                <div class="collapse" id="id-84ae6fc0-d006-4782-a70c-e131d01786b3">
+                                                                    <ul class="navbar-nav">
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/commands/new">New</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/commands/pack">Pack</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/commands/api-key">ApiKey</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/commands/push">Push</a>
+                                                                                </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-0a802e86-18f7-44eb-b860-7b2690e785d6" aria-label="collapse or expand navigation" href="#id-0a802e86-18f7-44eb-b860-7b2690e785d6"></button>
+                                                                    <a href="/en-us/create/functions">PowerShell Reference</a>
+                                                                </div>
+                                                                <div class="collapse" id="id-0a802e86-18f7-44eb-b860-7b2690e785d6">
+                                                                    <ul class="navbar-nav">
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/format-filesize">Format-FileSize</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/get-checksumvalid">Get-ChecksumValid</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/get-chocolateybins">Get-ChocolateyBins</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/get-chocolateyunzip">Get-ChocolateyUnzip</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/get-chocolateywebfile">Get-ChocolateyWebFile</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/get-environmentvariable">Get-EnvironmentVariable</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/get-environmentvariablenames">Get-EnvironmentVariableNames</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/get-ftpfile">Get-FtpFile</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/get-osarchitecturewidth">Get-OSArchitectureWidth</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/get-packageparameters">Get-PackageParameters</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/get-processorbits">Get-ProcessorBits</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/get-toolslocation">Get-ToolsLocation</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/get-uacenabled">Get-UACEnabled</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/get-uninstallregistrykey">Get-UninstallRegistryKey</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/get-viruscheckvalid">Get-VirusCheckValid</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/get-webfile">Get-WebFile</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/get-webfilename">Get-WebFileName</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/get-webheaders">Get-WebHeaders</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/install-binfile">Install-BinFile</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/install-chocolateydesktoplink">Install-ChocolateyDesktopLink</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/install-chocolateyenvironmentvariable">Install-ChocolateyEnvironmentVariable</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/install-chocolateyexplorermenuitem">Install-ChocolateyExplorerMenuItem</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/install-chocolateyfileassociation">Install-ChocolateyFileAssociation</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/install-chocolateyinstallpackage">Install-ChocolateyInstallPackage</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/install-chocolateypackage">Install-ChocolateyPackage</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/install-chocolateypath">Install-ChocolateyPath</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/install-chocolateypinnedtaskbaritem">Install-ChocolateyPinnedTaskBarItem</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/install-chocolateypowershellcommand">Install-ChocolateyPowerShellCommand</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/install-chocolateyshortcut">Install-ChocolateyShortcut</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/install-chocolateyvsixpackage">Install-ChocolateyVsixPackage</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/install-chocolateywindowsservice">Install-ChocolateyWindowsService</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/install-chocolateyzippackage">Install-ChocolateyZipPackage</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/install-vsix">Install-Vsix</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/set-environmentvariable">Set-EnvironmentVariable</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/set-powershellexitcode">Set-PowerShellExitCode</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/start-chocolateyprocessasadmin">Start-ChocolateyProcessAsAdmin</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/start-chocolateywindowsservice">Start-ChocolateyWindowsService</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/stop-chocolateywindowsservice">Stop-ChocolateyWindowsService</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/test-processadminrights">Test-ProcessAdminRights</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/uninstall-binfile">Uninstall-BinFile</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/uninstall-chocolateyenvironmentvariable">Uninstall-ChocolateyEnvironmentVariable</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/uninstall-chocolateypackage">Uninstall-ChocolateyPackage</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/uninstall-chocolateywindowsservice">Uninstall-ChocolateyWindowsService</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/uninstall-chocolateyzippackage">Uninstall-ChocolateyZipPackage</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/update-sessionenvironment">Update-SessionEnvironment</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/write-chocolateyfailure">Write-ChocolateyFailure</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/write-chocolateysuccess">Write-ChocolateySuccess</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/write-fileupdatelog">Write-FileUpdateLog</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/create/functions/write-functioncalllogmessage">Write-FunctionCallLogMessage</a>
+                                                                                </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/create/automatic-packages">Automatic Packaging</a>
+                                                            </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-c045e75a-9d37-459d-9270-cbc3f3810651" aria-label="collapse or expand navigation" href="#id-c045e75a-9d37-459d-9270-cbc3f3810651"></button>
+                                                <a href="/en-us/guides">Guides</a>
+                                            </div>
+                                            <div class="collapse" id="id-c045e75a-9d37-459d-9270-cbc3f3810651">
+                                                <ul class="navbar-nav">
+                                                            <li class="nav-item">
+                                                                <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-2b0e75a0-7566-414d-8f4a-1866c8c24197" aria-label="collapse or expand navigation" href="#id-2b0e75a0-7566-414d-8f4a-1866c8c24197"></button>
+                                                                    <a href="/en-us/guides/usage">Using Chocolatey</a>
+                                                                </div>
+                                                                <div class="collapse" id="id-2b0e75a0-7566-414d-8f4a-1866c8c24197">
+                                                                    <ul class="navbar-nav">
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/guides/usage/proxy-settings-for-chocolatey">Use Chocolatey w/Proxy Server</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/guides/usage/change-cache">Change Download Cache Location aka Don&#x27;t use TEMP for downloads</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/guides/usage/install-upgrade-package-without-scripts">Install/Upgrade a Package w/out running install scripts</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/guides/usage/development-environment-setup">Set up a Development Environment</a>
+                                                                                </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-919bed62-d145-42ed-8024-f1263f8e321d" aria-label="collapse or expand navigation" href="#id-919bed62-d145-42ed-8024-f1263f8e321d"></button>
+                                                                    <a href="/en-us/guides/create">Package Creation</a>
+                                                                </div>
+                                                                <div class="collapse" id="id-919bed62-d145-42ed-8024-f1263f8e321d">
+                                                                    <ul class="navbar-nav">
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/guides/create/recompile-packages">Manually Recompile Packages, Embedding/Internalizing Remote Resources</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/guides/create/parse-packageparameters-argument">Parse Package Parameters</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/guides/create/mount-an-iso-in-chocolatey-package">Mount Iso</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/guides/create/create-custom-package-templates">Create Custom Package Templates</a>
+                                                                                </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-3e4b6acd-1763-4716-98a0-4cd86670e038" aria-label="collapse or expand navigation" href="#id-3e4b6acd-1763-4716-98a0-4cd86670e038"></button>
+                                                                    <a href="/en-us/guides/organizations">Organizations</a>
+                                                                </div>
+                                                                <div class="collapse" id="id-3e4b6acd-1763-4716-98a0-4cd86670e038">
+                                                                    <ul class="navbar-nav">
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/guides/organizations/organizational-deployment-guide">Set up Chocolatey for Internal/organizational use</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/guides/organizations/automate-package-internalization">Automate Package Internalizer (MSP/C4B)</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/guides/organizations/chocolatey-for-business-quick-start-guide">C4B Quick Start Guide</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/guides/organizations/set-up-chocolatey-server">Set up the Chocolatey.Server</a>
+                                                                                </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-dda698b0-638a-453d-8ad9-a87fbd15dbfe" aria-label="collapse or expand navigation" href="#id-dda698b0-638a-453d-8ad9-a87fbd15dbfe"></button>
+                                                <a href="/en-us/information">Information</a>
+                                            </div>
+                                            <div class="collapse" id="id-dda698b0-638a-453d-8ad9-a87fbd15dbfe">
+                                                <ul class="navbar-nav">
+                                                            <li class="nav-item">
+                                                                <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-57ecd16e-929a-4754-93d1-a55e3ef52ccd" aria-label="collapse or expand navigation" href="#id-57ecd16e-929a-4754-93d1-a55e3ef52ccd"></button>
+                                                                    <a href="/en-us/information/release-notes">Release Notes</a>
+                                                                </div>
+                                                                <div class="collapse" id="id-57ecd16e-929a-4754-93d1-a55e3ef52ccd">
+                                                                    <ul class="navbar-nav">
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/information/release-notes/open-source">Open Source</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/information/release-notes/licensed">Licensed</a>
+                                                                                </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/information/security">Security</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/information/legal">Legal</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link pl-5" href="/en-us/information/history">History</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <div class="nav-link nav-link-collapse d-flex align-items-start">
+                                                                    <button class="btn btn-collapse pl-c2 collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="id-342c8324-afd6-4264-ba28-fc81d8cad938" aria-label="collapse or expand navigation" href="#id-342c8324-afd6-4264-ba28-fc81d8cad938"></button>
+                                                                    <a href="/en-us/information/learning-resources">More Learning Resources</a>
+                                                                </div>
+                                                                <div class="collapse" id="id-342c8324-afd6-4264-ba28-fc81d8cad938">
+                                                                    <ul class="navbar-nav">
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/information/learning-resources/resources">Resources</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/information/learning-resources/videos">Videos</a>
+                                                                                </li>
+                                                                                <li class="nav-item">
+                                                                                    <a class="nav-link pl-c4" href="/en-us/information/learning-resources/presentations">Presentations</a>
+                                                                                </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-9 col-xl-10 py-3 py-md-5 mx-auto">
+                    <div class="ml-md-4 d-xl-none">
+                        <h1 class="title">Chocolatey.org Moderation</h1>                 
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="/en-us">Chocolatey</a></li>
+			<li class="breadcrumb-item"><a href="/en-us/community-packages">Community Packages (chocolatey.org)</a></li>
+			<li class="breadcrumb-item"><a href="/en-us/community-packages/maintainers">Maintainers</a></li>
+		
+		<li class="breadcrumb-item active" aria-current="page">Chocolatey.org Moderation</li>
+	</ol>
+</nav>
+
+                    </div>
+                    <div class="row">
+                        <div id="mainContent" class="col-xl-10 pl-md-5 order-2 order-xl-1">
+                             <div class="d-none d-xl-block">
+                                <h1 class="title">Chocolatey.org Moderation</h1>                 
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="/en-us">Chocolatey</a></li>
+			<li class="breadcrumb-item"><a href="/en-us/community-packages">Community Packages (chocolatey.org)</a></li>
+			<li class="breadcrumb-item"><a href="/en-us/community-packages/maintainers">Maintainers</a></li>
+		
+		<li class="breadcrumb-item active" aria-current="page">Chocolatey.org Moderation</li>
+	</ol>
+</nav>
+
+                             </div>
+                             <p>The community feed, which is found at <a href="https://chocolatey.org/packages">https://chocolatey.org/packages</a>, is a moderated feed. That means all new versions of packages are human reviewed prior to approval to check for safety, quality, and correctness. See <a href="../../faqs#what-is-moderation">What is moderation</a> for more details. There are also <a href="../../faqs#what-is-a-trusted-package">trusted packages</a>, which only go through automated moderation review and bypass human review as they are coming from trusted sources and/or the software vendors themselves.</p>
+<p>By safety - we check that the package scripts do not do anything devious and that you get the software that the package indicates you are getting. Please note that the underlying software may contain crapware/malware (although it is usually not installed when allowing Chocolatey to install silently). This is not checked for currently, but we have plans for checking this in licensed versions of Chocolatey because a feature doing that is not free for us to provide.</p>
+<h2 id="definitions">Definitions</h2>
+<ul>
+<li>package - The Chocolatey/NuGet package</li>
+<li>software - The underlying software that the package assists in installing</li>
+<li>installer - The native installer, usually packaged as MSI, NSIS, InstallShield, Wise, Squirrel, or some other flavor.</li>
+<li>the validator - The <a href="https://github.com/chocolatey/package-validator">package validation service</a> checks the quality of a package based on requirements, guidelines and suggestions for creating packages for Chocolatey’s community feed. We like to think of the validator as unit testing. It is validating that everything is as it should be and meets the minimum requirements for a package on the community feed.</li>
+<li>the verifier - The <a href="https://github.com/chocolatey/package-verifier">package verifier service</a> checks the correctness (that the package actually works), that it installs and uninstalls correctly, has the right dependencies to ensure it is installed properly and can be installed silently. The verifier runs against both submitted packages and existing packages (checking every two weeks that a package can still install and sending notice when it fails). We like to think of the verifier as integration testing. It’s testing all the parts and ensuring everything is good.</li>
+</ul>
+<h2 id="requirements-and-guidelines">Requirements and Guidelines</h2>
+<p>While probably the most comprehensive, this list may not be fully up-to-date. This should serve as a most general understanding, knowing that the <a href="https://github.com/chocolatey/package-validator/wiki">validator</a> may be checking for newer things than are written here and that reviewers/moderators may find newer things to check from time to time.</p>
+<p><strong>NOTE</strong>: Moderators tend to get somewhat picky about properly stating the license, authors (software vendors), and copyright attributions. They are very important to protect both maintainers and the software vendors.</p>
+<p><strong>Note</strong>: This is still written based on a reviewer reading it, this will get cleaned up more over time to better explain it from a non-reviewer perspective.</p>
+<h3 id="existing-packages">Existing Packages</h3>
+<p>This section provides the requirements for packages that have had at least one released version approved or exempted. This includes any packages that existed prior to moderation being turned on (possibly an Unknown status).</p>
+<h4 id="requirements">Requirements</h4>
+<p>Requirements represent the minimum quality of a package that is acceptable. When a package version has failed requirements, the package version requires fixing and/or response by the maintainer. Provided a Requirement has flagged correctly, it <em><strong>must</strong></em> be fixed before the package version can be approved. The exact same version should be uploaded during moderation review.</p>
+<ul>
+<li>ProjectUrl - it's required for the community feed</li>
+<li>The authors field (software author/vendor) is not being used for the maintainers field (exception: when the maintainer is also the author)</li>
+<li>The copyright is used appropriately. Look at anything you can find that states the copyright.</li>
+<li>If there is a license available, it <strong>must</strong> be included in the licenseUrl.</li>
+<li>Is the title appropriate?</li>
+<li>At least something written in the description. It should be sufficient to explain the software.</li>
+<li>The description should explicitly mention if this package installs trial software or software that needs a license present, or both.</li>
+<li>The tags field is not being abused - note this doesn't mean they are missing tags you believe they should have (that is a guideline).</li>
+<li>Tags do not include &quot;chocolatey&quot; (with the exception of the chocolatey packages)</li>
+<li>Look over the package files
+<ul>
+<li>If binaries are included in the package, does the maintainer have distribution rights? If they have explicit permission, a copy of that in PDF should be in the package contents.</li>
+<li><strong>Install/Uninstall scripts:</strong>
+<ul>
+<li>Do the scripts try to do anything malicious? This is almost always immediate grounds for banning the maintainer and deleting their packages.</li>
+<li>Do the scripts set good defaults for silent args?</li>
+<li>Is there anything there that would not work with POSH v2?</li>
+<li>If it is a download, is it getting it from the proper location? Use the project site (projectUrl) to determine where the download for the file is coming from and it should match the one in the package files. If not there needs to be a really, really good reason for not doing so.</li>
+<li>Does the download version match the package version?</li>
+<li>Does the download include both x86 and x64 urls if available?</li>
+<li>Flag the use of any of the following: $nugetChocolateyPath, $nugetPath,$nugetExePath, $nugetLibPath, $chocInstallVariableName, $nugetExe</li>
+<li>Does the PowerShell script try to use any choco commands? e.g. choco install/upgrade/uninstall?</li>
+<li>Does the package try to do anything that an existing Chocolatey function already covers? The maintainers would need a really good reason for diverging from that.</li>
+<li>If the package is a portable package (downloads a zip file or non-install archive, many times carries the .portable name), does it try to put that in Program Files? This is a no no because Program Files requires admin permissions to write to and is typically the place for natively installed software.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Does the package install correctly?</li>
+<li>Does the package uninstall correctly? (this means the package, not the underlying software. We'd like to have that as well but it's more a guideline at the moment than a requirement. Patience, we will get there).</li>
+<li>Brand New Packages <em><strong>ONLY</strong></em> (no approved or existing version in history, prereleases do not count)
+<ul>
+<li>Package Id naming - if the naming doesn't follow our conventions, it is grounds for rejecting immediately with the suggestion they resubmit with suggested name. Note that they may have had prereleases already, and it's still okay to move forward with the rejected status as long as the name of the name of package hasn't been previously approved. See <a href="https://github.com/chocolatey/choco/wiki/CreatePackages#naming-your-package">https://github.com/chocolatey/choco/wiki/CreatePackages#naming-your-package</a>
+<ul>
+<li>suggest the id split if over 25 chars with no &quot;-&quot; in the id</li>
+<li>flag on &quot;.&quot; in name (unless .portable/.install)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="guidelines">Guidelines</h4>
+<p>Guidelines are strong suggestions that improve the quality of a package version. These are considered something to fix for next time to increase the quality of the package. Over time Guidelines can become Requirements. A package version can be approved without addressing Guideline comments but will reduce the quality of the package.</p>
+<ul>
+<li>Trial software should include the #trial tag. (will become a requirement in Feb 2016)</li>
+<li>Software that requires a license should include a tag #license. (will become a requirement in Feb 2016)</li>
+<li>LicenseUrl is nearly a requirement. The only reason it sits in guidelines is that not all software has a url out there containing its license information. We request that in those cases they point to the url for the FOSS license of the software, if they have an open license.</li>
+<li>We really want to see the IconUrl being used, and some moderators want to see it being used properly, using the jsDelivr, Statically, or Githack  CDN. However it is a guideline, and something to note for a maintainer to fix up next time, not currently. Some software doesn't have a proper icon.</li>
+<li>Suggest description get really filled out and they take full advantage of the use of markdown.</li>
+<li>Summary is important, but it doesn't show up on the package page.</li>
+<li>Tags could always use suggestions to add.</li>
+<li>Look over the package files
+<ul>
+<li><strong>Install / Uninstall Scripts:</strong>
+<ul>
+<li>Be familiar with things that have been deprecated and add a gentle reminder about those things for them to clean up.</li>
+<li>Are the commented lines from the template in there? Those should be cleaned up. It is not required to remove all comments, some comments are helpful. It’s a bit subjective on what is helpful and what is noise.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Something in the releaseNotes section would be great.</li>
+</ul>
+<h2 id="package-review-process">Package Review Process</h2>
+<p>When reviewing new and existing packages, a reviewer/moderator will have a few things left for review after the verifier and validator have verified a package.</p>
+<h3 id="moderation-workflow">Moderation Workflow</h3>
+<h4 id="first-time-go-workflow">First Time Go Workflow</h4>
+<p>When a good package is submitted, the normal flow of moderation works roughly like this:</p>
+<ol>
+<li>A maintainer submits a package. That puts the package in a &quot;Pending&quot; status (Pending automated review checks).</li>
+<li>If automated reviews don't require changes, the package moves to a &quot;Ready&quot; status. (Ready for Reviewer)</li>
+<li>If a moderator doesn't find any required changes, they move the package to an &quot;Approved&quot; status.</li>
+</ol>
+<h4 id="full-workflow">Full Workflow</h4>
+<p>The full normal workflow is like this:</p>
+<ol>
+<li>A maintainer submits a package. That puts the package in a &quot;Pending&quot; status (Pending automated review checks).</li>
+<li>If automated reviews don't require changes, the package moves to a &quot;Ready&quot; status. (Ready for Reviewer)</li>
+<li>If any of the automated review checks flag a package, the package moves to a &quot;Waiting&quot; status. (Waiting for maintainer to take corrective action)</li>
+<li>The package will sit in the Waiting status until a maintainer resubmits the package (starts the process from step one) or responds (&quot;Responded&quot;). Responses are typically questions, comments or requests for exempting from the verifier. (Maintainer responded, waiting for review/Maintainer update)</li>
+<li>If the package is in &quot;Responded&quot;, it moves up the queue and waits for a reviewer to go over the response and process it accordingly.</li>
+<li>If a package is resubmitted, it doesn't go into a Ready status. It moves to an &quot;Updated&quot; status at the top of the queue. (Maintainer updated, waiting for reviewer)</li>
+<li>If a moderator asks for required changes, the package moves to a &quot;Waiting&quot; status. (back to step 4)</li>
+<li>If a moderator doesn't find any required changes, they move the package to an &quot;Approved&quot; status.</li>
+</ol>
+<h4 id="trusted-package-workflow">Trusted Package Workflow</h4>
+<p>This is the trusted package workflow:</p>
+<ol>
+<li>A maintainer submits a trusted package. That puts the package in a &quot;Pending&quot; status (Pending automated review checks).</li>
+<li>If automated reviews don't require changes, the package moves to an &quot;Approved&quot; status.</li>
+<li>If any of the automated review checks flag a package, the package moves to a &quot;Waiting&quot; status. (Waiting for maintainer to take corrective action)</li>
+<li>The package will sit in the Waiting status until a maintainer resubmits the package (starts the process from step one) or responds (&quot;Responded&quot;). Responses are typically questions, comments or requests for exempting from the verifier. (Maintainer responded, waiting for review/Maintainer update)</li>
+<li>If the package is in &quot;Responded&quot;, it moves up the queue and waits for a reviewer to go over the response and process it accordingly.</li>
+<li>If a package is resubmitted, it doesn't go into a Ready status. It moves to an &quot;Updated&quot; status at the top of the queue. (Maintainer updated, waiting for reviewer)</li>
+<li>If the package passes automated review, the package moves to an &quot;Approved&quot; status.</li>
+<li>If a moderator asks for required changes, the package moves to a &quot;Waiting&quot; status. (back to step 4)</li>
+<li>If a moderator must manually override the approval, they move the package to an &quot;Approved&quot; status.</li>
+</ol>
+<h3 id="maintainer-process">Maintainer Process</h3>
+<p><strong>FYI:</strong> Ensure that you can receive emails from Chocolatey.org so that you will receive email notifications when a package review is updated.</p>
+<p>The process of moderation review is an interactive process for both maintainers and moderators. As a maintainer you submit packages and they are reviewed to be sure they meet a minimum quality and correctness to be published on Chocolatey.org. It's an important distinction that while almost all valid packages are approved, a package can be rejected for a variety of reasons.</p>
+<p>Packages go through three automated checks: validation, verification, and cleanup. There is about a 30 minute lag time from submission until automatic review kicks off - this allows the CDN to recheck and pull a newer version of the package up (in the case of resubmission), so that the package version being verified is the one you submitted and not a stale copy.</p>
+<p>When you receive emails that require you to take action, you should review what is requested and make the changes. If a package is flagged and needs changes based on requirements, the process is for you to make the required changes and resubmit the <em><strong>exact</strong></em> same version. The faster you respond to the review process, the faster your package can get approved.</p>
+<p>The cleanup automated check, aka the cleaner, checks packages that have been in a 'waiting' (waiting for maintainer to take action) status with no action/response within 20 days and follows up with a final reminder. If after 15 more days nothing has been done, the package will automatically be rejected on non-response. We feel that 35 days prior to automatic close is ample time for a maintainer to move the ball forward (even one going on holiday). If a package gets rejected, it doesn't mean that we don't value your contributions, just that we can not continue to hold packages versions in a waiting status that have possibly been abandoned. The rejected status is also reversible in case a maintainer wants to pick it back up within a year.</p>
+<p>Moderators give you the benefit of the doubt and will work with you to help you get a package to an approved status. (This also includes the older review process based on email before the site allowed you to comment).</p>
+<h3 id="reviewer-moderator-process">Reviewer / Moderator Process</h3>
+<p>Typically a package goes into the moderation queue when submitted.You can get to that by signing in and going to the packages page like you normally would.</p>
+<ol>
+<li>You should see a new drop down near the top that allows you to change your view. This is the moderation queue.
+<img src="/assets/images/moderation-1.jpg" alt="Moderation Queue Dropdown" /></li>
+<li>You will see items arranged in order based on reviewed and resubmitted at the top, items ready for review in order based on when they were submitted, and at the end of the queue, you will see items that are waiting for maintainer response.
+<img src="https://cloud.githubusercontent.com/assets/63502/7543076/58d5530c-f587-11e4-8d73-1325074d6e58.png" alt="Moderation Queue" /></li>
+<li>You grab a package and head in and review it based on the following items in the requirements and guidelines.</li>
+<li>Ensure package tests have ran. It will have both comments in the review and a colored ball up next to the title of the package. A package status box is present at the top of each package page with test results. The left side of the ball next to the package title represents verification testing, while the right side represents validation testing (see image below). Color of ball sections indicate:
+<ul>
+<li><strong>Green</strong> if it is ready for review and approval.</li>
+<li><strong>Yellow</strong> if still pending verification/validation (has not yet run).</li>
+<li><strong>Red</strong> if it failed verification/validation. The maintainer needs to fix or respond. If you find a package needs to skip verification, please contact an admin to do so. If you see a network issue from the log, you can rerun verification (see how in the next step).</li>
+<li><strong>Grey</strong> if a package skips verification/validation for some reason (which will be listed by the admin that flagged the package to skip testing). If possible, you will need to run the install/uninstall yourself.
+<img src="/assets/images/moderation-4.jpg" alt="Package Testing Results" /></li>
+</ul>
+</li>
+<li>Check over the verifier logs to be sure everything looks good (follow the link from the button). If necessary, you can rerun the verifier.
+<img src="/assets/images/moderation-5.jpg" alt="Rerun" /></li>
+<li>Go over the review log - shows history and review information so far. Note that when the validator runs it leaves comments. Look for it to have done the automated part of the requirements/guidelines checks. If it has not, you are responsible to check all <a href="#requirements-and-guidelines">requirements/guidelines</a> (see <a href="#requirements-and-guidelines">Requirements and Guidelines</a> above).
+<img src="/assets/images/moderation-6.jpg" alt="Review Notes" /></li>
+<li>Look at the notes section from the latest run of the validator to see if there are additional flagging follow ups from the validator.</li>
+<li>Check over the package based on <a href="#moderator-review">moderator review</a> (below).</li>
+<li>Review the previous comments if there are any.
+<img src="https://cloud.githubusercontent.com/assets/63502/7543258/c2c0abbc-f588-11e4-8cac-4c57b03671f8.png" alt="image" /></li>
+<li>Look through the package files
+<img src="/assets/images/moderation-10.jpg" alt="Package Files" /></li>
+<li>Leave comments in the review box (&quot;Add to Review Comments&quot; section) if you have any. Note that you can use markdown here.
+<img src="/assets/images/moderation-11.jpg" alt="Review box" /></li>
+<li>If you are approving the package, change Package Status to Approved. If you are Rejecting a package, change the status to Rejected. Otherwise leave the status as is (likely in Submitted).</li>
+<li>If you are making a comment or doing another action, but don't want to flag/hold the package for the maintainer to take action, uncheck the &quot;require maintainer to make changes?&quot; box. This is not required to be unchecked if you are approving the package.
+<img src="/assets/images/moderation-13.jpg" alt="Require maintainers to make changes?" /></li>
+<li>If you are doing an action that doesn't need to notify the maintainer, uncheck &quot;Send Maintainer email?&quot;.</li>
+<li>Click Save. You should get a message that the message was sent successfully.</li>
+<li>The maintainers receive an email noting the comments. They will follow up on the package page with their comments.</li>
+<li>Once the package is updated, it will show up in the top of the queue. At that time, please review it and make sure the maintainers made all changes requested.</li>
+</ol>
+<h4 id="moderator-review">Moderator Review</h4>
+<p>You can only ever require a maintainer to make changes if there are findings from the requirements section. Guidelines are strong suggestions that will improve the quality of the package, but consider that a quality over time. A maintainer is NOT required to make changes based on guidelines/suggestions. This deserves to be said twice: <strong>&quot;A moderator cannot hold up a package based on guidelines/suggestions <em>alone</em>&quot;</strong>.</p>
+<p>The validator checks quite a few items (<a href="https://github.com/chocolatey/package-validator/wiki">https://github.com/chocolatey/package-validator/wiki</a>) and leaves a few for you to check. Ensure you have looked over the notes that it has left.</p>
+<p>With the exception of included binaries, a review that doesn't flag should take under a minute. If you are holding a package, you can refer the maintainer to this link to save time: <a href="https://github.com/chocolatey/choco/wiki/Moderation">https://github.com/chocolatey/choco/wiki/Moderation</a></p>
+<h5 id="requirements-1">Requirements</h5>
+<p>Always be explicit that you are waiting on the maintainer to fix and resubmit the same version of the package so you can move the review process along.</p>
+<ul>
+<li>Is the title appropriate?</li>
+<li>The description should explicitly mention if this package installs trial software or software that needs a license present, or both.</li>
+<li>The authors field (software author) is not being used for the maintainers field (exception: when the maintainer is also the author)</li>
+<li>The tags field is not being abused - note this doesn't mean they are missing tags you believe they should have (that is a guideline).</li>
+<li>Binaries
+<ul>
+<li>If binaries are included in the package, does the maintainer have distribution rights? If they require explicit permission, a copy of that in PDF form should be in the package contents.</li>
+<li>Find the checksum of the official binaries and verify they match the included binaries (listed on the package page).</li>
+</ul>
+</li>
+<li>Automation scripts (the <code>ps1</code>/<code>psm1</code> files such as <code>chocolateyInstall.ps1</code>)
+<ul>
+<li>Do the scripts try to do anything malicious? This is almost always immediate grounds for banning the maintainer and deleting their packages.</li>
+<li>Do the scripts set good defaults for silent args? A package should almost ALWAYS install completely silently by default. If a maintainer makes the argument that it is so folks can choose what to pass, remind them this already exists through install arguments (CommandsInstall#options-and-switches) and if they want to add package parameters (How-To-Parse-PackageParameters-Argument), they can also do that (and add them to the description).</li>
+<li>Is there anything in the scripts that would not work with POSH v2? (We are working on making this automatically checked by the validator - see <a href="https://github.com/chocolatey/package-validator/issues/1">https://github.com/chocolatey/package-validator/issues/1</a>)</li>
+<li>If the package downloads anything, is it getting downloads from the proper location? Follow the projectUrl to the project site to see where it is downloading from - it should match the scripts. If not there needs to be a really, really good reason for not doing so.</li>
+<li>Does the download version match the package version?</li>
+<li>Does the download include both x86 and x64 urls if available?</li>
+</ul>
+</li>
+<li>Not a package duplicating another existing package <em><strong>NOTE</strong></em>: December 2015: Do not look for duplicate packages at this time. The validator will start handling that after the backlog is manageable.</li>
+<li>Brand New Packages <em><strong>ONLY</strong></em> (no approved or existing version in history, prereleases do not count)
+<ul>
+<li>Package Id naming - if the naming doesn't follow our conventions, it is grounds for rejecting immediately with the suggestion they resubmit with suggested name. Note that they may have had prereleases already, and it's still okay to move forward with the rejected status as long as the name of the name of package hasn't been previously approved. See <a href="https://github.com/chocolatey/choco/wiki/CreatePackages#naming-your-package">https://github.com/chocolatey/choco/wiki/CreatePackages#naming-your-package</a>
+<ul>
+<li>suggest the id split if over 25 chars with no &quot;-&quot; in the id</li>
+<li>flag on &quot;.&quot; in name (unless .portable/.install)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="guidelines-1">Guidelines</h5>
+<p>If a package is only flagging on guidelines, be sure to move forward on approval (this means no requirements flagged by you or the validator checks).</p>
+<ul>
+<li>Trial software should include the #trial tag. (will become a requirement in Feb 2016)</li>
+<li>Software that requires a license should include a tag #license. (will become a requirement in Feb 2016)</li>
+<li>Tags could always use suggestions to add.</li>
+<li>Automation scripts (the <code>ps1</code>/<code>psm1</code> files such as <code>chocolateyInstall.ps1</code>)
+<ul>
+<li>Do any scripts try to do anything that an existing Chocolatey function already covers? The maintainers would need a really good reason for diverging from that.</li>
+</ul>
+</li>
+</ul>
+<h2 id="roles">Roles</h2>
+<ul>
+<li>Maintainer - A person that maintains packages. Maintainers are usually subject to the review process.</li>
+<li>Reviewer - Able to review packages but not approve/reject them</li>
+<li>Moderator - Able to set/remove package maintainers, review packages, approve/reject them, able to unlist packages.</li>
+<li>Administrator - Has access to administrative sections of the site. Can perform all functions that a moderator can perform.</li>
+</ul>
+<h4 id="becoming-a-maintainer">Becoming a Maintainer</h4>
+<p>To become a package maintainer, you must have an account on <a href="https://chocolatey.org">https://chocolatey.org</a> and have at least one package on the site.</p>
+<h4 id="becoming-a-reviewer">Becoming a Reviewer</h4>
+<p>TBD</p>
+<h4 id="becoming-a-moderator">Becoming a Moderator</h4>
+<p>There is no set process for becoming a moderator yet. Usually it is having many approved packages and understanding the process of creating Chocolatey packages. Eventually it will be something you earn through your reputation on the site.</p>
+<ul>
+<li>Make awesome packages</li>
+<li>Work on the Disqus threads and mailing list.</li>
+<li>Have a desire to better the quality of Chocolatey</li>
+<li>Know a little PowerShell. More is better but yeah.</li>
+<li>Be friendly and customer service-oriented</li>
+</ul>
+<h4 id="becoming-an-admin">Becoming an Admin</h4>
+<p>This is not an achievable status.</p>
+<h3 id="new-reviewers-moderators">New Reviewers / Moderators</h3>
+<ul>
+<li>Understand the package creation process and the current recommendations, written at <a href="https://github.com/chocolatey/choco/wiki/CreatePackages">https://github.com/chocolatey/choco/wiki/CreatePackages</a></li>
+<li>Become familiar with the package guidelines and all of the different Chocolatey functions available. <a href="https://github.com/chocolatey/choco/wiki/HelpersReference">https://github.com/chocolatey/choco/wiki/HelpersReference</a></li>
+<li>Join the <a href="https://groups.google.com/forum/#!forum/chocolatey-moderators">chocolatey-moderators at google groups dot com</a> mailing list. This is necessary for communication with other moderators and receiving messages regarding changes in moderation.</li>
+<li>Join Gitter and hang out in the <a href="https://gitter.im/chocolatey/chocolatey.org">Chocolatey.org Gitter</a> and <a href="https://gitter.im/chocolatey/choco">Choco Gitter</a> rooms from time to time.</li>
+</ul>
+
+                             
+                        </div>
+                                <div id="rightSidebarNav" class="col-xl-2 pl-md-5 pl-xl-3 order-1 order-xl-2">
+                                    <button class="btn btn-link btn-collapse font-weight-bold w-100 d-xl-none mb-2" type="button" data-toggle="collapse" data-target="#rightSidebar" aria-expanded="false" aria-controls="rightSidebar">Jump to Section</button>
+                                    <div id="rightSidebar" class="sticky-top collapse">
+                                        <div class="card card-body py-0 px-xl-0 mb-3">
+                                                <p class="font-weight-bold pt-3"><a href="https://github.com/chocolatey/docs/edit/master/input/en-us/community-packages/maintainers/moderation.md"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Edit This Page</a></p>
+                                                <hr class="m-0" />
+                                            <p class="font-weight-bold pt-3">On This Page</p>
+                                            <ul class="list-unstyled pb-3">
+                                                    <li class="level-2"><a href="#definitions">Definitions</a></li>
+                                                    <li class="level-2"><a href="#requirements-and-guidelines">Requirements and Guidelines</a></li>
+                                                    <li class="level-3"><a href="#existing-packages">Existing Packages</a></li>
+                                                    <li class="level-4"><a href="#requirements">Requirements</a></li>
+                                                    <li class="level-4"><a href="#guidelines">Guidelines</a></li>
+                                                    <li class="level-2"><a href="#package-review-process">Package Review Process</a></li>
+                                                    <li class="level-3"><a href="#moderation-workflow">Moderation Workflow</a></li>
+                                                    <li class="level-4"><a href="#first-time-go-workflow">First Time Go Workflow</a></li>
+                                                    <li class="level-4"><a href="#full-workflow">Full Workflow</a></li>
+                                                    <li class="level-4"><a href="#trusted-package-workflow">Trusted Package Workflow</a></li>
+                                                    <li class="level-3"><a href="#maintainer-process">Maintainer Process</a></li>
+                                                    <li class="level-3"><a href="#reviewer-moderator-process">Reviewer / Moderator Process</a></li>
+                                                    <li class="level-4"><a href="#moderator-review">Moderator Review</a></li>
+                                                    <li class="level-5"><a href="#requirements-1">Requirements</a></li>
+                                                    <li class="level-5"><a href="#guidelines-1">Guidelines</a></li>
+                                                    <li class="level-2"><a href="#roles">Roles</a></li>
+                                                    <li class="level-4"><a href="#becoming-a-maintainer">Becoming a Maintainer</a></li>
+                                                    <li class="level-4"><a href="#becoming-a-reviewer">Becoming a Reviewer</a></li>
+                                                    <li class="level-4"><a href="#becoming-a-moderator">Becoming a Moderator</a></li>
+                                                    <li class="level-4"><a href="#becoming-an-admin">Becoming an Admin</a></li>
+                                                    <li class="level-3"><a href="#new-reviewers-moderators">New Reviewers / Moderators</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="cookieNoticeAlert" class="alert alert-primary alert-dismissible alert-dismissible-center alert-btn-center fade show d-none" role="alert">
+            <p class="mb-0"><strong>docs.chocolatey.org uses cookies to enhance the user experience of the site.</strong></p>
+            <button type="button" class="btn btn-light btn-sm d-none d-md-inline-block" data-dismiss="alert" aria-label="Close">I accept</button>
+            <button type="button" class="btn btn-light d-md-none" data-dismiss="alert" aria-label="Close">I accept</button>
+        </div>
+        <footer class="p-3 small text-center">
+            <span>© 2020 Chocolatey Software, Inc.</span><br />
+            <span>Deployed from <a href="https://github.com/chocolatey/docs/commit/358ef8a19bd4c2def4e042d6811924c608ee9f73">358ef8a1</a></span>
+        </footer>
+
+        <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="/assets/js/prism.min.js"></script>
+        <script type="text/javascript" src="/assets/js/anchor.min.js"></script>
+        <script type="text/javascript" src="/assets/js/custom.js"></script>
+        <script>
+            ((window.gitter = {}).chat = {}).options = {
+                room: 'chocolatey/choco'
+            };
+        </script>
+        <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+        <script type="text/javascript">
+            docsearch({
+                apiKey: '8148a7b5d009b8590bb85191c6f1823c',
+                indexName: 'chocolatey',
+                inputSelector: '#searchQuery',
+                debug: false // Set debug to true if you want to inspect the dropdown
+            });
+        </script>
+    </body>
+</html>
