@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--
+    Phantom by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+
+<head>
+
+    <title>Chocolatey Blog - Chocolatey&#8217;s Package Builder Now With a UI and an Exciting New Feature!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/styles/default.min.css">
+    <!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+    <link href="/assets/css/override.css" rel="stylesheet" />
+
+    <meta name="description" content="Need to put some words in here" />
+    <link type="application/rss+xml" rel="alternate" title="Chocolatey Blog" href="/feed.rss" />
+    <link type="application/atom+xml" rel="alternate" title="Chocolatey Blog" href="/feed.atom" />
+    <!--<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+    <meta name="application-name" content="Chocolatey Blog" />
+    <meta name="msapplication-tooltip" content="Chocolatey Blog" />
+    <meta name="msapplication-starturl" content="/" />
+
+    <meta property="og:title" content="Chocolatey Blog - Chocolatey&#8217;s Package Builder Now With a UI and an Exciting New Feature!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://blog.chocolatey.org/2016/11/package-builder-announcements" />
+    <!-- TODO: More social graph meta tags -->
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js"></script>
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo -->
+                <a href="/" class="logo">
+                    <span class="title">Chocolatey Blog</span>
+                </a>
+
+            </div>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="/posts">Archive</a></li>
+                <li><a href="/tags">Tags</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <header>
+    <h1>Chocolatey&#8217;s Package Builder Now With a UI and an Exciting New Feature!</h1>
+    <p><em>Published on Tuesday, November 15, 2016</em>
+    </p>
+
+    <ul class="actions small">
+        <li><a role="button" href="/tags/chocolatey-for-business" class="button small ">chocolatey for business</a></li>
+        <li><a role="button" href="/tags/news" class="button small ">news</a></li>
+        <li><a role="button" href="/tags/package-builder" class="button small ">package builder</a></li>
+        <li><a role="button" href="/tags/press-release" class="button small ">press-release</a></li>
+        <li><a role="button" href="/tags/video" class="button small ">video</a></li>
+    </ul>
+</header>
+
+<div id="content">
+    <p>Chocolatey's Package Builder allows you to create fully ready to go software deployments for Windows in 5-10 seconds! There is nothing faster than Chocolatey when it comes to preparing software for an unattended deployment across your organization. Today we are excited to announce Package Builder UI and building packages directly from Programs and Features! Before we show you those features with some videos, let's reintroduce Package Builder as you may not be familiar.</p>
+<h3 id="chocolateys-package-builder">Chocolatey's Package Builder</h3>
+<p>Chocolatey’s Package Builder is a tool that allows you to quickly generate high quality packaging by pointing Package Builder to an installer (msi, exe, msu, or msp) or zip. You can create packages from your organization's archive of installers and zips, scripting the entire creation of packages for your organization. There are also nice features like MSI properties automatically being added to the installer comments so you can further customize the package!</p>
+<p>We've created a short video showing how it works.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6TXY5Ie-3wg" frameborder="0" allowfullscreen></iframe>
+<p>Quickly script out creating packages for your entire organization's cache of software, allowing you to completely automate your Windows installations in moments, not months. You can do that with a simple script:</p>
+<pre><code class="language-powershell">$path = '\\company.file.server\installers'
+
+
+# Generate packages over supported types of files
+$supportedTypes = &#64;('.exe', '.msi', '.7z', '.zip', '.msu', '.msp')
+Get-ChildItem -Path $path -Recurse | ?{
+  $extension = [System.IO.Path]::GetExtension($_.Name)
+  $supportedTypes.Contains($extension)
+  } | %{
+  Write-Host &quot;$($_.FullName)&quot;
+  &amp; choco new --file &quot;$($_.FullName)&quot; --build-package --outputdirectory $pwd
+}
+</code></pre>
+<p>For every supported type, we are asking Chocolatey to wrap an entire package around the installer or zip, completely readying entire packages in about 5-10 seconds, complete with silent arguments.</p>
+<h3 id="package-builder-user-interface">Package Builder User Interface</h3>
+<p>Not every person is going to love the command line or may not be familiar with the command line. We've spent countless hours talking to customers and with their feedback we're introducing Package Builder UI. This also gives you an opportunity to transition from existing UI tools while taking advantage of powerful Chocolatey concepts!</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qJNKR_PEQqY" frameborder="0" allowfullscreen></iframe>
+<h3 id="package-builder-generate-packages-from-programs-and-features">Package Builder - Generate Packages From Programs and Features</h3>
+<p>Another way Package Builder can generate packages is based on looking at what is installed on a system in Programs and Features. You can set up a complete reference system and then use Chocolatey to generate packages from those installs. This gives you lightning quick ramp up time in both package and automating your Windows software installations!</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mw_ReipnskI" frameborder="0" allowfullscreen></iframe>
+<h3 id="chocolatey-and-deployment-automation">Chocolatey And Deployment Automation</h3>
+<p>When it comes to software management automation (or software deployment automation) for Windows, ask yourself if one or more of the following questions apply:</p>
+<ul>
+<li>Does your current approach to automation require manual interaction?</li>
+<li>Do the current processes you use feel inadequate or require work arounds?</li>
+<li>Are you managing software for both internal applications and 3rd party software on Windows? If so, are your approaches consistent?</li>
+<li>Can you update a single piece of software across your organization in less than 2 hours? 30 minutes? 5 minutes?</li>
+<li>Does that time still apply from the moment you determine a need to upgrade to implementation?</li>
+</ul>
+<p>Hundreds of organizations in every industry have seen the power of Chocolatey and have harnessed Chocolatey's Package Builder to create packages very quickly, allowing them to quickly address software deployments, security concerns, and just meeting their internal customer needs very quickly in a scalable and reliable way. Chocolatey will make a difference in your organization as well.</p>
+<h3 id="learn-more">Learn More</h3>
+<ul>
+<li>Watch all videos related to <a href="https://www.youtube.com/playlist?list=PLfn-TaDnc1us5X-PVlxW8M1h-6mXEXZSG" title="Chocolatey's Package Builder">Chocolatey’s Package Builder</a>.</li>
+<li>Learn about other features available in <a href="https://chocolatey.org/compare">Chocolatey for Business</a>.</li>
+<li><a href="https://chocolatey.org/contact">Contact us</a> to find out more and setup your evaluation of Chocolatey for Business today.</li>
+</ul>
+
+</div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <ul class="copyright">
+                    <li>Copyright © 2020 Chocolatey Software, Inc.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                    <li><a href="https://statiq.dev/">Generated by Statiq</a></li>
+                </ul>
+            </div>
+
+        </footer>
+
+    </div>
+
+<script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53005417-1', 'auto');
+    ga('send', 'pageview');
+</script>
+    <!-- Scripts -->
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/skel.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>

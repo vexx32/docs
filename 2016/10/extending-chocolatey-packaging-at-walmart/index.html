@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!--
+    Phantom by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+
+<head>
+
+    <title>Chocolatey Blog - Extending Chocolatey Packaging at Walmart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/styles/default.min.css">
+    <!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+    <link href="/assets/css/override.css" rel="stylesheet" />
+
+    <meta name="description" content="Need to put some words in here" />
+    <link type="application/rss+xml" rel="alternate" title="Chocolatey Blog" href="/feed.rss" />
+    <link type="application/atom+xml" rel="alternate" title="Chocolatey Blog" href="/feed.atom" />
+    <!--<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+    <meta name="application-name" content="Chocolatey Blog" />
+    <meta name="msapplication-tooltip" content="Chocolatey Blog" />
+    <meta name="msapplication-starturl" content="/" />
+
+    <meta property="og:title" content="Chocolatey Blog - Extending Chocolatey Packaging at Walmart" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://blog.chocolatey.org/2016/10/extending-chocolatey-packaging-at-walmart" />
+    <!-- TODO: More social graph meta tags -->
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js"></script>
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo -->
+                <a href="/" class="logo">
+                    <span class="title">Chocolatey Blog</span>
+                </a>
+
+            </div>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="/posts">Archive</a></li>
+                <li><a href="/tags">Tags</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <header>
+    <h1>Extending Chocolatey Packaging at Walmart</h1>
+    <p><em>Published on Thursday, October 13, 2016</em>
+    </p>
+
+    <ul class="actions small">
+        <li><a role="button" href="/tags/howto" class="button small ">HowTo</a></li>
+        <li><a role="button" href="/tags/packaging" class="button small ">Packaging</a></li>
+    </ul>
+</header>
+
+<div id="content">
+    <p><strong>Note:</strong> Originally posted on <a href="https://puppet.com/blog/extending-chocolatey-packaging-walmart">Puppet's blog</a>. <em>Reposted with permission.</em></p>
+<p>At Walmart, we’re on the journey of increased automation and efficiency. We decided to stop using gold images for server deployments early on. We knew that by separating the base Windows image from the configuration and application installs, deployments would be faster and more consistent. Additionally, application teams would no longer have to wait for the server teams to recut and publish a new gold image throughout the environment every time the application teams released a new version.</p>
+<p>Our first iteration of the new server build process used Microsoft Desired State Configuration (DSC) to configure the servers. We were elated at how quickly we were able to build servers using DSC. We had a concern, though: lack of management tooling for DSC and application installs. Originally, we created our own management tooling around DSC. It worked great initially, but development was slow, and more time was spent on the tooling than on the servers themselves.</p>
+<p>We knew this had to be a solved problem, so we talked to our Linux teammates about Puppet. Puppet could already manage Windows servers, and with the introduction of the <a href="https://forge.puppet.com/puppetlabs/dsc">Puppet DSC module</a>, we could extend Puppet management to DSC resources. We could use modules from both the Puppet and PowerShell communities, which greatly increased what could be managed.</p>
+<p>We still weren’t sure how to handle the on-demand application installs. Originally we used the DSC package resource, but we ran into some quirks. DSC Package uses the GUID of the application to manage the install. Not only do you have to know the current GUID, but if you want to uninstall a previous version of the application, you have to know the GUID for each version that could possibly be installed. DSC Package also requires a separate configuration to download the application install file to the server. With every new application revision, no matter how minor, we would have had to change several parts of the DSC configuration.</p>
+<p>It was then that <a href="http://chocolatey.org/">Chocolatey</a> came to the rescue. With Chocolatey, you don’t need a GUID, just the application version. The Chocolatey package handles all the downloading and installing. If you’re <a href="https://puppet.com/blog/chocolatey-hosting-your-own-server">hosting internal packages</a>, you can even embed the install file into the Chocolatey package itself to further streamline the process. All the application owner has to do is create a new Chocolatey package, and update the app version number in Puppet.</p>
+<p>We knew that in order to increase adoption of our new tools and processes, we would have to remove as many roadblocks as possible. Since Chocolatey is a command line tool, we were able to automate portions of the package creation process. Automating package creation lowers the learning curve of Chocolatey. It also helps us get one step closer to continual delivery on Windows. We can take what we’ve done and easily hook it into tools like Jenkins to create and push new packages whenever application teams release a new version.</p>
+<p>We started by determining the basic workflow for the users:</p>
+<ul>
+<li>Ask the user for package information.</li>
+<li>Use package information to build the package from a template.</li>
+</ul>
+<p>Here’s an example of an application being packaged using our automation script. We ask only for the package name, path to the application, additional install arguments, and the maintainer name (it defaults to the user running the script if left blank).</p>
+<p><img src="https://cloud.githubusercontent.com/assets/63502/19226066/c9c08bf8-8e6b-11e6-96f2-34167d3bb4f2.png" alt="extended ui" /></p>
+<p>Before beginning the packaging, the user is asked to confirm the information provided. If the user selects No, they’re able to go through the input process again.</p>
+<p><img src="https://cloud.githubusercontent.com/assets/63502/19226085/f8ea33fc-8e6b-11e6-840a-2eb274d29e49.png" alt="extend ui validation" /></p>
+<p>The script calls <code>choco new</code> to create the package. Currently it defaults to using the embedded packaging model, so the script copies the installer file into the appropriate folder. Then it calls <code>cpack</code> to create the nupkg file.</p>
+<p><img src="https://cloud.githubusercontent.com/assets/63502/19226099/27670cfa-8e6c-11e6-8f81-1baf2eb2ed4f.png" alt="extended ui validation part 2" /></p>
+<p>While we can’t share our exact script, we can walk through some of the automation process. Using Chocolatey’s package templates, we knew could dramatically simplify the package creation process. Before templates, we had planned on using PowerShell here-strings to build out the files for the package. However, the large here-strings tended to clutter up a script, and became complicated when we used more than one packaging model.</p>
+<p>We used the <a href="https://chocolatey.org/docs/how-to-create-custom-package-templates">Chocolatey docs page on templates</a> to create our own. To keep things simple, we started with only two templates: basic and embedded. Our basic template uses the standard Chocolatey practice of install files being located in an external location. Since we’re using only internal Chocolatey hosting though, we can include the installer files in the Chocolatey package itself. Using the Chocolatey docs, we created our embedded template. The <code>chocolateyinstall.ps1</code> script will run the installer file inside the same folder. For the rest of this example, we’ll be using the embedded template.</p>
+<p>From the docs, we know the default template values we can pass in. You can also find these properties from the help by running <code>choco new –h</code>.</p>
+<ul>
+<li>packageversion</li>
+<li>maintainername</li>
+<li>maintainerrepo</li>
+<li>installertype</li>
+<li>url</li>
+<li>url64</li>
+<li>silentargs</li>
+</ul>
+<p>By following the instructions in the docs, we can create a simple embedded template. Below is the <code>tools\chocolateyinstall.ps1</code> file for the embedded template.</p>
+<pre><code class="language-powershell">$ErrorActionPreference = 'Stop'; # stop on all errors
+
+[[AutomaticPackageNotesInstaller]]
+$packageName  = '[[PackageName]]'
+$toolsDir     = &quot;$(Split-Path -parent $MyInvocation.MyCommand.Definition)&quot;
+$fileLocation = Join-Path $toolsDir '[[url]]'
+
+$packageArgs = &#64;{
+  packageName   = $packageName
+  file          = $fileLocation
+  fileType      = '[[InstallerType]]' #only one of these: exe, msi, msu
+  silentArgs    = '[[silentArgs]]'
+  validExitCodes= &#64;(0, 3010, 1641)
+
+}
+
+Install-ChocolateyInstallPackage &#64;packageArgs
+</code></pre>
+<p>To increase readability in the following example, we’ve used the backtick in PowerShell to do line continuation. We’ve also added three additional parameters at the end. The accept license property accepts license dialogs automatically. The force property creates a new package, even if there’s already one in the current directory. Since we’re automating the process so users don’t have to touch any folders or files manually, we want to overwrite whatever is currently there. The limit output property isn’t required to build a new package, but we use it for our scripts to make parsing the return output easier.</p>
+<pre><code class="language-powershell">$name = 'SuperCoolApp';
+$template = 'embedded';
+$packageversion = '1.0.0';
+$maintainername = 'Doug Funnie';
+$url = 'app.exe';
+$installertype  = 'exe';
+$silentargs = '/verysilent /turbo'
+
+choco.exe new $name `
+    --template $template `
+    --version=$packageversion `
+    --maintainer=$maintainername `
+    url=$url `
+    installertype=$installertype `
+    silentargs=$silentargs `
+    --acceptlicense --limitoutput --force
+</code></pre>
+<p>Running this script produces the following output (if you run it without the <code>–limitoutput</code> property, your output will include every file generated which can be useful for troubleshooting).</p>
+<p><img src="https://cloud.githubusercontent.com/assets/63502/19293563/1984216a-8feb-11e6-8424-c4b761e4e2be.png" alt="Generating package from custom template" /></p>
+<p>Looking at the <code>chocolateyinstall.ps1</code> file in the SuperCoolApp\tools folder shows that the template properties have been replaced with the values that were passed into <code>choco new</code>.</p>
+<pre><code class="language-powershell">$ErrorActionPreference = 'Stop'; # stop on all errors
+
+$packageName  = 'SuperCoolApp'
+$toolsDir     = &quot;$(Split-Path -parent $MyInvocation.MyCommand.Definition)&quot;
+$fileLocation = Join-Path $toolsDir 'app.exe'
+
+$packageArgs = &#64;{
+  packageName   = $packageName
+  file          = $fileLocation
+  fileType      = 'exe' #only one of these: exe, msi, msu
+  silentArgs    = '/verysilent /norestart /turbo'
+  validExitCodes= &#64;(0, 3010, 1641)
+
+}
+
+Install-ChocolateyInstallPackage &#64;packageArgs
+</code></pre>
+<p>Unfortunately, this won’t create a fully working Chocolatey package yet. There’s no template property for the embedded installer file name in <code>$fileLocation</code>. In versions prior to Chocolatey 0.9.10, you can’t pass in <a href="https://github.com/chocolatey/choco/issues/658">arbitrary key value pairs</a>. We just have to get a little creative until then, so in our embedded template we used <code>[[url]]</code> to pull double duty. Since we’re not pulling the install files remotely, the url property is free for us to use.</p>
+<p>You may have noticed that we don’t ask for the file type in our script, and we provide default silent arguments. After Chocolatey 0.9.10 is released, the possibilities for template creation will be greatly increased by the ability to pass in custom values. We want the package creation process to be as simple for the end user as possible, so we use the information provided in the file path to fill in the <code>$fileType</code> and the default silent arguments we use. If a user provides a file path that doesn’t use a supported file type, we write an error instructing them on what file types are approved for use.</p>
+<p><img src="https://cloud.githubusercontent.com/assets/63502/19293577/35f2527c-8feb-11e6-9ca0-fca121a6dd55.png" alt="ui interface for custom tool" /></p>
+<p>Using the file path, we pull the file extension to use in <code>$fileType</code>. We then use that extension to make sure that the no restart and silent install values are always included in the arguments. We can’t put these in our template since they change depending on the file extension, and creating separate templates formsi-embedded and exe-embedded would be kludgy. By adding the installer type and default silent arguments, we’re able to increase the usefulness of the script. All that’s left is to copy the file to the folder and then run cpack on the nuspec file.</p>
+<pre><code class="language-powershell">$name = 'SuperCoolApp';
+$template = 'embedded';
+$packageversion = '1.0.0';
+$maintainername = 'Doug Funnie';
+$filePath = 'app.exe';
+
+# Generate the installertype and silent arguments
+$installertype = $installfile.Split('.')[-1]
+switch ($installertype)
+{
+    'exe' {$silentargs = '/verysilent /norestart '}
+    'msi' {$silentargs = '/qn /norestart '}
+    'msu' {$silentargs = '/qn /norestart '}
+    Default { Write-Error &quot;Unknown file extension: $installertype . Please use an exe, msi, or msu&quot;; exit}
+}
+
+$silentargs += &quot;/turbo&quot;
+
+# Generate package
+choco.exe new $name `
+    --template $template `
+    --version=$packageversion `
+    --maintainer=$maintainername `
+    url=$url `
+    installertype=$installertype `
+    silentargs=$silentargs `
+    --acceptlicense --limitoutput --force
+
+# copy the file over
+# then run cpack on the nuspec file
+cpack.exe .\$name\$name.nuspec
+</code></pre>
+<p>While we’ve done all this in PowerShell, you don’t have to. The real beauty of command line tools like Chocolatey is that your favorite automation tool or language of choice can be used. Using local scripts to just create the packages isn’t all you can do, either. From here, the options are endless: create a web front end, hook into Jenkins to build packages automatically after a build, etc.</p>
+<p>Your manager may chuckle when you say you’re going to use Chocolatey, but after a little scripting the only sound you’ll hear are dropped jaws as applications are automagically deployed.</p>
+<p><em>Derek Robinson is a Windows server administrator at Walmart.</em></p>
+
+</div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <ul class="copyright">
+                    <li>Copyright © 2020 Chocolatey Software, Inc.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                    <li><a href="https://statiq.dev/">Generated by Statiq</a></li>
+                </ul>
+            </div>
+
+        </footer>
+
+    </div>
+
+<script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53005417-1', 'auto');
+    ga('send', 'pageview');
+</script>
+    <!-- Scripts -->
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/skel.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>

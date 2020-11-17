@@ -1,0 +1,1007 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+	<channel>
+		<title>Chocolatey Blog</title>
+		<link>https://blog.chocolatey.org/</link>
+		<description>Need to put some words here...</description>
+		<copyright>2020</copyright>
+		<managingEditor>Chocolatey Software, Inc.</managingEditor>
+		<pubDate>Tue, 17 Nov 2020 13:46:31 GMT</pubDate>
+		<lastBuildDate>Tue, 17 Nov 2020 13:46:31 GMT</lastBuildDate>
+		<item>
+			<title>Announcing Central Management Deployments - Manage Simple or Complex Scenarios with Ease</title>
+			<link>https://blog.chocolatey.org/2020/05/announcing-deployments</link>
+			<description>&lt;p&gt;We are gearing up for the 3rd release of Chocolatey Central Management (CCM), and this one will include an amazing feature that many of you may have been waiting for - managing endpoints with a full Chocolatey solution! We are really excited to share with you what Central Management Deployments will offer and how you can get your hands on it!&lt;/p&gt;</description>
+			<author>Chocolatey Team</author>
+			<enclosure url="https://blog.chocolatey.org/%3Cimg%20src=%22/assets/images/centralmanagement.png%22%20alt=%22chocolatey%20central%20management%22%20title=%22chocolatey%20central%20management%22%20/%3E" length="0" type="image" />
+			<guid>https://blog.chocolatey.org/2020/05/announcing-deployments</guid>
+			<pubDate>Thu, 21 May 2020 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;div class="text-center"&gt;&lt;img class="img-fluid border mb-3 w-60" src="https://blog.chocolatey.org/assets/images/centralmanagement.png" alt="Chocolatey Central Mangement" title="Chocolatey Central Mangement"&gt;&lt;/div&gt;
+&lt;p&gt;We are gearing up for the 3rd release of Chocolatey Central Management (CCM), and this one will include an amazing feature that many of you may have been waiting for - managing endpoints with a full Chocolatey solution! We are really excited to share with you what Central Management Deployments will offer and how you can get your hands on it!&lt;/p&gt;
+&lt;!-- TOC depthFrom:2 --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://blog.chocolatey.org/%23join-our-webinar"&gt;Join Our Webinar!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.chocolatey.org/%23why-did-we-create-central-management-deployments"&gt;Why Did We Create Central Management Deployments?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.chocolatey.org/%23what-is-central-management-deployments"&gt;What is Central Management Deployments?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.chocolatey.org/%23what-does-central-management-deployments-look-like"&gt;What Does Central Management Deployments Look Like?&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://blog.chocolatey.org/%23top-level-deployments-screen"&gt;Top Level Deployments Screen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.chocolatey.org/%23creating-and-editing-a-deployment"&gt;Creating And Editing A Deployment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.chocolatey.org/%23reporting"&gt;Reporting&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.chocolatey.org/%23more-to-come"&gt;More to Come&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.chocolatey.org/%23when-can-i-get-deployments"&gt;When Can I Get Deployments?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- /TOC --&gt;
+&lt;h3 id="join-our-webinar"&gt;Join Our Webinar!&lt;/h3&gt;
+&lt;p&gt;We are doing a webinar on &lt;a href="https://chocolatey.org/events/chocolatey-deployments"&gt;June 23rd, 2020&lt;/a&gt;. Reserve &lt;a href="https://chocolatey.zoom.us/webinar/register/WN_MPT5b34zQnud8R0nGgpe5A"&gt;your spot now&lt;/a&gt; and we'll see you there! We may even have a special surprise to share at the end.&lt;/p&gt;
+&lt;p&gt;Can't make it? Missed it? Don't worry, we have you covered - it's being recorded and will be available soon after the presentation. Follow &lt;a href="https://chocolatey.zoom.us/webinar/register/WN_MPT5b34zQnud8R0nGgpe5A"&gt;the same link to access the recording&lt;/a&gt; after the webinar has ended.&lt;/p&gt;
+&lt;h3 id="why-did-we-create-central-management-deployments"&gt;Why Did We Create Central Management Deployments?&lt;/h3&gt;
+&lt;p&gt;We often hear from Windows System Engineers that they are looking for a simple and easy way to manage Windows endpoints that offers advanced functionality when they need it. As Chocolatey Software has been a leader in Windows automation for over nine years, it was a natural progression to offer a simple and intuitive solution for managing remote Windows endpoints, especially given Chocolatey’s guiding principle of making hard concepts approachable.&lt;/p&gt;
+&lt;p&gt;What prompted Chocolatey Software to create a solution for managing endpoints, and why was it the number one feature request?&lt;/p&gt;
+&lt;p&gt;In working with System Engineers, we found folks are looking for a solutions that is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Simple - Simple to learn and use&lt;/li&gt;
+&lt;li&gt;Secure - Modern security practices demand modern approaches&lt;/li&gt;
+&lt;li&gt;Efficient - Should not wait hours and hours on the system&lt;/li&gt;
+&lt;li&gt;Advanced - Able to handle advanced scenarios&lt;/li&gt;
+&lt;li&gt;Conventions - Handles defaults for most scenarios, but overridable&lt;/li&gt;
+&lt;li&gt;Multiple Step Targets - Able to work with multiple steps across possibly different computer endpoints at each step&lt;/li&gt;
+&lt;li&gt;Low Maintenance - should not require heavy architecture and should be easy to maintain&lt;/li&gt;
+&lt;li&gt;Scalable - Able to easily scale when necessary&lt;/li&gt;
+&lt;li&gt;Capable of Managing All Software - Not all software comes w/installers, but all software can have security findings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are existing solutions out there that for one reason or another have fallen short of expectations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Some require specialized training&lt;/li&gt;
+&lt;li&gt;Some are overkill for organizational needs&lt;/li&gt;
+&lt;li&gt;Simpler solutions don't fully support more advanced scenarios when they are needed&lt;/li&gt;
+&lt;li&gt;Even when those solutions are implemented correctly, they still cannot manage all Windows software without Chocolatey&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To draw on the last point a bit more, almost every endpoint management solution out there only reports software inventory based on what is listed in Programs and Features. We've found that software listed in Programs and Features only accounts for about 50-80% of the software that is being managed on Windows machines. With Chocolatey, you can manage 100% of the software you need to deploy. Security conscious organizations need to be able to report on and manage 100% of things that can have security findings.&lt;/p&gt;
+&lt;h3 id="what-is-central-management-deployments"&gt;What is Central Management Deployments?&lt;/h3&gt;
+&lt;div class="text-center"&gt;&lt;img class="img-fluid border mb-3 w-100" src="https://blog.chocolatey.org/assets/images/ccm_deployments_edit_updateorder.gif" alt="View Deployment - Steps" title="View Deployment - Steps"&gt;&lt;/div&gt;
+&lt;p&gt;We are excited to add Deployments to Chocolatey Central Management (CCM). This will enable teams to securely manage endpoints w/PowerShell scripts and states of Chocolatey packages directly. The CCM web interface helps with easy set-up, management, and reporting on deployments to endpoints. This will be part of the Chocolatey for Business (C4B) offering and current customers will be able to take advantage of it when released.&lt;/p&gt;
+&lt;p&gt;Central Management (including Deployments) provides a fantastic set of features that give organizations complete software management. Organizations using configuration management (like Puppet, Ansible, Chef, etc) will find that Central Management is complementary to what they provide. While configuration managers do really well with ensuring state and correcting configuration drift, when it comes to orchestration (especially cross machine), configuration management is quite limited. CCM Deployments provides IT teams the ability to easily orchestrate simple or complex scenarios in a fraction of the time over traditional approaches.&lt;/p&gt;
+&lt;p&gt;With the initial release of CCM Deployments, you will find the following functionality:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create target groups to deploy to&lt;/li&gt;
+&lt;li&gt;Create a deployment with one or more steps&lt;/li&gt;
+&lt;li&gt;Each step can target multiple groups, and different groups in each step if desired&lt;/li&gt;
+&lt;li&gt;Script a Chocolatey package&lt;/li&gt;
+&lt;li&gt;With additional permissions, run a full PowerShell script instead&lt;/li&gt;
+&lt;li&gt;Choose how failures in each step are handled&lt;/li&gt;
+&lt;li&gt;Reorder steps&lt;/li&gt;
+&lt;li&gt;Control permissions on who can deploy Chocolatey packages and who can run full scripts&lt;/li&gt;
+&lt;li&gt;See progress on active deployments&lt;/li&gt;
+&lt;li&gt;View logs for computers that executed a deployment step&lt;/li&gt;
+&lt;li&gt;Report on completed deployments including exporting to PDF for sharing with executive staff&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With multiple steps being able to target different groups, Deployments really enables you to manage complex scenarios when you need to. As an example if you have a website with a database backend, you may need to take the site offline first and upgrade the database before you upgrade the website. This is easily achieved with CCM Deployments.&lt;/p&gt;
+&lt;h3 id="what-does-central-management-deployments-look-like"&gt;What Does Central Management Deployments Look Like?&lt;/h3&gt;
+&lt;p&gt;Let's go through a quick preview.&lt;/p&gt;
+&lt;h4 id="top-level-deployments-screen"&gt;Top Level Deployments Screen&lt;/h4&gt;
+&lt;p&gt;Coming into the the Deployments section of the site, you are greeted with different sections.&lt;/p&gt;
+&lt;div class="text-center"&gt;&lt;img class="img-fluid border mb-3 w-75" src="https://blog.chocolatey.org/assets/images/ccm_deployments_toplevel_sm-lg.png" alt="View Deployments - Main Screen" title="View Deployments - Main Screen"&gt;&lt;/div&gt;
+&lt;p&gt;The sections are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Drafts - these are deployments that are still being created and are not ready to be used&lt;/li&gt;
+&lt;li&gt;Ready - these are deployments that are ready to go, they are just waiting to be started&lt;/li&gt;
+&lt;li&gt;Active - these are deployments that are currently executing&lt;/li&gt;
+&lt;li&gt;Completed - these are deployments that have finished, with whatever status they might have ended up in&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="creating-and-editing-a-deployment"&gt;Creating And Editing A Deployment&lt;/h4&gt;
+&lt;p&gt;If we have a deployment that is in draft/ready status, we can look over the aspects of it:&lt;/p&gt;
+&lt;div class="text-center"&gt;&lt;img class="img-fluid border mb-3 w-100" src="https://blog.chocolatey.org/assets/images/ccm_deployments_edit_view.gif" alt="View Deployment - Expand Steps" title="View Deployment - Expand Steps"&gt;&lt;/div&gt;
+&lt;p&gt;If we want to edit any of the steps for a deployment that has not been activated, we bring up that step and take a look at the different sections. The script side has basic and advanced types. This is basic:&lt;/p&gt;
+&lt;div class="text-center"&gt;&lt;img class="img-fluid border mb-3" src="https://blog.chocolatey.org/assets/images/ccm_deployments_edit_stepmodal_basiccommand_sm-lg.png" alt="Edit Deployment Step - Basic Script" title="Edit Deployment Step - Basic Script"&gt;&lt;/div&gt;
+&lt;p&gt;Note the advanced items (which are not expanded by default):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Execution timeout in seconds - how long to let the command run before timing out? Defaults to &lt;code&gt;4 hours&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Valid exit codes - what exit codes indicate success? Defaults to &lt;code&gt;0, 1605, 1614, 1641, 3010&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Machine contact timeout in minutes - how long to attempt contact with a computer before timing out. This is set at &lt;code&gt;20 minutes&lt;/code&gt; in the first release. In a future release we'll allow you to configure this, but this is set by default in this release.&lt;/li&gt;
+&lt;li&gt;Fail overall deployment if not successful - Should the deployment status show failed if this step is not successful? Defaults to &lt;code&gt;true&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Only run other deployment steps if successful - Coupled with the previous item, should the deployment stop if this step is not successful on every computer? Or should it execute other steps? Defaults to &lt;code&gt;false&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you have additional privileges, you can make/edit advanced scripts:&lt;/p&gt;
+&lt;div class="text-center"&gt;&lt;img class="img-fluid border mb-3" src="https://blog.chocolatey.org/assets/images/ccm_deployments_edit_stepmodal_advancedcommand_sm-lg.png" alt="Edit Deployment Step - Advanced Script" title="Edit Deployment Step - Advanced Script"&gt;&lt;/div&gt;
+&lt;p&gt;Note there is a section with script tips that is not expanded in the image above (&lt;code&gt;Show script tips&lt;/code&gt;). Some folks are experts at writing PowerShell and other folks may need a refresher from time to time.&lt;/p&gt;
+&lt;div class="text-center"&gt;&lt;img class="img-fluid border mb-3" src="https://blog.chocolatey.org/assets/images/ccm_deployments_edit_stepmodal_advancedcommand_tips_sm-lg.png" alt="Edit Deployment Step - Advanced Script Tips" title="Edit Deployment Step - Advanced Script Tips"&gt;&lt;/div&gt;
+&lt;p&gt;Once we've decided on our script, we need to target groups/collections of computers:&lt;/p&gt;
+&lt;div class="text-center"&gt;&lt;img class="img-fluid border mb-3" src="https://blog.chocolatey.org/assets/images/ccm_deployments_edit_stepmodal_groups_sm-lg.png" alt="Edit Deployment Step - Select Target Groups" title="Edit Deployment Step - Select Target Groups"&gt;&lt;/div&gt;
+&lt;h4 id="reporting"&gt;Reporting&lt;/h4&gt;
+&lt;p&gt;When we move a deployment to active, it will begin to run and we can start seeing the details of the deployment as it progresses:&lt;/p&gt;
+&lt;div class="text-center"&gt;&lt;img class="img-fluid border mb-3" src="https://blog.chocolatey.org/assets/images/ccm_deployments_reports_deploymentdetails_sm-lg.png" alt="View Deployment Report - Deployment Overall Results" title="View Deployment Report - Deployment Overall Results"&gt;&lt;/div&gt;
+&lt;p&gt;We can drill into the details of a particular step:&lt;/p&gt;
+&lt;div class="text-center"&gt;&lt;img class="img-fluid border mb-3" src="https://blog.chocolatey.org/assets/images/ccm_deployments_reports_stepdetails_sm-lg.png" alt="View Deployment Report - Deployment Step Results" title="View Deployment Report - Deployment Step Results"&gt;&lt;/div&gt;
+&lt;p&gt;Note that the log comes back for each computer in a step. If there is an error we can open up the log and go right to each error the system detects:&lt;/p&gt;
+&lt;div class="text-center"&gt;&lt;img class="img-fluid border mb-3" src="https://blog.chocolatey.org/assets/images/ccm_deployments_reports_errorlog_sm-lg.png" alt="View Deployment Report - Step Computer Log Details" title="View Deployment Report - Step Computer Log Details"&gt;&lt;/div&gt;
+&lt;h3 id="more-to-come"&gt;More to Come&lt;/h3&gt;
+&lt;p&gt;As you can see, the initial release of Central Management Deployments has a lot to offer! Deployments serves as the foundation for many other things we want to light up with Chocolatey Central Management (CCM), and we have some future enhancements we'll be adding to Deployments itself as we move into future release phases for CCM.&lt;/p&gt;
+&lt;p&gt;We're also enhancing the documentation for CCM, including supporting materials and videos, and hope to share that with you soon!&lt;/p&gt;
+&lt;p&gt;After everything releases, we'll rev the version of &lt;a href="https://chocolatey.org/docs/quick-deployment-environment"&gt;Quick Deployment Environment (QDE)&lt;/a&gt; to include CCM w/Deployments so folks will have another way of getting up and running quickly.&lt;/p&gt;
+&lt;h3 id="when-can-i-get-deployments"&gt;When Can I Get Deployments?&lt;/h3&gt;
+&lt;p&gt;The timeline for release is early to mid-June, with betas going out to select customers soon. Reach out to your Chocolatey Software representative for more details. If you are not a current customer, you can also &lt;a href="https://chocolatey.org/contact/trial"&gt;reach out to our team&lt;/a&gt; to get started. We are excited to get it in your hands!&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>One Billion Installs!</title>
+			<link>https://blog.chocolatey.org/2020/05/one-billion-installs</link>
+			<description>&lt;p&gt;Wow. We are blown away we've reached this point - all we can say is that we have a wonderful community that really works hard to ensure great software selection and packages! We started this all over 9 years ago and at the time we had no idea it would grow into what it is today. Thank you folks for all the years of support and getting us to this point.&lt;/p&gt;</description>
+			<author>Rob Reynolds</author>
+			<guid>https://blog.chocolatey.org/2020/05/one-billion-installs</guid>
+			<pubDate>Tue, 19 May 2020 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;div class="text-center"&gt;&lt;img class="img-fluid border" src="https://blog.chocolatey.org/assets/images/drevilonebillioninstalls.jpg" alt="A man from a movie with his finger on his upper lip saying 'One billion installs?'" title="One Billion Installs?"&gt;&lt;/div&gt;
+&lt;p&gt;Wow. We are blown away we've reached this point - all we can say is that we have a wonderful community that really works hard to ensure great software selection and packages! We started this all over 9 years ago and at the time we had no idea it would grow into what it is today. Thank you folks for all the years of support and getting us to this point.&lt;/p&gt;
+&lt;p&gt;On Sunday morning the community repository quietly rolled over into tres comas of installations. Yes, the community has reached a billion installs (that is billion with a "B") from the Chocolatey Community Repository. If we were not anticipating the event, we might have missed the notice. We quickly captured this screenshot to note the change over:&lt;/p&gt;
+&lt;div class="text-center"&gt;&lt;img class="img-fluid border mb-3 w-75" src="https://blog.chocolatey.org/assets/images/1billion.png" alt="One Billion Installations" title="One Billion Installations"&gt;&lt;/div&gt;
+&lt;p&gt;And if you &lt;a href="https://chocolatey.org/"&gt;check now&lt;/a&gt; (scroll down a little on the home page), you would see that a couple of days have passed and the community is already up by almost 3 million more installs? We did a &lt;a href="https://chocolatey.org/blog/celebrating-5-years"&gt;post at five years&lt;/a&gt; and at the time we were up to 36 million installations. If my math is correct, in the last 4+ years we've jumped up by 964 million! That is an almost exponential upward curve to look at compared to the first 5 years! It's really been something to watch our community take off like it has and we thank you for it!  We've been working on some things in the background and we've stared sharing more of them, stay tuned as we continue to make some exciting announcements!&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>How to Deliver Work From Home in Unprecedented Times with Chocolatey Self-Service Anywhere</title>
+			<link>https://blog.chocolatey.org/2020/05/how-to-deliver-work-from-home-in-unprecedented-times-with-chocolatey-self-service-anywhere</link>
+			<description>&lt;p&gt;The customer success team at Chocolatey is helping teams use Chocolatey &lt;a href="https://chocolatey.org/solutions/self-service-anywhere"&gt;Self-Service&lt;/a&gt; to deliver Remote Work during the COVID-19 pandemic.&lt;/p&gt;</description>
+			<author>Mukesh Sharma, COO &amp; Co-Founder</author>
+			<guid>https://blog.chocolatey.org/2020/05/how-to-deliver-work-from-home-in-unprecedented-times-with-chocolatey-self-service-anywhere</guid>
+			<pubDate>Tue, 05 May 2020 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;div class="callout callout-danger"&gt;&lt;h4 id="important"&gt;&lt;strong&gt;Important&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;The customer success team at Chocolatey is helping teams use Chocolatey &lt;a href="https://chocolatey.org/solutions/self-service-anywhere"&gt;Self-Service&lt;/a&gt; to deliver Remote Work during the COVID-19 pandemic.&lt;/p&gt;
+&lt;p&gt;We wrote this article to share what we've learned with our customers, in case you can use this information to get the best out of Work From Home (WFH) arrangements.&lt;/p&gt;
+&lt;p&gt;This won't help keep your dog quiet or the kids focused on their home schooling, but it might help you and your colleagues have the right tools to be productive while locked down at home.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;We're all in this together and we'll keep sharing best practices that we discover with our customers and community.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There's lot of information here and we appreciate not everyone has time to read all of it, so we wanted to get straight to the point:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Work From Home is new for many previously office-based users, their IT support and their business leaders.&lt;/li&gt;
+&lt;li&gt;Even if some staff are seasoned WFH pros, having to suddenly change to WFH puts pressure on people, process and technology.&lt;/li&gt;
+&lt;li&gt;Delivering an effective WFH capability is technically challenging.&lt;/li&gt;
+&lt;li&gt;We'll show how Chocolatey customers are using the &lt;a href="https://chocolatey.org/solutions/self-service-anywhere"&gt;Self-Service&lt;/a&gt; feature to get the top productivity apps into the hands of users.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You can also &lt;a href="https://blog.chocolatey.org/%23how"&gt;skip straight to the "How" section&lt;/a&gt; to get started.&lt;/p&gt;
+&lt;p&gt;Get help directly from Chocolatey:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://blog.chocolatey.org/contact"&gt;Contact Chocolatey&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.chocolatey.org/community"&gt;Visit the Community&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h4 id="about-this-article"&gt;About This Article&lt;/h4&gt;
+&lt;p&gt;Chocolatey's tools for packaging, distribution and management of Windows software is built by and for people solving everyday IT problems. There's no bigger problem today than the worldwide COVID-19 pandemic, and the business response has been to ask individuals to implement Work From Home -- wherever they can.&lt;/p&gt;
+&lt;p&gt;Chocolatey for Business (C4B) customers are using the &lt;a href="https://chocolatey.org/solutions/self-service-anywhere"&gt;Self-Service&lt;/a&gt; capability to overcome the challenges and deliver work from home. We wanted to share our learnings from our customers' experience to help others.&lt;/p&gt;
+&lt;p&gt;This information has been put together primarily for IT Managers and Systems Administrators who are responsible for enabling Remote Working / WFH using Microsoft Windows software. However, it's also informative for the end-users who are Working From Home and the business leaders who are accountable for delivery. If everyone knows what's possible, collaboration is easier.&lt;/p&gt;
+&lt;p class="text-center"&gt;&lt;strong&gt;If you find this article useful, please share it with your co-workers:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="blogShare d-flex list-unstyled justify-content-center"&gt;
+&lt;li&gt;
+&lt;div class="fb-share-button" data-href="https://chocolatey.org/blog/how-to-deliver-work-from-home-in-unprecedented-times-with-chocolatey-self-service-anywhere" data-layout="button" data-size="large" data-mobile-iframe="true"&gt;&lt;a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchocolatey.org%2Fblog%2Fhow-to-deliver-work-from-home-in-unprecedented-times-with-chocolatey-self-service-anywhere&amp;amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" target="_blank"&gt;Share&lt;/a&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large"&gt;Tweet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;script type="IN/Share" data-url="https://chocolatey.org/blog/how-to-deliver-work-from-home-in-unprecedented-times-with-chocolatey-self-service-anywhere"&gt;&lt;/script&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="what-you-will-get-from-this-article"&gt;What You Will Get From This Article&lt;/h4&gt;
+&lt;p&gt;We want this article to be as helpful as possible so we have split it into four sections so you can quickly find the most appropriate information:&lt;/p&gt;
+&lt;table class="table-bordered table-striped table-thead-d-none table-w-50"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Lorem ipsum&lt;/th&gt;
+&lt;th&gt;Lorem ipsum&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;What's your situation?&lt;/td&gt;
+&lt;td&gt;We describe the situations that our customers are experiencing with COVID-19 and WFH.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Challenges ahead&lt;/td&gt;
+&lt;td&gt;What are the pitfalls, problems and common challenges with setting up software and devices that use Microsoft software for Remote Working.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://chocolatey.org/solutions/self-service-anywhere"&gt;Using Self-Service&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Inform you about how our customers are using &lt;a href="https://chocolatey.org/solutions/self-service-anywhere"&gt;Self-Service&lt;/a&gt; to solve some of the technical Work From Home challenges.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Action plan&lt;/td&gt;
+&lt;td&gt;Give you an action plan for how to deliver Remote Work/Work From Home with Microsoft Windows and Chocolatey.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id="wed-love-your-feedback"&gt;We'd Love Your Feedback&lt;/h4&gt;
+&lt;p&gt;We warmly welcome questions, feedback and comments that can improve what we do so we can help others.&lt;/p&gt;
+&lt;hr&gt;
+&lt;ul id="how" class="list-circle list-circle-success-fade list-circle-md"&gt;
+    &lt;li class="h3 list-circle-content-1"&gt;How Work From Home is One Answer to COVID-19 Lockdown&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The global community is working together to prevent further spread of the COVID-19 virus. This is having an unprecedented impact on lives and livelihoods, resulting in national lockdowns and closure of business locations.&lt;/p&gt;
+&lt;p&gt;In response, organizations, their IT staff, end users and leadership are entering into new working practices to move from office-based work to Remote Working / WFH where possible. Questions we are hearing include:&lt;/p&gt;
+&lt;ol class="list-circle list-circle-counter"&gt;
+&lt;li&gt;What tools do I (as an end-user) need to work from home?&lt;/li&gt;
+&lt;li&gt;What tools do I (as a leader) need to give to my staff so they can be productive and safe at home?&lt;/li&gt;
+&lt;li&gt;How do I (as an IT admin) get the right tools to the right people at home?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Work From Home isn't as simple as just surfing the internet at home.&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id="business-as-usual-for-the-seasoned-professionals"&gt;Business as Usual for The Seasoned Professionals&lt;/h4&gt;
+&lt;p&gt;For some Work From Home is long-established business as usual.&lt;/p&gt;
+&lt;p&gt;Highly technical staff such as, advanced technical support and application developers have been working from home as standard for years, as have freelancers and others.&lt;/p&gt;
+&lt;p&gt;These old-hands at WFH have the culture, process and tools already established. They are used to doing everything online: video conferencing, messaging, document collaboration. They have the right tools, environment and already setup i.e laptop, software, good home wifi and a quiet working location.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Not everyone is a deeply technical and seasoned WFH professional.&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id="wfh-is-a-jarring-experience-for-many"&gt;WFH is a Jarring Experience for Many&lt;/h4&gt;
+&lt;p&gt;The sudden move to WFH can be a new experience for staff that are normally office-based, as well as the IT systems administrators that have to enable WFH. Their business leaders are seeing their steady-state world tumble down a mountain-side.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;"COVID-19 is shaking up the business organizations across the world, and the answer to this is doing IT in a different, more WFH, way."&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h4 id="what-weve-heard-from-the-chocolatey-community-and-customers"&gt;What We've Heard from the Chocolatey Community and Customers&lt;/h4&gt;
+&lt;p&gt;At Chocolatey, we work every day to support organizations to improve their IT through our Microsoft Windows application packaging, distribution and management.&lt;/p&gt;
+&lt;p&gt;Over the past few weeks we have increasingly and urgently witnessed a number of real challenges to providing WFH.&lt;/p&gt;
+&lt;hr&gt;
+&lt;ul class="list-circle list-circle-success-fade list-circle-md"&gt;
+    &lt;li class="h3 list-circle-content-2"&gt;Understanding the Technical Challenges to Delivering Work From Home&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For the technical challenges of delivering work from home -- sometimes for the first time -- there are three key groups affected.&lt;/p&gt;
+&lt;ul class="list-circle list-circle-counter"&gt;
+&lt;li&gt;&lt;h4 id="how-end-users-are-impacted-by-work-from-home"&gt;How End-Users are Impacted by Work From Home&lt;/h4&gt;
+&lt;p&gt;If you've always done the daily commute and worked at a desk in an office, it can be a big shock to be suddenly working from home.&lt;/p&gt;
+&lt;p&gt;Aside from the big changes in lifestyle, there are technical challenges to help end-users work from home, getting the right tools to the right person.&lt;/p&gt;
+&lt;p&gt;Typical challenges the end-user will face are:&lt;/p&gt;
+&lt;ul class="list-style-type-disc mb-3"&gt;
+&lt;li&gt;Do I have all the tools at home that I normally have at the office?&lt;/li&gt;
+&lt;li&gt;If I have the tools, do they work the same, or are they slower, or not fully functional?&lt;/li&gt;
+&lt;li&gt;How do I avoid downtime at home without the reliable office network?&lt;/li&gt;
+&lt;li&gt;How do I get the tools I need if I don't have the bandwidth for lots of downloads?&lt;/li&gt;
+&lt;li&gt;What if I don't have the technical skills to install the work from home tools?&lt;/li&gt;
+&lt;li&gt;What if technical support is too busy to help me be productive?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Shifting from the office to home raises a number of challenges to end-users, impacting their productivity. Not having the right software, and having problems getting the right software, slows teams down.&lt;/p&gt;
+&lt;p&gt;To compound the end-user challenges, they often find their own IT Support is unresponsive.  This unplanned WFH event has caught them without the resources and tools and they are struggling.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;h4 id="it-staff-struggle-to-cope-with-the-new-demands-under-time-pressure"&gt;IT Staff Struggle to Cope with the New Demands Under Time-Pressure&lt;/h4&gt;
+&lt;p&gt;COVID-19 wasn't planned and it happened very quickly. This gave IT staff little time to build and test an effective and efficient work from home rollout, or hire more resources to help them.&lt;/p&gt;
+&lt;p&gt;And now, much like panic buying in the shops has led to shortages  of essentials, there is a shortage of spare IT equipment for work from home end-users and no time to hire more technical staff to help.&lt;/p&gt;
+&lt;p&gt;Anecdotes we hear from IT staff:&lt;/p&gt;
+&lt;ul class="list-style-type-disc mb-3"&gt;
+&lt;li&gt;Immediate purchase of hundreds or thousands of new devices that all required configuration and software&lt;/li&gt;
+&lt;li&gt;Small IT teams don't have the bandwidth to provision all the new setups&lt;/li&gt;
+&lt;li&gt;IT teams not used to Remote Working don't have the skills or know-how&lt;/li&gt;
+&lt;li&gt;Process, procedures and tools for WFH don't exist&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The blast radius of COVID-19 on the IT department is large. It not only directly affects IT Admins and Help Desk, it also impacts Security and Service Management staff. &lt;strong&gt;How can IT ensure their governance processes are still effective when staff and technology has been distributed beyond the office perimeter?&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;h4 id="business-leadership-juggle-productivity-cash-flow-and-risk"&gt;Business Leadership Juggle Productivity, Cash Flow and Risk&lt;/h4&gt;
+&lt;p&gt;As if the business environment wasn't damaged enough by COVID-19 with revenue drying up, demand crashing and suppliers failing, now the human lockdown is driving productive staff out of the office to work from home.&lt;/p&gt;
+&lt;p&gt;While all responsible and right-minded leaders will embrace and support work from home, it doesn't mean they can ignore the challenges it brings. They are still responsible for governance and risk management of the business.&lt;/p&gt;
+&lt;p&gt;Typical comments we hear from leaders:&lt;/p&gt;
+&lt;ul class="list-style-type-disc mb-3"&gt;
+&lt;li&gt;Do our WFH staff have the right tools to keep business and the value stream operating in times when revenue is under severe pressure?&lt;/li&gt;
+&lt;li&gt;Are we supporting our WFH so they feel empowered and trusted?&lt;/li&gt;
+&lt;li&gt;Are WFH users using properly licensed software?&lt;/li&gt;
+&lt;li&gt;Is our data secure outside of the office?&lt;/li&gt;
+&lt;li&gt;Is there a risk of shadow IT and cutting corners because IT can't respond effectively?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Leaders have often felt more secure when the workers, process, applications and data are on-premises. This has always been more a feeling than fact. Those that have been working from home successfully for years can attest to this.&lt;/p&gt;
+&lt;p&gt;However, if an organization cannot successfully deliver work from home then the feelings will become fact that "Work only works in the workplace". This is not a satisfactory outcome because &lt;strong&gt;during the COVID-19 lockdown work from home MUST succeed.&lt;/strong&gt;&lt;/p&gt;
+&lt;table class="table-bordered table-striped table-w-50"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;KEEP THE WHEELS TURNING&lt;/th&gt;
+&lt;th&gt;DON'T LET WHEELS FALL OFF&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Support people to be productive&lt;/td&gt;
+&lt;td&gt;Ensure governance and compliance&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Keep revenue coming in&lt;/td&gt;
+&lt;td&gt;Avoid data breaches and bad PR&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;One of the technical answers to this corporate culture shift for Chocolatey for Business customers is to use the &lt;a href="https://chocolatey.org/solutions/self-service-anywhere"&gt;Self-Service&lt;/a&gt; module:&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="get-the-right-tools-at-the-right-time-now-to-the-right-people-at-home" class="text-center"&gt;&lt;strong&gt;Get the right tools at the right time (now) to the right people at home.&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;ul class="list-circle list-circle-success-fade list-circle-md"&gt;
+    &lt;li class="h3 list-circle-content-3"&gt;How Chocolatey Customers are Using Self-Service to Deliver Work From Home&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Deploying software to remote desktop and endpoint devices is not always easy, especially in highly regulated and locked down environments. This can be even more challenging  if you don't have the skills or your IT team is overworked.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;It's not optional for the business to ensure that work from home staff have the most up to date software deployed to their desktops.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://chocolatey.org/solutions/self-service-anywhere"&gt;Self-Service Anywhere&lt;/a&gt; allows non-administrators to easily access and manage IT approved software from the office, from home, or anywhere they have an internet connection.&lt;/p&gt;
+&lt;h4 id="self-service-and-enhanced-user-experience"&gt;Self-Service and Enhanced User Experience&lt;/h4&gt;
+&lt;p&gt;You want staff to get the tools they need to do their job, but you don't want work from home users to start installing their own software, often downloaded straight from the internet, and storing sensitive corporate data in unsecured applications. But this is what can happen -- and it's called &lt;a href="https://en.wikipedia.org/wiki/Shadow_IT" rel="nofollow"&gt;Shadow IT&lt;/a&gt; -- if they don't get prompt support from corporate IT.&lt;/p&gt;
+&lt;p&gt;End-users expect the Apple experience. Software should be deployed to them with no 'admin rights' even in highly regulated &amp;amp; locked down environments. They demand a user-friendly, consistent, reliable approach without the need for manual intervention or by waiting in a queue for help from central IT.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The compromise is to offer an consumer-grade App Store experience from within your organization, and that's what Chocolatey for Business &lt;a href="https://chocolatey.org/solutions/self-service-anywhere"&gt;Self-Service&lt;/a&gt; is for.&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id="self-service-installations-for-non-administrators"&gt;Self-Service Installations for Non-Administrators&lt;/h4&gt;
+&lt;p&gt;End users working from home shouldn't require any technical skills or assistance to install any software, but the software they use must be secure otherwise corporate data is at risk.&lt;/p&gt;
+&lt;p&gt;There's a reason why hackers are increasing their phishing activities in the hope that insecure home users will drop their guard and be easy pickings beyond the corporate perimeter.&lt;/p&gt;
+&lt;p&gt;IT Staff use Chocolatey for Business to give work from home end-users the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Software is deployed and updated to users with no 'admin rights' and in highly regulated locked down environments.&lt;/li&gt;
+&lt;li&gt;End-users have an interface to install and upgrade software.&lt;/li&gt;
+&lt;li&gt;The software process is user-friendly, consistent, reliable approach without the need manual intervention.&lt;/li&gt;
+&lt;li&gt;Behind the scenes there is still central management and control aligned with organizational policies. Endpoint users can only deploy software based on policies and user rights (i.e &lt;a href="https://chocolatey.org/solutions/self-service-anywhere"&gt;self-service&lt;/a&gt; marked packages).&lt;/li&gt;
+&lt;li&gt;Software installed by C4B is completely locked down so non-administrators cannot make changes to configurations. Attempted abuses can be logged and audited.&lt;/li&gt;
+&lt;li&gt;Organizations can customise the look and feel with their own corporate branding.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul class="list-circle list-circle-success-fade list-circle-md"&gt;
+    &lt;li class="h3 list-circle-content-4"&gt;Your Six-Step Action Plan to Deliver a Better Work From Home Experience&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Given the situation we are all in with COVID-19, the challenges we all face and with Chocolatey &lt;a href="https://chocolatey.org/solutions/self-service-anywhere"&gt;Self-Service&lt;/a&gt; being one of the technical answers to getting the right tools into the hands of working from home end users: how do they do it?&lt;/p&gt;
+&lt;ul class="list-circle list-circle-counter"&gt;
+&lt;li&gt;&lt;h4 id="provide-a-computer-or-securely-reuse-a-home-device"&gt;Provide a Computer or Securely Reuse a Home Device&lt;/h4&gt;
+&lt;p&gt;This is essential but can be problematic as there is a shortage of laptops and computers due to the unprecedented and unplanned demand for home working.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Chocolatey can help distribute software securely to corporate and non-corporate devices.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;h4 id="implement-modern-infrastructure-to-support-remote-workforce"&gt;Implement Modern Infrastructure to Support Remote Workforce&lt;/h4&gt;
+&lt;p&gt;Leveraging automation and a more DevOps approach will help IT teams accelerate deployments and enable users faster.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Chocolatey has developed a &lt;a href="https://chocolatey.org/docs/quick-deployment-environment"&gt;Quick Deployment Environment&lt;/a&gt; based on infrastructure architecture recommendations. Available as Microsoft Hyper-V or VMware (and convertible to other formats) that can have teams up and running in approx 2 hours.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;h4 id="make-sure-the-home-worker-has-good-internet-access"&gt;Make Sure the Home Worker has Good Internet Access&lt;/h4&gt;
+&lt;p&gt;Even mobile phone tethering is pretty good these days with 4G access, where available. Let users expense their wifi and internet costs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Chocolatey can help with low bandwidth with its low-bandwidth-friendly compression and caching for software distribution.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;h4 id="distribute-new-apps-for-new-working-practices"&gt;Distribute New Apps for New Working Practices&lt;/h4&gt;
+&lt;p&gt;Give your staff the latest tools for chat and video conferencing and new guidelines on how to use them so that they aren't constantly interrupted.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Chocolatey has prepared a &lt;a href="https://chocolatey.org/docs/quick-deployment-environment"&gt;Quick Deployment Environment&lt;/a&gt; with pre-installed key productivity application packages. Additional application packages can be easily added.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;h4 id="dedicated-workspace"&gt;Dedicated Workspace&lt;/h4&gt;
+&lt;p&gt;Make sure you have a quiet place to work where kids aren't building lego spaceships or eating/distributing porridge :smile:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Chocolatey is not likely to help you in this department unfortunately.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;h4 id="have-a-strict-routine"&gt;Have a Strict Routine&lt;/h4&gt;
+&lt;p&gt;There are lots of tips and tricks from seasoned work from home veterans on LinkedIn and Twitter that we don't need to repeat.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What Chocolatey can promise is that if it's managing your software for you, then it won't disrupt your new routine or hurt your productivity.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="final-thoughts-next-steps"&gt;Final Thoughts &amp;amp; Next Steps&lt;/h3&gt;
+&lt;p&gt;After the first few weeks of working from home, some organizations have easily slipped to normal operations with their teams continuing to work in a productive fashion. However on the other hand, there are organizations that are beginning to see the cracks in their remote working approaches, and now recognize that they need a more scalable and secure solution. Either way it's beginning to feel like remote working could be the new norm for most of us, and ensuring a more consistent and robust approach will form part of IT planning.&lt;/p&gt;
+&lt;p&gt;If you're an existing Chocolatey for Business customer please &lt;a href="https://chocolatey.org/contact/quick-deployment"&gt;complete this form&lt;/a&gt; and we can help you get set-up with &lt;a href="https://chocolatey.org/solutions/self-service-anywhere"&gt;Self-Service Anywhere&lt;/a&gt; and provide access to the &lt;a href="https://chocolatey.org/docs/quick-deployment-environment"&gt;Quick Deployment Environment (QDE)&lt;/a&gt; Virtual Machine.&lt;/p&gt;
+&lt;p&gt;If you're new to Chocolatey and are interested in learning more, or just want to quickly set-up &lt;a href="https://chocolatey.org/solutions/self-service-anywhere"&gt;Self-Service&lt;/a&gt; for your remote users &lt;a href="https://chocolatey.org/contact/quick-deployment"&gt;please contact our team&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a class="btn btn-success" href="https://chocolatey.org/contact/quick-deployment"&gt;&lt;i class="fas fa-paper-plane"&gt;&lt;/i&gt; Get the Quick Deployment Environment Now&lt;/a&gt;&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Enable Remote Work Without Compromising Security / Quick Deployment Environment</title>
+			<link>https://blog.chocolatey.org/2020/04/enable-remote-work-without-compromising-security-quick-deployment-environment</link>
+			<description>&lt;p&gt;I don't start this off lightly. We are in unprecedented times. If someone told me a little over a month ago that near all businesses across the world would suddenly be working from home due to a pandemic, I wouldn't have believed you. Neither would half of the population. You probably wouldn't have believed it. You probably find it hard to believe even still.&lt;/p&gt;</description>
+			<author>Rob Reynolds</author>
+			<guid>https://blog.chocolatey.org/2020/04/enable-remote-work-without-compromising-security-quick-deployment-environment</guid>
+			<pubDate>Wed, 01 Apr 2020 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;hr class="mt-0 mb-3 w-75 mx-auto"&gt;
+&lt;h4 class="text-center mb-0"&gt;&lt;i&gt;"How do you enable remote workers without compromising security?"&lt;/i&gt;&lt;/h4&gt;
+&lt;hr class="my-3 w-75 mx-auto"&gt;
+&lt;p&gt;I don't start this off lightly. We are in unprecedented times. If someone told me a little over a month ago that near all businesses across the world would suddenly be working from home due to a pandemic, I wouldn't have believed you. Neither would half of the population. You probably wouldn't have believed it. You probably find it hard to believe even still.&lt;/p&gt;
+&lt;p&gt;Yet, thousands of us are now working from home. And we don't know for sure when we'll all be back in the workplace. You may have now found yourself suddenly supporting all of those work from home coworkers and are finding the infrastructure that worked in those in office scenarios suddenly lacking. You may suddenly be operating with reduced staff and still need to provide the same level of support to your coworkers.&lt;/p&gt;
+&lt;p&gt;Now you are looking at what options you have. You have a few concerns to think about. How to enable your new remote workers and how to keep the software they are using up to date to avoid any security issues, especially considering that they may be working in less secure networks than you had inside the workplace.&lt;/p&gt;
+&lt;p&gt;How do you enable these semi-connected or disconnected experiences without losing out on security?&lt;/p&gt;
+&lt;h3 id="self-service-anywhere"&gt;Self-Service Anywhere&lt;/h3&gt;
+&lt;p&gt;As part of the current pandemic, Chocolatey Software is responding in a number of ways. One of those ways is to enable organizations like yours to implement more modern infrastructure that better supports a remote workforce.&lt;/p&gt;
+&lt;p&gt;Chocolatey's recommended and proven architecture has maximum flexibility to support not only workers in offices across the globe, but can also support remote workers with ease. With Chocolatey, you can keep your coworkers up to date and protected. You can protect your infrastructure, and you can ensure that it's mostly business as usual throughout this time.&lt;/p&gt;
+&lt;p&gt;One of the best ways to protect those laptops is to remove that administrative privilege so that even if someone did get access to it, they could do little damage. Chocolatey even has an answer here that will not put an undue burden on you in ensuring those laptops stay up to date.
+It's called Self-Service, which allows those folks to be able to manage software you've approved on their machines without administrative privileges. The best thing about the Chocolatey infrastructure is that you can run Self-Service Anywhere.&lt;/p&gt;
+&lt;p&gt;We've set up a &lt;a href="https://blog.chocolatey.org/solutions/self-service"&gt;solutions page specifically about this here.&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="ready-to-go-environment"&gt;Ready to Go Environment&lt;/h3&gt;
+&lt;p&gt;Another thing we've done in response to this time is prepared a full environment based on our Chocolatey infrastructure architecture recommendations. Currently, it takes about two days to get everything provisioned, stood up, and ready to go - optimistically. We have prepared a &lt;a href="https://blog.chocolatey.org/docs/quick-deployment-environment"&gt;Quick Deployment Environment (QDE)&lt;/a&gt; appliance that you can set up in Hyper-V or in your VMware infrastructure and be up and running in hours.&lt;/p&gt;
+&lt;div class="text-center"&gt;&lt;img class="img-fluid border mb-3 w-75" src="https://blog.chocolatey.org/content/images/quick-deployment-environment-chart.jpg" alt="Quick Deployment Environment Chart" title="Quick Deployment Environment Chart"&gt;&lt;/div&gt;
+&lt;p&gt;This will get you up and running in no time at all, with everything you need to enable your remote workers and keep them up to date. Please head to &lt;a href="https://blog.chocolatey.org/contact/quick-deployment"&gt;this form&lt;/a&gt; and fill that out and we'll be in contact with you very soon to help you.&lt;/p&gt;
+&lt;p&gt;If you are a current customer, please indicate that when you fill out &lt;a href="https://blog.chocolatey.org/contact/quick-deployment"&gt;the form.&lt;/a&gt;&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Removing Support For Old TLS Versions On The Chocolatey Website</title>
+			<link>https://blog.chocolatey.org/2020/01/remove-support-for-old-tls-versions</link>
+			<description>&lt;p&gt;You may have noticed that support for older TLS versions is being removed from websites all over the internet. With the ever evolving security landscape and the perpetual game of cat and mouse between attackers and cryptography we need to ensure that we keep abreast of industry best practice.&lt;/p&gt;</description>
+			<author>Chocolatey Operations Team</author>
+			<guid>https://blog.chocolatey.org/2020/01/remove-support-for-old-tls-versions</guid>
+			<pubDate>Thu, 23 Jan 2020 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;You may have noticed that support for older TLS versions is being removed from websites all over the internet. With the ever evolving security landscape and the perpetual game of cat and mouse between attackers and cryptography we need to ensure that we keep abreast of industry best practice.&lt;/p&gt;
+&lt;p&gt;Cryptography attacks are nothing new. While there are workarounds for many of them available, what they tell us is that some protocols are best left behind when there is a better way forward.&lt;/p&gt;
+&lt;p&gt;TLS 1.0 and 1.1 have been around a very long time now. But it is time to move on and remove support for these older, less secure, protocols. As a result the Chocolatey website will remove support for TLS 1.0 and TLS 1.1 on 3 February 2020.&lt;/p&gt;
+&lt;h3 id="why-are-we-doing-this-now"&gt;Why are we doing this now?&lt;/h3&gt;
+&lt;p&gt;While the removal of support for older TLS protocols started some time ago across the internet, we have committed to supporting out-of-the-box installs on Windows 7 SP1 and Windows Server 2008 which do not support TLS 1.2. With the Chocolatey software being installed first by many build scripts, removing support for these older protocols would have had a negative impact on our users.&lt;/p&gt;
+&lt;p&gt;With TLS 1.0 and 1.1 now responsible for less than 3.3% of traffic to Chocolatey.org and the end-of-life for &lt;a href="https://support.microsoft.com/en-gb/help/4456235/end-of-support-for-windows-server-2008-and-windows-server-2008-r2"&gt;Windows Server 2008 (and R2)&lt;/a&gt; on-premises* and &lt;a href="https://support.microsoft.com/en-gb/help/4057281/windows-7-support-ended-on-january-14-2020"&gt;Windows 7&lt;/a&gt; occurring on 14 January 2020, support for these older protocols over potential security issues no longer makes sense.&lt;/p&gt;
+&lt;p&gt;*  Customers using Microsoft Azure may qualify for an additional 3 years of Critical and Important security updates at no additional charge - see &amp;quot;&lt;a href="https://support.microsoft.com/en-gb/help/4456235/end-of-support-for-windows-server-2008-and-windows-server-2008-r2"&gt;end of support&lt;/a&gt;&amp;quot; for details.&lt;/p&gt;
+&lt;h3 id="what-does-this-mean-for-you"&gt;What does this mean for you?&lt;/h3&gt;
+&lt;p&gt;With modern browsers (such as Firefox, Edge, Chrome etc.) supporting TLS 1.2 for many years now, there should not be anything for you to do when browsing Chocolatey.org. Many major websites today have already removed support for these older protocols so if there was an issue with your browser and TLS 1.2 you would know about it by now.&lt;/p&gt;
+&lt;p&gt;While your operating system may support TLS 1.2 it's important to remember that it may have to be enabled. If you are working from PowerShell you can find out which protocols your system supports by running this code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;[Enum]::GetNames([Net.SecurityProtocolType]) -contains 'Tls12'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If the result is True then your system supports TLS 1.2. You can find out which protocols are being used by running:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;[System.Net.ServicePointManager]::SecurityProtocol.HasFlag([Net.SecurityProtocolType]::Tls12)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If the result is True then TLS 1.2 is being used . However, you can add TLS 1.2 explicitly by using:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can find more information on this &lt;a href="https://blog.pauby.com/post/force-powershell-to-use-tls-1-2/"&gt;blog post&lt;/a&gt; around working with TLS 1.2 in PowerShell.&lt;/p&gt;
+&lt;p&gt;If you are using the Chocolatey Client, choco.exe, then all versions from &lt;a href="https://github.com/chocolatey/choco/commit/2d39d97f01435d655fcc3675ab893bf71d60e6cb"&gt;0.10.1 support TLS 1.2&lt;/a&gt; without any additional configuration noted above (provided you have at least .NET 4.5 installed as well - you may also need &lt;a href="https://support.microsoft.com/en-us/help/2929781/update-adds-new-tls-cipher-suites-and-changes-cipher-suite-priorities"&gt;KB2919355&lt;/a&gt; installed depending on your operating system). If you are using an older version then it is time to upgrade. The current version is 0.10.15.&lt;/p&gt;
+&lt;h3 id="provisioning-older-machines"&gt;Provisioning Older Machines?&lt;/h3&gt;
+&lt;p&gt;If you find yourself provisioning machines such as Windows 7, Windows Server 2008, or older, you will find that those machines will not be able to communicate with the Chocolatey Community Repository after we implement this change. For those instances, you will need to &lt;a href="https://chocolatey.org/docs/installation"&gt;use alternative installation methods&lt;/a&gt; for Chocolatey. We strongly recommend using the &lt;a href="https://chocolatey.org/docs/installation#completely-offline-install"&gt;offline Chocolatey installation&lt;/a&gt; as it provides the most flexibility and reliability.&lt;/p&gt;
+&lt;h3 id="conclusion"&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;We understand that this change may put additional burden on a very small set of our user base. Given the number of major web sites who have already gone through this change we anticipate that the burden will be small. However, if you have any questions or concerns related to this announcement, please do not hesitate to &lt;a href="https://chocolatey.org/support"&gt;contact us&lt;/a&gt; using the means are available to you depending on your edition - you'll find these contact methods listed on the &lt;a href="https://chocolatey.org/support"&gt;support page&lt;/a&gt;.&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Chocolatey Community Repository - Service Interruptions</title>
+			<link>https://blog.chocolatey.org/2020/01/chocolatey-community-repository-issues-december-2019</link>
+			<description>&lt;p&gt;If you are a regular user of the Chocolatey Community Repository, no doubt in the last few months you will have noticed that from time to time there were issues. You may have even ventured over to our &lt;a href="https://status.chocolatey.org"&gt;status page&lt;/a&gt; and read over details of those issues. If you haven't noticed anything, well that has to do with the intermittent-ness of the issues.&lt;/p&gt;</description>
+			<author>The Chocolatey Team</author>
+			<guid>https://blog.chocolatey.org/2020/01/chocolatey-community-repository-issues-december-2019</guid>
+			<pubDate>Wed, 15 Jan 2020 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;If you are a regular user of the Chocolatey Community Repository, no doubt in the last few months you will have noticed that from time to time there were issues. You may have even ventured over to our &lt;a href="https://status.chocolatey.org"&gt;status page&lt;/a&gt; and read over details of those issues. If you haven't noticed anything, well that has to do with the intermittent-ness of the issues.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; The direct use of the Chocolatey Community Repository is not recommended for organizational use. We recommend that you put in place a caching mechanism through the use of a “virtual repository” and cache packages when being installed for the first time. This will allow you to install a package many times without needing to reach out to the Community Repository more than once, although we recommend you look to &lt;a href="https://github.com/chocolatey/choco/wiki/how-to-host-feed"&gt;internalize packages instead to increase reliability&lt;/a&gt;. You can implement a Proxy Repository including the installation of a Repository Server, such as Nexus Repository Manager v3 (or NXRM v2) which automatically caches (but does not internalize) packages from the community repository, in around 15 - 30 minutes. We have video walkthroughs for &lt;a href="https://www.youtube.com/watch?v=UehkG1VHtz0"&gt;Nexus&lt;/a&gt; and &lt;a href="https://www.youtube.com/watch?v=rMivH0DS9q8"&gt;Artifactory&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The popularity of Chocolatey Community has been huge, and that's thanks to all of you folks out in the community getting awareness out, helping out, and contributing Chocolatey packages! However, architecture that worked well for us in the past doesn’t work well when you double the number of requests that happen every day.&lt;/p&gt;
+&lt;p&gt;A year ago we were at 30 million requests per day! Per day! That's already a big success for the Chocolatey Community Repository. Yesterday we had 60.8 million requests. We’re humbled by what this means; we’ve doubled the popularity of the Chocolatey Community Repository in one year.&lt;/p&gt;
+&lt;img src="/assets/images/increased-web-traffic.png" alt="Increased Web Traffic" title="Increased Web Traffic" width="1100"&gt;
+&lt;p&gt;What worked well at 30 million requests per day, even 40 and 50 million requests per day, just doesn't quite work the same at 60 million requests per day. So we've been seeing some issues.&lt;/p&gt;
+&lt;p&gt;Over the past few months, the Chocolatey website, as well as the Chocolatey Community Repository, have been experiencing numerous intermittent service disruptions. Users have been reporting sporadic issues accessing both these resources. We take our commitment to the Chocolatey Community very seriously and wanted to take the time to give you all some context on the growing pains we are going through, and the steps we've taken so far to work on the issues:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;21 SEP 2019 - Released the redesign of our front end website - a project that had been in the works for quite awhile! Some folks voiced usability concerns and we wholeheartedly jumped in and worked to meet those concerns over the next 3 months.&lt;/li&gt;
+&lt;li&gt;26 OCT 2019 - Migrated the database from third party host to our cloud infrastructure - adding beefier infrastructure to handle the next few years of growth.&lt;/li&gt;
+&lt;li&gt;25 NOV 2019 - First noticeable issues with timeouts.&lt;/li&gt;
+&lt;li&gt;25 - 27 NOV 2019 - Applying normal maintenance, as sometimes this is all that is necessary to fix issues with timeouts.&lt;/li&gt;
+&lt;li&gt;29 - 30 NOV 2019 - After coming to the realization that we need to find new bottlenecks and fix them with the growth stage, we started to work with consultants to help look over database and health to make suggestions on what we need to do outside of changes with code we start to look at implementing.&lt;/li&gt;
+&lt;li&gt;30 NOV - 08 DEC 2019 - Work on implementing aspects of those findings and deployed changes.&lt;/li&gt;
+&lt;li&gt;08 - 22 DEC 2019 - After learning those changes were not going to hold the issues, we moved into other areas to look at and continued to work through optimizations that could be completed. Monitored closely to see if those reduced impact or worsened and took appropriate action.&lt;/li&gt;
+&lt;li&gt;23 - 27 DEC 2019 - Monitor closely and restart when issues started to occur.&lt;/li&gt;
+&lt;li&gt;30 DEC 2019 - Met with consultants again to take another look into additional areas that needed to be addressed that would reduce/remove issues.&lt;/li&gt;
+&lt;li&gt;31 DEC - 02 JAN 2020 - Implemented changes that were able to be addressed in a short timeframe.&lt;/li&gt;
+&lt;li&gt;02 JAN 2020 - Deployed changes to site and continue to monitor for issues.&lt;/li&gt;
+&lt;li&gt;02 JAN - Today - Continue to monitor closely for residual issues / optimizations that need to be addressed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src="/assets/images/request-latency.png" alt="Request Latency" title="Request Latency" width="1100"&gt;
+&lt;p&gt;Along with what we've done so far, let's also highlight where we are going with future plans:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We are in the process of moving our infrastructure from a third party host to our cloud infrastructure, with the first phase of this completed in October 2019. Phase 2 will see the move of the rest of our infrastructure and is due to be completed by the end of Q1 2020.&lt;/li&gt;
+&lt;li&gt;While the Chocolatey Community Repository and Website have extensive caching we are optimizing this caching to catch more requests. As part of Phase 1, we have already implemented more local caching that we continue to optimize. Going forward into Phase 2 we will be implementing further caching to improve responsiveness.&lt;/li&gt;
+&lt;li&gt;In November 2018 we implemented rate limiting to improve the responsiveness of the website and it has served us well. Optimizing this limiting is an ongoing task, but we are seeing good results from this so far.&lt;/li&gt;
+&lt;li&gt;The Chocolatey API is an area where we are currently focusing so we expect to see some optimization here soon without breaking any functionality.&lt;/li&gt;
+&lt;li&gt;Along with the API, the Website is another area we’re focusing on. You can find those changes on &lt;a href="https://github.com/chocolatey/chocolatey.org"&gt;GitHub&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The rate of the increase in requests along with the massive growth in the Chocolatey team has come together to cause the perfect storm. It’s great that our community is showing their commitment to Chocolatey by supporting us with recommendations, blog posts, packages, among many other ways.&lt;/p&gt;
+&lt;p&gt;We’re grateful to our community for all your support, and we recognize that we have not communicated with you as we should; and for that, we apologize. We hope to do a better job at that going forward.&lt;/p&gt;
+&lt;p&gt;We also want to assure you that we take these issues seriously and have plans in place to rectify them, but it will take time. We ask for your patience and understanding as we work to resolve these issues and improve our services for you all. And most of all, we appreciate all your support. Our community is committed to Chocolatey and we are committed to our community.&lt;/p&gt;
+&lt;p&gt;Lastly, we would also like to acknowledge the hard work and dedication with which the Chocolatey Development and Operations teams came together, and worked tirelessly to return the Chocolatey Community Repository to a reliable state. Our resilience through this challenge has been a great learning experience, and we are fortunate to have had this opportunity to grow.&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Infrastructure Changes Resulting In Unavailable Services on 26 October 2019</title>
+			<link>https://blog.chocolatey.org/2019/10/infrastructure-changes-october-2019</link>
+			<description>&lt;p&gt;In an effort to increase both the flexibility and stability of Chocolatey.org, we will be upgrading part of our infrastructure. This upgrade requires the website and other services be unavailable for a period of time.&lt;/p&gt;</description>
+			<author>Chocolatey Operations Team</author>
+			<guid>https://blog.chocolatey.org/2019/10/infrastructure-changes-october-2019</guid>
+			<pubDate>Sun, 20 Oct 2019 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;In an effort to increase both the flexibility and stability of Chocolatey.org, we will be upgrading part of our infrastructure. This upgrade requires the website and other services be unavailable for a period of time.&lt;/p&gt;
+&lt;p&gt;On Saturday 26 October 2019 the following services will be unavailable between 3:00 and 9:00 UTC:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Chocolatey.org Website;&lt;/li&gt;
+&lt;li&gt;Community Package Repository;&lt;/li&gt;
+&lt;li&gt;Licensed Package Repository;&lt;/li&gt;
+&lt;li&gt;Package Validator;&lt;/li&gt;
+&lt;li&gt;Package Verifier;&lt;/li&gt;
+&lt;li&gt;Package Scanner;&lt;/li&gt;
+&lt;li&gt;Package Cacher;&lt;/li&gt;
+&lt;li&gt;Manage Chocolatey Packages through Boxstarter;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For all updates, and to check on progress, please use the &lt;a href="https://status.chocolatey.org"&gt;Chocolatey.org status page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In an attempt to mitigate the effect these changes will have, a time was chosen when use of the website and services is minimal. However, we appreciate that some will still be affected and we apologise for the inconvenience caused.&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Chocolatey's Website Gets a Long Awaited Redesign!</title>
+			<link>https://blog.chocolatey.org/2019/09/chocolatey-website-redesign</link>
+			<description>&lt;p&gt;Howdy! You might have noticed a few changes on the website recently. Chocolatey has grown up quite a lot since the initial design of the site and we wanted to bring a much more consistent look and feel. We looked out across the industry of websites for modern automation tools and were inspired to take a step back and a hard look at what we had. What we've come up highlights both our product and our amazing community, all on the same site!&lt;/p&gt;</description>
+			<author>Chocolatey News Team</author>
+			<guid>https://blog.chocolatey.org/2019/09/chocolatey-website-redesign</guid>
+			<pubDate>Fri, 20 Sep 2019 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Howdy! You might have noticed a few changes on the website recently. Chocolatey has grown up quite a lot since the initial design of the site and we wanted to bring a much more consistent look and feel. We looked out across the industry of websites for modern automation tools and were inspired to take a step back and a hard look at what we had. What we've come up highlights both our product and our amazing community, all on the same site!&lt;/p&gt;
+&lt;p&gt;The design is fresh, crisp, and brings many performance improvements to help you find the information you need, faster. Keep reading to learn about just a few of the key features you don't want to miss!&lt;/p&gt;
+&lt;h3 id="where-did-everything-go"&gt;Where Did Everything Go?!&lt;/h3&gt;
+&lt;p&gt;Here is a handy list for you to get familiar with the website navigation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Community Packages&lt;/strong&gt; - From the top navigation click &lt;strong&gt;Community &amp;gt; Community Packages&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Documentation&lt;/strong&gt; - To get to the Chocolatey Documentation, from the top navigation click &lt;strong&gt;Learn &amp;gt; Docs&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Contact&lt;/strong&gt; - To get to the Contact area, from the top navigation click &lt;strong&gt;About &amp;gt; Contact&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sitemap&lt;/strong&gt; - For a quick guide to all important links on the Chocolatey website, visit our sitemap. Navigate to the bottom navigation and click &lt;strong&gt;Learn &amp;gt; Sitemap&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="interactive-chocolatey-courses"&gt;Interactive Chocolatey Courses&lt;/h3&gt;
+&lt;p&gt;You've asked for it, and now it's here! Introducing Chocolatey Courses, where you can learn everything you need to know about Chocolatey in an easy-to-consume interactive course. Each course is made of many modules, and within each module you will be tested over the material you just covered. Once you complete every module within a course, you will be awarded a digital badge. Earn badges and show them off on your profile page so everyone knows you're a Chocolatey Pro!
+&lt;img class="border img-fluid mb-3 p-0" src="https://blog.chocolatey.org/assets/images/redesign-badges.jpg" alt="Chocolatey Course Badges" title="Chocolatey Course Badges"&gt;
+&lt;a href="https://blog.chocolatey.org/courses" class="btn btn-primary"&gt;Go to Chocolatey Courses&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="chocolatey-videos-case-studies-and-customer-success-stories"&gt;Chocolatey Videos, Case Studies, and Customer Success Stories&lt;/h3&gt;
+&lt;p&gt;Along with Chocolatey Courses, we've added a Resource Library to help you find articles that may help you achieve your Chocolatey goals. In the Resource Library, you'll find Case Studies, Chocolatey Videos, Customer Success Stores, and more!&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://blog.chocolatey.org/resources" class="btn btn-primary"&gt;Go to Chocolatey Resources&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="community-package-repository"&gt;Community Package Repository&lt;/h3&gt;
+&lt;h4 id="a-fresh-new-look"&gt;A Fresh New Look&lt;/h4&gt;
+&lt;p&gt;The &lt;a href="https://blog.chocolatey.org/packages"&gt;Chocolatey Community Repository&lt;/a&gt; got a makeover! The new look features a grid view of packages, in a clean Chocolatey theme. All the same functionality still exist, only now in an eaiser to view format. At the top of each package page you'll notice a simple tabbed interface that contains commands for you to easily copy/paste for installing, upgrading, and installing.
+&lt;img class="border img-fluid my-3" src="https://blog.chocolatey.org/assets/images/redesign-install-tabs.jpg" alt="Install Tabs" title="Install Tabs"&gt;&lt;/p&gt;
+&lt;p&gt;We're excited to announce that packages have an included section for organizations as well, to really help organizations reuse packages from the community repository in recommended ways. Simply pick enter your internal repository url and copy from your chosen deployment method!
+&lt;img class="border img-fluid my-3 p-0" src="https://blog.chocolatey.org/assets/images/redesign-install-tabs-puppet.jpg" alt="Organization Install Tabs" title="Organization Install Tabs"&gt;&lt;/p&gt;
+&lt;h4 id="updates-for-maintainers"&gt;Updates for Maintainers&lt;/h4&gt;
+&lt;h5 id="improvements-to-moderation-filtering"&gt;1. Improvements to Moderation Filtering&lt;/h5&gt;
+&lt;p&gt;You've always been able to see how many packages in moderation, but now you can filter down by packages that are "Waiting for Maintainer", or "Ready for Review", etc. Click the header counts to view the packages, or drill down further with the dropdown list that appears while in the moderation queue.&lt;/p&gt;
+&lt;img class="border img-fluid mb-3" src="/assets/images/redesign-filter-header.jpg" alt="Moderation Clickable Header" title="Moderation Clickable Header"&gt;
+&lt;img class="border img-fluid mb-3" src="/assets/images/redesign-filter-dropdown.jpg" alt="Advanced Moderation Filtering" title="Advanced Moderation Filtering"&gt;
+&lt;h5 id="choose-your-default-package-view"&gt;2. Choose Your Default Package View&lt;/h5&gt;
+&lt;p&gt;Are you a moderator who spends a lot of time in the Moderator Queue? Well, good news. Now you can make the Moderator Queue your default view, so whenever you go to the Community Packages area you'll instantly be taken to where you need to go. Changing your view is easy, simply navigate to the Moderator Queue and toggle the switch located near the search filters!&lt;/p&gt;
+&lt;img class="border img-fluid mb-3" src="/assets/images/redesign-default-view.gif" alt="Moderation Default View" title="Moderation Default View"&gt;
+&lt;h5 id="legible-package-communication-area"&gt;3. Legible Package Communication Area&lt;/h5&gt;
+&lt;p&gt;If you are moderator/maintainer/admin you know how sometimes it has been difficult to keep up in a conversation of a package. Now, each comment is broken down and organized in a way where you can easily get to the information you need and respond appropriately.&lt;/p&gt;
+&lt;h5 id="showhide-all-files"&gt;4. Show/Hide All Files&lt;/h5&gt;
+&lt;img class="border img-fluid mb-3" src="/assets/images/redesign-show-hide.gif" alt="Show/Hide Files in Moderation View" title="Show/Hide Files in Moderation View"&gt;
+&lt;h3 id="other-changes-are-coming"&gt;Other Changes are Coming&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Documentation - We are working on making the documentation much more consumable to allow you to easily find what you need and get the proper information, with the proper context to you in a much more approachable format.&lt;/li&gt;
+&lt;li&gt;Better Moderation Flow - We'll be streamlining some of the moderation flow.&lt;/li&gt;
+&lt;li&gt;Updated Infrastructure - We've nearly outgrown our current infrastructure and we'll be making some long-planned for changes that ensure better availability and uptime.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And these are just the more near-term changes! Stay tuned, as we have some more interesting things under wraps that we think you are going to love!&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Chocolatey Fest Will Return in 2020</title>
+			<link>https://blog.chocolatey.org/2019/04/chocolatey-fest-returns-2020</link>
+			<description>&lt;p&gt;Last year we had a very successful &lt;a href="https://chocolateyfest.com"&gt;Chocolatey Fest (aka WinOps SFO)&lt;/a&gt;. &lt;a href="https://chocolateyfest.com"&gt;Chocolatey Fest 2018&lt;/a&gt; was an amazing event and we want to put on more WinOps-focused conferences, including making Chocolatey Fest a multi-day conference.&lt;/p&gt;</description>
+			<author>Chocolatey Events Team</author>
+			<guid>https://blog.chocolatey.org/2019/04/chocolatey-fest-returns-2020</guid>
+			<pubDate>Sat, 27 Apr 2019 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;img src="/assets/images/chocolatey-fest-no-year.png" alt="Chocolatey Fest" align="right" style="padding-right:10px" /&gt;
+&lt;p&gt;Last year we had a very successful &lt;a href="https://chocolateyfest.com"&gt;Chocolatey Fest (aka WinOps SFO)&lt;/a&gt;. &lt;a href="https://chocolateyfest.com"&gt;Chocolatey Fest 2018&lt;/a&gt; was an amazing event and we want to put on more WinOps-focused conferences, including making Chocolatey Fest a multi-day conference.&lt;/p&gt;
+&lt;p&gt;During planning for 2019, we decided to make this a year of strong focus in delivering value to our products and customers, which means that Chocolatey Fest will be back in 2020.&lt;/p&gt;
+&lt;h3 id="find-us-at-these-conferences"&gt;Find Us At These Conferences&lt;/h3&gt;
+&lt;p&gt;While we are not hosting a conference this year, you will find us at the following conferences:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://powershell.org/summit/"&gt;PowerShell Summit&lt;/a&gt; (Seattle, WA, USA) - April 29-May 2, 2019&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://chefconf.chef.io/"&gt;ChefConf 2019&lt;/a&gt; (Seattle, WA, USA) - May 20-23, 2019&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.psconf.eu/"&gt;PowerShell Conference Europe 2019&lt;/a&gt; (Hannover, Germany) - Jun 4-7, 2019&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.winops.org/"&gt;WinOps London&lt;/a&gt; (London, UK) - Dates TBD (September 2019)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://puppet.com/puppetize"&gt;Puppetize PDX 2019&lt;/a&gt; (Portland, OR, USA) - October 9-10, 2019&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/ignite"&gt;Microsoft Ignite&lt;/a&gt; (Orlando, FL, USA) - November 4-8, 2019&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Stop by and say hi, get some free swag! If there are other automation-focused conferences you would like to see us attend, please let us know in the comments!&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Chocolatey Fest Less Than a Month to Go!</title>
+			<link>https://blog.chocolatey.org/2018/09/chocolatey-fest-month-to-go</link>
+			<description>&lt;p&gt;&lt;a href="https://chocolateyfest.com/"&gt;Chocolatey Fest&lt;/a&gt; aka WinOps.org San Francisco is less than a month away! This year’s inaugural user conference, the first of its kind in North America focused on DevOps on Windows (WinOps), Chocolatey and related technologies, takes place October 8th, 2018, at the Park Central Hotel in San Francisco, California.&lt;/p&gt;</description>
+			<author>Chocolatey Events Team</author>
+			<enclosure url="https://blog.chocolatey.org/%3Cimg%20src=%22/assets/images/chocolatey-fest.png%22%20alt=%22chocolatey%20fest%20-%20a%20sweet%20conference%20focused%20on%20windows%20automation%20(winops)!%2008%20october%202018,%20park%20central%20hotel,%20san%20francisco%22%20title=%22chocolatey%20fest%202018%20-%20join%20us%20for%20awesome%20talks,%20some%20actual%20chocolate,%20and%20maybe%20even%20an%20appearance%20by%20willy%20wonka!%22%20/%3E" length="0" type="image" />
+			<guid>https://blog.chocolatey.org/2018/09/chocolatey-fest-month-to-go</guid>
+			<pubDate>Wed, 19 Sep 2018 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;&lt;a href="https://chocolateyfest.com/"&gt;Chocolatey Fest&lt;/a&gt; aka WinOps.org San Francisco is less than a month away! This year’s inaugural user conference, the first of its kind in North America focused on DevOps on Windows (WinOps), Chocolatey and related technologies, takes place October 8th, 2018, at the Park Central Hotel in San Francisco, California.&lt;/p&gt;
+&lt;img src="/assets/images/chocolatey-fest.png" alt="Chocolatey Fest - A sweet conference focused on Windows automation (WinOps)! 08 October 2018, Park Central Hotel, San Francisco" title="Chocolatey Fest 2018 - join us for awesome talks, some actual chocolate, and maybe even an appearance by Willy Wonka!" align="left" style="padding-right:10px" /&gt;
+&lt;p&gt;We’ve got a great lineup planned for you, with keynotes, track sessions and workshops centered around the topics our community cares about: automated testing and deployment, infrastructure as code, containers, security, saving time, and more.&lt;/p&gt;
+&lt;p&gt;Plus you’ll get to meet the people behind Chocolatey, and network with WinOps experts from companies like Facebook, Microsoft, Red Hat, Yelp, and others!&lt;/p&gt;
+&lt;p&gt;Maybe you’re already &lt;a href="https://chocolateyfest.com/register"&gt;convinced you should attend&lt;/a&gt;, but your manager may need some persuading. Use the letter below as a starting point, and personalize as needed.&lt;/p&gt;
+&lt;p&gt;We are excited to see you at Chocolatey Fest!&lt;/p&gt;
+&lt;h3 id="template-chocolatey-fest-manager-approval-letter"&gt;Template - Chocolatey Fest Manager Approval Letter&lt;/h3&gt;
+&lt;p&gt;Subject line: Please send me to Chocolatey Fest this October&lt;/p&gt;
+&lt;p&gt;Dear [Boss],&lt;/p&gt;
+&lt;p&gt;As our team has discovered, automation and other DevOps practices aren’t just for Linux shops; it’s increasingly important for Windows teams too. We’ve already seen some success with [name a recent automation project/initiative], and now we need to turn our attention to [name an upcoming initiative/goal].&lt;/p&gt;
+&lt;p&gt;Chocolatey Fest, a Windows automation conference in San Francisco on 8 October, can help provide the education and best practices we need to reach that goal. The conference brings together WinOps experts from Facebook, Red Hat and Yelp — companies that are leading the way when it comes to Windows automation — and highlights how their teams have use Chocolatey and related technologies to increase time to value, reduce errors, and improve security.&lt;/p&gt;
+&lt;p&gt;A ticket to Chocolatey Fest includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A full day of sessions on Windows automation, infrastructure as code, testing, security, and more.&lt;/li&gt;
+&lt;li&gt;Conversations centered around tools we already use (and some we’re considering), like Chocolatey, Vagrant, Docker, Puppet, Chef, Ansible, Azure, AWS and others.&lt;/li&gt;
+&lt;li&gt;An evening Hackathon with workshops centered around Docker on Windows, and best practices for deploying Chocolatey.&lt;/li&gt;
+&lt;li&gt;Networking with other sysadmins, architects and developers who are tackling some of the same challenges that we are.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The conference ticket costs just $250, and the Hackathon is free. With travel and accommodations totaling [fill in cost], the all-in cost would be [total]. With everything I would learn, that would have a value to the company above and beyond because I could do [fill in some automation needs], that would save the company [savings] over the next year!&lt;/p&gt;
+&lt;p&gt;I hope you’ll agree that Chocolatey Fest is a worthwhile investment for our company and that you’ll approve my attendance at this year’s event.&lt;/p&gt;
+&lt;p&gt;Thanks,
+[Your Name]&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Stephanie Burrows Joins Chocolatey as Front-End Web Developer</title>
+			<link>https://blog.chocolatey.org/2018/09/stephanie-burrows-joins-chocolatey</link>
+			<description>&lt;p&gt;We are excited to announce that Stephanie Burrows has joined the Chocolatey Team as a Front-End Web Developer!&lt;/p&gt;</description>
+			<author>Chocolatey Events Team</author>
+			<enclosure url="https://blog.chocolatey.org/%3Cimg%20src=%22/assets/images/team/stephanie-1.jpg%22%20alt=%22stephanie%20burrows,%20front-end%20web%20developer%22%20title=%22stephanie%20burrows,%20front-end%20web%20developer%22%3E" length="0" type="image" />
+			<guid>https://blog.chocolatey.org/2018/09/stephanie-burrows-joins-chocolatey</guid>
+			<pubDate>Mon, 17 Sep 2018 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;We are excited to announce that Stephanie Burrows has joined the Chocolatey Team as a Front-End Web Developer!&lt;/p&gt;
+&lt;img src="/assets/images/team/stephanie-1.jpg" alt="Stephanie Burrows, Front-End Web Developer" title="Stephanie Burrows, Front-End Web Developer" width="200" align="right"&gt;
+&lt;p&gt;&amp;quot;I'm excited to have Stephanie join us at Chocolatey Software. Her unique talents compliment the team well and brings a better user experience to a world that is heavily into automation.&amp;quot; said Rob Reynolds, Founder and CEO of Chocolatey.&lt;/p&gt;
+&lt;p&gt;Stephanie is new to the Chocolatey community, but has served as a Front-End Web Developer for the last 4 years before joining the Chocolatey Team. Stephanie has a knack for designing beautiful, user-friendly, and fast websites.&lt;/p&gt;
+&lt;p&gt;Many people refer to Stephanie as a &amp;quot;Wizard at CSS and Javascript&amp;quot;. Focusing most of her work around the Bootstrap library, she is able to modify and create unique individual looks while retaining universally understandable code.&lt;/p&gt;
+&lt;p&gt;Efficiency and speed is key in the Chocolatey world, and we're pleased that she takes great joy in seeing just how small and fast she can make a website by utilizing the latest optimization tools (As reputation goes, she'll slash a website by at least a third of its size!).&lt;/p&gt;
+&lt;p&gt;Stephanie has always had an eye for design. Her love for web development started several years ago when she took an intro to web design class. Since then she has started a few small businesses, but realized it was the process of getting a website up and working that she actually enjoyed the most.&lt;/p&gt;
+&lt;p&gt;&amp;quot;It clicked in my head one day that I wanted to be a Front-End Web Developer. The process of choosing a color palette, designing a logo, creating a website mockup, and then making that all come to life with code- It all just makes sense to me. It really is my passion!&amp;quot;&lt;/p&gt;
+&lt;p&gt;One of many projects Stephanie looks forward to the most is implementing UI updates to chocolatey.org.&lt;/p&gt;
+&lt;img src="/assets/images/team/stephanie-2.jpg" alt="Stephanie Burrows, Front-End Web Developer" title="Stephanie Burrows, Front-End Web Developer" width="150" align="left"&gt;
+&lt;p&gt;&amp;quot;I can't wait to dig in and redesign chocolatey.org! There are several components of the website that could use some updated UI design. I'm ready and up for the challenge!&amp;quot;&lt;/p&gt;
+&lt;p&gt;Stephanie will be based remotely near Wichita, KS. Her cat, Miesha, also assists in website design, so you may see her meowing around. Stay tuned for exciting new updates to the look of Chocolatey in the upcoming months!&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Paul Broadwith Joins Chocolatey as Senior Technical Engineer</title>
+			<link>https://blog.chocolatey.org/2018/07/paul-broadwith-joins-chocolatey</link>
+			<description>&lt;p&gt;We are excited to announce that Paul Broadwith, long term member of the Chocolatey community, has joined the team as a Senior Technical Engineer.&lt;/p&gt;</description>
+			<author>Chocolatey News Team</author>
+			<enclosure url="https://blog.chocolatey.org/%3Cimg%20src=%22/assets/images/team/paul.png%22%20alt=%22paul%20broadwith,%20senior%20technical%20engineer%22%20title=%22paul%20broadwith,%20senior%20software%20engineer%22%3E" length="0" type="image" />
+			<guid>https://blog.chocolatey.org/2018/07/paul-broadwith-joins-chocolatey</guid>
+			<pubDate>Wed, 11 Jul 2018 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;We are excited to announce that Paul Broadwith, long term member of the Chocolatey community, has joined the team as a Senior Technical Engineer.&lt;/p&gt;
+&lt;p&gt;&amp;quot;Paul has been a force in the community, doing great things with the community repository in package maintenance, moderation, and support in helping bring new folks up to speed. I'm excited about Paul as he is going to bring some much needed structure to our back end infrastructure and processes which will help us continue to grow!&amp;quot; said Rob Reynolds, Founder and CEO of Chocolatey.&lt;/p&gt;
+&lt;img src="/assets/images/team/paul.png" alt="Paul Broadwith, Senior Technical Engineer" title="Paul Broadwith, Senior Software Engineer" width="250" align="right"&gt;
+&lt;p&gt;Paul's journey with Chocolatey started back in 2015 when he was using Chocolatey to keep his own personal computer up to date. Like most people, the chore of updating everything manually lead to it simply not being done often enough. And that's where Chocolatey clicked for him. It scratched that itch of automating software updates.&lt;/p&gt;
+&lt;p&gt;In his long IT career, Paul has focused on two important goals - automation and sharing knowledge. He quickly started creating his own packages, helping out others and answering questions in the Chocolatey Gitter channel and mailing lists. The Chocolatey team welcomed him soon after, as a moderator for packages submitted to &lt;a href="https://chocolatey.org/packages"&gt;chocolatey.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;With 26 years IT experience under his belt, Paul started in IT at a time when you could know everything 'IT'. But today he focuses on Windows and Linux infrastructure, Active Directory and his new passion, PowerShell.&lt;/p&gt;
+&lt;p&gt;&amp;quot;Joining Chocolatey Software is a dream come true for me&amp;quot; said Paul, &amp;quot;As a long time user of Chocolatey I am excited to see how I can help it grow and help others get the most from it.&amp;quot;&lt;/p&gt;
+&lt;p&gt;Paul is the founder of the Scottish PowerShell and DevOps User Group and is an active member in the PowerShell and Open Source communities. He will be based remotely just outside of Glasgow, Scotland.&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Chocolatey Fest - Chocolatey's inaugural conference on Windows automation (WinOps) is coming this October!</title>
+			<link>https://blog.chocolatey.org/2018/06/chocolatey-fest-conference-coming-october-8</link>
+			<description>&lt;p&gt;It’s been a big year already for Chocolatey Software! We've expanded our staff, we're launching our Chocolatey Central Management for Chocolatey for Business, and have started a philanthropy for giving back to our community. We were also officially recognized by Microsoft at the recent Microsoft BUILD 2018 conference and now &lt;a href="https://blogs.msdn.microsoft.com/commandline/2018/05/08/join-us-for-a-hot-cup-o-chocolatey/"&gt;Microsoft is participating/collaborating in our community!&lt;/a&gt; Details on all those exciting areas are going to be coming out in the coming weeks, but we wanted to take a moment to give you a heads up about what we have in store that is really the Chocolatey icing on the cake!&lt;/p&gt;</description>
+			<author>Chocolatey Events Team</author>
+			<enclosure url="https://blog.chocolatey.org/%3Cimg%20src=%22/assets/images/chocolatey-fest-announce.png%22%20alt=%22chocolatey%20fest%20-%20a%20sweet%20conference%20focused%20on%20windows%20automation%20(winops)!%2008%20october%202018,%20park%20central%20hotel,%20san%20francisco%22%20title=%22chocolatey%20fest%202018%20-%20join%20us%20for%20awesome%20talks,%20some%20actual%20chocolate,%20and%20maybe%20even%20an%20appearance%20by%20willy%20wonka!%22%20/%3E" length="0" type="image" />
+			<guid>https://blog.chocolatey.org/2018/06/chocolatey-fest-conference-coming-october-8</guid>
+			<pubDate>Fri, 15 Jun 2018 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;It’s been a big year already for Chocolatey Software! We've expanded our staff, we're launching our Chocolatey Central Management for Chocolatey for Business, and have started a philanthropy for giving back to our community. We were also officially recognized by Microsoft at the recent Microsoft BUILD 2018 conference and now &lt;a href="https://blogs.msdn.microsoft.com/commandline/2018/05/08/join-us-for-a-hot-cup-o-chocolatey/"&gt;Microsoft is participating/collaborating in our community!&lt;/a&gt; Details on all those exciting areas are going to be coming out in the coming weeks, but we wanted to take a moment to give you a heads up about what we have in store that is really the Chocolatey icing on the cake!&lt;/p&gt;
+&lt;img src="/assets/images/chocolatey-fest-announce.png" alt="Chocolatey Fest - A sweet conference focused on Windows automation (WinOps)! 08 October 2018, Park Central Hotel, San Francisco" title="Chocolatey Fest 2018 - join us for awesome talks, some actual chocolate, and maybe even an appearance by Willy Wonka!" align="right" /&gt;
+&lt;p&gt;We're excited to officially announce that &lt;a href="https://chocolateyfest.com"&gt;Chocolatey Fest 2018&lt;/a&gt; is coming to San Francisco on October 8, 2018. We’re bringing that Chocolatey goodness to Park Central Hotel near Union Square, and we hope you’ll join us. Chocolatey Fest will be the first ever independent conference in North America focused exclusively on Windows automation (WinOps)!&lt;/p&gt;
+&lt;p&gt;Even as a one day event this year, Chocolatey Fest promises a packed schedule, including keynotes on the future of WinOps from Chocolatey Software and organizations focused heavily on Microsoft Windows automation. Come to learn about WinOps as it relates to areas such as infrastructure as code, testing your infrastructure, and the future of where the industry is going. Come to meet other folks focused in Windows automation and some of the exciting things they are working on. Windows automation is at a really exciting turning point and you are right in the middle of it!  It's likely you will hear talks and be involved in discussions featuring technologies such as Vagrant, Docker, Puppet, Chef, Azure, AWS, Ansible, and others.&lt;/p&gt;
+&lt;p&gt;Your time (and budget) is limited, and we know you have to make decisions when it comes to which conferences you attend each year. What sets Chocolatey Fest apart? We have a tight-knit community of engineers - together we’re building the future of Windows automation, and finding ways to make our work scalable, secure, and fun again. Who knows? You may even find Willy Wonka at Chocolatey Fest!&lt;/p&gt;
+&lt;p&gt;Of course, it doesn’t hurt that our ticket price is more competitive than most. Plus, if you’re among the first 50 registrants, you’ll save 20%.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://chocolateyfest.com/register"&gt;Get your Golden Ticket now!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Your ticket includes access to all keynotes, presentations and meals, and an optional evening hackathon and workshop. Plus, you’ll get a chance to catch up with friends and meet members of the Chocolatey and WinOps community and Chocolatey Software's team.&lt;/p&gt;
+&lt;h3 id="speak-help-make-chocolatey-fest-even-sweeter"&gt;Speak: Help make Chocolatey Fest even sweeter&lt;/h3&gt;
+&lt;p&gt;Interested in speaking at Chocolatey Fest? If you’re already using Chocolatey or have a strong point of view on Windows automation, please &lt;a href="https://chocolateyfest.com/proposals"&gt;consider submitting a talk proposal&lt;/a&gt;. We’re particularly interested in talks about:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Chocolatey and related automations with open source and commercial editions&lt;/li&gt;
+&lt;li&gt;Integration with Puppet, Chef, Ansible, PowerShell DSC, Salt, and other configuration management solutions&lt;/li&gt;
+&lt;li&gt;Integration with SCCM, LanDesk, ConnectWise Automate and other endpoint management solutions&lt;/li&gt;
+&lt;li&gt;Managing Repositories with Artifactory, Nexus, ProGet and other package repositories&lt;/li&gt;
+&lt;li&gt;Vagrant, Docker and other types of virtualization/containerization&lt;/li&gt;
+&lt;li&gt;AWS, Azure, and other cloud-based solutions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://chocolateyfest.com/proposals"&gt;Submit your proposal now!&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="call-for-sponsors"&gt;Call for sponsors&lt;/h3&gt;
+&lt;p&gt;We couldn’t pull off such a great event without the help of our sponsors, and we’d love to count your organization among them.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://chocolateyfest.com/sponsor-request"&gt;Sponsor Chocolatey Fest&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="join-us"&gt;Join us!&lt;/h3&gt;
+&lt;p&gt;Mark your calendar now - Chocolatey Fest is October 8, 2018 in San Francisco. We're excited to share even more details as Chocolatey Fest approaches, and we hope to see you there!&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Boxstarter moves under Chocolatey GitHub Organization</title>
+			<link>https://blog.chocolatey.org/2018/06/boxstarter-moves-under-chocolatey-github-organization</link>
+			<description>&lt;p&gt;Back in April 2012, &lt;a href="https://twitter.com/mwrockx"&gt;Matt Wrock&lt;/a&gt; started the &lt;a href="https://boxstarter.org/"&gt;Boxstarter&lt;/a&gt; Project.  The main aim of the Boxstarter project was to aid with the provisioning of a repeatable and reboot resilient Windows environment.  It provided this by wrapping the Chocolatey installation/upgrade commands, and additionally provided helper commands, that would mean that you could fully configure your system, just the way you wanted it.  On top of this, it was possible to do this both on your local machine, and also remotely.&lt;/p&gt;</description>
+			<author>Chocolatey News Team</author>
+			<enclosure url="https://blog.chocolatey.org/%3Cimg%20src=%22/content/images/boxstarter.png%22%20alt=%22boxstarter%20logo%22%20title=%22boxstarter%20logo%22%20/%3E" length="0" type="image" />
+			<guid>https://blog.chocolatey.org/2018/06/boxstarter-moves-under-chocolatey-github-organization</guid>
+			<pubDate>Thu, 07 Jun 2018 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Back in April 2012, &lt;a href="https://twitter.com/mwrockx"&gt;Matt Wrock&lt;/a&gt; started the &lt;a href="https://boxstarter.org/"&gt;Boxstarter&lt;/a&gt; Project.  The main aim of the Boxstarter project was to aid with the provisioning of a repeatable and reboot resilient Windows environment.  It provided this by wrapping the Chocolatey installation/upgrade commands, and additionally provided helper commands, that would mean that you could fully configure your system, just the way you wanted it.  On top of this, it was possible to do this both on your local machine, and also remotely.&lt;/p&gt;
+&lt;img src="/content/images/boxstarter.png" alt="Boxstarter Logo" title="Boxstarter Logo" align="left" /&gt;
+&lt;p&gt;Due to a change in priorities and focus, which you can read about in Matt’s &lt;a href="http://www.hurryupandwait.io/blog/course-correction"&gt;blog post&lt;/a&gt;, Matt is no longer in a position to maintain the Boxstarter project.  After discussions between Matt and Chocolatey Software, Inc., the decision has been made to move the &lt;a href="https://github.com/chocolatey/boxstarter"&gt;Boxstarter&lt;/a&gt; project under the &lt;a href="https://github.com/chocolatey"&gt;Chocolatey Organization&lt;/a&gt; on GitHub.&lt;/p&gt;
+&lt;p&gt;Over time, it is likely that some of the features that are included in Boxstarter will be ported into Chocolatey, but for the time being, Boxstarter will remain a standalone project, under the stewardship of Chocolatey Software, Inc., and the Chocolatey Community.&lt;/p&gt;
+&lt;p&gt;One of the immediate changes that has been made, and which shipped with the &lt;a href="https://chocolatey.org/packages/boxstarter/2.11.0"&gt;2.11.0 release of Boxstarter&lt;/a&gt; was to sign the Boxstarter ClickOnce binary, it's manifests, and all PowerShell scripts, using the Chocolatey Software, Inc. code signing certificate.&lt;/p&gt;
+&lt;p&gt;If you have any immediate questions, please feel free to reach out on the new Gitter room for &lt;a href="https://gitter.im/chocolatey/boxstarter"&gt;Boxstarter&lt;/a&gt;.&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Gary Ewan Park Joins Chocolatey as Senior Software Engineer</title>
+			<link>https://blog.chocolatey.org/2018/02/gary-ewan-park-joins-chocolatey</link>
+			<description>&lt;p&gt;We are excited to announce that Gary Ewan Park has joined the team as a Senior Software Engineer in a full time capacity. Gary had been working with the team in a part time capacity previously and has been a long time member of the Chocolatey community!&lt;/p&gt;</description>
+			<author>Chocolatey News Team</author>
+			<enclosure url="https://blog.chocolatey.org/%3Cimg%20src=%22/assets/images/team/gary.png%22%20alt=%22gary%20ewan%20park,%20senior%20software%20engineer%22%20title=%22gary%20ewan%20park,%20senior%20software%20engineer%22%20/%3E" length="0" type="image" />
+			<guid>https://blog.chocolatey.org/2018/02/gary-ewan-park-joins-chocolatey</guid>
+			<pubDate>Sun, 11 Feb 2018 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;We are excited to announce that Gary Ewan Park has joined the team as a Senior Software Engineer in a full time capacity. Gary had been working with the team in a part time capacity previously and has been a long time member of the Chocolatey community!&lt;/p&gt;
+&lt;p&gt;&amp;quot;Over the past few years, Gary has really helped take Chocolatey to the next level with his contributions and community work. Without his hard work and efforts in the community, I'm not sure Chocolatey would be where it is today. I'm also proud to call Gary a dear friend. When we started thinking of who we wanted to hire back as early as 2014, Gary has always been at the top of my list.&amp;quot; said Rob Reynolds, Founder and CEO of Chocolatey.&lt;/p&gt;
+&lt;img src="/assets/images/team/gary.png" alt="Gary Ewan Park, Senior Software Engineer" title="Gary Ewan Park, Senior Software Engineer" width="250" align="right" /&gt;
+&lt;p&gt;Gary first started using Chocolatey in early 2013, where he was using it to automate the installation of packages on his own personal machine.  At the time, Gary could see the potential for Chocolatey, becoming the maintainer of several popular packages, and in fact, Chocolatey was the first project that Gary submitted a &lt;a href="https://github.com/chocolatey/chocolatey/pull/238"&gt;Pull Request&lt;/a&gt; to.&lt;/p&gt;
+&lt;p&gt;Over the years between then and now, Gary has become a Core Chocolatey Team Member and he was officially made a member of the Chocolatey GitHub organization in 2015.  His Open Source Contributions to Chocolatey have included monitoring and answering questions in the Gitter channels, mailing lists, Stack Overflow questions, and GitHub issues, creating and maintaining Chocolatey packages, acting as one of the moderators for packages submitted to &lt;a href="https://chocolatey.org/packages"&gt;chocolatey.org&lt;/a&gt;, as well as working on the graphical interface for Chocolatey, the &lt;a href="https://github.com/chocolatey/ChocolateyGUI"&gt;Chocolatey GUI&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Gary has over 10 years experience working as a developer on technologies such as ASP.NET, Windows Forms, WPF, SharePoint, Silverlight, and many others.  Throughout his career, Gary has always looked to see how things can be automated, using the mantra that if you do the same thing more than twice, it is time for automation.&lt;/p&gt;
+&lt;p&gt;&amp;quot;I am very excited to be joining Chocolatey Software&amp;quot; says Gary, &amp;quot;I have been a long time user and contributor to Chocolatey, and I am looking forward to helping taking it to the next level.&amp;quot;&lt;/p&gt;
+&lt;p&gt;Gary holds a Master's Degree in Electrical and Electronic Engineering from the University of Aberdeen. He will be based remotely just outside of Aberdeen, Scotland.&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Chocolatey GUI 0.15.0 has just been released!</title>
+			<link>https://blog.chocolatey.org/2017/10/chocolatey-gui-0.15.0-released</link>
+			<description>&lt;p&gt;We are very happy to announce the release of version 0.15.0 of Chocolatey GUI!  This is a major overhaul of the application including a huge number of bug fixes, as well as a number of features and improvements.  This release has been a while in the making, but we hope that it will be worth the wait!&lt;/p&gt;</description>
+			<author>Gary Ewan Park</author>
+			<enclosure url="https://blog.chocolatey.org/%3Cimg%20src=%22https:/github.com/chocolatey/chocolateygui/blob/c7a92e35a4b7e43cc611d7f8fd854ba8bb3171e2/docs/input/assets/img/screenshots/application_loaded.png%253fraw=true%22%20alt=%22chocolatey%20gui%22%20/%3E" length="0" type="image" />
+			<guid>https://blog.chocolatey.org/2017/10/chocolatey-gui-0.15.0-released</guid>
+			<pubDate>Wed, 18 Oct 2017 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;We are very happy to announce the release of version 0.15.0 of Chocolatey GUI!  This is a major overhaul of the application including a huge number of bug fixes, as well as a number of features and improvements.  This release has been a while in the making, but we hope that it will be worth the wait!&lt;/p&gt;
+&lt;p&gt;The following will highlight a number of the major changes that are included in this release, and you can also see a full set of &lt;a href="https://github.com/chocolatey/ChocolateyGUI/releases/tag/0.15.0"&gt;release notes&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="chocolatey-lib"&gt;Chocolatey Lib&lt;/h2&gt;
+&lt;p&gt;In previous versions of Chocolatey GUI, we shelled out directly to PowerShell to invoke the various commands that are available within Chocolatey.  In this release, we are now using the official &lt;a href="https://www.nuget.org/packages/chocolatey.lib"&gt;chocolatey.lib&lt;/a&gt;, which means we now have a much better integration with the features that Chocolatey offers.  In doing this refactoring, we have also eliminated a number of the bugs that were present in the previous release, as well as significally improving the overall performance of Chocolatey GUI.&lt;/p&gt;
+&lt;h2 id="new-branding"&gt;New Branding&lt;/h2&gt;
+&lt;p&gt;When we switched to using WPF as the base framework for Chocolatey GUI, we introduced what we thought was a sensible colour scheme, emphasing on the &amp;quot;chocolatey&amp;quot; theme.  Looking back, we think we went a little too far.  In the 0.15.0 release, we have changed the branding again, which is more in-keeping with the overall Chocolatey branding.&lt;/p&gt;
+&lt;p&gt;As an example of this change, the main Chocolatey GUI application screen has gone from this:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://github.com/chocolatey/ChocolateyGUI/blob/1a0a249ebcee29af10c9a09660a40dd2c34b5eb9/docs/assets/img/Screenshots/Showing_Only_Packages_With_Updates.png?raw=true" alt="Old Chocolatey GUI" /&gt;&lt;/p&gt;
+&lt;p&gt;to this:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://github.com/chocolatey/ChocolateyGUI/blob/c7a92e35a4b7e43cc611d7f8fd854ba8bb3171e2/docs/input/assets/img/Screenshots/Application_Loaded.png?raw=true" alt="New Chocolatey GUI" /&gt;&lt;/p&gt;
+&lt;p&gt;If you are interested in seeing more of the evolution of the branding for this release, you can follow along in this &lt;a href="https://github.com/chocolatey/ChocolateyGUI/commit/ed894cc4e16abe5d33de1275efae49803d8d1919"&gt;commit&lt;/a&gt; and then this &lt;a href="https://github.com/chocolatey/ChocolateyGUI/commit/c7a92e35a4b7e43cc611d7f8fd854ba8bb3171e2#diff-bcb0247f0d40fae191239e76914070a0"&gt;commit&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We would love to hear any feedback that you might have related to the new branding.  Feel free to reach out in our &lt;a href="https://gitter.im/chocolatey/ChocolateyGUI"&gt;Gitter Room&lt;/a&gt; or open an issue for discussion on the &lt;a href="https://github.com/chocolatey/ChocolateyGUI"&gt;Chocolatey GUI repository&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="localization-of-chocolatey-gui"&gt;Localization of Chocolatey GUI&lt;/h2&gt;
+&lt;p&gt;We know that Chocolatey GUI is used across the world, by speakers of lots of different languages.  With this in mind, the decision was taken to support translation of all the major parts of Chocolatey GUI.  This will be an ongoing effort, however, in this release, there is now support for English, Norwegian, German and Swedish.&lt;/p&gt;
+&lt;p&gt;If you are interested in helping support your language in Chocolatey GUI, then please reach out via an &lt;a href="https://github.com/chocolatey/ChocolateyGUI/issues/new"&gt;issue on the GitHub repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We are going to start using the amazing &lt;a href="https://www.transifex.com/"&gt;Transifex&lt;/a&gt; service to better support this effort going forward.&lt;/p&gt;
+&lt;h2 id="release-notes"&gt;Release Notes&lt;/h2&gt;
+&lt;p&gt;To find out information about all the features, improvements and bugs that were included in this release, have a look at the &lt;a href="https://github.com/chocolatey/ChocolateyGUI/releases/tag/0.15.0"&gt;release notes&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="going-forward"&gt;Going forward...&lt;/h2&gt;
+&lt;p&gt;Looking ahead, we have a number of things that we are thinking about for upcoming releases of Chocolatey GUI.  These include things like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Making Accessibility of the Chocolatey GUI application a first class citizen&lt;/li&gt;
+&lt;li&gt;Allowing modification of Chocolatey GUI colours/fonts - i.e. branding&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="contributors"&gt;Contributors&lt;/h2&gt;
+&lt;p&gt;This release would not have been possible without the help of the amazing Chocolatey Community!  We thank you all for your support!&lt;/p&gt;
+&lt;p&gt;The people who helped out with this release are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/RichiCoder1"&gt;RichiCoder1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/pascalberger"&gt;pascalberger&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/gep13"&gt;gep13&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/mwallner"&gt;mwallner&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/AdmiringWorm"&gt;AdmiringWorm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/magol"&gt;magol&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cniweb"&gt;cniweb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ferventcoder"&gt;ferventcoder&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Magnus Österlund&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/punker76"&gt;punker76&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="learn-more"&gt;Learn More&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Check out the &lt;a href="https://chocolatey.github.io/ChocolateyGUI/about"&gt;documentation&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Learn about other features available in &lt;a href="https://chocolatey.org/compare"&gt;Chocolatey for Business&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://chocolatey.org/contact"&gt;Contact us&lt;/a&gt; to find out more and setup your evaluation of Chocolatey for Business today.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Chocolatey’s Package Synchronizer Adds Choco Sync Command - Supports Full System Synchronization!</title>
+			<link>https://blog.chocolatey.org/2017/01/package-synchronizer-sync-command</link>
+			<description>&lt;p&gt;Happy New Year! We've reached a new year and we could not be more excited to tell you about the features we've been cooking up here at Chocolatey! Chocolatey's Package Synchronizer has enjoyed auto sync for existing packages. Now with the introduction of the sync command, you are able to bring all existing software installed on a system under Chocolatey management!&lt;/p&gt;</description>
+			<author>Rob Reynolds</author>
+			<guid>https://blog.chocolatey.org/2017/01/package-synchronizer-sync-command</guid>
+			<pubDate>Tue, 17 Jan 2017 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Happy New Year! We've reached a new year and we could not be more excited to tell you about the features we've been cooking up here at Chocolatey! Chocolatey's Package Synchronizer has enjoyed auto sync for existing packages. Now with the introduction of the sync command, you are able to bring all existing software installed on a system under Chocolatey management!&lt;/p&gt;
+&lt;h3 id="automatic-sync"&gt;Automatic Sync&lt;/h3&gt;
+&lt;p&gt;In Package Synchronizer v1, we added in automatic sync for Chocolatey to see changes in software installed on a system that it is tracking with Chocolatey packages. As we wanted those states to match to provide the best possible experience, licensed versions of Chocolatey detect those changes and ensure those packages stay in sync with the software in Programs and Features that they are tracking. Automatic sync is great and the best part is that it just happens, automatically, every time Chocolatey runs.&lt;/p&gt;
+&lt;h3 id="sync-command"&gt;Sync Command&lt;/h3&gt;
+&lt;p&gt;Now with Package Synchronizer v2, we've introduced the sync command to compliment the automatic sync. You run one command and Chocolatey will bring all software installed on the system under Chocolatey management. Here at Chocolatey we think that's pretty epic, so rather than spend too much time talking about it, we'll just show you what that looks like with a short video.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/tzSsYHYsjf4" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h3 id="learn-more"&gt;Learn More&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Check out the &lt;a href="https://chocolatey.org/docs/features-synchronize#sync-command"&gt;sync command documentation&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Learn about other features available in &lt;a href="https://chocolatey.org/compare"&gt;Chocolatey for Business&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://chocolatey.org/contact"&gt;Contact us&lt;/a&gt; to find out more and setup your evaluation of Chocolatey for Business today.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Chocolatey’s Package Builder Now With a UI and an Exciting New Feature!</title>
+			<link>https://blog.chocolatey.org/2016/11/package-builder-announcements</link>
+			<description>&lt;p&gt;Chocolatey's Package Builder allows you to create fully ready to go software deployments for Windows in 5-10 seconds! There is nothing faster than Chocolatey when it comes to preparing software for an unattended deployment across your organization. Today we are excited to announce Package Builder UI and building packages directly from Programs and Features! Before we show you those features with some videos, let's reintroduce Package Builder as you may not be familiar.&lt;/p&gt;</description>
+			<author>Rob Reynolds</author>
+			<guid>https://blog.chocolatey.org/2016/11/package-builder-announcements</guid>
+			<pubDate>Tue, 15 Nov 2016 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Chocolatey's Package Builder allows you to create fully ready to go software deployments for Windows in 5-10 seconds! There is nothing faster than Chocolatey when it comes to preparing software for an unattended deployment across your organization. Today we are excited to announce Package Builder UI and building packages directly from Programs and Features! Before we show you those features with some videos, let's reintroduce Package Builder as you may not be familiar.&lt;/p&gt;
+&lt;h3 id="chocolateys-package-builder"&gt;Chocolatey's Package Builder&lt;/h3&gt;
+&lt;p&gt;Chocolatey’s Package Builder is a tool that allows you to quickly generate high quality packaging by pointing Package Builder to an installer (msi, exe, msu, or msp) or zip. You can create packages from your organization's archive of installers and zips, scripting the entire creation of packages for your organization. There are also nice features like MSI properties automatically being added to the installer comments so you can further customize the package!&lt;/p&gt;
+&lt;p&gt;We've created a short video showing how it works.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/6TXY5Ie-3wg" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;Quickly script out creating packages for your entire organization's cache of software, allowing you to completely automate your Windows installations in moments, not months. You can do that with a simple script:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;$path = '\\company.file.server\installers'
+
+
+# Generate packages over supported types of files
+$supportedTypes = &amp;#64;('.exe', '.msi', '.7z', '.zip', '.msu', '.msp')
+Get-ChildItem -Path $path -Recurse | ?{
+  $extension = [System.IO.Path]::GetExtension($_.Name)
+  $supportedTypes.Contains($extension)
+  } | %{
+  Write-Host &amp;quot;$($_.FullName)&amp;quot;
+  &amp;amp; choco new --file &amp;quot;$($_.FullName)&amp;quot; --build-package --outputdirectory $pwd
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For every supported type, we are asking Chocolatey to wrap an entire package around the installer or zip, completely readying entire packages in about 5-10 seconds, complete with silent arguments.&lt;/p&gt;
+&lt;h3 id="package-builder-user-interface"&gt;Package Builder User Interface&lt;/h3&gt;
+&lt;p&gt;Not every person is going to love the command line or may not be familiar with the command line. We've spent countless hours talking to customers and with their feedback we're introducing Package Builder UI. This also gives you an opportunity to transition from existing UI tools while taking advantage of powerful Chocolatey concepts!&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/qJNKR_PEQqY" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h3 id="package-builder-generate-packages-from-programs-and-features"&gt;Package Builder - Generate Packages From Programs and Features&lt;/h3&gt;
+&lt;p&gt;Another way Package Builder can generate packages is based on looking at what is installed on a system in Programs and Features. You can set up a complete reference system and then use Chocolatey to generate packages from those installs. This gives you lightning quick ramp up time in both package and automating your Windows software installations!&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Mw_ReipnskI" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h3 id="chocolatey-and-deployment-automation"&gt;Chocolatey And Deployment Automation&lt;/h3&gt;
+&lt;p&gt;When it comes to software management automation (or software deployment automation) for Windows, ask yourself if one or more of the following questions apply:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Does your current approach to automation require manual interaction?&lt;/li&gt;
+&lt;li&gt;Do the current processes you use feel inadequate or require work arounds?&lt;/li&gt;
+&lt;li&gt;Are you managing software for both internal applications and 3rd party software on Windows? If so, are your approaches consistent?&lt;/li&gt;
+&lt;li&gt;Can you update a single piece of software across your organization in less than 2 hours? 30 minutes? 5 minutes?&lt;/li&gt;
+&lt;li&gt;Does that time still apply from the moment you determine a need to upgrade to implementation?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hundreds of organizations in every industry have seen the power of Chocolatey and have harnessed Chocolatey's Package Builder to create packages very quickly, allowing them to quickly address software deployments, security concerns, and just meeting their internal customer needs very quickly in a scalable and reliable way. Chocolatey will make a difference in your organization as well.&lt;/p&gt;
+&lt;h3 id="learn-more"&gt;Learn More&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Watch all videos related to &lt;a href="https://www.youtube.com/playlist?list=PLfn-TaDnc1us5X-PVlxW8M1h-6mXEXZSG" title="Chocolatey's Package Builder"&gt;Chocolatey’s Package Builder&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Learn about other features available in &lt;a href="https://chocolatey.org/compare"&gt;Chocolatey for Business&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://chocolatey.org/contact"&gt;Contact us&lt;/a&gt; to find out more and setup your evaluation of Chocolatey for Business today.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Mukesh Sharma Joins Chocolatey as Chief Operating Officer</title>
+			<link>https://blog.chocolatey.org/2016/10/mukesh-sharma-joins-chocolatey</link>
+			<description>&lt;p&gt;Chocolatey, the software management solution for Windows, recently named Mukesh Sharma as part of their executive team as Chief Operating Officer, to help drive go to market operations, business growth, and expansion into new markets.&lt;/p&gt;</description>
+			<author>Chocolatey News Team</author>
+			<enclosure url="https://blog.chocolatey.org/%3Cimg%20src=%22/assets/images/team/mukesh.png%22%20alt=%22mukesh%20sharma,%20coo%20of%20chocolatey%22%20title=%22mukesh%20sharma,%20coo%20of%20chocolatey%22%20/%3E" length="0" type="image" />
+			<guid>https://blog.chocolatey.org/2016/10/mukesh-sharma-joins-chocolatey</guid>
+			<pubDate>Fri, 14 Oct 2016 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Chocolatey, the software management solution for Windows, recently named Mukesh Sharma as part of their executive team as Chief Operating Officer, to help drive go to market operations, business growth, and expansion into new markets.&lt;/p&gt;
+&lt;img src="/assets/images/team/mukesh.png" alt="Mukesh Sharma, COO of Chocolatey" title="Mukesh Sharma, COO of Chocolatey" width="250" align="right"&gt;
+&lt;p&gt;"I’m excited to announce that Mukesh has joined the team at Chocolatey. Mukesh’s leadership, expansive experience, and unique perspective will really drive the growth of Chocolatey across the board." said Rob Reynolds, Founder and CEO of Chocolatey.&lt;/p&gt;
+&lt;p&gt;Mukesh first got excited about Chocolatey last year after hearing first hand from customers on their desire to leverage package management in the Windows environment. Mukesh joins Chocolatey from automation and DevOps player Puppet, where he led the Europe, Middle East, and Africa (EMEA) business. He brings almost 20 years of experience in sales, business development, and go to market strategies from several tech companies, including EMC, VMware, and Atos. With Mukesh on board, the company will have the opportunity to reach more markets and the right insights to grow the company as a business successfully.&lt;/p&gt;
+&lt;p&gt;"With increasing demand from the business to deliver software faster, automation continues to be at forefront of most organisations." says Mukesh. "Chocolatey has been helping multiple organisations get more out of their Windows software. I’m really excited to support Chocolatey’s move towards offering enhanced business features and continuing to support our extensive user community."&lt;/p&gt;
+&lt;p&gt;Mukesh holds a bachelor’s degree in International Business from the University of Greenwich and an Executive MBA from University of Oxford. He will be based out of Chocolatey’s new London, UK office.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;For press requests - please reach out through our &lt;a href="https://blog.chocolatey.org/contact"&gt;contact form&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Extending Chocolatey Packaging at Walmart</title>
+			<link>https://blog.chocolatey.org/2016/10/extending-chocolatey-packaging-at-walmart</link>
+			<description>&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Originally posted on &lt;a href="https://puppet.com/blog/extending-chocolatey-packaging-walmart"&gt;Puppet's blog&lt;/a&gt;. &lt;em&gt;Reposted with permission.&lt;/em&gt;&lt;/p&gt;</description>
+			<author>Derek Robinson</author>
+			<guid>https://blog.chocolatey.org/2016/10/extending-chocolatey-packaging-at-walmart</guid>
+			<pubDate>Thu, 13 Oct 2016 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Originally posted on &lt;a href="https://puppet.com/blog/extending-chocolatey-packaging-walmart"&gt;Puppet's blog&lt;/a&gt;. &lt;em&gt;Reposted with permission.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;At Walmart, we’re on the journey of increased automation and efficiency. We decided to stop using gold images for server deployments early on. We knew that by separating the base Windows image from the configuration and application installs, deployments would be faster and more consistent. Additionally, application teams would no longer have to wait for the server teams to recut and publish a new gold image throughout the environment every time the application teams released a new version.&lt;/p&gt;
+&lt;p&gt;Our first iteration of the new server build process used Microsoft Desired State Configuration (DSC) to configure the servers. We were elated at how quickly we were able to build servers using DSC. We had a concern, though: lack of management tooling for DSC and application installs. Originally, we created our own management tooling around DSC. It worked great initially, but development was slow, and more time was spent on the tooling than on the servers themselves.&lt;/p&gt;
+&lt;p&gt;We knew this had to be a solved problem, so we talked to our Linux teammates about Puppet. Puppet could already manage Windows servers, and with the introduction of the &lt;a href="https://forge.puppet.com/puppetlabs/dsc"&gt;Puppet DSC module&lt;/a&gt;, we could extend Puppet management to DSC resources. We could use modules from both the Puppet and PowerShell communities, which greatly increased what could be managed.&lt;/p&gt;
+&lt;p&gt;We still weren’t sure how to handle the on-demand application installs. Originally we used the DSC package resource, but we ran into some quirks. DSC Package uses the GUID of the application to manage the install. Not only do you have to know the current GUID, but if you want to uninstall a previous version of the application, you have to know the GUID for each version that could possibly be installed. DSC Package also requires a separate configuration to download the application install file to the server. With every new application revision, no matter how minor, we would have had to change several parts of the DSC configuration.&lt;/p&gt;
+&lt;p&gt;It was then that &lt;a href="http://chocolatey.org/"&gt;Chocolatey&lt;/a&gt; came to the rescue. With Chocolatey, you don’t need a GUID, just the application version. The Chocolatey package handles all the downloading and installing. If you’re &lt;a href="https://puppet.com/blog/chocolatey-hosting-your-own-server"&gt;hosting internal packages&lt;/a&gt;, you can even embed the install file into the Chocolatey package itself to further streamline the process. All the application owner has to do is create a new Chocolatey package, and update the app version number in Puppet.&lt;/p&gt;
+&lt;p&gt;We knew that in order to increase adoption of our new tools and processes, we would have to remove as many roadblocks as possible. Since Chocolatey is a command line tool, we were able to automate portions of the package creation process. Automating package creation lowers the learning curve of Chocolatey. It also helps us get one step closer to continual delivery on Windows. We can take what we’ve done and easily hook it into tools like Jenkins to create and push new packages whenever application teams release a new version.&lt;/p&gt;
+&lt;p&gt;We started by determining the basic workflow for the users:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ask the user for package information.&lt;/li&gt;
+&lt;li&gt;Use package information to build the package from a template.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here’s an example of an application being packaged using our automation script. We ask only for the package name, path to the application, additional install arguments, and the maintainer name (it defaults to the user running the script if left blank).&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://cloud.githubusercontent.com/assets/63502/19226066/c9c08bf8-8e6b-11e6-96f2-34167d3bb4f2.png" alt="extended ui" /&gt;&lt;/p&gt;
+&lt;p&gt;Before beginning the packaging, the user is asked to confirm the information provided. If the user selects No, they’re able to go through the input process again.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://cloud.githubusercontent.com/assets/63502/19226085/f8ea33fc-8e6b-11e6-840a-2eb274d29e49.png" alt="extend ui validation" /&gt;&lt;/p&gt;
+&lt;p&gt;The script calls &lt;code&gt;choco new&lt;/code&gt; to create the package. Currently it defaults to using the embedded packaging model, so the script copies the installer file into the appropriate folder. Then it calls &lt;code&gt;cpack&lt;/code&gt; to create the nupkg file.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://cloud.githubusercontent.com/assets/63502/19226099/27670cfa-8e6c-11e6-8f81-1baf2eb2ed4f.png" alt="extended ui validation part 2" /&gt;&lt;/p&gt;
+&lt;p&gt;While we can’t share our exact script, we can walk through some of the automation process. Using Chocolatey’s package templates, we knew could dramatically simplify the package creation process. Before templates, we had planned on using PowerShell here-strings to build out the files for the package. However, the large here-strings tended to clutter up a script, and became complicated when we used more than one packaging model.&lt;/p&gt;
+&lt;p&gt;We used the &lt;a href="https://chocolatey.org/docs/how-to-create-custom-package-templates"&gt;Chocolatey docs page on templates&lt;/a&gt; to create our own. To keep things simple, we started with only two templates: basic and embedded. Our basic template uses the standard Chocolatey practice of install files being located in an external location. Since we’re using only internal Chocolatey hosting though, we can include the installer files in the Chocolatey package itself. Using the Chocolatey docs, we created our embedded template. The &lt;code&gt;chocolateyinstall.ps1&lt;/code&gt; script will run the installer file inside the same folder. For the rest of this example, we’ll be using the embedded template.&lt;/p&gt;
+&lt;p&gt;From the docs, we know the default template values we can pass in. You can also find these properties from the help by running &lt;code&gt;choco new –h&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;packageversion&lt;/li&gt;
+&lt;li&gt;maintainername&lt;/li&gt;
+&lt;li&gt;maintainerrepo&lt;/li&gt;
+&lt;li&gt;installertype&lt;/li&gt;
+&lt;li&gt;url&lt;/li&gt;
+&lt;li&gt;url64&lt;/li&gt;
+&lt;li&gt;silentargs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By following the instructions in the docs, we can create a simple embedded template. Below is the &lt;code&gt;tools\chocolateyinstall.ps1&lt;/code&gt; file for the embedded template.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;$ErrorActionPreference = 'Stop'; # stop on all errors
+
+[[AutomaticPackageNotesInstaller]]
+$packageName  = '[[PackageName]]'
+$toolsDir     = &amp;quot;$(Split-Path -parent $MyInvocation.MyCommand.Definition)&amp;quot;
+$fileLocation = Join-Path $toolsDir '[[url]]'
+
+$packageArgs = &amp;#64;{
+  packageName   = $packageName
+  file          = $fileLocation
+  fileType      = '[[InstallerType]]' #only one of these: exe, msi, msu
+  silentArgs    = '[[silentArgs]]'
+  validExitCodes= &amp;#64;(0, 3010, 1641)
+
+}
+
+Install-ChocolateyInstallPackage &amp;#64;packageArgs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To increase readability in the following example, we’ve used the backtick in PowerShell to do line continuation. We’ve also added three additional parameters at the end. The accept license property accepts license dialogs automatically. The force property creates a new package, even if there’s already one in the current directory. Since we’re automating the process so users don’t have to touch any folders or files manually, we want to overwrite whatever is currently there. The limit output property isn’t required to build a new package, but we use it for our scripts to make parsing the return output easier.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;$name = 'SuperCoolApp';
+$template = 'embedded';
+$packageversion = '1.0.0';
+$maintainername = 'Doug Funnie';
+$url = 'app.exe';
+$installertype  = 'exe';
+$silentargs = '/verysilent /turbo'
+
+choco.exe new $name `
+    --template $template `
+    --version=$packageversion `
+    --maintainer=$maintainername `
+    url=$url `
+    installertype=$installertype `
+    silentargs=$silentargs `
+    --acceptlicense --limitoutput --force
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Running this script produces the following output (if you run it without the &lt;code&gt;–limitoutput&lt;/code&gt; property, your output will include every file generated which can be useful for troubleshooting).&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://cloud.githubusercontent.com/assets/63502/19293563/1984216a-8feb-11e6-8424-c4b761e4e2be.png" alt="Generating package from custom template" /&gt;&lt;/p&gt;
+&lt;p&gt;Looking at the &lt;code&gt;chocolateyinstall.ps1&lt;/code&gt; file in the SuperCoolApp\tools folder shows that the template properties have been replaced with the values that were passed into &lt;code&gt;choco new&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;$ErrorActionPreference = 'Stop'; # stop on all errors
+
+$packageName  = 'SuperCoolApp'
+$toolsDir     = &amp;quot;$(Split-Path -parent $MyInvocation.MyCommand.Definition)&amp;quot;
+$fileLocation = Join-Path $toolsDir 'app.exe'
+
+$packageArgs = &amp;#64;{
+  packageName   = $packageName
+  file          = $fileLocation
+  fileType      = 'exe' #only one of these: exe, msi, msu
+  silentArgs    = '/verysilent /norestart /turbo'
+  validExitCodes= &amp;#64;(0, 3010, 1641)
+
+}
+
+Install-ChocolateyInstallPackage &amp;#64;packageArgs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Unfortunately, this won’t create a fully working Chocolatey package yet. There’s no template property for the embedded installer file name in &lt;code&gt;$fileLocation&lt;/code&gt;. In versions prior to Chocolatey 0.9.10, you can’t pass in &lt;a href="https://github.com/chocolatey/choco/issues/658"&gt;arbitrary key value pairs&lt;/a&gt;. We just have to get a little creative until then, so in our embedded template we used &lt;code&gt;[[url]]&lt;/code&gt; to pull double duty. Since we’re not pulling the install files remotely, the url property is free for us to use.&lt;/p&gt;
+&lt;p&gt;You may have noticed that we don’t ask for the file type in our script, and we provide default silent arguments. After Chocolatey 0.9.10 is released, the possibilities for template creation will be greatly increased by the ability to pass in custom values. We want the package creation process to be as simple for the end user as possible, so we use the information provided in the file path to fill in the &lt;code&gt;$fileType&lt;/code&gt; and the default silent arguments we use. If a user provides a file path that doesn’t use a supported file type, we write an error instructing them on what file types are approved for use.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://cloud.githubusercontent.com/assets/63502/19293577/35f2527c-8feb-11e6-9ca0-fca121a6dd55.png" alt="ui interface for custom tool" /&gt;&lt;/p&gt;
+&lt;p&gt;Using the file path, we pull the file extension to use in &lt;code&gt;$fileType&lt;/code&gt;. We then use that extension to make sure that the no restart and silent install values are always included in the arguments. We can’t put these in our template since they change depending on the file extension, and creating separate templates formsi-embedded and exe-embedded would be kludgy. By adding the installer type and default silent arguments, we’re able to increase the usefulness of the script. All that’s left is to copy the file to the folder and then run cpack on the nuspec file.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;$name = 'SuperCoolApp';
+$template = 'embedded';
+$packageversion = '1.0.0';
+$maintainername = 'Doug Funnie';
+$filePath = 'app.exe';
+
+# Generate the installertype and silent arguments
+$installertype = $installfile.Split('.')[-1]
+switch ($installertype)
+{
+    'exe' {$silentargs = '/verysilent /norestart '}
+    'msi' {$silentargs = '/qn /norestart '}
+    'msu' {$silentargs = '/qn /norestart '}
+    Default { Write-Error &amp;quot;Unknown file extension: $installertype . Please use an exe, msi, or msu&amp;quot;; exit}
+}
+
+$silentargs += &amp;quot;/turbo&amp;quot;
+
+# Generate package
+choco.exe new $name `
+    --template $template `
+    --version=$packageversion `
+    --maintainer=$maintainername `
+    url=$url `
+    installertype=$installertype `
+    silentargs=$silentargs `
+    --acceptlicense --limitoutput --force
+
+# copy the file over
+# then run cpack on the nuspec file
+cpack.exe .\$name\$name.nuspec
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;While we’ve done all this in PowerShell, you don’t have to. The real beauty of command line tools like Chocolatey is that your favorite automation tool or language of choice can be used. Using local scripts to just create the packages isn’t all you can do, either. From here, the options are endless: create a web front end, hook into Jenkins to build packages automatically after a build, etc.&lt;/p&gt;
+&lt;p&gt;Your manager may chuckle when you say you’re going to use Chocolatey, but after a little scripting the only sound you’ll hear are dropped jaws as applications are automagically deployed.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Derek Robinson is a Windows server administrator at Walmart.&lt;/em&gt;&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+	</channel>
+</rss>

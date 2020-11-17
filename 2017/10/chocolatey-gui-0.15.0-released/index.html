@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--
+    Phantom by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+
+<head>
+
+    <title>Chocolatey Blog - Chocolatey GUI 0.15.0 has just been released!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/styles/default.min.css">
+    <!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+    <link href="/assets/css/override.css" rel="stylesheet" />
+
+    <meta name="description" content="Need to put some words in here" />
+    <link type="application/rss+xml" rel="alternate" title="Chocolatey Blog" href="/feed.rss" />
+    <link type="application/atom+xml" rel="alternate" title="Chocolatey Blog" href="/feed.atom" />
+    <!--<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+    <meta name="application-name" content="Chocolatey Blog" />
+    <meta name="msapplication-tooltip" content="Chocolatey Blog" />
+    <meta name="msapplication-starturl" content="/" />
+
+    <meta property="og:title" content="Chocolatey Blog - Chocolatey GUI 0.15.0 has just been released!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://blog.chocolatey.org/2017/10/chocolatey-gui-0.15.0-released" />
+    <!-- TODO: More social graph meta tags -->
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js"></script>
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo -->
+                <a href="/" class="logo">
+                    <span class="title">Chocolatey Blog</span>
+                </a>
+
+            </div>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="/posts">Archive</a></li>
+                <li><a href="/tags">Tags</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <header>
+    <h1>Chocolatey GUI 0.15.0 has just been released!</h1>
+    <p><em>Published on Wednesday, October 18, 2017</em>
+    </p>
+
+    <ul class="actions small">
+        <li><a role="button" href="/tags/chocolatey-gui" class="button small ">chocolatey gui</a></li>
+        <li><a role="button" href="/tags/chocolatey-oss" class="button small ">chocolatey oss</a></li>
+        <li><a role="button" href="/tags/news" class="button small ">news</a></li>
+        <li><a role="button" href="/tags/press-release" class="button small ">press-release</a></li>
+    </ul>
+</header>
+
+<div id="content">
+    <p>We are very happy to announce the release of version 0.15.0 of Chocolatey GUI!  This is a major overhaul of the application including a huge number of bug fixes, as well as a number of features and improvements.  This release has been a while in the making, but we hope that it will be worth the wait!</p>
+<p>The following will highlight a number of the major changes that are included in this release, and you can also see a full set of <a href="https://github.com/chocolatey/ChocolateyGUI/releases/tag/0.15.0">release notes</a>.</p>
+<h2 id="chocolatey-lib">Chocolatey Lib</h2>
+<p>In previous versions of Chocolatey GUI, we shelled out directly to PowerShell to invoke the various commands that are available within Chocolatey.  In this release, we are now using the official <a href="https://www.nuget.org/packages/chocolatey.lib">chocolatey.lib</a>, which means we now have a much better integration with the features that Chocolatey offers.  In doing this refactoring, we have also eliminated a number of the bugs that were present in the previous release, as well as significally improving the overall performance of Chocolatey GUI.</p>
+<h2 id="new-branding">New Branding</h2>
+<p>When we switched to using WPF as the base framework for Chocolatey GUI, we introduced what we thought was a sensible colour scheme, emphasing on the &quot;chocolatey&quot; theme.  Looking back, we think we went a little too far.  In the 0.15.0 release, we have changed the branding again, which is more in-keeping with the overall Chocolatey branding.</p>
+<p>As an example of this change, the main Chocolatey GUI application screen has gone from this:</p>
+<p><img src="https://github.com/chocolatey/ChocolateyGUI/blob/1a0a249ebcee29af10c9a09660a40dd2c34b5eb9/docs/assets/img/Screenshots/Showing_Only_Packages_With_Updates.png?raw=true" alt="Old Chocolatey GUI" /></p>
+<p>to this:</p>
+<p><img src="https://github.com/chocolatey/ChocolateyGUI/blob/c7a92e35a4b7e43cc611d7f8fd854ba8bb3171e2/docs/input/assets/img/Screenshots/Application_Loaded.png?raw=true" alt="New Chocolatey GUI" /></p>
+<p>If you are interested in seeing more of the evolution of the branding for this release, you can follow along in this <a href="https://github.com/chocolatey/ChocolateyGUI/commit/ed894cc4e16abe5d33de1275efae49803d8d1919">commit</a> and then this <a href="https://github.com/chocolatey/ChocolateyGUI/commit/c7a92e35a4b7e43cc611d7f8fd854ba8bb3171e2#diff-bcb0247f0d40fae191239e76914070a0">commit</a>.</p>
+<p>We would love to hear any feedback that you might have related to the new branding.  Feel free to reach out in our <a href="https://gitter.im/chocolatey/ChocolateyGUI">Gitter Room</a> or open an issue for discussion on the <a href="https://github.com/chocolatey/ChocolateyGUI">Chocolatey GUI repository</a>.</p>
+<h2 id="localization-of-chocolatey-gui">Localization of Chocolatey GUI</h2>
+<p>We know that Chocolatey GUI is used across the world, by speakers of lots of different languages.  With this in mind, the decision was taken to support translation of all the major parts of Chocolatey GUI.  This will be an ongoing effort, however, in this release, there is now support for English, Norwegian, German and Swedish.</p>
+<p>If you are interested in helping support your language in Chocolatey GUI, then please reach out via an <a href="https://github.com/chocolatey/ChocolateyGUI/issues/new">issue on the GitHub repository</a>.</p>
+<p>We are going to start using the amazing <a href="https://www.transifex.com/">Transifex</a> service to better support this effort going forward.</p>
+<h2 id="release-notes">Release Notes</h2>
+<p>To find out information about all the features, improvements and bugs that were included in this release, have a look at the <a href="https://github.com/chocolatey/ChocolateyGUI/releases/tag/0.15.0">release notes</a>.</p>
+<h2 id="going-forward">Going forward...</h2>
+<p>Looking ahead, we have a number of things that we are thinking about for upcoming releases of Chocolatey GUI.  These include things like:</p>
+<ul>
+<li>Making Accessibility of the Chocolatey GUI application a first class citizen</li>
+<li>Allowing modification of Chocolatey GUI colours/fonts - i.e. branding</li>
+</ul>
+<h2 id="contributors">Contributors</h2>
+<p>This release would not have been possible without the help of the amazing Chocolatey Community!  We thank you all for your support!</p>
+<p>The people who helped out with this release are:</p>
+<ul>
+<li><a href="https://github.com/RichiCoder1">RichiCoder1</a></li>
+<li><a href="https://github.com/pascalberger">pascalberger</a></li>
+<li><a href="https://github.com/gep13">gep13</a></li>
+<li><a href="https://github.com/mwallner">mwallner</a></li>
+<li><a href="https://github.com/AdmiringWorm">AdmiringWorm</a></li>
+<li><a href="https://github.com/magol">magol</a></li>
+<li><a href="https://github.com/cniweb">cniweb</a></li>
+<li><a href="https://github.com/ferventcoder">ferventcoder</a></li>
+<li>Magnus Österlund</li>
+<li><a href="https://github.com/punker76">punker76</a></li>
+</ul>
+<h3 id="learn-more">Learn More</h3>
+<ul>
+<li>Check out the <a href="https://chocolatey.github.io/ChocolateyGUI/about">documentation</a>.</li>
+<li>Learn about other features available in <a href="https://chocolatey.org/compare">Chocolatey for Business</a>.</li>
+<li><a href="https://chocolatey.org/contact">Contact us</a> to find out more and setup your evaluation of Chocolatey for Business today.</li>
+</ul>
+
+</div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <ul class="copyright">
+                    <li>Copyright © 2020 Chocolatey Software, Inc.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                    <li><a href="https://statiq.dev/">Generated by Statiq</a></li>
+                </ul>
+            </div>
+
+        </footer>
+
+    </div>
+
+<script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53005417-1', 'auto');
+    ga('send', 'pageview');
+</script>
+    <!-- Scripts -->
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/skel.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
