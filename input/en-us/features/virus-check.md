@@ -96,15 +96,13 @@ The following options are added to install and upgrade commands.
 
      --virus, --viruscheck, --virus-check
      Virus Check - check downloaded files for viruses. Overrides the default
-       feature 'virusCheck' set to 'True'. Available in 0.9.10+. Licensed
-       versions only.
+       feature 'virusCheck' set to 'True'. Licensed versions only.
 
      --viruspositivesmin, --virus-positives-minimum=VALUE
      Virus Check Minimum Scan Result Positives - the minimum number of scan
        result positives required to flag a package.  Used when
        virusScannerType is VirusTotal.  Overrides the default configuration
-       value 'virusCheckMinimumPositives' set to '5'. Available in 0.9.10+.
-       Licensed versions only.
+       value 'virusCheckMinimumPositives' set to '5'. Licensed versions only.
 ~~~
 
 ## FAQ

@@ -49,7 +49,7 @@ Global Feature:
      --dc, --downloadcache, --download-cache, --use-download-cache
      Use Download Cache - Use private CDN cache if
        available for a package. Overrides the default feature 'downloadCache'
-       set to 'True'. Available in 0.9.10+. Licensed versions only.
+       set to 'True'. Licensed versions only.
 ~~~
 
 ## FAQ
